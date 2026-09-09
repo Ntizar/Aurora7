@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es" data-nz-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aurora 7 · 04 Acciones y botones</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../packs/p4-actions.css">
+<link rel="stylesheet" href="../packs/p0-catalog.css">
+</head>
+<body class="nz nz-root">
+  <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="cat-topbar">
+    <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
+    <span class="cat-count">04 · 36 objetos</span>
+    <button class="theme-toggle" id="btnTheme" aria-label="Cambiar tema">◐</button>
+  </header>
+  <nav class="cat-nav-pages" aria-label="Categorías del catálogo">
+    <a href="01-layout.html">01 Layout</a>
+    <a href="02-navigation.html">02 Navegación</a>
+    <a href="03-typography.html">03 Tipografía</a>
+    <a href="04-actions.html" aria-current="page">04 Acciones</a>
+    <a href="05-forms.html">05 Formularios</a>
+    <a href="06-feedback.html">06 Feedback</a>
+    <a href="07-overlays.html">07 Overlays</a>
+    <a href="08-data.html">08 Datos</a>
+    <a href="09-media.html">09 Media</a>
+    <a href="10-commerce.html">10 Comercio</a>
+    <a href="11-social.html">11 Social</a>
+    <a href="12-system.html">12 Sistema</a>
+  </nav>
+  <main class="nz-container cat-main" id="contenido">
+    <div class="cat-pagehead">
+      <p class="cat-pagehead__over">Categoría 04 · 36 objetos</p>
+      <h1>Acciones y botones</h1>
+      <p>Variantes, tamaños, grupos, selector segmentado, FAB y estados de carga. Táctil 44px.</p>
+    </div>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Botones primarios de variante</span><span class="cat-demo__tag">.nz-btn--primary/_accent</span></div>
+      <div class="cat-stage">
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap"><button class="nz-btn nz-btn--primary">Primario</button><button class="nz-btn nz-btn--accent">Acento</button></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Botones de estilo</span><span class="cat-demo__tag">.nz-btn--ghost/_soft/_danger</span></div>
+      <div class="cat-stage">
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap"><button class="nz-btn nz-btn--ghost">Fantasma</button><button class="nz-btn nz-btn--soft">Suave</button><button class="nz-btn nz-btn--danger">Peligro</button></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Tamaños</span><span class="cat-demo__tag">.nz-btn--sm/_lg/_block/_icon</span></div>
+      <div class="cat-stage">
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center"><button class="nz-btn nz-btn--primary nz-btn--sm">Pequeño</button><button class="nz-btn nz-btn--primary">Base</button><button class="nz-btn nz-btn--primary nz-btn--lg">Grande</button><button class="nz-btn nz-btn--primary nz-btn--icon" aria-label="añadir">＋</button></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Grupo de botones</span><span class="cat-demo__tag">.nz-btn-group--joined</span></div>
+      <div class="cat-stage">
+        <div class="nz-btn-group nz-btn-group--joined"><button class="nz-btn nz-btn--ghost">Izq</button><button class="nz-btn nz-btn--ghost">Med</button><button class="nz-btn nz-btn--ghost">Der</button></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Selector segmentado</span><span class="cat-demo__tag">.nz-segmented [aria-selected=true]</span></div>
+      <div class="cat-stage">
+        <div class="nz-segmented"><button aria-selected="true">Lista</button><button aria-selected="false">Grid</button><button aria-selected="false">Mapa</button></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">FAB</span><span class="cat-demo__tag">.nz-fab</span></div>
+      <div class="cat-stage">
+        <button class="nz-fab" aria-label="nuevo">＋</button>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Estado de carga</span><span class="cat-demo__tag">.nz-btn.is-busy · .nz-spin</span></div>
+      <div class="cat-stage">
+        <button class="nz-btn nz-btn--primary is-busy"><span class="nz-spin"></span> Guardando…</button>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Link-acción</span><span class="cat-demo__tag">.nz-cta__arrow</span></div>
+      <div class="cat-stage">
+        <a class="nz-cta" href="#">Explorar <span class="nz-cta__arrow">→</span></a> <a class="nz-cta nz-cta--accent" href="#">Comprar</a>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Toolbar</span><span class="cat-demo__tag">.nz-toolbar__spacer</span></div>
+      <div class="cat-stage">
+        <div class="nz-toolbar"><button class="nz-btn nz-btn--ghost">Abrir</button><button class="nz-btn nz-btn--ghost">Editar</button><span class="nz-toolbar__spacer"></span><button class="nz-btn nz-btn--primary">Exportar</button></div>
+      </div>
+    </section>
+  </main>
+  <footer class="cat-footer">
+    Aurora 7 · Hecho con ❤️ por David Antizar · 565 objetos, 1 sistema
+  </footer>
+  <script>
+    document.getElementById('btnTheme').addEventListener('click', function(){var h=document.documentElement; h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme')==='dark'?'light':'dark');});
+  </script>
+</body>
+</html>

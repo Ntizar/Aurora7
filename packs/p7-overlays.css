@@ -1,0 +1,87 @@
+/* ============================================================
+   AURORA 7 — p7-overlays.css · Categoría 07 · Overlays y diálogo (30 objetos)
+   Modal, drawer lateral, sheet inferior, popover, tooltip, menú
+   contextual, command palette. Sin JS: checkbox/radio hack accesible.
+   ============================================================ */
+
+/* ---- Modal ---- */
+.nz-modal { position: fixed; inset: 0; z-index: var(--nz-z-modal); display: grid; place-items: center; padding: var(--nz-space-4); visibility: hidden; }
+.nz-modal > input { position: absolute; opacity: 0; pointer-events: none; }
+.nz-modal__scrim { position: absolute; inset: 0; background: var(--nz-overlay); opacity: 0; transition: opacity var(--nz-dur-base) var(--nz-ease-out); }
+.nz-modal__dialog { position: relative; width: min(100%, 32rem); max-height: 88vh; overflow-y: auto; border-radius: var(--nz-radius-xl); background: var(--nz-surface); box-shadow: var(--nz-shadow-xl); padding: var(--nz-space-6); transform: translateY(12px) scale(.98); opacity: 0; transition: transform var(--nz-dur-base) var(--nz-ease-out), opacity var(--nz-dur-base) var(--nz-ease-out); }
+.nz-modal > input:checked ~ .nz-modal__scrim { opacity: 1; }
+.nz-modal > input:checked ~ .nz-modal__dialog { transform: none; opacity: 1; }
+.nz-modal__head { display: flex; align-items: flex-start; gap: var(--nz-space-3); margin-bottom: var(--nz-space-3); }
+.nz-modal__title { font-size: var(--nz-text-lg); font-weight: 700; letter-spacing: var(--nz-tracking-tight); flex: 1; }
+.nz-modal__close { width: 40px; height: 40px; flex: none; display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 50%; background: var(--nz-bg-inset); color: var(--nz-text-mute); cursor: pointer; }
+.nz-modal__close:hover { background: var(--nz-bg-soft); color: var(--nz-text); }
+.nz-modal__body { font-size: var(--nz-text-base); color: var(--nz-text-soft); }
+.nz-modal__foot { display: flex; justify-content: flex-end; gap: var(--nz-space-2); margin-top: var(--nz-space-5); flex-wrap: wrap; }
+
+/* ---- Drawer lateral ---- */
+.nz-drawer { position: fixed; inset: 0; z-index: var(--nz-z-drawer); visibility: hidden; }
+.nz-drawer > input { position: absolute; opacity: 0; pointer-events: none; }
+.nz-drawer__scrim { position: absolute; inset: 0; background: var(--nz-overlay); opacity: 0; transition: opacity var(--nz-dur-base) var(--nz-ease-out); }
+.nz-drawer__panel { position: absolute; top: 0; bottom: 0; width: min(85vw, 20rem); background: var(--nz-surface); box-shadow: var(--nz-shadow-xl); display: flex; flex-direction: column; transition: transform var(--nz-dur-base) var(--nz-ease-out); }
+.nz-drawer__panel--right { right: 0; transform: translateX(100%); }
+.nz-drawer__panel--left { left: 0; transform: translateX(-100%); }
+.nz-drawer > input:checked ~ .nz-drawer__scrim { opacity: 1; }
+.nz-drawer > input:checked ~ .nz-drawer__panel--right { transform: none; }
+.nz-drawer > input:checked ~ .nz-drawer__panel--left { transform: none; }
+.nz-drawer__head { display: flex; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-4); border-bottom: 1px solid var(--nz-border-soft); }
+.nz-drawer__title { flex: 1; font-weight: 700; }
+.nz-drawer__body { flex: 1; overflow-y: auto; padding: var(--nz-space-4); display: flex; flex-direction: column; gap: var(--nz-space-4); }
+.nz-drawer__foot { padding: var(--nz-space-4); border-top: 1px solid var(--nz-border-soft); display: flex; gap: var(--nz-space-2); }
+
+/* ---- Sheet inferior (mobile bottom sheet) ---- */
+.nz-sheet { position: fixed; inset: 0; z-index: var(--nz-z-drawer); display: grid; align-items: end; visibility: hidden; }
+.nz-sheet > input { position: absolute; opacity: 0; pointer-events: none; }
+.nz-sheet__scrim { grid-area: 1 / 1; background: var(--nz-overlay); opacity: 0; transition: opacity var(--nz-dur-base) var(--nz-ease-out); }
+.nz-sheet__panel { grid-area: 1 / 1; width: 100%; max-width: 32rem; justify-self: center; border-radius: var(--nz-radius-xl) var(--nz-radius-xl) 0 0; background: var(--nz-surface); box-shadow: var(--nz-shadow-xl); padding: var(--nz-space-4) var(--nz-space-5) calc(var(--nz-space-5) + env(safe-area-inset-bottom, 0px)); transform: translateY(100%); transition: transform var(--nz-dur-base) var(--nz-ease-out); }
+.nz-sheet > input:checked ~ .nz-sheet__scrim { opacity: 1; }
+.nz-sheet > input:checked ~ .nz-sheet__panel { transform: none; }
+.nz-sheet__grab { width: 2.5rem; height: 4px; border-radius: var(--nz-radius-full); background: var(--nz-border); margin: 0 auto var(--nz-space-3); }
+.nz-sheet__head { display: flex; align-items: center; gap: var(--nz-space-3); margin-bottom: var(--nz-space-3); }
+.nz-sheet__title { flex: 1; font-weight: 700; font-size: var(--nz-text-md); }
+.nz-sheet__body { font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
+.nz-sheet__foot { display: grid; grid-template-columns: 1fr 1fr; gap: var(--nz-space-2); margin-top: var(--nz-space-4); }
+
+/* ---- Popover ---- */
+.nz-popover { position: relative; }
+.nz-popover > input { position: absolute; opacity: 0; pointer-events: none; }
+.nz-popover__body { position: absolute; top: calc(100% + var(--nz-space-2)); left: 50%; transform: translateX(-50%) translateY(-6px); z-index: var(--nz-z-popover); min-width: 12rem; padding: var(--nz-space-4); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-lg); opacity: 0; visibility: hidden; transition: transform var(--nz-dur-base) var(--nz-ease-out), opacity var(--nz-dur-base) var(--nz-ease-out), visibility var(--nz-dur-base); }
+.nz-popover > input:checked ~ .nz-popover__body { opacity: 1; visibility: visible; transform: translateX(-50%); }
+.nz-popover__arrow { position: absolute; top: -6px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 12px; height: 12px; background: var(--nz-surface); }
+
+/* ---- Tooltip ---- */
+.nz-tip { position: relative; display: inline-flex; }
+.nz-tip__body { position: absolute; bottom: calc(100% + var(--nz-space-2)); left: 50%; transform: translateX(-50%); z-index: var(--nz-z-tooltip); white-space: nowrap; padding: var(--nz-space-2) var(--nz-space-3); border-radius: var(--nz-radius-sm); background: var(--nz-gray-900); color: var(--nz-gray-50); font-size: var(--nz-text-xs); font-weight: 600; opacity: 0; visibility: hidden; transition: opacity var(--nz-dur-base) var(--nz-ease-out), visibility var(--nz-dur-base), transform var(--nz-dur-base) var(--nz-ease-out); pointer-events: none; }
+.nz-tip:hover .nz-tip__body, .nz-tip:focus-within .nz-tip__body { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(-2px); }
+
+/* ---- Menú contextual ---- */
+.nz-menu-pop { position: relative; }
+.nz-menu-pop > input { position: absolute; opacity: 0; pointer-events: none; }
+.nz-menu-pop__list { position: absolute; right: 0; top: calc(100% + var(--nz-space-2)); z-index: var(--nz-z-popover); min-width: 14rem; padding: var(--nz-space-2); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-lg); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: transform var(--nz-dur-base) var(--nz-ease-out), opacity var(--nz-dur-base) var(--nz-ease-out), visibility var(--nz-dur-base); }
+.nz-menu-pop > input:checked ~ .nz-menu-pop__list { opacity: 1; visibility: visible; transform: none; }
+.nz-menu-pop__item { display: flex; align-items: center; gap: var(--nz-space-2); min-height: 40px; padding: 0 var(--nz-space-3); border-radius: var(--nz-radius-sm); color: var(--nz-text-soft); font-size: var(--nz-text-sm); text-decoration: none; cursor: pointer; border: 0; width: 100%; background: transparent; font-family: inherit; }
+.nz-menu-pop__item:hover { background: var(--nz-bg-soft); color: var(--nz-text); }
+.nz-menu-pop__item--danger { color: var(--nz-danger); }
+.nz-menu-pop__item--danger:hover { background: var(--nz-danger-soft); }
+.nz-menu-pop__sep { height: 1px; margin: var(--nz-space-2); background: var(--nz-border-soft); }
+
+/* ---- Command palette (⌘K) ---- */
+.nz-cmd { position: fixed; inset: 0; z-index: var(--nz-z-modal); display: grid; place-items: start center; padding: 12vh var(--nz-space-4) var(--nz-space-4); visibility: hidden; }
+.nz-cmd > input { position: absolute; opacity: 0; pointer-events: none; }
+.nz-cmd__scrim { position: absolute; inset: 0; background: var(--nz-overlay); opacity: 0; transition: opacity var(--nz-dur-base) var(--nz-ease-out); }
+.nz-cmd__panel { position: relative; width: min(100%, 34rem); border-radius: var(--nz-radius-xl); background: var(--nz-surface); box-shadow: var(--nz-shadow-xl); overflow: hidden; transform: translateY(-12px); opacity: 0; transition: transform var(--nz-dur-base) var(--nz-ease-out), opacity var(--nz-dur-base) var(--nz-ease-out); }
+.nz-cmd > input:checked ~ .nz-cmd__scrim { opacity: 1; }
+.nz-cmd > input:checked ~ .nz-cmd__panel { transform: none; opacity: 1; }
+.nz-cmd__kbd { float: right; font-family: var(--nz-font-mono); font-size: var(--nz-text-2xs); padding: .15rem .4rem; border-radius: var(--nz-radius-xs); background: var(--nz-bg-inset); border: 1px solid var(--nz-border); color: var(--nz-text-mute); }
+.nz-cmd__input { width: 100%; min-height: 56px; padding: 0 var(--nz-space-5); border: 0; border-bottom: 1px solid var(--nz-border-soft); background: transparent; font: inherit; font-size: var(--nz-text-md); color: var(--nz-text); outline: none; }
+.nz-cmd__list { max-height: 18rem; overflow-y: auto; padding: var(--nz-space-2); }
+.nz-cmd__item { display: flex; align-items: center; gap: var(--nz-space-3); min-height: 44px; padding: 0 var(--nz-space-3); border-radius: var(--nz-radius-sm); color: var(--nz-text-soft); font-size: var(--nz-text-sm); cursor: pointer; }
+.nz-cmd__item:hover, .nz-cmd__item.is-active { background: var(--nz-bg-soft); color: var(--nz-text); }
+.nz-cmd__item--active { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-cmd__icon { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--nz-radius-sm); background: var(--nz-bg-inset); color: var(--nz-brand); }
+.nz-cmd__foot { display: flex; gap: var(--nz-space-3); padding: var(--nz-space-2) var(--nz-space-4); border-top: 1px solid var(--nz-border-soft); font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+.nz-cmd__foot kbd { font-family: var(--nz-font-mono); padding: .05rem .3rem; border-radius: var(--nz-radius-xs); background: var(--nz-bg-inset); border: 1px solid var(--nz-border); }

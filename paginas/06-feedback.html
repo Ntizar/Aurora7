@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es" data-nz-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aurora 7 · 06 Feedback y estados</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../packs/p6-feedback.css">
+<link rel="stylesheet" href="../packs/p0-catalog.css">
+</head>
+<body class="nz nz-root">
+  <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="cat-topbar">
+    <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
+    <span class="cat-count">06 · 43 objetos</span>
+    <button class="theme-toggle" id="btnTheme" aria-label="Cambiar tema">◐</button>
+  </header>
+  <nav class="cat-nav-pages" aria-label="Categorías del catálogo">
+    <a href="01-layout.html">01 Layout</a>
+    <a href="02-navigation.html">02 Navegación</a>
+    <a href="03-typography.html">03 Tipografía</a>
+    <a href="04-actions.html">04 Acciones</a>
+    <a href="05-forms.html">05 Formularios</a>
+    <a href="06-feedback.html" aria-current="page">06 Feedback</a>
+    <a href="07-overlays.html">07 Overlays</a>
+    <a href="08-data.html">08 Datos</a>
+    <a href="09-media.html">09 Media</a>
+    <a href="10-commerce.html">10 Comercio</a>
+    <a href="11-social.html">11 Social</a>
+    <a href="12-system.html">12 Sistema</a>
+  </nav>
+  <main class="nz-container cat-main" id="contenido">
+    <div class="cat-pagehead">
+      <p class="cat-pagehead__over">Categoría 06 · 43 objetos</p>
+      <h1>Feedback y estados</h1>
+      <p>Alertas, badges, chips, skeleton, empty/error, progreso y status. Feedback claro con tokens semánticos.</p>
+    </div>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Alertas</span><span class="cat-demo__tag">.nz-alert--info/success/warning/danger</span></div>
+      <div class="cat-stage">
+        <div class="nz-alert nz-alert--info"><span class="nz-alert__icon">ℹ</span><div class="nz-alert__body"><span class="nz-alert__title">Información</span><span class="nz-alert__msg">Mensaje informativo.</span></div></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Alerta de éxito</span><span class="cat-demo__tag">.nz-alert--success</span></div>
+      <div class="cat-stage">
+        <div class="nz-alert nz-alert--success"><span class="nz-alert__icon">✓</span><div class="nz-alert__body"><span class="nz-alert__title">Guardado</span><span class="nz-alert__msg">Los cambios se aplicaron.</span></div></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Alerta de error</span><span class="cat-demo__tag">.nz-alert--danger</span></div>
+      <div class="cat-stage">
+        <div class="nz-alert nz-alert--danger"><span class="nz-alert__icon">✕</span><div class="nz-alert__body"><span class="nz-alert__title">Error</span><span class="nz-alert__msg">Algo falló.</span></div></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Callout</span><span class="cat-demo__tag">.nz-callout--accent</span></div>
+      <div class="cat-stage">
+        <div class="nz-callout"><p>Nota: esta regla es importante.</p></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Badges de estado</span><span class="cat-demo__tag">.nz-badge--brand/success/danger/warning</span></div>
+      <div class="cat-stage">
+        <div><span class="nz-badge nz-badge--brand"><i></i>Brand</span><span class="nz-badge nz-badge--success"><i></i>Activo</span><span class="nz-badge nz-badge--danger"><i></i>Crítico</span><span class="nz-badge nz-badge--warning"><i></i>Pendiente</span></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Chips</span><span class="cat-demo__tag">.nz-chip.is-active</span></div>
+      <div class="cat-stage">
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap"><button class="nz-chip is-active">Todos ×</button><button class="nz-chip">Agua</button></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Skeleton</span><span class="cat-demo__tag">.nz-skeleton</span></div>
+      <div class="cat-stage">
+        <div class="nz-skeleton"><div class="nz-skeleton__card"><div class="nz-skeleton__line nz-skeleton__line--title"></div><div class="nz-skeleton__line nz-skeleton__line--wide"></div><div class="nz-skeleton__line"></div><div class="nz-skeleton__line" style="width:65%"></div></div></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Empty state</span><span class="cat-demo__tag">.nz-empty</span></div>
+      <div class="cat-stage">
+        <div class="nz-empty"><span class="nz-empty__icon">📦</span><p class="nz-empty__title">Sin resultados</p><p class="nz-empty__body">Todavía no hay nada que mostrar.</p><button class="nz-btn nz-btn--primary nz-empty__action">Crear</button></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Barra de progreso</span><span class="cat-demo__tag">.nz-progress__bar</span></div>
+      <div class="cat-stage">
+        <div class="nz-progress" style="max-width:16rem"><div class="nz-progress__bar" style="width:60%"></div></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">10</span><span class="cat-demo__name">Anillo de progreso</span><span class="cat-demo__tag">.nz-ring__fill</span></div>
+      <div class="cat-stage">
+        <div class="nz-ring" style="width:56px;height:56px"><svg width="56" height="56" viewBox="0 0 56 56"><circle class="nz-ring__track" cx="28" cy="28" r="24" fill="none" stroke-width="6"/><circle class="nz-ring__fill" cx="28" cy="28" r="24" fill="none" stroke-width="6" stroke-dasharray="150.8" stroke-dashoffset="60"/></svg><span class="nz-ring__label">60%</span></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">11</span><span class="cat-demo__name">Status bar</span><span class="cat-demo__tag">.nz-statusbar--success</span></div>
+      <div class="cat-stage">
+        <div class="nz-statusbar"><span>2 de 5 completados</span><span class="nz-statusbar__spacer"></span><span class="nz-statusbar--success">40%</span></div>
+      </div>
+    </section>
+  </main>
+  <footer class="cat-footer">
+    Aurora 7 · Hecho con ❤️ por David Antizar · 565 objetos, 1 sistema
+  </footer>
+  <script>
+    document.getElementById('btnTheme').addEventListener('click', function(){var h=document.documentElement; h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme')==='dark'?'light':'dark');});
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+/* ============================================================
+   AURORA 7 — p4-actions.css · Categoría 04 · Acciones y botones (35 objetos)
+   Botones (variantes + tamaños), grupos, iconos, FAB, enlaces-acción,
+   selector segmentado, estados de carga.
+   Estilo: sólido, radii pill, sombra de marca al hover. Táctil 44px.
+   ============================================================ */
+
+/* ---- Botón base ---- */
+.nz-btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: var(--nz-space-2); padding: 0 var(--nz-space-5); border-radius: var(--nz-radius-full); font: inherit; font-weight: 700; font-size: var(--nz-text-base); cursor: pointer; border: 0; text-decoration: none; transition: transform var(--nz-dur-fast) var(--nz-ease-out), box-shadow var(--nz-dur-fast) var(--nz-ease-out), background var(--nz-dur-fast) var(--nz-ease-out), color var(--nz-dur-fast) var(--nz-ease-out); white-space: nowrap; }
+.nz-btn:hover { transform: translateY(-2px); }
+.nz-btn:active { transform: translateY(0); }
+.nz-btn:disabled, .nz-btn.is-disabled { opacity: .5; pointer-events: none; }
+
+/* ---- Variantes --- */
+.nz-btn--primary { background: var(--nz-brand); color: var(--nz-text-invert); box-shadow: var(--nz-shadow-brand); }
+.nz-btn--primary:hover { background: var(--nz-brand-strong); }
+.nz-btn--accent { background: var(--nz-accent); color: var(--nz-gray-0); box-shadow: var(--nz-shadow-accent); }
+.nz-btn--accent:hover { background: var(--nz-accent-strong); }
+.nz-btn--ghost { background: transparent; color: var(--nz-text-soft); box-shadow: inset 0 0 0 1.5px var(--nz-border); }
+.nz-btn--ghost:hover { background: var(--nz-bg-inset); color: var(--nz-text); }
+.nz-btn--soft { background: var(--nz-brand-soft); color: var(--nz-brand); }
+.nz-btn--soft:hover { background: var(--nz-brand-tint); }
+.nz-btn--danger { background: var(--nz-danger); color: var(--nz-text-invert); }
+.nz-btn--danger:hover { background: var(--nz-red-700); }
+.nz-btn--success { background: var(--nz-success); color: var(--nz-text-invert); }
+
+/* ---- Tamaños ---- */
+.nz-btn--sm { min-height: 36px; padding: 0 var(--nz-space-4); font-size: var(--nz-text-sm); }
+.nz-btn--lg { min-height: 52px; padding: 0 var(--nz-space-6); font-size: var(--nz-text-md); }
+.nz-btn--xl { min-height: 60px; padding: 0 var(--nz-space-7); font-size: var(--nz-text-lg); }
+.nz-btn--block { width: 100%; }
+.nz-btn--icon { width: 44px; padding: 0; }
+.nz-btn--icon-sm { width: 36px; min-height: 36px; padding: 0; }
+.nz-btn--icon-lg { width: 52px; min-height: 52px; padding: 0; }
+
+/* ---- Botón con icono ---- */
+.nz-btn .nz-btn__icon { display: inline-flex; font-size: 1.1em; line-height: 1; }
+.nz-btn .nz-btn__arrow { transition: transform var(--nz-dur-base) var(--nz-ease-out); }
+.nz-btn:hover .nz-btn__arrow--right { transform: translateX(4px); }
+
+/* ---- Grupo de botones ---- */
+.nz-btn-group { display: inline-flex; gap: var(--nz-space-1); }
+.nz-btn-group .nz-btn { border-radius: var(--nz-radius-md); }
+.nz-btn-group--joined { gap: 0; }
+.nz-btn-group--joined .nz-btn { border-radius: 0; box-shadow: none; }
+.nz-btn-group--joined .nz-btn:first-child { border-radius: var(--nz-radius-md) 0 0 var(--nz-radius-md); }
+.nz-btn-group--joined .nz-btn:last-child { border-radius: 0 var(--nz-radius-md) var(--nz-radius-md) 0; }
+.nz-btn-group--joined .nz-btn + .nz-btn { margin-left: -1px; box-shadow: inset 1px 0 0 var(--nz-border); }
+
+/* ---- Selector segmentado (segmented control) ---- */
+.nz-segmented { display: inline-flex; padding: var(--nz-space-1); gap: var(--nz-space-1); background: var(--nz-bg-inset); border-radius: var(--nz-radius-full); }
+.nz-segmented button, .nz-segmented a { min-height: 38px; padding: 0 var(--nz-space-4); border-radius: var(--nz-radius-full); border: 0; background: transparent; color: var(--nz-text-soft); font: inherit; font-size: var(--nz-text-sm); font-weight: 600; text-decoration: none; cursor: pointer; transition: background var(--nz-dur-fast) var(--nz-ease-out), color var(--nz-dur-fast) var(--nz-ease-out), box-shadow var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-segmented [aria-selected="true"], .nz-segmented button.is-active, .nz-segmented a.is-active { background: var(--nz-surface); color: var(--nz-text); box-shadow: var(--nz-shadow-sm); }
+
+/* ---- FAB ---- */
+.nz-fab { position: fixed; right: var(--nz-space-5); bottom: calc(var(--nz-space-5) + env(safe-area-inset-bottom, 0px)); z-index: var(--nz-z-drawer); width: 56px; height: 56px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--nz-radius-full); border: 0; background: var(--nz-brand); color: var(--nz-text-invert); font-size: 1.5rem; box-shadow: var(--nz-shadow-brand); cursor: pointer; transition: transform var(--nz-dur-fast) var(--nz-ease-out), background var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-fab:hover { transform: scale(1.08) rotate(-4deg); background: var(--nz-brand-strong); }
+.nz-fab--accent { background: var(--nz-accent); box-shadow: var(--nz-shadow-accent); }
+.nz-fab--lg { width: 64px; height: 64px; }
+
+/* ---- Estados de carga (spinner inline) ---- */
+.nz-btn .nz-spin { width: 1em; height: 1em; border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent; display: inline-block; animation: nzSpin .7s linear infinite; }
+@keyframes nzSpin { to { transform: rotate(360deg); } }
+.nz-btn.is-busy { opacity: .8; pointer-events: none; }
+.nz-btn.is-ok { background: var(--nz-success) !important; box-shadow: none; }
+
+/* ---- Enlace-acción ---- */
+.nz-cta { display: inline-flex; align-items: center; gap: var(--nz-space-2); color: var(--nz-brand); font-weight: 700; font-size: var(--nz-text-base); text-decoration: none; }
+.nz-cta:hover { color: var(--nz-brand-strong); }
+.nz-cta__arrow { transition: transform var(--nz-dur-base) var(--nz-ease-out); }
+.nz-cta:hover .nz-cta__arrow { transform: translateX(4px); }
+.nz-cta--accent { color: var(--nz-accent); }
+
+/* ---- Botón de texto (link-button) ---- */
+.nz-btn--text { background: none; color: var(--nz-brand); padding: 0 var(--nz-space-2); }
+.nz-btn--text:hover { background: var(--nz-brand-soft); color: var(--nz-brand-strong); transform: none; }
+.nz-btn--text.nz-btn--danger-text { color: var(--nz-danger); }
+.nz-btn--text.nz-btn--danger-text:hover { background: var(--nz-danger-soft); }
+
+/* ---- Toolbar de acciones ---- */
+.nz-toolbar { display: flex; align-items: center; gap: var(--nz-space-2); flex-wrap: wrap; padding: var(--nz-space-3); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-toolbar__spacer { flex: 1; }

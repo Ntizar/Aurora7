@@ -1,0 +1,92 @@
+/* ============================================================
+   AURORA 7 — p11-social.css · Categoría 11 · Social y marketing (40 objetos)
+   Tarjeta de post, feed, comentario, stats sociales, testimonio,
+   CTA banner, equipo, logotipo de confianza, avatar + nombre.
+   ============================================================ */
+
+/* ---- Tarjeta de post (feed) ---- */
+.nz-post { display: flex; flex-direction: column; gap: var(--nz-space-3); padding: var(--nz-space-4); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-post__head { display: flex; align-items: center; gap: var(--nz-space-3); }
+.nz-post__byline { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.nz-post__author { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); display: flex; align-items: center; gap: var(--nz-space-1); }
+.nz-post__handle { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-post__time { font-size: var(--nz-text-2xs); color: var(--nz-text-faint); white-space: nowrap; }
+.nz-post__media { aspect-ratio: 16 / 9; border-radius: var(--nz-radius-md); overflow: hidden; background: var(--nz-bg-inset); }
+.nz-post__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.nz-post__body { font-size: var(--nz-text-sm); color: var(--nz-text-soft); line-height: var(--nz-leading-normal); }
+.nz-post__body a { color: var(--nz-brand); }
+.nz-post__foot { display: flex; align-items: center; gap: var(--nz-space-2); border-top: 1px solid var(--nz-border-soft); padding-top: var(--nz-space-3); }
+
+/* ---- Métrica social (like/retweet/share) ---- */
+.nz-social { display: inline-flex; align-items: center; gap: var(--nz-space-1); color: var(--nz-text-mute); font-size: var(--nz-text-xs); font-weight: 600; border: 0; background: transparent; padding: var(--nz-space-1); border-radius: var(--nz-radius-full); cursor: pointer; }
+.nz-social:hover { color: var(--nz-text); background: var(--nz-bg-soft); }
+.nz-social--liked { color: var(--nz-danger); }
+.nz-social--liked:hover { color: var(--nz-danger); }
+.nz-social i { font-style: normal; }
+
+/* ---- Comentario ---- */
+.nz-comment { position: relative; display: flex; gap: var(--nz-space-3); padding: var(--nz-space-3) 0; }
+.nz-comment__body { flex: 1; display: flex; flex-direction: column; gap: var(--nz-space-1); }
+.nz-comment__head { display: flex; align-items: baseline; gap: var(--nz-space-2); }
+.nz-comment__author { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); }
+.nz-comment__time { font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+.nz-comment__text { font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
+.nz-comment__actions { display: flex; gap: var(--nz-space-3); font-size: var(--nz-text-xs); }
+.nz-comment__actions button, .nz-comment__actions a { color: var(--nz-text-mute); text-decoration: none; font-weight: 600; }
+.nz-comment__actions button:hover, .nz-comment__actions a:hover { color: var(--nz-brand); }
+.nz-comment--indent { margin-left: 3rem; }
+.nz-comment__root { padding-left: 0; border-left: 0; }
+
+/* ---- Feed ---- */
+.nz-feed { display: grid; gap: var(--nz-space-3); }
+.nz-feed__verify { display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; background: var(--nz-brand); color: var(--nz-text-invert); font-size: 10px; font-weight: 800; }
+
+/* ---- Testimonio ---- */
+.nz-quote { position: relative; display: flex; flex-direction: column; gap: var(--nz-space-3); padding: var(--nz-space-6); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-quote::before { content: "“"; position: absolute; top: var(--nz-space-2); right: var(--nz-space-5); font-size: 5rem; line-height: 1; color: var(--nz-brand-soft); font-weight: 800; }
+.nz-quote p { position: relative; z-index: 1; font-size: var(--nz-text-md); color: var(--nz-text); line-height: var(--nz-leading-snug); }
+.nz-quote__who { display: flex; align-items: center; gap: var(--nz-space-3); margin-top: var(--nz-space-2); }
+.nz-quote__byline { display: grid; gap: 1px; }
+.nz-quote__name { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); }
+.nz-quote__role { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-quote--accent { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-quote--accent p, .nz-quote--accent .nz-quote__name { color: var(--nz-text-invert); }
+.nz-quote--accent .nz-quote__role { color: var(--nz-blue-100); }
+.nz-quote--accent::before { color: var(--nz-blue-200); }
+
+/* ---- CTA banner ---- */
+.nz-cta-banner { display: flex; flex-direction: column; align-items: flex-start; gap: var(--nz-space-4); padding: var(--nz-space-8) var(--nz-space-6); border-radius: var(--nz-radius-xl); background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-cta-banner__title { font-size: var(--nz-text-2xl); font-weight: 800; letter-spacing: var(--nz-tracking-tight); }
+.nz-cta-banner__body { font-size: var(--nz-text-md); color: var(--nz-blue-100); max-width: 44ch; }
+.nz-cta-banner__actions { display: flex; flex-wrap: wrap; gap: var(--nz-space-2); }
+.nz-cta-banner__actions .nz-btn { background: var(--nz-text-invert); color: var(--nz-brand); }
+.nz-cta-banner__actions .nz-btn--ghost { background: transparent; color: var(--nz-text-invert); box-shadow: inset 0 0 0 1.5px var(--nz-blue-200); }
+.nz-cta-banner--accent { background: var(--nz-accent); color: var(--nz-gray-0); }
+.nz-cta-banner--accent .nz-cta-banner__body { color: var(--nz-orange-100); }
+
+/* ---- Miembro de equipo (card) ---- */
+.nz-team { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--nz-space-2); padding: var(--nz-space-5); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-team__avatar { width: 80px; height: 80px; }
+.nz-team__name { font-weight: 700; font-size: var(--nz-text-md); color: var(--nz-text); }
+.nz-team__role { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-team__bio { font-size: var(--nz-text-xs); color: var(--nz-text-soft); }
+
+/* ---- Logotipos de confianza ---- */
+.nz-trust { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--nz-space-4) var(--nz-space-8); font-size: var(--nz-text-sm); font-weight: 700; color: var(--nz-text-faint); opacity: .85; }
+
+/* ---- Avatar + nombre (pareja con nombre) ---- */
+.nz-username { display: inline-flex; align-items: center; gap: var(--nz-space-2); }
+.nz-username__name { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); }
+.nz-username__handle { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+
+/* ---- Share (barra) ---- */
+.nz-share { display: inline-flex; gap: var(--nz-space-2); }
+.nz-share a, .nz-share button { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--nz-bg-inset); color: var(--nz-text-soft); text-decoration: none; transition: background var(--nz-dur-fast) var(--nz-ease-out), color var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-share a:hover, .nz-share button:hover { background: var(--nz-brand); color: var(--nz-text-invert); }
+
+/* ---- Notificación (toast social) ---- */
+.nz-notif { display: flex; gap: var(--nz-space-3); align-items: center; padding: var(--nz-space-3) var(--nz-space-4); border-radius: var(--nz-radius-md); background: var(--nz-surface); box-shadow: var(--nz-shadow-md); }
+.nz-notif__icon { width: 40px; height: 40px; flex: none; border-radius: 50%; display: grid; place-items: center; background: var(--nz-accent-soft); color: var(--nz-accent); }
+.nz-notif__body { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.nz-notif__title { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); }
+.nz-notif__desc { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }

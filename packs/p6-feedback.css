@@ -1,0 +1,111 @@
+/* ============================================================
+   AURORA 7 — p6-feedback.css · Categoría 06 · Feedback y estados (40 objetos)
+   Alertas, callouts, badges de estado, chips, toast, spinners,
+   skeletons, empty/error, progreso (bar/ring), status bar.
+   ============================================================ */
+
+/* ---- Alerta (bloque) ---- */
+.nz-alert { display: flex; gap: var(--nz-space-3); padding: var(--nz-space-4); border-radius: var(--nz-radius-md); background: var(--nz-bg-soft); border: 1px solid var(--nz-border-soft); }
+.nz-alert__icon { flex: none; font-size: var(--nz-text-lg); line-height: 1.4; }
+.nz-alert__body { display: flex; flex-direction: column; gap: var(--nz-space-1); }
+.nz-alert__title { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); }
+.nz-alert__msg { font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
+.nz-alert__msg a { color: var(--nz-brand); font-weight: 600; }
+.nz-alert--info { background: var(--nz-info-soft); border-color: transparent; }
+.nz-alert--info .nz-alert__icon, .nz-alert--info .nz-alert__title { color: var(--nz-info); }
+.nz-alert--success { background: var(--nz-success-soft); }
+.nz-alert--success .nz-alert__icon, .nz-alert--success .nz-alert__title { color: var(--nz-success); }
+.nz-alert--warning { background: var(--nz-warning-soft); }
+.nz-alert--warning .nz-alert__icon, .nz-alert--warning .nz-alert__title { color: var(--nz-warning); }
+.nz-alert--danger { background: var(--nz-danger-soft); }
+.nz-alert--danger .nz-alert__icon, .nz-alert--danger .nz-alert__title { color: var(--nz-danger); }
+.nz-alert--brand { background: var(--nz-brand-soft); }
+.nz-alert--brand .nz-alert__icon, .nz-alert--brand .nz-alert__title { color: var(--nz-brand); }
+
+/* ---- Callout (inline, más compacto) ---- */
+.nz-callout { display: flex; gap: var(--nz-space-2); align-items: flex-start; padding: var(--nz-space-3) var(--nz-space-4); border-left: 3px solid var(--nz-brand); background: var(--nz-brand-soft); border-radius: 0 var(--nz-radius-sm) var(--nz-radius-sm) 0; }
+.nz-callout p { margin: 0; font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
+.nz-callout--accent { border-left-color: var(--nz-accent); background: var(--nz-accent-soft); }
+.nz-callout--warn { border-left-color: var(--nz-warning); background: var(--nz-warning-soft); }
+.nz-callout--danger { border-left-color: var(--nz-danger); background: var(--nz-danger-soft); }
+
+/* ---- Badge de estado ---- */
+.nz-badge { display: inline-flex; align-items: center; gap: var(--nz-space-1); min-height: 22px; padding: 0 var(--nz-space-2); border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); color: var(--nz-text-soft); font-size: var(--nz-text-2xs); font-weight: 800; text-transform: uppercase; letter-spacing: var(--nz-tracking-caps); }
+.nz-badge i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.nz-badge--brand { background: var(--nz-brand-soft); color: var(--nz-brand); }
+.nz-badge--success { background: var(--nz-success-soft); color: var(--nz-success); }
+.nz-badge--danger { background: var(--nz-danger-soft); color: var(--nz-danger); }
+.nz-badge--warning { background: var(--nz-warning-soft); color: var(--nz-warning); }
+.nz-badge--accent { background: var(--nz-accent-soft); color: var(--nz-accent-strong); }
+.nz-badge--neutral { background: var(--nz-bg-soft); color: var(--nz-text-mute); }
+
+/* ---- Chip ---- */
+.nz-chip { min-height: 40px; display: inline-flex; align-items: center; gap: var(--nz-space-1); padding: 0 var(--nz-space-4); border-radius: var(--nz-radius-full); border: 1px solid var(--nz-border); background: var(--nz-surface); color: var(--nz-text-soft); font-size: var(--nz-text-sm); font-weight: 600; cursor: pointer; transition: background var(--nz-dur-fast) var(--nz-ease-out), color var(--nz-dur-fast) var(--nz-ease-out), border-color var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-chip:hover { background: var(--nz-bg-soft); color: var(--nz-text); }
+.nz-chip.is-active, .nz-chip[aria-pressed="true"] { background: var(--nz-brand); border-color: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-chip__x { width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: var(--nz-text-xs); cursor: pointer; }
+.nz-chip.is-active .nz-chip__x:hover { background: rgba(255,255,255,.25); }
+
+/* ---- Toast ---- */
+.nz-toast { position: fixed; left: 50%; bottom: calc(var(--nz-space-6) + env(safe-area-inset-bottom, 0px)); z-index: var(--nz-z-toast); transform: translateX(-50%) translateY(16px); opacity: 0; visibility: hidden; display: inline-flex; align-items: center; gap: var(--nz-space-3); max-width: min(92vw, 26rem); padding: var(--nz-space-3) var(--nz-space-4); border-radius: var(--nz-radius-md); background: var(--nz-gray-900); color: var(--nz-gray-50); font-size: var(--nz-text-sm); box-shadow: var(--nz-shadow-lg); transition: transform var(--nz-dur-base) var(--nz-ease-out), opacity var(--nz-dur-base) var(--nz-ease-out), visibility var(--nz-dur-base); }
+.nz-toast.is-on { transform: translateX(-50%); opacity: 1; visibility: visible; }
+[data-nz-theme="dark"] .nz-toast { background: var(--nz-surface); color: var(--nz-text); border: 1px solid var(--nz-border); }
+.nz-toast__icon { font-size: var(--nz-text-md); line-height: 1; }
+.nz-toast--success .nz-toast__icon { color: var(--nz-success); }
+.nz-toast--error .nz-toast__icon { color: var(--nz-danger); }
+.nz-toast__close { margin-left: auto; width: 28px; height: 28px; border: 0; border-radius: 50%; background: transparent; color: inherit; cursor: pointer; opacity: .7; }
+.nz-toast__close:hover { opacity: 1; background: rgba(255,255,255,.12); }
+
+/* ---- Spinner ---- */
+.nz-spinner { display: inline-block; width: 24px; height: 24px; border-radius: 50%; border: 3px solid var(--nz-border-soft); border-top-color: var(--nz-brand); animation: nzSpin .7s linear infinite; }
+@keyframes nzSpin { to { transform: rotate(360deg); } }
+.nz-spinner--sm { width: 16px; height: 16px; border-width: 2px; }
+.nz-spinner--accent { border-top-color: var(--nz-accent); }
+
+/* ---- Skeleton ---- */
+.nz-skeleton { display: grid; gap: var(--nz-space-2); }
+.nz-skeleton::before, .nz-skeleton line { }
+.nz-skeleton__line { height: .875rem; border-radius: var(--nz-radius-pill); background: var(--nz-bg-inset); animation: nzSkel 1.4s ease-in-out infinite; }
+.nz-skeleton__line--title { height: 1.375rem; width: 55%; }
+.nz-skeleton__line--muted { width: 40%; background: var(--nz-bg-soft); }
+.nz-skeleton__line--wide { width: 90%; }
+.nz-skeleton__card { padding: var(--nz-space-3); border-radius: var(--nz-radius-md); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); display: grid; gap: var(--nz-space-3); }
+.nz-skeleton__block { aspect-ratio: 16/9; border-radius: var(--nz-radius-md); background: var(--nz-bg-inset); animation: nzSkel 1.4s ease-in-out infinite; }
+@keyframes nzSkel { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+
+/* ---- Empty state ---- */
+.nz-empty { display: flex; flex-direction: column; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-10) var(--nz-space-6); text-align: center; border-radius: var(--nz-radius-lg); background: var(--nz-surface); }
+.nz-empty__icon { font-size: 2.5rem; line-height: 1; }
+.nz-empty__title { font-size: var(--nz-text-lg); font-weight: 700; color: var(--nz-text); }
+.nz-empty__body { max-width: 36ch; font-size: var(--nz-text-sm); color: var(--nz-text-soft); margin: 0; }
+.nz-empty__action { margin-top: var(--nz-space-2); }
+
+/* ---- Error state ---- */
+.nz-errorstate { display: flex; flex-direction: column; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-10) var(--nz-space-6); text-align: center; border-radius: var(--nz-radius-lg); background: var(--nz-danger-soft); }
+.nz-errorstate__code { font-family: var(--nz-font-mono); font-size: var(--nz-text-2xl); font-weight: 800; color: var(--nz-danger); }
+.nz-errorstate__title { font-size: var(--nz-text-lg); font-weight: 700; }
+.nz-errorstate__body { max-width: 36ch; font-size: var(--nz-text-sm); color: var(--nz-text-soft); margin: 0; }
+
+/* ---- Barra de progreso ---- */
+.nz-progress { position: relative; height: 8px; border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); overflow: hidden; }
+.nz-progress__bar { height: 100%; border-radius: inherit; background: var(--nz-brand); transition: width var(--nz-dur-slow) var(--nz-ease-out); }
+.nz-progress--accent .nz-progress__bar { background: var(--nz-accent); }
+.nz-progress--success .nz-progress__bar { background: var(--nz-success); }
+.nz-progress--thin { height: 4px; }
+.nz-progress--lg { height: 12px; }
+.nz-progress--indeterminate .nz-progress__bar { width: 40%; animation: nzIndeterm 1.3s var(--nz-ease-soft) infinite; }
+@keyframes nzIndeterm { 0% { transform: translateX(-100%); } 100% { transform: translateX(3.5em); } }
+
+/* ---- Anillo / donut de progreso ---- */
+.nz-ring { position: relative; display: inline-grid; place-items: center; }
+.nz-ring svg { transform: rotate(-90deg); }
+.nz-ring__track { stroke: var(--nz-bg-inset); }
+.nz-ring__fill { stroke: var(--nz-brand); transition: stroke-dashoffset var(--nz-dur-slow) var(--nz-ease-out); }
+.nz-ring--accent .nz-ring__fill { stroke: var(--nz-accent); }
+.nz-ring__label { position: absolute; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--nz-text); }
+
+/* ---- Status bar (paso del proceso, muy compacta) ---- */
+.nz-statusbar { display: flex; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); border-radius: var(--nz-radius-md); background: var(--nz-bg-soft); font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
+.nz-statusbar__spacer { flex: 1; }
+.nz-statusbar--error { background: var(--nz-danger-soft); color: var(--nz-danger); }
+.nz-statusbar--success { background: var(--nz-success-soft); color: var(--nz-success); }

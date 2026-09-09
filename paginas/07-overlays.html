@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es" data-nz-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aurora 7 · 07 Overlays y diálogo</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../packs/p7-overlays.css">
+<link rel="stylesheet" href="../packs/p0-catalog.css">
+</head>
+<body class="nz nz-root">
+  <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="cat-topbar">
+    <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
+    <span class="cat-count">07 · 34 objetos</span>
+    <button class="theme-toggle" id="btnTheme" aria-label="Cambiar tema">◐</button>
+  </header>
+  <nav class="cat-nav-pages" aria-label="Categorías del catálogo">
+    <a href="01-layout.html">01 Layout</a>
+    <a href="02-navigation.html">02 Navegación</a>
+    <a href="03-typography.html">03 Tipografía</a>
+    <a href="04-actions.html">04 Acciones</a>
+    <a href="05-forms.html">05 Formularios</a>
+    <a href="06-feedback.html">06 Feedback</a>
+    <a href="07-overlays.html" aria-current="page">07 Overlays</a>
+    <a href="08-data.html">08 Datos</a>
+    <a href="09-media.html">09 Media</a>
+    <a href="10-commerce.html">10 Comercio</a>
+    <a href="11-social.html">11 Social</a>
+    <a href="12-system.html">12 Sistema</a>
+  </nav>
+  <main class="nz-container cat-main" id="contenido">
+    <div class="cat-pagehead">
+      <p class="cat-pagehead__over">Categoría 07 · 34 objetos</p>
+      <h1>Overlays y diálogo</h1>
+      <p>Modal, drawer, sheet, popover, tooltip, menú contextual y command palette. Sin JS obligatorio.</p>
+    </div>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Modal</span><span class="cat-demo__tag">.nz-modal &gt; input:checked ~ .nz-modal__dialog</span></div>
+      <div class="cat-stage">
+        <label class="nz-btn nz-btn--primary" for="mo1">Abrir modal</label><div class="nz-modal"><input type="checkbox" id="mo1" hidden><label class="nz-modal__scrim" for="mo1"></label><div class="nz-modal__dialog"><div class="nz-modal__head"><h3 class="nz-modal__title">Confirmar</h3><label class="nz-modal__close" for="mo1">✕</label></div><p class="nz-modal__body">¿Estás seguro?</p><div class="nz-modal__foot"><label class="nz-btn nz-btn--ghost" for="mo1">Cancelar</label><label class="nz-btn nz-btn--primary" for="mo1">Sí</label></div></div></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Drawer lateral</span><span class="cat-demo__tag">.nz-drawer__panel--right</span></div>
+      <div class="cat-stage">
+        <label class="nz-btn nz-btn--primary" for="dr1">Abrir panel</label><div class="nz-drawer"><input type="checkbox" id="dr1" hidden><label class="nz-drawer__scrim" for="dr1"></label><div class="nz-drawer__panel nz-drawer__panel--left"><div class="nz-drawer__head"><span class="nz-drawer__title">Ajustes</span></div><div class="nz-drawer__body"><label class="nz-switch"><input type="checkbox"><span class="nz-switch__track"><span class="nz-switch__thumb"></span></span><span class="nz-switch__label">Modo oscuro</span></label></div></div></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Bottom-sheet</span><span class="cat-demo__tag">.nz-sheet__panel</span></div>
+      <div class="cat-stage">
+        <label class="nz-btn nz-btn--primary" for="sh1">Abrir sheet</label><div class="nz-sheet"><input type="checkbox" id="sh1" hidden><label class="nz-sheet__scrim" for="sh1"></label><div class="nz-sheet__panel"><div class="nz-sheet__grab"></div><div class="nz-sheet__head"><span class="nz-sheet__title">Compartir</span></div><p class="nz-sheet__body">Elige una opción.</p></div></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Popover</span><span class="cat-demo__tag">.nz-popover &gt; input:checked ~ .nz-popover__body</span></div>
+      <div class="cat-stage">
+        <div class="nz-popover"><input type="checkbox" id="po1" hidden><label class="nz-btn nz-btn--ghost" for="po1">Más ▼</label><div class="nz-popover__body"><span class="nz-popover__arrow"></span><a class="nz-menu__item">Editar</a><a class="nz-menu__item">Duplicar</a></div></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Tooltip</span><span class="cat-demo__tag">.nz-tip__body</span></div>
+      <div class="cat-stage">
+        <span class="nz-tip"><button class="nz-btn nz-btn--ghost" tabindex="0">Hover</button><span class="nz-tip__body">Soy un tooltip</span></span>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Menú contextual</span><span class="cat-demo__tag">.nz-menu-pop__list</span></div>
+      <div class="cat-stage">
+        <div class="nz-menu-pop"><input type="checkbox" id="mc1" hidden><label class="nz-btn nz-btn--ghost" for="mc1">⋯</label><div class="nz-menu-pop__list"><button class="nz-menu-pop__item">Abrir</button><button class="nz-menu-pop__item">Copiar</button><div class="nz-menu-pop__sep"></div><button class="nz-menu-pop__item nz-menu-pop__item--danger">Eliminar</button></div></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Command palette</span><span class="cat-demo__tag">.nz-cmd__item--active</span></div>
+      <div class="cat-stage">
+        <label class="nz-btn nz-btn--primary" for="cm1">⌘K</label><div class="nz-cmd"><input type="checkbox" id="cm1" hidden><label class="nz-cmd__scrim" for="cm1"></label><div class="nz-cmd__panel"><input class="nz-cmd__input" placeholder="Buscar…"><div class="nz-cmd__list"><div class="nz-cmd__item nz-cmd__item--active"><span class="nz-cmd__icon">◈</span>Abrir informe</div><div class="nz-cmd__item"><span class="nz-cmd__icon">▦</span>Ejecutar</div></div><div class="nz-cmd__foot"><span><kbd>↑</kbd><kbd>↓</kbd> navegar</span><span><kbd>↵</kbd> elegir</span></div></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="cat-footer">
+    Aurora 7 · Hecho con ❤️ por David Antizar · 565 objetos, 1 sistema
+  </footer>
+  <script>
+    document.getElementById('btnTheme').addEventListener('click', function(){var h=document.documentElement; h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme')==='dark'?'light':'dark');});
+  </script>
+</body>
+</html>

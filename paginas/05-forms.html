@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es" data-nz-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aurora 7 · 05 Formularios e inputs</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../packs/p5-forms.css">
+<link rel="stylesheet" href="../packs/p0-catalog.css">
+</head>
+<body class="nz nz-root">
+  <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="cat-topbar">
+    <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
+    <span class="cat-count">05 · 44 objetos</span>
+    <button class="theme-toggle" id="btnTheme" aria-label="Cambiar tema">◐</button>
+  </header>
+  <nav class="cat-nav-pages" aria-label="Categorías del catálogo">
+    <a href="01-layout.html">01 Layout</a>
+    <a href="02-navigation.html">02 Navegación</a>
+    <a href="03-typography.html">03 Tipografía</a>
+    <a href="04-actions.html">04 Acciones</a>
+    <a href="05-forms.html" aria-current="page">05 Formularios</a>
+    <a href="06-feedback.html">06 Feedback</a>
+    <a href="07-overlays.html">07 Overlays</a>
+    <a href="08-data.html">08 Datos</a>
+    <a href="09-media.html">09 Media</a>
+    <a href="10-commerce.html">10 Comercio</a>
+    <a href="11-social.html">11 Social</a>
+    <a href="12-system.html">12 Sistema</a>
+  </nav>
+  <main class="nz-container cat-main" id="contenido">
+    <div class="cat-pagehead">
+      <p class="cat-pagehead__over">Categoría 05 · 44 objetos</p>
+      <h1>Formularios e inputs</h1>
+      <p>Inputs, textarea, select, check/radio/switch, range, OTP, búsqueda, grupos. Focus-ring accesible.</p>
+    </div>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Campo con etiqueta y ayuda</span><span class="cat-demo__tag">.nz-field</span></div>
+      <div class="cat-stage">
+        <label class="nz-field"><span class="nz-field__label nz-field__label--req">Correo</span><input class="nz-input" type="email" placeholder="tu@correo.es"><span class="nz-field__help">Nunca lo compartimos.</span></label>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Inputs</span><span class="cat-demo__tag">.nz-input · :focus</span></div>
+      <div class="cat-stage">
+        <input class="nz-input" placeholder="Texto" style="max-width:16rem"><input class="nz-input nz-input--error" placeholder="Con error" style="max-width:16rem">
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Textarea</span><span class="cat-demo__tag">.nz-textarea</span></div>
+      <div class="cat-stage">
+        <textarea class="nz-textarea" placeholder="Descripción…" style="max-width:20rem"></textarea>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Select</span><span class="cat-demo__tag">.nz-select</span></div>
+      <div class="cat-stage">
+        <select class="nz-select" style="max-width:14rem"><option>Opción A</option><option>Opción B</option></select>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Checkbox</span><span class="cat-demo__tag">.nz-checkbox__box</span></div>
+      <div class="cat-stage">
+        <label class="nz-checkbox"><input type="checkbox" checked><span class="nz-checkbox__box"></span>Acepto los términos</label>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Radio</span><span class="cat-demo__tag">.nz-radio__dot</span></div>
+      <div class="cat-stage">
+        <label class="nz-radio"><input type="radio" name="r" checked><span class="nz-radio__dot"></span>Estándar</label>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Switch</span><span class="cat-demo__tag">.nz-switch__thumb</span></div>
+      <div class="cat-stage">
+        <label class="nz-switch"><input type="checkbox" checked><span class="nz-switch__track"><span class="nz-switch__thumb"></span></span><span class="nz-switch__label">Notificaciones</span></label>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Range</span><span class="cat-demo__tag">.nz-range</span></div>
+      <div class="cat-stage">
+        <input class="nz-range" type="range" min="0" max="100" value="60" style="max-width:16rem">
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Grupo con addon</span><span class="cat-demo__tag">.nz-inputgroup__addon</span></div>
+      <div class="cat-stage">
+        <div class="nz-inputgroup" style="max-width:16rem"><span class="nz-inputgroup__addon">€</span><input class="nz-input" placeholder="0,00"></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">10</span><span class="cat-demo__name">Búsqueda</span><span class="cat-demo__tag">.nz-search__icon</span></div>
+      <div class="cat-stage">
+        <div class="nz-search" style="max-width:16rem"><span class="nz-search__icon">⌕</span><input class="nz-input" placeholder="Buscar…"></div>
+      </div>
+    </section>
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">11</span><span class="cat-demo__name">Cantidad</span><span class="cat-demo__tag">.nz-qty</span></div>
+      <div class="cat-stage">
+        <div class="nz-qty"><button aria-label="menos">−</button><input value="2" aria-label="cantidad"><button aria-label="más">+</button></div>
+      </div>
+    </section>
+  </main>
+  <footer class="cat-footer">
+    Aurora 7 · Hecho con ❤️ por David Antizar · 565 objetos, 1 sistema
+  </footer>
+  <script>
+    document.getElementById('btnTheme').addEventListener('click', function(){var h=document.documentElement; h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme')==='dark'?'light':'dark');});
+  </script>
+</body>
+</html>
