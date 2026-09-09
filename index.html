@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es" data-nz-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aurora 7 · Design System Ntizar · 500 objetos de frontend</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="packs/p0-catalog.css">
+</head>
+<body class="nz">
+
+<canvas id="sky" class="nz-sky" aria-hidden="true"></canvas>
+
+<div class="nz-above">
+
+  <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="cat-topbar">
+    <span class="cat-brandmark"><i></i><i></i> Aurora 7</span>
+    <span class="cat-count">v7.0 · constelación</span>
+    <button class="theme-toggle" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
+  </header>
+
+  <section class="nz-hero nz-in">
+    <p class="nz-eyebrow">Design System Ntizar</p>
+    <h1>Aurora <em>7</em></h1>
+    <p class="nz-hero__sub">500 objetos de frontend para montar cualquier web. Azul y naranja, sólidos y con sombras de verdad. Sin gradientes, sin glass, sin IA-slop. Mobile-first de verdad.</p>
+    <div class="nz-ctas">
+      <a class="nz-btn nz-btn--primary" href="paginas/01-layout.html">Explorar el catálogo →</a>
+      <a class="nz-btn nz-btn--ghost" href="tokens.css">Ver tokens</a>
+      <span class="nz-hint">psst… pulsa en cualquier parte 💥</span>
+    </div>
+    <div class="nz-stats">
+      <div class="nz-stat"><b><span data-cuenta="500">0</span></b><span>objetos</span></div>
+      <div class="nz-stat"><b>12</b><span>categorías</span></div>
+      <div class="nz-stat"><b>2</b><span>temas</span></div>
+      <div class="nz-stat"><b>0</b><span>gradientes</span></div>
+      <div class="nz-stat"><b>0</b><span>glass</span></div>
+    </div>
+  </section>
+
+  <main id="contenido" style="max-width:var(--nz-container-max);margin-inline:auto;padding:0 var(--nz-gutter)">
+
+    <section class="nz-in" style="--d:.06s;margin-block:var(--nz-space-12)">
+      <h2 style="font-size:var(--nz-text-xl);letter-spacing:var(--nz-tracking-tight);margin-bottom:var(--nz-space-4)">Manifiesto</h2>
+      <div class="nz-pillrow">
+        <span class="nz-pill"><i></i> Mobile first</span>
+        <span class="nz-pill"><i></i> Azul #2563eb</span>
+        <span class="nz-pill"><i></i> Naranja #f97316</span>
+        <span class="nz-pill"><i></i> Sombras multicapa</span>
+        <span class="nz-pill"><i></i> expo-out ≤ 300 ms</span>
+        <span class="nz-pill"><i></i> Táctil 44 px</span>
+        <span class="nz-pill"><i></i> Light + dark</span>
+        <span class="nz-pill nz-pill--no"><i></i> Sin gradientes</span>
+        <span class="nz-pill nz-pill--no"><i></i> Sin glass</span>
+        <span class="nz-pill nz-pill--no"><i></i> Sin IA-slop</span>
+      </div>
+    </section>
+
+    <section class="nz-in" style="--d:.1s;margin-block:var(--nz-space-12)">
+      <h2 style="font-size:var(--nz-text-xl);letter-spacing:var(--nz-tracking-tight)">12 categorías · 500 objetos</h2>
+      <div class="cat-grid" style="margin-top:var(--nz-space-4)">
+        <a class="cat-cat cat-cat--wide nz-in" style="--d:.12s" href="paginas/01-layout.html">
+          <span class="cat-cat__n">CATEGORÍA 01</span>
+          <span class="cat-cat__name">Layout y estructura</span>
+          <span class="cat-cat__meta">50 objetos · lista</span>
+          <span class="cat-cat__arrow">→</span>
+        </a>
+        <div class="cat-cat cat-cat--soon"><span class="cat-cat__n">02</span><span class="cat-cat__name">Navegación</span><span class="cat-cat__meta">50 · en obra</span></div>
+        <div class="cat-cat cat-cat--soon"><span class="cat-cat__n">03</span><span class="cat-cat__name">Tipografía</span><span class="cat-cat__meta">40 · en obra</span></div>
+        <div class="cat-cat cat-cat--soon"><span class="cat-cat__n">04</span><span class="cat-cat__name">Acciones y botones</span><span class="cat-cat__meta">35 · en obra</span></div>
+        <div class="cat-cat cat-cat--wide cat-cat--soon"><span class="cat-cat__n">05</span><span class="cat-cat__name">Formularios e inputs</span><span class="cat-cat__meta">75 · en obra</span></div>
+        <div class="cat-cat cat-cat--soon"><span class="cat-cat__n">06</span><span class="cat-cat__name">Feedback y estados</span><span class="cat-cat__meta">40 · en obra</span></div>
+        <div class="cat-cat cat-cat--soon"><span class="cat-cat__n">07</span><span class="cat-cat__name">Overlays y diálogo</span><span class="cat-cat__meta">30 · en obra</span></div>
+        <div class="cat-cat cat-cat--soon"><span class="cat-cat__n">08</span><span class="cat-cat__name">Datos, tablas y listas</span><span class="cat-cat__meta">50 · en obra</span></div>
+        <div class="cat-cat cat-cat--soon"><span class="cat-cat__n">09</span><span class="cat-cat__name">Media e iconografía</span><span class="cat-cat__meta">40 · en obra</span></div>
+        <div class="cat-cat cat-cat--soon"><span class="cat-cat__n">10</span><span class="cat-cat__name">Comercio y producto</span><span class="cat-cat__meta">40 · en obra</span></div>
+        <div class="cat-cat cat-cat--soon"><span class="cat-cat__n">11</span><span class="cat-cat__name">Social y marketing</span><span class="cat-cat__meta">40 · en obra</span></div>
+        <div class="cat-cat cat-cat--soon"><span class="cat-cat__n">12</span><span class="cat-cat__name">Accesibilidad y sistema</span><span class="cat-cat__meta">10 · en obra</span></div>
+      </div>
+    </section>
+
+    <section class="nz-in" style="--d:.14s;margin-block:var(--nz-space-12)">
+      <h2 style="font-size:var(--nz-text-xl);letter-spacing:var(--nz-tracking-tight);margin-bottom:var(--nz-space-4)">Señales de vida</h2>
+      <div class="nz-livegrid">
+        <div class="live-card">
+          <h3>Botón que cicla</h3>
+          <div class="live-slot"><button class="nz-btn nz-btn--primary" id="liveSave">Guardar cambios</button></div>
+        </div>
+        <div class="live-card">
+          <h3>Interruptor</h3>
+          <div class="live-slot"><label class="live-switch"><input type="checkbox" checked aria-label="Activar"><span class="live-track"></span><span class="live-knob"></span></label></div>
+        </div>
+        <div class="live-card">
+          <h3>Progreso</h3>
+          <div class="live-slot"><div class="live-progress" id="liveProg"><b></b></div></div>
+        </div>
+        <div class="live-card">
+          <h3>Contador</h3>
+          <div class="live-slot"><span class="live-count" data-cuenta="500">0</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="cat-footer">
+    Aurora 7 · Hecho con ❤️ por David Antizar · 500 objetos, 1 sistema
+  </footer>
+
+</div>
+
+<script>
+  // Tema
+  document.getElementById('btnTheme').addEventListener('click', function () {
+    var h = document.documentElement;
+    h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  // Contadores con expo-out (reduced-motion → valor final directo)
+  function cuenta(el, target, dur) {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = target; return; }
+    var t0 = null;
+    (function f(t) {
+      if (!t0) t0 = t;
+      var k = Math.min((t - t0) / dur, 1);
+      el.textContent = Math.round(target * (k === 1 ? 1 : 1 - Math.pow(2, -10 * k)));
+      if (k < 1) requestAnimationFrame(f);
+    })(performance.now());
+  }
+  document.querySelectorAll('[data-cuenta]').forEach(function (el) { cuenta(el, +el.getAttribute('data-cuenta'), 1400); });
+
+  // Botón que cicla
+  var save = document.getElementById('liveSave');
+  save.addEventListener('click', function () {
+    if (save.classList.contains('is-busy')) return;
+    save.classList.add('is-busy'); save.textContent = 'Guardando…';
+    setTimeout(function () { save.textContent = '✓ Guardado'; save.classList.add('is-ok'); }, 1100);
+    setTimeout(function () { save.textContent = 'Guardar cambios'; save.classList.remove('is-busy', 'is-ok'); }, 3000);
+  });
+
+  // Progreso
+  setTimeout(function () { document.getElementById('liveProg').classList.add('go'); }, 500);
+
+  // Constelación: deriva azul + chispas naranjas + explosión al pulsar.
+  // Canvas = fondo; todo el texto vive en DOM encima. reduced-motion → fotograma estático.
+  (function () {
+    var cv = document.getElementById('sky'), cx = cv.getContext('2d');
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var W, H, pts = [], parts = [], running = false;
+    function palette() {
+      return document.documentElement.getAttribute('data-nz-theme') === 'dark'
+        ? { dot: '125,165,255', line: '79,142,247', spark: '251,146,60' }
+        : { dot: '37,99,235', line: '37,99,235', spark: '249,115,22' };
+    }
+    function size() {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = innerWidth; H = innerHeight;
+      cv.width = W * dpr; cv.height = H * dpr;
+      cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    function seed() {
+      pts = [];
+      var n = W < 640 ? 42 : 90;
+      for (var i = 0; i < n; i++) pts.push({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35,
+        r: 1.2 + Math.random() * 1.3, a: .18 + Math.random() * .4,
+        spark: Math.random() < .08
+      });
+    }
+    function step() {
+      cx.clearRect(0, 0, W, H);
+      var p = palette(), LINK = 110, i, j, d;
+      for (i = 0; i < pts.length; i++) {
+        d = pts[i]; d.x += d.vx; d.y += d.vy;
+        if (d.x < -10) d.x = W + 10; if (d.x > W + 10) d.x = -10;
+        if (d.y < -10) d.y = H + 10; if (d.y > H + 10) d.y = -10;
+      }
+      cx.lineWidth = 1;
+      for (i = 0; i < pts.length; i++) for (j = i + 1; j < pts.length; j++) {
+        var dist = Math.hypot(pts[i].x - pts[j].x, pts[i].y - pts[j].y);
+        if (dist < LINK) {
+          cx.strokeStyle = 'rgba(' + p.line + ',' + ((1 - dist / LINK) * .16).toFixed(3) + ')';
+          cx.beginPath(); cx.moveTo(pts[i].x, pts[i].y); cx.lineTo(pts[j].x, pts[j].y); cx.stroke();
+        }
+      }
+      for (i = 0; i < pts.length; i++) {
+        d = pts[i];
+        cx.fillStyle = d.spark ? 'rgba(' + p.spark + ',' + (d.a + .2).toFixed(2) + ')' : 'rgba(' + p.dot + ',' + d.a.toFixed(2) + ')';
+        cx.beginPath(); cx.arc(d.x, d.y, d.spark ? d.r + .6 : d.r, 0, 6.283); cx.fill();
+      }
+      for (i = parts.length - 1; i >= 0; i--) {
+        var b = parts[i], alive = false;
+        for (var k = 0; k < b.length; k++) {
+          var q = b[k];
+          if (q.life <= 0) continue;
+          alive = true;
+          q.x += q.vx; q.y += q.vy; q.vy += .12; q.vx *= .985; q.life--;
+          cx.fillStyle = 'rgba(' + q.c + ',' + Math.max(q.life / 60, 0).toFixed(2) + ')';
+          cx.beginPath(); cx.arc(q.x, q.y, 1.6 + (q.life / 60) * 1.4, 0, 6.283); cx.fill();
+        }
+        if (!alive) parts.splice(i, 1);
+      }
+    }
+    function loop() { step(); if (running) requestAnimationFrame(loop); }
+    size(); seed();
+    if (reduce) { step(); return; }
+    running = true; requestAnimationFrame(loop);
+    document.addEventListener('visibilitychange', function () { running = !document.hidden; if (running) requestAnimationFrame(loop); });
+    window.addEventListener('resize', function () { size(); seed(); });
+    window.addEventListener('pointerdown', function (e) {
+      var p = palette(), ps = [];
+      for (var i = 0; i < 18; i++) {
+        var ang = Math.random() * 6.283, sp = 1.5 + Math.random() * 3.2;
+        ps.push({ x: e.clientX, y: e.clientY, vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp - 1, life: 40 + (Math.random() * 25 | 0), c: Math.random() < .3 ? p.spark : p.dot });
+      }
+      parts.push(ps);
+    });
+  })();
+</script>
+</body>
+</html>

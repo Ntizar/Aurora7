@@ -1,0 +1,250 @@
+/* ============================================================
+   AURORA 7 — tokens.css
+   Design System Ntizar · Fuente única de verdad de tokens
+   Reglas: cero gradientes, cero glass, cero IA-slop.
+   Azul #2563eb primario · Naranja #f97316 acento (nunca fundidos).
+   Mobile-first · Sombras multicapa sutiles · Light + Dark.
+   Hecho con ❤️ por David Antizar
+   ============================================================ */
+
+:root {
+  /* ---- 1. COLOR · Azul (primario) ---- */
+  --nz-blue-50:  #eff6ff;
+  --nz-blue-100: #dbeafe;
+  --nz-blue-200: #bfdbfe;
+  --nz-blue-300: #93c5fd;
+  --nz-blue-400: #60a5fa;
+  --nz-blue-500: #3b82f6;
+  --nz-blue-600: #2563eb;   /* brand principal */
+  --nz-blue-700: #1d4ed8;
+  --nz-blue-800: #1e40af;
+  --nz-blue-900: #1e3a8a;
+
+  /* ---- 2. COLOR · Naranja (acento, secundario) ---- */
+  --nz-orange-50:  #fff7ed;
+  --nz-orange-100: #ffedd5;
+  --nz-orange-200: #fed7aa;
+  --nz-orange-300: #fdba74;
+  --nz-orange-400: #fb923c;
+  --nz-orange-500: #f97316;  /* acento principal */
+  --nz-orange-600: #ea580c;
+  --nz-orange-700: #c2410c;
+
+  /* ---- 3. COLOR · Semánticos ---- */
+  --nz-green-50:  #f0fdf4;
+  --nz-green-100: #dcfce7;
+  --nz-green-500: #22c55e;
+  --nz-green-600: #16a34a;
+  --nz-green-700: #15803d;
+  --nz-red-50:  #fef2f2;
+  --nz-red-100: #fee2e2;
+  --nz-red-500: #ef4444;
+  --nz-red-600: #dc2626;
+  --nz-red-700: #b91c1c;
+  --nz-amber-50:  #fffbeb;
+  --nz-amber-100: #fef3c7;
+  --nz-amber-500: #f59e0b;
+  --nz-amber-600: #d97706;
+  --nz-amber-700: #b45309;
+
+  /* ---- 4. COLOR · Neutros ---- */
+  --nz-gray-0:   #ffffff;
+  --nz-gray-50:  #f9fafb;
+  --nz-gray-100: #f3f4f6;
+  --nz-gray-200: #e5e7eb;
+  --nz-gray-300: #d1d5db;
+  --nz-gray-400: #9ca3af;
+  --nz-gray-500: #6b7280;
+  --nz-gray-600: #4b5563;
+  --nz-gray-700: #374151;
+  --nz-gray-800: #1f2937;
+  --nz-gray-900: #111827;
+  --nz-gray-950: #030712;
+
+  /* ---- 5. TOKENS TEMÁTICOS (light por defecto) ---- */
+  --nz-bg:          var(--nz-gray-0);
+  --nz-bg-soft:     var(--nz-gray-50);
+  --nz-bg-inset:    var(--nz-gray-100);
+  --nz-surface:     var(--nz-gray-0);
+  --nz-surface-2:   var(--nz-gray-50);
+  --nz-border:      var(--nz-gray-200);
+  --nz-border-soft: var(--nz-gray-100);
+  --nz-border-strong: var(--nz-gray-300);
+  --nz-text:        var(--nz-gray-900);
+  --nz-text-soft:   var(--nz-gray-600);
+  --nz-text-mute:   var(--nz-gray-500);
+  --nz-text-faint:  var(--nz-gray-400);
+  --nz-text-invert: var(--nz-gray-0);
+  --nz-brand:       var(--nz-blue-600);
+  --nz-brand-strong: var(--nz-blue-700);
+  --nz-brand-soft:  var(--nz-blue-50);
+  --nz-brand-tint:  var(--nz-blue-100);
+  --nz-accent:      var(--nz-orange-500);
+  --nz-accent-strong: var(--nz-orange-600);
+  --nz-accent-soft: var(--nz-orange-50);
+  --nz-accent-tint: var(--nz-orange-100);
+  --nz-success:     var(--nz-green-600);
+  --nz-success-soft: var(--nz-green-50);
+  --nz-danger:      var(--nz-red-600);
+  --nz-danger-soft: var(--nz-red-50);
+  --nz-warning:     var(--nz-amber-600);
+  --nz-warning-soft: var(--nz-amber-50);
+  --nz-info:        var(--nz-blue-600);
+  --nz-info-soft:   var(--nz-blue-50);
+  --nz-overlay:     rgba(17, 24, 39, 0.48);
+
+  /* ---- 6. TIPOGRAFÍA ---- */
+  --nz-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --nz-font-mono: ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace;
+  /* Escala fluida mobile-first (clamp: móvil → escritorio) */
+  --nz-text-2xs: 0.6875rem;                       /* 11px */
+  --nz-text-xs:  0.75rem;                         /* 12px */
+  --nz-text-sm:  0.8125rem;                       /* 13px */
+  --nz-text-base: 0.9375rem;                      /* 15px */
+  --nz-text-md:  1rem;                            /* 16px */
+  --nz-text-lg:  1.125rem;                        /* 18px */
+  --nz-text-xl:  clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --nz-text-2xl: clamp(1.5rem, 1.25rem + 1vw, 1.875rem);
+  --nz-text-3xl: clamp(1.875rem, 1.4rem + 1.8vw, 2.5rem);
+  --nz-text-4xl: clamp(2.25rem, 1.6rem + 2.8vw, 3.25rem);
+  --nz-leading-tight: 1.2;
+  --nz-leading-snug: 1.375;
+  --nz-leading-normal: 1.6;
+  --nz-tracking-tight: -0.02em;
+  --nz-tracking-caps: 0.08em;
+
+  /* ---- 7. ESPACIO (escala 4px) ---- */
+  --nz-space-0: 0;
+  --nz-space-1: 0.25rem;   /* 4 */
+  --nz-space-2: 0.5rem;    /* 8 */
+  --nz-space-3: 0.75rem;   /* 12 */
+  --nz-space-4: 1rem;      /* 16 */
+  --nz-space-5: 1.25rem;   /* 20 */
+  --nz-space-6: 1.5rem;    /* 24 */
+  --nz-space-8: 2rem;      /* 32 */
+  --nz-space-10: 2.5rem;   /* 40 */
+  --nz-space-12: 3rem;     /* 48 */
+  --nz-space-16: 4rem;     /* 64 */
+  --nz-space-20: 5rem;     /* 80 */
+  --nz-gutter: var(--nz-space-4);                    /* gutter móvil */
+  --nz-container-max: 72rem;                         /* 1152px */
+  --nz-container-narrow: 44rem;                      /* 704px, prose */
+
+  /* ---- 8. RADIOS ---- */
+  --nz-radius-xs: 4px;
+  --nz-radius-sm: 6px;
+  --nz-radius-md: 10px;
+  --nz-radius-lg: 14px;
+  --nz-radius-xl: 20px;
+  --nz-radius-full: 999px;
+
+  /* ---- 9. SOMBRAS (multicapa sutiles, sin bordes duros) ---- */
+  --nz-shadow-xs: 0 1px 2px rgba(17, 24, 39, 0.05);
+  --nz-shadow-sm: 0 1px 2px rgba(17, 24, 39, 0.05), 0 2px 6px rgba(17, 24, 39, 0.04);
+  --nz-shadow-md: 0 2px 4px rgba(17, 24, 39, 0.04), 0 6px 16px rgba(17, 24, 39, 0.07);
+  --nz-shadow-lg: 0 4px 8px rgba(17, 24, 39, 0.04), 0 14px 32px rgba(17, 24, 39, 0.10);
+  --nz-shadow-xl: 0 8px 16px rgba(17, 24, 39, 0.06), 0 24px 56px rgba(17, 24, 39, 0.14);
+  --nz-shadow-brand: 0 2px 4px rgba(37, 99, 235, 0.10), 0 8px 20px rgba(37, 99, 235, 0.14);
+  --nz-shadow-accent: 0 2px 4px rgba(249, 115, 22, 0.10), 0 8px 20px rgba(249, 115, 22, 0.14);
+
+  /* ---- 10. Z-INDEX ---- */
+  --nz-z-base: 0;
+  --nz-z-raised: 10;
+  --nz-z-sticky: 100;
+  --nz-z-header: 200;
+  --nz-z-drawer: 300;
+  --nz-z-modal: 400;
+  --nz-z-popover: 500;
+  --nz-z-toast: 600;
+  --nz-z-tooltip: 700;
+
+  /* ---- 11. MOVIMIENTO (ui-animation-taste) ---- */
+  --nz-dur-fast: 120ms;
+  --nz-dur-base: 180ms;
+  --nz-dur-slow: 260ms;
+  --nz-ease-out: cubic-bezier(0.16, 1, 0.3, 1);   /* expo-out: entradas */
+  --nz-ease-in:  cubic-bezier(0.7, 0, 0.84, 0);   /* salidas, más cortas */
+  --nz-ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+
+  /* ---- 12. FOCUS ---- */
+  --nz-focus-ring: 0 0 0 3px var(--nz-blue-200);
+  --nz-focus-ring-accent: 0 0 0 3px var(--nz-orange-200);
+}
+
+/* ---- TEMA OSCURO (opt-in vía data-nz-theme="dark") ---- */
+[data-nz-theme="dark"] {
+  --nz-bg:          #0b1220;
+  --nz-bg-soft:     #0f172a;
+  --nz-bg-inset:    #1e293b;
+  --nz-surface:     #101a2e;
+  --nz-surface-2:   #16223a;
+  --nz-border:      #24334d;
+  --nz-border-soft: #1c2940;
+  --nz-border-strong: #33456a;
+  --nz-text:        #f1f5f9;
+  --nz-text-soft:   #a9b8cd;
+  --nz-text-mute:   #7d8fa9;
+  --nz-text-faint:  #5b6b85;
+  --nz-text-invert: #0b1220;
+  --nz-brand:       #4f8ef7;
+  --nz-brand-strong: #6ba3ff;
+  --nz-brand-soft:  rgba(79, 142, 247, 0.12);
+  --nz-brand-tint:  rgba(79, 142, 247, 0.22);
+  --nz-accent:      #fb923c;
+  --nz-accent-strong: #fdba74;
+  --nz-accent-soft: rgba(251, 146, 60, 0.12);
+  --nz-accent-tint: rgba(251, 146, 60, 0.22);
+  --nz-success:     #4ade80;
+  --nz-success-soft: rgba(34, 197, 94, 0.14);
+  --nz-danger:      #f87171;
+  --nz-danger-soft: rgba(239, 68, 68, 0.14);
+  --nz-warning:     #fbbf24;
+  --nz-warning-soft: rgba(245, 158, 11, 0.14);
+  --nz-info:        #4f8ef7;
+  --nz-info-soft:   rgba(79, 142, 247, 0.12);
+  --nz-overlay:     rgba(3, 7, 18, 0.62);
+  --nz-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --nz-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.30);
+  --nz-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.30), 0 6px 16px rgba(0, 0, 0, 0.38);
+  --nz-shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.30), 0 14px 32px rgba(0, 0, 0, 0.45);
+  --nz-shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.35), 0 24px 56px rgba(0, 0, 0, 0.55);
+  --nz-shadow-brand: 0 2px 4px rgba(0, 0, 0, 0.30), 0 8px 20px rgba(79, 142, 247, 0.20);
+  --nz-shadow-accent: 0 2px 4px rgba(0, 0, 0, 0.30), 0 8px 20px rgba(251, 146, 60, 0.20);
+  --nz-focus-ring: 0 0 0 3px rgba(79, 142, 247, 0.45);
+  --nz-focus-ring-accent: 0 0 0 3px rgba(251, 146, 60, 0.45);
+}
+
+/* ---- Base compartida ---- */
+.nz, [data-nz-theme] {
+  font-family: var(--nz-font);
+  color: var(--nz-text);
+  background: var(--nz-bg);
+  line-height: var(--nz-leading-normal);
+  font-size: var(--nz-text-md);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.nz *, [data-nz-theme] * { box-sizing: border-box; }
+
+.nz :focus-visible, [data-nz-theme] :focus-visible {
+  outline: none;
+  box-shadow: var(--nz-focus-ring);
+  border-radius: var(--nz-radius-sm);
+}
+
+/* Movimiento reducido: congelar, no ralentizar */
+@media (prefers-reduced-motion: reduce) {
+  .nz *, [data-nz-theme] * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---- Breakpoints oficiales (mobile-first, usar min-width):
+   base  ≤ 639px   1 columna
+   sm    ≥ 640px   2 columnas
+   md    ≥ 960px   3 columnas / sidebar
+   lg    ≥ 1200px  layout completo
+---- */

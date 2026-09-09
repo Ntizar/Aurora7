@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es" data-nz-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aurora 7 · 01 Layout y estructura (1–50)</title>
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../packs/p1-layout.css">
+<link rel="stylesheet" href="../packs/p0-catalog.css">
+<style>
+  /* Solo lo específico de esta página */
+  .cat-main { padding-bottom: var(--nz-space-16); }
+  /* Escalonado de entrada de las demos */
+  .cat-demo.nz-in:nth-child(1) { --d: .02s; } .cat-demo.nz-in:nth-child(2) { --d: .05s; }
+  .cat-demo.nz-in:nth-child(3) { --d: .08s; } .cat-demo.nz-in:nth-child(4) { --d: .11s; }
+  .cat-demo.nz-in:nth-child(5) { --d: .14s; } .cat-demo.nz-in:nth-child(n+6) { --d: .17s; }
+  .splitpane-demo { display: flex; min-height: 8rem; }
+  .splitpane-demo__pane { flex: 1 1 50%; min-width: 3rem; }
+  .splitpane-demo__grip { flex: 0 0 8px; cursor: col-resize; border-radius: var(--nz-radius-full); background: var(--nz-border-strong); transition: background var(--nz-dur-fast) var(--nz-ease-out); }
+  .splitpane-demo__grip:hover, .splitpane-demo__grip.is-drag { background: var(--nz-brand); }
+</style>
+</head>
+<body class="nz nz-root">
+
+  <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="cat-topbar">
+    <a class="cat-brandmark" href="../index.html" style="text-decoration:none;color:inherit"><i></i><i></i> Aurora 7</a>
+    <span class="cat-count">01 · 50 objetos</span>
+    <button class="theme-toggle" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
+  </header>
+
+  <nav class="cat-nav-pages" aria-label="Categorías del catálogo">
+    <a href="#" aria-current="page">01 Layout</a>
+    <a href="#">02 Navegación</a><a href="#">03 Tipografía</a><a href="#">04 Acciones</a>
+    <a href="#">05 Formularios</a><a href="#">06 Feedback</a><a href="#">07 Overlays</a>
+    <a href="#">08 Datos</a><a href="#">09 Media</a><a href="#">10 Comercio</a>
+    <a href="#">11 Social</a><a href="#">12 Sistema</a>
+  </nav>
+
+  <main class="nz-container cat-main" id="contenido">
+
+    <div class="cat-pagehead">
+      <p class="cat-pagehead__over">Categoría 01 · objetos 1–50</p>
+      <h1>Layout y <em>estructura</em></h1>
+      <p>El esqueleto de cualquier web: contenedores, grids, landmarks,sticky, bleed y los patrones de página que todo proyecto necesita.</p>
+    </div>
+
+    <!-- 01 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">01</span><span class="cat-demo__name">Viewport / contenedor raíz</span><span class="cat-demo__tag">.nz-root</span></div>
+      <div class="cat-stage"><div class="nz-root demo-box" style="min-height:5rem">Esta página entera es el objeto: min-height 100dvh + columna flex.</div></div>
+    </section>
+
+    <!-- 02 03 04 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">02–04</span><span class="cat-demo__name">Contenedores: página, fluido, fijo</span><span class="cat-demo__tag">.nz-container · --fluid · --fixed</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-container demo-box">página · max 72rem</div>
+        <div class="nz-container nz-container--fluid demo-box">fluido · 100%</div>
+        <div class="nz-container nz-container--fixed demo-box">fijo · max 60rem</div>
+      </div>
+    </section>
+
+    <!-- 05 06 07 08 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">05–08</span><span class="cat-demo__name">Grids y sistema de filas/columnas</span><span class="cat-demo__tag">.nz-grid-12 · .nz-grid-auto · .nz-row · .nz-col</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-grid-12">
+          <div class="demo-box demo-box--brand">12</div><div class="demo-box">11</div><div class="demo-box">10</div><div class="demo-box">9</div>
+          <div class="demo-box">8</div><div class="demo-box">7</div><div class="demo-box">6</div><div class="demo-box">5</div>
+        </div>
+        <div class="nz-grid-auto"><div class="demo-box">auto-fit</div><div class="demo-box">auto-fit</div><div class="demo-box">auto-fit</div></div>
+        <div class="nz-row"><div class="demo-box">fila · item 1</div><div class="demo-box">fila · item 2</div></div>
+        <div class="nz-col"><div class="demo-box">columna · a</div><div class="demo-box">columna · b</div></div>
+      </div>
+    </section>
+
+    <!-- 09 10 11 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">09–11</span><span class="cat-demo__name">Stacks y cluster</span><span class="cat-demo__tag">.nz-stack · .nz-hstack · .nz-cluster</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-stack nz-stack--sm"><div class="demo-box">stack vertical</div><div class="demo-box">gap xs/sm/lg/xl</div></div>
+        <div class="nz-hstack"><div class="demo-box">horizontal</div><div class="demo-box">alineado</div></div>
+        <div class="nz-cluster"><span class="demo-box">cluster</span><span class="demo-box">items</span><span class="demo-box">que fluyen</span><span class="demo-box">con wrap</span></div>
+      </div>
+    </section>
+
+    <!-- 12 13 14 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">12–14</span><span class="cat-demo__name">Split, sidebar+contenido, tres columnas</span><span class="cat-demo__tag">.nz-split · .nz-with-sidebar · .nz-thirds</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-split"><div class="demo-box">split izq</div><div class="demo-box demo-box--brand">split der (50/50 en ≥960px)</div></div>
+        <div class="nz-with-sidebar"><div class="demo-box">sidebar 15rem</div><div class="demo-box">contenido flexible</div></div>
+        <div class="nz-thirds"><div class="demo-box">1/3</div><div class="demo-box">2/3</div><div class="demo-box demo-box--accent">3/3</div></div>
+      </div>
+    </section>
+
+    <!-- 15 16 17 18 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">15–18</span><span class="cat-demo__name">Landmarks: header, main, footer, nav</span><span class="cat-demo__tag">.nz-header · .nz-main · .nz-footer · .nz-nav-landmark</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-header"><strong style="font-size:var(--nz-text-sm)">Mi web</strong><span class="demo-box">header</span></div>
+        <div class="nz-main demo-box" style="flex:none">main · contenido principal</div>
+        <footer class="nz-footer">footer · Hecho con ❤️ por David Antizar</footer>
+        <nav class="nz-nav-landmark demo-box" aria-label="demo">landmark nav</nav>
+      </div>
+    </section>
+
+    <!-- 19 20 21 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">19–21</span><span class="cat-demo__name">Landmarks: aside, section, article</span><span class="cat-demo__tag">.nz-aside · .nz-section · .nz-article</span></div>
+      <div class="cat-stage nz-stack">
+        <aside class="nz-aside demo-box">aside</aside>
+        <div class="nz-section demo-box" style="padding:var(--nz-space-4)">section</div>
+        <article class="nz-article"><h2 style="font-size:var(--nz-text-md)">Artículo</h2><p style="color:var(--nz-text-soft);font-size:var(--nz-text-sm);margin-top:var(--nz-space-2)">Superficie con sombra sutil, sin bordes duros.</p></article>
+      </div>
+    </section>
+
+    <!-- 22 23 24 25 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">22–25</span><span class="cat-demo__name">App shell y sticky</span><span class="cat-demo__tag">.nz-appshell · --sticky</span></div>
+      <div class="cat-stage">
+        <div class="nz-appshell demo-box" style="min-height:9rem;gap:var(--nz-space-2)">
+          <div class="demo-box demo-box--brand">appshell fila 1 · header (sticky arriba: la barra superior de esta página)</div>
+          <div class="demo-box" style="flex:1;display:flex;align-items:center;justify-content:center">fila 2 · contenido (1fr)</div>
+          <div class="demo-box">fila 3 · footer</div>
+        </div>
+        <p>.nz-sidebar--sticky: sidebar que sigue el scroll con top y max-height propios.</p>
+      </div>
+    </section>
+
+    <!-- 26 27 28 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">26–28</span><span class="cat-demo__name">Spacer y divisores</span><span class="cat-demo__tag">.nz-spacer · .nz-divider · --v</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-hstack" style="width:100%"><span class="demo-box">izq</span><span class="nz-spacer"></span><span class="demo-box">der (spacer empuja)</span></div>
+        <hr class="nz-divider">
+        <div class="nz-hstack" style="align-items:stretch"><span class="demo-box">a</span><hr class="nz-divider--v"><span class="demo-box">b</span></div>
+      </div>
+    </section>
+
+    <!-- 29 30 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">29–30</span><span class="cat-demo__name">Bleed y aspect-ratio</span><span class="cat-demo__tag">.nz-bleed · .nz-aspect--*</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-bleed"><div class="demo-box demo-box--accent">bleed: toca los bordes del contenedor</div></div>
+        <div class="nz-grid-auto">
+          <div class="nz-aspect nz-aspect--16x9"><div class="demo-box demo-box--brand" style="display:flex;align-items:center;justify-content:center;height:100%">16:9</div></div>
+          <div class="nz-aspect nz-aspect--1x1"><div class="demo-box" style="display:flex;align-items:center;justify-content:center;height:100%">1:1</div></div>
+          <div class="nz-aspect nz-aspect--4x3"><div class="demo-box" style="display:flex;align-items:center;justify-content:center;height:100%">4:3</div></div>
+          <div class="nz-aspect nz-aspect--21x9"><div class="demo-box" style="display:flex;align-items:center;justify-content:center;height:100%">21:9</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 31 32 33 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">31–33</span><span class="cat-demo__name">Masonry, bento y dashboard grid</span><span class="cat-demo__tag">.nz-masonry · .nz-bento · .nz-dash-grid</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-masonry">
+          <div class="demo-box" style="height:4rem">masonry 1</div>
+          <div class="demo-box" style="height:6rem">masonry 2</div>
+          <div class="demo-box" style="height:3rem">masonry 3</div>
+        </div>
+        <div class="nz-bento">
+          <div class="demo-box demo-box--brand nz-bento__wide">bento wide (2 col)</div>
+          <div class="demo-box">bento</div>
+          <div class="demo-box">bento</div>
+          <div class="demo-box demo-box--accent nz-bento__tall" style="grid-row:span 2">bento alto</div>
+        </div>
+        <div class="nz-dash-grid"><div class="demo-box">dash 1</div><div class="demo-box">dash 2</div><div class="demo-box">dash 3</div></div>
+      </div>
+    </section>
+
+    <!-- 34 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">34</span><span class="cat-demo__name">Holy grail layout</span><span class="cat-demo__tag">.nz-holy</span></div>
+      <div class="cat-stage">
+        <div class="nz-holy demo-box" style="min-height:12rem;padding:var(--nz-space-2)">
+          <header class="nz-holy__header demo-box demo-box--brand">header</header>
+          <nav class="nz-holy__nav demo-box" style="display:none">nav</nav>
+          <main class="nz-holy__main demo-box" style="display:flex;align-items:center;justify-content:center">main</main>
+          <aside class="nz-holy__aside demo-box" style="display:none">aside</aside>
+          <footer class="nz-holy__footer demo-box">footer</footer>
+        </div>
+        <p>En ≥960px: nav + main + aside con grid-areas. Móvil: header/main/footer.</p>
+      </div>
+    </section>
+
+    <!-- 35 36 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">35–36</span><span class="cat-demo__name">Split pane (¡arrástralo!) y panel colapsable</span><span class="cat-demo__tag">.nz-splitpane · .nz-collapsible</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="splitpane-demo" id="splitDemo">
+          <div class="splitpane-demo__pane demo-box demo-box--brand" style="display:flex;align-items:center;justify-content:center">panel A</div>
+          <div class="splitpane-demo__grip" role="separator" aria-orientation="vertical" aria-label="Redimensionar paneles"></div>
+          <div class="splitpane-demo__pane demo-box" style="display:flex;align-items:center;justify-content:center">panel B</div>
+        </div>
+        <div>
+          <button class="nz-btn nz-btn--primary" id="collBtn" style="min-height:36px;padding:0 var(--nz-space-4);font-size:var(--nz-text-sm)">Ocultar panel</button>
+          <div class="nz-collapsible" id="coll" style="margin-top:var(--nz-space-2)">
+            <details open><summary>Panel colapsable (usa &lt;details&gt; o hidden)</summary><p style="font-size:var(--nz-text-sm);color:var(--nz-text-soft)">Contenido plegable accesible.</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 37 38 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">37–38</span><span class="cat-demo__name">Drawer layout y overlay scrim</span><span class="cat-demo__tag">.nz-drawer-layout · .nz-scrim</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-drawer-layout demo-box" style="min-height:8rem;gap:var(--nz-space-2)">
+          <div class="nz-drawer-layout__drawer demo-box demo-box--brand">drawer 16rem</div>
+          <div class="demo-box" style="display:flex;align-items:center;justify-content:center">contenido</div>
+        </div>
+        <div style="position:relative;height:5rem;background:var(--nz-bg-inset);border-radius:var(--nz-radius-md);overflow:hidden">
+          <div class="nz-scrim is-open" style="position:absolute;border-radius:inherit"></div>
+          <div style="position:absolute;inset:var(--nz-space-2);display:flex;align-items:center;justify-content:center;color:var(--nz-text-invert);font-size:var(--nz-text-xs)">scrim activo (posición fija real en producción)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 39 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">39</span><span class="cat-demo__name">Skip-to-content target</span><span class="cat-demo__tag">.nz-skip-link</span></div>
+      <div class="cat-stage"><p style="font-size:var(--nz-text-sm);color:var(--nz-text-soft);margin:0">Pulsa <kbd style="font-family:var(--nz-font-mono);background:var(--nz-bg-inset);padding:2px 6px;border-radius:4px">Tab</kbd> al entrar: el enlace «Saltar al contenido» aparece arriba a la izquierda (está en el &lt;body&gt; de esta página).</p></div>
+    </section>
+
+    <!-- 40 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">40</span><span class="cat-demo__name">Max-width prose</span><span class="cat-demo__tag">.nz-prose</span></div>
+      <div class="cat-stage">
+        <div class="nz-prose">
+          <h2>Texto de lectura</h2>
+          <p>Columna de 44rem centrada para artículos y documentación. El ritmo vertical lo marcan los tokens de espacio, no márgenes sueltos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 41 42 43 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">41–43</span><span class="cat-demo__name">Hero a borde, rutas anidadas y outlet</span><span class="cat-demo__tag">.nz-hero-bleed · .nz-route · .nz-outlet</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-hero-bleed" style="border-radius:var(--nz-radius-md)">
+          <h2 style="font-size:var(--nz-text-xl);letter-spacing:var(--nz-tracking-tight);margin:0">Full-bleed hero</h2>
+          <p style="color:var(--nz-text-soft);font-size:var(--nz-text-sm)">Ancho completo de la página, fondo bg-soft.</p>
+        </div>
+        <div class="nz-route">
+          <div class="demo-box">ruta padre</div>
+          <div class="nz-route__outlet">outlet de ruta hija (punteado)</div>
+        </div>
+        <div class="nz-outlet">slot / outlet de página</div>
+      </div>
+    </section>
+
+    <!-- 44 45 46 47 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">44–47</span><span class="cat-demo__name">Regiones: anuncios, cookies, chat, toolbar</span><span class="cat-demo__tag">.nz-region-*</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="nz-region-ad">espacio publicitario 728×90</div>
+        <div class="demo-box">cookies/chat/toolbar: la barra de cookies es fixed-bottom (45); chat flotante fixed abajo-derecha (46); toolbar inline (47) ↓</div>
+        <div class="nz-region-toolbar"><span class="demo-box">herramienta</span><span class="demo-box">otra</span></div>
+      </div>
+    </section>
+
+    <!-- 48 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">48</span><span class="cat-demo__name">Safe-area inset (móvil)</span><span class="cat-demo__tag">.nz-safe · .nz-safe-x</span></div>
+      <div class="cat-stage"><div class="nz-safe demo-box">padding-bottom = env(safe-area-inset-bottom) — respeta la barra de gestos en iPhone.</div></div>
+    </section>
+
+    <!-- 49 50 -->
+    <section class="cat-demo nz-in">
+      <div class="cat-demo__title"><span class="cat-demo__num">49–50</span><span class="cat-demo__name">Print y RTL</span><span class="cat-demo__tag">@media print · .nz-rtl</span></div>
+      <div class="cat-stage nz-stack">
+        <div class="demo-box">print: al imprimir, .nz-print-hide desaparece, sombras fuera, blanco y negro.</div>
+        <div class="nz-rtl demo-box" dir="rtl">تخطيط من اليمين إلى اليسار — direction: rtl</div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="cat-nav-pages nz-print-hide" style="justify-content:center;border-top:1px solid var(--nz-border-soft)">
+    <a href="#" aria-current="page">▲ 01</a>
+    <a href="#">02 Navegación →</a>
+  </div>
+
+  <footer class="cat-footer">
+    Aurora 7 · Design System Ntizar · Categoría 1 de 12 · Hecho con ❤️ por David Antizar
+  </footer>
+
+<script>
+  // Tema
+  document.getElementById('btnTheme').addEventListener('click', function () {
+    var h = document.documentElement;
+    h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme') === 'dark' ? 'light' : 'dark');
+  });
+
+  // Split pane arrastrable de verdad (pointer events, sin librerías)
+  (function () {
+    var demo = document.getElementById('splitDemo');
+    if (!demo) return;
+    var grip = demo.querySelector('.splitpane-demo__grip');
+    var paneA = demo.querySelector('.splitpane-demo__pane');
+    var drag = false;
+    grip.addEventListener('pointerdown', function (e) { drag = true; grip.classList.add('is-drag'); grip.setPointerCapture(e.pointerId); });
+    grip.addEventListener('pointermove', function (e) {
+      if (!drag) return;
+      var r = demo.getBoundingClientRect();
+      var pct = Math.min(Math.max(((e.clientX - r.left) / r.width) * 100, 15), 85);
+      paneA.style.flex = '0 0 ' + pct + '%';
+    });
+    grip.addEventListener('pointerup', function () { drag = false; grip.classList.remove('is-drag'); });
+  })();
+
+  // Panel colapsable
+  var collBtn = document.getElementById('collBtn'), coll = document.getElementById('coll');
+  collBtn.addEventListener('click', function () {
+    coll.hidden = !coll.hidden;
+    collBtn.textContent = coll.hidden ? 'Mostrar panel' : 'Ocultar panel';
+  });
+</script>
+</body>
+</html>
