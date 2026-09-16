@@ -8,7 +8,7 @@
 .nz-img { display: block; max-width: 100%; height: auto; }
 .nz-img--rounded { border-radius: var(--nz-radius-md); }
 .nz-img--full { width: 100%; object-fit: cover; }
-.nz-img---circle { border-radius: 50%; }
+.nz-img--circle { border-radius: 50%; }
 .nz-cover { overflow: hidden; border-radius: var(--nz-radius-md); background: var(--nz-bg-inset); }
 .nz-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .nz-cover--16x9 { aspect-ratio: 16 / 9; }
