@@ -68,7 +68,7 @@
 .nz-btn--icon-sm { width: 36px; min-height: 36px; padding: 0; }
 .nz-btn--icon-lg { width: 52px; min-height: 52px; padding: 0; }
 .nz-btn--icon-square { width: 44px; padding: 0; border-radius: var(--nz-radius-md); }
-.nz-btn__badge { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 4px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--nz-radius-full); background: var(--nz-accent); color: var(--nz-gray-0); font-size: var(--nz-text-2xs); font-weight: 800; }
+.nz-btn__badge { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 var(--nz-space-1); display: inline-flex; align-items: center; justify-content: center; border-radius: var(--nz-radius-full); background: var(--nz-accent); color: var(--nz-gray-0); font-size: var(--nz-text-2xs); font-weight: 800; }
 .nz-btn--badged { position: relative; overflow: visible; }
 
 /* ---- Estados ---- */
@@ -119,7 +119,7 @@
 
 /* ---- Cargadores ---- */
 .nz-spin { width: 1em; height: 1em; border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent; display: inline-block; animation: nzSpin .7s linear infinite; }
-.nz-spin--sm { width: .75em; height: .75em; border-width: 1.5px; }
+.nz-spin--sm { width: .75em; height: .75em; border-width: var(--nz-border-w-strong); }
 .nz-spin--lg { width: 1.5em; height: 1.5em; border-width: 3px; }
 .nz-spin--brand { color: var(--nz-brand); }
 .nz-spin--accent { color: var(--nz-accent); }

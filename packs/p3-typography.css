@@ -54,7 +54,7 @@
 .nz-prose strong { color: var(--nz-text); }
 .nz-prose code { font-family: var(--nz-font-mono); font-size: .9em; padding: .1em .35em; border-radius: var(--nz-radius-xs); background: var(--nz-bg-inset); color: var(--nz-brand-strong); }
 .nz-prose table { width: 100%; border-collapse: collapse; margin-block: var(--nz-space-4); font-size: var(--nz-text-sm); }
-.nz-prose th, .nz-prose td { text-align: start; padding: var(--nz-space-2) var(--nz-space-3); border-bottom: 1px solid var(--nz-border-soft); }
+.nz-prose th, .nz-prose td { text-align: start; padding: var(--nz-space-2) var(--nz-space-3); border-bottom: var(--nz-border-w) solid var(--nz-border-soft); }
 .nz-prose th { color: var(--nz-text); font-weight: 700; }
 .nz-prose img { max-width: 100%; height: auto; border-radius: var(--nz-radius-md); }
 .nz-prose--wide { max-width: var(--nz-container-max); }
@@ -74,7 +74,7 @@
 .nz-list--brand .nz-list__item { padding: var(--nz-space-2) var(--nz-space-3); border-radius: var(--nz-radius-sm); background: var(--nz-brand-soft); color: var(--nz-text); }
 .nz-list--compact { gap: var(--nz-space-1); }
 .nz-list--compact .nz-list__item { font-size: var(--nz-text-sm); }
-.nz-list--divided .nz-list__item + .nz-list__item { border-top: 1px solid var(--nz-border-soft); padding-top: var(--nz-space-2); }
+.nz-list--divided .nz-list__item + .nz-list__item { border-top: var(--nz-border-w) solid var(--nz-border-soft); padding-top: var(--nz-space-2); }
 .nz-list--icon .nz-list__item { align-items: center; }
 .nz-list--icon .nz-list__item::before { content: ""; width: 22px; height: 22px; margin-top: 0; border-radius: var(--nz-radius-xs); background: var(--nz-brand-soft); }
 .nz-list__item--done { color: var(--nz-text-mute); text-decoration: line-through; }
@@ -97,11 +97,11 @@
 .nz-code--block { display: block; padding: var(--nz-space-4); border-radius: var(--nz-radius-md); background: var(--nz-gray-900); color: var(--nz-gray-100); overflow-x: auto; line-height: var(--nz-leading-normal); font-size: var(--nz-text-sm); }
 .nz-code--dark { background: var(--nz-gray-950); color: var(--nz-gray-50); }
 [data-nz-theme="dark"] .nz-code--block { background: var(--nz-gray-950); color: var(--nz-gray-50); }
-.nz-kbd { font-family: var(--nz-font-mono); font-size: var(--nz-text-xs); padding: .2rem .5rem; border-radius: var(--nz-radius-xs); background: var(--nz-surface-2); border: 1px solid var(--nz-border); box-shadow: 0 1px 0 var(--nz-border); color: var(--nz-text); }
-.nz-kbd--lg { font-size: var(--nz-text-sm); padding: .35rem .7rem; }
+.nz-kbd { font-family: var(--nz-font-mono); font-size: var(--nz-text-xs); padding: 0.2rem var(--nz-space-2); border-radius: var(--nz-radius-xs); background: var(--nz-surface-2); border: var(--nz-border-w) solid var(--nz-border); box-shadow: 0 1px 0 var(--nz-border); color: var(--nz-text); }
+.nz-kbd--lg { font-size: var(--nz-text-sm); padding: 0.35rem 0.7rem; }
 
 /* ---- 09 Etiqueta / chip de texto ---- */
-.nz-lbl { display: inline-flex; align-items: center; gap: var(--nz-space-1); padding: .2rem .7rem; border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); color: var(--nz-text-soft); font-size: var(--nz-text-2xs); font-weight: 700; }
+.nz-lbl { display: inline-flex; align-items: center; gap: var(--nz-space-1); padding: 0.2rem 0.7rem; border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); color: var(--nz-text-soft); font-size: var(--nz-text-2xs); font-weight: 700; }
 .nz-lbl--brand { background: var(--nz-brand-soft); color: var(--nz-brand); }
 .nz-lbl--accent { background: var(--nz-accent-soft); color: var(--nz-accent-strong); }
 .nz-lbl--success { background: var(--nz-success-soft); color: var(--nz-success); }
@@ -109,8 +109,8 @@
 .nz-lbl--info { background: var(--nz-info-soft); color: var(--nz-info); }
 .nz-lbl--neutral { background: var(--nz-bg-inset); color: var(--nz-text-mute); }
 .nz-lbl--outline { background: none; border: var(--nz-border-w) solid var(--nz-border-strong); color: var(--nz-text-soft); }
-.nz-lbl--lg { padding: .3rem .9rem; font-size: var(--nz-text-xs); }
-.nz-lbl--sm { padding: .1rem .5rem; font-size: var(--nz-text-2xs); }
+.nz-lbl--lg { padding: 0.3rem 0.9rem; font-size: var(--nz-text-xs); }
+.nz-lbl--sm { padding: 0.1rem var(--nz-space-2); font-size: var(--nz-text-2xs); }
 .nz-lbl i { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
 
 /* ---- 10 Cifras / números ---- */

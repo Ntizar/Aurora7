@@ -59,7 +59,7 @@
 .nz-avatar-group .nz-avatar:first-child { margin-left: 0; }
 .nz-avatar-group__more { border: 2px solid var(--nz-surface); background: var(--nz-bg-inset); color: var(--nz-text-mute); }
 .nz-avatar-group--sm { line-height: 1; }
-.nz-avatar-group--sm .nz-avatar { margin-left: -0.35rem; border-width: 1px; }
+.nz-avatar-group--sm .nz-avatar { margin-left: -0.35rem; border-width: var(--nz-border-w); }
 
 /* ---- Logotipo / palabra de marca ---- */
 .nz-brand { display: inline-flex; align-items: center; gap: var(--nz-space-2); font-weight: 800; letter-spacing: var(--nz-tracking-tight); color: var(--nz-text); }

@@ -42,6 +42,22 @@ VAR_DEF = re.compile(r"(--nz-[A-Za-z0-9_-]+)\s*:")
 VAR_USE = re.compile(r"var\(\s*(--nz-[A-Za-z0-9_-]+)")
 HEX = re.compile(r"#[0-9a-fA-F]{3,8}\b")
 
+# Valores que ya tienen token de valor fijo: si aparecen literales, es una
+# incoherencia con el manifiesto («todos los valores son tokens --nz-*»).
+MAPA_ESPACIO = {
+    "0.25rem": 1, "0.5rem": 2, "0.75rem": 3, "1rem": 4, "1.25rem": 5, "1.5rem": 6,
+    "1.75rem": 7, "2rem": 8, "2.25rem": 9, "2.5rem": 10, "3rem": 12, "4rem": 16, "5rem": 20,
+    "4px": 1, "8px": 2, "12px": 3, "16px": 4, "20px": 5, "24px": 6, "28px": 7,
+    "32px": 8, "36px": 9, "40px": 10, "48px": 12, "64px": 16, "80px": 20,
+}
+MAPA_TEXTO = {
+    "0.6875rem": "2xs", "11px": "2xs", "0.75rem": "xs", "12px": "xs", "0.8125rem": "sm",
+    "13px": "sm", "0.9375rem": "base", "15px": "base", "1rem": "md", "16px": "md",
+    "1.125rem": "lg", "18px": "lg",
+}
+NUM = re.compile(r"(?<![\w.-])(\d*\.?\d+(?:rem|px))(?![\w-])")
+PROPS_ESPACIO = ("gap", "row-gap", "column-gap", "padding", "margin")
+
 fallos = []
 avisos = []
 
@@ -215,6 +231,40 @@ def main():
 
     # ---------- resultado ----------
     total = sum(len(d["clases"]) for d in packs.values())
+    # ---------- 11. valores literales que ya tienen token ----------
+    # El manifiesto dice que todos los valores son tokens. Si existe un token con
+    # el mismo valor exacto, escribir el literal es una incoherencia (y una
+    # trampa: el día que el token cambie, esa regla se queda atrás).
+    def literales(txt):
+        fuera = []
+        for m in re.finditer(r"\bborder(?:-[a-z]+)*\s*:\s*(1px|1\.5px)\b", txt):
+            tok = "--nz-border-w" if m.group(1) == "1px" else "--nz-border-w-strong"
+            fuera.append(f"border en {m.group(1)} → usa var({tok})")
+        for m in re.finditer(r"\b(gap|row-gap|column-gap|padding|margin)(?:-[a-z]+)?\s*:\s*([^;{}]+)", txt):
+            valor = m.group(2)
+            if "var(" in valor or "calc(" in valor:
+                continue
+            for v in NUM.findall(valor):
+                vv = ("0" + v) if v.startswith(".") else v
+                if vv in MAPA_ESPACIO:
+                    fuera.append(f"{m.group(1)} usa {v} → hay token var(--nz-space-{MAPA_ESPACIO[vv]})")
+        for m in re.finditer(r"\bfont-size\s*:\s*([^;{}]+)", txt):
+            valor = m.group(1)
+            if "var(" in valor or "clamp(" in valor:
+                continue
+            for v in NUM.findall(valor):
+                vv = ("0" + v) if v.startswith(".") else v
+                if vv in MAPA_TEXTO:
+                    fuera.append(f"font-size usa {v} → hay token var(--nz-text-{MAPA_TEXTO[vv]})")
+        return fuera
+
+    for pack in sorted(PACKS.glob("p[0-9]*.css")):
+        if pack.name.startswith("p0"):
+            continue
+        txt = re.sub(r"/\*.*?\*/", "", pack.read_text(encoding="utf-8", errors="replace"), flags=re.S)
+        for e in literales(txt):
+            fallo(f"{pack.name}: {e}")
+
     print(f"\nAurora 7 · validación de {len(packs)} packs · {total} objetos declarados\n")
     if avisos:
         print(f"AVISOS ({len(avisos)}):")

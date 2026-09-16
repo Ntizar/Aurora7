@@ -23,7 +23,7 @@
 .nz-chart__grid-line { border-top: var(--nz-border-w) solid var(--nz-border-soft); }
 .nz-chart__axis { display: flex; justify-content: space-between; font-size: var(--nz-text-2xs); color: var(--nz-text-faint); padding-top: var(--nz-space-1); }
 .nz-chart__axis-label { color: var(--nz-text-mute); font-size: var(--nz-text-2xs); }
-.nz-chart__target { position: absolute; left: 0; right: 0; border-top: 1px dashed var(--nz-border-strong); }
+.nz-chart__target { position: absolute; left: 0; right: 0; border-top: var(--nz-border-w) dashed var(--nz-border-strong); }
 .nz-chart__target--accent { border-top-color: var(--nz-accent); }
 .nz-chart__mark { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--nz-text); opacity: .5; }
 .nz-chart__mark-label { position: absolute; top: 0; transform: translateX(-50%); font-size: var(--nz-text-2xs); color: var(--nz-text-soft); white-space: nowrap; }
@@ -69,7 +69,7 @@
 .nz-chart-bar--stacked .nz-chart-bar__bar > :first-child { border-radius: 0 0 var(--nz-radius-sm) var(--nz-radius-sm); }
 .nz-chart-bar--stacked .nz-chart-bar__bar > :last-child { border-radius: var(--nz-radius-sm) var(--nz-radius-sm) 0 0; }
 .nz-chart-bar--neg { align-items: stretch; }
-.nz-chart-bar__zero { border-top: 1px solid var(--nz-border); width: 100%; }
+.nz-chart-bar__zero { border-top: var(--nz-border-w) solid var(--nz-border); width: 100%; }
 .nz-chart-bar--horizontal { flex-direction: column; min-height: 0; }
 .nz-chart-bar--horizontal .nz-chart-bar__col { flex-direction: row; align-items: center; justify-content: flex-start; gap: var(--nz-space-2); width: 100%; height: auto; min-height: 24px; }
 .nz-chart-bar--horizontal .nz-chart-bar__bar { height: 12px; max-width: none; border-radius: 0 var(--nz-radius-sm) var(--nz-radius-sm) 0; }

@@ -34,14 +34,14 @@
 /* ---- Análisis de contraste ---- */
 .nz-contrast { display: grid; gap: var(--nz-space-3); grid-template-columns: 1fr; align-items: center; padding: var(--nz-space-4); border-radius: var(--nz-radius-md); background: var(--nz-bg-soft); }
 .nz-contrast__pair { display: inline-flex; align-items: center; gap: var(--nz-space-2); font-size: var(--nz-text-sm); }
-.nz-contrast__chip { width: 28px; height: 28px; flex: none; border: 1px solid var(--nz-border); border-radius: var(--nz-radius-xs); }
+.nz-contrast__chip { width: 28px; height: 28px; flex: none; border: var(--nz-border-w) solid var(--nz-border); border-radius: var(--nz-radius-xs); }
 .nz-contrast__chip--brand { background: var(--nz-brand); }
 .nz-contrast__chip--accent { background: var(--nz-accent); }
 .nz-contrast__chip--surface { background: var(--nz-surface); }
 .nz-contrast__chip--soft { background: var(--nz-accent-soft); }
 .nz-contrast__ratio { font-size: var(--nz-text-xs); font-weight: 700; font-variant-numeric: tabular-nums; }
 .nz-contrast__ratio--ok { color: var(--nz-success); }
-.nz-contrast__status { padding: .2rem .6rem; border-radius: var(--nz-radius-full); font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
+.nz-contrast__status { padding: 0.2rem 0.6rem; border-radius: var(--nz-radius-full); font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
 .nz-contrast__status--aa { background: var(--nz-success-soft); color: var(--nz-success); }
 .nz-contrast__status--fail { background: var(--nz-danger-soft); color: var(--nz-danger); }
 .nz-contrast__badge { font-size: var(--nz-text-2xs); color: var(--nz-text-mute); }
@@ -50,7 +50,7 @@
 @media (min-width: 640px) { .nz-contrast { grid-template-columns: 1fr auto auto; } }
 
 /* ---- Etiqueta de nivel de conformidad ---- */
-.nz-a11y-badge { display: inline-flex; align-items: center; gap: var(--nz-space-1); padding: var(--nz-space-1) var(--nz-space-2); border: 1px solid var(--nz-border-strong); border-radius: var(--nz-radius-sm); background: var(--nz-surface); color: var(--nz-text-soft); font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
+.nz-a11y-badge { display: inline-flex; align-items: center; gap: var(--nz-space-1); padding: var(--nz-space-1) var(--nz-space-2); border: var(--nz-border-w) solid var(--nz-border-strong); border-radius: var(--nz-radius-sm); background: var(--nz-surface); color: var(--nz-text-soft); font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
 .nz-a11y-badge--aa { border-color: var(--nz-success); color: var(--nz-success); }
 .nz-a11y-badge--aaa { border-color: var(--nz-brand); color: var(--nz-brand); }
 
@@ -71,7 +71,7 @@
 @media (prefers-reduced-motion: reduce) { .nz-skip-link, .nz-skip-links-group__link { transition: none; } }
 
 /* ---- Alto contraste ---- */
-.nz-high-contrast-note { display: flex; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); border: 1px solid var(--nz-border-strong); border-radius: var(--nz-radius-md); background: var(--nz-surface); font-size: var(--nz-text-xs); color: var(--nz-text-soft); }
+.nz-high-contrast-note { display: flex; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); border: var(--nz-border-w) solid var(--nz-border-strong); border-radius: var(--nz-radius-md); background: var(--nz-surface); font-size: var(--nz-text-xs); color: var(--nz-text-soft); }
 .nz-high-contrast-note__icon { flex: none; font-weight: 800; color: var(--nz-text); }
 
 /* ---- Landmarks del documento ---- */
@@ -102,14 +102,14 @@
 
 /* ---- Versión y tema ---- */
 .nz-version-badge { display: inline-flex; align-items: center; gap: var(--nz-space-1); padding: var(--nz-space-1) var(--nz-space-2); border-radius: var(--nz-radius-sm); background: var(--nz-bg-inset); color: var(--nz-text-mute); font-family: var(--nz-font-mono); font-size: var(--nz-text-2xs); font-weight: 700; }
-.nz-tema-badge { display: inline-flex; align-items: center; gap: var(--nz-space-2); padding: var(--nz-space-1) var(--nz-space-3); border: 1px solid var(--nz-border); border-radius: var(--nz-radius-full); background: var(--nz-surface); font-size: var(--nz-text-xs); font-weight: 700; color: var(--nz-text-soft); }
+.nz-tema-badge { display: inline-flex; align-items: center; gap: var(--nz-space-2); padding: var(--nz-space-1) var(--nz-space-3); border: var(--nz-border-w) solid var(--nz-border); border-radius: var(--nz-radius-full); background: var(--nz-surface); font-size: var(--nz-text-xs); font-weight: 700; color: var(--nz-text-soft); }
 .nz-tema-badge--light::before { content: "☀"; color: var(--nz-warning); }
 .nz-tema-badge--dark::before { content: "☾"; color: var(--nz-brand); }
 .nz-tema-badge--system::before { content: "◐"; color: var(--nz-text-mute); }
 
 /* ---- Panel de preferencias de accesibilidad ---- */
-.nz-preferencias { display: grid; gap: var(--nz-space-1); padding: var(--nz-space-4); border: 1px solid var(--nz-border-soft); border-radius: var(--nz-radius-lg); background: var(--nz-surface); }
-.nz-preferencias__fila { display: flex; align-items: center; justify-content: space-between; gap: var(--nz-space-3); min-height: 44px; padding: var(--nz-space-2) 0; border-bottom: 1px solid var(--nz-border-soft); }
+.nz-preferencias { display: grid; gap: var(--nz-space-1); padding: var(--nz-space-4); border: var(--nz-border-w) solid var(--nz-border-soft); border-radius: var(--nz-radius-lg); background: var(--nz-surface); }
+.nz-preferencias__fila { display: flex; align-items: center; justify-content: space-between; gap: var(--nz-space-3); min-height: 44px; padding: var(--nz-space-2) 0; border-bottom: var(--nz-border-w) solid var(--nz-border-soft); }
 .nz-preferencias__fila:last-child { border-bottom: 0; }
 .nz-preferencias__label { font-size: var(--nz-text-sm); font-weight: 700; color: var(--nz-text); }
 .nz-preferencias__desc { display: block; font-size: var(--nz-text-xs); font-weight: 500; color: var(--nz-text-mute); }
@@ -118,7 +118,7 @@
 /* ---- Atajos de teclado ---- */
 .nz-atajo-teclado { display: inline-flex; align-items: center; gap: var(--nz-space-2); font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
 .nz-atajo-teclado__kbd { display: inline-flex; align-items: center; gap: var(--nz-space-1); }
-.nz-atajo-teclado__kbd kbd { min-width: 28px; min-height: 28px; display: inline-grid; place-items: center; padding: 0 var(--nz-space-2); border: 1px solid var(--nz-border); border-bottom-width: var(--nz-border-w-strong); border-radius: var(--nz-radius-xs); background: var(--nz-bg-soft); color: var(--nz-text); font-family: var(--nz-font-mono); font-size: var(--nz-text-2xs); font-weight: 700; }
+.nz-atajo-teclado__kbd kbd { min-width: 28px; min-height: 28px; display: inline-grid; place-items: center; padding: 0 var(--nz-space-2); border: var(--nz-border-w) solid var(--nz-border); border-bottom-width: var(--nz-border-w-strong); border-radius: var(--nz-radius-xs); background: var(--nz-bg-soft); color: var(--nz-text); font-family: var(--nz-font-mono); font-size: var(--nz-text-2xs); font-weight: 700; }
 .nz-atajo-teclado__desc { font-weight: 600; }
 
 /* ---- Ficha de sistema ---- */
@@ -128,7 +128,7 @@
 .nz-sysinfo__dd { margin: 0; color: var(--nz-text); font-weight: 700; font-variant-numeric: tabular-nums; }
 
 /* ---- Historial de incidencias ---- */
-.nz-incident { display: grid; gap: var(--nz-space-1); padding: var(--nz-space-3) 0; border-bottom: 1px solid var(--nz-border-soft); }
+.nz-incident { display: grid; gap: var(--nz-space-1); padding: var(--nz-space-3) 0; border-bottom: var(--nz-border-w) solid var(--nz-border-soft); }
 .nz-incident__time { font-size: var(--nz-text-2xs); font-weight: 700; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; color: var(--nz-text-faint); }
 .nz-incident__title { font-size: var(--nz-text-sm); font-weight: 700; color: var(--nz-text); }
 .nz-incident__body { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }

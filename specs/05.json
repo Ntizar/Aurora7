@@ -13,17 +13,17 @@
   {
    "titulo": "Inputs",
    "tag": ".nz-input · :focus",
-   "markup": "<input class=\"nz-input\" placeholder=\"Texto\" style=\"max-width:16rem\"><input class=\"nz-input nz-input--error\" placeholder=\"Con error\" style=\"max-width:16rem\">"
+   "markup": "<input class=\"nz-input\" placeholder=\"Texto\" style=\"max-width:16rem\" aria-label=\"Texto\"><input class=\"nz-input nz-input--error\" placeholder=\"Con error\" style=\"max-width:16rem\" aria-label=\"Con error\">"
   },
   {
    "titulo": "Textarea",
    "tag": ".nz-textarea",
-   "markup": "<textarea class=\"nz-textarea\" placeholder=\"Descripción…\" style=\"max-width:20rem\"></textarea>"
+   "markup": "<textarea class=\"nz-textarea\" placeholder=\"Descripción…\" style=\"max-width:20rem\" aria-label=\"Descripción\"></textarea>"
   },
   {
    "titulo": "Select",
    "tag": ".nz-select",
-   "markup": "<select class=\"nz-select\" style=\"max-width:14rem\"><option>Opción A</option><option>Opción B</option></select>"
+   "markup": "<select class=\"nz-select\" style=\"max-width:14rem\" aria-label=\"Selecciona una opción\"><option>Opción A</option><option>Opción B</option></select>"
   },
   {
    "titulo": "Checkbox",
@@ -43,17 +43,17 @@
   {
    "titulo": "Range",
    "tag": ".nz-range",
-   "markup": "<input class=\"nz-range\" type=\"range\" min=\"0\" max=\"100\" value=\"60\" style=\"max-width:16rem\">"
+   "markup": "<input class=\"nz-range\" type=\"range\" min=\"0\" max=\"100\" value=\"60\" style=\"max-width:16rem\" aria-label=\"Valor\">"
   },
   {
    "titulo": "Grupo con addon",
    "tag": ".nz-inputgroup__addon",
-   "markup": "<div class=\"nz-inputgroup\" style=\"max-width:16rem\"><span class=\"nz-inputgroup__addon\">€</span><input class=\"nz-input\" placeholder=\"0,00\"></div>"
+   "markup": "<div class=\"nz-inputgroup\" style=\"max-width:16rem\"><span class=\"nz-inputgroup__addon\">€</span><input class=\"nz-input\" placeholder=\"0,00\" aria-label=\"0,00\"></div>"
   },
   {
    "titulo": "Búsqueda",
    "tag": ".nz-search__icon",
-   "markup": "<div class=\"nz-search\" style=\"max-width:16rem\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" placeholder=\"Buscar…\"></div>"
+   "markup": "<div class=\"nz-search\" style=\"max-width:16rem\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" placeholder=\"Buscar…\" aria-label=\"Buscar\"></div>"
   },
   {
    "titulo": "Cantidad",
@@ -63,17 +63,17 @@
   {
    "titulo": "OTP",
    "tag": ".nz-otp",
-   "markup": "<div class=\"nz-otp\"><input value=\"4\" placeholder=\"·\"><input value=\"8\" placeholder=\"·\"><input placeholder=\"·\"><input placeholder=\"·\"></div>"
+   "markup": "<div class=\"nz-otp\"><input value=\"4\" placeholder=\"·\" aria-label=\"Campo de texto\"><input value=\"8\" placeholder=\"·\" aria-label=\"Campo de texto\"><input placeholder=\"·\" aria-label=\"Campo de texto\"><input placeholder=\"·\" aria-label=\"Campo de texto\"></div>"
   },
   {
    "titulo": "Campo con icono",
    "tag": ".nz-input-icon__icon",
-   "markup": "<div class=\"nz-input-icon\" style=\"max-width:16rem\"><span class=\"nz-input-icon__icon\">@</span><input class=\"nz-input\" placeholder=\"usuario\"></div>"
+   "markup": "<div class=\"nz-input-icon\" style=\"max-width:16rem\"><span class=\"nz-input-icon__icon\">@</span><input class=\"nz-input\" placeholder=\"usuario\" aria-label=\"usuario\"></div>"
   },
   {
    "titulo": "Fila de formulario",
    "tag": ".nz-rowform--2",
-   "markup": "<div class=\"nz-rowform nz-rowform--2\" style=\"max-width:22rem\"><input class=\"nz-input\" placeholder=\"Nombre\"><input class=\"nz-input\" placeholder=\"Apellidos\"></div>"
+   "markup": "<div class=\"nz-rowform nz-rowform--2\" style=\"max-width:22rem\"><input class=\"nz-input\" placeholder=\"Nombre\" aria-label=\"Nombre\"><input class=\"nz-input\" placeholder=\"Apellidos\" aria-label=\"Apellidos\"></div>"
   },
   {
    "titulo": "Field con error y contador",
@@ -83,17 +83,17 @@
   {
    "titulo": "Input brand y range acento",
    "tag": ".nz-input--brand · .nz-range--accent",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:16rem\"><input class=\"nz-input nz-input--brand\" value=\"Destacado\"><input class=\"nz-range nz-range--accent\" type=\"range\" value=\"70\"></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:16rem\"><input class=\"nz-input nz-input--brand\" value=\"Destacado\" aria-label=\"Campo de texto\"><input class=\"nz-range nz-range--accent\" type=\"range\" value=\"70\" aria-label=\"Valor\"></div>"
   },
   {
    "titulo": "Filas de 3 y select agrupado",
    "tag": ".nz-rowform--3 · .nz-select--group",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-rowform nz-rowform--3\"><input class=\"nz-input\" placeholder=\"Día\"><input class=\"nz-input\" placeholder=\"Mes\"><input class=\"nz-input\" placeholder=\"Año\"></div><select class=\"nz-select nz-select--group\"><optgroup label=\"Europa\"><option>España</option></optgroup></select></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-rowform nz-rowform--3\"><input class=\"nz-input\" placeholder=\"Día\" aria-label=\"Día\"><input class=\"nz-input\" placeholder=\"Mes\" aria-label=\"Mes\"><input class=\"nz-input\" placeholder=\"Año\" aria-label=\"Año\"></div><select class=\"nz-select nz-select--group\" aria-label=\"Selecciona una opción\"><optgroup label=\"Europa\"><option>España</option></optgroup></select></div>"
   },
   {
    "titulo": "Búsqueda con limpiar",
    "tag": ".nz-search__clear",
-   "markup": "<div class=\"nz-search\" style=\"max-width:16rem\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" value=\"aurora\"><button class=\"nz-search__clear\">✕</button></div>"
+   "markup": "<div class=\"nz-search\" style=\"max-width:16rem\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" value=\"aurora\" aria-label=\"Campo de texto\"><button class=\"nz-search__clear\">✕</button></div>"
   },
   {
    "titulo": "Etiquetas sueltas",
@@ -103,7 +103,7 @@
   {
    "titulo": "Field compacto y en línea",
    "tag": ".nz-field--compact · --inline",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:24rem\"><label class=\"nz-field nz-field--compact\"><span class=\"nz-field__label\">Referencia</span><input class=\"nz-input nz-input--sm\" value=\"AUR-07\"></label><span class=\"nz-field nz-field--inline\"><span class=\"nz-field__label\">Año</span><input class=\"nz-input nz-input--sm\" value=\"2026\" style=\"max-width:6rem\"></span></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:24rem\"><label class=\"nz-field nz-field--compact\"><span class=\"nz-field__label\">Referencia</span><input class=\"nz-input nz-input--sm\" value=\"AUR-07\"></label><span class=\"nz-field nz-field--inline\"><span class=\"nz-field__label\">Año</span><input class=\"nz-input nz-input--sm\" value=\"2026\" style=\"max-width:6rem\" aria-label=\"Campo de texto\"></span></div>"
   },
   {
    "titulo": "Campo opcional con contador",
@@ -118,22 +118,22 @@
   {
    "titulo": "Tamaños y forma del input",
    "tag": ".nz-input--sm/--lg/--square/--pill",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><input class=\"nz-input nz-input--sm\" placeholder=\"Pequeño\"><input class=\"nz-input\" placeholder=\"Normal\"><input class=\"nz-input nz-input--lg\" placeholder=\"Grande\"><input class=\"nz-input nz-input--square\" placeholder=\"Cuadrado\"><input class=\"nz-input nz-input--pill\" placeholder=\"Pastilla\"></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><input class=\"nz-input nz-input--sm\" placeholder=\"Pequeño\" aria-label=\"Pequeño\"><input class=\"nz-input\" placeholder=\"Normal\" aria-label=\"Normal\"><input class=\"nz-input nz-input--lg\" placeholder=\"Grande\" aria-label=\"Grande\"><input class=\"nz-input nz-input--square\" placeholder=\"Cuadrado\" aria-label=\"Cuadrado\"><input class=\"nz-input nz-input--pill\" placeholder=\"Pastilla\" aria-label=\"Pastilla\"></div>"
   },
   {
    "titulo": "Validación del control",
    "tag": ".nz-input--success/--warning · [aria-invalid]",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><input class=\"nz-input nz-input--success\" value=\"ada@ntizar.es\"><span class=\"nz-hint-error nz-hint-error--ok\">Correo verificado</span><input class=\"nz-input nz-input--warning\" value=\"+34 600\"><span class=\"nz-hint-error\">Faltan dígitos</span><input class=\"nz-input\" aria-invalid=\"true\" value=\"da\"><span class=\"nz-field__error\">Ese usuario ya está en uso</span></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><input class=\"nz-input nz-input--success\" value=\"ada@ntizar.es\" aria-label=\"Campo de texto\"><span class=\"nz-hint-error nz-hint-error--ok\">Correo verificado</span><input class=\"nz-input nz-input--warning\" value=\"+34 600\" aria-label=\"Campo de texto\"><span class=\"nz-hint-error\">Faltan dígitos</span><input class=\"nz-input\" aria-invalid=\"true\" value=\"da\" aria-label=\"Campo de texto\"><span class=\"nz-field__error\">Ese usuario ya está en uso</span></div>"
   },
   {
    "titulo": "Select múltiple, pastilla y grande",
    "tag": ".nz-select--multiple/--pill/--lg",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><select class=\"nz-select nz-select--pill\"><option>Todas las categorías</option></select><select class=\"nz-select nz-select--lg\"><option>Ordenado por relevancia</option></select><select class=\"nz-select nz-select--multiple\" multiple size=\"3\"><option>Madrid</option><option selected>Barcelona</option><option>Valencia</option></select></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><select class=\"nz-select nz-select--pill\" aria-label=\"Selecciona una opción\"><option>Todas las categorías</option></select><select class=\"nz-select nz-select--lg\" aria-label=\"Selecciona una opción\"><option>Ordenado por relevancia</option></select><select class=\"nz-select nz-select--multiple\" multiple size=\"3\" aria-label=\"Selecciona una opción\"><option>Madrid</option><option selected>Barcelona</option><option>Valencia</option></select></div>"
   },
   {
    "titulo": "Textarea grande y pastilla",
    "tag": ".nz-textarea--lg/--pill · __counter",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:22rem\"><textarea class=\"nz-textarea nz-textarea--lg\" placeholder=\"Descripción completa del objeto…\"></textarea><textarea class=\"nz-textarea nz-textarea--pill\" placeholder=\"Comentario breve\"></textarea><textarea class=\"nz-textarea nz-textarea--auto\" placeholder=\"Con contador\"></textarea><span class=\"nz-textarea__counter\">0 de 280 caracteres</span></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:22rem\"><textarea class=\"nz-textarea nz-textarea--lg\" placeholder=\"Descripción completa del objeto…\" aria-label=\"Descripción completa del objeto\"></textarea><textarea class=\"nz-textarea nz-textarea--pill\" placeholder=\"Comentario breve\" aria-label=\"Comentario breve\"></textarea><textarea class=\"nz-textarea nz-textarea--auto\" placeholder=\"Con contador\" aria-label=\"Con contador\"></textarea><span class=\"nz-textarea__counter\">0 de 280 caracteres</span></div>"
   },
   {
    "titulo": "Checkbox compacto, parcial y en tarjeta",
@@ -153,32 +153,32 @@
   {
    "titulo": "Range: tonos, tamaño y marcas",
    "tag": ".nz-range--brand/--sm · __marks",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:18rem\"><input class=\"nz-range nz-range--brand\" type=\"range\" min=\"0\" max=\"100\" value=\"35\"><input class=\"nz-range nz-range--sm nz-range--accent\" type=\"range\" min=\"0\" max=\"100\" value=\"70\"><div class=\"nz-range__marks\"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:18rem\"><input class=\"nz-range nz-range--brand\" type=\"range\" min=\"0\" max=\"100\" value=\"35\" aria-label=\"Valor\"><input class=\"nz-range nz-range--sm nz-range--accent\" type=\"range\" min=\"0\" max=\"100\" value=\"70\" aria-label=\"Valor\"><div class=\"nz-range__marks\"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div></div>"
   },
   {
    "titulo": "Grupo con addon de marca y de acento",
    "tag": ".nz-inputgroup--pill/--error · __addon--brand/--accent",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><div class=\"nz-inputgroup nz-inputgroup--pill\"><span class=\"nz-inputgroup__addon nz-inputgroup__addon--brand\">nz</span><input class=\"nz-input\" placeholder=\"usuario\"></div><div class=\"nz-inputgroup\"><span class=\"nz-inputgroup__addon nz-inputgroup__addon--accent\">%</span><input class=\"nz-input\" value=\"12\"><span class=\"nz-inputgroup__addon\">IVA</span></div><div class=\"nz-inputgroup nz-inputgroup--error\"><span class=\"nz-inputgroup__addon\">€</span><input class=\"nz-input\" aria-invalid=\"true\" value=\"0,00\"></div><span class=\"nz-hint-error\">El importe es obligatorio</span></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><div class=\"nz-inputgroup nz-inputgroup--pill\"><span class=\"nz-inputgroup__addon nz-inputgroup__addon--brand\">nz</span><input class=\"nz-input\" placeholder=\"usuario\" aria-label=\"usuario\"></div><div class=\"nz-inputgroup\"><span class=\"nz-inputgroup__addon nz-inputgroup__addon--accent\">%</span><input class=\"nz-input\" value=\"12\" aria-label=\"Campo de texto\"><span class=\"nz-inputgroup__addon\">IVA</span></div><div class=\"nz-inputgroup nz-inputgroup--error\"><span class=\"nz-inputgroup__addon\">€</span><input class=\"nz-input\" aria-invalid=\"true\" value=\"0,00\" aria-label=\"Campo de texto\"></div><span class=\"nz-hint-error\">El importe es obligatorio</span></div>"
   },
   {
    "titulo": "Input con hueco para icono y para limpiar",
    "tag": ".nz-input--search · .nz-input--clear",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><input class=\"nz-input nz-input--search\" placeholder=\"Con hueco a la izquierda\"><input class=\"nz-input nz-input--clear\" value=\"Con hueco a la derecha\"></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><input class=\"nz-input nz-input--search\" placeholder=\"Con hueco a la izquierda\" aria-label=\"Con hueco a la izquierda\"><input class=\"nz-input nz-input--clear\" value=\"Con hueco a la derecha\" aria-label=\"Campo de texto\"></div>"
   },
   {
    "titulo": "Búsqueda compacta y a lo ancho",
    "tag": ".nz-search--sm · --full",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:22rem\"><div class=\"nz-search nz-search--sm\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" placeholder=\"Buscar objeto…\"><button class=\"nz-search__clear\" aria-label=\"Limpiar\">✕</button></div><div class=\"nz-cluster nz-cluster--nowrap\"><div class=\"nz-search nz-search--full\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" placeholder=\"Buscar en el catálogo\"></div><button class=\"nz-btn nz-btn--primary\">Ir</button></div></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:22rem\"><div class=\"nz-search nz-search--sm\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" placeholder=\"Buscar objeto…\" aria-label=\"Buscar objeto\"><button class=\"nz-search__clear\" aria-label=\"Limpiar\">✕</button></div><div class=\"nz-cluster nz-cluster--nowrap\"><div class=\"nz-search nz-search--full\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" placeholder=\"Buscar en el catálogo\" aria-label=\"Buscar en el catálogo\"></div><button class=\"nz-btn nz-btn--primary\">Ir</button></div></div>"
   },
   {
    "titulo": "Contraseña con ver y ocultar",
    "tag": ".nz-password · __toggle",
-   "markup": "<div class=\"nz-password\" style=\"max-width:20rem\"><input class=\"nz-input\" type=\"password\" value=\"aurora7\"><button class=\"nz-password__toggle\" aria-label=\"Mostrar contraseña\">ojo</button></div>"
+   "markup": "<div class=\"nz-password\" style=\"max-width:20rem\"><input class=\"nz-input\" type=\"password\" value=\"aurora7\" aria-label=\"Contraseña\"><button class=\"nz-password__toggle\" aria-label=\"Mostrar contraseña\">ojo</button></div>"
   },
   {
    "titulo": "OTP: tamaños y estado de error",
    "tag": ".nz-otp--sm/--lg/--error",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-otp nz-otp--sm\"><input placeholder=\"·\"><input value=\"2\" placeholder=\"·\"><input placeholder=\"·\"><input placeholder=\"·\"></div><div class=\"nz-otp\"><input value=\"4\" placeholder=\"·\"><input value=\"8\" placeholder=\"·\"><input placeholder=\"·\"><input placeholder=\"·\"></div><div class=\"nz-otp nz-otp--lg nz-otp--error\"><input value=\"9\" placeholder=\"·\"><input value=\"1\" placeholder=\"·\"><input value=\"2\" placeholder=\"·\"><input placeholder=\"·\"></div></div>"
+   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-otp nz-otp--sm\"><input placeholder=\"·\" aria-label=\"Campo de texto\"><input value=\"2\" placeholder=\"·\" aria-label=\"Campo de texto\"><input placeholder=\"·\" aria-label=\"Campo de texto\"><input placeholder=\"·\" aria-label=\"Campo de texto\"></div><div class=\"nz-otp\"><input value=\"4\" placeholder=\"·\" aria-label=\"Campo de texto\"><input value=\"8\" placeholder=\"·\" aria-label=\"Campo de texto\"><input placeholder=\"·\" aria-label=\"Campo de texto\"><input placeholder=\"·\" aria-label=\"Campo de texto\"></div><div class=\"nz-otp nz-otp--lg nz-otp--error\"><input value=\"9\" placeholder=\"·\" aria-label=\"Campo de texto\"><input value=\"1\" placeholder=\"·\" aria-label=\"Campo de texto\"><input value=\"2\" placeholder=\"·\" aria-label=\"Campo de texto\"><input placeholder=\"·\" aria-label=\"Campo de texto\"></div></div>"
   },
   {
    "titulo": "Cantidad: pequeño, grande y vertical",

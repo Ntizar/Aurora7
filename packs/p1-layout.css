@@ -118,7 +118,7 @@
 @media (min-width: 960px) { .nz-thirds { grid-template-columns: repeat(3, 1fr); } }
 
 /* ---- 14 Header / cabecera ---- */
-.nz-header { display: flex; align-items: center; justify-content: space-between; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-gutter); background: var(--nz-surface); border-bottom: 1px solid var(--nz-border-soft); }
+.nz-header { display: flex; align-items: center; justify-content: space-between; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-gutter); background: var(--nz-surface); border-bottom: var(--nz-border-w) solid var(--nz-border-soft); }
 .nz-header--compact { padding-block: var(--nz-space-1); min-height: 44px; }
 .nz-header--tall { padding-block: var(--nz-space-6); }
 .nz-header--bordered { border-bottom: var(--nz-border-w-strong) solid var(--nz-border-strong); }
@@ -130,7 +130,7 @@
 .nz-main--wide { max-width: var(--nz-container-max); margin-inline: auto; }
 
 /* ---- 16 Footer ---- */
-.nz-footer { padding: var(--nz-space-8) var(--nz-gutter); background: var(--nz-bg-soft); border-top: 1px solid var(--nz-border-soft); color: var(--nz-text-soft); font-size: var(--nz-text-sm); }
+.nz-footer { padding: var(--nz-space-8) var(--nz-gutter); background: var(--nz-bg-soft); border-top: var(--nz-border-w) solid var(--nz-border-soft); color: var(--nz-text-soft); font-size: var(--nz-text-sm); }
 .nz-footer--compact { padding-block: var(--nz-space-3); }
 .nz-footer--brand { background: var(--nz-brand-soft); color: var(--nz-text); border-top-color: var(--nz-brand-tint); }
 
@@ -140,7 +140,7 @@
 .nz-section { padding-block: var(--nz-space-10); }
 .nz-section--compact { padding-block: var(--nz-space-4); }
 .nz-section--spacious { padding-block: var(--nz-space-16); }
-.nz-section--bordered { border-block: 1px solid var(--nz-border-soft); }
+.nz-section--bordered { border-block: var(--nz-border-w) solid var(--nz-border-soft); }
 .nz-article { background: var(--nz-surface); border-radius: var(--nz-radius-lg); padding: var(--nz-space-5); box-shadow: var(--nz-shadow-sm); }
 .nz-article--flush { padding: 0; }
 .nz-article--bordered { border: var(--nz-border-w) solid var(--nz-border-soft); box-shadow: none; }
@@ -164,8 +164,8 @@
 .nz-spacer--lg { height: var(--nz-space-12); flex: none; }
 
 /* ---- 21 Divisores ---- */
-.nz-divider { border: 0; border-top: 1px solid var(--nz-border); margin: var(--nz-space-4) 0; }
-.nz-divider--v { align-self: stretch; width: 1px; border: 0; border-left: 1px solid var(--nz-border); margin: 0; background: none; }
+.nz-divider { border: 0; border-top: var(--nz-border-w) solid var(--nz-border); margin: var(--nz-space-4) 0; }
+.nz-divider--v { align-self: stretch; width: 1px; border: 0; border-left: var(--nz-border-w) solid var(--nz-border); margin: 0; background: none; }
 .nz-divider--dashed { border-top-style: dashed; }
 .nz-divider--dotted { border-top-style: dotted; }
 .nz-divider--label { display: flex; align-items: center; gap: var(--nz-space-3); border: 0; color: var(--nz-text-mute); font-size: var(--nz-text-2xs); font-weight: 700; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
@@ -275,7 +275,7 @@
 
 /* ---- 36 Rutas anidadas ---- */
 .nz-route { display: grid; gap: var(--nz-space-4); }
-.nz-route__outlet { min-width: 0; padding: var(--nz-space-4); border: 1px dashed var(--nz-border-strong); border-radius: var(--nz-radius-md); color: var(--nz-text-mute); font-size: var(--nz-text-sm); }
+.nz-route__outlet { min-width: 0; padding: var(--nz-space-4); border: var(--nz-border-w) dashed var(--nz-border-strong); border-radius: var(--nz-radius-md); color: var(--nz-text-mute); font-size: var(--nz-text-sm); }
 
 /* ---- 37 Slot / outlet de página ---- */
 .nz-outlet { min-height: 12rem; display: flex; align-items: center; justify-content: center; color: var(--nz-text-faint); font-size: var(--nz-text-sm); background: var(--nz-bg-inset); border-radius: var(--nz-radius-lg); }
@@ -303,7 +303,7 @@
 .nz-region-toolbar--flotante { position: fixed; left: 50%; bottom: var(--nz-space-6); transform: translateX(-50%); box-shadow: var(--nz-shadow-lg); }
 
 /* ---- 42 Safe-area inset (móvil) ---- */
-.nz-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+.nz-safe { padding-bottom: env(safe-area-inset-bottom, 0); }
 .nz-safe-x { padding-inline: max(var(--nz-gutter), env(safe-area-inset-left, 0px)) max(var(--nz-gutter), env(safe-area-inset-right, 0px)); }
 
 /* ---- 43 Print layout ---- */

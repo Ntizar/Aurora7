@@ -128,7 +128,7 @@
   {
    "titulo": "Media de marca, con borde y con enlace",
    "tag": ".nz-media--brand · --bordered · __link",
-   "markup": "<div class=\"nz-media nz-media--brand nz-media--bordered\" style=\"max-width:24rem\"><span class=\"nz-icon-tile nz-media__fig\">✦</span><div class=\"nz-media__body\"><span class=\"nz-media__title\">Novedades de la versión 7</span><span class=\"nz-media__desc\">Doce categorías y más de mil objetos.</span><a class=\"nz-media__link\">Ver el registro →</a></div></div>"
+   "markup": "<div class=\"nz-media nz-media--brand nz-media--bordered\" style=\"max-width:24rem\"><span class=\"nz-icon-tile nz-media__fig\">✦</span><div class=\"nz-media__body\"><span class=\"nz-media__title\">Novedades de la versión 7</span><span class=\"nz-media__desc\">Doce categorías y más de mil objetos.</span><a href=\"#contenido\" class=\"nz-media__link\">Ver el registro →</a></div></div>"
   },
   {
    "titulo": "Vídeo",

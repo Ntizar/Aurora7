@@ -20,6 +20,12 @@ jobs:
       - name: Validar el sistema (manifiesto + cobertura + HTML)
         run: python scripts/validar-css.py
 
+      - name: Auditoría de tema (supervivencia al modo oscuro)
+        run: python scripts/audit-tema.py
+
+      - name: Auditoría de accesibilidad de las demos
+        run: python scripts/audit-a11y.py
+
       - name: Comprobar la sintaxis del JavaScript del catálogo
         run: node --check js/catalog.js
 

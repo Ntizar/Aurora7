@@ -97,7 +97,9 @@ Aurora-7/
 ├── scripts/
 │   ├── build-catalog.py   # genera páginas + portada + índice desde specs/
 │   ├── audit-catalog.py   # auditoría campo a campo
-│   ├── validar-css.py     # valida manifiesto y cobertura (lo que corre CI)
+│   ├── validar-css.py     # manifiesto, cobertura, literales (lo que corre CI)
+│   ├── audit-tema.py      # ¿todo sobrevive al modo oscuro? (lo que corre CI)
+│   ├── audit-a11y.py      # etiquetas, teclado y foco de las demos (CI)
 │   ├── audit-html.py      # genera el informe navegable de auditoría
 │   ├── generar-llm-docs.py # genera LLM.md + components.json
 │   └── extraer-specs.py   # utilidad: reconstruye specs/ desde las páginas
@@ -128,6 +130,21 @@ Los 15 packs hablan el mismo idioma — si sabes usar un objeto, sabes usarlos t
 4. **BEM** para componentes: `.nz-card__body--featured`
 5. **Una clase, un dueño**: cada objeto se declara en un único pack
 6. **Si no aparece en el catálogo, no existe**: cada clase declarada tiene demo
+7. **Accesible de serie**: todo control lleva etiqueta y el patrón sin JS usa
+   `.nz-vh` (oculto pero focusable), nunca el atributo `hidden`
+
+## Garantías automáticas
+
+Cinco puertas comprueban que el sistema no se degrada. Si alguna falla, el push se
+pone en rojo **antes** de publicarse:
+
+| Puerta | Qué vigila |
+|---|---|
+| `validar-css.py` | 0 gradientes/glass/colores a mano, 0 `!important` sin justificar, tokens existentes, dueño único por clase, cobertura clase↔demo, HTML bien formado, cada página carga los packs que usa y ningún literal que ya tenga token |
+| `audit-tema.py` | que ninguna regla pinte texto o bordes de paleta sin declarar su propio fondo: eso es lo que rompe el modo oscuro |
+| `audit-a11y.py` | `alt`, etiquetas asociadas, texto accesible, `aria-*` que apunten a ids reales, `label[for]` correctos, `tabindex` y orden de tabulación |
+| `audit-catalog.py` | auditoría campo a campo: lo declarado contra lo demostrado |
+| `node --check` + regeneración | que el catálogo commiteado coincida con `specs/` |
 
 ## Trabajar en el sistema
 

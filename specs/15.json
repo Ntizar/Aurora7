@@ -1,164 +1,164 @@
 {
-  "cat": 15,
-  "nombre": "Apps y escritorio",
-  "desc": "Ventana de aplicación, barras de app, editor de código, terminal, árbol de archivos, kanban, calendario, ajustes, spotlight, bandeja, dock y diálogos de sistema.",
-  "pack": "p15-apps.css",
-  "fichero": "15-apps.html",
-  "demos": [
-    {
-      "titulo": "Ventana de aplicación activa",
-      "tag": ".nz-window · __titlebar/__body",
-      "markup": "<div class=\"nz-window\"><div class=\"nz-window__titlebar\"><i></i><i></i><i></i><b>Editor de planos · Planta 3</b><button aria-label=\"Minimizar\">—</button><button class=\"is-close\" aria-label=\"Cerrar\">✕</button></div><div class=\"nz-window__body\">Documento abierto. Último guardado hace 4 minutos.</div></div>"
-    },
-    {
-      "titulo": "Ventana inactiva (sin foco)",
-      "tag": ".nz-window.is-inactive",
-      "markup": "<div class=\"nz-window is-inactive\"><div class=\"nz-window__titlebar\"><i></i><i></i><i></i><b>Panel de estadísticas</b><button aria-label=\"Cerrar\">✕</button></div><div class=\"nz-window__body\">Esta ventana no tiene el foco del sistema.</div></div>"
-    },
-    {
-      "titulo": "Barra de actividad vertical",
-      "tag": ".nz-actbar__item · [aria-current]",
-      "markup": "<div class=\"nz-actbar\"><button class=\"nz-actbar__item\" aria-current=\"page\" aria-label=\"Explorador\">▤</button><button class=\"nz-actbar__item\" aria-label=\"Buscar\">⌕<span>3</span></button><button class=\"nz-actbar__item\" aria-label=\"Control de versiones\">⑂<span class=\"is-brand\">12</span></button><button class=\"nz-actbar__item\" aria-label=\"Extensiones\">▦</button></div>"
-    },
-    {
-      "titulo": "Barra lateral de app con secciones y badges",
-      "tag": ".nz-appnav · __link",
-      "markup": "<nav class=\"nz-appnav\" aria-label=\"Secciones de la aplicación\"><h4>Proyecto</h4><a class=\"nz-appnav__link\" aria-current=\"page\"><i aria-hidden=\"true\"></i>Resumen</a><a class=\"nz-appnav__link\" href=\"#\"><i aria-hidden=\"true\"></i>Tareas<span>18</span></a><a class=\"nz-appnav__link\" href=\"#\"><i aria-hidden=\"true\"></i>Incidencias<span class=\"is-accent\">4</span></a><h4>Archivo</h4><a class=\"nz-appnav__link\" href=\"#\"><i aria-hidden=\"true\"></i>Histórico</a></nav>"
-    },
-    {
-      "titulo": "Panel dividido redimensionable",
-      "tag": ".nz-splitview · __grip",
-      "markup": "<div class=\"nz-splitview\"><div><h4>Explorador</h4>Selecciona un archivo en el panel izquierdo.</div><div class=\"nz-splitview__grip\" role=\"separator\" aria-orientation=\"vertical\" aria-label=\"Redimensionar paneles\"></div><div><h4>Vista previa</h4>Arrastra el separador para ajustar el ancho.</div></div>"
-    },
-    {
-      "titulo": "Inspector de propiedades",
-      "tag": ".nz-inspector · div span/b",
-      "markup": "<div class=\"nz-inspector\"><h4>Propiedades del objeto</h4><div><span>Nombre</span><b>Fachada norte</b></div><div class=\"is-brand\"><span>Superficie</span><b>184,5 m²</b></div><div><span>Última revisión</span><b>14 mar 2025</b></div></div>"
-    },
-    {
-      "titulo": "Barra de estado inferior de app",
-      "tag": ".nz-appstatus__item",
-      "markup": "<div class=\"nz-appstatus\"><span class=\"nz-appstatus__item\"><i aria-hidden=\"true\"></i>Sincronizado</span><span class=\"nz-appstatus__item is-warn\"><i aria-hidden=\"true\"></i>2 avisos de estilo</span><span class=\"nz-appstatus__item\"><b>Línea 128, columna 24</b></span></div>"
-    },
-    {
-      "titulo": "Pestañas de documento (activa, modificada, cerrable)",
-      "tag": ".nz-docs__tab · __dot",
-      "markup": "<div class=\"nz-docs\" role=\"tablist\" aria-label=\"Documentos abiertos\"><span class=\"nz-docs__tab\" role=\"tab\" tabindex=\"0\" aria-selected=\"true\"><span class=\"nz-docs__dot\" aria-hidden=\"true\"></span>presupuesto.nz<button aria-label=\"Cerrar presupuesto.nz\">✕</button></span><span class=\"nz-docs__tab\" role=\"tab\" tabindex=\"0\" aria-selected=\"false\">memoria.md<button aria-label=\"Cerrar memoria.md\">✕</button></span><span class=\"nz-docs__tab\" role=\"tab\" tabindex=\"0\" aria-selected=\"false\">pliego.txt<button aria-label=\"Cerrar pliego.txt\">✕</button></span></div>"
-    },
-    {
-      "titulo": "Migas de ruta de archivo",
-      "tag": ".nz-pathbar__seg · [aria-current]",
-      "markup": "<nav class=\"nz-pathbar\" aria-label=\"Ruta del archivo\"><a class=\"nz-pathbar__seg\" href=\"#\">inicio</a><a class=\"nz-pathbar__seg\" href=\"#\">proyectos</a><a class=\"nz-pathbar__seg\" href=\"#\">aurora-7</a><span class=\"nz-pathbar__seg\" aria-current=\"page\">p15-apps.css</span></nav>"
-    },
-    {
-      "titulo": "Árbol de archivos y carpetas",
-      "tag": ".nz-tree__item · ul anidado",
-      "markup": "<div class=\"nz-tree\" role=\"tree\" aria-label=\"Explorador de archivos\"><div class=\"nz-tree__item\" role=\"treeitem\" tabindex=\"0\" aria-expanded=\"true\"><i aria-hidden=\"true\">▾</i>src<small>4 archivos</small></div><ul role=\"group\"><li class=\"nz-tree__item\" role=\"none\"><span class=\"nz-tree__item\" role=\"treeitem\" tabindex=\"0\"><i aria-hidden=\"true\">·</i>main.css<small>2 KB</small></span></li><li class=\"nz-tree__item\" role=\"none\"><span class=\"nz-tree__item\" role=\"treeitem\" tabindex=\"0\" aria-current=\"page\"><i aria-hidden=\"true\">·</i>tokens.css<small>6 KB</small></span></li></ul><div class=\"nz-tree__item\" role=\"treeitem\" tabindex=\"0\" aria-expanded=\"false\"><i aria-hidden=\"true\">▸</i>dist</div></div>"
-    },
-    {
-      "titulo": "Editor de código (gutter, línea activa, sintaxis)",
-      "tag": ".nz-codepad · .nz-syn--kw/str/com/num",
-      "markup": "<div class=\"nz-codepad\"><div class=\"nz-codepad__gutter\" aria-hidden=\"true\"><span>1</span><span>2</span><span>3</span></div><div><code class=\"nz-codepad__line\"><span class=\"nz-syn--com\">/* pack de apps */</span></code><code class=\"nz-codepad__line is-active\"><span class=\"nz-syn--kw\">const</span> ANCHO = <span class=\"nz-syn--num\">44</span>;</code><code class=\"nz-codepad__line\"><span class=\"nz-syn--kw\">let</span> nombre = <span class=\"nz-syn--str\">\"ventana\"</span>;</code></div></div>"
-    },
-    {
-      "titulo": "Terminal (prompt, salida, error, cursor)",
-      "tag": ".nz-term__prompt · .is-out/.is-err",
-      "markup": "<div class=\"nz-term\"><p><span class=\"nz-term__prompt\">david@aurora:~$</span>npm run build<span class=\"nz-term__cursor\" aria-hidden=\"true\"></span></p><p class=\"is-out\">Compilado packs/p15-apps.css en 240 ms</p><p class=\"is-err\">Error: revisa el token --nz-border-soft</p></div>"
-    },
-    {
-      "titulo": "Cinta de opciones de app",
-      "tag": ".nz-ribbon · __btn",
-      "markup": "<div class=\"nz-ribbon\" role=\"toolbar\" aria-label=\"Cinta de opciones\"><section><b>Archivo</b><div><button class=\"nz-ribbon__btn\" aria-label=\"Nuevo\">＋</button><button class=\"nz-ribbon__btn\" aria-label=\"Guardar\">⤓</button></div></section><section><b>Vista</b><div><button class=\"nz-ribbon__btn\" aria-pressed=\"true\" aria-label=\"Cuadrícula\">▦</button><button class=\"nz-ribbon__btn\" aria-pressed=\"false\" aria-label=\"Reglas\">⊞</button></div></section></div>"
-    },
-    {
-      "titulo": "Paleta de comandos de escritorio (spotlight)",
-      "tag": ".nz-spotlight · __input/__item",
-      "markup": "<div class=\"nz-spotlight\" role=\"dialog\" aria-label=\"Paleta de comandos\"><input class=\"nz-spotlight__input\" type=\"search\" placeholder=\"Escribe un comando o un archivo…\" aria-label=\"Buscar comando\"><a class=\"nz-spotlight__item is-active\" href=\"#\">Abrir panel de ajustes<kbd>↵</kbd></a><a class=\"nz-spotlight__item\" href=\"#\">Buscar en el proyecto<kbd>Ctrl P</kbd></a><a class=\"nz-spotlight__item\" href=\"#\">Cerrar todas las pestañas<kbd>⇧ ⌘ W</kbd></a><footer>↑↓ para moverte · Esc para salir</footer></div>"
-    },
-    {
-      "titulo": "Tablero kanban con límite WIP",
-      "tag": ".nz-kanban__col/__card · is-dragging",
-      "markup": "<div class=\"nz-kanban\"><div class=\"nz-kanban__col\"><header>En curso<small class=\"is-limit\">3/3 WIP</small></header><div class=\"nz-kanban__card\">Revisar la accesibilidad de la cinta<span>prioridad alta</span></div><div class=\"nz-kanban__card is-dragging\">Ajustar la rejilla del calendario<span>moviendo…</span></div></div><div class=\"nz-kanban__col\"><header>Hecho<small>12</small></header><div class=\"nz-kanban__card is-done\">Tokens de sombras<span>cerrada ayer</span></div><div class=\"nz-kanban__card is-accent\">Icono de bandeja<span>nueva propuesta</span></div></div></div>"
-    },
-    {
-      "titulo": "Calendario mensual",
-      "tag": ".nz-month · span.is-today/.is-outside + em",
-      "markup": "<div class=\"nz-month\" role=\"grid\" aria-label=\"Marzo de 2025\"><b>Lu</b><b>Ma</b><b>Mi</b><b>Ju</b><b>Vi</b><b>Sá</b><b>Do</b><span class=\"is-outside\">24</span><span class=\"is-outside\">25</span><span class=\"is-outside\">26</span><span class=\"is-outside\">27</span><span class=\"is-outside\">28</span><span>1</span><span>2</span><span>3</span><span class=\"is-today\">4</span><span class=\"is-selected\">5<em>Sprint</em></span><span>6</span><span>7<em class=\"is-accent\">Demo</em></span><span>8</span><span>9</span></div>"
-    },
-    {
-      "titulo": "Agenda del día (franjas horarias)",
-      "tag": ".nz-agenda__slot · span.is-free",
-      "markup": "<div class=\"nz-agenda\"><div class=\"nz-agenda__slot\"><b>09:00</b><span>Revisión de diseño con el equipo</span></div><div class=\"nz-agenda__slot is-now\"><b>10:00</b><span class=\"is-accent\">Demo interna de Aurora 7</span></div><div class=\"nz-agenda__slot\"><b>11:00</b><span class=\"is-free\">Libre</span></div><div class=\"nz-agenda__slot\"><b>12:00</b><span>Comida de equipo</span></div></div>"
-    },
-    {
-      "titulo": "Ajustes de aplicación",
-      "tag": ".nz-prefs__row · __control",
-      "markup": "<div class=\"nz-prefs\"><h4>Apariencia</h4><div class=\"nz-prefs__row\"><div><b>Tema</b><p>Claro u oscuro según el sistema.</p></div><div class=\"nz-prefs__control\"><select aria-label=\"Tema\"><option>Sistema</option><option>Claro</option><option>Oscuro</option></select></div></div><div class=\"nz-prefs__row\"><div><b>Números de línea</b><p>Muestra el gutter en el editor de código.</p></div><div class=\"nz-prefs__control\"><label><input type=\"checkbox\" checked> Activado</label></div></div><div class=\"nz-prefs__row\"><div><b>Autoguardado</b><p>Guarda al cambiar de pestaña.</p></div><div class=\"nz-prefs__control\"><label><input type=\"checkbox\"> Desactivado</label></div></div></div>"
-    },
-    {
-      "titulo": "Hoja de propiedades agrupada",
-      "tag": ".nz-propsheet · __row",
-      "markup": "<div class=\"nz-propsheet\"><h4>Geometría</h4><div class=\"nz-propsheet__row\"><span>Ancho</span><b>1200 px</b></div><div class=\"nz-propsheet__row\"><span>Alto</span><b>680 px</b></div><h4>Tipografía</h4><div class=\"nz-propsheet__row\"><span>Familia</span><b>--nz-font</b></div><div class=\"nz-propsheet__row\"><span>Interlínea</span><b>1.6</b></div></div>"
-    },
-    {
-      "titulo": "Perfil de usuario de app",
-      "tag": ".nz-userbox · __avatar",
-      "markup": "<div class=\"nz-userbox\"><span class=\"nz-userbox__avatar\" aria-hidden=\"true\">DA</span><div><b>David Antizar</b><span>Sesión de trabajo · plan Pro</span></div><i aria-hidden=\"true\">▾</i></div>"
-    },
-    {
-      "titulo": "Notificación de sistema con acciones",
-      "tag": ".nz-sysnotif · __actions",
-      "markup": "<div class=\"nz-sysnotif\" role=\"status\"><i class=\"nz-sysnotif__icon\" aria-hidden=\"true\">⟳</i><span class=\"nz-sysnotif__title\">Actualizaciones listas</span><p>Hay 3 mejoras disponibles para tu espacio de trabajo.</p><div class=\"nz-sysnotif__actions\"><button>Instalar</button><button>Más tarde</button></div></div>"
-    },
-    {
-      "titulo": "Notificación de sistema de error",
-      "tag": ".nz-sysnotif.is-danger",
-      "markup": "<div class=\"nz-sysnotif is-danger\" role=\"alert\"><i class=\"nz-sysnotif__icon\" aria-hidden=\"true\">!</i><span class=\"nz-sysnotif__title\">No se pudo guardar</span><p>El archivo presupuesto.nz está bloqueado por otro proceso.</p><div class=\"nz-sysnotif__actions\"><button>Reintentar</button><button>Ver detalle</button></div></div>"
-    },
-    {
-      "titulo": "Bandeja / menú de sistema (sin JS)",
-      "tag": ".nz-tray__menu · input:checked",
-      "markup": "<div class=\"nz-tray\"><input type=\"checkbox\" id=\"tray15\" hidden><label for=\"tray15\">▤ Bandeja del sistema</label><div class=\"nz-tray__menu\"><p>Sistema</p><button class=\"nz-tray__item\">Sincronizar ahora<span>Ctrl S</span></button><button class=\"nz-tray__item\">Modo concentración<span>Off</span></button><hr><button class=\"nz-tray__item\">Cerrar sesión<span>Ctrl Q</span></button></div></div>"
-    },
-    {
-      "titulo": "Diálogo de confirmación de sistema",
-      "tag": ".nz-sysdialog · __scrim/__panel",
-      "markup": "<div class=\"nz-sysdialog\"><input type=\"checkbox\" id=\"sd15\" hidden><label for=\"sd15\">⚠ Probar el diálogo de confirmación</label><div class=\"nz-sysdialog__scrim\"><div class=\"nz-sysdialog__panel\" role=\"alertdialog\" aria-labelledby=\"sd15t\"><h4 id=\"sd15t\">¿Cerrar sin guardar?</h4><p>Los cambios en presupuesto.nz se perderán.</p><footer><label for=\"sd15\" class=\"is-primary\">Cancelar</label><button class=\"is-danger\">Cerrar sin guardar</button></footer></div></div></div>"
-    },
-    {
-      "titulo": "Medidor de uso de recursos (CPU / RAM)",
-      "tag": ".nz-resmon__row · is-warn/is-err",
-      "markup": "<div class=\"nz-resmon\"><div class=\"nz-resmon__row\"><b>CPU</b><i><span style=\"width:62%\"></span></i><small>62 %</small></div><div class=\"nz-resmon__row is-warn\"><b>RAM</b><i><span style=\"width:81%\"></span></i><small>12,9 / 16 GB</small></div><div class=\"nz-resmon__row is-err\"><b>Disco</b><i><span style=\"width:94%\"></span></i><small>94 % · casi lleno</small></div></div>"
-    },
-    {
-      "titulo": "Ventana de progreso de tareas",
-      "tag": ".nz-taskwin__row · is-done/is-error",
-      "markup": "<div class=\"nz-taskwin\"><header>3 tareas en curso</header><div class=\"nz-taskwin__row\"><b>Optimizar p15-apps.css<small>68 %</small></b><i><span style=\"width:68%\"></span></i></div><div class=\"nz-taskwin__row is-done\"><b>Compilar tokens.css<small>completada</small></b><i><span style=\"width:100%\"></span></i></div><div class=\"nz-taskwin__row is-error\"><b>Publicar en el catálogo<small>error de red</small></b><i><span style=\"width:34%\"></span></i></div><footer>2 completadas · 1 con error</footer></div>"
-    },
-    {
-      "titulo": "Widget de escritorio",
-      "tag": ".nz-widget · __value",
-      "markup": "<div class=\"nz-widget is-accent\"><h4>Energía hoy</h4><span class=\"nz-widget__value\">18,4 kWh</span><footer>+6 % respecto a ayer</footer></div>"
-    },
-    {
-      "titulo": "Lanzador en rejilla (grid de apps)",
-      "tag": ".nz-launcher · __app",
-      "markup": "<div class=\"nz-launcher\"><a class=\"nz-launcher__app\" href=\"#\"><i aria-hidden=\"true\">▤</i>Panel</a><a class=\"nz-launcher__app is-accent\" href=\"#\"><i aria-hidden=\"true\">✉</i>Correo</a><a class=\"nz-launcher__app\" href=\"#\"><i aria-hidden=\"true\">▦</i>Calendario</a><a class=\"nz-launcher__app\" href=\"#\"><i aria-hidden=\"true\">⌸</i>Informes</a><a class=\"nz-launcher__app\" href=\"#\"><i aria-hidden=\"true\">⚙</i>Ajustes</a><a class=\"nz-launcher__app\" href=\"#\"><i aria-hidden=\"true\">⌗</i>Terminal</a></div>"
-    },
-    {
-      "titulo": "Dock inferior",
-      "tag": ".nz-dock__item · [aria-current]",
-      "markup": "<div class=\"nz-dock\" role=\"toolbar\" aria-label=\"Dock de aplicaciones\"><a class=\"nz-dock__item\" href=\"#\" aria-current=\"page\" aria-label=\"Explorador\">▤</a><a class=\"nz-dock__item\" href=\"#\" aria-label=\"Editor\">✎</a><a class=\"nz-dock__item\" href=\"#\" aria-label=\"Terminal\">▶</a><a class=\"nz-dock__item\" href=\"#\" aria-label=\"Correo\">✉</a></div>"
-    },
-    {
-      "titulo": "Estado vacío de aplicación",
-      "tag": ".nz-appempty",
-      "markup": "<div class=\"nz-appempty\"><i aria-hidden=\"true\">▢</i><b>No hay documentos abiertos</b><p>Abre un archivo del explorador o crea uno nuevo para empezar a trabajar.</p><button>Crear documento</button></div>"
-    },
-    {
-      "titulo": "Pie de ventana con contadores",
-      "tag": ".nz-winfoot__count",
-      "markup": "<div class=\"nz-winfoot\"><span class=\"nz-winfoot__count\">12 archivos</span><i aria-hidden=\"true\">·</i><span class=\"nz-winfoot__count\">3 modificados</span><span class=\"nz-winfoot__count\">UTF-8</span></div>"
-    }
-  ]
+ "cat": 15,
+ "nombre": "Apps y escritorio",
+ "desc": "Ventana de aplicación, barras de app, editor de código, terminal, árbol de archivos, kanban, calendario, ajustes, spotlight, bandeja, dock y diálogos de sistema.",
+ "pack": "p15-apps.css",
+ "fichero": "15-apps.html",
+ "demos": [
+  {
+   "titulo": "Ventana de aplicación activa",
+   "tag": ".nz-window · __titlebar/__body",
+   "markup": "<div class=\"nz-window\"><div class=\"nz-window__titlebar\"><i></i><i></i><i></i><b>Editor de planos · Planta 3</b><button aria-label=\"Minimizar\">—</button><button class=\"is-close\" aria-label=\"Cerrar\">✕</button></div><div class=\"nz-window__body\">Documento abierto. Último guardado hace 4 minutos.</div></div>"
+  },
+  {
+   "titulo": "Ventana inactiva (sin foco)",
+   "tag": ".nz-window.is-inactive",
+   "markup": "<div class=\"nz-window is-inactive\"><div class=\"nz-window__titlebar\"><i></i><i></i><i></i><b>Panel de estadísticas</b><button aria-label=\"Cerrar\">✕</button></div><div class=\"nz-window__body\">Esta ventana no tiene el foco del sistema.</div></div>"
+  },
+  {
+   "titulo": "Barra de actividad vertical",
+   "tag": ".nz-actbar__item · [aria-current]",
+   "markup": "<div class=\"nz-actbar\"><button class=\"nz-actbar__item\" aria-current=\"page\" aria-label=\"Explorador\">▤</button><button class=\"nz-actbar__item\" aria-label=\"Buscar\">⌕<span>3</span></button><button class=\"nz-actbar__item\" aria-label=\"Control de versiones\">⑂<span class=\"is-brand\">12</span></button><button class=\"nz-actbar__item\" aria-label=\"Extensiones\">▦</button></div>"
+  },
+  {
+   "titulo": "Barra lateral de app con secciones y badges",
+   "tag": ".nz-appnav · __link",
+   "markup": "<nav class=\"nz-appnav\" aria-label=\"Secciones de la aplicación\"><h4>Proyecto</h4><a href=\"#contenido\" class=\"nz-appnav__link\" aria-current=\"page\"><i aria-hidden=\"true\"></i>Resumen</a><a class=\"nz-appnav__link\" href=\"#\"><i aria-hidden=\"true\"></i>Tareas<span>18</span></a><a class=\"nz-appnav__link\" href=\"#\"><i aria-hidden=\"true\"></i>Incidencias<span class=\"is-accent\">4</span></a><h4>Archivo</h4><a class=\"nz-appnav__link\" href=\"#\"><i aria-hidden=\"true\"></i>Histórico</a></nav>"
+  },
+  {
+   "titulo": "Panel dividido redimensionable",
+   "tag": ".nz-splitview · __grip",
+   "markup": "<div class=\"nz-splitview\"><div><h4>Explorador</h4>Selecciona un archivo en el panel izquierdo.</div><div class=\"nz-splitview__grip\" role=\"separator\" aria-orientation=\"vertical\" aria-label=\"Redimensionar paneles\"></div><div><h4>Vista previa</h4>Arrastra el separador para ajustar el ancho.</div></div>"
+  },
+  {
+   "titulo": "Inspector de propiedades",
+   "tag": ".nz-inspector · div span/b",
+   "markup": "<div class=\"nz-inspector\"><h4>Propiedades del objeto</h4><div><span>Nombre</span><b>Fachada norte</b></div><div class=\"is-brand\"><span>Superficie</span><b>184,5 m²</b></div><div><span>Última revisión</span><b>14 mar 2025</b></div></div>"
+  },
+  {
+   "titulo": "Barra de estado inferior de app",
+   "tag": ".nz-appstatus__item",
+   "markup": "<div class=\"nz-appstatus\"><span class=\"nz-appstatus__item\"><i aria-hidden=\"true\"></i>Sincronizado</span><span class=\"nz-appstatus__item is-warn\"><i aria-hidden=\"true\"></i>2 avisos de estilo</span><span class=\"nz-appstatus__item\"><b>Línea 128, columna 24</b></span></div>"
+  },
+  {
+   "titulo": "Pestañas de documento (activa, modificada, cerrable)",
+   "tag": ".nz-docs__tab · __dot",
+   "markup": "<div class=\"nz-docs\" role=\"tablist\" aria-label=\"Documentos abiertos\"><span class=\"nz-docs__tab\" role=\"tab\" tabindex=\"0\" aria-selected=\"true\"><span class=\"nz-docs__dot\" aria-hidden=\"true\"></span>presupuesto.nz<button aria-label=\"Cerrar presupuesto.nz\">✕</button></span><span class=\"nz-docs__tab\" role=\"tab\" tabindex=\"0\" aria-selected=\"false\">memoria.md<button aria-label=\"Cerrar memoria.md\">✕</button></span><span class=\"nz-docs__tab\" role=\"tab\" tabindex=\"0\" aria-selected=\"false\">pliego.txt<button aria-label=\"Cerrar pliego.txt\">✕</button></span></div>"
+  },
+  {
+   "titulo": "Migas de ruta de archivo",
+   "tag": ".nz-pathbar__seg · [aria-current]",
+   "markup": "<nav class=\"nz-pathbar\" aria-label=\"Ruta del archivo\"><a class=\"nz-pathbar__seg\" href=\"#\">inicio</a><a class=\"nz-pathbar__seg\" href=\"#\">proyectos</a><a class=\"nz-pathbar__seg\" href=\"#\">aurora-7</a><span class=\"nz-pathbar__seg\" aria-current=\"page\">p15-apps.css</span></nav>"
+  },
+  {
+   "titulo": "Árbol de archivos y carpetas",
+   "tag": ".nz-tree__item · ul anidado",
+   "markup": "<div class=\"nz-tree\" role=\"tree\" aria-label=\"Explorador de archivos\"><div class=\"nz-tree__item\" role=\"treeitem\" tabindex=\"0\" aria-expanded=\"true\"><i aria-hidden=\"true\">▾</i>src<small>4 archivos</small></div><ul role=\"group\"><li class=\"nz-tree__item\" role=\"none\"><span class=\"nz-tree__item\" role=\"treeitem\" tabindex=\"0\"><i aria-hidden=\"true\">·</i>main.css<small>2 KB</small></span></li><li class=\"nz-tree__item\" role=\"none\"><span class=\"nz-tree__item\" role=\"treeitem\" tabindex=\"0\" aria-current=\"page\"><i aria-hidden=\"true\">·</i>tokens.css<small>6 KB</small></span></li></ul><div class=\"nz-tree__item\" role=\"treeitem\" tabindex=\"0\" aria-expanded=\"false\"><i aria-hidden=\"true\">▸</i>dist</div></div>"
+  },
+  {
+   "titulo": "Editor de código (gutter, línea activa, sintaxis)",
+   "tag": ".nz-codepad · .nz-syn--kw/str/com/num",
+   "markup": "<div class=\"nz-codepad\"><div class=\"nz-codepad__gutter\" aria-hidden=\"true\"><span>1</span><span>2</span><span>3</span></div><div><code class=\"nz-codepad__line\"><span class=\"nz-syn--com\">/* pack de apps */</span></code><code class=\"nz-codepad__line is-active\"><span class=\"nz-syn--kw\">const</span> ANCHO = <span class=\"nz-syn--num\">44</span>;</code><code class=\"nz-codepad__line\"><span class=\"nz-syn--kw\">let</span> nombre = <span class=\"nz-syn--str\">\"ventana\"</span>;</code></div></div>"
+  },
+  {
+   "titulo": "Terminal (prompt, salida, error, cursor)",
+   "tag": ".nz-term__prompt · .is-out/.is-err",
+   "markup": "<div class=\"nz-term\"><p><span class=\"nz-term__prompt\">david@aurora:~$</span>npm run build<span class=\"nz-term__cursor\" aria-hidden=\"true\"></span></p><p class=\"is-out\">Compilado packs/p15-apps.css en 240 ms</p><p class=\"is-err\">Error: revisa el token --nz-border-soft</p></div>"
+  },
+  {
+   "titulo": "Cinta de opciones de app",
+   "tag": ".nz-ribbon · __btn",
+   "markup": "<div class=\"nz-ribbon\" role=\"toolbar\" aria-label=\"Cinta de opciones\"><section><b>Archivo</b><div><button class=\"nz-ribbon__btn\" aria-label=\"Nuevo\">＋</button><button class=\"nz-ribbon__btn\" aria-label=\"Guardar\">⤓</button></div></section><section><b>Vista</b><div><button class=\"nz-ribbon__btn\" aria-pressed=\"true\" aria-label=\"Cuadrícula\">▦</button><button class=\"nz-ribbon__btn\" aria-pressed=\"false\" aria-label=\"Reglas\">⊞</button></div></section></div>"
+  },
+  {
+   "titulo": "Paleta de comandos de escritorio (spotlight)",
+   "tag": ".nz-spotlight · __input/__item",
+   "markup": "<div class=\"nz-spotlight\" role=\"dialog\" aria-label=\"Paleta de comandos\"><input class=\"nz-spotlight__input\" type=\"search\" placeholder=\"Escribe un comando o un archivo…\" aria-label=\"Buscar comando\"><a class=\"nz-spotlight__item is-active\" href=\"#\">Abrir panel de ajustes<kbd>↵</kbd></a><a class=\"nz-spotlight__item\" href=\"#\">Buscar en el proyecto<kbd>Ctrl P</kbd></a><a class=\"nz-spotlight__item\" href=\"#\">Cerrar todas las pestañas<kbd>⇧ ⌘ W</kbd></a><footer>↑↓ para moverte · Esc para salir</footer></div>"
+  },
+  {
+   "titulo": "Tablero kanban con límite WIP",
+   "tag": ".nz-kanban__col/__card · is-dragging",
+   "markup": "<div class=\"nz-kanban\"><div class=\"nz-kanban__col\"><header>En curso<small class=\"is-limit\">3/3 WIP</small></header><div class=\"nz-kanban__card\">Revisar la accesibilidad de la cinta<span>prioridad alta</span></div><div class=\"nz-kanban__card is-dragging\">Ajustar la rejilla del calendario<span>moviendo…</span></div></div><div class=\"nz-kanban__col\"><header>Hecho<small>12</small></header><div class=\"nz-kanban__card is-done\">Tokens de sombras<span>cerrada ayer</span></div><div class=\"nz-kanban__card is-accent\">Icono de bandeja<span>nueva propuesta</span></div></div></div>"
+  },
+  {
+   "titulo": "Calendario mensual",
+   "tag": ".nz-month · span.is-today/.is-outside + em",
+   "markup": "<div class=\"nz-month\" role=\"grid\" aria-label=\"Marzo de 2025\"><b>Lu</b><b>Ma</b><b>Mi</b><b>Ju</b><b>Vi</b><b>Sá</b><b>Do</b><span class=\"is-outside\">24</span><span class=\"is-outside\">25</span><span class=\"is-outside\">26</span><span class=\"is-outside\">27</span><span class=\"is-outside\">28</span><span>1</span><span>2</span><span>3</span><span class=\"is-today\">4</span><span class=\"is-selected\">5<em>Sprint</em></span><span>6</span><span>7<em class=\"is-accent\">Demo</em></span><span>8</span><span>9</span></div>"
+  },
+  {
+   "titulo": "Agenda del día (franjas horarias)",
+   "tag": ".nz-agenda__slot · span.is-free",
+   "markup": "<div class=\"nz-agenda\"><div class=\"nz-agenda__slot\"><b>09:00</b><span>Revisión de diseño con el equipo</span></div><div class=\"nz-agenda__slot is-now\"><b>10:00</b><span class=\"is-accent\">Demo interna de Aurora 7</span></div><div class=\"nz-agenda__slot\"><b>11:00</b><span class=\"is-free\">Libre</span></div><div class=\"nz-agenda__slot\"><b>12:00</b><span>Comida de equipo</span></div></div>"
+  },
+  {
+   "titulo": "Ajustes de aplicación",
+   "tag": ".nz-prefs__row · __control",
+   "markup": "<div class=\"nz-prefs\"><h4>Apariencia</h4><div class=\"nz-prefs__row\"><div><b>Tema</b><p>Claro u oscuro según el sistema.</p></div><div class=\"nz-prefs__control\"><select aria-label=\"Tema\"><option>Sistema</option><option>Claro</option><option>Oscuro</option></select></div></div><div class=\"nz-prefs__row\"><div><b>Números de línea</b><p>Muestra el gutter en el editor de código.</p></div><div class=\"nz-prefs__control\"><label><input type=\"checkbox\" checked> Activado</label></div></div><div class=\"nz-prefs__row\"><div><b>Autoguardado</b><p>Guarda al cambiar de pestaña.</p></div><div class=\"nz-prefs__control\"><label><input type=\"checkbox\"> Desactivado</label></div></div></div>"
+  },
+  {
+   "titulo": "Hoja de propiedades agrupada",
+   "tag": ".nz-propsheet · __row",
+   "markup": "<div class=\"nz-propsheet\"><h4>Geometría</h4><div class=\"nz-propsheet__row\"><span>Ancho</span><b>1200 px</b></div><div class=\"nz-propsheet__row\"><span>Alto</span><b>680 px</b></div><h4>Tipografía</h4><div class=\"nz-propsheet__row\"><span>Familia</span><b>--nz-font</b></div><div class=\"nz-propsheet__row\"><span>Interlínea</span><b>1.6</b></div></div>"
+  },
+  {
+   "titulo": "Perfil de usuario de app",
+   "tag": ".nz-userbox · __avatar",
+   "markup": "<div class=\"nz-userbox\"><span class=\"nz-userbox__avatar\" aria-hidden=\"true\">DA</span><div><b>David Antizar</b><span>Sesión de trabajo · plan Pro</span></div><i aria-hidden=\"true\">▾</i></div>"
+  },
+  {
+   "titulo": "Notificación de sistema con acciones",
+   "tag": ".nz-sysnotif · __actions",
+   "markup": "<div class=\"nz-sysnotif\" role=\"status\"><i class=\"nz-sysnotif__icon\" aria-hidden=\"true\">⟳</i><span class=\"nz-sysnotif__title\">Actualizaciones listas</span><p>Hay 3 mejoras disponibles para tu espacio de trabajo.</p><div class=\"nz-sysnotif__actions\"><button>Instalar</button><button>Más tarde</button></div></div>"
+  },
+  {
+   "titulo": "Notificación de sistema de error",
+   "tag": ".nz-sysnotif.is-danger",
+   "markup": "<div class=\"nz-sysnotif is-danger\" role=\"alert\"><i class=\"nz-sysnotif__icon\" aria-hidden=\"true\">!</i><span class=\"nz-sysnotif__title\">No se pudo guardar</span><p>El archivo presupuesto.nz está bloqueado por otro proceso.</p><div class=\"nz-sysnotif__actions\"><button>Reintentar</button><button>Ver detalle</button></div></div>"
+  },
+  {
+   "titulo": "Bandeja / menú de sistema (sin JS)",
+   "tag": ".nz-tray__menu · input:checked",
+   "markup": "<div class=\"nz-tray\"><input class=\"nz-vh\" type=\"checkbox\" id=\"tray15\"><label for=\"tray15\">▤ Bandeja del sistema</label><div class=\"nz-tray__menu\"><p>Sistema</p><button class=\"nz-tray__item\">Sincronizar ahora<span>Ctrl S</span></button><button class=\"nz-tray__item\">Modo concentración<span>Off</span></button><hr><button class=\"nz-tray__item\">Cerrar sesión<span>Ctrl Q</span></button></div></div>"
+  },
+  {
+   "titulo": "Diálogo de confirmación de sistema",
+   "tag": ".nz-sysdialog · __scrim/__panel",
+   "markup": "<div class=\"nz-sysdialog\"><input class=\"nz-vh\" type=\"checkbox\" id=\"sd15\"><label for=\"sd15\">⚠ Probar el diálogo de confirmación</label><div class=\"nz-sysdialog__scrim\"><div class=\"nz-sysdialog__panel\" role=\"alertdialog\" aria-labelledby=\"sd15t\"><h4 id=\"sd15t\">¿Cerrar sin guardar?</h4><p>Los cambios en presupuesto.nz se perderán.</p><footer><label for=\"sd15\" class=\"is-primary\">Cancelar</label><button class=\"is-danger\">Cerrar sin guardar</button></footer></div></div></div>"
+  },
+  {
+   "titulo": "Medidor de uso de recursos (CPU / RAM)",
+   "tag": ".nz-resmon__row · is-warn/is-err",
+   "markup": "<div class=\"nz-resmon\"><div class=\"nz-resmon__row\"><b>CPU</b><i><span style=\"width:62%\"></span></i><small>62 %</small></div><div class=\"nz-resmon__row is-warn\"><b>RAM</b><i><span style=\"width:81%\"></span></i><small>12,9 / 16 GB</small></div><div class=\"nz-resmon__row is-err\"><b>Disco</b><i><span style=\"width:94%\"></span></i><small>94 % · casi lleno</small></div></div>"
+  },
+  {
+   "titulo": "Ventana de progreso de tareas",
+   "tag": ".nz-taskwin__row · is-done/is-error",
+   "markup": "<div class=\"nz-taskwin\"><header>3 tareas en curso</header><div class=\"nz-taskwin__row\"><b>Optimizar p15-apps.css<small>68 %</small></b><i><span style=\"width:68%\"></span></i></div><div class=\"nz-taskwin__row is-done\"><b>Compilar tokens.css<small>completada</small></b><i><span style=\"width:100%\"></span></i></div><div class=\"nz-taskwin__row is-error\"><b>Publicar en el catálogo<small>error de red</small></b><i><span style=\"width:34%\"></span></i></div><footer>2 completadas · 1 con error</footer></div>"
+  },
+  {
+   "titulo": "Widget de escritorio",
+   "tag": ".nz-widget · __value",
+   "markup": "<div class=\"nz-widget is-accent\"><h4>Energía hoy</h4><span class=\"nz-widget__value\">18,4 kWh</span><footer>+6 % respecto a ayer</footer></div>"
+  },
+  {
+   "titulo": "Lanzador en rejilla (grid de apps)",
+   "tag": ".nz-launcher · __app",
+   "markup": "<div class=\"nz-launcher\"><a class=\"nz-launcher__app\" href=\"#\"><i aria-hidden=\"true\">▤</i>Panel</a><a class=\"nz-launcher__app is-accent\" href=\"#\"><i aria-hidden=\"true\">✉</i>Correo</a><a class=\"nz-launcher__app\" href=\"#\"><i aria-hidden=\"true\">▦</i>Calendario</a><a class=\"nz-launcher__app\" href=\"#\"><i aria-hidden=\"true\">⌸</i>Informes</a><a class=\"nz-launcher__app\" href=\"#\"><i aria-hidden=\"true\">⚙</i>Ajustes</a><a class=\"nz-launcher__app\" href=\"#\"><i aria-hidden=\"true\">⌗</i>Terminal</a></div>"
+  },
+  {
+   "titulo": "Dock inferior",
+   "tag": ".nz-dock__item · [aria-current]",
+   "markup": "<div class=\"nz-dock\" role=\"toolbar\" aria-label=\"Dock de aplicaciones\"><a class=\"nz-dock__item\" href=\"#\" aria-current=\"page\" aria-label=\"Explorador\">▤</a><a class=\"nz-dock__item\" href=\"#\" aria-label=\"Editor\">✎</a><a class=\"nz-dock__item\" href=\"#\" aria-label=\"Terminal\">▶</a><a class=\"nz-dock__item\" href=\"#\" aria-label=\"Correo\">✉</a></div>"
+  },
+  {
+   "titulo": "Estado vacío de aplicación",
+   "tag": ".nz-appempty",
+   "markup": "<div class=\"nz-appempty\"><i aria-hidden=\"true\">▢</i><b>No hay documentos abiertos</b><p>Abre un archivo del explorador o crea uno nuevo para empezar a trabajar.</p><button>Crear documento</button></div>"
+  },
+  {
+   "titulo": "Pie de ventana con contadores",
+   "tag": ".nz-winfoot__count",
+   "markup": "<div class=\"nz-winfoot\"><span class=\"nz-winfoot__count\">12 archivos</span><i aria-hidden=\"true\">·</i><span class=\"nz-winfoot__count\">3 modificados</span><span class=\"nz-winfoot__count\">UTF-8</span></div>"
+  }
+ ]
 }

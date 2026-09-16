@@ -8,7 +8,7 @@
   {
    "titulo": "Panel de conversación completo",
    "tag": ".nz-chat · __head · __title · __status · __body · __foot",
-   "markup": "<div class=\"nz-chat\"><div class=\"nz-chat__head\"><span class=\"cat-brandmark\" aria-hidden=\"true\"><i></i><i></i></span><span class=\"nz-chat__title\">Asistente de obra</span><span class=\"nz-chat__status\">gpt-4o · 1.240 tokens</span></div><div class=\"nz-chat__body\"><div class=\"nz-msg nz-msg--user\"><div class=\"nz-msg__body\"><span class=\"nz-msg__author\">Tú</span><div class=\"nz-msg__bubble\"><span class=\"nz-msg__text\">Resume el pliego del lote 3.</span></div><span class=\"nz-msg__time\">10:02</span></div></div><div class=\"nz-msg nz-msg--assistant\"><div class=\"nz-msg__body\"><span class=\"nz-msg__author\">Asistente</span><div class=\"nz-msg__bubble\"><span class=\"nz-msg__text\">El lote 3 exige 3 años de experiencia y solvencia de 120.000 €.</span></div><span class=\"nz-msg__time\">10:02</span></div></div></div><div class=\"nz-chat__foot\"><div class=\"nz-prompt\"><button class=\"nz-prompt__attach\" aria-label=\"Adjuntar\">+</button><textarea class=\"nz-prompt__input\" rows=\"1\" placeholder=\"Escribe tu pregunta…\"></textarea><button class=\"nz-prompt__send\">Enviar</button></div></div></div>"
+   "markup": "<div class=\"nz-chat\"><div class=\"nz-chat__head\"><span class=\"cat-brandmark\" aria-hidden=\"true\"><i></i><i></i></span><span class=\"nz-chat__title\">Asistente de obra</span><span class=\"nz-chat__status\">gpt-4o · 1.240 tokens</span></div><div class=\"nz-chat__body\"><div class=\"nz-msg nz-msg--user\"><div class=\"nz-msg__body\"><span class=\"nz-msg__author\">Tú</span><div class=\"nz-msg__bubble\"><span class=\"nz-msg__text\">Resume el pliego del lote 3.</span></div><span class=\"nz-msg__time\">10:02</span></div></div><div class=\"nz-msg nz-msg--assistant\"><div class=\"nz-msg__body\"><span class=\"nz-msg__author\">Asistente</span><div class=\"nz-msg__bubble\"><span class=\"nz-msg__text\">El lote 3 exige 3 años de experiencia y solvencia de 120.000 €.</span></div><span class=\"nz-msg__time\">10:02</span></div></div></div><div class=\"nz-chat__foot\"><div class=\"nz-prompt\"><button class=\"nz-prompt__attach\" aria-label=\"Adjuntar\">+</button><textarea class=\"nz-prompt__input\" rows=\"1\" placeholder=\"Escribe tu pregunta…\" aria-label=\"Escribe tu pregunta\"></textarea><button class=\"nz-prompt__send\">Enviar</button></div></div></div>"
   },
   {
    "titulo": "Tamaños y variantes del panel",
@@ -38,7 +38,7 @@
   {
    "titulo": "Barra de prompt",
    "tag": ".nz-prompt · __input · __attach · __send · __hint",
-   "markup": "<div><div class=\"nz-prompt\"><button class=\"nz-prompt__attach\" aria-label=\"Adjuntar archivo\">+</button><textarea class=\"nz-prompt__input\" rows=\"1\" placeholder=\"Pregunta lo que quieras…\"></textarea><button class=\"nz-prompt__send\">Enviar</button></div><p class=\"nz-prompt__hint\">Pulsa Intro para enviar · Mayús+Intro para salto de línea</p></div>"
+   "markup": "<div><div class=\"nz-prompt\"><button class=\"nz-prompt__attach\" aria-label=\"Adjuntar archivo\">+</button><textarea class=\"nz-prompt__input\" rows=\"1\" placeholder=\"Pregunta lo que quieras…\" aria-label=\"Pregunta lo que quieras\"></textarea><button class=\"nz-prompt__send\">Enviar</button></div><p class=\"nz-prompt__hint\">Pulsa Intro para enviar · Mayús+Intro para salto de línea</p></div>"
   },
   {
    "titulo": "Adjuntos",
