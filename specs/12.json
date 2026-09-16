@@ -1,0 +1,149 @@
+{
+ "cat": 12,
+ "nombre": "Accesibilidad y sistema",
+ "desc": "Enlace de salto, ocultación accesible, foco, contraste, zonas táctiles, regiones vivas, landmarks, estado del sistema, tema y preferencias.",
+ "pack": "p12-system.css",
+ "fichero": "12-system.html",
+ "demos": [
+  {
+   "titulo": "Enlace de salto al contenido",
+   "tag": ".nz-skip-link",
+   "markup": "<a class=\"nz-skip-link nz-skip-link--inline\" href=\"#contenido\">Saltar al contenido</a><p class=\"nz-text--muted\">Fuera de pantalla hasta que recibe el foco con Tab.</p>"
+  },
+  {
+   "titulo": "Grupo de enlaces de salto",
+   "tag": ".nz-skip-links-group",
+   "markup": "<nav class=\"nz-skip-links-group\" aria-label=\"Enlaces de salto\"><a class=\"nz-skip-links-group__link\" href=\"#contenido\">Ir al contenido</a><a class=\"nz-skip-links-group__link\" href=\"#menu\">Ir al menú</a><a class=\"nz-skip-links-group__link\" href=\"#pie\">Ir al pie</a></nav>"
+  },
+  {
+   "titulo": "Oculto para la vista",
+   "tag": ".nz-visually-hidden · .nz-vh",
+   "markup": "<span class=\"nz-visually-hidden\">Texto solo para lectores de pantalla.</span><span class=\"nz-vh\">Igual que el anterior, alias corto.</span><span class=\"nz-text--muted\">(Los dos existen en el DOM: míralo en el código.)</span>"
+  },
+  {
+   "titulo": "Visible solo al enfocar",
+   "tag": ".nz-sr-only-focusable",
+   "markup": "<a class=\"nz-sr-only-focusable\" href=\"#contenido\">Aparezco con el teclado</a><p class=\"nz-text--muted\">Oculto hasta que recibe el foco: mismo patrón que el enlace de salto.</p>"
+  },
+  {
+   "titulo": "Anillo de foco",
+   "tag": ".nz-focus-ring · .nz-focus-accent",
+   "markup": "<div class=\"nz-cluster\"><span class=\"nz-focus-ring\">Foco estándar</span><span class=\"nz-focus-accent\">Foco de acento</span><button class=\"nz-btn nz-btn--primary nz-focus-ring\">Botón con anillo forzado</button></div>"
+  },
+  {
+   "titulo": "Foco de teclado",
+   "tag": ".nz-tabfocus-visible",
+   "markup": "<span class=\"nz-tabfocus-visible\">⇥ Así se ve el foco al llegar con Tab</span>"
+  },
+  {
+   "titulo": "Acento de foco por atributo",
+   "tag": "[data-nz-focus=\"accent\"]",
+   "markup": "<div data-nz-focus=\"accent\" class=\"nz-stack nz-stack--xs\"><a class=\"nz-link\" href=\"#contenido\">Enlace con foco naranja</a><button class=\"nz-btn nz-btn--soft\">Botón con foco naranja</button></div>"
+  },
+  {
+   "titulo": "Zona táctil mínima de 44 px",
+   "tag": ".nz-tap-44 · .nz-min-target",
+   "markup": "<div class=\"nz-cluster\"><button class=\"nz-btn nz-btn--icon nz-tap-44\" aria-label=\"Favorito\">★</button><span class=\"nz-tap-44\"><span class=\"nz-badge nz-badge--brand\">44 px de caja</span></span><button class=\"nz-btn nz-btn--soft nz-btn--sm nz-min-target\">Guardar</button></div>"
+  },
+  {
+   "titulo": "Contraste correcto (AA)",
+   "tag": ".nz-contrast__status--aa",
+   "markup": "<div class=\"nz-contrast\"><span class=\"nz-contrast__pair\"><span class=\"nz-contrast__chip nz-contrast__chip--brand\"></span><span class=\"nz-contrast__chip nz-contrast__chip--surface\"></span>Azul de marca sobre superficie</span><span class=\"nz-contrast__ratio nz-contrast__ratio--ok\">5,2:1</span><span class=\"nz-contrast__status nz-contrast__status--aa\">AA</span><span class=\"nz-contrast__badge\">Texto pequeño</span></div>"
+  },
+  {
+   "titulo": "Contraste insuficiente",
+   "tag": ".nz-contrast__status--fail",
+   "markup": "<div class=\"nz-contrast\"><span class=\"nz-contrast__pair\"><span class=\"nz-contrast__chip nz-contrast__chip--accent\"></span><span class=\"nz-contrast__chip nz-contrast__chip--soft\"></span>Acento sobre su propio fondo suave</span><span class=\"nz-contrast__ratio\">2,1:1</span><span class=\"nz-contrast__status nz-contrast__status--fail\">No apto</span></div>"
+  },
+  {
+   "titulo": "Contraste en grande",
+   "tag": ".nz-contrast--lg",
+   "markup": "<div class=\"nz-contrast nz-contrast--lg\"><span class=\"nz-contrast__pair\"><span class=\"nz-contrast__chip nz-contrast__chip--brand\"></span><span class=\"nz-contrast__chip nz-contrast__chip--surface\"></span>Pares de tokens a tamaño grande</span><span class=\"nz-contrast__ratio nz-contrast__ratio--ok\">5,2:1</span><span class=\"nz-contrast__status nz-contrast__status--aa\">AA</span></div>"
+  },
+  {
+   "titulo": "Nivel de conformidad",
+   "tag": ".nz-a11y-badge",
+   "markup": "<div class=\"nz-cluster\"><span class=\"nz-a11y-badge\">Auditado</span><span class=\"nz-a11y-badge nz-a11y-badge--aa\">AA</span><span class=\"nz-a11y-badge nz-a11y-badge--aaa\">AAA</span></div>"
+  },
+  {
+   "titulo": "Región viva educada",
+   "tag": ".nz-live-region--polite",
+   "markup": "<div class=\"nz-live-region nz-live-region--polite\" role=\"status\" aria-live=\"polite\"><span class=\"nz-live-region__icon\"></span>Guardado. Se anunciará cuando el lector termine su frase.</div>"
+  },
+  {
+   "titulo": "Región viva asertiva",
+   "tag": ".nz-live-region--assertive",
+   "markup": "<div class=\"nz-live-region nz-live-region--assertive\" role=\"alert\" aria-live=\"assertive\"><span class=\"nz-live-region__icon\"></span>No se pudo enviar el formulario. Revisa el correo.</div>"
+  },
+  {
+   "titulo": "Preferencias de movimiento",
+   "tag": ".nz-motion-badge · .nz-reduced-motion-ok",
+   "markup": "<div class=\"nz-stack nz-stack--xs\"><span class=\"nz-motion-badge\">Movimiento reducido respetado</span><span class=\"nz-motion-badge nz-motion-badge--no\">Animaciones desactivadas en tu sistema</span><span class=\"nz-reduced-motion-ok\">Transiciones congeladas, no ralentizadas</span></div>"
+  },
+  {
+   "titulo": "Nota de alto contraste",
+   "tag": ".nz-high-contrast-note",
+   "markup": "<div class=\"nz-high-contrast-note\"><span class=\"nz-high-contrast-note__icon\">◐</span><span>Con el modo de alto contraste del sistema, los bordes duros los pone el navegador: aquí no forzamos colores.</span></div>"
+  },
+  {
+   "titulo": "Landmarks del documento",
+   "tag": ".nz-landmark",
+   "markup": "<div class=\"nz-landmark\"><span class=\"nz-landmark__label\">Regiones de la página</span><nav class=\"nz-landmark nz-landmark--nav\">nav · menú principal</nav><main class=\"nz-landmark nz-landmark--main\">main · contenido</main><footer class=\"nz-landmark nz-landmark--footer\">footer · pie</footer></div>"
+  },
+  {
+   "titulo": "Landmarks anidados",
+   "tag": ".nz-landmark--nav · --main · --footer",
+   "markup": "<div class=\"nz-stack nz-stack--sm\"><nav class=\"nz-landmark nz-landmark--nav\">Navegación lateral</nav><main class=\"nz-landmark nz-landmark--main\">Contenido principal</main><footer class=\"nz-landmark nz-landmark--footer\">Pie de página</footer></div>"
+  },
+  {
+   "titulo": "Estado del sistema",
+   "tag": ".nz-sysstatus",
+   "markup": "<div class=\"nz-cluster\"><span class=\"nz-sysstatus nz-sysstatus--ok\"><i></i>Operativo</span><span class=\"nz-sysstatus nz-sysstatus--warn\"><i></i>Degradado</span><span class=\"nz-sysstatus nz-sysstatus--err\"><i></i>Caído</span></div>"
+  },
+  {
+   "titulo": "Aviso, info y mantenimiento",
+   "tag": ".nz-sysstatus--info · --maintenance",
+   "markup": "<div class=\"nz-stack nz-stack--xs\"><span class=\"nz-sysstatus nz-sysstatus--info\"><i></i>Información<span class=\"nz-sysstatus__time\">10:24</span></span><span class=\"nz-sysstatus nz-sysstatus--maintenance\"><i></i>Mantenimiento programado<span class=\"nz-sysstatus__time\">03:00</span></span><span class=\"nz-sysstatus nz-sysstatus--warn\"><i></i>Latencia alta<span class=\"nz-sysstatus__detail\">API de pagos con 800 ms de media.</span></span></div>"
+  },
+  {
+   "titulo": "Aviso de mantenimiento",
+   "tag": ".nz-maintenance-banner",
+   "markup": "<div class=\"nz-maintenance-banner\"><span class=\"nz-maintenance-banner__title\">Mantenimiento el domingo</span><span class=\"nz-maintenance-banner__body\">De 03:00 a 04:00 el pago estará en pausa.</span><span class=\"nz-maintenance-banner__actions\"><button class=\"nz-btn nz-btn--soft nz-btn--sm\">Avisadme</button></span></div>"
+  },
+  {
+   "titulo": "Versión y tema activo",
+   "tag": ".nz-tema-badge",
+   "markup": "<div class=\"nz-cluster\"><span class=\"nz-version-badge\">Aurora 7.1</span><span class=\"nz-tema-badge nz-tema-badge--light\">Tema claro</span><span class=\"nz-tema-badge nz-tema-badge--dark\">Tema oscuro</span><span class=\"nz-tema-badge nz-tema-badge--system\">Según el sistema</span></div>"
+  },
+  {
+   "titulo": "Preferencias de accesibilidad",
+   "tag": ".nz-preferencias",
+   "markup": "<div class=\"nz-preferencias\"><div class=\"nz-preferencias__fila\"><span class=\"nz-preferencias__label\">Movimiento reducido<span class=\"nz-preferencias__desc\">Congela animaciones y transiciones.</span></span><span class=\"nz-preferencias__control\"><label class=\"nz-switch\"><input type=\"checkbox\" checked><span class=\"nz-switch__track\"><span class=\"nz-switch__thumb\"></span></span><span class=\"nz-switch__label\">Activo</span></label></span></div><div class=\"nz-preferencias__fila\"><span class=\"nz-preferencias__label\">Objetivos táctiles grandes<span class=\"nz-preferencias__desc\">Mínimo 44 px en todo lo pulsable.</span></span><span class=\"nz-preferencias__control\"><label class=\"nz-switch\"><input type=\"checkbox\"><span class=\"nz-switch__track\"><span class=\"nz-switch__thumb\"></span></span><span class=\"nz-switch__label\">Inactivo</span></label></span></div></div>"
+  },
+  {
+   "titulo": "Atajos de teclado",
+   "tag": ".nz-atajo-teclado",
+   "markup": "<div class=\"nz-stack nz-stack--xs\"><span class=\"nz-atajo-teclado\"><span class=\"nz-atajo-teclado__kbd\"><kbd>Ctrl</kbd><kbd>K</kbd></span><span class=\"nz-atajo-teclado__desc\">Abrir el buscador</span></span><span class=\"nz-atajo-teclado\"><span class=\"nz-atajo-teclado__kbd\"><kbd>/</kbd></span><span class=\"nz-atajo-teclado__desc\">Buscar en esta categoría</span></span></div>"
+  },
+  {
+   "titulo": "Ficha del sistema",
+   "tag": ".nz-sysinfo",
+   "markup": "<dl class=\"nz-sysinfo\"><div class=\"nz-sysinfo__row\"><dt class=\"nz-sysinfo__dt\">Versión</dt><dd class=\"nz-sysinfo__dd\">7.1.0</dd></div><div class=\"nz-sysinfo__row\"><dt class=\"nz-sysinfo__dt\">Objetos</dt><dd class=\"nz-sysinfo__dd\">565</dd></div><div class=\"nz-sysinfo__row\"><dt class=\"nz-sysinfo__dt\">Temas</dt><dd class=\"nz-sysinfo__dd\">claro y oscuro</dd></div></dl>"
+  },
+  {
+   "titulo": "Historial de incidencias",
+   "tag": ".nz-incident",
+   "markup": "<div class=\"nz-incident\"><span class=\"nz-incident__time\">12 may · 09:12</span><span class=\"nz-incident__title\">Latencia en el pago</span><span class=\"nz-incident__body\">Resuelto en 22 minutos. Causa: proveedor externo.</span><span class=\"nz-incident__tag\">Resuelto</span></div>"
+  },
+  {
+   "titulo": "Pares de token, uno a uno",
+   "tag": ".nz-contrast · __ratio--ok",
+   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-contrast\"><span class=\"nz-contrast__pair\"><span class=\"nz-contrast__chip nz-contrast__chip--brand\"></span><span class=\"nz-contrast__chip nz-contrast__chip--surface\"></span>Marca / superficie</span><span class=\"nz-contrast__ratio nz-contrast__ratio--ok\">5,2:1</span><span class=\"nz-contrast__status nz-contrast__status--aa\">AA</span></div><div class=\"nz-contrast\"><span class=\"nz-contrast__pair\"><span class=\"nz-contrast__chip nz-contrast__chip--accent\"></span><span class=\"nz-contrast__chip nz-contrast__chip--surface\"></span>Acento / superficie</span><span class=\"nz-contrast__ratio nz-contrast__ratio--ok\">3,1:1</span><span class=\"nz-contrast__status nz-contrast__status--aa\">AA</span><span class=\"nz-contrast__badge\">Solo texto grande y botones</span></div><div class=\"nz-contrast\"><span class=\"nz-contrast__pair\"><span class=\"nz-contrast__chip nz-contrast__chip--soft\"></span><span class=\"nz-contrast__chip nz-contrast__chip--surface\"></span>Suave / superficie</span><span class=\"nz-contrast__ratio\">1,4:1</span><span class=\"nz-contrast__status nz-contrast__status--fail\">No apto</span></div></div>"
+  },
+  {
+   "titulo": "Contrato accesible de una página",
+   "tag": ".nz-skip-link · .nz-landmark",
+   "markup": "<div class=\"nz-stack nz-stack--sm\"><a class=\"nz-skip-link nz-skip-link--inline\" href=\"#contenido\">Saltar al contenido</a><span class=\"nz-landmark__label\">Lo mínimo de cualquier página</span><main class=\"nz-landmark nz-landmark--main\">Contenido alcanzable con el teclado<span class=\"nz-visually-hidden\">Texto que solo oye el lector de pantalla.</span></main><a class=\"nz-sr-only-focusable\" href=\"#contenido\">Enlace que aparece al enfocarlo</a></div>"
+  }
+ ]
+}

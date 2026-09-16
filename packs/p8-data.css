@@ -1,13 +1,16 @@
 /* ============================================================
-   AURORA 7 — p8-data.css · Categoría 08 · Datos, tablas y listas (50 objetos)
-   Tablas, tarjetas de dato (KPI), listas de registros, timeline,
-   resumen, badges en datos, grid de renders.
+   AURORA 7 — p8-data.css · Categoría 08 · Datos, tablas y listas (139 objetos)
+   Tablas (densidad, sticky, bordes, hover, toolbar, filtros, pie, celdas),
+   tarjetas de dato (KPI con icono, objetivo y variantes), minigráficos,
+   listas de registros, filas de lista, timeline (compacto, horizontal, tarjeta),
+   definition lists, badges de datos, grid de datos, estados inline,
+   árbol jerárquico, matriz de calor, tabla de comparación y número medidor.
    ============================================================ */
 
 /* ---- Tabla ---- */
 .nz-table-wrap { overflow-x: auto; border-radius: var(--nz-radius-md); border: 1px solid var(--nz-border-soft); }
 .nz-table { width: 100%; border-collapse: collapse; background: var(--nz-surface); font-size: var(--nz-text-sm); min-width: 30rem; }
-.nz-table thead th { position: sticky; top: 0; background: var(--nz-bg-soft); color: var(--nz-text-mute); font-size: var(--nz-text-xs); font-weight: 800; text-transform: uppercase; letter-spacing: var(--nz-tracking-caps); text-align: left; padding: var(--nz-space-3) var(--nz-space-4); white-space: nowrap; }
+.nz-table thead th { background: var(--nz-bg-soft); color: var(--nz-text-mute); font-size: var(--nz-text-xs); font-weight: 800; text-transform: uppercase; letter-spacing: var(--nz-tracking-caps); text-align: left; padding: var(--nz-space-3) var(--nz-space-4); white-space: nowrap; }
 .nz-table tbody td { padding: var(--nz-space-3) var(--nz-space-4); border-top: 1px solid var(--nz-border-soft); color: var(--nz-text-soft); }
 .nz-table tbody tr { transition: background var(--nz-dur-fast) var(--nz-ease-out); }
 .nz-table tbody tr:hover { background: var(--nz-bg-soft); }
@@ -15,13 +18,34 @@
 .nz-table--borderless { border: 0; }
 .nz-table--borderless thead th { background: transparent; }
 .nz-table--borderless tbody td { border-top: 0; }
+.nz-table--bordered { border: 1px solid var(--nz-border); }
+.nz-table--bordered thead th, .nz-table--bordered tbody td { border: 1px solid var(--nz-border); }
+.nz-table--compact thead th, .nz-table--compact tbody td { padding: var(--nz-space-2) var(--nz-space-3); }
+.nz-table--comfortable thead th, .nz-table--comfortable tbody td { padding: var(--nz-space-4) var(--nz-space-5); }
+.nz-table--sm { font-size: var(--nz-text-xs); min-width: 26rem; }
+.nz-table--sm thead th, .nz-table--sm tbody td { padding: var(--nz-space-2) var(--nz-space-3); }
+.nz-table--sticky-head thead th { position: sticky; top: 0; z-index: var(--nz-z-raised); box-shadow: inset 0 -1px 0 var(--nz-border); }
+.nz-table--hover tbody tr:hover { background: var(--nz-brand-soft); }
 .nz-table th[scope="row"] { color: var(--nz-text); font-weight: 700; }
 .nz-table__num { font-variant-numeric: tabular-nums; }
 .nz-table__right { text-align: right; }
 .nz-table__strong { color: var(--nz-text); font-weight: 700; }
 .nz-table__muted { color: var(--nz-text-faint); }
-.nz-table__row--selected { background: var(--nz-brand-soft) !important; }
+.nz-table__row--selected { cursor: default; }
+.nz-table tbody tr.nz-table__row--selected { background: var(--nz-brand-soft); }
 .nz-table__row--clickable { cursor: pointer; }
+.nz-table__caption { caption-side: top; padding: var(--nz-space-3) var(--nz-space-4); font-size: var(--nz-text-xs); font-weight: 700; color: var(--nz-text-mute); text-align: left; }
+.nz-table__sort { display: inline-flex; align-items: center; gap: var(--nz-space-1); color: var(--nz-brand); cursor: pointer; }
+.nz-table__sort::after { content: "▾"; font-size: var(--nz-text-2xs); }
+.nz-table__cell--num { text-align: right; font-variant-numeric: tabular-nums; }
+.nz-table__cell--actions { width: 1%; white-space: nowrap; text-align: right; }
+.nz-table__cell--checkbox { width: 44px; text-align: center; }
+.nz-table__cell--wide { min-width: 14rem; }
+.nz-table__toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--nz-space-2); padding: var(--nz-space-3) var(--nz-space-4); border-bottom: 1px solid var(--nz-border-soft); background: var(--nz-surface); }
+.nz-table__toolbar-spacer { flex: 1; }
+.nz-table__filters { display: flex; flex-wrap: wrap; gap: var(--nz-space-2); padding: var(--nz-space-2) var(--nz-space-4); background: var(--nz-bg-soft); border-bottom: 1px solid var(--nz-border-soft); }
+.nz-table__empty { padding: var(--nz-space-8) var(--nz-space-4); text-align: center; font-size: var(--nz-text-sm); color: var(--nz-text-mute); }
+.nz-table__foot { display: flex; justify-content: space-between; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); font-size: var(--nz-text-xs); color: var(--nz-text-mute); border-top: 1px solid var(--nz-border-soft); }
 
 /* ---- Celda de status en tabla ---- */
 .nz-table__status { display: inline-flex; align-items: center; gap: var(--nz-space-1); font-weight: 700; }
@@ -41,19 +65,45 @@
 .nz-kpi__delta--up { color: var(--nz-success); }
 .nz-kpi__delta--down { color: var(--nz-danger); }
 .nz-kpi__delta--flat { color: var(--nz-text-mute); }
-.nz-kpi--accent { background: var(--nz-brand); color: var(--nz-text-invert); }
-.nz-kpi--accent .nz-kpi__label, .nz-kpi--accent .nz-kpi__value { color: var(--nz-text-invert); }
+.nz-kpi--brand { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-kpi--brand .nz-kpi__label, .nz-kpi--brand .nz-kpi__value, .nz-kpi--accent .nz-kpi__label, .nz-kpi--accent .nz-kpi__value { color: var(--nz-text-invert); }
+.nz-kpi--accent { background: var(--nz-accent); color: var(--nz-text-invert); }
+.nz-kpi--accent .nz-kpi__delta, .nz-kpi--brand .nz-kpi__delta { color: var(--nz-text-invert); opacity: .9; }
+.nz-kpi--sm { padding: var(--nz-space-4); }
+.nz-kpi--sm .nz-kpi__value { font-size: var(--nz-text-xl); }
+.nz-kpi--lg { padding: var(--nz-space-6); }
+.nz-kpi--lg .nz-kpi__value { font-size: var(--nz-text-3xl); }
+.nz-kpi--bordered { box-shadow: none; border: var(--nz-border-w) solid var(--nz-border); }
+.nz-kpi--inline { grid-auto-flow: column; align-items: baseline; justify-content: start; gap: var(--nz-space-3); }
+.nz-kpi__icon { width: 40px; height: 40px; display: inline-grid; place-items: center; border-radius: var(--nz-radius-md); background: var(--nz-brand-soft); color: var(--nz-brand); font-size: var(--nz-text-lg); }
+.nz-kpi__target { position: relative; height: 6px; margin-top: var(--nz-space-2); border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); overflow: hidden; }
+.nz-kpi__target i { display: block; height: 100%; border-radius: inherit; background: var(--nz-brand); }
 .nz-kpi__spark { margin-top: var(--nz-space-2); }
 
 /* ---- Minigráfico (bars CSS) ---- */
 .nz-spark { display: flex; align-items: flex-end; gap: 2px; height: 2.5rem; }
-.nz-spark i { flex: 1; border-radius: var(--nz-radius-xs) var(--nz-radius-xs) 0 0; background: var(--nz-brand-soft); }
-.nz-spark i:nth-child(odd) { background: var(--nz-brand-tint); }
-.nz-spark i:last-child { background: var(--nz-brand); }
+.nz-spark .nz-spark__bar { flex: 1; border-radius: var(--nz-radius-xs) var(--nz-radius-xs) 0 0; background: var(--nz-brand-soft); }
+.nz-spark .nz-spark__bar:last-child { background: var(--nz-brand); }
+.nz-spark .nz-spark__bar.nz-spark__bar--active { background: var(--nz-brand-strong); }
+.nz-spark--brand .nz-spark__bar { background: var(--nz-brand-tint); }
+.nz-spark--accent .nz-spark__bar { background: var(--nz-accent-soft); }
+.nz-spark--accent .nz-spark__bar:last-child { background: var(--nz-accent); }
+.nz-spark--lg { height: 4rem; }
+
+/* ---- Fila de lista (avatar + texto + acciones) ---- */
+.nz-list-row { display: flex; align-items: center; gap: var(--nz-space-3); min-height: 56px; padding: var(--nz-space-3) var(--nz-space-4); border-radius: var(--nz-radius-md); background: var(--nz-surface); box-shadow: var(--nz-shadow-xs); }
+.nz-list-row + .nz-list-row { margin-top: var(--nz-space-2); }
+.nz-list-row--brand { border-left: 3px solid var(--nz-brand); }
+.nz-list-row__body { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.nz-list-row__title { font-size: var(--nz-text-sm); font-weight: 700; color: var(--nz-text); }
+.nz-list-row__meta { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-list-row__actions { margin-left: auto; display: inline-flex; align-items: center; gap: var(--nz-space-1); }
 
 /* ---- Lista de registros (vertical, más rica que la de layout) ---- */
 .nz-records { display: grid; gap: var(--nz-space-2); }
 .nz-record { display: flex; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); border-radius: var(--nz-radius-md); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-record--brand { border-left: 3px solid var(--nz-brand); }
+.nz-record--danger { border-left: 3px solid var(--nz-danger); }
 .nz-record__body { flex: 1; min-width: 0; display: grid; gap: 2px; }
 .nz-record__title { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .nz-record__meta { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
@@ -61,19 +111,32 @@
 .nz-record__meta--brand { color: var(--nz-brand); }
 .nz-record__value { font-size: var(--nz-text-sm); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--nz-text); }
 .nz-record__value--brand { color: var(--nz-brand); }
+.nz-record__tag { font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; color: var(--nz-text-mute); }
 .nz-record__thumb { width: 44px; height: 44px; flex: none; border-radius: var(--nz-radius-sm); overflow: hidden; background: var(--nz-bg-inset); }
+.nz-record__avatar { width: 40px; height: 40px; flex: none; display: inline-grid; place-items: center; border-radius: 50%; background: var(--nz-brand-soft); color: var(--nz-brand); font-weight: 800; font-size: var(--nz-text-sm); }
+.nz-record__actions { margin-left: auto; display: inline-flex; align-items: center; gap: var(--nz-space-1); }
 
 /* ---- Timeline ---- */
 .nz-timeline { position: relative; display: flex; flex-direction: column; gap: var(--nz-space-4); padding-left: var(--nz-space-5); }
 .nz-timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--nz-border); border-radius: var(--nz-radius-full); }
 .nz-timeline__item { position: relative; }
 .nz-timeline__dot { position: absolute; left: calc(-1 * var(--nz-space-5) - 1px); top: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--nz-brand); border: 3px solid var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-timeline__dot--brand { box-shadow: 0 0 0 4px var(--nz-brand-soft); }
 .nz-timeline__dot--accent { background: var(--nz-accent); }
 .nz-timeline__dot--success { background: var(--nz-success); }
+.nz-timeline__dot--error { background: var(--nz-danger); }
 .nz-timeline__dot--muted { background: var(--nz-text-faint); }
 .nz-timeline__time { font-size: var(--nz-text-2xs); font-weight: 700; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; color: var(--nz-text-faint); }
 .nz-timeline__title { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); }
 .nz-timeline__desc { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-timeline__card { margin-top: var(--nz-space-2); padding: var(--nz-space-3); border-radius: var(--nz-radius-md); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); font-size: var(--nz-text-xs); color: var(--nz-text-soft); }
+.nz-timeline--brand::before { background: var(--nz-brand-soft); }
+.nz-timeline--compact { gap: var(--nz-space-3); padding-left: var(--nz-space-4); }
+.nz-timeline--compact .nz-timeline__dot { left: calc(-1 * var(--nz-space-4) - 1px); width: 12px; height: 12px; border-width: 2px; }
+.nz-timeline--horizontal { flex-direction: row; align-items: flex-start; gap: var(--nz-space-4); padding: var(--nz-space-5) 0 0; overflow-x: auto; }
+.nz-timeline--horizontal::before { left: 0; right: 0; top: 7px; bottom: auto; width: auto; height: 2px; }
+.nz-timeline--horizontal .nz-timeline__item { flex: 1 0 8rem; }
+.nz-timeline--horizontal .nz-timeline__dot { left: 0; top: calc(-1 * var(--nz-space-5) - 1px); }
 
 /* ---- Resumen / definition list ---- */
 .nz-dl { display: grid; gap: var(--nz-space-3); }
@@ -84,6 +147,14 @@
 .nz-dl--2col { grid-template-columns: 1fr 1fr; gap: var(--nz-space-4); }
 .nz-dl--2col .nz-dl__row { flex-direction: column; gap: var(--nz-space-1); border-bottom: 0; }
 .nz-dl--2col .nz-dl__dd { text-align: left; }
+.nz-dl--3col { grid-template-columns: 1fr 1fr; gap: var(--nz-space-3); }
+.nz-dl--3col .nz-dl__row { flex-direction: column; gap: var(--nz-space-1); padding: 0; border-bottom: 0; }
+.nz-dl--3col .nz-dl__dd { text-align: left; }
+@media (min-width: 640px) { .nz-dl--3col { grid-template-columns: repeat(3, 1fr); } }
+.nz-dl--inline { display: flex; flex-wrap: wrap; gap: var(--nz-space-2) var(--nz-space-5); }
+.nz-dl--inline .nz-dl__row { flex: none; padding: 0; gap: var(--nz-space-2); border-bottom: 0; }
+.nz-dl--striped .nz-dl__row { padding-inline: var(--nz-space-3); border-radius: var(--nz-radius-sm); border-bottom: 0; }
+.nz-dl--striped .nz-dl__row:nth-child(odd) { background: var(--nz-bg-soft); }
 
 /* ---- Badges de datos (números) ---- */
 .nz-stat-badge { display: inline-flex; align-items: baseline; gap: var(--nz-space-1); font-variant-numeric: tabular-nums; }
@@ -92,6 +163,19 @@
 
 /* ---- Grid de tarjetas de datos ---- */
 .nz-datagrid { display: grid; gap: var(--nz-space-3); grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); }
+.nz-datagrid--dense { gap: var(--nz-space-2); grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); }
+.nz-datagrid--zebra { gap: var(--nz-space-2); }
+.nz-datagrid__cell--edit { border: 1px dashed var(--nz-border-strong); border-radius: var(--nz-radius-md); padding: var(--nz-space-3); background: var(--nz-surface); }
+
+/* ---- Número medidor (gauge numérico) ---- */
+.nz-gauge-num { display: grid; gap: var(--nz-space-1); }
+.nz-gauge-num__value { font-size: var(--nz-text-4xl); font-weight: 800; letter-spacing: var(--nz-tracking-tight); line-height: var(--nz-leading-tight); font-variant-numeric: tabular-nums; color: var(--nz-text); }
+.nz-gauge-num__unit { margin-left: var(--nz-space-1); font-size: var(--nz-text-lg); font-weight: 700; color: var(--nz-text-mute); }
+.nz-gauge-num__delta { display: inline-flex; align-items: center; gap: var(--nz-space-1); font-size: var(--nz-text-sm); font-weight: 700; color: var(--nz-text-mute); }
+.nz-gauge-num__delta--up { color: var(--nz-success); }
+.nz-gauge-num__delta--down { color: var(--nz-danger); }
+.nz-gauge-num__label { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-gauge-num--brand .nz-gauge-num__value { color: var(--nz-brand); }
 
 /* ---- Etiqueta con icono de estado (inline) ---- */
 .nz-inlinestat { display: inline-flex; align-items: center; gap: var(--nz-space-2); font-size: var(--nz-text-sm); font-weight: 600; }
@@ -99,3 +183,38 @@
 .nz-inlinestat--ok i { background: var(--nz-success); }
 .nz-inlinestat--warn i { background: var(--nz-warning); }
 .nz-inlinestat--err i { background: var(--nz-danger); }
+.nz-inlinestat--brand { color: var(--nz-brand); }
+.nz-inlinestat--brand i { background: var(--nz-brand); }
+.nz-inlinestat--muted { color: var(--nz-text-mute); }
+.nz-inlinestat--muted i { background: var(--nz-text-faint); }
+
+/* ---- Árbol jerárquico (details/summary, sin JS) ---- */
+.nz-arbol { display: grid; gap: var(--nz-space-1); font-size: var(--nz-text-sm); }
+.nz-arbol__node { display: block; }
+.nz-arbol summary.nz-arbol__toggle { list-style: none; }
+.nz-arbol__toggle { display: flex; align-items: center; gap: var(--nz-space-2); min-height: 44px; padding: 0 var(--nz-space-3); border-radius: var(--nz-radius-sm); cursor: pointer; color: var(--nz-text-soft); font-weight: 600; }
+.nz-arbol__toggle::before { content: "▸"; color: var(--nz-text-faint); font-size: var(--nz-text-xs); }
+.nz-arbol__node[open] > .nz-arbol__toggle { color: var(--nz-text); }
+.nz-arbol__node[open] > .nz-arbol__toggle::before { content: "▾"; color: var(--nz-brand); }
+.nz-arbol__group { margin-left: var(--nz-space-5); padding-left: var(--nz-space-2); border-left: 1px solid var(--nz-border-soft); display: grid; gap: var(--nz-space-1); }
+.nz-arbol__leaf { display: flex; align-items: center; gap: var(--nz-space-2); min-height: 44px; margin-left: var(--nz-space-5); padding: 0 var(--nz-space-3); border-radius: var(--nz-radius-sm); color: var(--nz-text-soft); font-size: var(--nz-text-sm); text-decoration: none; }
+.nz-arbol__leaf:hover { background: var(--nz-bg-soft); color: var(--nz-text); }
+
+/* ---- Matriz de calor ---- */
+.nz-matrix { display: grid; grid-auto-flow: column; grid-template-rows: repeat(4, 1fr); gap: 3px; }
+.nz-matrix__cell { min-height: 28px; border-radius: var(--nz-radius-xs); background: var(--nz-bg-inset); }
+.nz-matrix__cell--low { background: var(--nz-brand-soft); }
+.nz-matrix__cell--mid { background: var(--nz-brand-tint); }
+.nz-matrix__cell--high { background: var(--nz-brand); }
+.nz-matrix__cell--top { background: var(--nz-brand-strong); }
+.nz-matrix__label { font-size: var(--nz-text-2xs); color: var(--nz-text-faint); font-variant-numeric: tabular-nums; }
+
+/* ---- Tabla de comparación con columna destacada ---- */
+.nz-compare { width: 100%; border-collapse: collapse; font-size: var(--nz-text-sm); background: var(--nz-surface); }
+.nz-compare th, .nz-compare td { padding: var(--nz-space-3) var(--nz-space-4); text-align: left; border-top: 1px solid var(--nz-border-soft); }
+.nz-compare__head { color: var(--nz-text-mute); font-size: var(--nz-text-xs); font-weight: 800; text-transform: uppercase; letter-spacing: var(--nz-tracking-caps); }
+.nz-compare__feature { color: var(--nz-text); font-weight: 700; }
+.nz-compare__col--featured { background: var(--nz-brand-soft); }
+.nz-compare__check { color: var(--nz-success); font-weight: 800; }
+.nz-compare__no { color: var(--nz-text-faint); }
+.nz-compare__foot { font-size: var(--nz-text-xs); color: var(--nz-text-mute); padding: var(--nz-space-3) var(--nz-space-4); }

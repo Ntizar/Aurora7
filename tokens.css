@@ -85,12 +85,16 @@
   --nz-accent-tint: var(--nz-orange-100);
   --nz-success:     var(--nz-green-600);
   --nz-success-soft: var(--nz-green-50);
+  --nz-success-tint: var(--nz-green-100);
   --nz-danger:      var(--nz-red-600);
   --nz-danger-soft: var(--nz-red-50);
+  --nz-danger-tint: var(--nz-red-100);
   --nz-warning:     var(--nz-amber-600);
   --nz-warning-soft: var(--nz-amber-50);
+  --nz-warning-tint: var(--nz-amber-100);
   --nz-info:        var(--nz-blue-600);
   --nz-info-soft:   var(--nz-blue-50);
+  --nz-info-tint:   var(--nz-blue-100);
   --nz-overlay:     rgba(17, 24, 39, 0.48);
 
   /* ---- 6. TIPOGRAFÍA ---- */
@@ -121,7 +125,9 @@
   --nz-space-4: 1rem;      /* 16 */
   --nz-space-5: 1.25rem;   /* 20 */
   --nz-space-6: 1.5rem;    /* 24 */
+  --nz-space-7: 1.75rem;   /* 28 */
   --nz-space-8: 2rem;      /* 32 */
+  --nz-space-9: 2.25rem;   /* 36 */
   --nz-space-10: 2.5rem;   /* 40 */
   --nz-space-12: 3rem;     /* 48 */
   --nz-space-16: 4rem;     /* 64 */
@@ -130,13 +136,15 @@
   --nz-container-max: 72rem;                         /* 1152px */
   --nz-container-narrow: 44rem;                      /* 704px, prose */
 
-  /* ---- 8. RADIOS ---- */
+  /* ---- 8. RADIOS Y BORDES ---- */
   --nz-radius-xs: 4px;
   --nz-radius-sm: 6px;
   --nz-radius-md: 10px;
   --nz-radius-lg: 14px;
   --nz-radius-xl: 20px;
   --nz-radius-full: 999px;
+  --nz-border-w: 1px;
+  --nz-border-w-strong: 1.5px;
 
   /* ---- 9. SOMBRAS (multicapa sutiles, sin bordes duros) ---- */
   --nz-shadow-xs: 0 1px 2px rgba(17, 24, 39, 0.05);
@@ -196,12 +204,16 @@
   --nz-accent-tint: rgba(251, 146, 60, 0.22);
   --nz-success:     #4ade80;
   --nz-success-soft: rgba(34, 197, 94, 0.14);
+  --nz-success-tint: rgba(34, 197, 94, 0.24);
   --nz-danger:      #f87171;
   --nz-danger-soft: rgba(239, 68, 68, 0.14);
+  --nz-danger-tint: rgba(239, 68, 68, 0.24);
   --nz-warning:     #fbbf24;
   --nz-warning-soft: rgba(245, 158, 11, 0.14);
+  --nz-warning-tint: rgba(245, 158, 11, 0.24);
   --nz-info:        #4f8ef7;
   --nz-info-soft:   rgba(79, 142, 247, 0.12);
+  --nz-info-tint:   rgba(79, 142, 247, 0.22);
   --nz-overlay:     rgba(3, 7, 18, 0.62);
   --nz-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.35);
   --nz-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.30);

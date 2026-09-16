@@ -1,103 +1,259 @@
 /* ============================================================
-   AURORA 7 — p5-forms.css · Categoría 05 · Formularios e inputs (75 objetos)
-   Inputs, textarea, select, checkbox, radio, switch, range, file,
-   field/etiquetas, grupos, validación, OTP, búsqueda.
-   Táctil 44px, focus-ring accesible, estados claros.
+   AURORA 7 — p5-forms.css · Categoría 05 · Formularios e inputs (97 objetos)
+   Etiquetas, campos, inputs, select, textarea, check/radio/switch, range,
+   grupos, búsqueda, contraseña, OTP, cantidad, ficheros, rejilla,
+   fieldset, validación y alto contraste.
+   Táctil 44px en móvil, focus-ring accesible, estados claros.
    ============================================================ */
 
-/* ---- Field (contenedor etiqueta + input + ayuda) ---- */
+/* ---- Etiqueta suelta ---- */
+.nz-label { display: inline-flex; align-items: center; gap: var(--nz-space-1); font-size: var(--nz-text-sm); font-weight: 700; color: var(--nz-text); }
+.nz-label--req::after { content: " *"; color: var(--nz-danger); }
+
+/* ---- Field (contenedor etiqueta + control + ayuda) ---- */
 .nz-field { display: flex; flex-direction: column; gap: var(--nz-space-1); }
 .nz-field__label { font-size: var(--nz-text-sm); font-weight: 700; color: var(--nz-text); }
 .nz-field__label--req::after { content: " *"; color: var(--nz-danger); }
+.nz-field__label--optional::after { content: " (opcional)"; color: var(--nz-text-faint); font-weight: 600; }
 .nz-field__help { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
 .nz-field__error { font-size: var(--nz-text-xs); color: var(--nz-danger); font-weight: 600; }
 .nz-field__hint { display: flex; justify-content: space-between; gap: var(--nz-space-2); font-size: var(--nz-text-xs); color: var(--nz-text-faint); }
+.nz-field__counter { font-variant-numeric: tabular-nums; color: var(--nz-text-faint); }
+.nz-field--compact { gap: var(--nz-space-0); }
+.nz-field--compact .nz-field__label { font-size: var(--nz-text-xs); font-weight: 600; }
+.nz-field--inline { flex-direction: row; align-items: center; flex-wrap: wrap; gap: var(--nz-space-2) var(--nz-space-3); }
+.nz-field--inline .nz-field__label { flex: none; }
+.nz-field--horizontal { gap: var(--nz-space-2); }
+@media (min-width: 640px) {
+  .nz-field--horizontal { flex-direction: row; align-items: flex-start; gap: var(--nz-space-4); }
+  .nz-field--horizontal .nz-field__label { flex: 0 0 9rem; padding-top: var(--nz-space-3); }
+  .nz-field--horizontal > .nz-input, .nz-field--horizontal > .nz-select, .nz-field--horizontal > .nz-textarea { flex: 1; min-width: 0; }
+}
 
 /* ---- Inputs base ---- */
-.nz-input, .nz-select, .nz-textarea { width: 100%; min-height: 44px; padding: 0 var(--nz-space-4); border: 1px solid var(--nz-border); border-radius: var(--nz-radius-sm); background: var(--nz-surface); color: var(--nz-text); font: inherit; font-size: var(--nz-text-base); transition: border-color var(--nz-dur-fast) var(--nz-ease-out), box-shadow var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-input, .nz-select, .nz-textarea { width: 100%; min-height: 44px; padding: 0 var(--nz-space-4); border: var(--nz-border-w) solid var(--nz-border); border-radius: var(--nz-radius-sm); background: var(--nz-surface); color: var(--nz-text); font: inherit; font-size: var(--nz-text-base); transition: border-color var(--nz-dur-fast) var(--nz-ease-out), box-shadow var(--nz-dur-fast) var(--nz-ease-out); }
 .nz-input::placeholder, .nz-textarea::placeholder { color: var(--nz-text-faint); }
 .nz-input:hover, .nz-select:hover, .nz-textarea:hover { border-color: var(--nz-border-strong); }
 .nz-input:focus, .nz-select:focus, .nz-textarea:focus { outline: none; border-color: var(--nz-brand); box-shadow: var(--nz-focus-ring); }
 .nz-input:disabled, .nz-select:disabled, .nz-textarea:disabled { background: var(--nz-bg-inset); color: var(--nz-text-mute); cursor: not-allowed; }
+.nz-input[readonly], .nz-textarea[readonly] { background: var(--nz-bg-soft); color: var(--nz-text-soft); }
 .nz-textarea { min-height: 7rem; padding-block: var(--nz-space-3); resize: vertical; line-height: var(--nz-leading-normal); }
+
+/* ---- Validación del control ---- */
 .nz-input--brand { border-color: var(--nz-brand); }
-.nz-input--error { border-color: var(--nz-danger); }
-.nz-input--error:focus { box-shadow: 0 0 0 3px var(--nz-red-100); }
-[data-nz-theme="dark"] .nz-input--error:focus { box-shadow: 0 0 0 3px var(--nz-danger-soft); }
+.nz-input--error, .nz-input[aria-invalid="true"] { border-color: var(--nz-danger); }
+.nz-input--error:focus, .nz-input[aria-invalid="true"]:focus { box-shadow: 0 0 0 3px var(--nz-red-100); }
+[data-nz-theme="dark"] .nz-input--error:focus, [data-nz-theme="dark"] .nz-input[aria-invalid="true"]:focus { box-shadow: 0 0 0 3px var(--nz-danger-soft); }
+.nz-input--success { border-color: var(--nz-success); }
+.nz-input--success:focus { box-shadow: 0 0 0 3px var(--nz-green-100); }
+.nz-input--warning { border-color: var(--nz-warning); }
+.nz-input--warning:focus { box-shadow: 0 0 0 3px var(--nz-amber-100); }
+.nz-input:disabled, .nz-select:disabled { opacity: .7; }
+
+/* ---- Tamaños y forma del control ---- */
+.nz-input--sm, .nz-select--sm, .nz-textarea--sm { padding-inline: var(--nz-space-3); font-size: var(--nz-text-sm); }
+.nz-input--lg, .nz-select--lg { min-height: 52px; padding-inline: var(--nz-space-5); font-size: var(--nz-text-md); }
+.nz-input--pill, .nz-select--pill, .nz-textarea--pill { border-radius: var(--nz-radius-full); }
+.nz-input--square { border-radius: var(--nz-radius-xs); }
+.nz-textarea--pill { padding-block: var(--nz-space-3); }
+@media (min-width: 640px) {
+  .nz-input--sm, .nz-select--sm { min-height: 36px; }
+}
+
+/* ---- Hueco para icono o para limpiar ---- */
+.nz-input--search { padding-left: var(--nz-space-9); }
+.nz-input--clear { padding-right: var(--nz-space-10); }
 
 /* ---- Select ---- */
 .nz-select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7280' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right var(--nz-space-3) center; padding-right: var(--nz-space-8); cursor: pointer; }
 .nz-select--group option { color: var(--nz-text); background: var(--nz-surface); }
+.nz-select--multiple { min-height: 7rem; padding: var(--nz-space-2) var(--nz-space-3); appearance: auto; background-image: none; }
+.nz-select--multiple option { padding: var(--nz-space-2); border-radius: var(--nz-radius-xs); }
+.nz-select--sm { padding-right: var(--nz-space-7); }
+.nz-select--lg { padding-right: var(--nz-space-9); }
+
+/* ---- Textarea ---- */
+.nz-textarea--sm { min-height: 4.5rem; }
+.nz-textarea--lg { min-height: 10rem; }
+.nz-textarea--auto { resize: none; overflow: hidden; }
+.nz-textarea__counter { display: block; margin-top: var(--nz-space-1); text-align: right; font-size: var(--nz-text-xs); font-variant-numeric: tabular-nums; color: var(--nz-text-faint); }
 
 /* ---- Checkbox (custom accesible) ---- */
-.nz-checkbox { display: inline-flex; align-items: center; gap: var(--nz-space-2); min-height: 44px; cursor: pointer; font-size: var(--nz-text-base); }
-.nz-checkbox input { position: absolute; opacity: 0; }
-.nz-checkbox__box { width: 22px; height: 22px; flex: none; display: inline-grid; place-items: center; border-radius: var(--nz-radius-xs); border: 1.5px solid var(--nz-border-strong); background: var(--nz-surface); transition: background var(--nz-dur-fast) var(--nz-ease-out), border-color var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-checkbox { display: inline-flex; align-items: center; gap: var(--nz-space-2); min-height: 44px; cursor: pointer; font-size: var(--nz-text-base); color: var(--nz-text); }
+.nz-checkbox input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.nz-checkbox__box { width: 22px; height: 22px; flex: none; display: inline-grid; place-items: center; border-radius: var(--nz-radius-xs); border: var(--nz-border-w-strong) solid var(--nz-border-strong); background: var(--nz-surface); transition: background var(--nz-dur-fast) var(--nz-ease-out), border-color var(--nz-dur-fast) var(--nz-ease-out); }
 .nz-checkbox__box::after { content: "✓"; color: var(--nz-text-invert); font-size: var(--nz-text-sm); font-weight: 800; opacity: 0; transform: scale(.5); transition: opacity var(--nz-dur-fast) var(--nz-ease-out), transform var(--nz-dur-fast) var(--nz-ease-out); }
 .nz-checkbox input:checked ~ .nz-checkbox__box { background: var(--nz-brand); border-color: var(--nz-brand); }
 .nz-checkbox input:checked ~ .nz-checkbox__box::after { opacity: 1; transform: scale(1); }
 .nz-checkbox input:focus-visible ~ .nz-checkbox__box { box-shadow: var(--nz-focus-ring); }
 .nz-checkbox input:disabled ~ .nz-checkbox__box { opacity: .45; }
+.nz-checkbox__box--indeterminate { background: var(--nz-brand); border-color: var(--nz-brand); }
+.nz-checkbox__box--indeterminate::after { content: "–"; color: var(--nz-text-invert); opacity: 1; transform: none; font-weight: 800; }
+.nz-checkbox--sm { font-size: var(--nz-text-sm); }
+.nz-checkbox--sm .nz-checkbox__box { width: 18px; height: 18px; }
+@media (min-width: 640px) {
+  .nz-checkbox--sm { min-height: 36px; }
+}
+.nz-checkbox--card { display: flex; align-items: flex-start; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); border: var(--nz-border-w) solid var(--nz-border); border-radius: var(--nz-radius-md); background: var(--nz-surface); transition: border-color var(--nz-dur-fast) var(--nz-ease-out), background var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-checkbox--card:hover { border-color: var(--nz-border-strong); }
+.nz-checkbox--card:has(input:checked) { border-color: var(--nz-brand); background: var(--nz-brand-soft); }
+.nz-checkbox--card .nz-checkbox__box { margin-top: 1px; }
 
 /* ---- Radio (custom) ---- */
-.nz-radio { display: inline-flex; align-items: center; gap: var(--nz-space-2); min-height: 44px; cursor: pointer; }
-.nz-radio input { position: absolute; opacity: 0; }
-.nz-radio__dot { width: 22px; height: 22px; flex: none; display: inline-grid; place-items: center; border-radius: 50%; border: 1.5px solid var(--nz-border-strong); background: var(--nz-surface); transition: border-color var(--nz-dur-fast) var(--nz-ease-out); }
-.nz-radio__dot::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--nz-brand); transform: scale(0); transition: transform var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-radio { display: inline-flex; align-items: center; gap: var(--nz-space-2); min-height: 44px; cursor: pointer; color: var(--nz-text); }
+.nz-radio input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.nz-radio__dot { width: 22px; height: 22px; flex: none; display: inline-grid; place-items: center; border-radius: var(--nz-radius-full); border: var(--nz-border-w-strong) solid var(--nz-border-strong); background: var(--nz-surface); transition: border-color var(--nz-dur-fast) var(--nz-ease-out), background var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-radio__dot::after { content: ""; width: 10px; height: 10px; border-radius: var(--nz-radius-full); background: var(--nz-brand); transform: scale(0); transition: transform var(--nz-dur-fast) var(--nz-ease-out); }
 .nz-radio input:checked ~ .nz-radio__dot { border-color: var(--nz-brand); }
 .nz-radio input:checked ~ .nz-radio__dot::after { transform: scale(1); }
 .nz-radio input:focus-visible ~ .nz-radio__dot { box-shadow: var(--nz-focus-ring); }
 .nz-radio input:disabled ~ .nz-radio__dot { opacity: .45; }
+.nz-radio__dot--lg { width: 28px; height: 28px; }
+.nz-radio__dot--lg::after { width: 14px; height: 14px; }
+.nz-radio--card { display: flex; align-items: flex-start; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); border: var(--nz-border-w) solid var(--nz-border); border-radius: var(--nz-radius-md); background: var(--nz-surface); transition: border-color var(--nz-dur-fast) var(--nz-ease-out), background var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-radio--card:hover { border-color: var(--nz-border-strong); }
+.nz-radio--card:has(input:checked) { border-color: var(--nz-brand); background: var(--nz-brand-soft); }
+.nz-radio--card .nz-radio__dot { margin-top: 1px; }
 
 /* ---- Switch (toggle) ---- */
 .nz-switch { position: relative; display: inline-flex; align-items: center; gap: var(--nz-space-2); min-height: 44px; cursor: pointer; }
-.nz-switch input { position: absolute; opacity: 0; }
+.nz-switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .nz-switch__track { position: relative; width: 48px; height: 28px; flex: none; border-radius: var(--nz-radius-full); background: var(--nz-border-strong); transition: background var(--nz-dur-base) var(--nz-ease-out); }
-.nz-switch__thumb { position: absolute; top: 50%; left: 3px; transform: translateY(-50%); width: 22px; height: 22px; border-radius: 50%; background: var(--nz-gray-0); box-shadow: var(--nz-shadow-sm); transition: transform var(--nz-dur-base) var(--nz-ease-out); }
+.nz-switch__thumb { position: absolute; top: 50%; left: 3px; transform: translateY(-50%); width: 22px; height: 22px; border-radius: var(--nz-radius-full); background: var(--nz-gray-0); box-shadow: var(--nz-shadow-sm); transition: transform var(--nz-dur-base) var(--nz-ease-out); }
 .nz-switch input:checked ~ .nz-switch__track { background: var(--nz-brand); }
 .nz-switch input:checked ~ .nz-switch__track .nz-switch__thumb { transform: translate(20px, -50%); }
 .nz-switch input:focus-visible ~ .nz-switch__track { box-shadow: var(--nz-focus-ring); }
 .nz-switch input:disabled ~ .nz-switch__track { opacity: .45; }
 .nz-switch__label { font-size: var(--nz-text-base); color: var(--nz-text); }
+.nz-switch__label--left { order: -1; }
+.nz-switch--brand input:checked ~ .nz-switch__track { background: var(--nz-brand-strong); }
+.nz-switch--accent input:checked ~ .nz-switch__track { background: var(--nz-accent); }
+.nz-switch--sm .nz-switch__track { width: 38px; height: 22px; }
+.nz-switch--sm .nz-switch__thumb { width: 16px; height: 16px; }
+.nz-switch--sm input:checked ~ .nz-switch__track .nz-switch__thumb { transform: translate(16px, -50%); }
+.nz-switch--lg .nz-switch__track { width: 58px; height: 34px; }
+.nz-switch--lg .nz-switch__thumb { width: 28px; height: 28px; }
+.nz-switch--lg input:checked ~ .nz-switch__track .nz-switch__thumb { transform: translate(24px, -50%); }
 
 /* ---- Range/slider ---- */
 .nz-range { -webkit-appearance: none; appearance: none; width: 100%; height: 44px; background: transparent; cursor: pointer; }
 .nz-range::-webkit-slider-runnable-track { height: 6px; border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); }
-.nz-range::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; margin-top: -8px; border-radius: 50%; background: var(--nz-brand); box-shadow: var(--nz-shadow-brand); border: 3px solid var(--nz-surface); }
+.nz-range::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; margin-top: -8px; border-radius: var(--nz-radius-full); background: var(--nz-brand); box-shadow: var(--nz-shadow-brand); border: 3px solid var(--nz-surface); }
 .nz-range::-moz-range-track { height: 6px; border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); }
-.nz-range::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: var(--nz-brand); box-shadow: var(--nz-shadow-brand); border: 3px solid var(--nz-surface); }
-.nz-range--accent::-webkit-slider-thumb { background: var(--nz-accent); }
+.nz-range::-moz-range-thumb { width: 16px; height: 16px; border-radius: var(--nz-radius-full); background: var(--nz-brand); box-shadow: var(--nz-shadow-brand); border: 3px solid var(--nz-surface); }
+.nz-range--brand::-webkit-slider-thumb { background: var(--nz-brand); }
+.nz-range--brand::-moz-range-thumb { background: var(--nz-brand); }
+.nz-range--accent::-webkit-slider-thumb { background: var(--nz-accent); box-shadow: var(--nz-shadow-accent); }
+.nz-range--accent::-moz-range-thumb { background: var(--nz-accent); box-shadow: var(--nz-shadow-accent); }
+.nz-range--sm { height: 32px; }
+.nz-range--sm::-webkit-slider-thumb { width: 18px; height: 18px; margin-top: -6px; }
+.nz-range__marks { display: flex; justify-content: space-between; font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
 
-/* ---- Grupo/segunda fila ---- */
-.nz-rowform { display: grid; gap: var(--nz-space-3); grid-template-columns: 1fr; }
-@media (min-width: 640px) { .nz-rowform--2 { grid-template-columns: 1fr 1fr; } .nz-rowform--3 { grid-template-columns: 1fr 1fr 1fr; } }
-.nz-inputgroup { display: flex; align-items: stretch; border: 1px solid var(--nz-border); border-radius: var(--nz-radius-sm); overflow: hidden; background: var(--nz-surface); transition: border-color var(--nz-dur-fast) var(--nz-ease-out), box-shadow var(--nz-dur-fast) var(--nz-ease-out); }
+/* ---- Grupo con addon ---- */
+.nz-inputgroup { display: flex; align-items: stretch; border: var(--nz-border-w) solid var(--nz-border); border-radius: var(--nz-radius-sm); overflow: hidden; background: var(--nz-surface); transition: border-color var(--nz-dur-fast) var(--nz-ease-out), box-shadow var(--nz-dur-fast) var(--nz-ease-out); }
 .nz-inputgroup:focus-within { border-color: var(--nz-brand); box-shadow: var(--nz-focus-ring); }
-.nz-inputgroup__addon { display: inline-flex; align-items: center; padding: 0 var(--nz-space-3); background: var(--nz-bg-soft); color: var(--nz-text-mute); font-size: var(--nz-text-sm); }
+.nz-inputgroup__addon { display: inline-flex; align-items: center; padding: 0 var(--nz-space-3); background: var(--nz-bg-soft); color: var(--nz-text-mute); font-size: var(--nz-text-sm); white-space: nowrap; }
 .nz-inputgroup .nz-input { border: 0; box-shadow: none; min-width: 0; }
 .nz-inputgroup .nz-input:focus { box-shadow: none; }
+.nz-inputgroup--pill { border-radius: var(--nz-radius-full); }
+.nz-inputgroup--pill .nz-inputgroup__addon:first-child { padding-left: var(--nz-space-4); }
+.nz-inputgroup--error { border-color: var(--nz-danger); }
+.nz-inputgroup--error:focus-within { border-color: var(--nz-danger); box-shadow: 0 0 0 3px var(--nz-red-100); }
+.nz-inputgroup__addon--brand { background: var(--nz-brand); color: var(--nz-text-invert); font-weight: 700; }
+.nz-inputgroup__addon--accent { background: var(--nz-accent); color: var(--nz-gray-0); font-weight: 700; }
 
 /* ---- Búsqueda ---- */
 .nz-search { position: relative; display: block; }
 .nz-search .nz-input { padding-left: var(--nz-space-9); }
 .nz-search__icon { position: absolute; left: var(--nz-space-3); top: 50%; transform: translateY(-50%); color: var(--nz-text-faint); font-size: var(--nz-text-md); pointer-events: none; }
-.nz-search__clear { position: absolute; right: var(--nz-space-2); top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border: 0; border-radius: 50%; background: transparent; color: var(--nz-text-faint); cursor: pointer; }
+.nz-search__clear { position: absolute; right: var(--nz-space-1); top: 50%; transform: translateY(-50%); display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; border-radius: var(--nz-radius-full); background: transparent; color: var(--nz-text-faint); font: inherit; cursor: pointer; }
 .nz-search__clear:hover { background: var(--nz-bg-inset); color: var(--nz-text); }
-
-/* ---- OTP ---- */
-.nz-otp { display: flex; gap: var(--nz-space-2); justify-content: center; }
-.nz-otp input { width: 3rem; min-height: 3.25rem; text-align: center; font-size: var(--nz-text-lg); font-weight: 700; font-variant-numeric: tabular-nums; border: 1px solid var(--nz-border); border-radius: var(--nz-radius-sm); background: var(--nz-surface); font-family: var(--nz-font); }
-.nz-otp input:focus { outline: none; border-color: var(--nz-brand); box-shadow: var(--nz-focus-ring); }
-.nz-otp input:not(:placeholder-shown) { border-color: var(--nz-brand); background: var(--nz-brand-soft); }
+.nz-search--sm .nz-input { padding-left: var(--nz-space-8); font-size: var(--nz-text-sm); }
+.nz-search--sm .nz-search__icon { font-size: var(--nz-text-sm); }
+.nz-search--sm .nz-search__clear { width: 32px; height: 32px; }
+.nz-search--full { display: flex; flex: 1; min-width: 0; }
+@media (min-width: 640px) {
+  .nz-search__clear { width: 32px; height: 32px; }
+}
 
 /* ---- Campo con icono ---- */
 .nz-input-icon { position: relative; display: block; }
 .nz-input-icon .nz-input { padding-left: var(--nz-space-9); }
-.nz-input-icon__icon { position: absolute; left: var(--nz-space-3); top: 50%; transform: translateY(-50%); color: var(--nz-text-mute); }
+.nz-input-icon__icon { position: absolute; left: var(--nz-space-3); top: 50%; transform: translateY(-50%); color: var(--nz-text-mute); pointer-events: none; }
 
-/* ---- Slider de cantidad ---- */
-.nz-qty { display: inline-flex; align-items: center; border: 1px solid var(--nz-border); border-radius: var(--nz-radius-full); overflow: hidden; }
+/* ---- Contraseña con ver/ocultar ---- */
+.nz-password { position: relative; display: block; }
+.nz-password .nz-input { padding-right: var(--nz-space-10); }
+.nz-password__toggle { position: absolute; right: var(--nz-space-1); top: 50%; transform: translateY(-50%); display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 0; border-radius: var(--nz-radius-full); background: transparent; color: var(--nz-text-mute); font: inherit; cursor: pointer; }
+.nz-password__toggle:hover { background: var(--nz-bg-inset); color: var(--nz-text); }
+@media (min-width: 640px) {
+  .nz-password__toggle { width: 34px; height: 34px; }
+}
+
+/* ---- OTP (código de un solo uso) ---- */
+.nz-otp { display: flex; gap: var(--nz-space-2); justify-content: center; }
+.nz-otp input { width: 3rem; min-height: 3.25rem; text-align: center; font-size: var(--nz-text-lg); font-weight: 700; font-variant-numeric: tabular-nums; border: var(--nz-border-w) solid var(--nz-border); border-radius: var(--nz-radius-sm); background: var(--nz-surface); color: var(--nz-text); font-family: var(--nz-font); }
+.nz-otp input:focus { outline: none; border-color: var(--nz-brand); box-shadow: var(--nz-focus-ring); }
+.nz-otp input:not(:placeholder-shown) { border-color: var(--nz-brand); background: var(--nz-brand-soft); }
+.nz-otp--sm input { width: 2.5rem; min-height: 2.75rem; font-size: var(--nz-text-md); }
+.nz-otp--lg input { width: 3.5rem; min-height: 3.75rem; font-size: var(--nz-text-xl); }
+.nz-otp--error input { border-color: var(--nz-danger); }
+.nz-otp--error input:not(:placeholder-shown) { border-color: var(--nz-danger); background: var(--nz-danger-soft); }
+
+/* ---- Selector de cantidad ---- */
+.nz-qty { display: inline-flex; align-items: center; border: var(--nz-border-w) solid var(--nz-border); border-radius: var(--nz-radius-full); overflow: hidden; background: var(--nz-surface); }
 .nz-qty button { width: 44px; height: 44px; border: 0; background: transparent; color: var(--nz-text); font-size: var(--nz-text-lg); cursor: pointer; font-family: inherit; }
 .nz-qty button:hover { background: var(--nz-bg-soft); }
-.nz-qty input { width: 2.5rem; min-height: 44px; text-align: center; border: 0; background: transparent; font: inherit; font-weight: 700; font-variant-numeric: tabular-nums; }
+.nz-qty input { width: 2.5rem; min-height: 44px; text-align: center; border: 0; background: transparent; font: inherit; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--nz-text); }
 .nz-qty input:focus { outline: none; }
+.nz-qty--sm button { font-size: var(--nz-text-md); }
+.nz-qty--lg button { width: 52px; height: 52px; font-size: var(--nz-text-xl); }
+.nz-qty--lg input { min-height: 52px; }
+.nz-qty--vertical { flex-direction: column; border-radius: var(--nz-radius-lg); }
+.nz-qty--vertical button { width: 100%; }
+@media (min-width: 640px) {
+  .nz-qty--sm button { width: 36px; height: 36px; }
+  .nz-qty--sm input { min-height: 36px; }
+}
+
+/* ---- Zona de arrastrar y soltar ficheros ---- */
+.nz-filezona { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--nz-space-2); min-height: 44px; padding: var(--nz-space-6) var(--nz-space-4); text-align: center; border: var(--nz-border-w-strong) dashed var(--nz-border-strong); border-radius: var(--nz-radius-md); background: var(--nz-bg-soft); color: var(--nz-text-soft); cursor: pointer; transition: border-color var(--nz-dur-fast) var(--nz-ease-out), background var(--nz-dur-fast) var(--nz-ease-out), color var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-filezona:hover { border-color: var(--nz-brand); color: var(--nz-text); }
+.nz-filezona.is-active { border-color: var(--nz-brand); background: var(--nz-brand-soft); color: var(--nz-text); }
+.nz-filezona__icono { font-size: var(--nz-text-2xl); line-height: 1; color: var(--nz-brand); }
+.nz-filezona__texto { font-size: var(--nz-text-sm); }
+.nz-filezona__input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+
+/* ---- Rejilla de formulario ---- */
+.nz-formgrid { display: grid; gap: var(--nz-space-3); grid-template-columns: 1fr; }
+.nz-formgrid--wide { gap: var(--nz-space-5); }
+@media (min-width: 640px) {
+  .nz-formgrid--2, .nz-formgrid--3 { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 960px) {
+  .nz-formgrid--3 { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+/* ---- Fieldset (agrupación con leyenda) ---- */
+.nz-fieldset { display: flex; flex-direction: column; gap: var(--nz-space-3); margin: 0; padding: var(--nz-space-4); border: var(--nz-border-w) solid var(--nz-border); border-radius: var(--nz-radius-md); background: var(--nz-surface); }
+.nz-fieldset__leyenda { padding-inline: var(--nz-space-2); font-size: var(--nz-text-sm); font-weight: 700; color: var(--nz-text); }
+
+/* ---- Pista de validación bajo el control ---- */
+.nz-hint-error { display: flex; align-items: center; gap: var(--nz-space-1); font-size: var(--nz-text-xs); font-weight: 600; color: var(--nz-danger); }
+.nz-hint-error::before { content: "⚠"; }
+.nz-hint-error--ok { color: var(--nz-success); }
+.nz-hint-error--ok::before { content: "✓"; }
+
+/* ---- Rejilla de campos en fila ---- */
+.nz-rowform { display: grid; gap: var(--nz-space-3); grid-template-columns: 1fr; }
+@media (min-width: 640px) { .nz-rowform--2 { grid-template-columns: 1fr 1fr; } .nz-rowform--3 { grid-template-columns: 1fr 1fr 1fr; } }
+
+/* ---- Zona táctil mínima ----
+   El mínimo táctil de 44px lo garantiza la utilidad nz-tap-44, declarada
+   en p12-system.css (una clase, un dueño). Aquí los controles ya nacen a
+   44px en móvil y solo --sm los aprieta a partir de 640px. */
+
+/* ---- Alto contraste (forced-colors) ---- */
+@media (forced-colors: active) {
+  .nz-input, .nz-select, .nz-textarea, .nz-checkbox__box, .nz-radio__dot, .nz-switch__track { border: var(--nz-border-w) solid CanvasText; }
+}

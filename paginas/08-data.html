@@ -3,150 +3,307 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Aurora 7 · 08 Datos, tablas y listas</title>
+<title>Aurora 7 · 08 Datos, tablas y listas · 139 objetos</title>
+<meta name="description" content="Tablas (densidad, sticky, bordes, toolbar y filtros), KPIs, listas y filas de registro, timeline, definition lists, árbol, matriz de calor, comparativa y números medidores.">
 <link rel="stylesheet" href="../tokens.css">
-<link rel="stylesheet" href="../packs/p8-data.css">
 <link rel="stylesheet" href="../packs/p0-catalog.css">
+<link rel="stylesheet" href="../packs/p1-layout.css">
+<link rel="stylesheet" href="../packs/p4-actions.css">
+<link rel="stylesheet" href="../packs/p6-feedback.css">
+<link rel="stylesheet" href="../packs/p8-data.css">
+<link rel="stylesheet" href="../packs/p12-system.css">
 </head>
-<body class="nz nz-root">
-  <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
-  <header class="cat-topbar">
-    <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
-    <span class="cat-count">08 · 58 objetos</span>
-    <button class="theme-toggle" id="btnTheme" aria-label="Cambiar tema">◐</button>
-  </header>
-  <nav class="cat-nav-pages" aria-label="Categorías del catálogo">
-    <a href="01-layout.html">01 Layout</a>
-    <a href="02-navigation.html">02 Navegación</a>
-    <a href="03-typography.html">03 Tipografía</a>
-    <a href="04-actions.html">04 Acciones</a>
-    <a href="05-forms.html">05 Formularios</a>
-    <a href="06-feedback.html">06 Feedback</a>
-    <a href="07-overlays.html">07 Overlays</a>
-    <a href="08-data.html" aria-current="page">08 Datos</a>
-    <a href="09-media.html">09 Media</a>
-    <a href="10-commerce.html">10 Comercio</a>
-    <a href="11-social.html">11 Social</a>
-    <a href="12-system.html">12 Sistema</a>
-  </nav>
-  <main class="nz-container cat-main" id="contenido">
-    <div class="cat-pagehead">
-      <p class="cat-pagehead__over">Categoría 08 · 58 objetos</p>
-      <h1>Datos, tablas y listas</h1>
-      <p>Tablas, KPIs, registros, timeline, definition lists y estados de datos en vivo.</p>
+<body class="nz">
+<a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
+<header class="cat-topbar">
+<a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
+<span class="cat-count">08 · 139 objetos · 36 demos</span>
+<span class="cat-topbar__tools">
+<a class="cat-icobtn" href="../index.html" title="Portada" aria-label="Volver a la portada">⌂</a>
+<button class="cat-icobtn" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
+</span>
+</header>
+<nav class="cat-nav-pages" aria-label="Categorías del catálogo">
+  <a href="01-layout.html">01 Layout y estructura</a>
+  <a href="02-navigation.html">02 Navegación</a>
+  <a href="03-typography.html">03 Tipografía</a>
+  <a href="04-actions.html">04 Acciones y botones</a>
+  <a href="05-forms.html">05 Formularios e inputs</a>
+  <a href="06-feedback.html">06 Feedback y estados</a>
+  <a href="07-overlays.html">07 Overlays y diálogo</a>
+  <a href="08-data.html" aria-current="page">08 Datos, tablas y listas</a>
+  <a href="09-media.html">09 Media e iconografía</a>
+  <a href="10-commerce.html">10 Comercio y producto</a>
+  <a href="11-social.html">11 Social y marketing</a>
+  <a href="12-system.html">12 Accesibilidad y sistema</a>
+  <a href="13-charts.html">13 Gráficos y visualización</a>
+  <a href="14-ai.html">14 IA y agentes</a>
+  <a href="15-apps.html">15 Apps y escritorio</a>
+</nav>
+<main class="nz-container cat-main" id="contenido">
+  <div class="cat-pagehead">
+    <p class="cat-pagehead__over">Categoría 08 de 15 · 139 objetos · 36 demos</p>
+    <h1>Datos, tablas y listas</h1>
+    <p>Tablas (densidad, sticky, bordes, toolbar y filtros), KPIs, listas y filas de registro, timeline, definition lists, árbol, matriz de calor, comparativa y números medidores.</p>
+    <div class="cat-pagehead__stats">
+      <span class="nz-badge nz-badge--brand"><i></i>139 objetos</span>
+      <span class="nz-badge nz-badge--neutral">16 familias</span>
+      <span class="nz-badge nz-badge--accent">36 demos en vivo</span>
+      <span class="nz-badge nz-badge--neutral">21 clases distintas usadas</span>
+      <a class="nz-badge nz-badge--brand" href="../packs/p8-data.css">p8-data.css</a>
     </div>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Tabla</span><span class="cat-demo__tag">.nz-table</span></div>
-      <div class="cat-stage">
-        <div class="nz-table-wrap"><table class="nz-table"><thead><tr><th>Item</th><th class="nz-table__right">Cantidad</th><th>Estado</th></tr></thead><tbody><tr><td class="nz-table__strong">Agua</td><td class="nz-table__num nz-table__right">12</td><td><span class="nz-table__status nz-table__status--ok"><i></i>OK</span></td></tr><tr><td>Comida</td><td class="nz-table__num nz-table__right">8</td><td><span class="nz-table__status nz-table__status--warn"><i></i>Bajo</span></td></tr></tbody></table></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">KPI</span><span class="cat-demo__tag">.nz-kpi</span></div>
-      <div class="cat-stage">
-        <div class="nz-kpi"><span class="nz-kpi__label">Ingresos</span><span class="nz-kpi__value nz-kpi__value--brand">3 420 €</span><span class="nz-kpi__delta nz-kpi__delta--up">+12% vs ayer</span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">KPI destacado</span><span class="cat-demo__tag">.nz-kpi--accent</span></div>
-      <div class="cat-stage">
-        <div class="nz-kpi nz-kpi--accent"><span class="nz-kpi__label">Cobertura</span><span class="nz-kpi__value">78%</span><span class="nz-kpi__delta">−3%</span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Sparkline</span><span class="cat-demo__tag">.nz-spark</span></div>
-      <div class="cat-stage">
-        <div class="nz-spark" style="max-width:16rem"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Registro</span><span class="cat-demo__tag">.nz-record</span></div>
-      <div class="cat-stage">
-        <div class="nz-records"><div class="nz-record"><span class="nz-record__thumb"></span><div class="nz-record__body"><span class="nz-record__title">Kit familiar</span><span class="nz-record__meta">18 items · revisado</span></div><span class="nz-record__value nz-record__value--brand">▲</span></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Timeline</span><span class="cat-demo__tag">.nz-timeline</span></div>
-      <div class="cat-stage">
-        <div class="nz-timeline"><div class="nz-timeline__item"><span class="nz-timeline__dot"></span><span class="nz-timeline__time">Hoy</span><span class="nz-timeline__title">Revisado</span><span class="nz-timeline__desc">Todo OK</span></div><div class="nz-timeline__item"><span class="nz-timeline__dot nz-timeline__dot--accent"></span><span class="nz-timeline__time">Ayer</span><span class="nz-timeline__title">Añadido</span></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Definition list</span><span class="cat-demo__tag">.nz-dl__row</span></div>
-      <div class="cat-stage">
-        <div class="nz-dl"><div class="nz-dl__row"><dt class="nz-dl__dt">Categoría</dt><dd class="nz-dl__dd">Supervivencia</dd></div><div class="nz-dl__row"><dt class="nz-dl__dt">Precio</dt><dd class="nz-dl__dd nz-dl__dd--brand">34 €</dd></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Status inline</span><span class="cat-demo__tag">.nz-inlinestat--ok</span></div>
-      <div class="cat-stage">
-        <span class="nz-inlinestat nz-inlinestat--ok"><i></i>Disponible</span>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Stat badge</span><span class="cat-demo__tag">.nz-stat-badge</span></div>
-      <div class="cat-stage">
-        <span class="nz-stat-badge"><b>4,9</b><span>/ 5</span></span>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">10</span><span class="cat-demo__name">Grid de datos</span><span class="cat-demo__tag">.nz-datagrid</span></div>
-      <div class="cat-stage">
-        <div class="nz-datagrid" style="max-width:22rem"><div class="nz-kpi"><span class="nz-kpi__label">A</span><span class="nz-kpi__value">12</span></div><div class="nz-kpi"><span class="nz-kpi__label">B</span><span class="nz-kpi__value">8</span></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">11</span><span class="cat-demo__name">Tabla striped/borderless</span><span class="cat-demo__tag">.nz-table--striped · --borderless</span></div>
-      <div class="cat-stage">
-        <div class="nz-table-wrap"><table class="nz-table nz-table--striped nz-table--borderless"><tbody><tr><td>Fila 1</td><td class="nz-table__num">10</td></tr><tr><td>Fila 2</td><td class="nz-table__num">20</td></tr><tr><td class="nz-table__muted">Fila atenuada</td><td class="nz-table__num">30</td></tr></tbody></table></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">12</span><span class="cat-demo__name">Fila seleccionable</span><span class="cat-demo__tag">.nz-table__row--selected · --clickable</span></div>
-      <div class="cat-stage">
-        <div class="nz-table-wrap"><table class="nz-table"><tbody><tr class="nz-table__row--clickable nz-table__row--selected"><td class="nz-table__strong">Seleccionada</td><td>✓</td></tr><tr class="nz-table__row--clickable"><td>Otra fila</td><td></td></tr></tbody></table></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">13</span><span class="cat-demo__name">Estados de status</span><span class="cat-demo__tag">.nz-table__status--err · --brand</span></div>
-      <div class="cat-stage">
-        <div style="display:flex;gap:1rem"><span class="nz-table__status nz-table__status--err"><i></i>Error</span><span class="nz-table__status nz-table__status--brand"><i></i>Nuevo</span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">14</span><span class="cat-demo__name">KPI con tendencia y sparkline</span><span class="cat-demo__tag">.nz-kpi__delta--down · --flat · .nz-kpi__spark</span></div>
-      <div class="cat-stage">
-        <div class="nz-kpi" style="max-width:13rem"><span class="nz-kpi__label">Visitas</span><span class="nz-kpi__value nz-kpi__value--accent">1 204</span><span class="nz-kpi__delta nz-kpi__delta--down">−4%</span><div class="nz-kpi__spark"><div class="nz-spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div> <div class="nz-kpi" style="max-width:13rem"><span class="nz-kpi__label">Estable</span><span class="nz-kpi__value">88</span><span class="nz-kpi__delta nz-kpi__delta--flat">0%</span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">15</span><span class="cat-demo__name">Timeline variantes</span><span class="cat-demo__tag">.nz-timeline__dot--success · --muted</span></div>
-      <div class="cat-stage">
-        <div class="nz-timeline"><div class="nz-timeline__item"><span class="nz-timeline__dot nz-timeline__dot--success"></span><span class="nz-timeline__title">Completado</span></div><div class="nz-timeline__item"><span class="nz-timeline__dot nz-timeline__dot--muted"></span><span class="nz-timeline__title">Pendiente</span></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">16</span><span class="cat-demo__name">DL en dos columnas</span><span class="cat-demo__tag">.nz-dl--2col</span></div>
-      <div class="cat-stage">
-        <div class="nz-dl nz-dl--2col" style="max-width:22rem"><div class="nz-dl__row"><dt class="nz-dl__dt">Alto</dt><dd class="nz-dl__dd">2 m</dd></div><div class="nz-dl__row"><dt class="nz-dl__dt">Ancho</dt><dd class="nz-dl__dd">80 cm</dd></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">17</span><span class="cat-demo__name">Estados inline y registro</span><span class="cat-demo__tag">.nz-inlinestat--warn/_err · .nz-record__meta--error</span></div>
-      <div class="cat-stage">
-        <div style="display:grid;gap:.5rem"><span class="nz-inlinestat nz-inlinestat--warn"><i></i>Aviso</span><span class="nz-inlinestat nz-inlinestat--err"><i></i>Crítico</span><div class="nz-record"><div class="nz-record__body"><span class="nz-record__title">Fallo de sync</span><span class="nz-record__meta nz-record__meta--error">Error de red</span></div></div><div class="nz-record"><div class="nz-record__body"><span class="nz-record__title">Sync correcto</span><span class="nz-record__meta nz-record__meta--brand">Brand</span></div></div></div>
-      </div>
-    </section>
-  </main>
-  <div class="cat-nav-pages nz-print-hide" style="justify-content:center;border-top:1px solid var(--nz-border-soft);flex-wrap:wrap">
-    <a href="07-overlays.html">← 07 Overlays</a>
-    <a href="09-media.html">09 Media →</a>
   </div>
-  <footer class="cat-footer">
-    Aurora 7 · Design System Ntizar · Categoría 8 de 12 · 565 objetos · Hecho con ❤️ por David Antizar
-  </footer>
-  <script>
-    document.getElementById('btnTheme').addEventListener('click', function(){var h=document.documentElement; h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme')==='dark'?'light':'dark');});
-  </script>
+  <div class="cat-tools">
+    <div class="cat-search">
+      <span class="cat-search__icon" aria-hidden="true">⌕</span>
+      <input class="cat-search__input" id="catBuscar" type="search" placeholder="Buscar en esta categoría… (pulsa /)" aria-label="Buscar objeto en esta categoría">
+      <span class="cat-search__count" id="catContador">36 objetos</span>
+    </div>
+    <div class="cat-filters" role="group" aria-label="Filtrar por familia de objeto"><button type="button" class="cat-filters__chip" data-filtro="todo" aria-pressed="true">Todo</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-arbol" aria-pressed="false">.arbol</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-badge" aria-pressed="false">.badge</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-btn" aria-pressed="false">.btn</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-chip" aria-pressed="false">.chip</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-cluster" aria-pressed="false">.cluster</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-compare" aria-pressed="false">.compare</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-datagrid" aria-pressed="false">.datagrid</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-dl" aria-pressed="false">.dl</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-gauge-num" aria-pressed="false">.gauge-num</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-inlinestat" aria-pressed="false">.inlinestat</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-kpi" aria-pressed="false">.kpi</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-list-row" aria-pressed="false">.list-row</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-matrix" aria-pressed="false">.matrix</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-record" aria-pressed="false">.record</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-records" aria-pressed="false">.records</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-spark" aria-pressed="false">.spark</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-stack" aria-pressed="false">.stack</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-stat-badge" aria-pressed="false">.stat-badge</button></div>
+  </div>
+  <section class="cat-demo cat-in" data-cat="nz-table nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Tabla</span><span class="cat-demo__tag">.nz-table · __right · __num · __strong · __status--ok · __status--warn</span></div>
+    <div class="cat-stage">
+      <div class="nz-table-wrap"><table class="nz-table"><thead><tr><th>Material</th><th class="nz-table__right">Cantidad</th><th>Estado</th></tr></thead> <tbody><tr><td class="nz-table__strong">Agua potable</td><td class="nz-table__num nz-table__right">12</td><td><span class="nz-table__status nz-table__status--ok"><i></i>OK</span></td></tr> <tr><td>Comida liofilizada</td><td class="nz-table__num nz-table__right">8</td><td><span class="nz-table__status nz-table__status--warn"><i></i>Bajo</span></td></tr></tbody></table></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-table nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Tabla rayada y sin bordes</span><span class="cat-demo__tag">.nz-table--striped · --borderless · __muted</span></div>
+    <div class="cat-stage">
+      <div class="nz-table-wrap"><table class="nz-table nz-table--striped nz-table--borderless"><tbody> <tr><td>Fila 1</td><td class="nz-table__num">10</td></tr><tr><td>Fila 2</td><td class="nz-table__num">20</td></tr> <tr><td class="nz-table__muted">Fila atenuada</td><td class="nz-table__num">30</td></tr><tr><td>Fila 4</td><td class="nz-table__num">40</td></tr></tbody></table></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-stack nz-table nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Tabla compacta y tabla confortable</span><span class="cat-demo__tag">.nz-table--compact · --comfortable</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--sm"><div class="nz-table-wrap"><table class="nz-table nz-table--compact"><thead><tr><th>Ruta</th><th>Salidas</th></tr></thead><tbody> <tr><td>C-01</td><td class="nz-table__num">18</td></tr><tr><td>C-02</td><td class="nz-table__num">24</td></tr></tbody></table></div> <div class="nz-table-wrap"><table class="nz-table nz-table--comfortable"><tbody><tr><td>C-03</td><td class="nz-table__num">31</td></tr><tr><td>C-04</td><td class="nz-table__num">27</td></tr></tbody></table></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-table nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Tabla pequeña con columna ordenada</span><span class="cat-demo__tag">.nz-table--sm · __sort</span></div>
+    <div class="cat-stage">
+      <div class="nz-table-wrap"><table class="nz-table nz-table--sm"><thead><tr><th><span class="nz-table__sort">Parada</span></th><th class="nz-table__right">Pasajeros</th></tr></thead> <tbody><tr><td>Sol</td><td class="nz-table__num nz-table__right">1 208</td></tr><tr><td>Mayor</td><td class="nz-table__num nz-table__right">964</td></tr></tbody></table></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-table nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Tabla con bordes y hover de marca</span><span class="cat-demo__tag">.nz-table--bordered · --hover</span></div>
+    <div class="cat-stage">
+      <div class="nz-table-wrap"><table class="nz-table nz-table--bordered nz-table--hover"><thead><tr><th>Código</th><th>Importe</th></tr></thead> <tbody><tr><td>FAC-118</td><td class="nz-table__num">240 €</td></tr><tr><td>FAC-119</td><td class="nz-table__num">1 320 €</td></tr></tbody></table></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-table nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Tabla con cabecera fija y título</span><span class="cat-demo__tag">.nz-table--sticky-head · __caption</span></div>
+    <div class="cat-stage">
+      <div class="nz-table-wrap" style="max-height:9rem;overflow-y:auto"><table class="nz-table nz-table--sticky-head"> <caption class="nz-table__caption">Inventario por almacén · actualizado a las 09:40</caption> <thead><tr><th>Almacén</th><th class="nz-table__right">Unidades</th></tr></thead> <tbody><tr><td>Norte</td><td class="nz-table__num nz-table__right">820</td></tr><tr><td>Sur</td><td class="nz-table__num nz-table__right">415</td></tr> <tr><td>Este</td><td class="nz-table__num nz-table__right">302</td></tr><tr><td>Oeste</td><td class="nz-table__num nz-table__right">188</td></tr></tbody></table></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-table nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Celdas de tabla especializadas</span><span class="cat-demo__tag">.nz-table__cell--num · --actions · --checkbox · --wide</span></div>
+    <div class="cat-stage">
+      <div class="nz-table-wrap"><table class="nz-table"><thead><tr><th class="nz-table__cell--checkbox">Sel.</th><th class="nz-table__cell--wide">Descripción</th><th class="nz-table__cell--num">Total</th><th class="nz-table__cell--actions">Acciones</th></tr></thead> <tbody><tr><td class="nz-table__cell--checkbox"><input type="checkbox"></td><td class="nz-table__cell--wide">Cuadro eléctrico de la nave 3 con protecciones diferenciales</td><td class="nz-table__cell--num">2</td><td class="nz-table__cell--actions"><button class="nz-btn nz-btn--icon-sm nz-btn--ghost" aria-label="editar">✎</button></td></tr></tbody></table></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-badge nz-btn nz-chip nz-table nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Barra de herramientas y filtros de tabla</span><span class="cat-demo__tag">.nz-table__toolbar · __toolbar-spacer · __filters</span></div>
+    <div class="cat-stage">
+      <div class="nz-table-wrap"><div class="nz-table__toolbar"><span class="nz-table__strong">Facturas</span><span class="nz-badge nz-badge--brand">128</span><span class="nz-table__toolbar-spacer"></span><button class="nz-btn nz-btn--sm nz-btn--ghost">Exportar</button></div> <div class="nz-table__filters"><span class="nz-chip is-active">Todas</span><span class="nz-chip">Pendientes</span><span class="nz-chip">Pagadas</span></div> <table class="nz-table"><tbody><tr><td class="nz-table__strong">FAC-118</td><td class="nz-table__num">240 €</td></tr><tr><td>FAC-119</td><td class="nz-table__num">1 320 €</td></tr></tbody></table> <div class="nz-table__foot"><span>2 de 128</span><span>Total 1 560 €</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-table nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Tabla sin resultados</span><span class="cat-demo__tag">.nz-table__empty</span></div>
+    <div class="cat-stage">
+      <div class="nz-table-wrap"><table class="nz-table"><thead><tr><th>Cliente</th><th>Estado</th></tr></thead> <tbody><tr><td class="nz-table__empty" colspan="2">Sin resultados para este filtro</td></tr></tbody></table></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-table nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">10</span><span class="cat-demo__name">Fila seleccionable y fila pulsable</span><span class="cat-demo__tag">.nz-table__row--selected · --clickable · __status--err · --brand</span></div>
+    <div class="cat-stage">
+      <div class="nz-table-wrap"><table class="nz-table"><tbody> <tr class="nz-table__row--clickable nz-table__row--selected"><td class="nz-table__strong">Seleccionada</td><td>✓</td><td><span class="nz-table__status nz-table__status--brand"><i></i>Nuevo</span></td></tr> <tr class="nz-table__row--clickable"><td>Pulsable</td><td></td><td><span class="nz-table__status nz-table__status--err"><i></i>Error</span></td></tr></tbody></table></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-kpi">
+    <div class="cat-demo__title"><span class="cat-demo__num">11</span><span class="cat-demo__name">KPI</span><span class="cat-demo__tag">.nz-kpi · __label · __value · __value--brand · __delta · __delta--up</span></div>
+    <div class="cat-stage">
+      <div class="nz-kpi" style="max-width:14rem"><span class="nz-kpi__label">Ingresos</span><span class="nz-kpi__value nz-kpi__value--brand">3 420 €</span><span class="nz-kpi__delta nz-kpi__delta--up">+12% vs ayer</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-kpi">
+    <div class="cat-demo__title"><span class="cat-demo__num">12</span><span class="cat-demo__name">KPI de marca y KPI de acento</span><span class="cat-demo__tag">.nz-kpi--brand · --accent · __value--accent · __delta--down · --flat</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><div class="nz-kpi nz-kpi--brand" style="max-width:13rem"><span class="nz-kpi__label">Cobertura</span><span class="nz-kpi__value">78%</span><span class="nz-kpi__delta nz-kpi__delta--flat">sin cambios</span></div> <div class="nz-kpi nz-kpi--accent" style="max-width:13rem"><span class="nz-kpi__label">Visitas</span><span class="nz-kpi__value nz-kpi__value--accent">1 204</span><span class="nz-kpi__delta nz-kpi__delta--down">−4%</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-kpi">
+    <div class="cat-demo__title"><span class="cat-demo__num">13</span><span class="cat-demo__name">KPI pequeño y KPI grande</span><span class="cat-demo__tag">.nz-kpi--sm · --lg</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><div class="nz-kpi nz-kpi--sm" style="max-width:10rem"><span class="nz-kpi__label">Cola</span><span class="nz-kpi__value">12</span></div> <div class="nz-kpi nz-kpi--lg" style="max-width:18rem"><span class="nz-kpi__label">Facturación anual</span><span class="nz-kpi__value">184 500 €</span><span class="nz-kpi__delta nz-kpi__delta--up">+8,4%</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-kpi nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">14</span><span class="cat-demo__name">KPI con borde, con icono y en línea</span><span class="cat-demo__tag">.nz-kpi--bordered · __icon · --inline</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--sm"><div class="nz-kpi nz-kpi--bordered" style="max-width:16rem"><span class="nz-kpi__icon">◈</span><span class="nz-kpi__label">Sesiones</span><span class="nz-kpi__value">9 318</span></div> <div class="nz-kpi nz-kpi--inline" style="max-width:20rem"><span class="nz-kpi__label">Media</span><span class="nz-kpi__value">4,9</span><span class="nz-kpi__delta nz-kpi__delta--up">+0,2</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-kpi nz-spark">
+    <div class="cat-demo__title"><span class="cat-demo__num">15</span><span class="cat-demo__name">KPI con objetivo y sparkline</span><span class="cat-demo__tag">.nz-kpi__target · __spark · .nz-spark__bar</span></div>
+    <div class="cat-stage">
+      <div class="nz-kpi" style="max-width:15rem"><span class="nz-kpi__label">Objetivo mensual</span><span class="nz-kpi__value">72%</span><div class="nz-kpi__target"><i style="width:72%"></i></div> <div class="nz-kpi__spark"><div class="nz-spark"><i class="nz-spark__bar" style="height:40%"></i><i class="nz-spark__bar" style="height:65%"></i><i class="nz-spark__bar" style="height:52%"></i><i class="nz-spark__bar" style="height:80%"></i><i class="nz-spark__bar" style="height:70%"></i></div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-spark">
+    <div class="cat-demo__title"><span class="cat-demo__num">16</span><span class="cat-demo__name">Sparkline con barra activa y tamaño grande</span><span class="cat-demo__tag">.nz-spark · __bar · __bar--active · --lg</span></div>
+    <div class="cat-stage">
+      <div class="nz-spark nz-spark--lg" style="max-width:16rem"><i class="nz-spark__bar" style="height:30%"></i><i class="nz-spark__bar" style="height:55%"></i><i class="nz-spark__bar nz-spark__bar--active" style="height:90%"></i><i class="nz-spark__bar" style="height:62%"></i><i class="nz-spark__bar" style="height:74%"></i><i class="nz-spark__bar" style="height:48%"></i></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-spark">
+    <div class="cat-demo__title"><span class="cat-demo__num">17</span><span class="cat-demo__name">Sparkline de marca y de acento</span><span class="cat-demo__tag">.nz-spark--brand · --accent</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><div class="nz-spark nz-spark--brand" style="max-width:12rem"><i class="nz-spark__bar" style="height:35%"></i><i class="nz-spark__bar" style="height:60%"></i><i class="nz-spark__bar" style="height:80%"></i><i class="nz-spark__bar" style="height:45%"></i></div> <div class="nz-spark nz-spark--accent" style="max-width:12rem"><i class="nz-spark__bar" style="height:50%"></i><i class="nz-spark__bar" style="height:30%"></i><i class="nz-spark__bar" style="height:70%"></i><i class="nz-spark__bar" style="height:55%"></i></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-badge nz-btn nz-list-row nz-record">
+    <div class="cat-demo__title"><span class="cat-demo__num">18</span><span class="cat-demo__name">Filas de lista</span><span class="cat-demo__tag">.nz-list-row · __body · __title · __meta · __actions · --brand</span></div>
+    <div class="cat-stage">
+      <div><div class="nz-list-row nz-list-row--brand"><span class="nz-record__avatar">DA</span><div class="nz-list-row__body"><span class="nz-list-row__title">David Antizar</span><span class="nz-list-row__meta">Editor · hace 2 min</span></div><div class="nz-list-row__actions"><button class="nz-btn nz-btn--icon-sm nz-btn--ghost" aria-label="abrir">›</button></div></div> <div class="nz-list-row"><span class="nz-record__avatar">ML</span><div class="nz-list-row__body"><span class="nz-list-row__title">Marta Leal</span><span class="nz-list-row__meta">Revisora · ayer</span></div><div class="nz-list-row__actions"><span class="nz-badge nz-badge--success">OK</span></div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-record nz-records">
+    <div class="cat-demo__title"><span class="cat-demo__num">19</span><span class="cat-demo__name">Registro</span><span class="cat-demo__tag">.nz-records · .nz-record · __thumb · __body · __title · __meta · __value</span></div>
+    <div class="cat-stage">
+      <div class="nz-records"><div class="nz-record"><span class="nz-record__thumb"></span><div class="nz-record__body"><span class="nz-record__title">Kit familiar</span><span class="nz-record__meta">18 unidades · revisado</span></div><span class="nz-record__value nz-record__value--brand">▲</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-record nz-records">
+    <div class="cat-demo__title"><span class="cat-demo__num">20</span><span class="cat-demo__name">Registro con avatar, etiqueta y acciones</span><span class="cat-demo__tag">.nz-record__avatar · __tag · __actions · --brand · --danger</span></div>
+    <div class="cat-stage">
+      <div class="nz-records"><div class="nz-record nz-record--brand"><span class="nz-record__avatar">AL</span><div class="nz-record__body"><span class="nz-record__title">Albarán 2291</span><span class="nz-record__tag">Pendiente de firma</span></div><div class="nz-record__actions"><button class="nz-btn nz-btn--icon-sm nz-btn--ghost" aria-label="firmar">✎</button></div></div> <div class="nz-record nz-record--danger"><span class="nz-record__avatar">!</span><div class="nz-record__body"><span class="nz-record__title">Albarán 2294</span><span class="nz-record__tag">Rechazado</span></div><div class="nz-record__actions"><button class="nz-btn nz-btn--icon-sm nz-btn--ghost" aria-label="revisar">↻</button></div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-record nz-records">
+    <div class="cat-demo__title"><span class="cat-demo__num">21</span><span class="cat-demo__name">Registros con meta de error y de marca</span><span class="cat-demo__tag">.nz-record__meta--error · __meta--brand</span></div>
+    <div class="cat-stage">
+      <div class="nz-records"><div class="nz-record"><div class="nz-record__body"><span class="nz-record__title">Fallo de sincronización</span><span class="nz-record__meta nz-record__meta--error">Error de red en el nodo 2</span></div></div> <div class="nz-record"><div class="nz-record__body"><span class="nz-record__title">Sincronización correcta</span><span class="nz-record__meta nz-record__meta--brand">Última pasada completa</span></div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-timeline">
+    <div class="cat-demo__title"><span class="cat-demo__num">22</span><span class="cat-demo__name">Timeline</span><span class="cat-demo__tag">.nz-timeline · __item · __dot · __time · __title · __desc</span></div>
+    <div class="cat-stage">
+      <div class="nz-timeline"><div class="nz-timeline__item"><span class="nz-timeline__dot"></span><span class="nz-timeline__time">Hoy · 09:40</span><span class="nz-timeline__title">Revisado</span><span class="nz-timeline__desc">Todo en orden</span></div> <div class="nz-timeline__item"><span class="nz-timeline__dot nz-timeline__dot--accent"></span><span class="nz-timeline__time">Ayer · 18:10</span><span class="nz-timeline__title">Añadido</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-timeline">
+    <div class="cat-demo__title"><span class="cat-demo__num">23</span><span class="cat-demo__name">Timeline con tarjeta y puntos de color</span><span class="cat-demo__tag">.nz-timeline__card · __dot--brand · --accent · --success · --error · --muted</span></div>
+    <div class="cat-stage">
+      <div class="nz-timeline"><div class="nz-timeline__item"><span class="nz-timeline__dot nz-timeline__dot--brand"></span><span class="nz-timeline__title">Despliegue</span><span class="nz-timeline__card">Versión 7.1.0 publicada en producción.</span></div> <div class="nz-timeline__item"><span class="nz-timeline__dot nz-timeline__dot--success"></span><span class="nz-timeline__title">Verificado</span></div> <div class="nz-timeline__item"><span class="nz-timeline__dot nz-timeline__dot--error"></span><span class="nz-timeline__title">Reintento</span></div> <div class="nz-timeline__item"><span class="nz-timeline__dot nz-timeline__dot--muted"></span><span class="nz-timeline__title">Pendiente</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-timeline">
+    <div class="cat-demo__title"><span class="cat-demo__num">24</span><span class="cat-demo__name">Timeline compacto</span><span class="cat-demo__tag">.nz-timeline--compact · --brand</span></div>
+    <div class="cat-stage">
+      <div class="nz-timeline nz-timeline--compact nz-timeline--brand"><div class="nz-timeline__item"><span class="nz-timeline__dot"></span><span class="nz-timeline__title">Alta del pedido</span></div> <div class="nz-timeline__item"><span class="nz-timeline__dot"></span><span class="nz-timeline__title">Preparado en almacén</span></div> <div class="nz-timeline__item"><span class="nz-timeline__dot"></span><span class="nz-timeline__title">En reparto</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-timeline">
+    <div class="cat-demo__title"><span class="cat-demo__num">25</span><span class="cat-demo__name">Timeline horizontal</span><span class="cat-demo__tag">.nz-timeline--horizontal</span></div>
+    <div class="cat-stage">
+      <div class="nz-timeline nz-timeline--horizontal"><div class="nz-timeline__item"><span class="nz-timeline__dot"></span><span class="nz-timeline__time">Ene</span><span class="nz-timeline__title">Alta</span></div> <div class="nz-timeline__item"><span class="nz-timeline__dot"></span><span class="nz-timeline__time">Feb</span><span class="nz-timeline__title">Auditoría</span></div> <div class="nz-timeline__item"><span class="nz-timeline__dot"></span><span class="nz-timeline__time">Mar</span><span class="nz-timeline__title">Cierre</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-dl">
+    <div class="cat-demo__title"><span class="cat-demo__num">26</span><span class="cat-demo__name">Definition list</span><span class="cat-demo__tag">.nz-dl · __row · __dt · __dd · __dd--brand</span></div>
+    <div class="cat-stage">
+      <div class="nz-dl" style="max-width:22rem"><div class="nz-dl__row"><dt class="nz-dl__dt">Categoría</dt><dd class="nz-dl__dd">Supervivencia</dd></div> <div class="nz-dl__row"><dt class="nz-dl__dt">Precio</dt><dd class="nz-dl__dd nz-dl__dd--brand">34 €</dd></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-dl nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">27</span><span class="cat-demo__name">Definition list a dos y tres columnas</span><span class="cat-demo__tag">.nz-dl--2col · --3col</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--lg"><div class="nz-dl nz-dl--2col" style="max-width:22rem"><div class="nz-dl__row"><dt class="nz-dl__dt">Alto</dt><dd class="nz-dl__dd">2 m</dd></div><div class="nz-dl__row"><dt class="nz-dl__dt">Ancho</dt><dd class="nz-dl__dd">80 cm</dd></div></div> <div class="nz-dl nz-dl--3col" style="max-width:30rem"><div class="nz-dl__row"><dt class="nz-dl__dt">Peso</dt><dd class="nz-dl__dd">4,2 kg</dd></div><div class="nz-dl__row"><dt class="nz-dl__dt">Material</dt><dd class="nz-dl__dd">Acero</dd></div><div class="nz-dl__row"><dt class="nz-dl__dt">Garantía</dt><dd class="nz-dl__dd">3 años</dd></div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-dl nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">28</span><span class="cat-demo__name">Definition list en línea y rayada</span><span class="cat-demo__tag">.nz-dl--inline · --striped</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--lg"><div class="nz-dl nz-dl--inline"><div class="nz-dl__row"><dt class="nz-dl__dt">Ref.</dt><dd class="nz-dl__dd">A7-118</dd></div><div class="nz-dl__row"><dt class="nz-dl__dt">Serie</dt><dd class="nz-dl__dd">2026</dd></div><div class="nz-dl__row"><dt class="nz-dl__dt">Estado</dt><dd class="nz-dl__dd nz-dl__dd--brand">Activo</dd></div></div> <div class="nz-dl nz-dl--striped" style="max-width:22rem"><div class="nz-dl__row"><dt class="nz-dl__dt">Enero</dt><dd class="nz-dl__dd">12 400 €</dd></div><div class="nz-dl__row"><dt class="nz-dl__dt">Febrero</dt><dd class="nz-dl__dd">9 800 €</dd></div><div class="nz-dl__row"><dt class="nz-dl__dt">Marzo</dt><dd class="nz-dl__dd">13 150 €</dd></div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-gauge-num nz-stat-badge">
+    <div class="cat-demo__title"><span class="cat-demo__num">29</span><span class="cat-demo__name">Etiqueta de estadística y número medidor</span><span class="cat-demo__tag">.nz-stat-badge · .nz-gauge-num · __value · __unit · __delta · __delta--up · __label</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><span class="nz-stat-badge"><b>4,9</b><span>/ 5</span></span> <div class="nz-gauge-num"><span class="nz-gauge-num__value">18,4<span class="nz-gauge-num__unit">kg</span></span><span class="nz-gauge-num__delta nz-gauge-num__delta--up">+1,2 kg</span><span class="nz-gauge-num__label">Carga media por bulto</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-gauge-num">
+    <div class="cat-demo__title"><span class="cat-demo__num">30</span><span class="cat-demo__name">Número medidor de marca y en caída</span><span class="cat-demo__tag">.nz-gauge-num--brand · __delta--down</span></div>
+    <div class="cat-stage">
+      <div class="nz-gauge-num nz-gauge-num--brand"><span class="nz-gauge-num__value">97,2<span class="nz-gauge-num__unit">%</span></span><span class="nz-gauge-num__delta nz-gauge-num__delta--down">−0,6 puntos</span><span class="nz-gauge-num__label">Disponibilidad del servicio</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-datagrid nz-kpi">
+    <div class="cat-demo__title"><span class="cat-demo__num">31</span><span class="cat-demo__name">Grid de datos</span><span class="cat-demo__tag">.nz-datagrid · __cell--edit</span></div>
+    <div class="cat-stage">
+      <div class="nz-datagrid" style="max-width:26rem"><div class="nz-kpi nz-kpi--sm"><span class="nz-kpi__label">A</span><span class="nz-kpi__value">12</span></div><div class="nz-kpi nz-kpi--sm"><span class="nz-kpi__label">B</span><span class="nz-kpi__value">8</span></div> <div class="nz-datagrid__cell--edit"><span class="nz-kpi__label">Nuevo dato</span><span class="nz-kpi__value">+</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-datagrid nz-kpi">
+    <div class="cat-demo__title"><span class="cat-demo__num">32</span><span class="cat-demo__name">Grid de datos denso y rayado</span><span class="cat-demo__tag">.nz-datagrid--dense · --zebra</span></div>
+    <div class="cat-stage">
+      <div class="nz-datagrid nz-datagrid--dense nz-datagrid--zebra" style="max-width:26rem"><div class="nz-kpi nz-kpi--sm"><span class="nz-kpi__label">A</span><span class="nz-kpi__value">12</span></div> <div class="nz-kpi nz-kpi--sm"><span class="nz-kpi__label">B</span><span class="nz-kpi__value">8</span></div><div class="nz-kpi nz-kpi--sm"><span class="nz-kpi__label">C</span><span class="nz-kpi__value">21</span></div> <div class="nz-kpi nz-kpi--sm"><span class="nz-kpi__label">D</span><span class="nz-kpi__value">5</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-inlinestat">
+    <div class="cat-demo__title"><span class="cat-demo__num">33</span><span class="cat-demo__name">Estados inline</span><span class="cat-demo__tag">.nz-inlinestat · --ok · --warn · --err · --brand · --muted</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><span class="nz-inlinestat nz-inlinestat--ok"><i></i>Disponible</span><span class="nz-inlinestat nz-inlinestat--warn"><i></i>Aviso</span><span class="nz-inlinestat nz-inlinestat--err"><i></i>Crítico</span><span class="nz-inlinestat nz-inlinestat--brand"><i></i>Nuevo</span><span class="nz-inlinestat nz-inlinestat--muted"><i></i>Sin datos</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-arbol">
+    <div class="cat-demo__title"><span class="cat-demo__num">34</span><span class="cat-demo__name">Árbol jerárquico</span><span class="cat-demo__tag">.nz-arbol · __node · __toggle · __group · __leaf</span></div>
+    <div class="cat-stage">
+      <details class="nz-arbol__node nz-arbol" open><summary class="nz-arbol__toggle">Proyecto Aurora</summary> <div class="nz-arbol__group"><details class="nz-arbol__node"><summary class="nz-arbol__toggle">Diseño</summary><div class="nz-arbol__group"><a class="nz-arbol__leaf">Tokens</a><a class="nz-arbol__leaf">Packs</a></div></details> <a class="nz-arbol__leaf">Documentación</a><a class="nz-arbol__leaf">Auditoría</a></div></details>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-matrix nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">35</span><span class="cat-demo__name">Matriz de calor</span><span class="cat-demo__tag">.nz-matrix · __cell · --low · --mid · --high · --top · __label</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--sm" style="max-width:28rem"><div class="nz-matrix"><span class="nz-matrix__cell"></span><span class="nz-matrix__cell nz-matrix__cell--low"></span><span class="nz-matrix__cell nz-matrix__cell--mid"></span><span class="nz-matrix__cell nz-matrix__cell--high"></span> <span class="nz-matrix__cell nz-matrix__cell--high"></span><span class="nz-matrix__cell nz-matrix__cell--top"></span><span class="nz-matrix__cell nz-matrix__cell--mid"></span><span class="nz-matrix__cell nz-matrix__cell--low"></span> <span class="nz-matrix__cell nz-matrix__cell--low"></span><span class="nz-matrix__cell nz-matrix__cell--mid"></span><span class="nz-matrix__cell"></span><span class="nz-matrix__cell nz-matrix__cell--low"></span> <span class="nz-matrix__cell nz-matrix__cell--mid"></span><span class="nz-matrix__cell nz-matrix__cell--high"></span><span class="nz-matrix__cell nz-matrix__cell--top"></span><span class="nz-matrix__cell nz-matrix__cell--high"></span></div> <span class="nz-matrix__label">Actividad por franja horaria · 4 semanas</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-compare nz-table-wrap">
+    <div class="cat-demo__title"><span class="cat-demo__num">36</span><span class="cat-demo__name">Tabla de comparación</span><span class="cat-demo__tag">.nz-compare · __head · __feature · __col--featured · __check · __no · __foot</span></div>
+    <div class="cat-stage">
+      <div class="nz-table-wrap"><table class="nz-compare"><thead><tr><th class="nz-compare__head">Característica</th><th class="nz-compare__head">Base</th><th class="nz-compare__head nz-compare__col--featured">Pro</th></tr></thead> <tbody><tr><td class="nz-compare__feature">Packs CSS</td><td>6</td><td class="nz-compare__col--featured">12</td></tr> <tr><td class="nz-compare__feature">Tema oscuro</td><td><span class="nz-compare__no">✕</span></td><td class="nz-compare__col--featured"><span class="nz-compare__check">✓</span></td></tr> <tr><td class="nz-compare__feature">Auditoría</td><td><span class="nz-compare__no">✕</span></td><td class="nz-compare__col--featured"><span class="nz-compare__check">✓</span></td></tr></tbody> <tfoot><tr><td class="nz-compare__foot" colspan="3">Precios sin IVA · actualizado en marzo</td></tr></tfoot></table></div>
+    </div>
+  </section>
+  <div class="cat-empty" id="catVacio" hidden><b>Nada por aquí</b>Prueba con otro término o quita el filtro.</div>
+</main>
+<div class="cat-nav-pages" style="justify-content:center;border-top:1px solid var(--nz-border-soft)">
+  <a href="07-overlays.html">← 07 Overlays y diálogo</a>
+  <a href="09-media.html">09 Media e iconografía →</a>
+</div>
+<footer class="cat-footer">
+  Aurora 7 · Design System Ntizar · Categoría 08 de 15 · 1829 objetos · 534 demos · Hecho con ❤️ por David Antizar
+</footer>
+<script src="../js/catalog.js"></script>
 </body>
 </html>

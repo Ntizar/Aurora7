@@ -1,7 +1,8 @@
 /* ============================================================
-   AURORA 7 — p10-commerce.css · Categoría 10 · Comercio y producto (40 objetos)
-   Precio, tarjeta de producto, calificación, stock, botón de compra,
-   comparador de planes, tabla de precio, carrito, envío.
+   AURORA 7 — p10-commerce.css · Categoría 10 · Comercio y producto (152 objetos)
+   Precio, estrellas, stock, tarjeta de producto, planes y comparativa,
+   carrito, pasos de compra, resumen, cupón, pago, pedido y envío.
+   Mobile-first · 0 gradientes · 0 glass · solo tokens var(--nz-*)
    ============================================================ */
 
 /* ---- Precio ---- */
@@ -10,92 +11,235 @@
 .nz-price__amount { font-size: var(--nz-text-2xl); font-weight: 800; letter-spacing: var(--nz-tracking-tight); color: var(--nz-text); }
 .nz-price__decimal { font-size: .65em; color: var(--nz-text-mute); }
 .nz-price__period { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-price__old { font-size: var(--nz-text-sm); color: var(--nz-text-faint); text-decoration: line-through; }
+.nz-price__save { display: inline-flex; align-items: center; min-height: 22px; padding: 0 var(--nz-space-2); border-radius: var(--nz-radius-full); background: var(--nz-success-soft); color: var(--nz-success); font-size: var(--nz-text-2xs); font-weight: 800; white-space: nowrap; }
 .nz-price--brand .nz-price__amount { color: var(--nz-brand); }
 .nz-price--accent .nz-price__amount { color: var(--nz-accent); }
 .nz-price--sm .nz-price__amount { font-size: var(--nz-text-lg); }
-.nz-price__old { font-size: var(--nz-text-sm); color: var(--nz-text-faint); text-decoration: line-through; }
+.nz-price--xl .nz-price__amount { font-size: var(--nz-text-4xl); }
+.nz-price--muted .nz-price__amount { color: var(--nz-text-mute); font-weight: 700; }
+.nz-price--strike .nz-price__amount { color: var(--nz-text-faint); font-weight: 600; text-decoration: line-through; }
+@media (min-width: 960px) { .nz-price--xl .nz-price__amount { font-size: var(--nz-text-4xl); } }
 
 /* ---- Calificación (estrellas) ---- */
 .nz-stars { display: inline-flex; align-items: center; gap: var(--nz-space-1); }
 .nz-stars__row { display: inline-flex; font-size: var(--nz-text-sm); letter-spacing: 1px; }
-.nz-stars__row[aria-label] .nz-stars__star { color: var(--nz-warning); }
 .nz-stars__star { color: var(--nz-border-strong); }
 .nz-stars__star--full { color: var(--nz-warning); }
-.nz-stars__count { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-stars__count { font-size: var(--nz-text-xs); color: var(--nz-text-mute); font-variant-numeric: tabular-nums; }
+.nz-stars__bar { display: flex; align-items: flex-end; gap: 2px; width: 5rem; height: 1.5rem; }
+.nz-stars__bar i { flex: 1; border-radius: var(--nz-radius-xs) var(--nz-radius-xs) 0 0; background: var(--nz-warning-soft); }
 .nz-stars--sm .nz-stars__row { font-size: var(--nz-text-xs); }
+.nz-stars--lg .nz-stars__row { font-size: var(--nz-text-xl); }
+.nz-stars--brand .nz-stars__star--full { color: var(--nz-brand); }
 
 /* ---- Stock ---- */
 .nz-stock { display: inline-flex; align-items: center; gap: var(--nz-space-1); font-size: var(--nz-text-xs); font-weight: 700; color: var(--nz-text-mute); }
-.nz-stock i { width: 8px; height: 8px; border-radius: 50%; }
-.nz-stock--in i { background: var(--nz-success); }
-.nz-stock--low i { background: var(--nz-warning); }
-.nz-stock--out i { background: var(--nz-danger); }
+.nz-stock i, .nz-stock__dot { width: 8px; height: 8px; flex: none; border-radius: 50%; background: var(--nz-text-faint); }
+.nz-stock--in i, .nz-stock--in .nz-stock__dot { background: var(--nz-success); }
+.nz-stock--low i, .nz-stock--low .nz-stock__dot { background: var(--nz-warning); }
+.nz-stock--out i, .nz-stock--out .nz-stock__dot { background: var(--nz-danger); }
+.nz-stock--badge { padding: var(--nz-space-1) var(--nz-space-3); border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); font-weight: 800; }
+.nz-stock--low.nz-stock--badge { background: var(--nz-warning-soft); color: var(--nz-warning); }
+.nz-stock--out.nz-stock--badge { background: var(--nz-danger-soft); color: var(--nz-danger); }
 
 /* ---- Tarjeta de producto ---- */
-.nz-product { display: flex; flex-direction: column; gap: var(--nz-space-3); padding: var(--nz-space-4); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); transition: transform var(--nz-dur-base) var(--nz-ease-out), box-shadow var(--nz-dur-base) var(--nz-ease-out); }
+.nz-product { position: relative; display: flex; flex-direction: column; gap: var(--nz-space-3); padding: var(--nz-space-4); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); transition: transform var(--nz-dur-base) var(--nz-ease-out), box-shadow var(--nz-dur-base) var(--nz-ease-out); }
 .nz-product:hover { transform: translateY(-3px); box-shadow: var(--nz-shadow-lg); }
 .nz-product__media { position: relative; aspect-ratio: 1; border-radius: var(--nz-radius-md); overflow: hidden; background: var(--nz-bg-inset); }
 .nz-product__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .nz-product__badge { position: absolute; top: var(--nz-space-2); left: var(--nz-space-2); }
-.nz-product__body { display: grid; gap: var(--nz-space-1); }
+.nz-product__ribbon { position: absolute; top: var(--nz-space-2); right: var(--nz-space-2); padding: var(--nz-space-1) var(--nz-space-3); border-radius: var(--nz-radius-full); background: var(--nz-accent); color: var(--nz-text-invert); font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
+.nz-product__quick { position: absolute; left: var(--nz-space-2); right: var(--nz-space-2); bottom: var(--nz-space-2); min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: var(--nz-space-2); border: 1px solid var(--nz-border); border-radius: var(--nz-radius-md); background: var(--nz-surface); color: var(--nz-text); font: inherit; font-size: var(--nz-text-sm); font-weight: 700; box-shadow: var(--nz-shadow-md); cursor: pointer; }
+.nz-product__body { display: grid; gap: var(--nz-space-1); min-width: 0; }
 .nz-product__cat { font-size: var(--nz-text-2xs); font-weight: 700; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; color: var(--nz-text-faint); }
 .nz-product__name { font-weight: 700; font-size: var(--nz-text-base); color: var(--nz-text); line-height: var(--nz-leading-snug); }
-.nz-product__rate { display: flex; align-items: center; gap: var(--nz-space-2); }
-.nz-product__price { display: flex; align-items: baseline; gap: var(--nz-space-2); justify-content: space-between; margin-top: var(--nz-space-1); }
-.nz-product__cta { margin-top: var(--nz-space-2); }
+.nz-product__rate { display: flex; align-items: center; flex-wrap: wrap; gap: var(--nz-space-2); }
+.nz-product__variant { display: flex; flex-wrap: wrap; gap: var(--nz-space-1); }
+.nz-product__variant span { min-height: 28px; display: inline-flex; align-items: center; padding: 0 var(--nz-space-2); border-radius: var(--nz-radius-sm); background: var(--nz-bg-inset); color: var(--nz-text-soft); font-size: var(--nz-text-2xs); font-weight: 700; }
+.nz-product__variant .is-selected { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-product__price { display: flex; align-items: baseline; justify-content: space-between; gap: var(--nz-space-2); margin-top: var(--nz-space-1); }
+.nz-product__cta { margin-top: auto; }
 .nz-product__cta .nz-btn { width: 100%; }
+.nz-product--horizontal { flex-direction: row; align-items: center; gap: var(--nz-space-4); }
+.nz-product--horizontal .nz-product__media { width: 6.5rem; flex: none; }
+.nz-product--horizontal .nz-product__body { flex: 1; min-width: 0; }
+.nz-product--horizontal .nz-product__price { margin-top: 0; }
+.nz-product--compact { padding: var(--nz-space-3); gap: var(--nz-space-2); }
+.nz-product--bordered { box-shadow: none; border: 1px solid var(--nz-border); }
+.nz-product--sold-out .nz-product__media { opacity: .55; }
+.nz-product--sold-out .nz-product__name { color: var(--nz-text-mute); }
+@media (hover: hover) and (min-width: 960px) { .nz-product__quick { opacity: 0; transition: opacity var(--nz-dur-base) var(--nz-ease-out); } .nz-product:hover .nz-product__quick, .nz-product:focus-within .nz-product__quick { opacity: 1; } }
 
-/* ---- Comparador de planes (pricing) ---- */
-.nz-plan { display: flex; flex-direction: column; gap: var(--nz-space-4); padding: var(--nz-space-6); border-radius: var(--nz-radius-xl); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); border: 1px solid var(--nz-border-soft); position: relative; }
-.nz-plan--featured { border-color: var(--nz-brand); box-shadow: var(--nz-shadow-lg); }
-.nz-plan__flag { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); }
+/* ---- Grid de productos ---- */
+.nz-products { display: grid; gap: var(--nz-space-4); grid-template-columns: 1fr; }
+@media (min-width: 640px) { .nz-products--2 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .nz-products { grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); } .nz-products--2 { grid-template-columns: repeat(2, 1fr); } }
+
+/* ---- Plan (comparador de precios) ---- */
+.nz-plan { position: relative; display: flex; flex-direction: column; gap: var(--nz-space-4); padding: var(--nz-space-6); border: 1px solid var(--nz-border-soft); border-radius: var(--nz-radius-xl); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-plan__flag { position: absolute; top: calc(-1 * var(--nz-space-3)); left: 50%; transform: translateX(-50%); }
 .nz-plan__name { font-size: var(--nz-text-md); font-weight: 800; }
+.nz-plan__desc { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
 .nz-plan__price { font-size: var(--nz-text-3xl); font-weight: 800; letter-spacing: var(--nz-tracking-tight); font-variant-numeric: tabular-nums; }
 .nz-plan__price small { font-size: .5em; font-weight: 600; color: var(--nz-text-mute); }
-.nz-plan__features { display: flex; flex-direction: column; gap: var(--nz-space-2); }
+.nz-plan__badge { display: inline-flex; align-items: center; align-self: flex-start; min-height: 22px; padding: 0 var(--nz-space-2); border-radius: var(--nz-radius-full); background: var(--nz-brand-soft); color: var(--nz-brand); font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
+.nz-plan__features { display: flex; flex-direction: column; gap: var(--nz-space-2); margin: 0; padding: 0; list-style: none; }
 .nz-plan__feature { display: flex; align-items: center; gap: var(--nz-space-2); font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
-.nz-plan__feature i { width: 6px; height: 6px; border-radius: 50%; background: var(--nz-success); }
-.nz-plan__feature--no i { background: var(--nz-text-faint); }
+.nz-plan__feature i { width: 6px; height: 6px; flex: none; border-radius: 50%; background: var(--nz-success); }
 .nz-plan__feature--no { color: var(--nz-text-mute); }
+.nz-plan__feature--no i { background: var(--nz-text-faint); }
+.nz-plan__feature--off { color: var(--nz-text-faint); text-decoration: line-through; }
 .nz-plan__cta { margin-top: auto; }
 .nz-plan__cta .nz-btn { width: 100%; }
+.nz-plan--featured { border-color: var(--nz-brand); box-shadow: var(--nz-shadow-lg); }
+.nz-plan--brand { background: var(--nz-brand); border-color: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-plan--brand .nz-plan__name, .nz-plan--brand .nz-plan__price { color: var(--nz-text-invert); }
+.nz-plan--brand .nz-plan__desc, .nz-plan--brand .nz-plan__feature { color: var(--nz-blue-100); }
+.nz-plan--brand .nz-plan__badge { background: var(--nz-blue-100); color: var(--nz-brand-strong); }
+.nz-plan--muted { background: var(--nz-bg-soft); box-shadow: none; }
 
 /* ---- Grid de planes ---- */
 .nz-plans { display: grid; gap: var(--nz-space-4); grid-template-columns: 1fr; align-items: stretch; }
-@media (min-width: 720px) { .nz-plans--3 { grid-template-columns: repeat(3, 1fr); } }
+.nz-plans--compact { gap: var(--nz-space-2); }
+.nz-plans--compact .nz-plan { padding: var(--nz-space-4); border-radius: var(--nz-radius-lg); }
+.nz-plans--table { gap: 0; }
+.nz-plans--table .nz-plan { flex-direction: row; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-2); border: 0; border-bottom: 1px solid var(--nz-border-soft); border-radius: 0; box-shadow: none; }
+.nz-plans--table .nz-plan__cta { margin: 0 0 0 auto; }
+@media (min-width: 640px) { .nz-plans--2 { grid-template-columns: repeat(2, 1fr); } .nz-plans--4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .nz-plans { grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); } .nz-plans--2 { grid-template-columns: repeat(2, 1fr); } .nz-plans--3 { grid-template-columns: repeat(3, 1fr); } .nz-plans--4 { grid-template-columns: repeat(4, 1fr); } }
 
 /* ---- Tabla de precios ---- */
 .nz-pricetable { width: 100%; border-collapse: collapse; font-size: var(--nz-text-sm); }
 .nz-pricetable th, .nz-pricetable td { padding: var(--nz-space-3) var(--nz-space-4); text-align: left; border-bottom: 1px solid var(--nz-border-soft); }
 .nz-pricetable th { font-size: var(--nz-text-2xs); font-weight: 800; text-transform: uppercase; letter-spacing: var(--nz-tracking-caps); color: var(--nz-text-mute); }
 .nz-pricetable td { color: var(--nz-text-soft); }
-.nz-pricetable td.nz-pricetable__rowhead { color: var(--nz-text); font-weight: 700; }
-.nz-pricetable .is-featured { background: var(--nz-brand-soft); }
+.nz-pricetable__rowhead { color: var(--nz-text); font-weight: 700; }
+.nz-pricetable__col { color: var(--nz-text); font-weight: 800; }
+.nz-pricetable .is-selected { background: var(--nz-brand-soft); color: var(--nz-text); font-weight: 700; }
+.nz-pricetable--compact th, .nz-pricetable--compact td { padding: var(--nz-space-2) var(--nz-space-3); }
 
-/* ---- Carrito (fila) ---- */
-.nz-cart-item { display: flex; gap: var(--nz-space-3); align-items: center; padding: var(--nz-space-3) 0; border-bottom: 1px solid var(--nz-border-soft); }
+/* ---- Fila de carrito ---- */
+.nz-cart-item { display: flex; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-3) 0; border-bottom: 1px solid var(--nz-border-soft); }
 .nz-cart-item__thumb { width: 64px; height: 64px; flex: none; border-radius: var(--nz-radius-sm); overflow: hidden; background: var(--nz-bg-inset); }
 .nz-cart-item__thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .nz-cart-item__body { flex: 1; min-width: 0; display: grid; gap: 2px; }
 .nz-cart-item__name { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); }
 .nz-cart-item__meta { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-cart-item__variant { font-size: var(--nz-text-xs); color: var(--nz-text-faint); }
 .nz-cart-item__right { display: grid; justify-items: end; gap: var(--nz-space-1); }
 .nz-cart-item__price { font-weight: 700; font-variant-numeric: tabular-nums; }
-.nz-cart-item__remove { border: 0; background: transparent; color: var(--nz-text-faint); cursor: pointer; font-size: var(--nz-text-sm); }
+.nz-cart-item__remove { min-height: 44px; border: 0; background: transparent; color: var(--nz-text-faint); font: inherit; font-size: var(--nz-text-sm); cursor: pointer; }
 .nz-cart-item__remove:hover { color: var(--nz-danger); }
+
+/* ---- Carrito ---- */
+.nz-cart { display: grid; gap: var(--nz-space-3); padding: var(--nz-space-4); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-cart__head { display: flex; align-items: center; justify-content: space-between; gap: var(--nz-space-3); }
+.nz-cart__items { display: grid; }
+.nz-cart__line { display: flex; align-items: center; gap: var(--nz-space-2); padding: var(--nz-space-2) 0; border-bottom: 1px solid var(--nz-border-soft); font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
+.nz-cart__line b { margin-left: auto; font-weight: 800; color: var(--nz-text); font-variant-numeric: tabular-nums; }
+.nz-cart__qty { display: inline-flex; align-items: center; gap: var(--nz-space-1); }
+.nz-cart__qty button { width: 44px; height: 44px; border: 0; border-radius: var(--nz-radius-sm); background: var(--nz-bg-inset); color: var(--nz-text); font: inherit; font-weight: 800; cursor: pointer; }
+.nz-cart__qty button:hover { background: var(--nz-brand-soft); color: var(--nz-brand); }
+.nz-cart__qty span { min-width: 2rem; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+.nz-cart__count { display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 var(--nz-space-1); border-radius: var(--nz-radius-full); background: var(--nz-brand); color: var(--nz-text-invert); font-size: var(--nz-text-2xs); font-weight: 800; font-variant-numeric: tabular-nums; }
+.nz-cart__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--nz-space-3); padding-top: var(--nz-space-3); border-top: 1px solid var(--nz-border); }
+.nz-cart__total { font-size: var(--nz-text-lg); font-weight: 800; font-variant-numeric: tabular-nums; }
+.nz-cart__empty { display: grid; justify-items: center; gap: var(--nz-space-2); padding: var(--nz-space-8) var(--nz-space-4); text-align: center; font-size: var(--nz-text-sm); color: var(--nz-text-mute); }
+.nz-cart--mini { gap: var(--nz-space-2); padding: var(--nz-space-3); }
+.nz-cart--mini .nz-cart__total { font-size: var(--nz-text-md); }
+.nz-cart--drawer { grid-template-rows: auto 1fr auto; gap: 0; height: 100%; border-radius: 0; box-shadow: none; }
+.nz-cart--drawer .nz-cart__items { align-content: start; padding: var(--nz-space-2) 0; }
+
+/* ---- Pasos de compra ---- */
+.nz-checkout-steps { display: grid; gap: var(--nz-space-3); margin: 0; padding: 0; list-style: none; }
+.nz-checkout-steps__step { display: flex; align-items: center; gap: var(--nz-space-3); font-size: var(--nz-text-sm); color: var(--nz-text-mute); }
+.nz-checkout-steps__num { display: inline-grid; place-items: center; width: 32px; height: 32px; flex: none; border-radius: 50%; background: var(--nz-bg-inset); color: var(--nz-text-soft); font-size: var(--nz-text-xs); font-weight: 800; font-variant-numeric: tabular-nums; }
+.nz-checkout-steps__label { font-weight: 700; }
+.nz-checkout-steps__step--done { color: var(--nz-text); }
+.nz-checkout-steps__step--done .nz-checkout-steps__num { background: var(--nz-success); color: var(--nz-text-invert); }
+.nz-checkout-steps--vertical { gap: var(--nz-space-4); }
+@media (min-width: 960px) { .nz-checkout-steps { grid-auto-flow: column; grid-auto-columns: 1fr; align-items: center; } .nz-checkout-steps--vertical { grid-auto-flow: row; } }
 
 /* ---- Resumen de compra ---- */
 .nz-summary { display: grid; gap: var(--nz-space-1); padding: var(--nz-space-5); border-radius: var(--nz-radius-lg); background: var(--nz-bg-soft); }
-.nz-summary__row { display: flex; justify-content: space-between; font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
-.nz-summary__row--total { font-size: var(--nz-text-md); font-weight: 800; color: var(--nz-text); padding-top: var(--nz-space-3); border-top: 1px solid var(--nz-border); margin-top: var(--nz-space-2); }
+.nz-summary__row { display: flex; justify-content: space-between; gap: var(--nz-space-4); font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
+.nz-summary__row--total { margin-top: var(--nz-space-2); padding-top: var(--nz-space-3); border-top: 1px solid var(--nz-border); font-size: var(--nz-text-md); font-weight: 800; color: var(--nz-text); }
+.nz-summary__divider { height: 1px; margin: var(--nz-space-2) 0; border: 0; background: var(--nz-border-soft); }
+.nz-summary__note { display: flex; align-items: center; gap: var(--nz-space-2); font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-summary__cta { margin-top: var(--nz-space-3); }
+.nz-summary__cta .nz-btn { width: 100%; }
+.nz-summary--brand { background: var(--nz-brand-soft); border: 1px solid var(--nz-brand-tint); }
 
-/* ---- Etiqueta de descuento ---- */
-.nz-off { display: inline-flex; align-items: center; padding: .15rem .6rem; border-radius: var(--nz-radius-full); background: var(--nz-danger-soft); color: var(--nz-danger); font-size: var(--nz-text-2xs); font-weight: 800; }
-.nz-off--green { background: var(--nz-success-soft); color: var(--nz-success); }
+/* ---- Cupón ---- */
+.nz-coupon { display: grid; gap: var(--nz-space-2); padding: var(--nz-space-4); border: 1px dashed var(--nz-border-strong); border-radius: var(--nz-radius-md); background: var(--nz-surface); }
+.nz-coupon__input { width: 100%; min-height: 44px; padding: 0 var(--nz-space-3); border: 1px solid var(--nz-border); border-radius: var(--nz-radius-sm); background: var(--nz-bg); color: var(--nz-text); font: inherit; font-size: var(--nz-text-sm); letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
+.nz-coupon__btn { min-height: 44px; }
+.nz-coupon__hint { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-coupon__msg { display: flex; align-items: center; gap: var(--nz-space-2); font-size: var(--nz-text-xs); font-weight: 700; color: var(--nz-text-mute); }
+.nz-coupon.is-done .nz-coupon__msg { color: var(--nz-success); }
+.nz-coupon.is-error .nz-coupon__msg { color: var(--nz-danger); }
+@media (min-width: 640px) { .nz-coupon--inline { grid-template-columns: 1fr auto; align-items: end; } .nz-coupon--inline .nz-coupon__hint { grid-column: 1 / -1; } }
 
-/* ---- Forma de pago (item) ---- */
+/* ---- Métodos de pago ---- */
+.nz-payment { display: grid; gap: var(--nz-space-2); }
+.nz-payment__method { display: flex; align-items: center; gap: var(--nz-space-3); min-height: 44px; padding: var(--nz-space-3) var(--nz-space-4); border: 1px solid var(--nz-border); border-radius: var(--nz-radius-md); background: var(--nz-surface); }
+.nz-payment__method:hover { border-color: var(--nz-border-strong); }
+.nz-payment__method--selected { border-color: var(--nz-brand); border-width: var(--nz-border-w-strong); background: var(--nz-brand-soft); }
+.nz-payment__icon { width: 40px; height: 28px; flex: none; display: grid; place-items: center; border-radius: var(--nz-radius-xs); background: var(--nz-bg-inset); font-size: var(--nz-text-xs); font-weight: 800; color: var(--nz-text-mute); }
+.nz-payment__label { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); }
+.nz-payment__note { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+@media (min-width: 640px) { .nz-payment--grid { grid-template-columns: repeat(2, 1fr); } }
+
+/* ---- Forma de pago (item simple) ---- */
 .nz-pay { display: flex; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); border: 1px solid var(--nz-border-soft); border-radius: var(--nz-radius-md); background: var(--nz-surface); }
 .nz-pay__icon { width: 40px; height: 28px; flex: none; border-radius: var(--nz-radius-xs); background: var(--nz-bg-inset); display: grid; place-items: center; font-size: var(--nz-text-xs); font-weight: 800; color: var(--nz-text-mute); }
 .nz-pay__body { flex: 1; display: grid; gap: 1px; }
 .nz-pay__name { font-weight: 700; font-size: var(--nz-text-sm); color: var(--nz-text); }
 .nz-pay__meta { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+
+/* ---- Pedido ---- */
+.nz-order { display: grid; gap: var(--nz-space-3); padding: var(--nz-space-5); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-order__head { display: flex; flex-wrap: wrap; align-items: center; gap: var(--nz-space-2) var(--nz-space-3); }
+.nz-order__id { font-family: var(--nz-font-mono); font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-order__date { font-size: var(--nz-text-xs); color: var(--nz-text-faint); }
+.nz-order__status { display: inline-flex; align-items: center; gap: var(--nz-space-1); margin-left: auto; padding: var(--nz-space-1) var(--nz-space-3); border-radius: var(--nz-radius-full); background: var(--nz-success-soft); color: var(--nz-success); font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
+.nz-order__status--pending { background: var(--nz-warning-soft); color: var(--nz-warning); }
+.nz-order__status--canceled { background: var(--nz-danger-soft); color: var(--nz-danger); }
+.nz-order__items { display: grid; gap: var(--nz-space-2); margin: 0; padding: 0; list-style: none; font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
+.nz-order__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--nz-space-3); padding-top: var(--nz-space-3); border-top: 1px solid var(--nz-border-soft); }
+.nz-order__total { font-weight: 800; font-variant-numeric: tabular-nums; }
+
+/* ---- Envío ---- */
+.nz-shipping-option { display: flex; align-items: center; gap: var(--nz-space-3); min-height: 44px; padding: var(--nz-space-3) var(--nz-space-4); border: 1px solid var(--nz-border); border-radius: var(--nz-radius-md); background: var(--nz-surface); }
+.nz-shipping-option__label { font-weight: 700; font-size: var(--nz-text-sm); }
+.nz-shipping-option__eta { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-shipping-option__price { margin-left: auto; font-weight: 800; font-variant-numeric: tabular-nums; }
+.nz-shipping-option--selected { border-color: var(--nz-brand); border-width: var(--nz-border-w-strong); background: var(--nz-brand-soft); }
+.nz-shipping-option--disabled { opacity: .55; }
+
+/* ---- Lista de deseos ---- */
+.nz-wishlist { display: inline-flex; align-items: center; gap: var(--nz-space-1); }
+.nz-wishlist__btn { width: 44px; height: 44px; display: inline-grid; place-items: center; border: 1px solid var(--nz-border); border-radius: var(--nz-radius-full); background: var(--nz-surface); color: var(--nz-text-mute); font: inherit; font-size: var(--nz-text-md); cursor: pointer; transition: color var(--nz-dur-fast) var(--nz-ease-out), border-color var(--nz-dur-fast) var(--nz-ease-out); }
+.nz-wishlist__btn:hover { color: var(--nz-danger); border-color: var(--nz-danger); }
+.nz-wishlist__count { font-size: var(--nz-text-xs); font-weight: 700; color: var(--nz-text-mute); font-variant-numeric: tabular-nums; }
+.nz-wishlist.is-active .nz-wishlist__btn { color: var(--nz-danger); border-color: var(--nz-danger); }
+
+/* ---- Barra de comparación ---- */
+.nz-compare-bar { position: sticky; bottom: 0; z-index: var(--nz-z-sticky); display: flex; flex-wrap: wrap; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-lg); }
+.nz-compare-bar__count { font-size: var(--nz-text-sm); font-weight: 700; }
+.nz-compare-bar__actions { display: flex; gap: var(--nz-space-2); margin-left: auto; }
+.nz-compare-bar__clear { min-height: 44px; border: 0; background: transparent; color: var(--nz-text-mute); font: inherit; font-size: var(--nz-text-xs); font-weight: 700; cursor: pointer; }
+.nz-compare-bar__clear:hover { color: var(--nz-danger); }
+
+/* ---- Etiqueta de descuento ---- */
+.nz-off { display: inline-flex; align-items: center; padding: .15rem .6rem; border-radius: var(--nz-radius-full); background: var(--nz-danger-soft); color: var(--nz-danger); font-size: var(--nz-text-2xs); font-weight: 800; }
+.nz-off--green { background: var(--nz-success-soft); color: var(--nz-success); }
+.nz-discount-badge { display: inline-flex; align-items: baseline; gap: var(--nz-space-2); padding: var(--nz-space-1) var(--nz-space-3); border-radius: var(--nz-radius-sm); background: var(--nz-danger-soft); color: var(--nz-danger); font-size: var(--nz-text-xs); font-weight: 800; }
+.nz-discount-badge__was { font-size: var(--nz-text-2xs); font-weight: 600; color: var(--nz-text-mute); text-decoration: line-through; }
+.nz-discount-badge--lg { padding: var(--nz-space-2) var(--nz-space-4); border-radius: var(--nz-radius-md); font-size: var(--nz-text-md); }
+
+/* ---- Nota de regalo ---- */
+.nz-gift-note { display: grid; gap: var(--nz-space-1); padding: var(--nz-space-3) var(--nz-space-4); border-left: var(--nz-border-w-strong) solid var(--nz-accent); border-radius: var(--nz-radius-sm); background: var(--nz-accent-soft); }
+.nz-gift-note__label { font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; color: var(--nz-accent-strong); }
+.nz-gift-note__body { font-size: var(--nz-text-sm); color: var(--nz-text-soft); }

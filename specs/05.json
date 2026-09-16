@@ -1,0 +1,209 @@
+{
+ "cat": 5,
+ "nombre": "Formularios e inputs",
+ "desc": "Inputs, textarea, select, check/radio/switch, range, OTP, búsqueda, grupos. Focus-ring accesible.",
+ "pack": "p5-forms.css",
+ "fichero": "05-forms.html",
+ "demos": [
+  {
+   "titulo": "Campo con etiqueta y ayuda",
+   "tag": ".nz-field",
+   "markup": "<label class=\"nz-field\"><span class=\"nz-field__label nz-field__label--req\">Correo</span><input class=\"nz-input\" type=\"email\" placeholder=\"tu@correo.es\"><span class=\"nz-field__help\">Nunca lo compartimos.</span></label>"
+  },
+  {
+   "titulo": "Inputs",
+   "tag": ".nz-input · :focus",
+   "markup": "<input class=\"nz-input\" placeholder=\"Texto\" style=\"max-width:16rem\"><input class=\"nz-input nz-input--error\" placeholder=\"Con error\" style=\"max-width:16rem\">"
+  },
+  {
+   "titulo": "Textarea",
+   "tag": ".nz-textarea",
+   "markup": "<textarea class=\"nz-textarea\" placeholder=\"Descripción…\" style=\"max-width:20rem\"></textarea>"
+  },
+  {
+   "titulo": "Select",
+   "tag": ".nz-select",
+   "markup": "<select class=\"nz-select\" style=\"max-width:14rem\"><option>Opción A</option><option>Opción B</option></select>"
+  },
+  {
+   "titulo": "Checkbox",
+   "tag": ".nz-checkbox__box",
+   "markup": "<label class=\"nz-checkbox\"><input type=\"checkbox\" checked><span class=\"nz-checkbox__box\"></span>Acepto los términos</label>"
+  },
+  {
+   "titulo": "Radio",
+   "tag": ".nz-radio__dot",
+   "markup": "<label class=\"nz-radio\"><input type=\"radio\" name=\"r\" checked><span class=\"nz-radio__dot\"></span>Estándar</label>"
+  },
+  {
+   "titulo": "Switch",
+   "tag": ".nz-switch__thumb",
+   "markup": "<label class=\"nz-switch\"><input type=\"checkbox\" checked><span class=\"nz-switch__track\"><span class=\"nz-switch__thumb\"></span></span><span class=\"nz-switch__label\">Notificaciones</span></label>"
+  },
+  {
+   "titulo": "Range",
+   "tag": ".nz-range",
+   "markup": "<input class=\"nz-range\" type=\"range\" min=\"0\" max=\"100\" value=\"60\" style=\"max-width:16rem\">"
+  },
+  {
+   "titulo": "Grupo con addon",
+   "tag": ".nz-inputgroup__addon",
+   "markup": "<div class=\"nz-inputgroup\" style=\"max-width:16rem\"><span class=\"nz-inputgroup__addon\">€</span><input class=\"nz-input\" placeholder=\"0,00\"></div>"
+  },
+  {
+   "titulo": "Búsqueda",
+   "tag": ".nz-search__icon",
+   "markup": "<div class=\"nz-search\" style=\"max-width:16rem\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" placeholder=\"Buscar…\"></div>"
+  },
+  {
+   "titulo": "Cantidad",
+   "tag": ".nz-qty",
+   "markup": "<div class=\"nz-qty\"><button aria-label=\"menos\">−</button><input value=\"2\" aria-label=\"cantidad\"><button aria-label=\"más\">+</button></div>"
+  },
+  {
+   "titulo": "OTP",
+   "tag": ".nz-otp",
+   "markup": "<div class=\"nz-otp\"><input value=\"4\" placeholder=\"·\"><input value=\"8\" placeholder=\"·\"><input placeholder=\"·\"><input placeholder=\"·\"></div>"
+  },
+  {
+   "titulo": "Campo con icono",
+   "tag": ".nz-input-icon__icon",
+   "markup": "<div class=\"nz-input-icon\" style=\"max-width:16rem\"><span class=\"nz-input-icon__icon\">@</span><input class=\"nz-input\" placeholder=\"usuario\"></div>"
+  },
+  {
+   "titulo": "Fila de formulario",
+   "tag": ".nz-rowform--2",
+   "markup": "<div class=\"nz-rowform nz-rowform--2\" style=\"max-width:22rem\"><input class=\"nz-input\" placeholder=\"Nombre\"><input class=\"nz-input\" placeholder=\"Apellidos\"></div>"
+  },
+  {
+   "titulo": "Field con error y contador",
+   "tag": ".nz-field__error · .nz-field__hint",
+   "markup": "<label class=\"nz-field\" style=\"max-width:16rem\"><span class=\"nz-field__label\">Usuario</span><input class=\"nz-input nz-input--error\" value=\"da\"><span class=\"nz-field__error\">Ya está en uso</span><span class=\"nz-field__hint\"><span>3–20 caracteres</span><span>2/20</span></span></label>"
+  },
+  {
+   "titulo": "Input brand y range acento",
+   "tag": ".nz-input--brand · .nz-range--accent",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:16rem\"><input class=\"nz-input nz-input--brand\" value=\"Destacado\"><input class=\"nz-range nz-range--accent\" type=\"range\" value=\"70\"></div>"
+  },
+  {
+   "titulo": "Filas de 3 y select agrupado",
+   "tag": ".nz-rowform--3 · .nz-select--group",
+   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-rowform nz-rowform--3\"><input class=\"nz-input\" placeholder=\"Día\"><input class=\"nz-input\" placeholder=\"Mes\"><input class=\"nz-input\" placeholder=\"Año\"></div><select class=\"nz-select nz-select--group\"><optgroup label=\"Europa\"><option>España</option></optgroup></select></div>"
+  },
+  {
+   "titulo": "Búsqueda con limpiar",
+   "tag": ".nz-search__clear",
+   "markup": "<div class=\"nz-search\" style=\"max-width:16rem\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" value=\"aurora\"><button class=\"nz-search__clear\">✕</button></div>"
+  },
+  {
+   "titulo": "Etiquetas sueltas",
+   "tag": ".nz-label · --req",
+   "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-label\">Etiqueta</span><span class=\"nz-label nz-label--req\">Obligatoria</span></div>"
+  },
+  {
+   "titulo": "Field compacto y en línea",
+   "tag": ".nz-field--compact · --inline",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:24rem\"><label class=\"nz-field nz-field--compact\"><span class=\"nz-field__label\">Referencia</span><input class=\"nz-input nz-input--sm\" value=\"AUR-07\"></label><span class=\"nz-field nz-field--inline\"><span class=\"nz-field__label\">Año</span><input class=\"nz-input nz-input--sm\" value=\"2026\" style=\"max-width:6rem\"></span></div>"
+  },
+  {
+   "titulo": "Campo opcional con contador",
+   "tag": ".nz-field__label--optional · __counter",
+   "markup": "<label class=\"nz-field\" style=\"max-width:24rem\"><span class=\"nz-field__label nz-field__label--optional\">Notas del proyecto</span><textarea class=\"nz-textarea nz-textarea--sm nz-textarea--auto\" placeholder=\"Añade contexto…\"></textarea><span class=\"nz-field__hint\"><span>Se guarda automáticamente</span><span class=\"nz-field__counter\">0/280</span></span></label>"
+  },
+  {
+   "titulo": "Campo en horizontal",
+   "tag": ".nz-field--horizontal · .nz-select--sm",
+   "markup": "<label class=\"nz-field nz-field--horizontal\" style=\"max-width:26rem\"><span class=\"nz-field__label\">Nivel de aviso</span><select class=\"nz-select nz-select--sm\"><option>Estándar</option><option>Prioritario</option><option>Solo errores</option></select></label>"
+  },
+  {
+   "titulo": "Tamaños y forma del input",
+   "tag": ".nz-input--sm/--lg/--square/--pill",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><input class=\"nz-input nz-input--sm\" placeholder=\"Pequeño\"><input class=\"nz-input\" placeholder=\"Normal\"><input class=\"nz-input nz-input--lg\" placeholder=\"Grande\"><input class=\"nz-input nz-input--square\" placeholder=\"Cuadrado\"><input class=\"nz-input nz-input--pill\" placeholder=\"Pastilla\"></div>"
+  },
+  {
+   "titulo": "Validación del control",
+   "tag": ".nz-input--success/--warning · [aria-invalid]",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><input class=\"nz-input nz-input--success\" value=\"ada@ntizar.es\"><span class=\"nz-hint-error nz-hint-error--ok\">Correo verificado</span><input class=\"nz-input nz-input--warning\" value=\"+34 600\"><span class=\"nz-hint-error\">Faltan dígitos</span><input class=\"nz-input\" aria-invalid=\"true\" value=\"da\"><span class=\"nz-field__error\">Ese usuario ya está en uso</span></div>"
+  },
+  {
+   "titulo": "Select múltiple, pastilla y grande",
+   "tag": ".nz-select--multiple/--pill/--lg",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><select class=\"nz-select nz-select--pill\"><option>Todas las categorías</option></select><select class=\"nz-select nz-select--lg\"><option>Ordenado por relevancia</option></select><select class=\"nz-select nz-select--multiple\" multiple size=\"3\"><option>Madrid</option><option selected>Barcelona</option><option>Valencia</option></select></div>"
+  },
+  {
+   "titulo": "Textarea grande y pastilla",
+   "tag": ".nz-textarea--lg/--pill · __counter",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:22rem\"><textarea class=\"nz-textarea nz-textarea--lg\" placeholder=\"Descripción completa del objeto…\"></textarea><textarea class=\"nz-textarea nz-textarea--pill\" placeholder=\"Comentario breve\"></textarea><textarea class=\"nz-textarea nz-textarea--auto\" placeholder=\"Con contador\"></textarea><span class=\"nz-textarea__counter\">0 de 280 caracteres</span></div>"
+  },
+  {
+   "titulo": "Checkbox compacto, parcial y en tarjeta",
+   "tag": ".nz-checkbox--sm/--card · __box--indeterminate",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:24rem\"><label class=\"nz-checkbox\"><input type=\"checkbox\" checked><span class=\"nz-checkbox__box\"></span>Recordarme</label><label class=\"nz-checkbox nz-checkbox--sm\"><input type=\"checkbox\"><span class=\"nz-checkbox__box\"></span>Versión compacta</label><label class=\"nz-checkbox\"><input type=\"checkbox\"><span class=\"nz-checkbox__box nz-checkbox__box--indeterminate\"></span>Selección parcial (3 de 8)</label><label class=\"nz-checkbox nz-checkbox--card\"><input type=\"checkbox\" checked><span class=\"nz-checkbox__box\"></span><span><strong>Plan anual</strong><br>Facturación cada 12 meses, un 20 % más barato.</span></label></div>"
+  },
+  {
+   "titulo": "Radio en tarjeta y punto grande",
+   "tag": ".nz-radio--card · __dot--lg",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:24rem\"><label class=\"nz-radio nz-radio--card\"><input type=\"radio\" name=\"envio\" checked><span class=\"nz-radio__dot\"></span><span><strong>Envío estándar</strong><br>3 a 5 días laborables.</span></label><label class=\"nz-radio nz-radio--card\"><input type=\"radio\" name=\"envio\"><span class=\"nz-radio__dot\"></span><span><strong>Envío exprés</strong><br>Entrega en 24 horas.</span></label><label class=\"nz-radio\"><input type=\"radio\" name=\"otro\"><span class=\"nz-radio__dot nz-radio__dot--lg\"></span>Punto grande</label></div>"
+  },
+  {
+   "titulo": "Switch: tamaños, tonos y etiqueta a la izquierda",
+   "tag": ".nz-switch--sm/--lg/--brand/--accent",
+   "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><label class=\"nz-switch nz-switch--sm\"><input type=\"checkbox\" checked><span class=\"nz-switch__track\"><span class=\"nz-switch__thumb\"></span></span><span class=\"nz-switch__label\">Pequeño</span></label><label class=\"nz-switch nz-switch--lg\"><input type=\"checkbox\" checked><span class=\"nz-switch__track\"><span class=\"nz-switch__thumb\"></span></span><span class=\"nz-switch__label\">Grande</span></label><label class=\"nz-switch nz-switch--brand\"><input type=\"checkbox\" checked><span class=\"nz-switch__track\"><span class=\"nz-switch__thumb\"></span></span><span class=\"nz-switch__label nz-switch__label--left\">Etiqueta a la izquierda</span></label><label class=\"nz-switch nz-switch--accent\"><input type=\"checkbox\" checked><span class=\"nz-switch__track\"><span class=\"nz-switch__thumb\"></span></span><span class=\"nz-switch__label\">Acento</span></label></div>"
+  },
+  {
+   "titulo": "Range: tonos, tamaño y marcas",
+   "tag": ".nz-range--brand/--sm · __marks",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:18rem\"><input class=\"nz-range nz-range--brand\" type=\"range\" min=\"0\" max=\"100\" value=\"35\"><input class=\"nz-range nz-range--sm nz-range--accent\" type=\"range\" min=\"0\" max=\"100\" value=\"70\"><div class=\"nz-range__marks\"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div></div>"
+  },
+  {
+   "titulo": "Grupo con addon de marca y de acento",
+   "tag": ".nz-inputgroup--pill/--error · __addon--brand/--accent",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><div class=\"nz-inputgroup nz-inputgroup--pill\"><span class=\"nz-inputgroup__addon nz-inputgroup__addon--brand\">nz</span><input class=\"nz-input\" placeholder=\"usuario\"></div><div class=\"nz-inputgroup\"><span class=\"nz-inputgroup__addon nz-inputgroup__addon--accent\">%</span><input class=\"nz-input\" value=\"12\"><span class=\"nz-inputgroup__addon\">IVA</span></div><div class=\"nz-inputgroup nz-inputgroup--error\"><span class=\"nz-inputgroup__addon\">€</span><input class=\"nz-input\" aria-invalid=\"true\" value=\"0,00\"></div><span class=\"nz-hint-error\">El importe es obligatorio</span></div>"
+  },
+  {
+   "titulo": "Input con hueco para icono y para limpiar",
+   "tag": ".nz-input--search · .nz-input--clear",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><input class=\"nz-input nz-input--search\" placeholder=\"Con hueco a la izquierda\"><input class=\"nz-input nz-input--clear\" value=\"Con hueco a la derecha\"></div>"
+  },
+  {
+   "titulo": "Búsqueda compacta y a lo ancho",
+   "tag": ".nz-search--sm · --full",
+   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:22rem\"><div class=\"nz-search nz-search--sm\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" placeholder=\"Buscar objeto…\"><button class=\"nz-search__clear\" aria-label=\"Limpiar\">✕</button></div><div class=\"nz-cluster nz-cluster--nowrap\"><div class=\"nz-search nz-search--full\"><span class=\"nz-search__icon\">⌕</span><input class=\"nz-input\" placeholder=\"Buscar en el catálogo\"></div><button class=\"nz-btn nz-btn--primary\">Ir</button></div></div>"
+  },
+  {
+   "titulo": "Contraseña con ver y ocultar",
+   "tag": ".nz-password · __toggle",
+   "markup": "<div class=\"nz-password\" style=\"max-width:20rem\"><input class=\"nz-input\" type=\"password\" value=\"aurora7\"><button class=\"nz-password__toggle\" aria-label=\"Mostrar contraseña\">ojo</button></div>"
+  },
+  {
+   "titulo": "OTP: tamaños y estado de error",
+   "tag": ".nz-otp--sm/--lg/--error",
+   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-otp nz-otp--sm\"><input placeholder=\"·\"><input value=\"2\" placeholder=\"·\"><input placeholder=\"·\"><input placeholder=\"·\"></div><div class=\"nz-otp\"><input value=\"4\" placeholder=\"·\"><input value=\"8\" placeholder=\"·\"><input placeholder=\"·\"><input placeholder=\"·\"></div><div class=\"nz-otp nz-otp--lg nz-otp--error\"><input value=\"9\" placeholder=\"·\"><input value=\"1\" placeholder=\"·\"><input value=\"2\" placeholder=\"·\"><input placeholder=\"·\"></div></div>"
+  },
+  {
+   "titulo": "Cantidad: pequeño, grande y vertical",
+   "tag": ".nz-qty--sm/--lg/--vertical",
+   "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><div class=\"nz-qty nz-qty--sm\"><button aria-label=\"menos\">−</button><input value=\"1\" aria-label=\"cantidad\"><button aria-label=\"más\">+</button></div><div class=\"nz-qty nz-qty--lg\"><button aria-label=\"menos\">−</button><input value=\"12\" aria-label=\"cantidad\"><button aria-label=\"más\">+</button></div><div class=\"nz-qty nz-qty--vertical\"><button aria-label=\"más\">+</button><input value=\"3\" aria-label=\"cantidad\"><button aria-label=\"menos\">−</button></div></div>"
+  },
+  {
+   "titulo": "Zona de arrastrar y soltar ficheros",
+   "tag": ".nz-filezona · __icono/__texto/__input",
+   "markup": "<div class=\"nz-filezona\" style=\"max-width:24rem\"><span class=\"nz-filezona__icono\">⬆</span><span class=\"nz-filezona__texto\">Arrastra tus ficheros aquí o toca para elegirlos</span><span class=\"nz-field__help\">PDF, PNG o ZIP · máximo 20 MB</span><input class=\"nz-filezona__input\" type=\"file\" aria-label=\"Subir ficheros\"></div>"
+  },
+  {
+   "titulo": "Zona de ficheros activa (arrastrando encima)",
+   "tag": ".nz-filezona.is-active",
+   "markup": "<div class=\"nz-filezona is-active\" style=\"max-width:24rem\"><span class=\"nz-filezona__icono\">⬆</span><span class=\"nz-filezona__texto\">Suelta para subir 3 ficheros</span><input class=\"nz-filezona__input\" type=\"file\" aria-label=\"Soltar ficheros\"></div>"
+  },
+  {
+   "titulo": "Rejilla de formulario a 2 columnas",
+   "tag": ".nz-formgrid · --2 · --wide",
+   "markup": "<form class=\"nz-formgrid nz-formgrid--2 nz-formgrid--wide\"><label class=\"nz-field\"><span class=\"nz-field__label\">Nombre</span><input class=\"nz-input\" placeholder=\"Ada\"></label><label class=\"nz-field\"><span class=\"nz-field__label\">Apellidos</span><input class=\"nz-input\" placeholder=\"Lovelace\"></label><label class=\"nz-field\"><span class=\"nz-field__label\">Ciudad</span><input class=\"nz-input\" placeholder=\"Madrid\"></label><label class=\"nz-field\"><span class=\"nz-field__label\">Código postal</span><input class=\"nz-input\" placeholder=\"28001\"></label></form>"
+  },
+  {
+   "titulo": "Fieldset con rejilla de 3",
+   "tag": ".nz-fieldset · __leyenda · .nz-formgrid--3",
+   "markup": "<fieldset class=\"nz-fieldset\"><legend class=\"nz-fieldset__leyenda\">Dirección de entrega</legend><div class=\"nz-formgrid nz-formgrid--3\"><label class=\"nz-field\"><span class=\"nz-field__label nz-field__label--req\">Calle</span><input class=\"nz-input\" placeholder=\"Gran Vía\"></label><label class=\"nz-field\"><span class=\"nz-field__label\">Número</span><input class=\"nz-input\" placeholder=\"28\"></label><label class=\"nz-field\"><span class=\"nz-field__label\">Piso</span><input class=\"nz-input\" placeholder=\"3º B\"></label></div></fieldset>"
+  }
+ ]
+}

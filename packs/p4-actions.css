@@ -1,42 +1,85 @@
 /* ============================================================
-   AURORA 7 — p4-actions.css · Categoría 04 · Acciones y botones (35 objetos)
-   Botones (variantes + tamaños), grupos, iconos, FAB, enlaces-acción,
-   selector segmentado, estados de carga.
-   Estilo: sólido, radii pill, sombra de marca al hover. Táctil 44px.
+   AURORA 7 — p4-actions.css · Categoría 04 · Acciones y botones
+   Botones (variantes, tonos, tamaños y formas), grupos, segmentado,
+   FAB, enlaces-acción, toolbar, spinners y estados de carga.
+   Estilo: sólido, radios pill, sombra de marca al hover. Táctil 44px.
    ============================================================ */
 
 /* ---- Botón base ---- */
-.nz-btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: var(--nz-space-2); padding: 0 var(--nz-space-5); border-radius: var(--nz-radius-full); font: inherit; font-weight: 700; font-size: var(--nz-text-base); cursor: pointer; border: 0; text-decoration: none; transition: transform var(--nz-dur-fast) var(--nz-ease-out), box-shadow var(--nz-dur-fast) var(--nz-ease-out), background var(--nz-dur-fast) var(--nz-ease-out), color var(--nz-dur-fast) var(--nz-ease-out); white-space: nowrap; }
+.nz-btn { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: var(--nz-space-2); padding: 0 var(--nz-space-5); border: var(--nz-border-w) solid transparent; border-radius: var(--nz-radius-full); font: inherit; font-weight: 700; font-size: var(--nz-text-base); cursor: pointer; text-decoration: none; white-space: nowrap; transition: transform var(--nz-dur-fast) var(--nz-ease-out), box-shadow var(--nz-dur-fast) var(--nz-ease-out), background var(--nz-dur-fast) var(--nz-ease-out), color var(--nz-dur-fast) var(--nz-ease-out), border-color var(--nz-dur-fast) var(--nz-ease-out); }
 .nz-btn:hover { transform: translateY(-2px); }
 .nz-btn:active { transform: translateY(0); }
-.nz-btn:disabled, .nz-btn.is-disabled { opacity: .5; pointer-events: none; }
+.nz-btn:disabled, .nz-btn.is-disabled, .nz-btn[aria-disabled="true"] { opacity: .5; pointer-events: none; }
 
-/* ---- Variantes --- */
+/* ---- Tonos ---- */
 .nz-btn--primary { background: var(--nz-brand); color: var(--nz-text-invert); box-shadow: var(--nz-shadow-brand); }
 .nz-btn--primary:hover { background: var(--nz-brand-strong); }
 .nz-btn--accent { background: var(--nz-accent); color: var(--nz-gray-0); box-shadow: var(--nz-shadow-accent); }
 .nz-btn--accent:hover { background: var(--nz-accent-strong); }
-.nz-btn--ghost { background: transparent; color: var(--nz-text-soft); box-shadow: inset 0 0 0 1.5px var(--nz-border); }
-.nz-btn--ghost:hover { background: var(--nz-bg-inset); color: var(--nz-text); }
-.nz-btn--soft { background: var(--nz-brand-soft); color: var(--nz-brand); }
-.nz-btn--soft:hover { background: var(--nz-brand-tint); }
+.nz-btn--success { background: var(--nz-success); color: var(--nz-text-invert); }
+.nz-btn--success:hover { background: var(--nz-green-700); }
+.nz-btn--warning { background: var(--nz-warning); color: var(--nz-text-invert); }
+.nz-btn--warning:hover { background: var(--nz-amber-700); }
 .nz-btn--danger { background: var(--nz-danger); color: var(--nz-text-invert); }
 .nz-btn--danger:hover { background: var(--nz-red-700); }
-.nz-btn--success { background: var(--nz-success); color: var(--nz-text-invert); }
+.nz-btn--info { background: var(--nz-info); color: var(--nz-text-invert); }
+.nz-btn--neutral { background: var(--nz-bg-inset); color: var(--nz-text); }
+.nz-btn--neutral:hover { background: var(--nz-border); }
+
+/* ---- Énfasis ---- */
+.nz-btn--soft { background: var(--nz-brand-soft); color: var(--nz-brand); }
+.nz-btn--soft:hover { background: var(--nz-brand-tint); }
+.nz-btn--soft-accent { background: var(--nz-accent-soft); color: var(--nz-accent-strong); }
+.nz-btn--soft-success { background: var(--nz-success-soft); color: var(--nz-success); }
+.nz-btn--soft-danger { background: var(--nz-danger-soft); color: var(--nz-danger); }
+.nz-btn--ghost { background: transparent; color: var(--nz-text-soft); box-shadow: inset 0 0 0 var(--nz-border-w-strong) var(--nz-border); }
+.nz-btn--ghost:hover { background: var(--nz-bg-inset); color: var(--nz-text); }
+.nz-btn--outline { background: transparent; color: var(--nz-brand); box-shadow: inset 0 0 0 var(--nz-border-w-strong) var(--nz-brand); }
+.nz-btn--outline:hover { background: var(--nz-brand-soft); }
+.nz-btn--link { background: none; color: var(--nz-brand); padding: 0; min-height: 32px; border-radius: var(--nz-radius-xs); text-decoration: underline; text-underline-offset: 3px; }
+.nz-btn--link:hover { color: var(--nz-brand-strong); transform: none; }
+.nz-btn--text { background: none; color: var(--nz-brand); padding: 0 var(--nz-space-2); }
+.nz-btn--text:hover { background: var(--nz-brand-soft); color: var(--nz-brand-strong); transform: none; }
+.nz-btn--text.nz-btn--danger-text { color: var(--nz-danger); }
+.nz-btn--text.nz-btn--danger-text:hover { background: var(--nz-danger-soft); }
 
 /* ---- Tamaños ---- */
+.nz-btn--2xs { min-height: 28px; padding: 0 var(--nz-space-2); font-size: var(--nz-text-2xs); gap: var(--nz-space-1); }
+.nz-btn--xs { min-height: 32px; padding: 0 var(--nz-space-3); font-size: var(--nz-text-xs); }
 .nz-btn--sm { min-height: 36px; padding: 0 var(--nz-space-4); font-size: var(--nz-text-sm); }
 .nz-btn--lg { min-height: 52px; padding: 0 var(--nz-space-6); font-size: var(--nz-text-md); }
 .nz-btn--xl { min-height: 60px; padding: 0 var(--nz-space-7); font-size: var(--nz-text-lg); }
+.nz-btn--2xl { min-height: 68px; padding: 0 var(--nz-space-8); font-size: var(--nz-text-lg); }
+
+/* ---- Forma y ancho ---- */
+.nz-btn--square { border-radius: var(--nz-radius-sm); }
+.nz-btn--rounded { border-radius: var(--nz-radius-md); }
+.nz-btn--pill { border-radius: var(--nz-radius-full); }
 .nz-btn--block { width: 100%; }
+.nz-btn--full { width: 100%; justify-content: space-between; }
+.nz-btn--auto { width: auto; }
+
+/* ---- Con icono ---- */
+.nz-btn__icon { display: inline-flex; font-size: 1.1em; line-height: 1; }
+.nz-btn__arrow { transition: transform var(--nz-dur-base) var(--nz-ease-out); }
+.nz-btn:hover .nz-btn__arrow--right { transform: translateX(4px); }
+.nz-btn:hover .nz-btn__arrow--left { transform: translateX(-4px); }
 .nz-btn--icon { width: 44px; padding: 0; }
 .nz-btn--icon-sm { width: 36px; min-height: 36px; padding: 0; }
 .nz-btn--icon-lg { width: 52px; min-height: 52px; padding: 0; }
+.nz-btn--icon-square { width: 44px; padding: 0; border-radius: var(--nz-radius-md); }
+.nz-btn__badge { position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; padding: 0 4px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--nz-radius-full); background: var(--nz-accent); color: var(--nz-gray-0); font-size: var(--nz-text-2xs); font-weight: 800; }
+.nz-btn--badged { position: relative; overflow: visible; }
 
-/* ---- Botón con icono ---- */
-.nz-btn .nz-btn__icon { display: inline-flex; font-size: 1.1em; line-height: 1; }
-.nz-btn .nz-btn__arrow { transition: transform var(--nz-dur-base) var(--nz-ease-out); }
-.nz-btn:hover .nz-btn__arrow--right { transform: translateX(4px); }
+/* ---- Estados ---- */
+.nz-btn.is-busy, .nz-btn.is-loading { opacity: .8; pointer-events: none; }
+.nz-btn.is-ok { background: var(--nz-success); color: var(--nz-text-invert); box-shadow: none; }
+.nz-btn.is-copied { background: var(--nz-brand-soft); color: var(--nz-brand); box-shadow: none; }
+.nz-btn[aria-pressed="true"] { background: var(--nz-brand); color: var(--nz-text-invert); }
+
+/* ---- Botón con progreso dentro ---- */
+.nz-btn--progress { position: relative; overflow: hidden; }
+.nz-btn__progress { position: absolute; left: 0; bottom: 0; height: 3px; background: var(--nz-accent); width: 60%; }
 
 /* ---- Grupo de botones ---- */
 .nz-btn-group { display: inline-flex; gap: var(--nz-space-1); }
@@ -46,23 +89,41 @@
 .nz-btn-group--joined .nz-btn:first-child { border-radius: var(--nz-radius-md) 0 0 var(--nz-radius-md); }
 .nz-btn-group--joined .nz-btn:last-child { border-radius: 0 var(--nz-radius-md) var(--nz-radius-md) 0; }
 .nz-btn-group--joined .nz-btn + .nz-btn { margin-left: -1px; box-shadow: inset 1px 0 0 var(--nz-border); }
+.nz-btn-group--vertical { flex-direction: column; }
+.nz-btn-group--vertical .nz-btn { width: 100%; justify-content: flex-start; }
+.nz-btn-group--split { gap: 0; }
+.nz-btn-group__caret { min-width: 44px; padding: 0 var(--nz-space-3); border-radius: 0 var(--nz-radius-full) var(--nz-radius-full) 0; }
+.nz-btn-group--split .nz-btn:first-child { border-radius: var(--nz-radius-full) 0 0 var(--nz-radius-full); }
 
-/* ---- Selector segmentado (segmented control) ---- */
+/* ---- Selector segmentado ---- */
 .nz-segmented { display: inline-flex; padding: var(--nz-space-1); gap: var(--nz-space-1); background: var(--nz-bg-inset); border-radius: var(--nz-radius-full); }
 .nz-segmented button, .nz-segmented a { min-height: 38px; padding: 0 var(--nz-space-4); border-radius: var(--nz-radius-full); border: 0; background: transparent; color: var(--nz-text-soft); font: inherit; font-size: var(--nz-text-sm); font-weight: 600; text-decoration: none; cursor: pointer; transition: background var(--nz-dur-fast) var(--nz-ease-out), color var(--nz-dur-fast) var(--nz-ease-out), box-shadow var(--nz-dur-fast) var(--nz-ease-out); }
 .nz-segmented [aria-selected="true"], .nz-segmented button.is-active, .nz-segmented a.is-active { background: var(--nz-surface); color: var(--nz-text); box-shadow: var(--nz-shadow-sm); }
+.nz-segmented--sm button, .nz-segmented--sm a { min-height: 32px; padding: 0 var(--nz-space-3); font-size: var(--nz-text-xs); }
+.nz-segmented--lg button, .nz-segmented--lg a { min-height: 44px; padding: 0 var(--nz-space-5); font-size: var(--nz-text-base); }
+.nz-segmented--vertical { flex-direction: column; border-radius: var(--nz-radius-lg); }
+.nz-segmented--vertical button, .nz-segmented--vertical a { border-radius: var(--nz-radius-md); text-align: left; }
+.nz-segmented--full { display: flex; width: 100%; }
+.nz-segmented--full button, .nz-segmented--full a { flex: 1; }
+.nz-segmented--brand [aria-selected="true"] { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-segmented--accent [aria-selected="true"] { background: var(--nz-accent); color: var(--nz-gray-0); }
 
 /* ---- FAB ---- */
 .nz-fab { position: fixed; right: var(--nz-space-5); bottom: calc(var(--nz-space-5) + env(safe-area-inset-bottom, 0px)); z-index: var(--nz-z-drawer); width: 56px; height: 56px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--nz-radius-full); border: 0; background: var(--nz-brand); color: var(--nz-text-invert); font-size: 1.5rem; box-shadow: var(--nz-shadow-brand); cursor: pointer; transition: transform var(--nz-dur-fast) var(--nz-ease-out), background var(--nz-dur-fast) var(--nz-ease-out); }
 .nz-fab:hover { transform: scale(1.08) rotate(-4deg); background: var(--nz-brand-strong); }
 .nz-fab--accent { background: var(--nz-accent); box-shadow: var(--nz-shadow-accent); }
 .nz-fab--lg { width: 64px; height: 64px; }
+.nz-fab--sm { width: 44px; height: 44px; font-size: var(--nz-text-md); }
+.nz-fab--extended { width: auto; padding: 0 var(--nz-space-5); gap: var(--nz-space-2); font-size: var(--nz-text-base); font-weight: 700; }
+.nz-fab--bottom-left { right: auto; left: var(--nz-space-5); }
 
-/* ---- Estados de carga (spinner inline) ---- */
-.nz-btn .nz-spin { width: 1em; height: 1em; border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent; display: inline-block; animation: nzSpin .7s linear infinite; }
+/* ---- Cargadores ---- */
+.nz-spin { width: 1em; height: 1em; border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent; display: inline-block; animation: nzSpin .7s linear infinite; }
+.nz-spin--sm { width: .75em; height: .75em; border-width: 1.5px; }
+.nz-spin--lg { width: 1.5em; height: 1.5em; border-width: 3px; }
+.nz-spin--brand { color: var(--nz-brand); }
+.nz-spin--accent { color: var(--nz-accent); }
 @keyframes nzSpin { to { transform: rotate(360deg); } }
-.nz-btn.is-busy { opacity: .8; pointer-events: none; }
-.nz-btn.is-ok { background: var(--nz-success) !important; box-shadow: none; }
 
 /* ---- Enlace-acción ---- */
 .nz-cta { display: inline-flex; align-items: center; gap: var(--nz-space-2); color: var(--nz-brand); font-weight: 700; font-size: var(--nz-text-base); text-decoration: none; }
@@ -70,13 +131,24 @@
 .nz-cta__arrow { transition: transform var(--nz-dur-base) var(--nz-ease-out); }
 .nz-cta:hover .nz-cta__arrow { transform: translateX(4px); }
 .nz-cta--accent { color: var(--nz-accent); }
-
-/* ---- Botón de texto (link-button) ---- */
-.nz-btn--text { background: none; color: var(--nz-brand); padding: 0 var(--nz-space-2); }
-.nz-btn--text:hover { background: var(--nz-brand-soft); color: var(--nz-brand-strong); transform: none; }
-.nz-btn--text.nz-btn--danger-text { color: var(--nz-danger); }
-.nz-btn--text.nz-btn--danger-text:hover { background: var(--nz-danger-soft); }
+.nz-cta--sm { font-size: var(--nz-text-sm); }
+.nz-cta--lg { font-size: var(--nz-text-lg); }
+.nz-cta--muted { color: var(--nz-text-mute); }
+.nz-cta--underline { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---- Toolbar de acciones ---- */
 .nz-toolbar { display: flex; align-items: center; gap: var(--nz-space-2); flex-wrap: wrap; padding: var(--nz-space-3); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
 .nz-toolbar__spacer { flex: 1; }
+.nz-toolbar__group { display: inline-flex; gap: var(--nz-space-1); }
+.nz-toolbar__divider { align-self: stretch; width: 1px; background: var(--nz-border); margin-inline: var(--nz-space-1); }
+.nz-toolbar--compact { padding: var(--nz-space-2); gap: var(--nz-space-1); }
+.nz-toolbar--sticky { position: sticky; top: 0; z-index: var(--nz-z-sticky); }
+.nz-toolbar--brand { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-toolbar--brand .nz-btn--ghost { color: var(--nz-text-invert); box-shadow: inset 0 0 0 var(--nz-border-w-strong) var(--nz-blue-300); }
+
+@media (min-width: 640px) {
+  .nz-toolbar { flex-wrap: nowrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nz-spin { animation-duration: 1.6s; }
+}

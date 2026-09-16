@@ -1,0 +1,19 @@
+/* Aurora 7 — todos los packs en un solo enlace.
+   Para producción se recomienda enlazar solo los packs que uses.
+   Orden: components primero, shell del catálogo al final (no necesario fuera del catálogo). */
+/* No incluye p0-catalog.css: ese es el shell del catálogo, no del sistema. */
+@import url("p1-layout.css");
+@import url("p2-navigation.css");
+@import url("p3-typography.css");
+@import url("p4-actions.css");
+@import url("p5-forms.css");
+@import url("p6-feedback.css");
+@import url("p7-overlays.css");
+@import url("p8-data.css");
+@import url("p9-media.css");
+@import url("p10-commerce.css");
+@import url("p11-social.css");
+@import url("p12-system.css");
+@import url("p13-charts.css");
+@import url("p14-ai.css");
+@import url("p15-apps.css");

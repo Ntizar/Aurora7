@@ -1,0 +1,189 @@
+{
+ "cat": 11,
+ "nombre": "Social y marketing",
+ "desc": "Post y feed, métricas sociales, comentarios, testimonios, CTA banner, equipo, confianza, compartición, menciones y actividad.",
+ "pack": "p11-social.css",
+ "fichero": "11-social.html",
+ "demos": [
+  {
+   "titulo": "Post de feed",
+   "tag": ".nz-post",
+   "markup": "<article class=\"nz-post\"><div class=\"nz-post__head\"><span class=\"nz-avatar nz-avatar--sm\">DA</span><div class=\"nz-post__byline\"><span class=\"nz-post__author\">David Antizar <span class=\"nz-username__check\">✓</span></span><span class=\"nz-post__handle\">@ntizar</span></div><span class=\"nz-post__time\">2 h</span></div><p class=\"nz-post__body\">Aurora 7 ya está online: trescientas clases listas para producción.</p><div class=\"nz-post__foot\"><div class=\"nz-post__actions\"><button class=\"nz-social nz-social--liked\">♥ 12</button><button class=\"nz-social\">↻ 4</button><button class=\"nz-social\">➤</button></div><span class=\"nz-post__reactions\">Ana y 11 más</span><button class=\"nz-post__more\" aria-label=\"Más opciones\">⋯</button></div></article>"
+  },
+  {
+   "titulo": "Post con imagen",
+   "tag": ".nz-post__media",
+   "markup": "<article class=\"nz-post\"><div class=\"nz-post__media\"></div><p class=\"nz-post__body\">La rejilla de sombras del nuevo <a href=\"#\">visor</a>.</p></article>"
+  },
+  {
+   "titulo": "Post compacto",
+   "tag": ".nz-post--compact",
+   "markup": "<article class=\"nz-post nz-post--compact\"><div class=\"nz-post__head\"><span class=\"nz-avatar nz-avatar--xs\">AM</span><span class=\"nz-post__author\">Ana</span><span class=\"nz-post__time\">1 h</span></div><p class=\"nz-post__body\">Versión compacta del mismo objeto.</p></article>"
+  },
+  {
+   "titulo": "Post con borde",
+   "tag": ".nz-post--bordered",
+   "markup": "<article class=\"nz-post nz-post--bordered\"><div class=\"nz-post__head\"><span class=\"nz-avatar nz-avatar--xs\">LM</span><span class=\"nz-post__author\">Luis</span></div><p class=\"nz-post__body\">Sin sombra, con borde: más plano, más denso.</p></article>"
+  },
+  {
+   "titulo": "Post fijado",
+   "tag": ".nz-post--pinned",
+   "markup": "<article class=\"nz-post nz-post--pinned\"><div class=\"nz-post__head\"><span class=\"nz-avatar nz-avatar--xs\">NT</span><span class=\"nz-post__author\">Ntizar</span><span class=\"nz-post__pin\">Fijado</span></div><p class=\"nz-post__body\">Aviso importante de la comunidad, siempre arriba.</p></article>"
+  },
+  {
+   "titulo": "Feed con separador y fin",
+   "tag": ".nz-feed",
+   "markup": "<div class=\"nz-feed\"><span class=\"nz-feed__sep\">Hoy</span><article class=\"nz-post nz-post--compact\"><p class=\"nz-post__body\">Primer post del feed.</p></article><div class=\"nz-feed__loading\"><span class=\"nz-spinner nz-spinner--sm\"></span>Cargando más publicaciones…</div><span class=\"nz-feed__end\">Has llegado al final del feed</span></div>"
+  },
+  {
+   "titulo": "Feed a dos columnas",
+   "tag": ".nz-feed--2col",
+   "markup": "<div class=\"nz-feed nz-feed--2col\"><article class=\"nz-post nz-post--compact\"><p class=\"nz-post__body\">Columna izquierda.</p></article><article class=\"nz-post nz-post--compact\"><p class=\"nz-post__body\">Columna derecha.</p></article></div>"
+  },
+  {
+   "titulo": "Feed denso",
+   "tag": ".nz-feed--tight",
+   "markup": "<div class=\"nz-feed nz-feed--tight\"><article class=\"nz-post nz-post--compact\"><p class=\"nz-post__body\">Sin aire entre tarjetas.</p></article><article class=\"nz-post nz-post--compact\"><p class=\"nz-post__body\">Ideal para hilos largos.</p></article></div>"
+  },
+  {
+   "titulo": "Métricas sociales",
+   "tag": ".nz-social",
+   "markup": "<div class=\"nz-post__actions\"><button class=\"nz-social nz-social--liked\">♥ 128</button><button class=\"nz-social nz-social--saved\">🔖 Guardado</button><button class=\"nz-social nz-social--count\">1.240</button><button class=\"nz-social nz-social--loading\">Enviando</button></div>"
+  },
+  {
+   "titulo": "Comentario raíz",
+   "tag": ".nz-comment · __root",
+   "markup": "<div class=\"nz-comment nz-comment__root\"><span class=\"nz-avatar nz-avatar--sm\">RA</span><div class=\"nz-comment__body\"><div class=\"nz-comment__head\"><span class=\"nz-comment__author\">Ramiro</span><span class=\"nz-comment__time\">hace 1 h</span></div><p class=\"nz-comment__text\">¿Merece la pena el comparador de planes?</p><div class=\"nz-comment__actions\"><button>Responder</button><button>Me gusta</button><span class=\"nz-comment__reactions\">♥ 3</span></div></div></div>"
+  },
+  {
+   "titulo": "Respuesta anidada",
+   "tag": ".nz-comment--reply · __reply",
+   "markup": "<div class=\"nz-comment nz-comment--indent nz-comment--reply\"><span class=\"nz-avatar nz-avatar--xs\">DA</span><div class=\"nz-comment__body\"><span class=\"nz-comment__author\">David</span><p class=\"nz-comment__reply\">Sí: la tabla de precios sale del mismo token.</p><div class=\"nz-comment__actions\"><button>Responder</button></div></div></div>"
+  },
+  {
+   "titulo": "Comentario borrado",
+   "tag": ".nz-comment--deleted",
+   "markup": "<div class=\"nz-comment nz-comment--deleted\"><span class=\"nz-avatar nz-avatar--xs\">··</span><div class=\"nz-comment__body\"><span class=\"nz-comment__author\">Cuenta eliminada</span><p class=\"nz-comment__text\">Este comentario se ha borrado.</p></div></div>"
+  },
+  {
+   "titulo": "Comentario destacado",
+   "tag": ".nz-comment--highlight",
+   "markup": "<div class=\"nz-comment nz-comment--highlight\"><span class=\"nz-avatar nz-avatar--sm\">AM</span><div class=\"nz-comment__body\"><span class=\"nz-comment__author\">Ana</span><p class=\"nz-comment__text\">Comentario fijado por el autor del post.</p></div></div>"
+  },
+  {
+   "titulo": "Testimonio",
+   "tag": ".nz-quote",
+   "markup": "<figure class=\"nz-quote\"><p>“Aurora nos quitó horas de diseño y dejó todo coherente.”</p><figcaption class=\"nz-quote__who\"><span class=\"nz-avatar nz-quote__avatar\">LM</span><span class=\"nz-quote__byline\"><span class=\"nz-quote__name\">Luis Márquez</span><span class=\"nz-quote__role\">CTO · Cliente A</span></span><span class=\"nz-quote__logo\">Cliente A</span></figcaption></figure>"
+  },
+  {
+   "titulo": "Testimonio en marca",
+   "tag": ".nz-quote--brand",
+   "markup": "<figure class=\"nz-quote nz-quote--brand\"><p>“Publicamos diez landings en dos semanas sin tocar CSS nuevo.”</p><figcaption class=\"nz-quote__who\"><span class=\"nz-avatar nz-quote__avatar\">SA</span><span class=\"nz-quote__byline\"><span class=\"nz-quote__name\">Sara Ali</span><span class=\"nz-quote__role\">Producto</span></span></figcaption></figure>"
+  },
+  {
+   "titulo": "Testimonio con acento",
+   "tag": ".nz-quote--accent",
+   "markup": "<figure class=\"nz-quote nz-quote--accent\"><p>“El acento naranja marca lo importante y no compite con el azul.”</p><figcaption class=\"nz-quote__who\"><span class=\"nz-quote__byline\"><span class=\"nz-quote__name\">Equipo Ntizar</span><span class=\"nz-quote__role\">Diseño</span></span></figcaption></figure>"
+  },
+  {
+   "titulo": "Testimonio compacto",
+   "tag": ".nz-quote--sm",
+   "markup": "<figure class=\"nz-quote nz-quote--sm\"><p>“Corta, clara y en un tercio del espacio.”</p><figcaption class=\"nz-quote__who\"><span class=\"nz-quote__byline\"><span class=\"nz-quote__name\">Marta</span><span class=\"nz-quote__role\">Soporte</span></span></figcaption></figure>"
+  },
+  {
+   "titulo": "CTA banner",
+   "tag": ".nz-cta-banner",
+   "markup": "<div class=\"nz-cta-banner\"><span class=\"nz-cta-banner__eyebrow\">Design system</span><h3 class=\"nz-cta-banner__title\">Empieza gratis</h3><p class=\"nz-cta-banner__body\">Monta tu web con Aurora 7 y cambia de tema sin tocar una línea.</p><div class=\"nz-cta-banner__actions\"><a class=\"nz-btn\" href=\"#\">Crear cuenta</a><a class=\"nz-btn nz-btn--ghost\" href=\"#\">Ver documentación</a></div><button class=\"nz-cta-banner__close\" aria-label=\"Cerrar aviso\">✕</button></div>"
+  },
+  {
+   "titulo": "CTA banner en marca fuerte",
+   "tag": ".nz-cta-banner--brand",
+   "markup": "<div class=\"nz-cta-banner nz-cta-banner--brand\"><span class=\"nz-cta-banner__eyebrow\">Oferta anual</span><h3 class=\"nz-cta-banner__title\">Dos meses gratis</h3><p class=\"nz-cta-banner__body\">Paga anual y quédate con el plan Pro a precio de hace un año.</p><div class=\"nz-cta-banner__actions\"><a class=\"nz-btn\" href=\"#\">Aprovecharlo</a></div><button class=\"nz-cta-banner__close\" aria-label=\"Cerrar aviso\">✕</button></div>"
+  },
+  {
+   "titulo": "CTA banner con acento",
+   "tag": ".nz-cta-banner--accent",
+   "markup": "<div class=\"nz-cta-banner nz-cta-banner--accent\"><span class=\"nz-cta-banner__eyebrow\">Solo hoy</span><h3 class=\"nz-cta-banner__title\">Rebajas del taller</h3><p class=\"nz-cta-banner__body\">El acento es para lo urgente, nunca para el mensaje principal.</p><div class=\"nz-cta-banner__actions\"><a class=\"nz-btn\" href=\"#\">Ver ofertas</a></div></div>"
+  },
+  {
+   "titulo": "CTA banner compacto",
+   "tag": ".nz-cta-banner--sm",
+   "markup": "<div class=\"nz-cta-banner nz-cta-banner--sm\"><h3 class=\"nz-cta-banner__title\">Suscríbete</h3><div class=\"nz-cta-banner__actions\"><a class=\"nz-btn\" href=\"#\">Al boletín</a></div></div>"
+  },
+  {
+   "titulo": "CTA banner con borde",
+   "tag": ".nz-cta-banner--bordered",
+   "markup": "<div class=\"nz-cta-banner nz-cta-banner--bordered\"><span class=\"nz-cta-banner__eyebrow\">Newsletter</span><h3 class=\"nz-cta-banner__title\">Un correo al mes</h3><p class=\"nz-cta-banner__body\">Sin relleno: objetos nuevos y decisiones de diseño.</p><div class=\"nz-cta-banner__actions\"><a class=\"nz-btn\" href=\"#\">Apuntarme</a></div></div>"
+  },
+  {
+   "titulo": "Equipo",
+   "tag": ".nz-team",
+   "markup": "<div class=\"nz-team\"><div class=\"nz-team__member\"><span class=\"nz-avatar nz-avatar--xl nz-team__avatar\">DA</span><span class=\"nz-team__name\">David Antizar</span><span class=\"nz-team__role\">Diseño y sistema</span><span class=\"nz-team__bio\">Autor de Aurora 7.</span><span class=\"nz-team__social\"><a href=\"#\" aria-label=\"Perfil uno\">in</a><a href=\"#\" aria-label=\"Perfil dos\">𝕏</a></span></div><div class=\"nz-team__member\"><span class=\"nz-avatar nz-avatar--xl nz-team__avatar\">AM</span><span class=\"nz-team__name\">Ana Molina</span><span class=\"nz-team__role\">Frontend</span><span class=\"nz-team__bio\">Tokens y accesibilidad.</span><span class=\"nz-team__social\"><a href=\"#\" aria-label=\"Perfil tres\">in</a></span></div></div>"
+  },
+  {
+   "titulo": "Logos de confianza",
+   "tag": ".nz-trust",
+   "markup": "<div class=\"nz-trust\"><span class=\"nz-trust__logo\">★ Cliente A</span><span class=\"nz-trust__logo\">◆ Cliente B</span><span class=\"nz-trust__logo\">● Cliente C</span></div>"
+  },
+  {
+   "titulo": "Confianza con borde y valoración",
+   "tag": ".nz-trust--bordered · __stars",
+   "markup": "<div class=\"nz-trust nz-trust--bordered\"><span class=\"nz-trust__stars\">★★★★★</span><span class=\"nz-trust__logo\">◆ Cliente B</span><span class=\"nz-trust__logo\">● Cliente C</span></div>"
+  },
+  {
+   "titulo": "Logos en pequeño",
+   "tag": ".nz-trust--sm",
+   "markup": "<div class=\"nz-trust nz-trust--sm\"><span class=\"nz-trust__logo\">★ A</span><span class=\"nz-trust__logo\">◆ B</span><span class=\"nz-trust__logo\">● C</span><span class=\"nz-trust__logo\">■ D</span></div>"
+  },
+  {
+   "titulo": "Barra de compartir",
+   "tag": ".nz-share",
+   "markup": "<div class=\"nz-share\"><span class=\"nz-share__label\">Compartir</span><button aria-label=\"Compartir en X\">𝕏</button><button aria-label=\"Compartir en LinkedIn\">in</button><button aria-label=\"Compartir por correo\">✉</button><span class=\"nz-share__count\">24</span></div>"
+  },
+  {
+   "titulo": "Compartir en vertical",
+   "tag": ".nz-share--vertical",
+   "markup": "<div class=\"nz-share nz-share--vertical\"><button aria-label=\"Compartir en X\">𝕏</button><button aria-label=\"Compartir en LinkedIn\">in</button><button aria-label=\"Copiar enlace\">🔗</button></div>"
+  },
+  {
+   "titulo": "Compartir en marca",
+   "tag": ".nz-share--brand",
+   "markup": "<div class=\"nz-share nz-share--brand\"><button aria-label=\"Compartir en X\">𝕏</button><button aria-label=\"Compartir en LinkedIn\">in</button><span class=\"nz-share__count\">24</span></div>"
+  },
+  {
+   "titulo": "Compartir copiando enlace",
+   "tag": ".nz-share--copy",
+   "markup": "<div class=\"nz-share nz-share--copy\"><button>🔗 <span class=\"nz-share__label\">Copiar enlace</span></button><button>✉ <span class=\"nz-share__label\">Correo</span></button></div>"
+  },
+  {
+   "titulo": "Usuario con verificación",
+   "tag": ".nz-username",
+   "markup": "<div class=\"nz-stack nz-stack--sm\"><span class=\"nz-username\"><span class=\"nz-avatar nz-avatar--xs\">DA</span><span class=\"nz-username__name\">David Antizar</span><span class=\"nz-username__handle\">@ntizar</span></span><span class=\"nz-username nz-username--verified\"><span class=\"nz-avatar nz-avatar--xs\">NT</span><span class=\"nz-username__name\">Ntizar</span><span class=\"nz-username__handle\">@ntizar</span></span></div>"
+  },
+  {
+   "titulo": "Menciones y etiquetas",
+   "tag": ".nz-mention · .nz-hashtag",
+   "markup": "<p class=\"nz-post__body\">Gracias a <a class=\"nz-mention\" href=\"#\">@ana</a> y a <a class=\"nz-mention nz-mention--accent\" href=\"#\">@luis</a> por el repaso. Etiquetas: <a class=\"nz-hashtag\" href=\"#\">#designsystem</a> <a class=\"nz-hashtag nz-hashtag--accent\" href=\"#\">#accesibilidad</a></p>"
+  },
+  {
+   "titulo": "Prueba social",
+   "tag": ".nz-social-proof",
+   "markup": "<div class=\"nz-social-proof\"><span class=\"nz-social-proof__avatars\"><span class=\"nz-avatar nz-avatar--xs\">AM</span><span class=\"nz-avatar nz-avatar--xs\">LM</span><span class=\"nz-avatar nz-avatar--xs\">SA</span></span><span class=\"nz-social-proof__text\">A <b>1.240</b> personas les gusta esto</span></div>"
+  },
+  {
+   "titulo": "Actividad reciente",
+   "tag": ".nz-activity",
+   "markup": "<ul class=\"nz-activity\"><li class=\"nz-activity__item\"><span class=\"nz-activity__icon\">♥</span><span>Ana guardó tu post</span><span class=\"nz-activity__time\">hace 5 min</span></li><li class=\"nz-activity__item\"><span class=\"nz-activity__icon\">↻</span><span>Luis lo compartió</span><span class=\"nz-activity__time\">hace 1 h</span></li></ul>"
+  },
+  {
+   "titulo": "Notificación social",
+   "tag": ".nz-notif",
+   "markup": "<div class=\"nz-notif\"><span class=\"nz-notif__icon\">♥</span><div class=\"nz-notif__body\"><span class=\"nz-notif__title\">Nuevo me gusta</span><span class=\"nz-notif__desc\">Ana ha reaccionado a tu último post.</span></div><span class=\"nz-notif__actions\"><button class=\"nz-btn nz-btn--text nz-btn--sm\">Ver</button></span></div>"
+  },
+  {
+   "titulo": "Notificación en marca",
+   "tag": ".nz-notif--brand",
+   "markup": "<div class=\"nz-notif nz-notif--brand\"><span class=\"nz-notif__icon\">✓</span><div class=\"nz-notif__body\"><span class=\"nz-notif__title\">Publicación programada</span><span class=\"nz-notif__desc\">Sale mañana a las 9:00.</span></div><span class=\"nz-notif__actions\"><button class=\"nz-btn nz-btn--text nz-btn--sm\">Editar</button></span></div>"
+  }
+ ]
+}

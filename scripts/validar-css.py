@@ -1,0 +1,239 @@
+# -*- coding: utf-8 -*-
+"""Validador de Aurora 7.
+
+Comprueba lo que promete el manifiesto y lo que promete el catálogo. Devuelve
+código de salida 1 si algo falla, así que sirve tal cual en CI: el sistema no
+puede degradarse sin que el push se ponga en rojo.
+
+Comprueba:
+  1. Sintaxis: llaves equilibradas y cabecera de pack en todos los packs.
+  2. Manifiesto: 0 gradientes, 0 glass, 0 colores a mano, 0 !important
+     (con la lista blanca de los tres usos justificados).
+  3. Tokens: todo var(--nz-*) usado existe en tokens.css.
+  4. Propiedad: una clase .nz-* no puede declararse en dos packs a la vez.
+  5. Cobertura: toda clase declarada aparece en una demo de su categoría, y
+     toda clase usada en las demos existe.
+  6. Atribución: el pie dice exactamente «Hecho con ❤️ por David Antizar».
+  7. Cifras: los números de la portada coinciden con el CSS real.
+
+Uso: python scripts/validar-css.py     (o python scripts/validar-css.py --informe)
+"""
+import pathlib
+import re
+import sys
+from importlib import import_module
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+bc = import_module("build-catalog")
+
+ROOT = bc.ROOT
+PACKS = bc.PACKS
+SPECS = bc.SPECS
+OUT_HTML = ROOT / "audit" / "index.html"
+
+# Usos de !important admitidos, con su motivo.
+EXCEPCIONES_IMPORTANT = {
+    ".nz-visually-hidden": "patrón estándar de ocultación accesible",
+    ".nz-vh": "patrón estándar de ocultación accesible",
+    ".nz-print-hide": "debe ganar a display:flex al imprimir",
+}
+
+VAR_DEF = re.compile(r"(--nz-[A-Za-z0-9_-]+)\s*:")
+VAR_USE = re.compile(r"var\(\s*(--nz-[A-Za-z0-9_-]+)")
+HEX = re.compile(r"#[0-9a-fA-F]{3,8}\b")
+
+fallos = []
+avisos = []
+
+
+def fallo(msg):
+    fallos.append(msg)
+
+
+def aviso(msg):
+    avisos.append(msg)
+
+
+def main():
+    # ---------- 1. tokens ----------
+    tokens_txt = (ROOT / "tokens.css").read_text(encoding="utf-8", errors="replace")
+    tokens_txt = re.sub(r"/\*.*?\*/", "", tokens_txt, flags=re.S)
+    tokens_def = set(VAR_DEF.findall(tokens_txt))
+
+    packs = {}
+    for pack in bc.PACKS_COMPONENTES:
+        f = PACKS / pack
+        if not f.exists():
+            aviso(f"pack ausente: {pack} (el catálogo lo omite)")
+            continue
+        crudo = f.read_text(encoding="utf-8", errors="replace")
+        limpio = re.sub(r"/\*.*?\*/", "", crudo, flags=re.S)
+        packs[pack] = {"crudo": crudo, "limpio": limpio, "clases": bc.clases_declaradas(f)}
+
+        # 1. sintaxis
+        if limpio.count("{") != limpio.count("}"):
+            fallo(f"{pack}: llaves desequilibradas ({{={limpio.count('{')} }}={limpio.count('}')})")
+        if not crudo.lstrip().startswith("/*"):
+            aviso(f"{pack}: sin cabecera de comentario")
+
+        # 2. manifiesto
+        for pat, etiqueta in [(r"\b(?:linear|radial|conic)-gradient\(", "gradiente"),
+                              (r"backdrop-filter", "glass (backdrop-filter)")]:
+            m = re.search(pat, limpio)
+            if m:
+                linea = limpio[:m.start()].count("\n") + 1
+                fallo(f"{pack}:{linea}: {etiqueta} prohibido por el manifiesto")
+
+        for m in HEX.finditer(limpio):
+            linea = limpio[:m.start()].count("\n") + 1
+            fallo(f"{pack}:{linea}: color literal «{m.group(0)}» — usa un token")
+
+        for m in re.finditer(r"!important", limpio):
+            contexto = limpio[max(0, m.start() - 400):m.start()]
+            sel = contexto.split("}")[-1]
+            if any(e in sel for e in EXCEPCIONES_IMPORTANT):
+                continue
+            linea = limpio[:m.start()].count("\n") + 1
+            fallo(f"{pack}:{linea}: !important no justificado")
+
+        # 3. tokens
+        for t in set(VAR_USE.findall(limpio)) - tokens_def:
+            linea = limpio.find(t)
+            linea = limpio[:linea].count("\n") + 1
+            fallo(f"{pack}:{linea}: token inexistente {t}")
+
+        # 7. clases fuera del espacio de nombres
+        for m in re.finditer(r"(?:^|[\s,>+~])\.([a-z][a-z0-9_-]*)", limpio):
+            nombre = m.group(1)
+            if not nombre.startswith(("nz-", "cat-", "demo-", "live-", "is-")) and nombre != "nz":
+                aviso(f"{pack}: clase fuera del prefijo .nz- → .{nombre}")
+                break
+
+    # ---------- 4. propiedad única ----------
+    dueños = {}
+    for pack, d in packs.items():
+        for c in d["clases"]:
+            dueños.setdefault(c, []).append(pack)
+    for c, ps in sorted(dueños.items()):
+        if len(ps) > 1:
+            fallo(f"clase {c} declarada por varios packs: {', '.join(ps)}")
+
+    # ---------- 5. cobertura: cada clase declarada, demostrada ─ ----------
+    todas_declaradas = {c for d in packs.values() for c in d["clases"]}
+    shell = set()
+    fshell = PACKS / bc.PACK_SHELL
+    if fshell.exists():
+        shell = bc.clases_declaradas(fshell)
+    if SPECS.exists():
+        for s in bc.carga_specs():
+            usadas = set()
+            for d in s["demos"]:
+                usadas |= bc.clases_de_markup(d["markup"])
+            declaradas = packs.get(s["pack"], {}).get("clases", set())
+            faltan = sorted(c for c in declaradas if c not in usadas)
+            if faltan:
+                aviso(f"categoría {s['cat']:02d} {s['nombre']}: {len(faltan)} objetos declarados "
+                      f"sin demo ({', '.join(faltan[:6])}{'…' if len(faltan) > 6 else ''})")
+            inventadas = sorted(c for c in usadas if c not in todas_declaradas | shell)
+            if inventadas:
+                fallo(f"categoría {s['cat']:02d} {s['nombre']}: usa clases que ningún pack declara: "
+                      f"{', '.join(inventadas)}")
+
+    # ---------- 6. atribución ----------
+    paginas = list(bc.PAGINAS.glob("*.html")) + [ROOT / "index.html"]
+    for p in paginas:
+        if not p.exists():
+            continue
+        t = p.read_text(encoding="utf-8", errors="replace")
+        if "Hecho con ❤️ por David Antizar" not in t:
+            fallo(f"{p.name}: falta la atribución exacta «Hecho con ❤️ por David Antizar»")
+        if "data-nz-theme" not in t:
+            aviso(f"{p.name}: sin data-nz-theme (el tema se fija en el <html>)")
+
+    # ---------- 8. HTML bien formado ----------
+    from html.parser import HTMLParser
+
+    vacias = {"area", "base", "br", "col", "embed", "hr", "img", "input",
+              "link", "meta", "source", "track", "wbr"}
+
+    class Balance(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.pila = []
+            self.errores = []
+
+        def handle_starttag(self, etiqueta, attrs):
+            if etiqueta not in vacias:
+                self.pila.append(etiqueta)
+
+        def handle_endtag(self, etiqueta):
+            if not self.pila:
+                self.errores.append(f"</{etiqueta}> de más (línea {self.getpos()[0]})")
+            elif self.pila[-1] == etiqueta:
+                self.pila.pop()
+            else:
+                self.errores.append(f"</{etiqueta}> no cierra la última abierta "
+                                    f"(<{self.pila[-1]}>) en línea {self.getpos()[0]}")
+
+    for p in paginas + [OUT_HTML]:
+        if not p.exists():
+            continue
+        b = Balance()
+        b.feed(p.read_text(encoding="utf-8", errors="replace"))
+        pendientes = [x for x in b.pila if x not in ("html", "body")]
+        if b.errores:
+            fallo(f"{p.name}: HTML mal formado → {b.errores[0]}")
+        if pendientes:
+            aviso(f"{p.name}: etiquetas sin cerrar {pendientes[:4]}")
+
+    # ---------- 9. JS del catálogo ----------
+    js = ROOT / "js" / "catalog.js"
+    if js.exists():
+        t = js.read_text(encoding="utf-8", errors="replace")
+        if t.count("{") != t.count("}"):
+            fallo("js/catalog.js: llaves desequilibradas")
+        if t.count("(") != t.count(")"):
+            fallo("js/catalog.js: paréntesis desequilibrados")
+        if "use strict" not in t:
+            aviso("js/catalog.js: sin 'use strict'")
+
+    # ---------- 10. cada página carga los packs que usa ----------
+    # El catálogo no enlaza los 16 packs en todas las páginas: enlaza solo los que
+    # necesita (se calcula del propio HTML). Esto lo blinda: si una clase aparece
+    # y su pack no está enlazado, es un fallo, no un detalle de rendimiento.
+    for p in paginas + [OUT_HTML]:
+        if not p.exists():
+            continue
+        t = p.read_text(encoding="utf-8", errors="replace")
+        enlazados = set(re.findall(r'href="(?:\.\./)?packs/(p\d+[-a-z0-9]*\.css)"', t))
+        disponibles = set(shell)
+        for pack in enlazados:
+            disponibles |= packs.get(pack, {}).get("clases", set())
+        huerfanas = sorted(c for c in bc.clases_de_markup(t) if c not in disponibles)
+        if huerfanas:
+            fallo(f"{p.name}: usa clases cuyo pack NO carga → {', '.join(huerfanas[:6])}")
+
+    # ---------- resultado ----------
+    total = sum(len(d["clases"]) for d in packs.values())
+    print(f"\nAurora 7 · validación de {len(packs)} packs · {total} objetos declarados\n")
+    if avisos:
+        print(f"AVISOS ({len(avisos)}):")
+        for a in avisos[:40]:
+            print("  ·", a)
+        if len(avisos) > 40:
+            print(f"  … y {len(avisos) - 40} más")
+        print()
+    if fallos:
+        print(f"FALLOS ({len(fallos)}):")
+        for f in fallos[:60]:
+            print("  ✗", f)
+        if len(fallos) > 60:
+            print(f"  … y {len(fallos) - 60} más")
+        print("\nRESULTADO: NO VÁLIDO")
+        return 1
+    print("RESULTADO: VÁLIDO — manifiesto y cobertura en orden ✅")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

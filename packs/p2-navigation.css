@@ -1,21 +1,34 @@
 /* ============================================================
-   AURORA 7 — p2-navigation.css · Categoría 02 · Navegación (50 objetos)
-   Navbar, menús, sidebar, tabs, breadcrumbs, paginación, TOC,
-   dropdown, nav-footer, stepper-nav.
-   Estilo: sólido + sombras, azul/naranja sin fundir, mobile-first.
+   AURORA 7 — p2-navigation.css · Categoría 2 · Navegación (76 objetos)
+   Navbar, menú, sidebar, tabs, breadcrumbs, paginación, TOC,
+   dropdown, nav-footer y stepper. Demostrado en specs/02.json (34 demos).
+   Mobile-first, táctil ≥44px, azul/naranja sin fundir, solo tokens.
+   Cero gradientes, cero glass. Hecho con ❤️ por David Antizar
    ============================================================ */
 
-/* Navbar superior */
+/* ---- 01 Navbar superior ---- */
 .nz-navbar { display: flex; align-items: center; gap: var(--nz-space-3); min-height: 56px; padding: 0 var(--nz-gutter); background: var(--nz-surface); border-bottom: 1px solid var(--nz-border-soft); }
 .nz-navbar__brand { display: flex; align-items: center; gap: var(--nz-space-2); font-weight: 800; letter-spacing: var(--nz-tracking-tight); color: var(--nz-text); }
 .nz-navbar__brand i { width: 10px; height: 10px; border-radius: var(--nz-radius-full); background: var(--nz-brand); }
+.nz-navbar__brand--lg { font-size: var(--nz-text-lg); }
 .nz-navbar__links { display: flex; align-items: center; gap: var(--nz-space-1); margin-left: auto; overflow-x: auto; scrollbar-width: none; }
 .nz-navbar__links::-webkit-scrollbar { display: none; }
 .nz-navbar__link { min-height: 44px; display: inline-flex; align-items: center; padding: 0 var(--nz-space-3); border-radius: var(--nz-radius-full); color: var(--nz-text-soft); font-size: var(--nz-text-sm); font-weight: 600; text-decoration: none; }
 .nz-navbar__link:hover { background: var(--nz-bg-inset); color: var(--nz-text); }
 .nz-navbar__link[aria-current="page"] { background: var(--nz-brand); color: var(--nz-text-invert); }
 
-/* Menú plegable (hamburguesa) — sin JS: checkbox hack */
+/* ---- 02 Variantes de navbar ---- */
+.nz-navbar--compact { min-height: 48px; padding-inline: var(--nz-space-3); }
+.nz-navbar--bordered { border-bottom: var(--nz-border-w-strong) solid var(--nz-border-strong); }
+.nz-navbar--transparent { background: transparent; border-bottom-color: transparent; }
+.nz-navbar--brand { background: var(--nz-brand); border-bottom-color: var(--nz-brand-strong); }
+.nz-navbar--brand .nz-navbar__brand { color: var(--nz-text-invert); }
+.nz-navbar--brand .nz-navbar__brand i { background: var(--nz-accent); }
+.nz-navbar--brand .nz-navbar__link { color: var(--nz-text-invert); }
+.nz-navbar--brand .nz-navbar__link:hover { background: var(--nz-brand-strong); color: var(--nz-text-invert); }
+.nz-navbar--brand .nz-navbar__link[aria-current="page"] { background: var(--nz-text-invert); color: var(--nz-brand); }
+
+/* ---- 03 Menú plegable (hamburguesa, sin JS) ---- */
 .nz-menu { position: relative; }
 .nz-menu > input { position: absolute; opacity: 0; pointer-events: none; }
 .nz-menu__btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--nz-radius-full); border: 0; background: var(--nz-bg-inset); color: var(--nz-text); cursor: pointer; font-size: 1.25rem; }
@@ -24,16 +37,28 @@
 .nz-menu__item { display: flex; align-items: center; gap: var(--nz-space-2); min-height: 44px; padding: 0 var(--nz-space-3); border-radius: var(--nz-radius-sm); color: var(--nz-text-soft); font-size: var(--nz-text-sm); text-decoration: none; }
 .nz-menu__item:hover { background: var(--nz-bg-soft); color: var(--nz-text); }
 .nz-menu__item[aria-current="page"] { color: var(--nz-brand); font-weight: 700; }
+.nz-menu--right { margin-left: auto; }
+.nz-menu__sep { height: 1px; margin: var(--nz-space-1) var(--nz-space-2); background: var(--nz-border-soft); }
+.nz-menu__item--danger { color: var(--nz-danger); }
+.nz-menu__item--danger:hover { background: var(--nz-danger-soft); color: var(--nz-danger); }
+.nz-menu__item--disabled { color: var(--nz-text-faint); pointer-events: none; }
 
-/* Sidebar */
+/* ---- 04 Sidebar de navegación ---- */
 .nz-sidebar { display: flex; flex-direction: column; gap: var(--nz-space-2); padding: var(--nz-space-4); background: var(--nz-surface); border-radius: var(--nz-radius-lg); min-width: 13rem; }
 .nz-sidebar__heading { font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; color: var(--nz-text-faint); padding: var(--nz-space-2) var(--nz-space-3); }
-.nz-sidebar__link { display: flex; align-items: center; gap: var(--nz-space-2); min-height: 40px; padding: 0 var(--nz-space-3); border-radius: var(--nz-radius-sm); color: var(--nz-text-soft); font-size: var(--nz-text-sm); text-decoration: none; }
+.nz-sidebar__link { display: flex; align-items: center; gap: var(--nz-space-2); min-height: 44px; padding: 0 var(--nz-space-3); border-radius: var(--nz-radius-sm); color: var(--nz-text-soft); font-size: var(--nz-text-sm); text-decoration: none; }
 .nz-sidebar__link:hover { background: var(--nz-bg-soft); color: var(--nz-text); }
 .nz-sidebar__link[aria-current="page"] { background: var(--nz-brand); color: var(--nz-text-invert); font-weight: 600; }
-.nz-sidebar__link--count::after { margin-left: auto; font-size: var(--nz-text-2xs); color: var(--nz-text-faint); font-variant-numeric: tabular-nums; }
+.nz-sidebar__link--count::after { content: attr(data-count); margin-left: auto; font-size: var(--nz-text-2xs); color: var(--nz-text-faint); font-variant-numeric: tabular-nums; }
+.nz-sidebar__link--icon { justify-content: center; min-width: 44px; padding-inline: 0; }
+.nz-sidebar__group { display: flex; flex-direction: column; gap: var(--nz-space-1); padding-inline-start: var(--nz-space-3); border-inline-start: 1px solid var(--nz-border-soft); }
+.nz-sidebar--compact { gap: var(--nz-space-1); padding: var(--nz-space-2); }
+.nz-sidebar--bordered { border: var(--nz-border-w) solid var(--nz-border-soft); }
+.nz-sidebar--brand { background: var(--nz-brand-soft); }
+.nz-sidebar--brand .nz-sidebar__heading { color: var(--nz-brand); }
+.nz-sidebar--brand .nz-sidebar__link:not([aria-current="page"]) { color: var(--nz-text); }
 
-/* Tabs */
+/* ---- 05 Tabs ---- */
 .nz-tabs { display: flex; gap: var(--nz-space-1); border-bottom: 1px solid var(--nz-border-soft); overflow-x: auto; scrollbar-width: none; }
 .nz-tabs::-webkit-scrollbar { display: none; }
 .nz-tabs__tab { position: relative; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; padding: 0 var(--nz-space-4); color: var(--nz-text-soft); font-size: var(--nz-text-sm); font-weight: 600; text-decoration: none; border: 0; background: transparent; font-family: inherit; cursor: pointer; }
@@ -41,51 +66,91 @@
 .nz-tabs__tab[aria-selected="true"], .nz-tabs__tab.is-active { color: var(--nz-brand); }
 .nz-tabs__tab[aria-selected="true"]::after, .nz-tabs__tab.is-active::after { content: ""; position: absolute; left: var(--nz-space-3); right: var(--nz-space-3); bottom: -1px; height: 3px; border-radius: var(--nz-radius-full) var(--nz-radius-full) 0 0; background: var(--nz-brand); }
 .nz-tabs__tab--count::before { content: attr(data-count); margin-right: var(--nz-space-2); font-size: var(--nz-text-2xs); padding: .1rem .45rem; border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); color: var(--nz-text-mute); font-variant-numeric: tabular-nums; }
+.nz-tabs__tab--disabled, .nz-tabs__tab[aria-disabled="true"] { color: var(--nz-text-faint); cursor: not-allowed; }
+.nz-tabs__badge { margin-left: var(--nz-space-2); min-width: 1.5rem; height: 1.25rem; display: inline-flex; align-items: center; justify-content: center; padding: 0 var(--nz-space-1); border-radius: var(--nz-radius-full); background: var(--nz-brand); color: var(--nz-text-invert); font-size: var(--nz-text-2xs); font-variant-numeric: tabular-nums; }
+.nz-tabs__panel { padding-block: var(--nz-space-4); color: var(--nz-text-soft); font-size: var(--nz-text-sm); }
+.nz-tabs--center { justify-content: center; }
+.nz-tabs--full .nz-tabs__tab { flex: 1 1 0; justify-content: center; }
+.nz-tabs--underline .nz-tabs__tab[aria-selected="true"], .nz-tabs--underline .nz-tabs__tab.is-active { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: var(--nz-space-2); }
+.nz-tabs--underline .nz-tabs__tab[aria-selected="true"]::after, .nz-tabs--underline .nz-tabs__tab.is-active::after { display: none; }
+.nz-tabs--vertical { flex-direction: column; align-items: stretch; border-bottom: 0; border-inline-start: 1px solid var(--nz-border-soft); overflow-x: visible; }
+.nz-tabs--vertical .nz-tabs__tab { justify-content: flex-start; }
+.nz-tabs--vertical .nz-tabs__tab[aria-selected="true"]::after, .nz-tabs--vertical .nz-tabs__tab.is-active::after { left: -1px; right: auto; top: var(--nz-space-2); bottom: var(--nz-space-2); width: 3px; height: auto; }
 
-/* Pill tabs (mobile, scroll-snap) */
+/* ---- 06 Pill tabs (móvil, scroll horizontal) ---- */
 .nz-tabs--pill { gap: var(--nz-space-2); border: 0; }
 .nz-tabs--pill .nz-tabs__tab { border-radius: var(--nz-radius-full); }
 .nz-tabs--pill .nz-tabs__tab[aria-selected="true"], .nz-tabs--pill .nz-tabs__tab.is-active { background: var(--nz-brand); color: var(--nz-text-invert); }
 .nz-tabs--pill .nz-tabs__tab[aria-selected="true"]::after, .nz-tabs--pill .nz-tabs__tab.is-active::after { display: none; }
+.nz-tabs--pill .nz-tabs__badge { background: var(--nz-text-invert); color: var(--nz-brand); }
 
-/* Breadcrumbs */
+/* ---- 07 Breadcrumbs ---- */
 .nz-breadcrumb { display: flex; align-items: center; gap: var(--nz-space-1); flex-wrap: wrap; padding: var(--nz-space-2) 0; font-size: var(--nz-text-sm); }
-.nz-breadcrumb a { color: var(--nz-text-soft); text-decoration: none; }
+.nz-breadcrumb a { min-height: 44px; display: inline-flex; align-items: center; color: var(--nz-text-soft); text-decoration: none; }
 .nz-breadcrumb a:hover { color: var(--nz-brand); }
 .nz-breadcrumb__sep { color: var(--nz-text-faint); margin: 0 var(--nz-space-1); }
 .nz-breadcrumb [aria-current="page"] { color: var(--nz-text); font-weight: 700; }
+.nz-breadcrumb--compact { font-size: var(--nz-text-xs); padding: 0; }
+.nz-breadcrumb--slash .nz-breadcrumb__sep::before { content: "/"; }
+.nz-breadcrumb--chevron .nz-breadcrumb__sep::before { content: "›"; }
 
-/* Paginación */
+/* ---- 08 Paginación ---- */
 .nz-pagination { display: flex; align-items: center; gap: var(--nz-space-1); flex-wrap: wrap; }
 .nz-pagination a, .nz-pagination button { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 var(--nz-space-3); border-radius: var(--nz-radius-sm); border: 0; background: transparent; color: var(--nz-text-soft); font-weight: 600; font-size: var(--nz-text-sm); text-decoration: none; font-family: inherit; cursor: pointer; }
 .nz-pagination a:hover, .nz-pagination button:hover { background: var(--nz-bg-inset); color: var(--nz-text); }
-.nz-pagination [aria-current="page"], .nz-pagination .is-current { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-pagination [aria-current="page"], .nz-pagination [aria-current="true"] { background: var(--nz-brand); color: var(--nz-text-invert); }
 .nz-pagination__ellipsis { padding: 0 var(--nz-space-1); color: var(--nz-text-faint); }
+.nz-pagination__status { padding-inline: var(--nz-space-2); color: var(--nz-text-mute); font-size: var(--nz-text-sm); font-variant-numeric: tabular-nums; }
+.nz-pagination--simple { gap: var(--nz-space-2); }
+.nz-pagination--sm { gap: 0; }
+.nz-pagination--sm a, .nz-pagination--sm button { padding: 0 var(--nz-space-2); font-size: var(--nz-text-xs); }
+.nz-pagination--lg a, .nz-pagination--lg button { padding: 0 var(--nz-space-4); font-size: var(--nz-text-base); }
+@media (min-width: 640px) {
+  .nz-pagination--sm a, .nz-pagination--sm button { min-width: 36px; min-height: 36px; }
+  .nz-pagination--lg a, .nz-pagination--lg button { min-width: 52px; min-height: 52px; }
+}
 
-/* Indice de contenidos (TOC) */
+/* ---- 09 Índice de contenidos (TOC) ---- */
 .nz-toc { display: flex; flex-direction: column; gap: var(--nz-space-1); padding: var(--nz-space-4); background: var(--nz-surface); border-radius: var(--nz-radius-lg); box-shadow: var(--nz-shadow-sm); }
 .nz-toc__title { font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; color: var(--nz-text-faint); margin-bottom: var(--nz-space-2); }
-.nz-toc a { display: flex; color: var(--nz-text-soft); text-decoration: none; padding: var(--nz-space-2) var(--nz-space-2); border-left: 3px solid transparent; border-radius: var(--nz-radius-sm); font-size: var(--nz-text-sm); }
+.nz-toc__title--brand { color: var(--nz-brand); }
+.nz-toc a { display: flex; min-height: 44px; align-items: center; color: var(--nz-text-soft); text-decoration: none; padding: var(--nz-space-2) var(--nz-space-2); border-left: 3px solid transparent; border-radius: var(--nz-radius-sm); font-size: var(--nz-text-sm); }
 .nz-toc a:hover { background: var(--nz-bg-soft); color: var(--nz-text); }
 .nz-toc a[aria-current="location"] { border-left-color: var(--nz-brand); color: var(--nz-brand); font-weight: 600; }
 .nz-toc a.nz-toc--level2 { padding-left: var(--nz-space-5); font-size: var(--nz-text-xs); }
+.nz-toc--compact { gap: 0; padding: var(--nz-space-2); }
+.nz-toc--compact a { min-height: 44px; padding-block: var(--nz-space-1); font-size: var(--nz-text-xs); }
+@media (min-width: 640px) { .nz-toc--compact a { min-height: 36px; } }
+.nz-toc--sticky { position: sticky; top: var(--nz-space-6); }
 
-/* Dropdown select */
+/* ---- 10 Dropdown select ---- */
 .nz-dropdown { position: relative; }
 .nz-dropdown > input { position: absolute; opacity: 0; pointer-events: none; }
 .nz-dropdown__btn { min-height: 44px; display: inline-flex; align-items: center; gap: var(--nz-space-2); padding: 0 var(--nz-space-4); border-radius: var(--nz-radius-full); border: 1px solid var(--nz-border); background: var(--nz-surface); color: var(--nz-text); font-weight: 600; font-family: inherit; cursor: pointer; font-size: var(--nz-text-sm); }
 .nz-dropdown__btn::after { content: "▾"; font-size: var(--nz-text-xs); color: var(--nz-text-faint); }
+.nz-dropdown__btn--icon { padding: 0; min-width: 44px; justify-content: center; gap: 0; }
 .nz-dropdown__list { position: absolute; top: calc(100% + var(--nz-space-2)); left: 0; min-width: 12rem; padding: var(--nz-space-2); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-lg); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: transform var(--nz-dur-base) var(--nz-ease-out), opacity var(--nz-dur-base) var(--nz-ease-out), visibility var(--nz-dur-base); }
 .nz-dropdown > input:checked ~ .nz-dropdown__list { opacity: 1; visibility: visible; transform: none; }
+.nz-dropdown__list--divided > * + * { border-top: 1px solid var(--nz-border-soft); border-radius: 0; }
+.nz-dropdown--end .nz-dropdown__list { left: auto; right: 0; }
+.nz-dropdown--wide .nz-dropdown__list { min-width: 18rem; }
 
-/* Footer nav */
+/* ---- 11 Nav footer ---- */
 .nz-navfooter { display: flex; flex-wrap: wrap; gap: var(--nz-space-2) var(--nz-space-6); padding: var(--nz-space-6) 0; }
 .nz-navfooter__col { min-width: 7rem; display: flex; flex-direction: column; gap: var(--nz-space-2); }
 .nz-navfooter__title { font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; color: var(--nz-text-faint); }
-.nz-navfooter a { color: var(--nz-text-soft); text-decoration: none; font-size: var(--nz-text-sm); }
+.nz-navfooter__title--brand { color: var(--nz-brand); }
+.nz-navfooter a { min-height: 44px; display: inline-flex; align-items: center; color: var(--nz-text-soft); text-decoration: none; font-size: var(--nz-text-sm); }
 .nz-navfooter a:hover { color: var(--nz-brand); }
+.nz-navfooter__bottom { flex-basis: 100%; grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: var(--nz-space-2) var(--nz-space-4); padding-top: var(--nz-space-4); border-top: 1px solid var(--nz-border-soft); color: var(--nz-text-mute); font-size: var(--nz-text-xs); }
+.nz-navfooter--compact { padding: var(--nz-space-4) 0; gap: var(--nz-space-1) var(--nz-space-4); }
+.nz-navfooter--2col, .nz-navfooter--3col { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--nz-space-3); }
+@media (min-width: 640px) {
+  .nz-navfooter--2col, .nz-navfooter--3col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 960px) { .nz-navfooter--3col { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
-/* Stepper de navegación (proceso) */
+/* ---- 12 Stepper de navegación (proceso) ---- */
 .nz-stepper { display: flex; align-items: center; gap: var(--nz-space-2); overflow-x: auto; scrollbar-width: none; }
 .nz-stepper::-webkit-scrollbar { display: none; }
 .nz-stepper__step { display: flex; align-items: center; gap: var(--nz-space-2); white-space: nowrap; color: var(--nz-text-faint); font-size: var(--nz-text-sm); font-weight: 600; }
@@ -93,8 +158,10 @@
 .nz-stepper__step.is-active { color: var(--nz-text); }
 .nz-stepper__step.is-active .nz-stepper__num { background: var(--nz-brand); color: var(--nz-text-invert); }
 .nz-stepper__step.is-done .nz-stepper__num { background: var(--nz-success); color: var(--nz-text-invert); }
+.nz-stepper__step--error { color: var(--nz-danger); }
+.nz-stepper__step--error .nz-stepper__num { background: var(--nz-danger); color: var(--nz-text-invert); }
 .nz-stepper__link { color: var(--nz-text-faint); }
-
-/* Skip link (accesible, fuera de pantalla hasta focus) */
-.nz-skip { position: absolute; left: var(--nz-space-4); top: -100px; z-index: var(--nz-z-tooltip); padding: var(--nz-space-3) var(--nz-space-4); border-radius: var(--nz-radius-sm); background: var(--nz-brand); color: var(--nz-text-invert); font-weight: 700; transition: top var(--nz-dur-fast) var(--nz-ease-out); }
-.nz-skip:focus { top: var(--nz-space-4); }
+.nz-stepper--compact { gap: var(--nz-space-1); }
+.nz-stepper--compact .nz-stepper__step { font-size: var(--nz-text-xs); min-height: 44px; }
+.nz-stepper--compact .nz-stepper__num { min-width: 22px; height: 22px; }
+.nz-stepper--vertical { flex-direction: column; align-items: flex-start; gap: var(--nz-space-3); overflow-x: visible; }

@@ -1,0 +1,270 @@
+/* ============================================================
+   AURORA 7 — p13-charts.css · Categoría 13 · Gráficos y visualización
+   Visualización de datos sin librerías: barras, línea, área, donut,
+   medidor, mapa de calor, calendario de calor, treemap, embudo, bullet,
+   radar, dispersión, cascada y diagrama de flujo.
+   Las formas que el CSS no dibuja van en SVG inline ESTILIZADO POR CLASES
+   (fill/stroke en el CSS, nunca en el atributo). Cero gradientes, cero glass.
+   Todo el color sale de tokens, así que el modo oscuro funciona solo.
+   ============================================================ */
+
+/* ---- Tarjeta de gráfico ---- */
+.nz-chart { display: flex; flex-direction: column; gap: var(--nz-space-3); padding: var(--nz-space-4); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-chart--bordered { box-shadow: none; border: var(--nz-border-w) solid var(--nz-border); }
+.nz-chart--flat { box-shadow: none; background: var(--nz-bg-soft); }
+.nz-chart--sm { padding: var(--nz-space-3); gap: var(--nz-space-2); }
+.nz-chart--lg { padding: var(--nz-space-6); gap: var(--nz-space-4); }
+.nz-chart__head { display: flex; align-items: flex-start; gap: var(--nz-space-3); flex-wrap: wrap; }
+.nz-chart__title { font-size: var(--nz-text-md); font-weight: 700; letter-spacing: var(--nz-tracking-tight); }
+.nz-chart__sub { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-chart__actions { margin-left: auto; display: flex; gap: var(--nz-space-2); align-items: center; }
+.nz-chart__body { position: relative; min-height: 8rem; }
+.nz-chart__grid { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; pointer-events: none; }
+.nz-chart__grid-line { border-top: var(--nz-border-w) solid var(--nz-border-soft); }
+.nz-chart__axis { display: flex; justify-content: space-between; font-size: var(--nz-text-2xs); color: var(--nz-text-faint); padding-top: var(--nz-space-1); }
+.nz-chart__axis-label { color: var(--nz-text-mute); font-size: var(--nz-text-2xs); }
+.nz-chart__target { position: absolute; left: 0; right: 0; border-top: 1px dashed var(--nz-border-strong); }
+.nz-chart__target--accent { border-top-color: var(--nz-accent); }
+.nz-chart__mark { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--nz-text); opacity: .5; }
+.nz-chart__mark-label { position: absolute; top: 0; transform: translateX(-50%); font-size: var(--nz-text-2xs); color: var(--nz-text-soft); white-space: nowrap; }
+.nz-chart__foot { display: flex; gap: var(--nz-space-3); align-items: center; flex-wrap: wrap; }
+.nz-chart__source { font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+.nz-chart__empty { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--nz-space-1); min-height: 8rem; color: var(--nz-text-mute); font-size: var(--nz-text-sm); text-align: center; }
+.nz-chart__loading { display: flex; align-items: center; justify-content: center; gap: var(--nz-space-2); min-height: 8rem; color: var(--nz-text-mute); font-size: var(--nz-text-sm); }
+
+/* ---- Leyenda ---- */
+.nz-legend { display: flex; flex-wrap: wrap; gap: var(--nz-space-2) var(--nz-space-4); }
+.nz-legend--vertical { flex-direction: column; gap: var(--nz-space-1); }
+.nz-legend__item { display: inline-flex; align-items: center; gap: var(--nz-space-2); font-size: var(--nz-text-xs); color: var(--nz-text-soft); }
+.nz-legend__swatch { width: 10px; height: 10px; border-radius: var(--nz-radius-xs); background: var(--nz-border-strong); flex: none; }
+.nz-legend__swatch--brand { background: var(--nz-brand); }
+.nz-legend__swatch--accent { background: var(--nz-accent); }
+.nz-legend__swatch--success { background: var(--nz-success); }
+.nz-legend__swatch--warning { background: var(--nz-warning); }
+.nz-legend__swatch--danger { background: var(--nz-danger); }
+.nz-legend__swatch--muted { background: var(--nz-border-strong); }
+
+/* ---- Barras verticales ---- */
+.nz-chart-bar { display: flex; align-items: flex-end; gap: var(--nz-space-2); min-height: 8rem; }
+.nz-chart-bar--sm { min-height: 5rem; }
+.nz-chart-bar--lg { min-height: 12rem; }
+.nz-chart-bar__col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: var(--nz-space-1); height: 100%; }
+.nz-chart-bar__bar { width: 100%; max-width: 3rem; border-radius: var(--nz-radius-sm) var(--nz-radius-sm) 0 0; background: var(--nz-brand); min-height: 2px; transition: transform var(--nz-dur-base) var(--nz-ease-out); }
+.nz-chart-bar__col:hover .nz-chart-bar__bar { transform: scaleY(1.02); transform-origin: bottom; }
+.nz-chart-bar__bar--brand { background: var(--nz-brand); }
+.nz-chart-bar__bar--accent { background: var(--nz-accent); }
+.nz-chart-bar__bar--success { background: var(--nz-success); }
+.nz-chart-bar__bar--warning { background: var(--nz-warning); }
+.nz-chart-bar__bar--danger { background: var(--nz-danger); }
+.nz-chart-bar__bar--muted { background: var(--nz-border-strong); }
+.nz-chart-bar__value { font-size: var(--nz-text-2xs); font-weight: 700; color: var(--nz-text-soft); font-variant-numeric: tabular-nums; }
+.nz-chart-bar__label { font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+.nz-chart-bar--grouped .nz-chart-bar__col { flex-direction: row; align-items: flex-end; justify-content: center; gap: var(--nz-space-1); }
+.nz-chart-bar__group { display: flex; align-items: flex-end; gap: 2px; width: 100%; height: 100%; justify-content: center; }
+.nz-chart-bar--stacked .nz-chart-bar__bar { display: flex; flex-direction: column-reverse; border-radius: 0; padding: 0; overflow: hidden; background: transparent; }
+.nz-chart-bar__seg { display: block; width: 100%; background: var(--nz-brand); }
+.nz-chart-bar__seg--brand { background: var(--nz-brand); }
+.nz-chart-bar__seg--accent { background: var(--nz-accent); }
+.nz-chart-bar__seg--muted { background: var(--nz-border-strong); }
+.nz-chart-bar--stacked .nz-chart-bar__bar > :first-child { border-radius: 0 0 var(--nz-radius-sm) var(--nz-radius-sm); }
+.nz-chart-bar--stacked .nz-chart-bar__bar > :last-child { border-radius: var(--nz-radius-sm) var(--nz-radius-sm) 0 0; }
+.nz-chart-bar--neg { align-items: stretch; }
+.nz-chart-bar__zero { border-top: 1px solid var(--nz-border); width: 100%; }
+.nz-chart-bar--horizontal { flex-direction: column; min-height: 0; }
+.nz-chart-bar--horizontal .nz-chart-bar__col { flex-direction: row; align-items: center; justify-content: flex-start; gap: var(--nz-space-2); width: 100%; height: auto; min-height: 24px; }
+.nz-chart-bar--horizontal .nz-chart-bar__bar { height: 12px; max-width: none; border-radius: 0 var(--nz-radius-sm) var(--nz-radius-sm) 0; }
+.nz-chart-bar--horizontal .nz-chart-bar__label { width: 5rem; flex: none; text-align: right; color: var(--nz-text-soft); }
+
+/* ---- Línea y área (SVG estilizado por clases) ---- */
+.nz-chart-line { position: relative; }
+.nz-chart-line__svg { width: 100%; height: 10rem; display: block; overflow: visible; }
+.nz-chart-line--sm .nz-chart-line__svg { height: 6rem; }
+.nz-chart-line--lg .nz-chart-line__svg { height: 14rem; }
+.nz-chart-line__area { fill: var(--nz-brand-soft); stroke: none; }
+.nz-chart-line__path { fill: none; stroke: var(--nz-brand); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.nz-chart-line__path--accent { stroke: var(--nz-accent); }
+.nz-chart-line__path--muted { stroke: var(--nz-border-strong); }
+.nz-chart-line__path--dashed { stroke-dasharray: 4 4; }
+.nz-chart-line__dot { fill: var(--nz-surface); stroke: var(--nz-brand); stroke-width: 2; }
+.nz-chart-line__dot--accent { stroke: var(--nz-accent); }
+.nz-chart-line__dot--active { fill: var(--nz-brand); stroke: var(--nz-brand); }
+.nz-chart-line--multi .nz-chart-line__area { fill: none; }
+
+/* ---- Sparkline ---- */
+.nz-sparkline { display: flex; align-items: flex-end; gap: 2px; height: 2rem; }
+.nz-sparkline--lg { height: 3rem; }
+.nz-sparkline__bar { flex: 1 1 0; min-height: 2px; border-radius: var(--nz-radius-xs); background: var(--nz-border-strong); }
+.nz-sparkline--brand .nz-sparkline__bar { background: var(--nz-brand); }
+.nz-sparkline--accent .nz-sparkline__bar { background: var(--nz-accent); }
+.nz-sparkline--area .nz-sparkline__bar { border-radius: var(--nz-radius-xs) var(--nz-radius-xs) 0 0; }
+
+/* ---- Donut (SVG) ---- */
+.nz-chart-donut { position: relative; display: inline-grid; place-items: center; }
+.nz-chart-donut__svg { width: 8rem; height: 8rem; transform: rotate(-90deg); }
+.nz-chart-donut--sm .nz-chart-donut__svg { width: 5rem; height: 5rem; }
+.nz-chart-donut--lg .nz-chart-donut__svg { width: 11rem; height: 11rem; }
+.nz-chart-donut__track { fill: none; stroke: var(--nz-bg-inset); stroke-width: 6; }
+.nz-chart-donut__seg { fill: none; stroke: var(--nz-brand); stroke-width: 6; stroke-linecap: butt; }
+.nz-chart-donut__seg--brand { stroke: var(--nz-brand); }
+.nz-chart-donut__seg--accent { stroke: var(--nz-accent); }
+.nz-chart-donut__seg--success { stroke: var(--nz-success); }
+.nz-chart-donut__seg--muted { stroke: var(--nz-border-strong); }
+.nz-chart-donut__center { position: absolute; display: grid; place-items: center; text-align: center; }
+.nz-chart-donut__value { font-size: var(--nz-text-xl); font-weight: 800; letter-spacing: var(--nz-tracking-tight); font-variant-numeric: tabular-nums; }
+.nz-chart-donut__label { font-size: var(--nz-text-2xs); color: var(--nz-text-mute); }
+
+/* ---- Medidor semicircular ---- */
+.nz-chart-gauge { position: relative; display: grid; place-items: center; }
+.nz-chart-gauge__svg { width: 10rem; height: 5.5rem; }
+.nz-chart-gauge--lg .nz-chart-gauge__svg { width: 13rem; height: 7rem; }
+.nz-chart-gauge__track { fill: none; stroke: var(--nz-bg-inset); stroke-width: 10; stroke-linecap: round; }
+.nz-chart-gauge__fill { fill: none; stroke: var(--nz-brand); stroke-width: 10; stroke-linecap: round; }
+.nz-chart-gauge__fill--accent { stroke: var(--nz-accent); }
+.nz-chart-gauge__fill--success { stroke: var(--nz-success); }
+.nz-chart-gauge__fill--warning { stroke: var(--nz-warning); }
+.nz-chart-gauge__fill--danger { stroke: var(--nz-danger); }
+.nz-chart-gauge__value { position: absolute; bottom: 0; font-size: var(--nz-text-2xl); font-weight: 800; letter-spacing: var(--nz-tracking-tight); font-variant-numeric: tabular-nums; }
+.nz-chart-gauge__label { font-size: var(--nz-text-2xs); color: var(--nz-text-mute); }
+
+/* ---- Mapa de calor ---- */
+.nz-heatmap { display: grid; gap: var(--nz-space-1); }
+.nz-heatmap__row { display: grid; grid-template-columns: 4.5rem repeat(7, 1fr); gap: var(--nz-space-1); align-items: center; }
+.nz-heatmap__row-label { font-size: var(--nz-text-2xs); color: var(--nz-text-mute); }
+.nz-heatmap__col-label { font-size: var(--nz-text-2xs); color: var(--nz-text-faint); text-align: center; }
+.nz-heatmap__cell { aspect-ratio: 1 / 1; border-radius: var(--nz-radius-xs); background: var(--nz-bg-inset); }
+.nz-heatmap__cell--0 { background: var(--nz-bg-inset); }
+.nz-heatmap__cell--1 { background: var(--nz-brand-soft); }
+.nz-heatmap__cell--2 { background: var(--nz-brand-tint); }
+.nz-heatmap__cell--3 { background: var(--nz-blue-300); }
+.nz-heatmap__cell--4 { background: var(--nz-brand); }
+.nz-heatmap__scale { display: flex; align-items: center; gap: var(--nz-space-1); font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+.nz-heatmap__scale-step { width: 12px; height: 12px; border-radius: var(--nz-radius-xs); }
+
+/* ---- Calendario de calor ---- */
+.nz-heatcalendar { display: grid; gap: var(--nz-space-1); }
+.nz-heatcalendar__months { display: grid; grid-auto-flow: column; gap: 3px; font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+.nz-heatcalendar__grid { display: grid; grid-template-rows: repeat(7, 1fr); grid-auto-flow: column; gap: 3px; }
+.nz-heatcalendar__day { width: 12px; height: 12px; border-radius: var(--nz-radius-xs); background: var(--nz-bg-inset); }
+.nz-heatcalendar__day--0 { background: var(--nz-bg-inset); }
+.nz-heatcalendar__day--1 { background: var(--nz-brand-soft); }
+.nz-heatcalendar__day--2 { background: var(--nz-brand-tint); }
+.nz-heatcalendar__day--3 { background: var(--nz-blue-300); }
+.nz-heatcalendar__day--4 { background: var(--nz-brand); }
+.nz-heatcalendar__day--hoy { outline: 2px solid var(--nz-accent); outline-offset: 1px; }
+.nz-heatcalendar__legend { display: flex; align-items: center; gap: var(--nz-space-1); font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+
+/* ---- Treemap ---- */
+.nz-treemap { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 4rem; gap: 3px; }
+.nz-treemap__cell { display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; padding: var(--nz-space-2); border-radius: var(--nz-radius-sm); background: var(--nz-brand); color: var(--nz-text-invert); overflow: hidden; }
+.nz-treemap__cell--lg { grid-column: span 2; grid-row: span 2; }
+.nz-treemap__cell--brand { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-treemap__cell--accent { background: var(--nz-accent); color: var(--nz-gray-0); }
+.nz-treemap__cell--muted { background: var(--nz-bg-inset); color: var(--nz-text-soft); }
+.nz-treemap__label { font-size: var(--nz-text-2xs); font-weight: 700; }
+.nz-treemap__value { font-size: var(--nz-text-2xs); opacity: .85; font-variant-numeric: tabular-nums; }
+
+/* ---- Embudo ---- */
+.nz-funnel { display: grid; gap: var(--nz-space-2); }
+.nz-funnel__step { display: grid; gap: 2px; }
+.nz-funnel__bar { height: 28px; border-radius: var(--nz-radius-sm); background: var(--nz-brand); margin-inline: auto; }
+.nz-funnel__bar--brand { background: var(--nz-brand); }
+.nz-funnel__bar--accent { background: var(--nz-accent); }
+.nz-funnel__bar--muted { background: var(--nz-border-strong); }
+.nz-funnel__label { font-size: var(--nz-text-2xs); color: var(--nz-text-mute); text-align: center; }
+.nz-funnel__value { font-size: var(--nz-text-2xs); font-weight: 700; text-align: center; font-variant-numeric: tabular-nums; }
+
+/* ---- Bullet chart ---- */
+.nz-bullet { display: grid; grid-template-columns: 6rem 1fr auto; align-items: center; gap: var(--nz-space-3); }
+.nz-bullet__label { font-size: var(--nz-text-xs); color: var(--nz-text-soft); }
+.nz-bullet__track { position: relative; height: 14px; border-radius: var(--nz-radius-xs); background: var(--nz-bg-inset); }
+.nz-bullet__ranges { position: absolute; inset: 0; border-radius: inherit; background: var(--nz-surface-2); width: 100%; }
+.nz-bullet__value { position: absolute; inset-block: 3px; left: 0; border-radius: var(--nz-radius-xs); background: var(--nz-brand); }
+.nz-bullet__value--brand { background: var(--nz-brand); }
+.nz-bullet__value--accent { background: var(--nz-accent); }
+.nz-bullet__value--success { background: var(--nz-success); }
+.nz-bullet__target { position: absolute; top: -2px; bottom: -2px; width: 2px; background: var(--nz-text); }
+.nz-bullet__num { font-size: var(--nz-text-xs); font-weight: 700; font-variant-numeric: tabular-nums; color: var(--nz-text-soft); }
+
+/* ---- Tabla de barras ---- */
+.nz-chart-tablebar { display: grid; gap: var(--nz-space-2); }
+.nz-chart-tablebar__row { display: grid; grid-template-columns: 8rem 1fr 3.5rem; align-items: center; gap: var(--nz-space-2); }
+.nz-chart-tablebar__name { font-size: var(--nz-text-xs); color: var(--nz-text-soft); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nz-chart-tablebar__track { height: 10px; border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); overflow: hidden; }
+.nz-chart-tablebar__bar { display: block; height: 100%; border-radius: inherit; background: var(--nz-brand); }
+.nz-chart-tablebar__num { font-size: var(--nz-text-xs); font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---- Comparativa de dos series ---- */
+.nz-chart-compare { display: grid; gap: var(--nz-space-2); }
+.nz-chart-compare__row { display: grid; grid-template-columns: 6rem 1fr 3rem; align-items: center; gap: var(--nz-space-2); }
+.nz-chart-compare__name { font-size: var(--nz-text-xs); color: var(--nz-text-soft); }
+.nz-chart-compare__pair { display: flex; gap: 2px; align-items: center; }
+.nz-chart-compare__bar { height: 10px; border-radius: var(--nz-radius-full); }
+.nz-chart-compare__bar--a { background: var(--nz-brand); }
+.nz-chart-compare__bar--b { background: var(--nz-accent); }
+.nz-chart-compare__num { font-size: var(--nz-text-2xs); text-align: right; font-variant-numeric: tabular-nums; color: var(--nz-text-mute); }
+
+/* ---- Radar (SVG) ---- */
+.nz-chart-radar { display: grid; place-items: center; }
+.nz-chart-radar__svg { width: 11rem; height: 11rem; }
+.nz-chart-radar__web { fill: none; stroke: var(--nz-border); stroke-width: 1; }
+.nz-chart-radar__axis { stroke: var(--nz-border-soft); stroke-width: 1; }
+.nz-chart-radar__area { fill: var(--nz-brand-soft); stroke: var(--nz-brand); stroke-width: 2; }
+.nz-chart-radar__label { fill: var(--nz-text-mute); font-size: var(--nz-text-2xs); }
+
+/* ---- Dispersión ---- */
+.nz-chart-scatter { position: relative; height: 10rem; border-left: var(--nz-border-w) solid var(--nz-border); border-bottom: var(--nz-border-w) solid var(--nz-border); }
+.nz-chart-scatter__area { position: absolute; inset: 0; }
+.nz-chart-scatter__dot { position: absolute; width: 10px; height: 10px; border-radius: 50%; background: var(--nz-border-strong); transform: translate(-50%, 50%); }
+.nz-chart-scatter__dot--brand { background: var(--nz-brand); }
+.nz-chart-scatter__dot--accent { background: var(--nz-accent); }
+.nz-chart-scatter__x { position: absolute; bottom: calc(var(--nz-space-4) * -1); left: 50%; transform: translateX(-50%); font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+.nz-chart-scatter__y { position: absolute; top: 50%; left: calc(var(--nz-space-4) * -1); transform: translateY(-50%) rotate(-90deg); font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+
+/* ---- Cascada ---- */
+.nz-chart-waterfall { display: flex; align-items: flex-end; gap: var(--nz-space-2); min-height: 9rem; }
+.nz-chart-waterfall__col { flex: 1 1 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: var(--nz-space-1); height: 100%; }
+.nz-chart-waterfall__bar { width: 100%; max-width: 2.5rem; border-radius: var(--nz-radius-sm); background: var(--nz-border-strong); }
+.nz-chart-waterfall__bar--up { background: var(--nz-success); }
+.nz-chart-waterfall__bar--down { background: var(--nz-danger); }
+.nz-chart-waterfall__bar--total { background: var(--nz-brand); }
+.nz-chart-waterfall__label { font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+
+/* ---- Diagrama de flujo (sankey simple) ---- */
+.nz-chart-flow { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--nz-space-4); align-items: center; }
+.nz-chart-flow__node { padding: var(--nz-space-2) var(--nz-space-3); border-radius: var(--nz-radius-md); background: var(--nz-brand-soft); color: var(--nz-brand); font-size: var(--nz-text-xs); font-weight: 700; text-align: center; }
+.nz-chart-flow__node--brand { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-chart-flow__node--accent { background: var(--nz-accent-soft); color: var(--nz-accent-strong); }
+.nz-chart-flow__node--muted { background: var(--nz-bg-inset); color: var(--nz-text-soft); }
+.nz-chart-flow__link { height: 6px; border-radius: var(--nz-radius-full); background: var(--nz-border-strong); }
+.nz-chart-flow__label { font-size: var(--nz-text-2xs); color: var(--nz-text-mute); text-align: center; }
+
+/* ---- Selector de rango temporal ---- */
+.nz-chart-range { display: inline-flex; gap: 2px; padding: 2px; border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); }
+.nz-chart-range__btn { min-height: 32px; padding: 0 var(--nz-space-3); border: 0; border-radius: var(--nz-radius-full); background: transparent; color: var(--nz-text-soft); font: inherit; font-size: var(--nz-text-2xs); font-weight: 700; cursor: pointer; }
+.nz-chart-range__btn[aria-pressed="true"] { background: var(--nz-surface); color: var(--nz-text); box-shadow: var(--nz-shadow-xs); }
+
+/* ---- Cifra con sparkline ---- */
+.nz-chart-stat { display: grid; gap: var(--nz-space-1); }
+.nz-chart-stat__label { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
+.nz-chart-stat__value { font-size: var(--nz-text-2xl); font-weight: 800; letter-spacing: var(--nz-tracking-tight); font-variant-numeric: tabular-nums; }
+.nz-chart-stat__unit { font-size: var(--nz-text-sm); font-weight: 600; color: var(--nz-text-mute); margin-left: 2px; }
+.nz-chart-stat__delta { font-size: var(--nz-text-xs); font-weight: 700; }
+.nz-chart-stat__delta--up { color: var(--nz-success); }
+.nz-chart-stat__delta--down { color: var(--nz-danger); }
+.nz-chart-stat__delta--flat { color: var(--nz-text-mute); }
+.nz-chart-stat__spark { margin-top: var(--nz-space-1); }
+
+/* ---- Mini barras dentro de una celda/tabla ---- */
+.nz-chart-mini { display: inline-flex; align-items: flex-end; gap: 2px; height: 1rem; }
+.nz-chart-mini__bar { width: 3px; border-radius: var(--nz-radius-xs); background: var(--nz-border-strong); }
+.nz-chart-mini__bar--brand { background: var(--nz-brand); }
+.nz-chart-mini__bar--accent { background: var(--nz-accent); }
+
+@media (min-width: 640px) {
+  .nz-chart-bar--horizontal .nz-chart-bar__label { width: 7rem; }
+  .nz-bullet { grid-template-columns: 8rem 1fr auto; }
+}
+@media (min-width: 960px) {
+  .nz-chart__body { min-height: 10rem; }
+  .nz-chart-line__svg { height: 12rem; }
+}

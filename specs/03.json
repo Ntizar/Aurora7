@@ -1,0 +1,219 @@
+{
+ "cat": 3,
+ "nombre": "Tipografía",
+ "desc": "Escala fluida móvil-first, tonos de titular, cuerpo, prose, listas, bloque, código, etiquetas, cifras, enlaces y utilidades de texto.",
+ "pack": "p3-typography.css",
+ "fichero": "03-typography.html",
+ "demos": [
+  {
+   "titulo": "Escala de títulos",
+   "tag": ".nz-display · .nz-h1 … .nz-h6",
+   "markup": "<p class=\"nz-display\">Display 4XL</p><p class=\"nz-h1\">H1 3XL</p><p class=\"nz-h2\">H2 2XL</p><p class=\"nz-h3\">H3 XL</p><p class=\"nz-h4\">H4 LG</p><p class=\"nz-h5\">H5 base</p><p class=\"nz-h6\">H6 · versalitas</p>"
+  },
+  {
+   "titulo": "Display grande y pequeño",
+   "tag": ".nz-display--xl · .nz-display--sm",
+   "markup": "<p class=\"nz-display nz-display--xl\">Display XL</p><p class=\"nz-display nz-display--sm\">Display SM</p>"
+  },
+  {
+   "titulo": "Eyebrow",
+   "tag": ".nz-eyebrow",
+   "markup": "<p class=\"nz-eyebrow\">Design System Ntizar</p>"
+  },
+  {
+   "titulo": "Titulares en azul (brand)",
+   "tag": ".nz-h1--brand … .nz-h6--brand",
+   "markup": "<p class=\"nz-h1 nz-h1--brand\">Titular H1 brand</p><p class=\"nz-h2 nz-h2--brand\">H2 brand</p><p class=\"nz-h3 nz-h3--brand\">H3 brand</p><p class=\"nz-h4 nz-h4--brand\">H4 brand</p><p class=\"nz-h5 nz-h5--brand\">H5 brand</p><p class=\"nz-h6 nz-h6--brand\">H6 brand</p>"
+  },
+  {
+   "titulo": "Titulares en naranja (accent)",
+   "tag": ".nz-h1--accent … .nz-h6--accent",
+   "markup": "<p class=\"nz-h1 nz-h1--accent\">Titular H1 accent</p><p class=\"nz-h2 nz-h2--accent\">H2 accent</p><p class=\"nz-h3 nz-h3--accent\">H3 accent</p><p class=\"nz-h4 nz-h4--accent\">H4 accent</p><p class=\"nz-h5 nz-h5--accent\">H5 accent</p><p class=\"nz-h6 nz-h6--accent\">H6 accent</p>"
+  },
+  {
+   "titulo": "Titulares apagados (muted)",
+   "tag": ".nz-h1--muted … .nz-h6--muted",
+   "markup": "<p class=\"nz-h1 nz-h1--muted\">Titular H1 apagado</p><p class=\"nz-h2 nz-h2--muted\">H2 apagado</p><p class=\"nz-h3 nz-h3--muted\">H3 apagado</p><p class=\"nz-h4 nz-h4--muted\">H4 apagado</p><p class=\"nz-h5 nz-h5--muted\">H5 apagado</p><p class=\"nz-h6 nz-h6--muted\">H6 apagado</p>"
+  },
+  {
+   "titulo": "Titulares con tracking apretado",
+   "tag": ".nz-h1--tight … .nz-h6--tight",
+   "markup": "<p class=\"nz-h1 nz-h1--tight\">Apretado H1</p><p class=\"nz-h2 nz-h2--tight\">Apretado H2</p><p class=\"nz-h3 nz-h3--tight\">Apretado H3</p><p class=\"nz-h4 nz-h4--tight\">Apretado H4</p><p class=\"nz-h5 nz-h5--tight\">Apretado H5</p><p class=\"nz-h6 nz-h6--tight\">Apretado H6</p>"
+  },
+  {
+   "titulo": "Lead y cuerpo",
+   "tag": ".nz-lead · --sm · --lg · --brand",
+   "markup": "<p class=\"nz-lead\">Párrafo introductorio, algo mayor y más blando que el cuerpo.</p><p class=\"nz-lead nz-lead--sm\">Lead pequeño para bloques densos.</p><p class=\"nz-lead nz-lead--lg\">Lead grande para portadas de artículo.</p><p class=\"nz-lead nz-lead--brand\">Lead con filete azul a la izquierda.</p>"
+  },
+  {
+   "titulo": "Tamaños y tonos de texto",
+   "tag": ".nz-text--large · --small · --muted · --faint · --mono",
+   "markup": "<p class=\"nz-text--large\">Texto grande</p><p class=\"nz-text--small\">Texto pequeño</p><p class=\"nz-text--muted\">Texto secundario en gris medio.</p><p class=\"nz-text--faint\">Texto tenue para metadatos.</p><p class=\"nz-text--mono\">const objeto = 565;</p>"
+  },
+  {
+   "titulo": "Texto semántico",
+   "tag": ".nz-text--success · --danger · --warning · --brand-soft",
+   "markup": "<p class=\"nz-text--success\">Guardado correctamente</p><p class=\"nz-text--danger\">No se pudo guardar</p><p class=\"nz-text--warning\">Quedan 3 días de prueba</p><p>Fragmento <span class=\"nz-text--brand-soft\">destacado en azul suave</span> dentro de un párrafo.</p>"
+  },
+  {
+   "titulo": "Prose: bloque de lectura completo",
+   "tag": ".nz-prose",
+   "markup": "<div class=\"nz-prose\"><h2>Documento con prosa</h2><p>Columna de 44rem centrada para artículos y documentación. El ritmo vertical lo marcan los tokens de espacio, no márgenes sueltos, y el <strong>énfasis</strong> se apoya en el color de texto, no en adornos.</p><h3>Pasos</h3><ul><li>Primero se instala.</li><li>Después se configura.</li></ul><ol><li>Enlaza el CSS.</li><li>Usa los tokens.</li></ol><h4>Detalle técnico</h4><p>Todo en una línea: <code>var(--nz-space-4)</code>.</p><table><thead><tr><th>Token</th><th>Valor</th></tr></thead><tbody><tr><td>--nz-radius-md</td><td>10px</td></tr></tbody></table><p>Y un enlace <a href=\"#\">con el azul de marca</a> al final.</p></div>"
+  },
+  {
+   "titulo": "Prose ancho y prose brand",
+   "tag": ".nz-prose--wide · .nz-prose--brand",
+   "markup": "<div class=\"nz-prose nz-prose--wide\"><h3>Columna ancha (hasta 72rem)</h3><p>El ancho se estira para páginas de producto, changelogs y documentación densa, manteniendo el ritmo vertical de la prosa.</p></div><div class=\"nz-prose nz-prose--brand\"><h3>Titular en azul de marca</h3><p>En esta variante los titulares, las <strong>negritas</strong> y los <a href=\"#\">enlaces</a> hablan en --nz-brand.</p></div>"
+  },
+  {
+   "titulo": "Listas",
+   "tag": ".nz-list · __item · --accent",
+   "markup": "<ul class=\"nz-list\"><li class=\"nz-list__item\">Item con punto azul</li><li class=\"nz-list__item\">Item 2</li><li class=\"nz-list__item\">Item 3</li></ul><ul class=\"nz-list nz-list--accent\"><li class=\"nz-list__item\">Bullet naranja</li><li class=\"nz-list__item\">Segundo punto de acento</li></ul>"
+  },
+  {
+   "titulo": "Lista de check y lista numerada",
+   "tag": ".nz-list--check · .nz-list--numeric",
+   "markup": "<ul class=\"nz-list nz-list--check\"><li class=\"nz-list__item\">Validado</li><li class=\"nz-list__item\">Firmado</li></ul><ol class=\"nz-list nz-list--numeric\"><li class=\"nz-list__item\">Instalar dependencias</li><li class=\"nz-list__item\">Compilar</li><li class=\"nz-list__item\">Desplegar</li></ol>"
+  },
+  {
+   "titulo": "Lista brand (tintes azules)",
+   "tag": ".nz-list--brand",
+   "markup": "<ul class=\"nz-list nz-list--brand\"><li class=\"nz-list__item\">Fondo azul suave por item</li><li class=\"nz-list__item\">Sin bullets que compitan</li></ul>"
+  },
+  {
+   "titulo": "Lista compacta y dividida",
+   "tag": ".nz-list--compact · .nz-list--divided",
+   "markup": "<ul class=\"nz-list nz-list--compact\"><li class=\"nz-list__item\">Compacta · gap 4px</li><li class=\"nz-list__item\">Y texto algo menor</li></ul><ul class=\"nz-list nz-list--divided\"><li class=\"nz-list__item\">Primero, con filete</li><li class=\"nz-list__item\">Segundo, separado</li><li class=\"nz-list__item\">Tercero</li></ul>"
+  },
+  {
+   "titulo": "Lista con hueco de icono y item hecho",
+   "tag": ".nz-list--icon · .nz-list__item--done",
+   "markup": "<ul class=\"nz-list nz-list--icon\"><li class=\"nz-list__item\">Hueco cuadrado para tu icono</li><li class=\"nz-list__item\">Otro item con hueco</li></ul><ul class=\"nz-list\"><li class=\"nz-list__item nz-list__item--done\">Tarea completada (tachada y con punto verde)</li><li class=\"nz-list__item\">Pendiente</li></ul>"
+  },
+  {
+   "titulo": "Blockquote",
+   "tag": ".nz-blockquote · --accent",
+   "markup": "<blockquote class=\"nz-blockquote\"><p>«El sistema se entiende por sus límites, no por su cantidad.»</p><footer>David Antizar</footer></blockquote><blockquote class=\"nz-blockquote nz-blockquote--accent\"><p>Variante con acento naranja.</p></blockquote>"
+  },
+  {
+   "titulo": "Blockquote brand y pequeño",
+   "tag": ".nz-blockquote--brand · .nz-blockquote--sm",
+   "markup": "<blockquote class=\"nz-blockquote nz-blockquote--brand\"><p>Cita con fondo azul suave y filete fuerte.</p><footer>Nota editorial</footer></blockquote><blockquote class=\"nz-blockquote nz-blockquote--sm\"><p>Versión compacta para notas dentro de una ficha.</p></blockquote>"
+  },
+  {
+   "titulo": "Código inline: base, inline, brand y sm",
+   "tag": ".nz-code · --inline · --brand · --sm",
+   "markup": "<p>Usa <code class=\"nz-code\">var(--nz-space-4)</code> para el hueco estándar.</p><p>Dentro de un párrafo, <code class=\"nz-code nz-code--inline\">display: inline</code> no rompe la línea.</p><p><code class=\"nz-code nz-code--brand\">--nz-brand</code> tinta el fragmento en azul suave.</p><p><code class=\"nz-code nz-code--sm\">font-size: 11px</code> para tablas apretadas.</p>"
+  },
+  {
+   "titulo": "Bloque de código, código oscuro y teclas",
+   "tag": ".nz-code--block · .nz-code--dark · .nz-kbd · .nz-kbd--lg",
+   "markup": "<pre class=\"nz-code--block\">.panel { display: grid; gap: var(--nz-space-1); }</pre><pre class=\"nz-code--block nz-code--dark\">// variante aún más oscura\nconst nz = true;</pre><p>Pulsa <kbd class=\"nz-kbd\">Ctrl</kbd> + <kbd class=\"nz-kbd\">K</kbd> o <kbd class=\"nz-kbd nz-kbd--lg\">Esc</kbd> para cerrar.</p>"
+  },
+  {
+   "titulo": "Etiquetas",
+   "tag": ".nz-lbl · --brand · --accent · --success · --danger",
+   "markup": "<span class=\"nz-lbl\">Nuevo</span> <span class=\"nz-lbl nz-lbl--brand\"><i></i>Brand</span> <span class=\"nz-lbl nz-lbl--accent\"><i></i>Accent</span> <span class=\"nz-lbl nz-lbl--success\">Correcto</span> <span class=\"nz-lbl nz-lbl--danger\">Error</span>"
+  },
+  {
+   "titulo": "Etiquetas info, neutral y outline",
+   "tag": ".nz-lbl--info · --neutral · --outline",
+   "markup": "<span class=\"nz-lbl nz-lbl--info\">Info</span> <span class=\"nz-lbl nz-lbl--neutral\">Neutral</span> <span class=\"nz-lbl nz-lbl--outline\">Solo filete</span>"
+  },
+  {
+   "titulo": "Etiquetas grande y pequeña",
+   "tag": ".nz-lbl--lg · .nz-lbl--sm",
+   "markup": "<span class=\"nz-lbl nz-lbl--lg\">Etiqueta grande</span> <span class=\"nz-lbl nz-lbl--sm\">mini</span>"
+  },
+  {
+   "titulo": "Cifras",
+   "tag": ".nz-num · --stat · --brand · --accent",
+   "markup": "<p><span class=\"nz-num nz-num--stat\">12 480</span> <span class=\"nz-num nz-num--brand\">+8,2 %</span></p><p class=\"nz-num nz-num--stat nz-num--accent\">98,2 %</p>"
+  },
+  {
+   "titulo": "Cifras: tamaños y tonos",
+   "tag": ".nz-num--sm · --lg · --success · --danger · --muted",
+   "markup": "<p><span class=\"nz-num nz-num--sm\">1.240</span> · <span class=\"nz-num nz-num--lg\">1.240</span></p><p><span class=\"nz-num nz-num--success\">+320</span> · <span class=\"nz-num nz-num--danger\">−82</span> · <span class=\"nz-num nz-num--muted\">sin dato</span></p>"
+  },
+  {
+   "titulo": "Enlace con vida, acento y flecha",
+   "tag": ".nz-link · --accent · --arrow · --inline",
+   "markup": "<p><a class=\"nz-link\" href=\"#\">Ver documentación</a> · <a class=\"nz-link nz-link--accent nz-link--arrow\" href=\"#\">Siguiente paso</a> · <a class=\"nz-link nz-link--inline\" href=\"#\">Ver más →</a></p>"
+  },
+  {
+   "titulo": "Enlaces brand, danger y quiet",
+   "tag": ".nz-link--brand · --danger · --quiet",
+   "markup": "<p><a class=\"nz-link nz-link--brand\" href=\"#\">Enlace brand con más peso</a></p><p><a class=\"nz-link nz-link--danger\" href=\"#\">Eliminar cuenta</a></p><p><a class=\"nz-link nz-link--quiet\" href=\"#\">Enlace discreto para el pie</a></p>"
+  },
+  {
+   "titulo": "Enlaces subrayados y externos",
+   "tag": ".nz-link--underline · .nz-link--external",
+   "markup": "<p><a class=\"nz-link nz-link--underline\" href=\"#\">Siempre subrayado</a> · <a class=\"nz-link nz-link--external\" href=\"#\">Documentación externa</a></p>"
+  },
+  {
+   "titulo": "Medida de línea",
+   "tag": ".nz-measure · --narrow · --wide",
+   "markup": "<p class=\"nz-measure\">Línea limitada a ~68ch para lectura cómoda. El ojo agradece no barrer 1200px de texto en cada renglón.</p><p class=\"nz-measure nz-measure--narrow\">Medida estrecha, ~52ch: para columnas secundarias y notas.</p><p class=\"nz-measure nz-measure--wide\">Medida ancha, ~80ch: para tablas de datos y páginas de documentación.</p>"
+  },
+  {
+   "titulo": "Alineación y truncado",
+   "tag": ".nz-center · .nz-truncate",
+   "markup": "<p class=\"nz-center\">Centrado</p><p class=\"nz-truncate\" style=\"max-width:12rem\">Texto muy largo que se corta con puntos suspensivos al final</p>"
+  },
+  {
+   "titulo": "Truncado a 1, 2 y 3 líneas",
+   "tag": ".nz-truncate--1 · --2 · --3",
+   "markup": "<p class=\"nz-truncate nz-truncate--1\">Una sola línea, por muy largo que sea el titular que escribamos aquí.</p><p class=\"nz-truncate nz-truncate--2\">Dos líneas y punto: el texto continúa pero se corta en la segunda, con puntos suspensivos y sin romper la maqueta de la tarjeta.</p><p class=\"nz-truncate nz-truncate--3\">Tres líneas como máximo. Este resumen es más largo todavía y debería desaparecer justo después de la tercera línea, así que seguimos escribiendo palabras de relleno hasta completarlas.</p>"
+  },
+  {
+   "titulo": "Alineación: izquierda, derecha y justificado",
+   "tag": ".nz-align-left · .nz-align-right · .nz-align-justify",
+   "markup": "<p class=\"nz-align-left\">A la izquierda (por defecto en LTR).</p><p class=\"nz-align-right\">A la derecha, para importes y firmas.</p><p class=\"nz-align-justify\">Justificado para bloques de texto largos donde el borde irregular molesta más que los huecos entre palabras.</p>"
+  },
+  {
+   "titulo": "Versalitas, balance y pretty",
+   "tag": ".nz-caps · .nz-balance · .nz-pretty",
+   "markup": "<p class=\"nz-caps\">Versalitas con tracking</p><p class=\"nz-balance nz-h3\">Un titular equilibrado línea a línea</p><p class=\"nz-pretty\">Párrafo con text-wrap: pretty, que evita viudas y huérfanas al final de línea.</p>"
+  },
+  {
+   "titulo": "Sangría de primera línea",
+   "tag": ".nz-indent",
+   "markup": "<p class=\"nz-indent\">Esta primera línea entra con sangría de 24px, como en los libros de texto.</p><p class=\"nz-indent\">Y la segunda línea del bloque no la lleva, porque la sangría es del párrafo.</p>"
+  },
+  {
+   "titulo": "Texto en 2 y 3 columnas",
+   "tag": ".nz-columns-2 · .nz-columns-3",
+   "markup": "<div class=\"nz-columns-2\"><p>Dos columnas desde 640px y una en móvil. Este párrafo es lo bastante largo como para repartirse en dos cajas de texto y que se note el column-gap.</p><p>Seguimos con el segundo párrafo, que rellena la segunda columna del bloque.</p></div><div class=\"nz-columns-3\"><p>Tres columnas desde 960px, dos a partir de 640px y una en el móvil. El texto fluye solo.</p><p>Segundo párrafo del bloque a tres columnas.</p><p>Tercero, para que se llene la rejilla.</p></div>"
+  },
+  {
+   "titulo": "Letra capital",
+   "tag": ".nz-initial",
+   "markup": "<p class=\"nz-initial\">Aurora 7 empieza con una letra capital que abraza la primera línea del texto, un recurso clásico de editorial que aquí se resuelve con un solo ::first-letter.</p>"
+  },
+  {
+   "titulo": "Resaltado de marcador",
+   "tag": ".nz-highlight · --brand · .nz-underline--accent",
+   "markup": "<p>Un texto con <span class=\"nz-highlight\">marcador amarillo</span> y otro con <span class=\"nz-highlight nz-highlight--brand\">marcador azul</span>.</p><p>Y una frase con <span class=\"nz-underline--accent\">subrayado naranja de 2px</span>.</p>"
+  },
+  {
+   "titulo": "Dateline",
+   "tag": ".nz-dateline",
+   "markup": "<p class=\"nz-dateline\">Madrid · 16 de septiembre de 2026</p>"
+  },
+  {
+   "titulo": "Figura con pie de foto",
+   "tag": ".nz-figura · .nz-figura__pie",
+   "markup": "<figure class=\"nz-figura\"><div class=\"demo-box demo-box--mute\" style=\"min-height:5rem;display:flex;align-items:center;justify-content:center\">imagen 16:9</div><figcaption class=\"nz-figura__pie\">Figura 1. El pie de foto explica lo que el ojo ya vio.</figcaption></figure>"
+  },
+  {
+   "titulo": "Nota al pie de un bloque",
+   "tag": ".nz-nota",
+   "markup": "<p style=\"margin:0\">Importe total: <span class=\"nz-num nz-num--lg\">1.240 €</span></p><p class=\"nz-nota\">Los precios no incluyen IVA. La nota queda separada del cuerpo por un filete vertical.</p>"
+  },
+  {
+   "titulo": "Alturas de línea y tracking",
+   "tag": ".nz--leading-tight · --snug · --normal · --tracking-tight · --tracking-caps",
+   "markup": "<p class=\"nz--leading-tight\">Leading tight: apretado, para titulares.</p><p class=\"nz--leading-snug\">Leading snug: intermedio.</p><p class=\"nz--leading-normal\">Leading normal: lectura cómoda.</p><p class=\"nz--tracking-tight\">Tracking apretado</p><p class=\"nz--tracking-caps\">TRACKING CAPS</p>"
+  }
+ ]
+}

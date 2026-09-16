@@ -1,216 +1,327 @@
 /* ============================================================
-   AURORA 7 — p1-layout.css · Categoría 1: Layout y estructura (1–50)
-   Mobile-first. Todo con tokens. Cero gradientes, cero glass.
+   AURORA 7 — p1-layout.css · Categoría 1 · Layout y estructura (167 objetos)
+   Contenedores, rejillas, spans, pilas, landmarks, sticky, bleed,
+   regiones de página y helpers de flujo. Demostrado en specs/01.json (48 demos).
+   Mobile-first (base 1 columna → 640 → 960 → 1200). Todo con tokens.
+   Cero gradientes, cero glass. Táctil 44px. Hecho con ❤️ por David Antizar
    ============================================================ */
 
-/* 01 Viewport / contenedor raíz */
-.nz-root {
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-}
+/* ---- 01 Viewport / contenedor raíz ---- */
+.nz-root { min-height: 100dvh; display: flex; flex-direction: column; }
 
-/* 02 Contenedor de página */
-.nz-container {
-  width: 100%;
-  max-width: var(--nz-container-max);
-  margin-inline: auto;
-  padding-inline: var(--nz-gutter);
-}
-
-/* 03 Contenedor fluido */
+/* ---- 02 Contenedor de página ---- */
+.nz-container { width: 100%; max-width: var(--nz-container-max); margin-inline: auto; padding-inline: var(--nz-gutter); }
 .nz-container--fluid { max-width: none; }
+.nz-container--fixed { max-width: 60rem; }
+.nz-container--wide { max-width: 84rem; }
+.nz-container--narrow { max-width: var(--nz-container-narrow); }
 
-/* 04 Contenedor de ancho fijo */
-.nz-container--fixed {
-  max-width: 60rem;
-  margin-inline: auto;
-}
-
-/* 05 Grid de 12 columnas */
+/* ---- 03 Grid de 12 columnas ---- */
 .nz-grid-12 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--nz-space-4); }
 
-/* 06 Grid CSS auto-fit */
+/* ---- 04 Grid CSS auto-fit ---- */
 .nz-grid-auto { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--nz-space-4); }
 
-/* 07 Sistema de filas */
+/* ---- 05 Spans de rejilla (1..12) — escalan con el número de columnas ---- */
+.nz-span-1 { grid-column: span 1; } .nz-span-2 { grid-column: span 2; } .nz-span-3 { grid-column: span 3; } .nz-span-4 { grid-column: span 4; }
+.nz-span-5, .nz-span-6, .nz-span-7, .nz-span-8, .nz-span-9, .nz-span-10, .nz-span-11, .nz-span-12 { grid-column: span 4; }
+@media (min-width: 640px) {
+  .nz-span-5 { grid-column: span 5; } .nz-span-6 { grid-column: span 6; } .nz-span-7 { grid-column: span 7; } .nz-span-8 { grid-column: span 8; }
+  .nz-span-9, .nz-span-10, .nz-span-11, .nz-span-12 { grid-column: span 8; }
+}
+@media (min-width: 960px) {
+  .nz-span-5 { grid-column: span 5; } .nz-span-6 { grid-column: span 6; } .nz-span-7 { grid-column: span 7; } .nz-span-8 { grid-column: span 8; }
+  .nz-span-9 { grid-column: span 9; } .nz-span-10 { grid-column: span 10; } .nz-span-11 { grid-column: span 11; } .nz-span-12 { grid-column: span 12; }
+}
+
+/* ---- 06 Sistema de filas (con columnas por breakpoint) ---- */
 .nz-row { display: flex; flex-wrap: wrap; gap: var(--nz-space-4); }
 .nz-row > * { flex: 1 1 100%; min-width: 0; }
+.nz-row--compact { gap: var(--nz-space-2); }
+.nz-row--spacious { gap: var(--nz-space-6); }
+.nz-row--2 > * { flex: 1 1 100%; }
+.nz-row--3 > * { flex: 1 1 100%; }
+.nz-row--4 > * { flex: 1 1 100%; }
+@media (min-width: 640px) {
+  .nz-row > * { flex: 1 1 calc(50% - var(--nz-space-4)); }
+  .nz-row--2 > * { flex: 1 1 calc(50% - var(--nz-space-2)); }
+  .nz-row--3 > * { flex: 1 1 calc(50% - var(--nz-space-4)); }
+  .nz-row--4 > * { flex: 1 1 calc(50% - var(--nz-space-4)); }
+}
+@media (min-width: 960px) {
+  .nz-row--3 > * { flex: 1 1 calc(33.333% - var(--nz-space-4)); }
+  .nz-row--4 > * { flex: 1 1 calc(25% - var(--nz-space-3)); }
+}
 
-/* 08 Sistema de columnas */
+/* ---- 07 Sistema de columnas ---- */
 .nz-col { display: flex; flex-direction: column; gap: var(--nz-space-4); min-width: 0; }
 
-/* 09 Stack vertical */
+/* ---- 08 Stack vertical ---- */
 .nz-stack { display: flex; flex-direction: column; gap: var(--nz-space-4); }
-.nz-stack--xs { gap: var(--nz-space-1); } .nz-stack--sm { gap: var(--nz-space-2); }
+.nz-stack--2xs { gap: var(--nz-space-0); } .nz-stack--xs { gap: var(--nz-space-1); }
+.nz-stack--sm { gap: var(--nz-space-2); }
 .nz-stack--lg { gap: var(--nz-space-6); } .nz-stack--xl { gap: var(--nz-space-8); }
 
-/* 10 Stack horizontal */
+/* ---- 09 Stack horizontal (reparto y alineación) ---- */
 .nz-hstack { display: flex; align-items: center; gap: var(--nz-space-3); flex-wrap: wrap; }
+.nz-hstack--compact { gap: var(--nz-space-2); }
+.nz-hstack--spacious { gap: var(--nz-space-6); }
+.nz-hstack--center { justify-content: center; }
+.nz-hstack--between { justify-content: space-between; }
+.nz-hstack--end { justify-content: flex-end; }
+.nz-hstack--nowrap { flex-wrap: nowrap; }
+.nz-hstack--top { align-items: flex-start; }
+.nz-hstack--bottom { align-items: flex-end; }
 
-/* 11 Cluster / grupo de ítems */
+/* ---- 10 Cluster / grupo de ítems ---- */
 .nz-cluster { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-start; gap: var(--nz-space-2) var(--nz-space-3); }
+.nz-cluster--compact { gap: var(--nz-space-1) var(--nz-space-2); }
+.nz-cluster--spacious { gap: var(--nz-space-4) var(--nz-space-6); }
+.nz-cluster--center { justify-content: center; }
+.nz-cluster--between { justify-content: space-between; }
+.nz-cluster--end { justify-content: flex-end; }
+.nz-cluster--nowrap { flex-wrap: nowrap; overflow-x: auto; }
 
-/* 12 Split layout 50/50 */
+/* ---- 11 Split layout (repartos) ---- */
 .nz-split { display: grid; gap: var(--nz-space-6); grid-template-columns: 1fr; }
-@media (min-width: 960px) { .nz-split { grid-template-columns: 1fr 1fr; align-items: start; } }
+.nz-split--2-1 { grid-template-columns: 1fr; }
+.nz-split--3-2 { grid-template-columns: 1fr; }
+.nz-split--40-60 { grid-template-columns: 1fr; }
+.nz-split--60-40 { grid-template-columns: 1fr; }
+@media (min-width: 640px) { .nz-split--40-60 { grid-template-columns: 4fr 6fr; } .nz-split--60-40 { grid-template-columns: 6fr 4fr; } }
+@media (min-width: 960px) {
+  .nz-split { grid-template-columns: 1fr 1fr; align-items: start; }
+  .nz-split--2-1 { grid-template-columns: 2fr 1fr; }
+  .nz-split--3-2 { grid-template-columns: 3fr 2fr; }
+  .nz-split--40-60 { grid-template-columns: 4fr 6fr; }
+  .nz-split--60-40 { grid-template-columns: 6fr 4fr; }
+}
 
-/* 13 Sidebar + contenido */
+/* ---- 12 Sidebar + contenido ---- */
 .nz-with-sidebar { display: grid; gap: var(--nz-space-6); grid-template-columns: 1fr; }
-@media (min-width: 960px) { .nz-with-sidebar { grid-template-columns: 15rem minmax(0, 1fr); } }
-.nz-sidebar { min-width: 0; }
+.nz-with-sidebar > * { min-width: 0; }
+.nz-with-sidebar--right { grid-template-columns: 1fr; }
+.nz-with-sidebar--wide { grid-template-columns: 1fr; }
+@media (min-width: 960px) {
+  .nz-with-sidebar { grid-template-columns: 15rem minmax(0, 1fr); }
+  .nz-with-sidebar--right { grid-template-columns: minmax(0, 1fr) 15rem; }
+  .nz-with-sidebar--wide { grid-template-columns: 20rem minmax(0, 1fr); }
+  .nz-with-sidebar--right > :last-child { grid-column: 1; grid-row: 1; }
+  .nz-with-sidebar--right > :first-child { grid-column: 2; grid-row: 1; }
+}
 
-/* 14 Layout de tres columnas */
+/* ---- 13 Layout de tres columnas ---- */
 .nz-thirds { display: grid; gap: var(--nz-space-4); grid-template-columns: 1fr; }
+.nz-thirds--compact { gap: var(--nz-space-2); }
+.nz-thirds--spacious { gap: var(--nz-space-6); }
 @media (min-width: 640px) { .nz-thirds { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 960px) { .nz-thirds { grid-template-columns: repeat(3, 1fr); } }
 
-/* 15 Header / cabecera */
-.nz-header {
-  display: flex; align-items: center; justify-content: space-between;
-  gap: var(--nz-space-3);
-  padding: var(--nz-space-3) var(--nz-gutter);
-  background: var(--nz-surface);
-  border-bottom: 1px solid var(--nz-border-soft);
-}
+/* ---- 14 Header / cabecera ---- */
+.nz-header { display: flex; align-items: center; justify-content: space-between; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-gutter); background: var(--nz-surface); border-bottom: 1px solid var(--nz-border-soft); }
+.nz-header--compact { padding-block: var(--nz-space-1); min-height: 44px; }
+.nz-header--tall { padding-block: var(--nz-space-6); }
+.nz-header--bordered { border-bottom: var(--nz-border-w-strong) solid var(--nz-border-strong); }
 
-/* 16 Main / contenido principal */
+/* ---- 15 Main / contenido principal ---- */
 .nz-main { flex: 1 0 auto; padding-block: var(--nz-space-6); }
+.nz-main--flush { padding-block: 0; }
+.nz-main--narrow { max-width: var(--nz-container-narrow); margin-inline: auto; }
+.nz-main--wide { max-width: var(--nz-container-max); margin-inline: auto; }
 
-/* 17 Footer */
-.nz-footer {
-  padding: var(--nz-space-8) var(--nz-gutter);
-  background: var(--nz-bg-soft);
-  border-top: 1px solid var(--nz-border-soft);
-  color: var(--nz-text-soft);
-  font-size: var(--nz-text-sm);
-}
+/* ---- 16 Footer ---- */
+.nz-footer { padding: var(--nz-space-8) var(--nz-gutter); background: var(--nz-bg-soft); border-top: 1px solid var(--nz-border-soft); color: var(--nz-text-soft); font-size: var(--nz-text-sm); }
+.nz-footer--compact { padding-block: var(--nz-space-3); }
+.nz-footer--brand { background: var(--nz-brand-soft); color: var(--nz-text); border-top-color: var(--nz-brand-tint); }
 
-/* 18 Landmark nav */  .nz-nav-landmark { display: block; }
-/* 19 Landmark aside */ .nz-aside { display: block; }
-/* 20 Landmark section */ .nz-section { padding-block: var(--nz-space-10); }
-/* 21 Landmark article */
+/* ---- 17 Landmarks ---- */
+.nz-nav-landmark { display: block; }
+.nz-aside { display: block; }
+.nz-section { padding-block: var(--nz-space-10); }
+.nz-section--compact { padding-block: var(--nz-space-4); }
+.nz-section--spacious { padding-block: var(--nz-space-16); }
+.nz-section--bordered { border-block: 1px solid var(--nz-border-soft); }
 .nz-article { background: var(--nz-surface); border-radius: var(--nz-radius-lg); padding: var(--nz-space-5); box-shadow: var(--nz-shadow-sm); }
+.nz-article--flush { padding: 0; }
+.nz-article--bordered { border: var(--nz-border-w) solid var(--nz-border-soft); box-shadow: none; }
+.nz-article--interactive { cursor: pointer; transition: transform var(--nz-dur-base) var(--nz-ease-out), box-shadow var(--nz-dur-base) var(--nz-ease-out); }
+.nz-article--interactive:hover { transform: translateY(-3px); box-shadow: var(--nz-shadow-lg); }
 
-/* 22 Wrapper de app shell */
+/* ---- 18 App shell con filas auto/1fr/auto ---- */
 .nz-appshell { display: grid; grid-template-rows: auto 1fr auto; min-height: 100dvh; }
 
-/* 23 Sticky header */ .nz-header--sticky { position: sticky; top: 0; z-index: var(--nz-z-header); }
-/* 24 Sticky footer */ .nz-footer--sticky { position: sticky; bottom: 0; z-index: var(--nz-z-header); }
-/* 25 Sticky sidebar */
+/* ---- 19 Sticky de página ---- */
+.nz-header--sticky { position: sticky; top: 0; z-index: var(--nz-z-header); }
+.nz-footer--sticky { position: sticky; bottom: 0; z-index: var(--nz-z-header); }
 .nz-sidebar--sticky { position: sticky; top: var(--nz-space-6); align-self: start; max-height: calc(100dvh - var(--nz-space-12)); overflow-y: auto; }
+.nz-sticky-top { position: sticky; top: 0; z-index: var(--nz-z-sticky); }
+.nz-sticky-bottom { position: sticky; bottom: 0; z-index: var(--nz-z-sticky); }
 
-/* 26 Spacer / espacio vacío */
+/* ---- 20 Spacer ---- */
 .nz-spacer { flex: 1 1 auto; }
 .nz-spacer--fixed { height: var(--nz-space-8); flex: none; }
+.nz-spacer--sm { height: var(--nz-space-4); flex: none; }
+.nz-spacer--lg { height: var(--nz-space-12); flex: none; }
 
-/* 27 Divider horizontal */
+/* ---- 21 Divisores ---- */
 .nz-divider { border: 0; border-top: 1px solid var(--nz-border); margin: var(--nz-space-4) 0; }
-
-/* 28 Divider vertical */
 .nz-divider--v { align-self: stretch; width: 1px; border: 0; border-left: 1px solid var(--nz-border); margin: 0; background: none; }
+.nz-divider--dashed { border-top-style: dashed; }
+.nz-divider--dotted { border-top-style: dotted; }
+.nz-divider--label { display: flex; align-items: center; gap: var(--nz-space-3); border: 0; color: var(--nz-text-mute); font-size: var(--nz-text-2xs); font-weight: 700; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
+.nz-divider--label::before, .nz-divider--label::after { content: ""; flex: 1 1 auto; height: 1px; background: var(--nz-border); }
 
-/* 29 Bleed / contenido a borde */
+/* ---- 22 Bleed / contenido a borde ---- */
 .nz-bleed { margin-inline: calc(var(--nz-gutter) * -1); }
+.nz-bleed--left { margin-inline-start: calc(var(--nz-gutter) * -1); margin-inline-end: 0; }
+.nz-bleed--right { margin-inline-start: 0; margin-inline-end: calc(var(--nz-gutter) * -1); }
+.nz-bleed--full { width: 100vw; max-width: 100vw; margin-inline: calc(50% - 50vw); }
 
-/* 30 Aspect-ratio box */
+/* ---- 23 Aspect-ratio box ---- */
 .nz-aspect { position: relative; }
 .nz-aspect > * { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.nz-aspect--16x9 { aspect-ratio: 16 / 9; } .nz-aspect--4x3 { aspect-ratio: 4 / 3; }
-.nz-aspect--1x1 { aspect-ratio: 1 / 1; } .nz-aspect--21x9 { aspect-ratio: 21 / 9; }
+.nz-aspect--1x1 { aspect-ratio: 1 / 1; } .nz-aspect--4x3 { aspect-ratio: 4 / 3; }
+.nz-aspect--3x4 { aspect-ratio: 3 / 4; } .nz-aspect--16x9 { aspect-ratio: 16 / 9; }
+.nz-aspect--9x16 { aspect-ratio: 9 / 16; } .nz-aspect--21x9 { aspect-ratio: 21 / 9; }
+.nz-aspect--2x1 { aspect-ratio: 2 / 1; }
 
-/* 31 Masonry grid */
+/* ---- 24 Masonry ---- */
 .nz-masonry { columns: 1; column-gap: var(--nz-space-4); }
 .nz-masonry > * { break-inside: avoid; margin-bottom: var(--nz-space-4); }
-@media (min-width: 640px) { .nz-masonry { columns: 2; } }
-@media (min-width: 960px) { .nz-masonry { columns: 3; } }
+.nz-masonry--2 { columns: 1; }
+.nz-masonry--4 { columns: 1; }
+@media (min-width: 640px) { .nz-masonry { columns: 2; } .nz-masonry--2 { columns: 2; } .nz-masonry--4 { columns: 2; } }
+@media (min-width: 960px) { .nz-masonry { columns: 3; } .nz-masonry--4 { columns: 4; } }
 
-/* 32 Bento grid */
+/* ---- 25 Bento grid ---- */
 .nz-bento { display: grid; gap: var(--nz-space-4); grid-template-columns: repeat(2, 1fr); }
 .nz-bento > .nz-bento__wide { grid-column: span 2; }
 .nz-bento > .nz-bento__tall { grid-row: span 2; }
 @media (min-width: 960px) { .nz-bento { grid-template-columns: repeat(4, 1fr); } .nz-bento > .nz-bento__wide { grid-column: span 2; } }
 
-/* 33 Dashboard grid */
+/* ---- 26 Dashboard grid ---- */
 .nz-dash-grid { display: grid; gap: var(--nz-space-4); grid-template-columns: 1fr; }
-@media (min-width: 960px) { .nz-dash-grid { grid-template-columns: repeat(3, 1fr); } }
+.nz-dash-grid--2 { grid-template-columns: 1fr; }
+.nz-dash-grid--4 { grid-template-columns: 1fr; }
+.nz-dash-grid--sidebar { grid-template-columns: 1fr; }
+@media (min-width: 640px) {
+  .nz-dash-grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .nz-dash-grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .nz-dash-grid { grid-template-columns: repeat(3, 1fr); }
+  .nz-dash-grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .nz-dash-grid--sidebar { grid-template-columns: 18rem minmax(0, 1fr); }
+}
 
-/* 34 Holy grail layout */
+/* ---- 27 Holy grail layout ---- */
 .nz-holy { display: grid; min-height: 100dvh; gap: var(--nz-space-4); grid-template-areas: "header" "main" "footer"; grid-template-rows: auto 1fr auto; }
 .nz-holy__header { grid-area: header; } .nz-holy__main { grid-area: main; } .nz-holy__footer { grid-area: footer; }
 @media (min-width: 960px) {
   .nz-holy { grid-template-areas: "nav header aside" "nav main aside" "nav footer footer"; grid-template-columns: 14rem minmax(0, 1fr) 12rem; }
   .nz-holy__nav { grid-area: nav; } .nz-holy__aside { grid-area: aside; }
+  .nz-holy--aside-left { grid-template-areas: "aside header nav" "aside main nav" "aside footer nav"; grid-template-columns: 12rem minmax(0, 1fr) 14rem; }
 }
 
-/* 35 Split pane redimensionable */
+/* ---- 28 Split pane redimensionable ---- */
 .nz-splitpane { display: grid; grid-template-columns: 1fr; min-height: 12rem; }
+.nz-splitpane__panel { min-width: 0; min-height: 0; overflow: auto; }
 @media (min-width: 960px) {
   .nz-splitpane { grid-template-columns: minmax(10rem, 30%) 6px 1fr; }
   .nz-splitpane__grip { cursor: col-resize; background: var(--nz-border-soft); border-radius: var(--nz-radius-full); }
   .nz-splitpane__grip:hover { background: var(--nz-brand-tint); }
+  .nz-splitpane--vertical { grid-template-columns: 1fr; grid-template-rows: minmax(0, 1fr) 6px minmax(0, 1fr); }
+  .nz-splitpane--vertical .nz-splitpane__grip { cursor: row-resize; }
 }
 
-/* 36 Panel colapsable */
+/* ---- 29 Panel colapsable ---- */
 .nz-collapsible[hidden] { display: none; }
 .nz-collapsible { padding: var(--nz-space-4); background: var(--nz-surface-2); border-radius: var(--nz-radius-md); }
 
-/* 37 Drawer layout */
+/* ---- 30 Drawer layout ---- */
 .nz-drawer-layout { display: grid; grid-template-columns: 1fr; min-height: 100dvh; }
-@media (min-width: 960px) { .nz-drawer-layout { grid-template-columns: 16rem 1fr; } .nz-drawer-layout__drawer { position: sticky; top: 0; height: 100dvh; } }
+@media (min-width: 960px) {
+  .nz-drawer-layout { grid-template-columns: 16rem 1fr; }
+  .nz-drawer-layout__drawer { position: sticky; top: 0; height: 100dvh; }
+  .nz-drawer-layout--right { grid-template-columns: minmax(0, 1fr) 16rem; }
+  .nz-drawer-layout--right .nz-drawer-layout__drawer { grid-column: 2; grid-row: 1; }
+}
 
-/* 38 Overlay scrim */
+/* ---- 31 Overlay scrim ---- */
 .nz-scrim { position: fixed; inset: 0; background: var(--nz-overlay); z-index: var(--nz-z-drawer); opacity: 0; transition: opacity var(--nz-dur-base) var(--nz-ease-out); pointer-events: none; }
 .nz-scrim.is-open { opacity: 1; pointer-events: auto; }
+.nz-scrim--soft.is-open { opacity: .4; }
+.nz-scrim--strong.is-open { opacity: .9; }
 
-/* 39 Skip-to-content target */
-.nz-skip-link { position: absolute; left: -9999px; top: var(--nz-space-2); z-index: calc(var(--nz-z-tooltip) + 1); background: var(--nz-brand); color: var(--nz-text-invert); padding: var(--nz-space-2) var(--nz-space-4); border-radius: var(--nz-radius-sm); font-weight: 600; }
-.nz-skip-link:focus-visible { left: var(--nz-space-2); }
+/* ---- 32 Flujo: overflow con scroll ---- */
+.nz-overflow-x { overflow-x: auto; overscroll-behavior-x: contain; }
+.nz-overflow-y { overflow-y: auto; overscroll-behavior-y: contain; }
 
-/* 40 Max-width prose */
-.nz-prose { max-width: var(--nz-container-narrow); margin-inline: auto; }
-.nz-prose p { margin-block: var(--nz-space-4); color: var(--nz-text-soft); }
-.nz-prose h2 { margin-block: var(--nz-space-8) var(--nz-space-3); font-size: var(--nz-text-xl); letter-spacing: var(--nz-tracking-tight); }
+/* ---- 33 Centrado de caja ---- */
+.nz-center-xy { display: flex; align-items: center; justify-content: center; }
+.nz-center-x { display: flex; justify-content: center; }
+.nz-center-y { display: flex; align-items: center; }
 
-/* 41 Full-bleed hero */
+/* ---- 34 Visibilidad por dispositivo ---- */
+.nz-hide-movil { display: none; }
+.nz-show-movil { display: block; }
+.nz-hide-escritorio { display: block; }
+.nz-show-escritorio { display: none; }
+@media (min-width: 640px) { .nz-hide-movil { display: block; } .nz-show-movil { display: none; } }
+@media (min-width: 960px) { .nz-hide-escritorio { display: none; } .nz-show-escritorio { display: block; } }
+
+/* ---- 35 Full-bleed hero ---- */
 .nz-hero-bleed { position: relative; width: 100%; padding: var(--nz-space-12) var(--nz-gutter); background: var(--nz-bg-soft); }
 
-/* 42 Nested layout (rutas) */
+/* ---- 36 Rutas anidadas ---- */
 .nz-route { display: grid; gap: var(--nz-space-4); }
 .nz-route__outlet { min-width: 0; padding: var(--nz-space-4); border: 1px dashed var(--nz-border-strong); border-radius: var(--nz-radius-md); color: var(--nz-text-mute); font-size: var(--nz-text-sm); }
 
-/* 43 Slot / outlet de página */
+/* ---- 37 Slot / outlet de página ---- */
 .nz-outlet { min-height: 12rem; display: flex; align-items: center; justify-content: center; color: var(--nz-text-faint); font-size: var(--nz-text-sm); background: var(--nz-bg-inset); border-radius: var(--nz-radius-lg); }
+.nz-outlet--sm { min-height: 6rem; }
+.nz-outlet--lg { min-height: 18rem; }
 
-/* 44 Region de anuncios */
+/* ---- 38 Región de anuncios ---- */
 .nz-region-ad { display: flex; align-items: center; justify-content: center; min-height: 6rem; background: var(--nz-bg-inset); border-radius: var(--nz-radius-md); color: var(--nz-text-faint); font-size: var(--nz-text-xs); letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; }
+.nz-region-ad--inline { min-height: 0; padding: var(--nz-space-2); }
+.nz-region-ad--sidebar { max-width: 10rem; min-height: 16rem; }
 
-/* 45 Region de cookies */
+/* ---- 39 Región de cookies ---- */
 .nz-region-cookies { position: fixed; bottom: 0; inset-inline: 0; z-index: var(--nz-z-toast); padding: var(--nz-space-4); background: var(--nz-surface); box-shadow: var(--nz-shadow-lg); }
+.nz-region-cookies--compact { padding: var(--nz-space-2) var(--nz-space-3); font-size: var(--nz-text-xs); }
+.nz-region-cookies--esquina { inset-inline: var(--nz-space-4) auto; bottom: var(--nz-space-4); max-width: 24rem; border-radius: var(--nz-radius-lg); }
 
-/* 46 Region de chat */
+/* ---- 40 Región de chat ---- */
 .nz-region-chat { position: fixed; right: var(--nz-space-4); bottom: var(--nz-space-4); z-index: var(--nz-z-popover); }
+.nz-region-chat--left { right: auto; left: var(--nz-space-4); }
+.nz-region-chat--sm { padding: var(--nz-space-3); border-radius: var(--nz-radius-full); background: var(--nz-brand); color: var(--nz-text-invert); font-size: var(--nz-text-sm); font-weight: 700; box-shadow: var(--nz-shadow-brand); }
 
-/* 47 Region de toolbar */
+/* ---- 41 Región de toolbar ---- */
 .nz-region-toolbar { display: flex; align-items: center; gap: var(--nz-space-2); padding: var(--nz-space-2) var(--nz-space-3); background: var(--nz-bg-soft); border-radius: var(--nz-radius-md); }
+.nz-region-toolbar--sticky { position: sticky; top: 0; z-index: var(--nz-z-sticky); }
+.nz-region-toolbar--flotante { position: fixed; left: 50%; bottom: var(--nz-space-6); transform: translateX(-50%); box-shadow: var(--nz-shadow-lg); }
 
-/* 48 Safe-area inset (móvil) */
+/* ---- 42 Safe-area inset (móvil) ---- */
 .nz-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
 .nz-safe-x { padding-inline: max(var(--nz-gutter), env(safe-area-inset-left, 0px)) max(var(--nz-gutter), env(safe-area-inset-right, 0px)); }
 
-/* 49 Print layout */
+/* ---- 43 Print layout ---- */
 @media print {
-  .nz-print-hide { display: none !important; }
+  /* Sin la marca de prioridad máxima: [class] sube la especificidad para ganar
+     a los display:flex de los helpers de layout (.nz-hstack, .nz-row…) sin
+     romper el manifiesto (0 usos de esa marca en todo el pack). */
+  .nz-print-hide, .nz-print-hide[class] { display: none; }
   .nz-root, .nz-appshell { min-height: auto; }
-  body { background: #fff; color: #000; }
-  .nz-article { box-shadow: none; border: 1px solid #ddd; }
+  .nz, body { background: var(--nz-gray-0); color: var(--nz-gray-900); }
+  .nz-article { box-shadow: none; border: var(--nz-border-w) solid var(--nz-border-strong); }
 }
 
-/* 50 RTL layout container */
+/* ---- 44 RTL layout ---- */
 .nz-rtl { direction: rtl; text-align: right; }
 .nz-rtl .nz-hstack, .nz-rtl .nz-cluster { flex-direction: row-reverse; }
 
-/* Responsive de grid 12: sm → 8 cols, md → 12 */
+/* ---- 45 Responsive de la rejilla base ---- */
 @media (min-width: 640px) { .nz-grid-12 { grid-template-columns: repeat(8, 1fr); } }
-@media (min-width: 960px) { .nz-grid-12 { grid-template-columns: repeat(12, 1fr); }
-  .nz-row > * { flex: 1 1 calc(50% - var(--nz-space-4)); } }
+@media (min-width: 960px) { .nz-grid-12 { grid-template-columns: repeat(12, 1fr); } }
+@media (min-width: 1200px) { .nz-grid-12 { gap: var(--nz-space-5); } }

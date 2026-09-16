@@ -1,0 +1,249 @@
+{
+ "cat": 1,
+ "nombre": "Layout y estructura",
+ "desc": "El esqueleto de cualquier web: contenedores, rejillas y spans, filas, pilas, landmarks, sticky, bleed, regiones de página y helpers de flujo.",
+ "pack": "p1-layout.css",
+ "fichero": "01-layout.html",
+ "demos": [
+  {
+   "titulo": "Viewport / contenedor raíz",
+   "tag": ".nz-root",
+   "markup": "<div class=\"nz-root demo-box\" style=\"min-height:5rem;display:flex;align-items:center;justify-content:center\">.nz-root — la página entera: min-height 100dvh + columna flex</div>"
+  },
+  {
+   "titulo": "Contenedores: página, fluido, fijo, ancho y estrecho",
+   "tag": ".nz-container · --fluid · --fixed · --wide · --narrow",
+   "markup": "<div class=\"nz-container demo-box\">página · max 72rem</div><div class=\"nz-container nz-container--fluid demo-box\">fluido · 100% del ancho</div><div class=\"nz-container nz-container--fixed demo-box\">fijo · max 60rem</div><div class=\"nz-container nz-container--wide demo-box\">ancho · max 84rem</div><div class=\"nz-container nz-container--narrow demo-box\">estrecho · max 44rem (columna de lectura)</div>"
+  },
+  {
+   "titulo": "Grid de 12 columnas y grid auto-fit",
+   "tag": ".nz-grid-12 · .nz-grid-auto",
+   "markup": "<div class=\"nz-grid-12\"><div class=\"demo-box demo-box--brand\">4</div><div class=\"demo-box\">8</div><div class=\"demo-box\">1</div><div class=\"demo-box\">2</div><div class=\"demo-box\">3</div><div class=\"demo-box\">4</div><div class=\"demo-box\">5</div><div class=\"demo-box\">6</div></div><div class=\"nz-grid-auto\"><div class=\"demo-box\">auto-fit</div><div class=\"demo-box\">auto-fit</div><div class=\"demo-box\">auto-fit</div></div>"
+  },
+  {
+   "titulo": "Spans de rejilla 1→12 (escalan con las columnas disponibles)",
+   "tag": ".nz-span-1 … .nz-span-12",
+   "markup": "<div class=\"nz-grid-12\"><div class=\"nz-span-1 demo-box\">1</div><div class=\"nz-span-2 demo-box\">2</div><div class=\"nz-span-3 demo-box\">3</div><div class=\"nz-span-4 demo-box\">4</div><div class=\"nz-span-5 demo-box\">5</div><div class=\"nz-span-6 demo-box\">6</div><div class=\"nz-span-7 demo-box\">7</div><div class=\"nz-span-8 demo-box\">8</div><div class=\"nz-span-9 demo-box\">9</div><div class=\"nz-span-10 demo-box\">10</div><div class=\"nz-span-11 demo-box\">11</div><div class=\"nz-span-12 demo-box\">12</div></div><p style=\"font-size:var(--nz-text-xs);color:var(--nz-text-mute);margin-top:var(--nz-space-2)\">Móvil: 4 columnas (los spans largos caben a lo ancho). ≥640px: 8. ≥960px: 12.</p>"
+  },
+  {
+   "titulo": "Filas de 2, 3 y 4 columnas",
+   "tag": ".nz-row · --2 · --3 · --4",
+   "markup": "<div class=\"nz-row nz-row--2\"><div class=\"demo-box\">fila 2 · A</div><div class=\"demo-box\">fila 2 · B</div></div><div class=\"nz-row nz-row--3\"><div class=\"demo-box\">fila 3 · A</div><div class=\"demo-box\">B</div><div class=\"demo-box\">C</div></div><div class=\"nz-row nz-row--4\"><div class=\"demo-box\">fila 4 · A</div><div class=\"demo-box\">B</div><div class=\"demo-box\">C</div><div class=\"demo-box\">D</div></div><div class=\"nz-row\"><div class=\"demo-box\">.nz-row base · item 1</div><div class=\"demo-box\">item 2</div></div>"
+  },
+  {
+   "titulo": "Filas compactas y espaciosas",
+   "tag": ".nz-row--compact · .nz-row--spacious",
+   "markup": "<div class=\"nz-row nz-row--compact\"><div class=\"demo-box\">compact · gap 8</div><div class=\"demo-box\">compact</div></div><div class=\"nz-row nz-row--spacious\"><div class=\"demo-box\">spacious · gap 24</div><div class=\"demo-box\">spacious</div></div>"
+  },
+  {
+   "titulo": "Columna y stacks: base, 2xs, xs, sm, lg, xl",
+   "tag": ".nz-col · .nz-stack · --2xs · --xs · --sm · --lg · --xl",
+   "markup": "<div class=\"nz-col\"><div class=\"nz-stack nz-stack--2xs demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">stack--2xs · sin hueco</span><span class=\"demo-box\">pegado al anterior</span></div><div class=\"nz-stack nz-stack--xs demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">stack--xs · 4px</span><span class=\"demo-box\">4px</span></div><div class=\"nz-stack nz-stack--sm demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">stack--sm · 8px</span><span class=\"demo-box\">8px</span></div><div class=\"nz-stack demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">stack base · 16px</span><span class=\"demo-box\">16px</span></div><div class=\"nz-stack nz-stack--lg demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">stack--lg · 24px</span><span class=\"demo-box\">24px</span></div><div class=\"nz-stack nz-stack--xl demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">stack--xl · 32px</span><span class=\"demo-box\">32px</span></div></div>"
+  },
+  {
+   "titulo": "Stack horizontal: densidad y wrap",
+   "tag": ".nz-hstack · --compact · --spacious · --nowrap",
+   "markup": "<div class=\"nz-hstack\"><span class=\"demo-box\">base</span><span class=\"demo-box\">gap 12</span></div><div class=\"nz-hstack nz-hstack--compact\"><span class=\"demo-box\">compact</span><span class=\"demo-box\">gap 8</span></div><div class=\"nz-hstack nz-hstack--spacious\"><span class=\"demo-box\">spacious</span><span class=\"demo-box\">gap 24</span></div><div class=\"nz-hstack nz-hstack--nowrap\"><span class=\"demo-box\">nowrap</span><span class=\"demo-box\">no salta de línea</span><span class=\"demo-box\">scroll-x si no cabe</span><span class=\"demo-box\">cuarto</span><span class=\"demo-box\">quinto</span></div>"
+  },
+  {
+   "titulo": "Stack horizontal: reparto y alineación vertical",
+   "tag": ".nz-hstack--center · --between · --end · --top · --bottom",
+   "markup": "<div class=\"nz-hstack nz-hstack--center demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">center</span><span class=\"demo-box\">centrado</span></div><div class=\"nz-hstack nz-hstack--between demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">between</span><span class=\"demo-box\">extremos</span></div><div class=\"nz-hstack nz-hstack--end demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">end</span><span class=\"demo-box\">a la derecha</span></div><div class=\"nz-hstack nz-hstack--top demo-box\" style=\"padding:var(--nz-space-2);min-height:4.5rem\"><span class=\"demo-box\">top</span><span class=\"demo-box\" style=\"padding-block:var(--nz-space-4)\">alto</span></div><div class=\"nz-hstack nz-hstack--bottom demo-box\" style=\"padding:var(--nz-space-2);min-height:4.5rem\"><span class=\"demo-box\">bottom</span><span class=\"demo-box\" style=\"padding-block:var(--nz-space-4)\">alto</span></div>"
+  },
+  {
+   "titulo": "Cluster: densidad",
+   "tag": ".nz-cluster · --compact · --spacious",
+   "markup": "<div class=\"nz-cluster\"><span class=\"demo-box\">cluster</span><span class=\"demo-box\">ítems</span><span class=\"demo-box\">que fluyen</span><span class=\"demo-box\">con wrap</span></div><div class=\"nz-cluster nz-cluster--compact\"><span class=\"demo-box\">compact</span><span class=\"demo-box\">más junto</span><span class=\"demo-box\">mismo wrap</span></div><div class=\"nz-cluster nz-cluster--spacious\"><span class=\"demo-box\">spacious</span><span class=\"demo-box\">más aire</span><span class=\"demo-box\">entre ítems</span></div>"
+  },
+  {
+   "titulo": "Cluster: reparto, nowrap con scroll",
+   "tag": ".nz-cluster--center · --between · --end · --nowrap",
+   "markup": "<div class=\"nz-cluster nz-cluster--center demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">center</span><span class=\"demo-box\">centrado</span></div><div class=\"nz-cluster nz-cluster--between demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">between</span><span class=\"demo-box\">extremos</span></div><div class=\"nz-cluster nz-cluster--end demo-box\" style=\"padding:var(--nz-space-2)\"><span class=\"demo-box\">end</span><span class=\"demo-box\">derecha</span></div><div class=\"nz-cluster nz-cluster--nowrap\"><span class=\"demo-box\">nowrap</span><span class=\"demo-box\">una sola línea</span><span class=\"demo-box\">scroll horizontal</span><span class=\"demo-box\">si no cabe</span><span class=\"demo-box\">y así</span></div>"
+  },
+  {
+   "titulo": "Split: 50/50, 2-1 y 3-2",
+   "tag": ".nz-split · --2-1 · --3-2",
+   "markup": "<div class=\"nz-split\"><div class=\"demo-box\">split 50/50 · izq</div><div class=\"demo-box demo-box--brand\">50/50 · der (≥960px)</div></div><div class=\"nz-split nz-split--2-1\"><div class=\"demo-box\">2fr</div><div class=\"demo-box demo-box--brand\">1fr</div></div><div class=\"nz-split nz-split--3-2\"><div class=\"demo-box\">3fr</div><div class=\"demo-box demo-box--brand\">2fr</div></div>"
+  },
+  {
+   "titulo": "Split 40-60 y 60-40",
+   "tag": ".nz-split--40-60 · .nz-split--60-40",
+   "markup": "<div class=\"nz-split nz-split--40-60\"><div class=\"demo-box\">40%</div><div class=\"demo-box demo-box--accent\">60%</div></div><div class=\"nz-split nz-split--60-40\"><div class=\"demo-box demo-box--accent\">60%</div><div class=\"demo-box\">40%</div></div>"
+  },
+  {
+   "titulo": "Sidebar + contenido: izquierda, derecha y ancha",
+   "tag": ".nz-with-sidebar · --right · --wide",
+   "markup": "<div class=\"nz-with-sidebar\"><div class=\"demo-box\">.nz-with-sidebar · 15rem</div><div class=\"demo-box demo-box--brand\">contenido flexible</div></div><div class=\"nz-with-sidebar nz-with-sidebar--right\"><div class=\"demo-box\">--right · la barra (1º hijo) se va a la derecha</div><div class=\"demo-box demo-box--brand\">contenido flexible</div></div><div class=\"nz-with-sidebar nz-with-sidebar--wide\"><div class=\"demo-box\">--wide · 20rem</div><div class=\"demo-box demo-box--brand\">contenido</div></div><p style=\"font-size:var(--nz-text-xs);color:var(--nz-text-mute)\">Convención: el 1er hijo es la barra y el 2º el contenido; --right solo cambia de lado las columnas.</p>"
+  },
+  {
+   "titulo": "Tres columnas: base, compacta y espaciosa",
+   "tag": ".nz-thirds · --compact · --spacious",
+   "markup": "<div class=\"nz-thirds\"><div class=\"demo-box\">1/3</div><div class=\"demo-box\">2/3</div><div class=\"demo-box demo-box--accent\">3/3</div></div><div class=\"nz-thirds nz-thirds--compact\"><div class=\"demo-box\">compact 8</div><div class=\"demo-box\">compact</div><div class=\"demo-box\">compact</div></div><div class=\"nz-thirds nz-thirds--spacious\"><div class=\"demo-box\">spacious 24</div><div class=\"demo-box\">spacious</div><div class=\"demo-box\">spacious</div></div>"
+  },
+  {
+   "titulo": "Header: base, compact, tall y bordered",
+   "tag": ".nz-header · --compact · --tall · --bordered",
+   "markup": "<div class=\"nz-header\"><strong style=\"font-size:var(--nz-text-sm)\">Mi web</strong><span class=\"demo-box\">header base</span></div><div class=\"nz-header nz-header--compact\"><strong style=\"font-size:var(--nz-text-sm)\">Compacta</strong><span class=\"demo-box\">44px de alto mínimo</span></div><div class=\"nz-header nz-header--tall\"><strong style=\"font-size:var(--nz-text-sm)\">Alta</strong><span class=\"demo-box\">padding 24</span></div><div class=\"nz-header nz-header--bordered\"><strong style=\"font-size:var(--nz-text-sm)\">Borde fuerte</strong><span class=\"demo-box\">--bordered</span></div>"
+  },
+  {
+   "titulo": "Sticky: header, top, bottom y footer",
+   "tag": ".nz-header--sticky · .nz-sticky-top · .nz-sticky-bottom · .nz-footer--sticky · .nz-overflow-y",
+   "markup": "<div class=\"nz-overflow-y demo-box\" style=\"max-height:10rem;padding:0;text-align:start\"><div class=\"nz-header--sticky demo-box demo-box--brand\">header--sticky · se queda arriba</div><div class=\"nz-sticky-top demo-box demo-box--accent\">sticky-top</div><div class=\"demo-box\" style=\"height:9rem\">contenido alto para que haya scroll…</div><div class=\"nz-sticky-bottom demo-box\">sticky-bottom</div><div class=\"nz-footer--sticky demo-box\">footer--sticky · se queda abajo</div></div>"
+  },
+  {
+   "titulo": "Main: base, flush, narrow y wide",
+   "tag": ".nz-main · --flush · --narrow · --wide",
+   "markup": "<div class=\"nz-main demo-box\" style=\"flex:none\">.nz-main · contenido principal (flex: 1 0 auto)</div><div class=\"nz-main nz-main--flush demo-box\" style=\"flex:none\">--flush · sin padding vertical</div><div class=\"nz-main nz-main--narrow demo-box\" style=\"flex:none\">--narrow · max 44rem centrado</div><div class=\"nz-main nz-main--wide demo-box\" style=\"flex:none\">--wide · max 72rem centrado</div>"
+  },
+  {
+   "titulo": "Footer: base, compact y brand",
+   "tag": ".nz-footer · --compact · --brand",
+   "markup": "<footer class=\"nz-footer\">footer base · Hecho con ❤️ por David Antizar</footer><footer class=\"nz-footer nz-footer--compact\">footer compact · menos aire</footer><footer class=\"nz-footer nz-footer--brand\">footer brand · fondo azul suave</footer>"
+  },
+  {
+   "titulo": "Landmarks: nav, aside y section",
+   "tag": ".nz-nav-landmark · .nz-aside · .nz-section · --compact · --spacious · --bordered",
+   "markup": "<nav class=\"nz-nav-landmark demo-box\" aria-label=\"demo\">landmark nav</nav><aside class=\"nz-aside demo-box\">landmark aside</aside><div class=\"nz-section demo-box\" style=\"padding:var(--nz-space-3)\">section base · padding 40</div><div class=\"nz-section nz-section--compact demo-box\" style=\"padding:var(--nz-space-3)\">--compact</div><div class=\"nz-section nz-section--spacious demo-box\" style=\"padding:var(--nz-space-3)\">--spacious</div><div class=\"nz-section nz-section--bordered demo-box\" style=\"padding:var(--nz-space-3)\">--bordered · filetes arriba y abajo</div>"
+  },
+  {
+   "titulo": "Article: base, flush, bordered e interactive",
+   "tag": ".nz-article · --flush · --bordered · --interactive",
+   "markup": "<article class=\"nz-article\"><h3 style=\"font-size:var(--nz-text-md)\">Artículo base</h3><p style=\"font-size:var(--nz-text-sm);color:var(--nz-text-soft);margin-top:var(--nz-space-1)\">Superficie con sombra sutil.</p></article><article class=\"nz-article nz-article--flush\"><p class=\"demo-box\" style=\"border-radius:var(--nz-radius-md)\">--flush · sin padding (para medios a sangre)</p></article><article class=\"nz-article nz-article--bordered\"><p style=\"font-size:var(--nz-text-sm);color:var(--nz-text-soft);margin:0\">--bordered · sin sombra, con filete</p></article><article class=\"nz-article nz-article--interactive\"><p style=\"font-size:var(--nz-text-sm);color:var(--nz-text-soft);margin:0\">--interactive · pasa el ratón: se levanta</p></article>"
+  },
+  {
+   "titulo": "App shell en tres filas",
+   "tag": ".nz-appshell",
+   "markup": "<div class=\"nz-appshell demo-box\" style=\"min-height:9rem;gap:var(--nz-space-2)\"><div class=\"demo-box demo-box--brand\">fila 1 · header (auto)</div><div class=\"demo-box\" style=\"display:flex;align-items:center;justify-content:center\">fila 2 · contenido (1fr)</div><div class=\"demo-box\">fila 3 · footer (auto)</div></div>"
+  },
+  {
+   "titulo": "Sidebar sticky y spacers",
+   "tag": ".nz-sidebar--sticky · .nz-spacer · --fixed · --sm · --lg",
+   "markup": "<div class=\"nz-with-sidebar\"><div class=\"nz-sidebar--sticky demo-box\">.nz-sidebar--sticky · sigue el scroll con su propio top y max-height</div><div class=\"demo-box\" style=\"min-height:7rem\">contenido que hace scroll</div></div><div class=\"nz-hstack\" style=\"width:100%\"><span class=\"demo-box\">izquierda</span><span class=\"nz-spacer\"></span><span class=\"demo-box\">derecha (el spacer empuja)</span></div><div class=\"nz-hstack\" style=\"width:100%\"><span class=\"demo-box\">a</span><span class=\"nz-spacer nz-spacer--sm\"></span><span class=\"demo-box\">spacer--sm 16px</span></div><div class=\"nz-hstack\" style=\"width:100%\"><span class=\"demo-box\">b</span><span class=\"nz-spacer nz-spacer--fixed\"></span><span class=\"demo-box\">spacer--fixed 32px</span></div><div class=\"nz-hstack\" style=\"width:100%\"><span class=\"demo-box\">c</span><span class=\"nz-spacer nz-spacer--lg\"></span><span class=\"demo-box\">spacer--lg 48px</span></div>"
+  },
+  {
+   "titulo": "Divisores: línea, vertical, dashed y dotted",
+   "tag": ".nz-divider · --v · --dashed · --dotted",
+   "markup": "<hr class=\"nz-divider\"><div class=\"nz-hstack\" style=\"align-items:stretch\"><span class=\"demo-box\">izq</span><hr class=\"nz-divider--v\"><span class=\"demo-box\">der</span></div><hr class=\"nz-divider nz-divider--dashed\"><hr class=\"nz-divider nz-divider--dotted\">"
+  },
+  {
+   "titulo": "Divisor con etiqueta en medio",
+   "tag": ".nz-divider--label",
+   "markup": "<div class=\"nz-divider nz-divider--label\">o continúa con</div><div class=\"nz-divider nz-divider--label\" style=\"margin-top:var(--nz-space-2)\">sección</div>"
+  },
+  {
+   "titulo": "Bleed: izquierda, derecha y a sangre completa",
+   "tag": ".nz-bleed · --left · --right · --full",
+   "markup": "<div class=\"nz-bleed demo-box demo-box--accent\">bleed · sale por los dos lados</div><div class=\"nz-bleed--left demo-box\">--left · solo por la izquierda</div><div class=\"nz-bleed--right demo-box\">--right · solo por la derecha</div><div class=\"nz-bleed--full demo-box demo-box--brand\">--full · sangra hasta el viewport (100vw)</div>"
+  },
+  {
+   "titulo": "Aspect ratio: todos los formatos",
+   "tag": ".nz-aspect · --1x1 · --4x3 · --3x4 · --16x9 · --9x16 · --21x9 · --2x1",
+   "markup": "<div class=\"nz-grid-auto\" style=\"grid-template-columns:repeat(auto-fit,minmax(110px,1fr))\"><div class=\"nz-aspect nz-aspect--1x1\"><div class=\"demo-box\" style=\"display:flex;align-items:center;justify-content:center\">1:1</div></div><div class=\"nz-aspect nz-aspect--4x3\"><div class=\"demo-box\" style=\"display:flex;align-items:center;justify-content:center\">4:3</div></div><div class=\"nz-aspect nz-aspect--3x4\"><div class=\"demo-box\" style=\"display:flex;align-items:center;justify-content:center\">3:4</div></div><div class=\"nz-aspect nz-aspect--16x9\"><div class=\"demo-box demo-box--brand\" style=\"display:flex;align-items:center;justify-content:center\">16:9</div></div><div class=\"nz-aspect nz-aspect--9x16\"><div class=\"demo-box\" style=\"display:flex;align-items:center;justify-content:center\">9:16</div></div><div class=\"nz-aspect nz-aspect--21x9\"><div class=\"demo-box\" style=\"display:flex;align-items:center;justify-content:center\">21:9</div></div><div class=\"nz-aspect nz-aspect--2x1\"><div class=\"demo-box demo-box--accent\" style=\"display:flex;align-items:center;justify-content:center\">2:1</div></div></div>"
+  },
+  {
+   "titulo": "Masonry: 2, 3 y 4 columnas",
+   "tag": ".nz-masonry · --2 · --4",
+   "markup": "<div class=\"nz-masonry\"><div class=\"demo-box\" style=\"height:4rem\">masonry base</div><div class=\"demo-box\" style=\"height:6rem\">3 columnas ≥960px</div><div class=\"demo-box\" style=\"height:3rem\">masonry</div></div><div class=\"nz-masonry nz-masonry--2\"><div class=\"demo-box\" style=\"height:3rem\">--2</div><div class=\"demo-box\" style=\"height:5rem\">dos columnas</div></div><div class=\"nz-masonry nz-masonry--4\"><div class=\"demo-box\" style=\"height:3rem\">--4</div><div class=\"demo-box\" style=\"height:4rem\">cuatro ≥960px</div><div class=\"demo-box\" style=\"height:3rem\">masonry</div></div>"
+  },
+  {
+   "titulo": "Bento grid con celdas anchas y altas",
+   "tag": ".nz-bento · __wide · __tall",
+   "markup": "<div class=\"nz-bento\"><div class=\"demo-box demo-box--brand nz-bento__wide\">bento__wide · 2 columnas</div><div class=\"demo-box\">bento</div><div class=\"demo-box\">bento</div><div class=\"demo-box demo-box--accent nz-bento__tall\">bento__tall · 2 filas</div><div class=\"demo-box\">bento</div><div class=\"demo-box\">bento</div></div>"
+  },
+  {
+   "titulo": "Dashboard grid: 2, 3, 4 y con barra lateral",
+   "tag": ".nz-dash-grid · --2 · --4 · --sidebar",
+   "markup": "<div class=\"nz-dash-grid\"><div class=\"demo-box\">dash 1</div><div class=\"demo-box\">dash 2</div><div class=\"demo-box\">dash 3</div></div><div class=\"nz-dash-grid nz-dash-grid--2\"><div class=\"demo-box\">--2</div><div class=\"demo-box\">--2</div></div><div class=\"nz-dash-grid nz-dash-grid--4\"><div class=\"demo-box\">--4</div><div class=\"demo-box\">--4</div><div class=\"demo-box\">--4</div><div class=\"demo-box\">--4</div></div><div class=\"nz-dash-grid nz-dash-grid--sidebar\"><div class=\"demo-box demo-box--brand\">--sidebar · 1ª columna de 18rem (filtros, datos)</div><div class=\"demo-box\">contenido flexible del dashboard</div></div>"
+  },
+  {
+   "titulo": "Holy grail (y el aside a la izquierda)",
+   "tag": ".nz-holy · __header __nav __main __aside __footer · --aside-left",
+   "markup": "<div class=\"nz-holy demo-box\" style=\"min-height:11rem;padding:var(--nz-space-2)\"><header class=\"nz-holy__header demo-box demo-box--brand\">__header</header><nav class=\"nz-holy__nav demo-box\">__nav</nav><main class=\"nz-holy__main demo-box\" style=\"display:flex;align-items:center;justify-content:center\">__main</main><aside class=\"nz-holy__aside demo-box\">__aside</aside><footer class=\"nz-holy__footer demo-box\">__footer</footer></div><div class=\"nz-holy nz-holy--aside-left demo-box\" style=\"min-height:9rem;padding:var(--nz-space-2)\"><header class=\"nz-holy__header demo-box\">header</header><nav class=\"nz-holy__nav demo-box\">nav (pasa a la derecha)</nav><main class=\"nz-holy__main demo-box\">main</main><aside class=\"nz-holy__aside demo-box demo-box--accent\">aside a la izquierda</aside><footer class=\"nz-holy__footer demo-box\">footer</footer></div><p style=\"font-size:var(--nz-text-xs);color:var(--nz-text-mute)\">En móvil: header/main/footer en una columna. ≥960px: las tres zonas.</p>"
+  },
+  {
+   "titulo": "Split pane con grip y panel",
+   "tag": ".nz-splitpane · .nz-splitpane__grip · .nz-splitpane__panel",
+   "markup": "<div class=\"nz-splitpane\"><div class=\"nz-splitpane__panel demo-box demo-box--brand\">panel A (minmax 10rem→30%)</div><div class=\"nz-splitpane__grip\" role=\"separator\" aria-orientation=\"vertical\" aria-label=\"Redimensionar paneles\"></div><div class=\"nz-splitpane__panel demo-box\">panel B (1fr)</div></div>"
+  },
+  {
+   "titulo": "Split pane vertical",
+   "tag": ".nz-splitpane--vertical",
+   "markup": "<div class=\"nz-splitpane nz-splitpane--vertical\" style=\"min-height:11rem\"><div class=\"nz-splitpane__panel demo-box\">panel superior</div><div class=\"nz-splitpane__grip\" role=\"separator\" aria-orientation=\"horizontal\" aria-label=\"Redimensionar paneles\"></div><div class=\"nz-splitpane__panel demo-box demo-box--brand\">panel inferior</div></div>"
+  },
+  {
+   "titulo": "Panel colapsable",
+   "tag": ".nz-collapsible",
+   "markup": "<div class=\"nz-collapsible\"><details open><summary style=\"cursor:pointer\">Panel colapsable (usa &lt;details&gt; o el atributo hidden)</summary><p style=\"font-size:var(--nz-text-sm);color:var(--nz-text-soft);margin-top:var(--nz-space-2)\">Contenido plegable y accesible sin una línea de JavaScript.</p></details></div>"
+  },
+  {
+   "titulo": "Drawer layout (izquierda y derecha)",
+   "tag": ".nz-drawer-layout · __drawer · --right",
+   "markup": "<div class=\"nz-drawer-layout demo-box\" style=\"min-height:8rem;gap:var(--nz-space-2)\"><div class=\"nz-drawer-layout__drawer demo-box demo-box--brand\">__drawer · 16rem</div><div class=\"demo-box\" style=\"display:flex;align-items:center;justify-content:center\">contenido</div></div><div class=\"nz-drawer-layout nz-drawer-layout--right demo-box\" style=\"min-height:8rem;gap:var(--nz-space-2)\"><div class=\"demo-box\" style=\"display:flex;align-items:center;justify-content:center\">contenido</div><div class=\"nz-drawer-layout__drawer demo-box demo-box--accent\">--right · drawer a la derecha</div></div>"
+  },
+  {
+   "titulo": "Scrim: base, soft y strong",
+   "tag": ".nz-scrim · --soft · --strong",
+   "markup": "<div style=\"position:relative;height:4.5rem;background:var(--nz-bg-inset);border-radius:var(--nz-radius-md);overflow:hidden\"><div class=\"nz-scrim is-open\" style=\"position:absolute;border-radius:inherit\"></div><div style=\"position:absolute;inset:var(--nz-space-2);display:flex;align-items:center;justify-content:center;color:var(--nz-text-invert);font-size:var(--nz-text-xs)\">scrim base (overlay al 100%)</div></div><div style=\"position:relative;height:4.5rem;background:var(--nz-bg-inset);border-radius:var(--nz-radius-md);overflow:hidden\"><div class=\"nz-scrim nz-scrim--soft is-open\" style=\"position:absolute;border-radius:inherit\"></div><div style=\"position:absolute;inset:var(--nz-space-2);display:flex;align-items:center;justify-content:center;font-size:var(--nz-text-xs)\">--soft · velo suave (0.4)</div></div><div style=\"position:relative;height:4.5rem;background:var(--nz-bg-inset);border-radius:var(--nz-radius-md);overflow:hidden\"><div class=\"nz-scrim nz-scrim--strong is-open\" style=\"position:absolute;border-radius:inherit\"></div><div style=\"position:absolute;inset:var(--nz-space-2);display:flex;align-items:center;justify-content:center;color:var(--nz-text-invert);font-size:var(--nz-text-xs)\">--strong · velo denso (0.9)</div></div>"
+  },
+  {
+   "titulo": "Overflow con scroll propio",
+   "tag": ".nz-overflow-x · .nz-overflow-y",
+   "markup": "<div class=\"nz-overflow-x demo-box\" style=\"padding:var(--nz-space-2)\"><div class=\"nz-hstack nz-hstack--nowrap\"><span class=\"demo-box\">1</span><span class=\"demo-box\">2</span><span class=\"demo-box\">3</span><span class=\"demo-box\">4</span><span class=\"demo-box\">5</span><span class=\"demo-box\">6</span><span class=\"demo-box\">7</span><span class=\"demo-box\">8</span></div></div><div class=\"nz-overflow-y demo-box\" style=\"max-height:5rem;padding:var(--nz-space-2)\"><div class=\"demo-box\">fila 1</div><div class=\"demo-box\">fila 2</div><div class=\"demo-box\">fila 3</div><div class=\"demo-box\">fila 4</div><div class=\"demo-box\">fila 5 — scroll vertical</div></div>"
+  },
+  {
+   "titulo": "Centrado de caja (xy, x, y)",
+   "tag": ".nz-center-xy · .nz-center-x · .nz-center-y",
+   "markup": "<div class=\"nz-center-xy demo-box\" style=\"min-height:4rem\">center-xy · centrado en los dos ejes</div><div class=\"nz-center-x demo-box\" style=\"min-height:3rem\">center-x · a lo ancho</div><div class=\"nz-center-y demo-box\" style=\"min-height:3rem\">center-y · en vertical</div>"
+  },
+  {
+   "titulo": "Visibilidad por dispositivo",
+   "tag": ".nz-hide-movil · .nz-show-movil · .nz-hide-escritorio · .nz-show-escritorio",
+   "markup": "<div class=\"nz-hide-movil demo-box\">hide-movil · aparece desde 640px</div><div class=\"nz-show-movil demo-box demo-box--accent\">show-movil · solo por debajo de 640px</div><div class=\"nz-hide-escritorio demo-box\">hide-escritorio · se va desde 960px</div><div class=\"nz-show-escritorio demo-box demo-box--brand\">show-escritorio · solo desde 960px</div>"
+  },
+  {
+   "titulo": "Hero a borde completo",
+   "tag": ".nz-hero-bleed",
+   "markup": "<div class=\"nz-hero-bleed\" style=\"border-radius:var(--nz-radius-md);padding:var(--nz-space-6) var(--nz-gutter)\"><h3 style=\"font-size:var(--nz-text-lg);margin:0\">Full-bleed hero</h3><p style=\"color:var(--nz-text-soft);font-size:var(--nz-text-sm);margin-top:var(--nz-space-1)\">Ancho completo de la página, fondo bg-soft y padding de hero.</p></div>"
+  },
+  {
+   "titulo": "Rutas anidadas",
+   "tag": ".nz-route · .nz-route__outlet",
+   "markup": "<div class=\"nz-route\"><div class=\"demo-box\">ruta padre</div><div class=\"nz-route__outlet\">outlet de la ruta hija (borde discontinuo)</div><div class=\"demo-box\">otra ruta hermana</div></div>"
+  },
+  {
+   "titulo": "Outlet de página: base, sm y lg",
+   "tag": ".nz-outlet · --sm · --lg",
+   "markup": "<div class=\"nz-outlet nz-outlet--sm\">.nz-outlet--sm · min-height 6rem</div><div class=\"nz-outlet\">.nz-outlet · min-height 12rem</div><div class=\"nz-outlet nz-outlet--lg\">.nz-outlet--lg · min-height 18rem</div>"
+  },
+  {
+   "titulo": "Región de anuncios: base, inline y sidebar",
+   "tag": ".nz-region-ad · --inline · --sidebar",
+   "markup": "<div class=\"nz-region-ad\">espacio publicitario 728×90</div><div class=\"nz-region-ad nz-region-ad--inline\">--inline · banner fino</div><div class=\"nz-region-ad nz-region-ad--sidebar\">--sidebar · 160×600 vertical</div>"
+  },
+  {
+   "titulo": "Región de cookies: base, compact y esquina",
+   "tag": ".nz-region-cookies · --compact · --esquina",
+   "markup": "<div class=\"nz-region-cookies\">región cookies · barra fija inferior (aquí, en reposo)</div><div class=\"nz-region-cookies nz-region-cookies--compact\">--compact · aviso fino</div><div class=\"nz-region-cookies nz-region-cookies--esquina\">--esquina · tarjeta en la esquina con radio</div>"
+  },
+  {
+   "titulo": "Región de chat: base, izquierda y burbuja",
+   "tag": ".nz-region-chat · --left · --sm",
+   "markup": "<div class=\"nz-region-chat demo-box\">región chat · abajo a la derecha</div><div class=\"nz-region-chat nz-region-chat--left demo-box\">--left · abajo a la izquierda</div><div class=\"nz-region-chat nz-region-chat--sm\">--sm · burbuja redonda de chat 💬</div>"
+  },
+  {
+   "titulo": "Región de toolbar: base, sticky y flotante",
+   "tag": ".nz-region-toolbar · --sticky · --flotante",
+   "markup": "<div class=\"nz-overflow-y demo-box\" style=\"max-height:7rem;padding:0;text-align:start\"><div class=\"nz-region-toolbar nz-region-toolbar--sticky\"><span class=\"demo-box\">--sticky · herramientas</span><span class=\"demo-box\">que no se van</span></div><div class=\"demo-box\" style=\"height:6rem\">contenido largo para provocar el scroll…</div></div><div style=\"position:relative;height:5rem;background:var(--nz-bg-inset);border-radius:var(--nz-radius-md);overflow:hidden\"><div class=\"nz-region-toolbar nz-region-toolbar--flotante\" style=\"position:absolute\"><span class=\"demo-box\">--flotante</span><span class=\"demo-box\">barra centrada abajo</span></div></div>"
+  },
+  {
+   "titulo": "Safe-area de móvil",
+   "tag": ".nz-safe · .nz-safe-x",
+   "markup": "<div class=\"nz-safe demo-box\">.nz-safe · padding-bottom = env(safe-area-inset-bottom): respeta la barra de gestos del iPhone.</div><div class=\"nz-safe-x demo-box\">.nz-safe-x · padding lateral con max(gutter, env(safe-area-inset-left/right)).</div>"
+  },
+  {
+   "titulo": "Print y RTL",
+   "tag": "@media print · .nz-print-hide · .nz-rtl",
+   "markup": "<div class=\"demo-box\">Al imprimir: fondo y texto pasan a tokens de papel, las sombras se van y .nz-print-hide desaparece.</div><div class=\"nz-print-hide demo-box demo-box--accent\">.nz-print-hide · no sale en papel</div><div class=\"nz-rtl demo-box\" dir=\"rtl\">تخطيط من اليمين إلى اليسار · direction: rtl</div>"
+  }
+ ]
+}

@@ -1,7 +1,9 @@
 /* ============================================================
-   AURORA 7 — p9-media.css · Categoría 09 · Media e iconografía (40 objetos)
-   Imágenes responsive, figure, avatares, logotipos, iconos (estados),
-   vídeo/blogueded, media object, badges sobre media.
+   AURORA 7 — p9-media.css · Categoría 09 · Media e iconografía (104 objetos)
+   Imágenes responsive (formas, sombras, filtros, ratios), figure, avatares
+   (tamaños, forma, anillo, presencia, grupos), logotipos y nube de logos,
+   iconos en caja (tamaños, tonos, contorno), media object, vídeo, audio,
+   hueco de mapa, galería y badges sobre media.
    ============================================================ */
 
 /* ---- Imagen responsive ---- */
@@ -9,6 +11,13 @@
 .nz-img--rounded { border-radius: var(--nz-radius-md); }
 .nz-img--full { width: 100%; object-fit: cover; }
 .nz-img--circle { border-radius: 50%; }
+.nz-img--bordered { border: var(--nz-border-w) solid var(--nz-border); border-radius: var(--nz-radius-md); }
+.nz-img--shadow { border-radius: var(--nz-radius-md); box-shadow: var(--nz-shadow-md); }
+.nz-img--grayscale { filter: grayscale(1); }
+.nz-img--zoom { border-radius: var(--nz-radius-md); transition: transform var(--nz-dur-slow) var(--nz-ease-out); }
+.nz-img--zoom:hover { transform: scale(1.04); }
+.nz-img--ratio-1x1 { aspect-ratio: 1 / 1; object-fit: cover; }
+.nz-img--ratio-16x9 { aspect-ratio: 16 / 9; object-fit: cover; }
 .nz-cover { overflow: hidden; border-radius: var(--nz-radius-md); background: var(--nz-bg-inset); }
 .nz-cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .nz-cover--16x9 { aspect-ratio: 16 / 9; }
@@ -21,6 +30,10 @@
 .nz-figure__img { border-radius: var(--nz-radius-md); overflow: hidden; }
 .nz-figure figcaption { margin-top: var(--nz-space-2); font-size: var(--nz-text-sm); color: var(--nz-text-mute); text-align: center; }
 .nz-figure__credit { font-size: var(--nz-text-2xs); color: var(--nz-text-faint); }
+.nz-figure--brand figcaption { color: var(--nz-brand); font-weight: 700; }
+.nz-figure--caption-left figcaption { text-align: left; }
+.nz-figure--sm { max-width: 18rem; }
+.nz-figure--sm figcaption { font-size: var(--nz-text-xs); }
 
 /* ---- Avatar ---- */
 .nz-avatar { position: relative; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--nz-brand-soft); color: var(--nz-brand); font-weight: 800; overflow: hidden; border: 2px solid var(--nz-surface); }
@@ -30,8 +43,14 @@
 .nz-avatar--md { width: 44px; height: 44px; font-size: var(--nz-text-sm); }
 .nz-avatar--lg { width: 64px; height: 64px; font-size: var(--nz-text-xl); }
 .nz-avatar--xl { width: 96px; height: 96px; font-size: var(--nz-text-2xl); }
+.nz-avatar--2xl { width: 128px; height: 128px; font-size: var(--nz-text-3xl); }
 .nz-avatar--accent { background: var(--nz-accent-soft); color: var(--nz-accent); }
 .nz-avatar--dark { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-avatar--square { border-radius: var(--nz-radius-md); }
+.nz-avatar--ring { border-color: var(--nz-brand); box-shadow: 0 0 0 3px var(--nz-brand-soft); }
+.nz-avatar--status::after { content: ""; position: absolute; right: -2px; bottom: -2px; width: 13px; height: 13px; border-radius: 50%; border: 2px solid var(--nz-surface); background: var(--nz-success); }
+.nz-avatar--busy::after { background: var(--nz-warning); }
+.nz-avatar--offline::after { background: var(--nz-text-faint); }
 .nz-avatar__bar { display: flex; align-items: center; gap: var(--nz-space-2); }
 
 /* ---- Grupo de avatares (stack) ---- */
@@ -39,23 +58,34 @@
 .nz-avatar-group .nz-avatar { margin-left: -0.6rem; }
 .nz-avatar-group .nz-avatar:first-child { margin-left: 0; }
 .nz-avatar-group__more { border: 2px solid var(--nz-surface); background: var(--nz-bg-inset); color: var(--nz-text-mute); }
+.nz-avatar-group--sm { line-height: 1; }
+.nz-avatar-group--sm .nz-avatar { margin-left: -0.35rem; border-width: 1px; }
 
 /* ---- Logotipo / palabra de marca ---- */
 .nz-brand { display: inline-flex; align-items: center; gap: var(--nz-space-2); font-weight: 800; letter-spacing: var(--nz-tracking-tight); color: var(--nz-text); }
 .nz-brand__mark { display: inline-grid; place-items: center; width: 28px; height: 28px; border-radius: var(--nz-radius-sm); background: var(--nz-brand); color: var(--nz-text-invert); font-size: var(--nz-text-sm); }
 .nz-brand--lg .nz-brand__mark { width: 36px; height: 36px; font-size: var(--nz-text-md); }
+.nz-brand--sm { font-size: var(--nz-text-sm); }
+.nz-brand--sm .nz-brand__mark { width: 22px; height: 22px; font-size: var(--nz-text-2xs); border-radius: var(--nz-radius-xs); }
+.nz-brand--mono .nz-brand__mark { font-family: var(--nz-font-mono); font-weight: 700; }
 .nz-brand__mark--accent { background: var(--nz-accent); }
+.nz-brand__mark--dark { background: var(--nz-gray-900); color: var(--nz-gray-50); }
 .nz-brand--accent { color: var(--nz-accent); }
 .nz-logomark { display: inline-grid; place-items: center; border-radius: var(--nz-radius-md); background: var(--nz-brand); color: var(--nz-text-invert); }
 .nz-logomark--accent { background: var(--nz-accent); }
+.nz-logomark--outline { background: transparent; box-shadow: inset 0 0 0 var(--nz-border-w-strong) var(--nz-border); color: var(--nz-text-soft); }
 
 /* ---- Icono en caja (icon tile) ---- */
 .nz-icon-tile { width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--nz-radius-md); background: var(--nz-brand-soft); color: var(--nz-brand); font-size: var(--nz-text-lg); }
 .nz-icon-tile--accent { background: var(--nz-accent-soft); color: var(--nz-accent); }
 .nz-icon-tile--success { background: var(--nz-success-soft); color: var(--nz-success); }
 .nz-icon-tile--danger { background: var(--nz-danger-soft); color: var(--nz-danger); }
+.nz-icon-tile--brand { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-icon-tile--outline { background: transparent; box-shadow: inset 0 0 0 var(--nz-border-w-strong) var(--nz-border); color: var(--nz-text-soft); }
 .nz-icon-tile--circle { border-radius: 50%; }
+.nz-icon-tile--sm { width: 32px; height: 32px; font-size: var(--nz-text-sm); }
 .nz-icon-tile--lg { width: 56px; height: 56px; font-size: var(--nz-text-xl); }
+.nz-icon-tile--xl { width: 72px; height: 72px; font-size: var(--nz-text-2xl); }
 
 /* ---- Media object (imagen + texto alineado) ---- */
 .nz-media { display: flex; gap: var(--nz-space-3); align-items: flex-start; }
@@ -63,21 +93,66 @@
 .nz-media__body { flex: 1; min-width: 0; display: grid; gap: var(--nz-space-1); }
 .nz-media__title { font-weight: 700; font-size: var(--nz-text-base); color: var(--nz-text); }
 .nz-media__desc { font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
+.nz-media__link { font-size: var(--nz-text-sm); font-weight: 700; color: var(--nz-brand); text-decoration: none; }
 .nz-media--reverse { flex-direction: row-reverse; }
 .nz-media--center { align-items: center; }
+.nz-media--brand .nz-media__title { color: var(--nz-brand); }
+.nz-media--bordered { padding: var(--nz-space-3); border: var(--nz-border-w) solid var(--nz-border-soft); border-radius: var(--nz-radius-md); }
+.nz-media--sm .nz-media__title { font-size: var(--nz-text-sm); }
+.nz-media--sm .nz-media__desc { font-size: var(--nz-text-xs); }
 
-/* ---- Vídeo plateado --- */
+/* ---- Vídeo ---- */
 .nz-video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--nz-radius-md); overflow: hidden; background: var(--nz-gray-900); }
 .nz-video video, .nz-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.nz-video__play { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(0,0,0,.35); color: #fff; border: 0; cursor: pointer; }
+.nz-video--4x3 { aspect-ratio: 4 / 3; }
+.nz-video--full { width: 100%; border-radius: 0; }
+.nz-video__play { position: absolute; inset: 0; display: grid; place-items: center; background: var(--nz-overlay); color: var(--nz-gray-0); border: 0; cursor: pointer; }
 .nz-video__play i { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--nz-brand); color: var(--nz-text-invert); font-size: 1.25rem; transition: transform var(--nz-dur-base) var(--nz-ease-out); }
 .nz-video__play:hover i { transform: scale(1.1); }
+.nz-video__controls { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; display: flex; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-2) var(--nz-space-3); background: var(--nz-overlay); color: var(--nz-gray-0); font-size: var(--nz-text-xs); }
+.nz-video__time { font-variant-numeric: tabular-nums; }
+.nz-video__bar { position: relative; flex: 1; height: 4px; border-radius: var(--nz-radius-full); background: var(--nz-gray-700); overflow: hidden; }
+.nz-video__bar i { display: block; height: 100%; background: var(--nz-brand); }
+
+/* ---- Reproductor de audio ---- */
+.nz-audio { display: flex; align-items: center; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); border-radius: var(--nz-radius-lg); background: var(--nz-surface); box-shadow: var(--nz-shadow-sm); }
+.nz-audio__play { width: 44px; height: 44px; flex: none; display: inline-grid; place-items: center; border: 0; border-radius: 50%; background: var(--nz-brand); color: var(--nz-text-invert); font-size: var(--nz-text-md); cursor: pointer; }
+.nz-audio__track { position: relative; flex: 1; min-width: 4rem; height: 6px; border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); overflow: hidden; }
+.nz-audio__track i { display: block; height: 100%; background: var(--nz-brand); }
+.nz-audio__time { font-size: var(--nz-text-xs); color: var(--nz-text-mute); font-variant-numeric: tabular-nums; }
+.nz-audio--accent .nz-audio__play { background: var(--nz-accent); color: var(--nz-gray-0); }
+.nz-audio--accent .nz-audio__track i { background: var(--nz-accent); }
+
+/* ---- Hueco de mapa (placeholder con chincheta) ---- */
+.nz-mapa-placeholder { position: relative; display: grid; place-items: center; min-height: 10rem; border-radius: var(--nz-radius-lg); background: var(--nz-bg-inset); overflow: hidden; }
+.nz-mapa-placeholder__pin { width: 22px; height: 22px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--nz-accent); box-shadow: var(--nz-shadow-accent); }
+.nz-mapa-placeholder__label { position: absolute; left: var(--nz-space-3); bottom: var(--nz-space-3); padding: var(--nz-space-1) var(--nz-space-2); border-radius: var(--nz-radius-sm); background: var(--nz-surface); font-size: var(--nz-text-2xs); font-weight: 700; color: var(--nz-text-soft); }
+
+/* ---- Galería de imágenes ---- */
+.nz-galeria { display: grid; gap: var(--nz-space-2); grid-template-columns: 1fr; }
+.nz-galeria--2 { grid-template-columns: repeat(2, 1fr); }
+.nz-galeria--3 { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 960px) { .nz-galeria--3 { grid-template-columns: repeat(3, 1fr); } }
+.nz-galeria--masonry { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 5rem; }
+.nz-galeria--masonry > *:nth-child(3n) { grid-row: span 2; }
+.nz-galeria__item { border-radius: var(--nz-radius-md); overflow: hidden; background: var(--nz-bg-inset); }
+.nz-galeria__item--tall { grid-row: span 2; }
 
 /* ---- Badge sobre media ---- */
 .nz-media-badge { position: absolute; top: var(--nz-space-2); left: var(--nz-space-2); z-index: 2; }
 .nz-media-badge--right { left: auto; right: var(--nz-space-2); }
 .nz-media-badge--bottom { top: auto; bottom: var(--nz-space-2); }
 .nz-media-badge--center { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.nz-media-badge--top-izq { top: var(--nz-space-2); left: var(--nz-space-2); right: auto; bottom: auto; transform: none; }
+.nz-media-badge--brand { background: var(--nz-brand); color: var(--nz-text-invert); border-radius: var(--nz-radius-full); padding: 0 var(--nz-space-2); font-size: var(--nz-text-2xs); font-weight: 800; }
+.nz-media-badge--danger { background: var(--nz-danger); color: var(--nz-text-invert); border-radius: var(--nz-radius-full); padding: 0 var(--nz-space-2); font-size: var(--nz-text-2xs); font-weight: 800; }
+
+/* ---- Nube de logotipos ---- */
+.nz-logo-nube { display: grid; gap: var(--nz-space-3); grid-template-columns: 1fr; }
+@media (min-width: 640px) { .nz-logo-nube { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .nz-logo-nube { grid-template-columns: repeat(4, 1fr); } }
+.nz-logo-nube__item { display: grid; place-items: center; min-height: 56px; padding: var(--nz-space-3); border-radius: var(--nz-radius-md); background: var(--nz-surface); box-shadow: var(--nz-shadow-xs); color: var(--nz-text-mute); font-weight: 700; }
+.nz-logo-nube__item--muted { background: var(--nz-bg-soft); box-shadow: none; color: var(--nz-text-faint); }
 
 /* ---- Fila de logotipos (logos grid) ---- */
 .nz-logos { display: flex; flex-wrap: wrap; align-items: center; gap: var(--nz-space-4) var(--nz-space-6); opacity: .8; }
@@ -85,5 +160,5 @@
 
 /* ---- Fondo con imagen ---- */
 .nz-bgimg { background-size: cover; background-position: center; position: relative; }
-.nz-bgimg::before { content: ""; position: absolute; inset: 0; background: rgba(11, 18, 32, 0.45); }
+.nz-bgimg::before { content: ""; position: absolute; inset: 0; background: var(--nz-overlay); }
 .nz-bgimg > * { position: relative; z-index: 1; }

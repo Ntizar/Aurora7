@@ -3,144 +3,356 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Aurora 7 · 10 Comercio y producto</title>
+<title>Aurora 7 · 10 Comercio y producto · 152 objetos</title>
+<meta name="description" content="Precio, estrellas, stock, tarjeta de producto, planes y comparativa, carrito, pasos de compra, cupón, pago, pedido y envío.">
 <link rel="stylesheet" href="../tokens.css">
-<link rel="stylesheet" href="../packs/p10-commerce.css">
 <link rel="stylesheet" href="../packs/p0-catalog.css">
+<link rel="stylesheet" href="../packs/p1-layout.css">
+<link rel="stylesheet" href="../packs/p3-typography.css">
+<link rel="stylesheet" href="../packs/p4-actions.css">
+<link rel="stylesheet" href="../packs/p6-feedback.css">
+<link rel="stylesheet" href="../packs/p10-commerce.css">
+<link rel="stylesheet" href="../packs/p12-system.css">
 </head>
-<body class="nz nz-root">
-  <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
-  <header class="cat-topbar">
-    <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
-    <span class="cat-count">10 · 60 objetos</span>
-    <button class="theme-toggle" id="btnTheme" aria-label="Cambiar tema">◐</button>
-  </header>
-  <nav class="cat-nav-pages" aria-label="Categorías del catálogo">
-    <a href="01-layout.html">01 Layout</a>
-    <a href="02-navigation.html">02 Navegación</a>
-    <a href="03-typography.html">03 Tipografía</a>
-    <a href="04-actions.html">04 Acciones</a>
-    <a href="05-forms.html">05 Formularios</a>
-    <a href="06-feedback.html">06 Feedback</a>
-    <a href="07-overlays.html">07 Overlays</a>
-    <a href="08-data.html">08 Datos</a>
-    <a href="09-media.html">09 Media</a>
-    <a href="10-commerce.html" aria-current="page">10 Comercio</a>
-    <a href="11-social.html">11 Social</a>
-    <a href="12-system.html">12 Sistema</a>
-  </nav>
-  <main class="nz-container cat-main" id="contenido">
-    <div class="cat-pagehead">
-      <p class="cat-pagehead__over">Categoría 10 · 60 objetos</p>
-      <h1>Comercio y producto</h1>
-      <p>Precio, tarjeta de producto, calificación, stock, planes, carrito y resumen de compra.</p>
+<body class="nz">
+<a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
+<header class="cat-topbar">
+<a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
+<span class="cat-count">10 · 152 objetos · 44 demos</span>
+<span class="cat-topbar__tools">
+<a class="cat-icobtn" href="../index.html" title="Portada" aria-label="Volver a la portada">⌂</a>
+<button class="cat-icobtn" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
+</span>
+</header>
+<nav class="cat-nav-pages" aria-label="Categorías del catálogo">
+  <a href="01-layout.html">01 Layout y estructura</a>
+  <a href="02-navigation.html">02 Navegación</a>
+  <a href="03-typography.html">03 Tipografía</a>
+  <a href="04-actions.html">04 Acciones y botones</a>
+  <a href="05-forms.html">05 Formularios e inputs</a>
+  <a href="06-feedback.html">06 Feedback y estados</a>
+  <a href="07-overlays.html">07 Overlays y diálogo</a>
+  <a href="08-data.html">08 Datos, tablas y listas</a>
+  <a href="09-media.html">09 Media e iconografía</a>
+  <a href="10-commerce.html" aria-current="page">10 Comercio y producto</a>
+  <a href="11-social.html">11 Social y marketing</a>
+  <a href="12-system.html">12 Accesibilidad y sistema</a>
+  <a href="13-charts.html">13 Gráficos y visualización</a>
+  <a href="14-ai.html">14 IA y agentes</a>
+  <a href="15-apps.html">15 Apps y escritorio</a>
+</nav>
+<main class="nz-container cat-main" id="contenido">
+  <div class="cat-pagehead">
+    <p class="cat-pagehead__over">Categoría 10 de 15 · 152 objetos · 44 demos</p>
+    <h1>Comercio y producto</h1>
+    <p>Precio, estrellas, stock, tarjeta de producto, planes y comparativa, carrito, pasos de compra, cupón, pago, pedido y envío.</p>
+    <div class="cat-pagehead__stats">
+      <span class="nz-badge nz-badge--brand"><i></i>152 objetos</span>
+      <span class="nz-badge nz-badge--neutral">22 familias</span>
+      <span class="nz-badge nz-badge--accent">44 demos en vivo</span>
+      <span class="nz-badge nz-badge--neutral">28 clases distintas usadas</span>
+      <a class="nz-badge nz-badge--brand" href="../packs/p10-commerce.css">p10-commerce.css</a>
     </div>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Precio</span><span class="cat-demo__tag">.nz-price</span></div>
-      <div class="cat-stage">
-        <p class="nz-price"><span class="nz-price__currency">€</span><span class="nz-price__amount">34</span><span class="nz-price__decimal">,90</span><span class="nz-price__old">49 €</span></p>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Precio de plan</span><span class="cat-demo__tag">.nz-plan__price</span></div>
-      <div class="cat-stage">
-        <p class="nz-plan__price">12 € <small>/mes</small></p>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Calificación</span><span class="cat-demo__tag">.nz-stars__star--full</span></div>
-      <div class="cat-stage">
-        <div class="nz-stars"><span class="nz-stars__row"><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star">★</span></span><span class="nz-stars__count">· 4,9 (128)</span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Stock</span><span class="cat-demo__tag">.nz-stock--in</span></div>
-      <div class="cat-stage">
-        <span class="nz-stock nz-stock--low"><i></i>Solo 2 en stock</span>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Tarjeta de producto</span><span class="cat-demo__tag">.nz-product</span></div>
-      <div class="cat-stage">
-        <div class="nz-product"><div class="nz-product__media"><span class="nz-badge nz-badge--danger nz-product__badge">-20%</span></div><div class="nz-product__body"><span class="nz-product__cat">Equipamiento</span><span class="nz-product__name">Manta térmica</span><span class="nz-product__rate"><span class="nz-stars"><span class="nz-stars__star nz-stars__star--full">★</span>4,8</span></span></div><div class="nz-product__price"><span class="nz-price"><span class="nz-price__amount">24</span><span class="nz-price__old">30 €</span></span></div><div class="nz-product__cta"><button class="nz-btn nz-btn--primary">Añadir</button></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Plan destacado</span><span class="cat-demo__tag">.nz-plan--featured</span></div>
-      <div class="cat-stage">
-        <div class="nz-plan nz-plan--featured" style="max-width:14rem"><span class="nz-badge nz-badge--brand nz-plan__flag">Popular</span><span class="nz-plan__name">Pro</span><span class="nz-plan__price">24 € <small>/mes</small></span><div class="nz-plan__features"><span class="nz-plan__feature"><i></i>Ilimitado</span><span class="nz-plan__feature--no">✕</span></div><button class="nz-btn nz-btn--primary nz-plan__cta">Elegir</button></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Fila de carrito</span><span class="cat-demo__tag">.nz-cart-item</span></div>
-      <div class="cat-stage">
-        <div class="nz-cart-item"><span class="nz-cart-item__thumb"></span><div class="nz-cart-item__body"><span class="nz-cart-item__name">Manta térmica</span><span class="nz-cart-item__meta">× 2</span></div><div class="nz-cart-item__right"><span class="nz-cart-item__price">48 €</span><button class="nz-cart-item__remove">Quitar</button></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Resumen de compra</span><span class="cat-demo__tag">.nz-summary</span></div>
-      <div class="cat-stage">
-        <div class="nz-summary" style="max-width:16rem"><div class="nz-summary__row"><span>Subtotal</span><span>120 €</span></div><div class="nz-summary__row"><span>Envío</span><span>4 €</span></div><div class="nz-summary__row nz-summary__row--total"><span>Total</span><span>124 €</span></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Descuento badge</span><span class="cat-demo__tag">.nz-off</span></div>
-      <div class="cat-stage">
-        <span class="nz-off">-20%</span> <span class="nz-off nz-off--green">Recomendado</span>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">10</span><span class="cat-demo__name">Pricetable</span><span class="cat-demo__tag">.nz-pricetable</span></div>
-      <div class="cat-stage">
-        <table class="nz-pricetable"><tr><td class="nz-pricetable__rowhead">Almacenamiento</td><td>5 GB</td><td class="is-featured">50 GB</td></tr><tr><td class="nz-pricetable__rowhead">Usuarios</td><td>1</td><td class="is-featured">10</td></tr></table>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">11</span><span class="cat-demo__name">Grid de planes</span><span class="cat-demo__tag">.nz-plans--3</span></div>
-      <div class="cat-stage">
-        <div class="nz-plans" style="max-width:26rem"><div class="nz-plan"><span class="nz-plan__name">Free</span><span class="nz-plan__price">0 €</span></div><div class="nz-plan nz-plan--featured"><span class="nz-plan__name">Pro</span><span class="nz-plan__price">24 €</span></div><div class="nz-plan"><span class="nz-plan__name">Team</span><span class="nz-plan__price">49 €</span></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">12</span><span class="cat-demo__name">Método de pago</span><span class="cat-demo__tag">.nz-pay</span></div>
-      <div class="cat-stage">
-        <div class="nz-pay"><span class="nz-pay__icon">VISA</span><div class="nz-pay__body"><span class="nz-pay__name">Visa •••• 4242</span><span class="nz-pay__meta">Caduca 04/28</span></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">13</span><span class="cat-demo__name">Precio brand/accent/pequeño</span><span class="cat-demo__tag">.nz-price--brand/_accent/_sm</span></div>
-      <div class="cat-stage">
-        <div style="display:flex;gap:1rem;align-items:baseline;flex-wrap:wrap"><p class="nz-price nz-price--brand"><span class="nz-price__amount">24</span> €<span class="nz-price__period">/mes</span></p><p class="nz-price nz-price--accent nz-price--sm"><span class="nz-price__amount">9</span> €</p></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">14</span><span class="cat-demo__name">Stock dentro/fuera</span><span class="cat-demo__tag">.nz-stock--in · --out</span></div>
-      <div class="cat-stage">
-        <div style="display:flex;gap:1rem"><span class="nz-stock nz-stock--in"><i></i>En stock</span><span class="nz-stock nz-stock--out"><i></i>Agotado</span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">15</span><span class="cat-demo__name">Estrellas pequeñas</span><span class="cat-demo__tag">.nz-stars--sm</span></div>
-      <div class="cat-stage">
-        <div class="nz-stars nz-stars--sm"><span class="nz-stars__row"><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star">★</span></span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">16</span><span class="cat-demo__name">Planes en 3 columnas</span><span class="cat-demo__tag">.nz-plans--3</span></div>
-      <div class="cat-stage">
-        <div class="nz-plans nz-plans--3" style="max-width:34rem"><div class="nz-plan"><span class="nz-plan__name">Free</span></div><div class="nz-plan nz-plan--featured"><span class="nz-plan__name">Pro</span></div><div class="nz-plan"><span class="nz-plan__name">Team</span></div></div>
-      </div>
-    </section>
-  </main>
-  <div class="cat-nav-pages nz-print-hide" style="justify-content:center;border-top:1px solid var(--nz-border-soft);flex-wrap:wrap">
-    <a href="09-media.html">← 09 Media</a>
-    <a href="11-social.html">11 Social →</a>
   </div>
-  <footer class="cat-footer">
-    Aurora 7 · Design System Ntizar · Categoría 10 de 12 · 565 objetos · Hecho con ❤️ por David Antizar
-  </footer>
-  <script>
-    document.getElementById('btnTheme').addEventListener('click', function(){var h=document.documentElement; h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme')==='dark'?'light':'dark');});
-  </script>
+  <div class="cat-tools">
+    <div class="cat-search">
+      <span class="cat-search__icon" aria-hidden="true">⌕</span>
+      <input class="cat-search__input" id="catBuscar" type="search" placeholder="Buscar en esta categoría… (pulsa /)" aria-label="Buscar objeto en esta categoría">
+      <span class="cat-search__count" id="catContador">44 objetos</span>
+    </div>
+    <div class="cat-filters" role="group" aria-label="Filtrar por familia de objeto"><button type="button" class="cat-filters__chip" data-filtro="todo" aria-pressed="true">Todo</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-badge" aria-pressed="false">.badge</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-btn" aria-pressed="false">.btn</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-cart" aria-pressed="false">.cart</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-cart-item" aria-pressed="false">.cart-item</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-checkout-steps" aria-pressed="false">.checkout-steps</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-cluster" aria-pressed="false">.cluster</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-compare-bar" aria-pressed="false">.compare-bar</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-coupon" aria-pressed="false">.coupon</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-discount-badge" aria-pressed="false">.discount-badge</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-gift-note" aria-pressed="false">.gift-note</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-hstack" aria-pressed="false">.hstack</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-off" aria-pressed="false">.off</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-order" aria-pressed="false">.order</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-pay" aria-pressed="false">.pay</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-payment" aria-pressed="false">.payment</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-plan" aria-pressed="false">.plan</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-plans" aria-pressed="false">.plans</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-price" aria-pressed="false">.price</button></div>
+  </div>
+  <section class="cat-demo cat-in" data-cat="nz-price">
+    <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Precio con ahorro</span><span class="cat-demo__tag">.nz-price</span></div>
+    <div class="cat-stage">
+      <p class="nz-price"><span class="nz-price__currency">€</span><span class="nz-price__amount">34</span><span class="nz-price__decimal">,90</span><span class="nz-price__period">/ud.</span><span class="nz-price__old">49 €</span><span class="nz-price__save">Ahorras 14 €</span></p>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-price">
+    <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Tamaños y tonos de precio</span><span class="cat-demo__tag">.nz-price--xl · --muted · --strike</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><p class="nz-price nz-price--xl"><span class="nz-price__amount">1.240</span> €</p><p class="nz-price nz-price--brand"><span class="nz-price__amount">24</span> €<span class="nz-price__period">/mes</span></p><p class="nz-price nz-price--accent nz-price--sm"><span class="nz-price__amount">9</span> €</p><p class="nz-price nz-price--muted"><span class="nz-price__amount">19</span> €</p><p class="nz-price nz-price--strike"><span class="nz-price__amount">49</span> €</p></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-stars">
+    <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Calificación</span><span class="cat-demo__tag">.nz-stars</span></div>
+    <div class="cat-stage">
+      <div class="nz-stars"><span class="nz-stars__row"><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star">★</span></span><span class="nz-stars__count">· 4,9 de 128 valoraciones</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-stack nz-stars">
+    <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Estrellas grandes, de marca y pequeñas</span><span class="cat-demo__tag">.nz-stars--lg · --brand · --sm</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--xs"><div class="nz-stars nz-stars--lg"><span class="nz-stars__row"><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span></span><span class="nz-stars__count">Excelente</span></div><div class="nz-stars nz-stars--brand"><span class="nz-stars__row"><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star">★</span></span><span class="nz-stars__count">En azul de marca</span></div><div class="nz-stars nz-stars--sm"><span class="nz-stars__row"><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star">★</span><span class="nz-stars__star">★</span></span><span class="nz-stars__count">Pequeñas</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-hstack nz-stars nz-text">
+    <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Reparto de valoraciones</span><span class="cat-demo__tag">.nz-stars__bar</span></div>
+    <div class="cat-stage">
+      <div class="nz-hstack"><span class="nz-text--muted">5★</span><span class="nz-stars__bar"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="nz-stars__count">78 % de las opiniones</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-stock">
+    <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Stock</span><span class="cat-demo__tag">.nz-stock</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><span class="nz-stock nz-stock--in"><i></i>En stock</span><span class="nz-stock nz-stock--low"><span class="nz-stock__dot"></span>Solo 2 unidades</span><span class="nz-stock nz-stock--out"><i></i>Agotado</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-stock">
+    <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Stock como etiqueta</span><span class="cat-demo__tag">.nz-stock--badge</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><span class="nz-stock nz-stock--in nz-stock--badge"><i></i>Disponible hoy</span><span class="nz-stock nz-stock--low nz-stock--badge"><i></i>Últimas unidades</span><span class="nz-stock nz-stock--out nz-stock--badge"><i></i>Sin stock</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-badge nz-btn nz-price nz-product nz-stars nz-stock">
+    <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Tarjeta de producto</span><span class="cat-demo__tag">.nz-product</span></div>
+    <div class="cat-stage">
+      <article class="nz-product"><div class="nz-product__media"><span class="nz-badge nz-badge--danger nz-product__badge">-20%</span><span class="nz-product__ribbon">Nuevo</span><button class="nz-product__quick">Vista rápida</button></div><div class="nz-product__body"><span class="nz-product__cat">Equipamiento</span><h3 class="nz-product__name">Manta térmica de montaña</h3><div class="nz-product__rate"><span class="nz-stars nz-stars--sm"><span class="nz-stars__row"><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star nz-stars__star--full">★</span><span class="nz-stars__star">★</span></span><span class="nz-stars__count">4,8 (128)</span></span></div><div class="nz-product__variant"><span class="is-selected">M</span><span>L</span><span>XL</span></div></div><div class="nz-product__price"><span class="nz-price nz-price--sm"><span class="nz-price__amount">24</span> €</span><span class="nz-stock nz-stock--low"><i></i>Solo 2</span></div><div class="nz-product__cta"><button class="nz-btn nz-btn--primary">Añadir al carrito</button></div></article>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-price nz-product nz-stock">
+    <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Producto horizontal</span><span class="cat-demo__tag">.nz-product--horizontal</span></div>
+    <div class="cat-stage">
+      <article class="nz-product nz-product--horizontal"><div class="nz-product__media"></div><div class="nz-product__body"><span class="nz-product__cat">Hogar</span><h3 class="nz-product__name">Lámpara de escritorio</h3><div class="nz-product__price"><span class="nz-price nz-price--sm"><span class="nz-price__amount">39</span> €</span><span class="nz-stock nz-stock--in"><i></i>En stock</span></div><div class="nz-product__cta"><button class="nz-btn nz-btn--soft">Añadir</button></div></div></article>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-price nz-product nz-products">
+    <div class="cat-demo__title"><span class="cat-demo__num">10</span><span class="cat-demo__name">Producto compacto con borde</span><span class="cat-demo__tag">.nz-product--compact · --bordered</span></div>
+    <div class="cat-stage">
+      <div class="nz-products nz-products--2"><article class="nz-product nz-product--compact nz-product--bordered"><div class="nz-product__media"></div><div class="nz-product__body"><h3 class="nz-product__name">Taza térmica</h3><span class="nz-price nz-price--sm"><span class="nz-price__amount">12</span> €</span></div></article><article class="nz-product nz-product--compact nz-product--bordered"><div class="nz-product__media"></div><div class="nz-product__body"><h3 class="nz-product__name">Botella 750 ml</h3><span class="nz-price nz-price--sm"><span class="nz-price__amount">18</span> €</span></div></article></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-badge nz-btn nz-product nz-stock">
+    <div class="cat-demo__title"><span class="cat-demo__num">11</span><span class="cat-demo__name">Producto agotado</span><span class="cat-demo__tag">.nz-product--sold-out</span></div>
+    <div class="cat-stage">
+      <article class="nz-product nz-product--sold-out"><div class="nz-product__media"><span class="nz-badge nz-badge--neutral nz-product__badge">Agotado</span></div><div class="nz-product__body"><h3 class="nz-product__name">Saco de dormir -5 ºC</h3><span class="nz-stock nz-stock--out"><i></i>Sin stock</span></div><div class="nz-product__cta"><button class="nz-btn nz-btn--ghost" disabled>Avisadme</button></div></article>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-product nz-products">
+    <div class="cat-demo__title"><span class="cat-demo__num">12</span><span class="cat-demo__name">Rejilla de productos</span><span class="cat-demo__tag">.nz-products</span></div>
+    <div class="cat-stage">
+      <div class="nz-products nz-products--2"><article class="nz-product nz-product--compact"><div class="nz-product__media"></div><div class="nz-product__body"><h3 class="nz-product__name">Artículo uno</h3></div></article><article class="nz-product nz-product--compact"><div class="nz-product__media"></div><div class="nz-product__body"><h3 class="nz-product__name">Artículo dos</h3></div></article><article class="nz-product nz-product--compact"><div class="nz-product__media"></div><div class="nz-product__body"><h3 class="nz-product__name">Artículo tres</h3></div></article><article class="nz-product nz-product--compact"><div class="nz-product__media"></div><div class="nz-product__body"><h3 class="nz-product__name">Artículo cuatro</h3></div></article></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-badge nz-btn nz-plan">
+    <div class="cat-demo__title"><span class="cat-demo__num">13</span><span class="cat-demo__name">Plan destacado</span><span class="cat-demo__tag">.nz-plan--featured</span></div>
+    <div class="cat-stage">
+      <div class="nz-plan nz-plan--featured"><span class="nz-badge nz-badge--brand nz-plan__flag">Más elegido</span><span class="nz-plan__name">Pro</span><span class="nz-plan__desc">Para equipos que publican a diario.</span><span class="nz-plan__price">24 € <small>/mes</small></span><div class="nz-plan__features"><span class="nz-plan__feature"><i></i>Proyectos ilimitados</span><span class="nz-plan__feature"><i></i>Soporte en 4 h</span><span class="nz-plan__feature nz-plan__feature--off"><i></i>Dominio propio (antes)</span><span class="nz-plan__feature nz-plan__feature--no"><i></i>SSO de empresa</span></div><button class="nz-btn nz-btn--primary nz-plan__cta">Elegir Pro</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-plan">
+    <div class="cat-demo__title"><span class="cat-demo__num">14</span><span class="cat-demo__name">Plan de marca</span><span class="cat-demo__tag">.nz-plan--brand</span></div>
+    <div class="cat-stage">
+      <div class="nz-plan nz-plan--brand"><span class="nz-plan__badge">Recomendado</span><span class="nz-plan__name">Team</span><span class="nz-plan__desc">Todo el sistema, sin límites.</span><span class="nz-plan__price">49 € <small>/mes</small></span><div class="nz-plan__features"><span class="nz-plan__feature"><i></i>Usuarios ilimitados</span><span class="nz-plan__feature"><i></i>Auditoría de accesibilidad</span></div><button class="nz-btn nz-plan__cta">Empezar</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-plan">
+    <div class="cat-demo__title"><span class="cat-demo__num">15</span><span class="cat-demo__name">Plan atenuado</span><span class="cat-demo__tag">.nz-plan--muted</span></div>
+    <div class="cat-stage">
+      <div class="nz-plan nz-plan--muted"><span class="nz-plan__name">Gratis</span><span class="nz-plan__desc">Para probar el sistema.</span><span class="nz-plan__price">0 € <small>/mes</small></span><div class="nz-plan__features"><span class="nz-plan__feature"><i></i>1 proyecto</span><span class="nz-plan__feature nz-plan__feature--no"><i></i>Sin soporte prioritario</span></div><button class="nz-btn nz-btn--soft nz-plan__cta">Crear cuenta</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-plan nz-plans">
+    <div class="cat-demo__title"><span class="cat-demo__num">16</span><span class="cat-demo__name">Planes en 2 columnas</span><span class="cat-demo__tag">.nz-plans--2</span></div>
+    <div class="cat-stage">
+      <div class="nz-plans nz-plans--2"><div class="nz-plan"><span class="nz-plan__name">Gratis</span><span class="nz-plan__price">0 €</span></div><div class="nz-plan nz-plan--featured"><span class="nz-plan__name">Pro</span><span class="nz-plan__price">24 €</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-plan nz-plans">
+    <div class="cat-demo__title"><span class="cat-demo__num">17</span><span class="cat-demo__name">Planes en 3 columnas</span><span class="cat-demo__tag">.nz-plans--3</span></div>
+    <div class="cat-stage">
+      <div class="nz-plans nz-plans--3"><div class="nz-plan"><span class="nz-plan__name">Gratis</span><span class="nz-plan__price">0 €</span></div><div class="nz-plan nz-plan--featured"><span class="nz-plan__name">Pro</span><span class="nz-plan__price">24 €</span></div><div class="nz-plan"><span class="nz-plan__name">Team</span><span class="nz-plan__price">49 €</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-plan nz-plans">
+    <div class="cat-demo__title"><span class="cat-demo__num">18</span><span class="cat-demo__name">Planes en 4 columnas</span><span class="cat-demo__tag">.nz-plans--4</span></div>
+    <div class="cat-stage">
+      <div class="nz-plans nz-plans--4"><div class="nz-plan"><span class="nz-plan__name">Free</span><span class="nz-plan__price">0 €</span></div><div class="nz-plan"><span class="nz-plan__name">Pro</span><span class="nz-plan__price">24 €</span></div><div class="nz-plan"><span class="nz-plan__name">Team</span><span class="nz-plan__price">49 €</span></div><div class="nz-plan"><span class="nz-plan__name">Enterprise</span><span class="nz-plan__price">99 €</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-plan nz-plans">
+    <div class="cat-demo__title"><span class="cat-demo__num">19</span><span class="cat-demo__name">Planes compactos</span><span class="cat-demo__tag">.nz-plans--compact</span></div>
+    <div class="cat-stage">
+      <div class="nz-plans nz-plans--compact"><div class="nz-plan"><span class="nz-plan__name">Free</span><span class="nz-plan__price">0 €</span></div><div class="nz-plan nz-plan--muted"><span class="nz-plan__name">Pro</span><span class="nz-plan__price">24 €</span></div><div class="nz-plan"><span class="nz-plan__name">Team</span><span class="nz-plan__price">49 €</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-plan nz-plans">
+    <div class="cat-demo__title"><span class="cat-demo__num">20</span><span class="cat-demo__name">Planes como tabla</span><span class="cat-demo__tag">.nz-plans--table</span></div>
+    <div class="cat-stage">
+      <div class="nz-plans nz-plans--table"><div class="nz-plan"><span class="nz-plan__name">Gratis</span><span class="nz-plan__price">0 € <small>/mes</small></span><button class="nz-btn nz-btn--soft nz-btn--sm nz-plan__cta">Elegir</button></div><div class="nz-plan"><span class="nz-plan__name">Pro</span><span class="nz-plan__price">24 € <small>/mes</small></span><button class="nz-btn nz-btn--primary nz-btn--sm nz-plan__cta">Elegir</button></div><div class="nz-plan"><span class="nz-plan__name">Team</span><span class="nz-plan__price">49 € <small>/mes</small></span><button class="nz-btn nz-btn--soft nz-btn--sm nz-plan__cta">Elegir</button></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-pricetable">
+    <div class="cat-demo__title"><span class="cat-demo__num">21</span><span class="cat-demo__name">Tabla de precios</span><span class="cat-demo__tag">.nz-pricetable</span></div>
+    <div class="cat-stage">
+      <table class="nz-pricetable"><tr><th></th><th>Gratis</th><th class="is-selected">Pro</th></tr><tr><td class="nz-pricetable__rowhead">Almacenamiento</td><td>5 GB</td><td class="is-selected">50 GB</td></tr><tr><td class="nz-pricetable__rowhead">Usuarios</td><td>1</td><td class="is-selected">10</td></tr></table>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-pricetable">
+    <div class="cat-demo__title"><span class="cat-demo__num">22</span><span class="cat-demo__name">Tabla de precios compacta</span><span class="cat-demo__tag">.nz-pricetable--compact · __col</span></div>
+    <div class="cat-stage">
+      <table class="nz-pricetable nz-pricetable--compact"><tr><th>Plan</th><th class="nz-pricetable__col">Precio</th><th class="nz-pricetable__col">Soporte</th></tr><tr><td class="nz-pricetable__rowhead">Pro</td><td>24 €</td><td>4 h</td></tr><tr><td class="nz-pricetable__rowhead">Team</td><td>49 €</td><td>1 h</td></tr></table>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cart-item">
+    <div class="cat-demo__title"><span class="cat-demo__num">23</span><span class="cat-demo__name">Fila de carrito</span><span class="cat-demo__tag">.nz-cart-item</span></div>
+    <div class="cat-stage">
+      <div class="nz-cart-item"><span class="nz-cart-item__thumb"></span><div class="nz-cart-item__body"><span class="nz-cart-item__name">Manta térmica</span><span class="nz-cart-item__meta">× 2 · envío en 24 h</span><span class="nz-cart-item__variant">Talla M · azul</span></div><div class="nz-cart-item__right"><span class="nz-cart-item__price">48 €</span><button class="nz-cart-item__remove">Quitar</button></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-cart">
+    <div class="cat-demo__title"><span class="cat-demo__num">24</span><span class="cat-demo__name">Carrito</span><span class="cat-demo__tag">.nz-cart</span></div>
+    <div class="cat-stage">
+      <div class="nz-cart"><div class="nz-cart__head"><span class="nz-cart__total">Tu carrito</span><span class="nz-cart__count">3</span></div><div class="nz-cart__items"><div class="nz-cart__line"><span>Manta térmica</span><b>24 €</b></div><div class="nz-cart__line"><span>Linterna frontal</span><b>18 €</b></div></div><div class="nz-cart__qty"><button aria-label="Quitar una unidad">−</button><span>2</span><button aria-label="Añadir una unidad">+</button></div><div class="nz-cart__foot"><span>Total</span><span class="nz-cart__total">42 €</span></div><button class="nz-btn nz-btn--primary nz-btn--block">Tramitar pedido</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-cart">
+    <div class="cat-demo__title"><span class="cat-demo__num">25</span><span class="cat-demo__name">Carrito mini</span><span class="cat-demo__tag">.nz-cart--mini</span></div>
+    <div class="cat-stage">
+      <div class="nz-cart nz-cart--mini"><div class="nz-cart__head"><span class="nz-cart__count">2</span><span>2 artículos</span></div><div class="nz-cart__items"><div class="nz-cart__line"><span>Manta térmica</span><b>24 €</b></div></div><div class="nz-cart__foot"><span class="nz-cart__total">24 €</span><button class="nz-btn nz-btn--soft nz-btn--sm">Ver carrito</button></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-cart">
+    <div class="cat-demo__title"><span class="cat-demo__num">26</span><span class="cat-demo__name">Carrito lateral</span><span class="cat-demo__tag">.nz-cart--drawer</span></div>
+    <div class="cat-stage">
+      <div class="nz-cart nz-cart--drawer"><div class="nz-cart__head"><span class="nz-cart__total">Carrito</span><span class="nz-cart__count">1</span></div><div class="nz-cart__items"><div class="nz-cart__line"><span>Saco de dormir</span><b>129 €</b></div></div><div class="nz-cart__foot"><span class="nz-cart__total">129 €</span><button class="nz-btn nz-btn--primary nz-btn--sm">Pagar</button></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-cart">
+    <div class="cat-demo__title"><span class="cat-demo__num">27</span><span class="cat-demo__name">Carrito vacío</span><span class="cat-demo__tag">.nz-cart__empty</span></div>
+    <div class="cat-stage">
+      <div class="nz-cart nz-cart--mini"><div class="nz-cart__empty"><span aria-hidden="true">🛒</span><b>Tu carrito está vacío</b><span>Añade algo y vuelve por aquí.</span><button class="nz-btn nz-btn--soft nz-btn--sm">Ver productos</button></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-checkout-steps">
+    <div class="cat-demo__title"><span class="cat-demo__num">28</span><span class="cat-demo__name">Pasos de compra</span><span class="cat-demo__tag">.nz-checkout-steps</span></div>
+    <div class="cat-stage">
+      <ol class="nz-checkout-steps"><li class="nz-checkout-steps__step nz-checkout-steps__step--done"><span class="nz-checkout-steps__num">✓</span><span class="nz-checkout-steps__label">Carrito</span></li><li class="nz-checkout-steps__step nz-checkout-steps__step--done"><span class="nz-checkout-steps__num">✓</span><span class="nz-checkout-steps__label">Envío</span></li><li class="nz-checkout-steps__step" aria-current="step"><span class="nz-checkout-steps__num">3</span><span class="nz-checkout-steps__label">Pago</span></li><li class="nz-checkout-steps__step"><span class="nz-checkout-steps__num">4</span><span class="nz-checkout-steps__label">Confirmar</span></li></ol>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-checkout-steps">
+    <div class="cat-demo__title"><span class="cat-demo__num">29</span><span class="cat-demo__name">Pasos de compra en vertical</span><span class="cat-demo__tag">.nz-checkout-steps--vertical</span></div>
+    <div class="cat-stage">
+      <ol class="nz-checkout-steps nz-checkout-steps--vertical"><li class="nz-checkout-steps__step nz-checkout-steps__step--done"><span class="nz-checkout-steps__num">✓</span><span class="nz-checkout-steps__label">Carrito revisado</span></li><li class="nz-checkout-steps__step"><span class="nz-checkout-steps__num">2</span><span class="nz-checkout-steps__label">Elige el envío</span></li></ol>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-summary">
+    <div class="cat-demo__title"><span class="cat-demo__num">30</span><span class="cat-demo__name">Resumen de compra</span><span class="cat-demo__tag">.nz-summary</span></div>
+    <div class="cat-stage">
+      <div class="nz-summary"><div class="nz-summary__row"><span>Subtotal</span><span>120 €</span></div><div class="nz-summary__row"><span>Envío</span><span>4 €</span></div><hr class="nz-summary__divider"><div class="nz-summary__row nz-summary__row--total"><span>Total</span><span>124 €</span></div><span class="nz-summary__note">IVA incluido · pago seguro</span><div class="nz-summary__cta"><button class="nz-btn nz-btn--primary">Pagar 124 €</button></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-summary">
+    <div class="cat-demo__title"><span class="cat-demo__num">31</span><span class="cat-demo__name">Resumen destacado en marca</span><span class="cat-demo__tag">.nz-summary--brand</span></div>
+    <div class="cat-stage">
+      <div class="nz-summary nz-summary--brand"><div class="nz-summary__row"><span>Plan Pro · 12 meses</span><span>288 €</span></div><div class="nz-summary__row nz-summary__row--total"><span>A pagar hoy</span><span>288 €</span></div><span class="nz-summary__note">Ahorras 2 meses con el pago anual.</span><div class="nz-summary__cta"><button class="nz-btn nz-btn--primary">Contratar</button></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-coupon nz-text">
+    <div class="cat-demo__title"><span class="cat-demo__num">32</span><span class="cat-demo__name">Cupón de descuento</span><span class="cat-demo__tag">.nz-coupon</span></div>
+    <div class="cat-stage">
+      <form class="nz-coupon"><label class="nz-text--muted" for="cupon10">Código de descuento</label><input class="nz-coupon__input" id="cupon10" placeholder="VERANO25"><span class="nz-coupon__hint">Se aplica sobre el subtotal, antes de envío.</span><span class="nz-coupon__msg">Introduce el código de tu campaña.</span><button class="nz-btn nz-btn--soft nz-coupon__btn" type="button">Aplicar</button></form>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-coupon nz-text">
+    <div class="cat-demo__title"><span class="cat-demo__num">33</span><span class="cat-demo__name">Cupón aplicado</span><span class="cat-demo__tag">.nz-coupon--inline · .is-done</span></div>
+    <div class="cat-stage">
+      <form class="nz-coupon nz-coupon--inline is-done"><label class="nz-text--muted" for="cupon11">Código</label><input class="nz-coupon__input" id="cupon11" value="VERANO25"><span class="nz-coupon__msg">Cupón aplicado: −15 % en el subtotal.</span><button class="nz-btn nz-btn--soft nz-coupon__btn" type="button">Quitar</button></form>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-coupon nz-text">
+    <div class="cat-demo__title"><span class="cat-demo__num">34</span><span class="cat-demo__name">Cupón no válido</span><span class="cat-demo__tag">.nz-coupon.is-error</span></div>
+    <div class="cat-stage">
+      <form class="nz-coupon is-error"><label class="nz-text--muted" for="cupon12">Código</label><input class="nz-coupon__input" id="cupon12" value="CADUCADO"><span class="nz-coupon__msg">Este cupón ha caducado.</span><button class="nz-btn nz-btn--soft nz-coupon__btn" type="button">Probar otro</button></form>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-payment">
+    <div class="cat-demo__title"><span class="cat-demo__num">35</span><span class="cat-demo__name">Métodos de pago</span><span class="cat-demo__tag">.nz-payment</span></div>
+    <div class="cat-stage">
+      <div class="nz-payment"><div class="nz-payment__method nz-payment__method--selected"><span class="nz-payment__icon">VISA</span><span class="nz-payment__label">Visa •••• 4242</span><span class="nz-payment__note">Caduca 04/28</span></div><div class="nz-payment__method"><span class="nz-payment__icon">Bizum</span><span class="nz-payment__label">Bizum</span><span class="nz-payment__note">Al móvil</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-payment">
+    <div class="cat-demo__title"><span class="cat-demo__num">36</span><span class="cat-demo__name">Pago en rejilla</span><span class="cat-demo__tag">.nz-payment--grid</span></div>
+    <div class="cat-stage">
+      <div class="nz-payment nz-payment--grid"><div class="nz-payment__method"><span class="nz-payment__icon">MC</span><span class="nz-payment__label">Mastercard</span></div><div class="nz-payment__method nz-payment__method--selected"><span class="nz-payment__icon">Pay</span><span class="nz-payment__label">Cartera digital</span></div><div class="nz-payment__method"><span class="nz-payment__icon">Tran</span><span class="nz-payment__label">Transferencia</span></div><div class="nz-payment__method"><span class="nz-payment__icon">Con</span><span class="nz-payment__label">Contra reembolso</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-pay">
+    <div class="cat-demo__title"><span class="cat-demo__num">37</span><span class="cat-demo__name">Forma de pago simple</span><span class="cat-demo__tag">.nz-pay</span></div>
+    <div class="cat-stage">
+      <div class="nz-pay"><span class="nz-pay__icon">VISA</span><div class="nz-pay__body"><span class="nz-pay__name">Visa •••• 4242</span><span class="nz-pay__meta">Caduca 04/28</span></div><button class="nz-btn nz-btn--text nz-btn--sm">Cambiar</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-order">
+    <div class="cat-demo__title"><span class="cat-demo__num">38</span><span class="cat-demo__name">Pedido</span><span class="cat-demo__tag">.nz-order</span></div>
+    <div class="cat-stage">
+      <article class="nz-order"><div class="nz-order__head"><span class="nz-order__id">#A7-10428</span><span class="nz-order__date">12 may 2026</span><span class="nz-order__status">Entregado</span></div><ul class="nz-order__items"><li>Manta térmica × 1</li><li>Linterna frontal × 2</li></ul><div class="nz-order__foot"><span>Total</span><span class="nz-order__total">60 €</span></div></article>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-order nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">39</span><span class="cat-demo__name">Estados de pedido</span><span class="cat-demo__tag">.nz-order__status--pending · --canceled</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--sm"><article class="nz-order"><div class="nz-order__head"><span class="nz-order__id">#A7-10429</span><span class="nz-order__status nz-order__status--pending">Pendiente de pago</span></div><div class="nz-order__foot"><span class="nz-order__total">24 €</span></div></article><article class="nz-order"><div class="nz-order__head"><span class="nz-order__id">#A7-10430</span><span class="nz-order__status nz-order__status--canceled">Cancelado</span></div><div class="nz-order__foot"><span class="nz-order__total">18 €</span></div></article></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-shipping-option nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">40</span><span class="cat-demo__name">Opciones de envío</span><span class="cat-demo__tag">.nz-shipping-option</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--sm"><div class="nz-shipping-option nz-shipping-option--selected"><span class="nz-shipping-option__label">Estándar</span><span class="nz-shipping-option__eta">3-5 días</span><span class="nz-shipping-option__price">Gratis</span></div><div class="nz-shipping-option"><span class="nz-shipping-option__label">Express</span><span class="nz-shipping-option__eta">24 h</span><span class="nz-shipping-option__price">4,95 €</span></div><div class="nz-shipping-option nz-shipping-option--disabled"><span class="nz-shipping-option__label">Recogida en tienda</span><span class="nz-shipping-option__eta">No disponible en tu zona</span><span class="nz-shipping-option__price">—</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-wishlist">
+    <div class="cat-demo__title"><span class="cat-demo__num">41</span><span class="cat-demo__name">Lista de deseos</span><span class="cat-demo__tag">.nz-wishlist</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><span class="nz-wishlist"><button class="nz-wishlist__btn" aria-label="Añadir a la lista de deseos">♡</button><span class="nz-wishlist__count">12</span></span><span class="nz-wishlist is-active"><button class="nz-wishlist__btn" aria-label="Ya está en tu lista">♥</button><span class="nz-wishlist__count">13</span></span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-compare-bar">
+    <div class="cat-demo__title"><span class="cat-demo__num">42</span><span class="cat-demo__name">Barra de comparación</span><span class="cat-demo__tag">.nz-compare-bar</span></div>
+    <div class="cat-stage">
+      <div class="nz-compare-bar"><span class="nz-compare-bar__count">2 productos en el comparador</span><span class="nz-compare-bar__actions"><button class="nz-btn nz-btn--primary nz-btn--sm">Comparar</button><button class="nz-compare-bar__clear">Vaciar</button></span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-discount-badge nz-off">
+    <div class="cat-demo__title"><span class="cat-demo__num">43</span><span class="cat-demo__name">Etiquetas de descuento</span><span class="cat-demo__tag">.nz-off · .nz-discount-badge</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><span class="nz-off">-20 %</span><span class="nz-off nz-off--green">Recomendado</span><span class="nz-discount-badge">-25 % <span class="nz-discount-badge__was">49 €</span></span><span class="nz-discount-badge nz-discount-badge--lg">-40 % <span class="nz-discount-badge__was">99 €</span></span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-gift-note">
+    <div class="cat-demo__title"><span class="cat-demo__num">44</span><span class="cat-demo__name">Nota de regalo</span><span class="cat-demo__tag">.nz-gift-note</span></div>
+    <div class="cat-stage">
+      <div class="nz-gift-note"><span class="nz-gift-note__label">Es un regalo</span><span class="nz-gift-note__body">«Felicidades, pensé que te vendría bien para la montaña.» Sin factura en la caja.</span></div>
+    </div>
+  </section>
+  <div class="cat-empty" id="catVacio" hidden><b>Nada por aquí</b>Prueba con otro término o quita el filtro.</div>
+</main>
+<div class="cat-nav-pages" style="justify-content:center;border-top:1px solid var(--nz-border-soft)">
+  <a href="09-media.html">← 09 Media e iconografía</a>
+  <a href="11-social.html">11 Social y marketing →</a>
+</div>
+<footer class="cat-footer">
+  Aurora 7 · Design System Ntizar · Categoría 10 de 15 · 1829 objetos · 534 demos · Hecho con ❤️ por David Antizar
+</footer>
+<script src="../js/catalog.js"></script>
 </body>
 </html>

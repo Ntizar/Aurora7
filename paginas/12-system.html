@@ -3,114 +3,260 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Aurora 7 · 12 Accesibilidad y sistema</title>
+<title>Aurora 7 · 12 Accesibilidad y sistema · 77 objetos</title>
+<meta name="description" content="Enlace de salto, ocultación accesible, foco, contraste, zonas táctiles, regiones vivas, landmarks, estado del sistema, tema y preferencias.">
 <link rel="stylesheet" href="../tokens.css">
-<link rel="stylesheet" href="../packs/p12-system.css">
 <link rel="stylesheet" href="../packs/p0-catalog.css">
+<link rel="stylesheet" href="../packs/p1-layout.css">
+<link rel="stylesheet" href="../packs/p3-typography.css">
+<link rel="stylesheet" href="../packs/p4-actions.css">
+<link rel="stylesheet" href="../packs/p5-forms.css">
+<link rel="stylesheet" href="../packs/p6-feedback.css">
+<link rel="stylesheet" href="../packs/p12-system.css">
 </head>
-<body class="nz nz-root">
-  <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
-  <header class="cat-topbar">
-    <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
-    <span class="cat-count">12 · 23 objetos</span>
-    <button class="theme-toggle" id="btnTheme" aria-label="Cambiar tema">◐</button>
-  </header>
-  <nav class="cat-nav-pages" aria-label="Categorías del catálogo">
-    <a href="01-layout.html">01 Layout</a>
-    <a href="02-navigation.html">02 Navegación</a>
-    <a href="03-typography.html">03 Tipografía</a>
-    <a href="04-actions.html">04 Acciones</a>
-    <a href="05-forms.html">05 Formularios</a>
-    <a href="06-feedback.html">06 Feedback</a>
-    <a href="07-overlays.html">07 Overlays</a>
-    <a href="08-data.html">08 Datos</a>
-    <a href="09-media.html">09 Media</a>
-    <a href="10-commerce.html">10 Comercio</a>
-    <a href="11-social.html">11 Social</a>
-    <a href="12-system.html" aria-current="page">12 Sistema</a>
-  </nav>
-  <main class="nz-container cat-main" id="contenido">
-    <div class="cat-pagehead">
-      <p class="cat-pagehead__over">Categoría 12 · 23 objetos</p>
-      <h1>Accesibilidad y sistema</h1>
-      <p>Skip-link, visible-hidden, contraste, estado del sistema y preferencias. El contrato accesible.</p>
+<body class="nz">
+<a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
+<header class="cat-topbar">
+<a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
+<span class="cat-count">12 · 77 objetos · 28 demos</span>
+<span class="cat-topbar__tools">
+<a class="cat-icobtn" href="../index.html" title="Portada" aria-label="Volver a la portada">⌂</a>
+<button class="cat-icobtn" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
+</span>
+</header>
+<nav class="cat-nav-pages" aria-label="Categorías del catálogo">
+  <a href="01-layout.html">01 Layout y estructura</a>
+  <a href="02-navigation.html">02 Navegación</a>
+  <a href="03-typography.html">03 Tipografía</a>
+  <a href="04-actions.html">04 Acciones y botones</a>
+  <a href="05-forms.html">05 Formularios e inputs</a>
+  <a href="06-feedback.html">06 Feedback y estados</a>
+  <a href="07-overlays.html">07 Overlays y diálogo</a>
+  <a href="08-data.html">08 Datos, tablas y listas</a>
+  <a href="09-media.html">09 Media e iconografía</a>
+  <a href="10-commerce.html">10 Comercio y producto</a>
+  <a href="11-social.html">11 Social y marketing</a>
+  <a href="12-system.html" aria-current="page">12 Accesibilidad y sistema</a>
+  <a href="13-charts.html">13 Gráficos y visualización</a>
+  <a href="14-ai.html">14 IA y agentes</a>
+  <a href="15-apps.html">15 Apps y escritorio</a>
+</nav>
+<main class="nz-container cat-main" id="contenido">
+  <div class="cat-pagehead">
+    <p class="cat-pagehead__over">Categoría 12 de 15 · 77 objetos · 28 demos</p>
+    <h1>Accesibilidad y sistema</h1>
+    <p>Enlace de salto, ocultación accesible, foco, contraste, zonas táctiles, regiones vivas, landmarks, estado del sistema, tema y preferencias.</p>
+    <div class="cat-pagehead__stats">
+      <span class="nz-badge nz-badge--brand"><i></i>77 objetos</span>
+      <span class="nz-badge nz-badge--neutral">25 familias</span>
+      <span class="nz-badge nz-badge--accent">28 demos en vivo</span>
+      <span class="nz-badge nz-badge--neutral">32 clases distintas usadas</span>
+      <a class="nz-badge nz-badge--brand" href="../packs/p12-system.css">p12-system.css</a>
     </div>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Skip-link</span><span class="cat-demo__tag">.nz-skip:focus</span></div>
-      <div class="cat-stage">
-        <a class="nz-skip" href="#contenido" style="position:static">Saltar al contenido</a>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Visually hidden</span><span class="cat-demo__tag">.nz-visually-hidden</span></div>
-      <div class="cat-stage">
-        <span class="nz-visually-hidden">Texto solo para lectores de pantalla.</span><span class="nz-text--muted">(mira el código)</span>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Con contraste AA</span><span class="cat-demo__tag">.nz-contrast__status--aa</span></div>
-      <div class="cat-stage">
-        <div class="nz-contrast"><span class="nz-contrast__pair"><span class="nz-contrast__chip" style="background:var(--nz-brand)"></span><span class="nz-contrast__chip" style="background:#fff"></span>Brand/blanco</span><span class="nz-contrast__ratio">4.6:1</span><span class="nz-contrast__status nz-contrast__status--aa">AA</span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Contraste insuficiente</span><span class="cat-demo__tag">.nz-contrast__status--fail</span></div>
-      <div class="cat-stage">
-        <div class="nz-contrast"><span class="nz-contrast__pair"><span class="nz-contrast__chip" style="background:var(--nz-orange-100)"></span><span class="nz-contrast__chip" style="background:#fff"></span>Sutil/blanco</span><span class="nz-contrast__ratio">1.7:1</span><span class="nz-contrast__status nz-contrast__status--fail">Fail</span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Estado del sistema</span><span class="cat-demo__tag">.nz-sysstatus--ok</span></div>
-      <div class="cat-stage">
-        <span class="nz-sysstatus nz-sysstatus--ok"><i></i>Operativo</span>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Preferencia de movimiento</span><span class="cat-demo__tag">.nz-motion-badge</span></div>
-      <div class="cat-stage">
-        <span class="nz-motion-badge">Movimiento reducido respetado</span>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Componentes accesibles</span><span class="cat-demo__tag">labels + inputs nativos</span></div>
-      <div class="cat-stage">
-        <div style="display:grid;gap:.5rem;max-width:18rem"><label class="nz-checkbox"><input type="checkbox" checked><span class="nz-checkbox__box"></span>Checkbox accesible</label><label class="nz-radio"><input type="radio" name="r12" checked><span class="nz-radio__dot"></span>Radio accesible</label><label class="nz-switch"><input type="checkbox" checked><span class="nz-switch__track"><span class="nz-switch__thumb"></span></span><span class="nz-switch__label">Switch accesible</span></label></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Landmarks del documento</span><span class="cat-demo__tag">.nz-landmark</span></div>
-      <div class="cat-stage">
-        <div class="nz-landmark"><header class="demo-box">header</header><main class="demo-box" style="flex:none">main</main><footer class="demo-box">footer</footer></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Botón e input base</span><span class="cat-demo__tag">.nz-btn · .nz-input (core)</span></div>
-      <div class="cat-stage">
-        <div style="display:flex;gap:.5rem;flex-wrap:wrap"><button class="nz-btn nz-btn--primary">Acción</button><input class="nz-input" placeholder="Input" style="max-width:12rem"></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">10</span><span class="cat-demo__name">Estados del sistema</span><span class="cat-demo__tag">.nz-sysstatus--warn · --err</span></div>
-      <div class="cat-stage">
-        <div style="display:flex;gap:1rem;flex-wrap:wrap"><span class="nz-sysstatus nz-sysstatus--warn"><i></i>Degradado</span><span class="nz-sysstatus nz-sysstatus--err"><i></i>Caído</span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">11</span><span class="cat-demo__name">Select y vh</span><span class="cat-demo__tag">.nz-select · .nz-vh</span></div>
-      <div class="cat-stage">
-        <select class="nz-select" style="max-width:12rem"><option>Accesible nativo</option></select> <span class="nz-vh">visible solo para lectores</span>
-      </div>
-    </section>
-  </main>
-  <div class="cat-nav-pages nz-print-hide" style="justify-content:center;border-top:1px solid var(--nz-border-soft);flex-wrap:wrap">
-    <a href="11-social.html">← 11 Social</a>
-    <a href="01-layout.html">01 Layout →</a>
   </div>
-  <footer class="cat-footer">
-    Aurora 7 · Design System Ntizar · Categoría 12 de 12 · 565 objetos · Hecho con ❤️ por David Antizar
-  </footer>
-  <script>
-    document.getElementById('btnTheme').addEventListener('click', function(){var h=document.documentElement; h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme')==='dark'?'light':'dark');});
-  </script>
+  <div class="cat-tools">
+    <div class="cat-search">
+      <span class="cat-search__icon" aria-hidden="true">⌕</span>
+      <input class="cat-search__input" id="catBuscar" type="search" placeholder="Buscar en esta categoría… (pulsa /)" aria-label="Buscar objeto en esta categoría">
+      <span class="cat-search__count" id="catContador">28 objetos</span>
+    </div>
+    <div class="cat-filters" role="group" aria-label="Filtrar por familia de objeto"><button type="button" class="cat-filters__chip" data-filtro="todo" aria-pressed="true">Todo</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-a11y-badge" aria-pressed="false">.a11y-badge</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-atajo-teclado" aria-pressed="false">.atajo-teclado</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-badge" aria-pressed="false">.badge</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-btn" aria-pressed="false">.btn</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-cluster" aria-pressed="false">.cluster</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-contrast" aria-pressed="false">.contrast</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-focus-accent" aria-pressed="false">.focus-accent</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-focus-ring" aria-pressed="false">.focus-ring</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-high-contrast-note" aria-pressed="false">.high-contrast-note</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-incident" aria-pressed="false">.incident</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-landmark" aria-pressed="false">.landmark</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-link" aria-pressed="false">.link</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-live-region" aria-pressed="false">.live-region</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-maintenance-banner" aria-pressed="false">.maintenance-banner</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-min-target" aria-pressed="false">.min-target</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-motion-badge" aria-pressed="false">.motion-badge</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-preferencias" aria-pressed="false">.preferencias</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-reduced-motion-ok" aria-pressed="false">.reduced-motion-ok</button></div>
+  </div>
+  <section class="cat-demo cat-in" data-cat="nz-skip-link nz-text">
+    <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Enlace de salto al contenido</span><span class="cat-demo__tag">.nz-skip-link</span></div>
+    <div class="cat-stage">
+      <a class="nz-skip-link nz-skip-link--inline" href="#contenido">Saltar al contenido</a><p class="nz-text--muted">Fuera de pantalla hasta que recibe el foco con Tab.</p>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-skip-links-group">
+    <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Grupo de enlaces de salto</span><span class="cat-demo__tag">.nz-skip-links-group</span></div>
+    <div class="cat-stage">
+      <nav class="nz-skip-links-group" aria-label="Enlaces de salto"><a class="nz-skip-links-group__link" href="#contenido">Ir al contenido</a><a class="nz-skip-links-group__link" href="#menu">Ir al menú</a><a class="nz-skip-links-group__link" href="#pie">Ir al pie</a></nav>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-text nz-vh nz-visually-hidden">
+    <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Oculto para la vista</span><span class="cat-demo__tag">.nz-visually-hidden · .nz-vh</span></div>
+    <div class="cat-stage">
+      <span class="nz-visually-hidden">Texto solo para lectores de pantalla.</span><span class="nz-vh">Igual que el anterior, alias corto.</span><span class="nz-text--muted">(Los dos existen en el DOM: míralo en el código.)</span>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-sr-only-focusable nz-text">
+    <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Visible solo al enfocar</span><span class="cat-demo__tag">.nz-sr-only-focusable</span></div>
+    <div class="cat-stage">
+      <a class="nz-sr-only-focusable" href="#contenido">Aparezco con el teclado</a><p class="nz-text--muted">Oculto hasta que recibe el foco: mismo patrón que el enlace de salto.</p>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-cluster nz-focus-accent nz-focus-ring">
+    <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Anillo de foco</span><span class="cat-demo__tag">.nz-focus-ring · .nz-focus-accent</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><span class="nz-focus-ring">Foco estándar</span><span class="nz-focus-accent">Foco de acento</span><button class="nz-btn nz-btn--primary nz-focus-ring">Botón con anillo forzado</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-tabfocus-visible">
+    <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Foco de teclado</span><span class="cat-demo__tag">.nz-tabfocus-visible</span></div>
+    <div class="cat-stage">
+      <span class="nz-tabfocus-visible">⇥ Así se ve el foco al llegar con Tab</span>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-link nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Acento de foco por atributo</span><span class="cat-demo__tag">[data-nz-focus=&quot;accent&quot;]</span></div>
+    <div class="cat-stage">
+      <div data-nz-focus="accent" class="nz-stack nz-stack--xs"><a class="nz-link" href="#contenido">Enlace con foco naranja</a><button class="nz-btn nz-btn--soft">Botón con foco naranja</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-badge nz-btn nz-cluster nz-min-target nz-tap-44">
+    <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Zona táctil mínima de 44 px</span><span class="cat-demo__tag">.nz-tap-44 · .nz-min-target</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><button class="nz-btn nz-btn--icon nz-tap-44" aria-label="Favorito">★</button><span class="nz-tap-44"><span class="nz-badge nz-badge--brand">44 px de caja</span></span><button class="nz-btn nz-btn--soft nz-btn--sm nz-min-target">Guardar</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-contrast">
+    <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Contraste correcto (AA)</span><span class="cat-demo__tag">.nz-contrast__status--aa</span></div>
+    <div class="cat-stage">
+      <div class="nz-contrast"><span class="nz-contrast__pair"><span class="nz-contrast__chip nz-contrast__chip--brand"></span><span class="nz-contrast__chip nz-contrast__chip--surface"></span>Azul de marca sobre superficie</span><span class="nz-contrast__ratio nz-contrast__ratio--ok">5,2:1</span><span class="nz-contrast__status nz-contrast__status--aa">AA</span><span class="nz-contrast__badge">Texto pequeño</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-contrast">
+    <div class="cat-demo__title"><span class="cat-demo__num">10</span><span class="cat-demo__name">Contraste insuficiente</span><span class="cat-demo__tag">.nz-contrast__status--fail</span></div>
+    <div class="cat-stage">
+      <div class="nz-contrast"><span class="nz-contrast__pair"><span class="nz-contrast__chip nz-contrast__chip--accent"></span><span class="nz-contrast__chip nz-contrast__chip--soft"></span>Acento sobre su propio fondo suave</span><span class="nz-contrast__ratio">2,1:1</span><span class="nz-contrast__status nz-contrast__status--fail">No apto</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-contrast">
+    <div class="cat-demo__title"><span class="cat-demo__num">11</span><span class="cat-demo__name">Contraste en grande</span><span class="cat-demo__tag">.nz-contrast--lg</span></div>
+    <div class="cat-stage">
+      <div class="nz-contrast nz-contrast--lg"><span class="nz-contrast__pair"><span class="nz-contrast__chip nz-contrast__chip--brand"></span><span class="nz-contrast__chip nz-contrast__chip--surface"></span>Pares de tokens a tamaño grande</span><span class="nz-contrast__ratio nz-contrast__ratio--ok">5,2:1</span><span class="nz-contrast__status nz-contrast__status--aa">AA</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-a11y-badge nz-cluster">
+    <div class="cat-demo__title"><span class="cat-demo__num">12</span><span class="cat-demo__name">Nivel de conformidad</span><span class="cat-demo__tag">.nz-a11y-badge</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><span class="nz-a11y-badge">Auditado</span><span class="nz-a11y-badge nz-a11y-badge--aa">AA</span><span class="nz-a11y-badge nz-a11y-badge--aaa">AAA</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-live-region">
+    <div class="cat-demo__title"><span class="cat-demo__num">13</span><span class="cat-demo__name">Región viva educada</span><span class="cat-demo__tag">.nz-live-region--polite</span></div>
+    <div class="cat-stage">
+      <div class="nz-live-region nz-live-region--polite" role="status" aria-live="polite"><span class="nz-live-region__icon"></span>Guardado. Se anunciará cuando el lector termine su frase.</div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-live-region">
+    <div class="cat-demo__title"><span class="cat-demo__num">14</span><span class="cat-demo__name">Región viva asertiva</span><span class="cat-demo__tag">.nz-live-region--assertive</span></div>
+    <div class="cat-stage">
+      <div class="nz-live-region nz-live-region--assertive" role="alert" aria-live="assertive"><span class="nz-live-region__icon"></span>No se pudo enviar el formulario. Revisa el correo.</div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-motion-badge nz-reduced-motion-ok nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">15</span><span class="cat-demo__name">Preferencias de movimiento</span><span class="cat-demo__tag">.nz-motion-badge · .nz-reduced-motion-ok</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--xs"><span class="nz-motion-badge">Movimiento reducido respetado</span><span class="nz-motion-badge nz-motion-badge--no">Animaciones desactivadas en tu sistema</span><span class="nz-reduced-motion-ok">Transiciones congeladas, no ralentizadas</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-high-contrast-note">
+    <div class="cat-demo__title"><span class="cat-demo__num">16</span><span class="cat-demo__name">Nota de alto contraste</span><span class="cat-demo__tag">.nz-high-contrast-note</span></div>
+    <div class="cat-stage">
+      <div class="nz-high-contrast-note"><span class="nz-high-contrast-note__icon">◐</span><span>Con el modo de alto contraste del sistema, los bordes duros los pone el navegador: aquí no forzamos colores.</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-landmark">
+    <div class="cat-demo__title"><span class="cat-demo__num">17</span><span class="cat-demo__name">Landmarks del documento</span><span class="cat-demo__tag">.nz-landmark</span></div>
+    <div class="cat-stage">
+      <div class="nz-landmark"><span class="nz-landmark__label">Regiones de la página</span><nav class="nz-landmark nz-landmark--nav">nav · menú principal</nav><main class="nz-landmark nz-landmark--main">main · contenido</main><footer class="nz-landmark nz-landmark--footer">footer · pie</footer></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-landmark nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">18</span><span class="cat-demo__name">Landmarks anidados</span><span class="cat-demo__tag">.nz-landmark--nav · --main · --footer</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--sm"><nav class="nz-landmark nz-landmark--nav">Navegación lateral</nav><main class="nz-landmark nz-landmark--main">Contenido principal</main><footer class="nz-landmark nz-landmark--footer">Pie de página</footer></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-sysstatus">
+    <div class="cat-demo__title"><span class="cat-demo__num">19</span><span class="cat-demo__name">Estado del sistema</span><span class="cat-demo__tag">.nz-sysstatus</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><span class="nz-sysstatus nz-sysstatus--ok"><i></i>Operativo</span><span class="nz-sysstatus nz-sysstatus--warn"><i></i>Degradado</span><span class="nz-sysstatus nz-sysstatus--err"><i></i>Caído</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-stack nz-sysstatus">
+    <div class="cat-demo__title"><span class="cat-demo__num">20</span><span class="cat-demo__name">Aviso, info y mantenimiento</span><span class="cat-demo__tag">.nz-sysstatus--info · --maintenance</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--xs"><span class="nz-sysstatus nz-sysstatus--info"><i></i>Información<span class="nz-sysstatus__time">10:24</span></span><span class="nz-sysstatus nz-sysstatus--maintenance"><i></i>Mantenimiento programado<span class="nz-sysstatus__time">03:00</span></span><span class="nz-sysstatus nz-sysstatus--warn"><i></i>Latencia alta<span class="nz-sysstatus__detail">API de pagos con 800 ms de media.</span></span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-btn nz-maintenance-banner">
+    <div class="cat-demo__title"><span class="cat-demo__num">21</span><span class="cat-demo__name">Aviso de mantenimiento</span><span class="cat-demo__tag">.nz-maintenance-banner</span></div>
+    <div class="cat-stage">
+      <div class="nz-maintenance-banner"><span class="nz-maintenance-banner__title">Mantenimiento el domingo</span><span class="nz-maintenance-banner__body">De 03:00 a 04:00 el pago estará en pausa.</span><span class="nz-maintenance-banner__actions"><button class="nz-btn nz-btn--soft nz-btn--sm">Avisadme</button></span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-tema-badge nz-version-badge">
+    <div class="cat-demo__title"><span class="cat-demo__num">22</span><span class="cat-demo__name">Versión y tema activo</span><span class="cat-demo__tag">.nz-tema-badge</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster"><span class="nz-version-badge">Aurora 7.1</span><span class="nz-tema-badge nz-tema-badge--light">Tema claro</span><span class="nz-tema-badge nz-tema-badge--dark">Tema oscuro</span><span class="nz-tema-badge nz-tema-badge--system">Según el sistema</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-preferencias nz-switch">
+    <div class="cat-demo__title"><span class="cat-demo__num">23</span><span class="cat-demo__name">Preferencias de accesibilidad</span><span class="cat-demo__tag">.nz-preferencias</span></div>
+    <div class="cat-stage">
+      <div class="nz-preferencias"><div class="nz-preferencias__fila"><span class="nz-preferencias__label">Movimiento reducido<span class="nz-preferencias__desc">Congela animaciones y transiciones.</span></span><span class="nz-preferencias__control"><label class="nz-switch"><input type="checkbox" checked><span class="nz-switch__track"><span class="nz-switch__thumb"></span></span><span class="nz-switch__label">Activo</span></label></span></div><div class="nz-preferencias__fila"><span class="nz-preferencias__label">Objetivos táctiles grandes<span class="nz-preferencias__desc">Mínimo 44 px en todo lo pulsable.</span></span><span class="nz-preferencias__control"><label class="nz-switch"><input type="checkbox"><span class="nz-switch__track"><span class="nz-switch__thumb"></span></span><span class="nz-switch__label">Inactivo</span></label></span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-atajo-teclado nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">24</span><span class="cat-demo__name">Atajos de teclado</span><span class="cat-demo__tag">.nz-atajo-teclado</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--xs"><span class="nz-atajo-teclado"><span class="nz-atajo-teclado__kbd"><kbd>Ctrl</kbd><kbd>K</kbd></span><span class="nz-atajo-teclado__desc">Abrir el buscador</span></span><span class="nz-atajo-teclado"><span class="nz-atajo-teclado__kbd"><kbd>/</kbd></span><span class="nz-atajo-teclado__desc">Buscar en esta categoría</span></span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-sysinfo">
+    <div class="cat-demo__title"><span class="cat-demo__num">25</span><span class="cat-demo__name">Ficha del sistema</span><span class="cat-demo__tag">.nz-sysinfo</span></div>
+    <div class="cat-stage">
+      <dl class="nz-sysinfo"><div class="nz-sysinfo__row"><dt class="nz-sysinfo__dt">Versión</dt><dd class="nz-sysinfo__dd">7.1.0</dd></div><div class="nz-sysinfo__row"><dt class="nz-sysinfo__dt">Objetos</dt><dd class="nz-sysinfo__dd">565</dd></div><div class="nz-sysinfo__row"><dt class="nz-sysinfo__dt">Temas</dt><dd class="nz-sysinfo__dd">claro y oscuro</dd></div></dl>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-incident">
+    <div class="cat-demo__title"><span class="cat-demo__num">26</span><span class="cat-demo__name">Historial de incidencias</span><span class="cat-demo__tag">.nz-incident</span></div>
+    <div class="cat-stage">
+      <div class="nz-incident"><span class="nz-incident__time">12 may · 09:12</span><span class="nz-incident__title">Latencia en el pago</span><span class="nz-incident__body">Resuelto en 22 minutos. Causa: proveedor externo.</span><span class="nz-incident__tag">Resuelto</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-contrast nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">27</span><span class="cat-demo__name">Pares de token, uno a uno</span><span class="cat-demo__tag">.nz-contrast · __ratio--ok</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--sm"><div class="nz-contrast"><span class="nz-contrast__pair"><span class="nz-contrast__chip nz-contrast__chip--brand"></span><span class="nz-contrast__chip nz-contrast__chip--surface"></span>Marca / superficie</span><span class="nz-contrast__ratio nz-contrast__ratio--ok">5,2:1</span><span class="nz-contrast__status nz-contrast__status--aa">AA</span></div><div class="nz-contrast"><span class="nz-contrast__pair"><span class="nz-contrast__chip nz-contrast__chip--accent"></span><span class="nz-contrast__chip nz-contrast__chip--surface"></span>Acento / superficie</span><span class="nz-contrast__ratio nz-contrast__ratio--ok">3,1:1</span><span class="nz-contrast__status nz-contrast__status--aa">AA</span><span class="nz-contrast__badge">Solo texto grande y botones</span></div><div class="nz-contrast"><span class="nz-contrast__pair"><span class="nz-contrast__chip nz-contrast__chip--soft"></span><span class="nz-contrast__chip nz-contrast__chip--surface"></span>Suave / superficie</span><span class="nz-contrast__ratio">1,4:1</span><span class="nz-contrast__status nz-contrast__status--fail">No apto</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-landmark nz-skip-link nz-sr-only-focusable nz-stack nz-visually-hidden">
+    <div class="cat-demo__title"><span class="cat-demo__num">28</span><span class="cat-demo__name">Contrato accesible de una página</span><span class="cat-demo__tag">.nz-skip-link · .nz-landmark</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack nz-stack--sm"><a class="nz-skip-link nz-skip-link--inline" href="#contenido">Saltar al contenido</a><span class="nz-landmark__label">Lo mínimo de cualquier página</span><main class="nz-landmark nz-landmark--main">Contenido alcanzable con el teclado<span class="nz-visually-hidden">Texto que solo oye el lector de pantalla.</span></main><a class="nz-sr-only-focusable" href="#contenido">Enlace que aparece al enfocarlo</a></div>
+    </div>
+  </section>
+  <div class="cat-empty" id="catVacio" hidden><b>Nada por aquí</b>Prueba con otro término o quita el filtro.</div>
+</main>
+<div class="cat-nav-pages" style="justify-content:center;border-top:1px solid var(--nz-border-soft)">
+  <a href="11-social.html">← 11 Social y marketing</a>
+  <a href="13-charts.html">13 Gráficos y visualización →</a>
+</div>
+<footer class="cat-footer">
+  Aurora 7 · Design System Ntizar · Categoría 12 de 15 · 1829 objetos · 534 demos · Hecho con ❤️ por David Antizar
+</footer>
+<script src="../js/catalog.js"></script>
 </body>
 </html>

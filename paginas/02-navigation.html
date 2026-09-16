@@ -3,132 +3,290 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Aurora 7 · 02 Navegación</title>
+<title>Aurora 7 · 02 Navegación · 76 objetos</title>
+<meta name="description" content="Navbar, menú, sidebar, tabs, breadcrumbs, paginación, TOC, dropdown, nav-footer y stepper. Todo táctil, sin JS (checkbox hack accesible).">
 <link rel="stylesheet" href="../tokens.css">
-<link rel="stylesheet" href="../packs/p2-navigation.css">
 <link rel="stylesheet" href="../packs/p0-catalog.css">
+<link rel="stylesheet" href="../packs/p1-layout.css">
+<link rel="stylesheet" href="../packs/p2-navigation.css">
+<link rel="stylesheet" href="../packs/p6-feedback.css">
+<link rel="stylesheet" href="../packs/p12-system.css">
 </head>
-<body class="nz nz-root">
-  <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
-  <header class="cat-topbar">
-    <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
-    <span class="cat-count">02 · 34 objetos</span>
-    <button class="theme-toggle" id="btnTheme" aria-label="Cambiar tema">◐</button>
-  </header>
-  <nav class="cat-nav-pages" aria-label="Categorías del catálogo">
-    <a href="01-layout.html">01 Layout</a>
-    <a href="02-navigation.html" aria-current="page">02 Navegación</a>
-    <a href="03-typography.html">03 Tipografía</a>
-    <a href="04-actions.html">04 Acciones</a>
-    <a href="05-forms.html">05 Formularios</a>
-    <a href="06-feedback.html">06 Feedback</a>
-    <a href="07-overlays.html">07 Overlays</a>
-    <a href="08-data.html">08 Datos</a>
-    <a href="09-media.html">09 Media</a>
-    <a href="10-commerce.html">10 Comercio</a>
-    <a href="11-social.html">11 Social</a>
-    <a href="12-system.html">12 Sistema</a>
-  </nav>
-  <main class="nz-container cat-main" id="contenido">
-    <div class="cat-pagehead">
-      <p class="cat-pagehead__over">Categoría 02 · 34 objetos</p>
-      <h1>Navegación</h1>
-      <p>Menús, sidebar, tabs, breadcrumbs, paginación, TOC, stepper. Todo táctil, sin JS (checkbox hack accesible).</p>
+<body class="nz">
+<a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
+<header class="cat-topbar">
+<a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
+<span class="cat-count">02 · 76 objetos · 34 demos</span>
+<span class="cat-topbar__tools">
+<a class="cat-icobtn" href="../index.html" title="Portada" aria-label="Volver a la portada">⌂</a>
+<button class="cat-icobtn" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
+</span>
+</header>
+<nav class="cat-nav-pages" aria-label="Categorías del catálogo">
+  <a href="01-layout.html">01 Layout y estructura</a>
+  <a href="02-navigation.html" aria-current="page">02 Navegación</a>
+  <a href="03-typography.html">03 Tipografía</a>
+  <a href="04-actions.html">04 Acciones y botones</a>
+  <a href="05-forms.html">05 Formularios e inputs</a>
+  <a href="06-feedback.html">06 Feedback y estados</a>
+  <a href="07-overlays.html">07 Overlays y diálogo</a>
+  <a href="08-data.html">08 Datos, tablas y listas</a>
+  <a href="09-media.html">09 Media e iconografía</a>
+  <a href="10-commerce.html">10 Comercio y producto</a>
+  <a href="11-social.html">11 Social y marketing</a>
+  <a href="12-system.html">12 Accesibilidad y sistema</a>
+  <a href="13-charts.html">13 Gráficos y visualización</a>
+  <a href="14-ai.html">14 IA y agentes</a>
+  <a href="15-apps.html">15 Apps y escritorio</a>
+</nav>
+<main class="nz-container cat-main" id="contenido">
+  <div class="cat-pagehead">
+    <p class="cat-pagehead__over">Categoría 02 de 15 · 76 objetos · 34 demos</p>
+    <h1>Navegación</h1>
+    <p>Navbar, menú, sidebar, tabs, breadcrumbs, paginación, TOC, dropdown, nav-footer y stepper. Todo táctil, sin JS (checkbox hack accesible).</p>
+    <div class="cat-pagehead__stats">
+      <span class="nz-badge nz-badge--brand"><i></i>76 objetos</span>
+      <span class="nz-badge nz-badge--neutral">10 familias</span>
+      <span class="nz-badge nz-badge--accent">34 demos en vivo</span>
+      <span class="nz-badge nz-badge--neutral">14 clases distintas usadas</span>
+      <a class="nz-badge nz-badge--brand" href="../packs/p2-navigation.css">p2-navigation.css</a>
     </div>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Navbar superior</span><span class="cat-demo__tag">.nz-navbar · __brand/__link</span></div>
-      <div class="cat-stage">
-        <div class="nz-navbar"><span class="nz-navbar__brand"><i></i>Marca</span><span class="nz-navbar__links"><a class="nz-navbar__link" aria-current="page">Inicio</a><a class="nz-navbar__link">Docs</a><a class="nz-navbar__link">Blog</a></span></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Menú con hamburguesa (sin JS)</span><span class="cat-demo__tag">.nz-menu &gt; input:checked ~ .nz-menu__drop</span></div>
-      <div class="cat-stage">
-        <div class="nz-menu"><input type="checkbox" id="m1" hidden><label class="nz-menu__btn" for="m1">☰</label><div class="nz-menu__drop"><a class="nz-menu__item" aria-current="page">Inicio</a><a class="nz-menu__item">Perfil</a><a class="nz-menu__item">Ajustes</a></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Sidebar de navegación</span><span class="cat-demo__tag">.nz-sidebar · __link[aria-current]</span></div>
-      <div class="cat-stage">
-        <div class="nz-sidebar"><span class="nz-sidebar__heading">Menú</span><a class="nz-sidebar__link" aria-current="page">Panel</a><a class="nz-sidebar__link">Informes</a><a class="nz-sidebar__link">Datos</a></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Tabs</span><span class="cat-demo__tag">.nz-tabs__tab[aria-selected]</span></div>
-      <div class="cat-stage">
-        <div class="nz-tabs"><button class="nz-tabs__tab" aria-selected="true">Resumen</button><button class="nz-tabs__tab">Detalle</button><button class="nz-tabs__tab">Historial</button></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Breadcrumbs</span><span class="cat-demo__tag">.nz-breadcrumb__sep</span></div>
-      <div class="cat-stage">
-        <nav class="nz-breadcrumb" aria-label="miga"><a>Inicio</a><span class="nz-breadcrumb__sep">/</span><a>Docs</a><span class="nz-breadcrumb__sep">/</span><span aria-current="page">Instalación</span></nav>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Paginación</span><span class="cat-demo__tag">.nz-pagination [aria-current]</span></div>
-      <div class="cat-stage">
-        <nav class="nz-pagination" aria-label="páginas"><a>‹</a><a aria-current="page">1</a><a>2</a><a>3</a><span class="nz-pagination__ellipsis">…</span><a>›</a></nav>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Índice de contenidos (TOC)</span><span class="cat-demo__tag">.nz-toc a[aria-current=location]</span></div>
-      <div class="cat-stage">
-        <nav class="nz-toc"><span class="nz-toc__title">En esta página</span><a href="#" aria-current="location">Introducción</a><a href="#" class="nz-toc--level2">- Inicio rápido</a><a href="#">Componentes</a></nav>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Dropdown select</span><span class="cat-demo__tag">.nz-dropdown &gt; input:checked ~ .nz-dropdown__list</span></div>
-      <div class="cat-stage">
-        <div class="nz-dropdown"><input type="checkbox" id="d1" hidden><label class="nz-dropdown__btn" for="d1">País</label><div class="nz-dropdown__list"><a class="nz-menu__item">España</a><a class="nz-menu__item">Francia</a><a class="nz-menu__item">Italia</a></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Nav footer</span><span class="cat-demo__tag">.nz-navfooter__col</span></div>
-      <div class="cat-stage">
-        <div class="nz-navfooter"><div class="nz-navfooter__col"><span class="nz-navfooter__title">Producto</span><a>Docs</a><a>Guías</a></div><div class="nz-navfooter__col"><span class="nz-navfooter__title">Compañía</span><a>Blog</a><a>Contacto</a></div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">10</span><span class="cat-demo__name">Stepper de proceso</span><span class="cat-demo__tag">.nz-stepper__step.is-active/.is-done</span></div>
-      <div class="cat-stage">
-        <div class="nz-stepper"><div class="nz-stepper__step is-done"><span class="nz-stepper__num">1</span>Cuenta</div><div class="nz-stepper__step is-active"><span class="nz-stepper__num">2</span>Pago</div><div class="nz-stepper__step"><span class="nz-stepper__num">3</span>Listo</div></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">11</span><span class="cat-demo__name">Pill tabs (móvil)</span><span class="cat-demo__tag">.nz-tabs--pill .nz-tabs__tab</span></div>
-      <div class="cat-stage">
-        <div class="nz-tabs nz-tabs--pill"><button class="nz-tabs__tab" aria-selected="true">Hoy</button><button class="nz-tabs__tab">Semana</button><button class="nz-tabs__tab">Mes</button></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">12</span><span class="cat-demo__name">Tabs con contador</span><span class="cat-demo__tag">.nz-tabs__tab--count</span></div>
-      <div class="cat-stage">
-        <div class="nz-tabs"><button class="nz-tabs__tab nz-tabs__tab--count" data-count="12" aria-selected="true">Todos</button><button class="nz-tabs__tab nz-tabs__tab--count" data-count="3">Nuevos</button></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">13</span><span class="cat-demo__name">Sidebar con contador</span><span class="cat-demo__tag">.nz-sidebar__link--count</span></div>
-      <div class="cat-stage">
-        <div class="nz-sidebar" style="max-width:12rem"><a class="nz-sidebar__link nz-sidebar__link--count" data-count="8">Bandeja</a><a class="nz-sidebar__link">Enviados</a></div>
-      </div>
-    </section>
-    <section class="cat-demo nz-in">
-      <div class="cat-demo__title"><span class="cat-demo__num">14</span><span class="cat-demo__name">Stepper enlazado</span><span class="cat-demo__tag">.nz-stepper__link</span></div>
-      <div class="cat-stage">
-        <div class="nz-stepper"><span class="nz-stepper__step is-done"><span class="nz-stepper__num">1</span>Datos</span><span class="nz-stepper__link">›</span><span class="nz-stepper__step is-active"><span class="nz-stepper__num">2</span>Pago</span></div>
-      </div>
-    </section>
-  </main>
-  <div class="cat-nav-pages nz-print-hide" style="justify-content:center;border-top:1px solid var(--nz-border-soft);flex-wrap:wrap">
-    <a href="01-layout.html">← 01 Layout</a>
-    <a href="03-typography.html">03 Tipografía →</a>
   </div>
-  <footer class="cat-footer">
-    Aurora 7 · Design System Ntizar · Categoría 2 de 12 · 565 objetos · Hecho con ❤️ por David Antizar
-  </footer>
-  <script>
-    document.getElementById('btnTheme').addEventListener('click', function(){var h=document.documentElement; h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme')==='dark'?'light':'dark');});
-  </script>
+  <div class="cat-tools">
+    <div class="cat-search">
+      <span class="cat-search__icon" aria-hidden="true">⌕</span>
+      <input class="cat-search__input" id="catBuscar" type="search" placeholder="Buscar en esta categoría… (pulsa /)" aria-label="Buscar objeto en esta categoría">
+      <span class="cat-search__count" id="catContador">34 objetos</span>
+    </div>
+    <div class="cat-filters" role="group" aria-label="Filtrar por familia de objeto"><button type="button" class="cat-filters__chip" data-filtro="todo" aria-pressed="true">Todo</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-breadcrumb" aria-pressed="false">.breadcrumb</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-cluster" aria-pressed="false">.cluster</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-dropdown" aria-pressed="false">.dropdown</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-hstack" aria-pressed="false">.hstack</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-menu" aria-pressed="false">.menu</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-navbar" aria-pressed="false">.navbar</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-navfooter" aria-pressed="false">.navfooter</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-overflow-y" aria-pressed="false">.overflow-y</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-pagination" aria-pressed="false">.pagination</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-sidebar" aria-pressed="false">.sidebar</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-skip-link" aria-pressed="false">.skip-link</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-stepper" aria-pressed="false">.stepper</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-tabs" aria-pressed="false">.tabs</button>
+      <button type="button" class="cat-filters__chip" data-filtro="nz-toc" aria-pressed="false">.toc</button></div>
+  </div>
+  <section class="cat-demo cat-in" data-cat="nz-navbar">
+    <div class="cat-demo__title"><span class="cat-demo__num">1</span><span class="cat-demo__name">Navbar superior</span><span class="cat-demo__tag">.nz-navbar · __brand · __links · __link</span></div>
+    <div class="cat-stage">
+      <div class="nz-navbar"><span class="nz-navbar__brand"><i></i>Marca</span><span class="nz-navbar__links"><a class="nz-navbar__link" aria-current="page">Inicio</a><a class="nz-navbar__link">Docs</a><a class="nz-navbar__link">Blog</a></span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-navbar">
+    <div class="cat-demo__title"><span class="cat-demo__num">2</span><span class="cat-demo__name">Navbar compacta, bordered y transparent</span><span class="cat-demo__tag">.nz-navbar--compact · --bordered · --transparent</span></div>
+    <div class="cat-stage">
+      <div class="nz-navbar nz-navbar--compact"><span class="nz-navbar__brand"><i></i>Compacta</span><span class="nz-navbar__links"><a class="nz-navbar__link">Docs</a></span></div><div class="nz-navbar nz-navbar--bordered"><span class="nz-navbar__brand"><i></i>Bordered</span><span class="nz-navbar__links"><a class="nz-navbar__link">Docs</a></span></div><div class="nz-navbar nz-navbar--transparent"><span class="nz-navbar__brand"><i></i>Transparent</span><span class="nz-navbar__links"><a class="nz-navbar__link">Docs</a></span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-navbar">
+    <div class="cat-demo__title"><span class="cat-demo__num">3</span><span class="cat-demo__name">Navbar de marca (azul sólido) y marca grande</span><span class="cat-demo__tag">.nz-navbar--brand · __brand--lg</span></div>
+    <div class="cat-stage">
+      <div class="nz-navbar nz-navbar--brand"><span class="nz-navbar__brand nz-navbar__brand--lg"><i></i>Aurora 7</span><span class="nz-navbar__links"><a class="nz-navbar__link" aria-current="page">Panel</a><a class="nz-navbar__link">Informes</a><a class="nz-navbar__link">Equipo</a></span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-menu">
+    <div class="cat-demo__title"><span class="cat-demo__num">4</span><span class="cat-demo__name">Menú con hamburguesa (sin JS)</span><span class="cat-demo__tag">.nz-menu · __btn · __drop · __item · input:checked</span></div>
+    <div class="cat-stage">
+      <div class="nz-menu"><input type="checkbox" id="menuN1" hidden><label class="nz-menu__btn" for="menuN1">☰</label><div class="nz-menu__drop"><a class="nz-menu__item" aria-current="page">Inicio</a><a class="nz-menu__item">Perfil</a><a class="nz-menu__item">Ajustes</a></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-hstack nz-menu">
+    <div class="cat-demo__title"><span class="cat-demo__num">5</span><span class="cat-demo__name">Menú: separador, peligro, deshabilitado y alineado a la derecha</span><span class="cat-demo__tag">.nz-menu--right · __sep · __item--danger · __item--disabled</span></div>
+    <div class="cat-stage">
+      <div class="nz-hstack demo-box" style="padding:var(--nz-space-8) var(--nz-space-2) var(--nz-space-2)"><span class="demo-box">barra</span><div class="nz-menu nz-menu--right"><input type="checkbox" id="menuN2" hidden><label class="nz-menu__btn" for="menuN2">☰</label><div class="nz-menu__drop"><a class="nz-menu__item">Cuenta</a><div class="nz-menu__sep"></div><a class="nz-menu__item nz-menu__item--danger">Cerrar sesión</a><a class="nz-menu__item nz-menu__item--disabled" aria-disabled="true">Facturación (pronto)</a></div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-sidebar">
+    <div class="cat-demo__title"><span class="cat-demo__num">6</span><span class="cat-demo__name">Sidebar de navegación</span><span class="cat-demo__tag">.nz-sidebar · __heading · __link · __link--count</span></div>
+    <div class="cat-stage">
+      <div class="nz-sidebar"><span class="nz-sidebar__heading">Menú</span><a class="nz-sidebar__link" aria-current="page">Panel</a><a class="nz-sidebar__link nz-sidebar__link--count" data-count="8">Bandeja</a><a class="nz-sidebar__link nz-sidebar__link--count" data-count="24">Informes</a></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-cluster nz-sidebar">
+    <div class="cat-demo__title"><span class="cat-demo__num">7</span><span class="cat-demo__name">Sidebar compacta, bordered y brand</span><span class="cat-demo__tag">.nz-sidebar--compact · --bordered · --brand</span></div>
+    <div class="cat-stage">
+      <div class="nz-cluster" style="align-items:flex-start"><div class="nz-sidebar nz-sidebar--compact"><a class="nz-sidebar__link" aria-current="page">Compacta</a><a class="nz-sidebar__link">Ajustes</a></div><div class="nz-sidebar nz-sidebar--bordered"><a class="nz-sidebar__link">Bordered</a><a class="nz-sidebar__link">Ajustes</a></div><div class="nz-sidebar nz-sidebar--brand"><span class="nz-sidebar__heading">Brand</span><a class="nz-sidebar__link" aria-current="page">Fondo azul suave</a></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-hstack nz-sidebar">
+    <div class="cat-demo__title"><span class="cat-demo__num">8</span><span class="cat-demo__name">Sidebar: enlaces con icono y grupo anidado</span><span class="cat-demo__tag">.nz-sidebar__link--icon · .nz-sidebar__group</span></div>
+    <div class="cat-stage">
+      <div class="nz-sidebar"><span class="nz-sidebar__heading">Workspace</span><div class="nz-hstack nz-hstack--compact"><a class="nz-sidebar__link nz-sidebar__link--icon" aria-label="Panel">▦</a><a class="nz-sidebar__link nz-sidebar__link--icon" aria-label="Ajustes">⚙</a><a class="nz-sidebar__link nz-sidebar__link--icon" aria-label="Ayuda">?</a></div><div class="nz-sidebar__group"><a class="nz-sidebar__link" aria-current="page">General</a><a class="nz-sidebar__link">Miembros</a><a class="nz-sidebar__link">Facturación</a></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-tabs">
+    <div class="cat-demo__title"><span class="cat-demo__num">9</span><span class="cat-demo__name">Tabs con panel</span><span class="cat-demo__tag">.nz-tabs · __tab · __panel · [aria-selected]</span></div>
+    <div class="cat-stage">
+      <div class="nz-tabs"><button class="nz-tabs__tab" aria-selected="true">Resumen</button><button class="nz-tabs__tab">Detalle</button><button class="nz-tabs__tab">Historial</button></div><div class="nz-tabs__panel">El panel vive debajo de la barra de tabs y hereda su padding vertical.</div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-tabs">
+    <div class="cat-demo__title"><span class="cat-demo__num">10</span><span class="cat-demo__name">Pill tabs (móvil)</span><span class="cat-demo__tag">.nz-tabs--pill · .nz-tabs__tab</span></div>
+    <div class="cat-stage">
+      <div class="nz-tabs nz-tabs--pill"><button class="nz-tabs__tab" aria-selected="true">Hoy</button><button class="nz-tabs__tab">Semana</button><button class="nz-tabs__tab">Mes</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-tabs">
+    <div class="cat-demo__title"><span class="cat-demo__num">11</span><span class="cat-demo__name">Tabs con contador y badge</span><span class="cat-demo__tag">.nz-tabs__tab--count · .nz-tabs__badge</span></div>
+    <div class="cat-stage">
+      <div class="nz-tabs"><button class="nz-tabs__tab nz-tabs__tab--count" data-count="12" aria-selected="true">Todos</button><button class="nz-tabs__tab nz-tabs__tab--count" data-count="3">Nuevos</button><button class="nz-tabs__tab">Archivados <span class="nz-tabs__badge">7</span></button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-tabs">
+    <div class="cat-demo__title"><span class="cat-demo__num">12</span><span class="cat-demo__name">Tabs centradas y a todo lo ancho</span><span class="cat-demo__tag">.nz-tabs--center · .nz-tabs--full</span></div>
+    <div class="cat-stage">
+      <div class="nz-tabs nz-tabs--center"><button class="nz-tabs__tab" aria-selected="true">Centradas</button><button class="nz-tabs__tab">Otra</button></div><div class="nz-tabs nz-tabs--full"><button class="nz-tabs__tab" aria-selected="true">Ancho 1</button><button class="nz-tabs__tab">Ancho 2</button><button class="nz-tabs__tab">Ancho 3</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-tabs">
+    <div class="cat-demo__title"><span class="cat-demo__num">13</span><span class="cat-demo__name">Tabs con subrayado (sin barra)</span><span class="cat-demo__tag">.nz-tabs--underline</span></div>
+    <div class="cat-stage">
+      <div class="nz-tabs nz-tabs--underline"><button class="nz-tabs__tab" aria-selected="true">Destacada</button><button class="nz-tabs__tab">Normal</button><button class="nz-tabs__tab">Otra</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-tabs">
+    <div class="cat-demo__title"><span class="cat-demo__num">14</span><span class="cat-demo__name">Tabs verticales</span><span class="cat-demo__tag">.nz-tabs--vertical · .nz-tabs__tab</span></div>
+    <div class="cat-stage">
+      <div class="nz-tabs nz-tabs--vertical" style="max-width:14rem"><button class="nz-tabs__tab" aria-selected="true">Cuenta</button><button class="nz-tabs__tab">Seguridad</button><button class="nz-tabs__tab">Notificaciones</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-tabs">
+    <div class="cat-demo__title"><span class="cat-demo__num">15</span><span class="cat-demo__name">Tab deshabilitada</span><span class="cat-demo__tag">.nz-tabs__tab--disabled · [aria-disabled]</span></div>
+    <div class="cat-stage">
+      <div class="nz-tabs"><button class="nz-tabs__tab" aria-selected="true">Activa</button><button class="nz-tabs__tab nz-tabs__tab--disabled" aria-disabled="true">Deshabilitada</button><button class="nz-tabs__tab">Otra</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-breadcrumb">
+    <div class="cat-demo__title"><span class="cat-demo__num">16</span><span class="cat-demo__name">Breadcrumbs</span><span class="cat-demo__tag">.nz-breadcrumb · __sep · [aria-current=page]</span></div>
+    <div class="cat-stage">
+      <nav class="nz-breadcrumb" aria-label="miga de pan"><a href="#">Inicio</a><span class="nz-breadcrumb__sep">/</span><a href="#">Docs</a><span class="nz-breadcrumb__sep">/</span><span aria-current="page">Instalación</span></nav>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-breadcrumb">
+    <div class="cat-demo__title"><span class="cat-demo__num">17</span><span class="cat-demo__name">Breadcrumbs compactos, con barra y con chevron</span><span class="cat-demo__tag">.nz-breadcrumb--compact · --slash · --chevron</span></div>
+    <div class="cat-stage">
+      <nav class="nz-breadcrumb nz-breadcrumb--compact nz-breadcrumb--slash" aria-label="miga compacta"><a href="#">Inicio</a><span class="nz-breadcrumb__sep"></span><a href="#">Panel</a><span class="nz-breadcrumb__sep"></span><span aria-current="page">Ajustes</span></nav><nav class="nz-breadcrumb nz-breadcrumb--chevron" aria-label="miga chevron"><a href="#">Inicio</a><span class="nz-breadcrumb__sep"></span><a href="#">Docs</a><span class="nz-breadcrumb__sep"></span><span aria-current="page">Componentes</span></nav>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-pagination">
+    <div class="cat-demo__title"><span class="cat-demo__num">18</span><span class="cat-demo__name">Paginación</span><span class="cat-demo__tag">.nz-pagination · [aria-current] · __ellipsis</span></div>
+    <div class="cat-stage">
+      <nav class="nz-pagination" aria-label="páginas"><a href="#">‹</a><a href="#" aria-current="page">1</a><a href="#">2</a><a href="#">3</a><span class="nz-pagination__ellipsis">…</span><a href="#">12</a><a href="#">›</a></nav>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-pagination">
+    <div class="cat-demo__title"><span class="cat-demo__num">19</span><span class="cat-demo__name">Paginación pequeña y grande</span><span class="cat-demo__tag">.nz-pagination--sm · .nz-pagination--lg</span></div>
+    <div class="cat-stage">
+      <nav class="nz-pagination nz-pagination--sm" aria-label="páginas pequeñas"><a href="#">‹</a><a href="#" aria-current="page">1</a><a href="#">2</a><a href="#">›</a></nav><nav class="nz-pagination nz-pagination--lg" aria-label="páginas grandes"><a href="#">‹</a><a href="#" aria-current="page">1</a><a href="#">2</a><a href="#">›</a></nav>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-pagination">
+    <div class="cat-demo__title"><span class="cat-demo__num">20</span><span class="cat-demo__name">Paginación simple con estado</span><span class="cat-demo__tag">.nz-pagination--simple · .nz-pagination__status</span></div>
+    <div class="cat-stage">
+      <nav class="nz-pagination nz-pagination--simple" aria-label="paginación simple"><a href="#">‹ Anterior</a><span class="nz-pagination__status">Página 3 de 24</span><a href="#">Siguiente ›</a></nav>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-toc">
+    <div class="cat-demo__title"><span class="cat-demo__num">21</span><span class="cat-demo__name">Índice de contenidos (TOC)</span><span class="cat-demo__tag">.nz-toc · __title · --level2 · [aria-current=location]</span></div>
+    <div class="cat-stage">
+      <nav class="nz-toc"><span class="nz-toc__title">En esta página</span><a href="#" aria-current="location">Introducción</a><a href="#" class="nz-toc--level2">Inicio rápido</a><a href="#">Componentes</a><a href="#" class="nz-toc--level2">Tokens</a></nav>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-toc">
+    <div class="cat-demo__title"><span class="cat-demo__num">22</span><span class="cat-demo__name">TOC compacto y con título brand</span><span class="cat-demo__tag">.nz-toc--compact · .nz-toc__title--brand</span></div>
+    <div class="cat-stage">
+      <nav class="nz-toc nz-toc--compact"><span class="nz-toc__title nz-toc__title--brand">Contenido</span><a href="#" aria-current="location">Instalación</a><a href="#">Uso</a><a href="#">API</a></nav>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-overflow-y nz-toc">
+    <div class="cat-demo__title"><span class="cat-demo__num">23</span><span class="cat-demo__name">TOC sticky</span><span class="cat-demo__tag">.nz-toc--sticky</span></div>
+    <div class="cat-stage">
+      <div class="nz-overflow-y demo-box" style="max-height:9rem;padding:0;text-align:start"><nav class="nz-toc nz-toc--sticky"><span class="nz-toc__title">Sticky</span><a href="#">Sección 1</a><a href="#">Sección 2</a></nav><div class="demo-box" style="height:7rem">contenido que scrollea…</div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-dropdown nz-menu">
+    <div class="cat-demo__title"><span class="cat-demo__num">24</span><span class="cat-demo__name">Dropdown select (sin JS)</span><span class="cat-demo__tag">.nz-dropdown · __btn · __list · input:checked</span></div>
+    <div class="cat-stage">
+      <div class="nz-dropdown" style="padding-bottom:var(--nz-space-8)"><input type="checkbox" id="dropN1" hidden><label class="nz-dropdown__btn" for="dropN1">País</label><div class="nz-dropdown__list"><a class="nz-menu__item">España</a><a class="nz-menu__item">Francia</a><a class="nz-menu__item">Italia</a></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-dropdown nz-hstack nz-menu">
+    <div class="cat-demo__title"><span class="cat-demo__num">25</span><span class="cat-demo__name">Dropdown a la derecha y ancho</span><span class="cat-demo__tag">.nz-dropdown--end · .nz-dropdown--wide</span></div>
+    <div class="cat-stage">
+      <div class="nz-hstack nz-hstack--end" style="align-items:flex-start"><div class="nz-dropdown nz-dropdown--end nz-dropdown--wide" style="padding-bottom:var(--nz-space-6)"><input type="checkbox" id="dropN2" hidden><label class="nz-dropdown__btn" for="dropN2">Menú alineado a la derecha</label><div class="nz-dropdown__list"><a class="nz-menu__item">Opción con mucho texto para ver el ancho de 18rem</a><a class="nz-menu__item">Otra opción</a></div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-dropdown nz-menu">
+    <div class="cat-demo__title"><span class="cat-demo__num">26</span><span class="cat-demo__name">Dropdown con botón icono y lista dividida</span><span class="cat-demo__tag">.nz-dropdown__btn--icon · .nz-dropdown__list--divided</span></div>
+    <div class="cat-stage">
+      <div class="nz-dropdown" style="padding-bottom:var(--nz-space-8)"><input type="checkbox" id="dropN3" hidden><label class="nz-dropdown__btn nz-dropdown__btn--icon" for="dropN3">⋯</label><div class="nz-dropdown__list nz-dropdown__list--divided"><a class="nz-menu__item">Editar</a><a class="nz-menu__item">Duplicar</a><a class="nz-menu__item">Archivar</a></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-navfooter">
+    <div class="cat-demo__title"><span class="cat-demo__num">27</span><span class="cat-demo__name">Nav footer</span><span class="cat-demo__tag">.nz-navfooter · __col · __title</span></div>
+    <div class="cat-stage">
+      <div class="nz-navfooter"><div class="nz-navfooter__col"><span class="nz-navfooter__title">Producto</span><a href="#">Docs</a><a href="#">Guías</a></div><div class="nz-navfooter__col"><span class="nz-navfooter__title">Compañía</span><a href="#">Blog</a><a href="#">Contacto</a></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-navfooter">
+    <div class="cat-demo__title"><span class="cat-demo__num">28</span><span class="cat-demo__name">Nav footer compacto, título brand y fila inferior</span><span class="cat-demo__tag">.nz-navfooter--compact · __title--brand · __bottom</span></div>
+    <div class="cat-stage">
+      <div class="nz-navfooter nz-navfooter--compact"><div class="nz-navfooter__col"><span class="nz-navfooter__title nz-navfooter__title--brand">Producto</span><a href="#">Docs</a></div><div class="nz-navfooter__col"><span class="nz-navfooter__title nz-navfooter__title--brand">Legal</span><a href="#">Privacidad</a></div><div class="nz-navfooter__bottom"><span>© 2026 Ntizar</span><a href="#">Cookies</a><a href="#">Aviso legal</a></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-navfooter">
+    <div class="cat-demo__title"><span class="cat-demo__num">29</span><span class="cat-demo__name">Nav footer en 2 y 3 columnas</span><span class="cat-demo__tag">.nz-navfooter--2col · .nz-navfooter--3col</span></div>
+    <div class="cat-stage">
+      <div class="nz-navfooter nz-navfooter--2col"><div class="nz-navfooter__col"><span class="nz-navfooter__title">Dos columnas</span><a href="#">Uno</a></div><div class="nz-navfooter__col"><span class="nz-navfooter__title">móvil 1 · ≥640 2</span><a href="#">Dos</a></div></div><div class="nz-navfooter nz-navfooter--3col"><div class="nz-navfooter__col"><span class="nz-navfooter__title">Tres columnas</span><a href="#">Uno</a></div><div class="nz-navfooter__col"><span class="nz-navfooter__title">≥960 3</span><a href="#">Dos</a></div><div class="nz-navfooter__col"><span class="nz-navfooter__title">Columnas</span><a href="#">Tres</a></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-stepper">
+    <div class="cat-demo__title"><span class="cat-demo__num">30</span><span class="cat-demo__name">Stepper de proceso</span><span class="cat-demo__tag">.nz-stepper · __step · __num · __link · .is-active/.is-done</span></div>
+    <div class="cat-stage">
+      <div class="nz-stepper"><div class="nz-stepper__step is-done"><span class="nz-stepper__num">1</span>Cuenta</div><span class="nz-stepper__link">›</span><div class="nz-stepper__step is-active"><span class="nz-stepper__num">2</span>Pago</div><span class="nz-stepper__link">›</span><div class="nz-stepper__step"><span class="nz-stepper__num">3</span>Listo</div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-stepper">
+    <div class="cat-demo__title"><span class="cat-demo__num">31</span><span class="cat-demo__name">Stepper compacto</span><span class="cat-demo__tag">.nz-stepper--compact</span></div>
+    <div class="cat-stage">
+      <div class="nz-stepper nz-stepper--compact"><div class="nz-stepper__step is-done"><span class="nz-stepper__num">1</span>Datos</div><div class="nz-stepper__step is-active"><span class="nz-stepper__num">2</span>Envío</div><div class="nz-stepper__step"><span class="nz-stepper__num">3</span>Fin</div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-stepper">
+    <div class="cat-demo__title"><span class="cat-demo__num">32</span><span class="cat-demo__name">Stepper vertical</span><span class="cat-demo__tag">.nz-stepper--vertical</span></div>
+    <div class="cat-stage">
+      <div class="nz-stepper nz-stepper--vertical"><div class="nz-stepper__step is-done"><span class="nz-stepper__num">1</span>Borrador</div><div class="nz-stepper__step is-active"><span class="nz-stepper__num">2</span>Revisión</div><div class="nz-stepper__step"><span class="nz-stepper__num">3</span>Publicado</div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-stepper">
+    <div class="cat-demo__title"><span class="cat-demo__num">33</span><span class="cat-demo__name">Stepper con paso en error</span><span class="cat-demo__tag">.nz-stepper__step--error</span></div>
+    <div class="cat-stage">
+      <div class="nz-stepper"><div class="nz-stepper__step is-done"><span class="nz-stepper__num">1</span>Datos</div><div class="nz-stepper__step nz-stepper__step--error" aria-current="step"><span class="nz-stepper__num">2</span>Pago rechazado</div><div class="nz-stepper__step"><span class="nz-stepper__num">3</span>Confirmación</div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-skip-link">
+    <div class="cat-demo__title"><span class="cat-demo__num">34</span><span class="cat-demo__name">Skip-link al contenido (objeto de p12-system.css)</span><span class="cat-demo__tag">.nz-skip-link · [aria-label]</span></div>
+    <div class="cat-stage">
+      <p style="font-size:var(--nz-text-xs);color:var(--nz-text-mute);margin:0">El enlace de salto vive ahora en p12-system.css (aquí en reposo, en producción aparece al pulsar Tab): <a class="nz-skip-link" href="#contenido" style="position:static">Saltar al contenido</a></p>
+    </div>
+  </section>
+  <div class="cat-empty" id="catVacio" hidden><b>Nada por aquí</b>Prueba con otro término o quita el filtro.</div>
+</main>
+<div class="cat-nav-pages" style="justify-content:center;border-top:1px solid var(--nz-border-soft)">
+  <a href="01-layout.html">← 01 Layout y estructura</a>
+  <a href="03-typography.html">03 Tipografía →</a>
+</div>
+<footer class="cat-footer">
+  Aurora 7 · Design System Ntizar · Categoría 02 de 15 · 1829 objetos · 534 demos · Hecho con ❤️ por David Antizar
+</footer>
+<script src="../js/catalog.js"></script>
 </body>
 </html>

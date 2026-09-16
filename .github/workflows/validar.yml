@@ -1,0 +1,48 @@
+name: Validar Aurora 7
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validar:
+    name: Manifiesto, cobertura y sincronía
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validar el sistema (manifiesto + cobertura + HTML)
+        run: python scripts/validar-css.py
+
+      - name: Comprobar la sintaxis del JavaScript del catálogo
+        run: node --check js/catalog.js
+
+      - name: Regenerar el catálogo y comprobar que no hay diferencias
+        run: |
+          python scripts/build-catalog.py
+          python scripts/audit-catalog.py
+          python scripts/audit-html.py
+          if ! git diff --quiet -- index.html paginas datos packs/all.css audit; then
+            echo "::error::Lo generado no coincide con lo commiteado. Ejecuta build-catalog.py, audit-catalog.py y audit-html.py, y commitea el resultado."
+            git --no-pager diff --stat -- index.html paginas datos packs/all.css audit
+            exit 1
+          fi
+          echo "Catálogo, índice de objetos e informe de auditoría sincronizados con specs/ y los packs."
+
+      - name: Resumen de la auditoría
+        run: |
+          echo "### Aurora 7 · auditoría" >> $GITHUB_STEP_SUMMARY
+          sed -n '1,20p' audit/AUDITORIA.md >> $GITHUB_STEP_SUMMARY
+
+      - name: Publicar el informe de auditoría
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-aurora7
+          path: audit/
+          if-no-files-found: ignore

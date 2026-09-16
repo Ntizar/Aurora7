@@ -1,0 +1,5334 @@
+{
+ "resumen": {
+  "objetos_declarados": 1829,
+  "familias": 349,
+  "demos": 534,
+  "categorias": 15,
+  "clases_usadas_en_demos": 1829,
+  "clases_sin_demo": 0,
+  "familias_sin_demo": 0,
+  "fantasmas": 0,
+  "duplicados": 0,
+  "tokens_fantasma": 0,
+  "hex": 0,
+  "glass": 0,
+  "gradientes": 0,
+  "important": 1,
+  "familias_sin_variantes": 137,
+  "packs": 15
+ },
+ "packs": {
+  "p1-layout.css": {
+   "lineas": 328,
+   "bytes": 19456,
+   "clases": 167,
+   "familias": 67,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p10-commerce.css": {
+   "lineas": 246,
+   "bytes": 25406,
+   "clases": 152,
+   "familias": 22,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p11-social.css": {
+   "lineas": 179,
+   "bytes": 17496,
+   "clases": 102,
+   "familias": 15,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p12-system.css": {
+   "lineas": 136,
+   "bytes": 13077,
+   "clases": 77,
+   "familias": 25,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 1
+  },
+  "p13-charts.css": {
+   "lineas": 271,
+   "bytes": 21474,
+   "clases": 203,
+   "familias": 21,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p14-ai.css": {
+   "lineas": 263,
+   "bytes": 22552,
+   "clases": 174,
+   "familias": 28,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p15-apps.css": {
+   "lineas": 346,
+   "bytes": 39845,
+   "clases": 70,
+   "familias": 30,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p2-navigation.css": {
+   "lineas": 168,
+   "bytes": 17284,
+   "clases": 76,
+   "familias": 10,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p3-typography.css": {
+   "lineas": 198,
+   "bytes": 15148,
+   "clases": 130,
+   "familias": 41,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p4-actions.css": {
+   "lineas": 155,
+   "bytes": 12037,
+   "clases": 78,
+   "familias": 7,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p5-forms.css": {
+   "lineas": 260,
+   "bytes": 21887,
+   "clases": 97,
+   "familias": 20,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p6-feedback.css": {
+   "lineas": 253,
+   "bytes": 23300,
+   "clases": 143,
+   "familias": 19,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p7-overlays.css": {
+   "lineas": 198,
+   "bytes": 22818,
+   "clases": 117,
+   "familias": 12,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p8-data.css": {
+   "lineas": 221,
+   "bytes": 18979,
+   "clases": 139,
+   "familias": 16,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  },
+  "p9-media.css": {
+   "lineas": 165,
+   "bytes": 13325,
+   "clases": 104,
+   "familias": 17,
+   "hex": 0,
+   "gradientes": 0,
+   "glass": 0,
+   "important": 0
+  }
+ },
+ "categorias": {
+  "1": {
+   "nombre": "Layout y estructura",
+   "pack": "p1-layout.css",
+   "demos": 48,
+   "objetos": 167,
+   "familias": 67,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "2": {
+   "nombre": "Navegación",
+   "pack": "p2-navigation.css",
+   "demos": 34,
+   "objetos": 76,
+   "familias": 10,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "3": {
+   "nombre": "Tipografía",
+   "pack": "p3-typography.css",
+   "demos": 42,
+   "objetos": 130,
+   "familias": 41,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "4": {
+   "nombre": "Acciones y botones",
+   "pack": "p4-actions.css",
+   "demos": 16,
+   "objetos": 78,
+   "familias": 7,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "5": {
+   "nombre": "Formularios e inputs",
+   "pack": "p5-forms.css",
+   "demos": 40,
+   "objetos": 97,
+   "familias": 20,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "6": {
+   "nombre": "Feedback y estados",
+   "pack": "p6-feedback.css",
+   "demos": 49,
+   "objetos": 143,
+   "familias": 19,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "7": {
+   "nombre": "Overlays y diálogo",
+   "pack": "p7-overlays.css",
+   "demos": 33,
+   "objetos": 117,
+   "familias": 12,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "8": {
+   "nombre": "Datos, tablas y listas",
+   "pack": "p8-data.css",
+   "demos": 36,
+   "objetos": 139,
+   "familias": 16,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "9": {
+   "nombre": "Media e iconografía",
+   "pack": "p9-media.css",
+   "demos": 38,
+   "objetos": 104,
+   "familias": 17,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "10": {
+   "nombre": "Comercio y producto",
+   "pack": "p10-commerce.css",
+   "demos": 44,
+   "objetos": 152,
+   "familias": 22,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "11": {
+   "nombre": "Social y marketing",
+   "pack": "p11-social.css",
+   "demos": 36,
+   "objetos": 102,
+   "familias": 15,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "12": {
+   "nombre": "Accesibilidad y sistema",
+   "pack": "p12-system.css",
+   "demos": 28,
+   "objetos": 77,
+   "familias": 25,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "13": {
+   "nombre": "Gráficos y visualización",
+   "pack": "p13-charts.css",
+   "demos": 33,
+   "objetos": 203,
+   "familias": 21,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "14": {
+   "nombre": "IA y agentes",
+   "pack": "p14-ai.css",
+   "demos": 26,
+   "objetos": 174,
+   "familias": 28,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  },
+  "15": {
+   "nombre": "Apps y escritorio",
+   "pack": "p15-apps.css",
+   "demos": 31,
+   "objetos": 70,
+   "familias": 30,
+   "sin_demo": [],
+   "familias_sin_demo": []
+  }
+ },
+ "hallazgos": {
+  "hex_en_packs": {},
+  "glass_en_packs": {},
+  "gradientes_en_packs": {},
+  "important_en_packs": {
+   "p12-system.css": 1
+  },
+  "tokens_fantasma": [],
+  "duplicados": {},
+  "fantasmas": []
+ },
+ "familias": {
+  "nz--leading-normal": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz--leading-snug": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz--leading-tight": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz--tracking-caps": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz--tracking-tight": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-a11y-badge": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 3,
+   "mods": [
+    "aa",
+    "aaa"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-actbar": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "item"
+   ],
+   "demostrado": true
+  },
+  "nz-activity": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 4,
+   "mods": [],
+   "partes": [
+    "icon",
+    "item",
+    "time"
+   ],
+   "demostrado": true
+  },
+  "nz-agenda": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "slot"
+   ],
+   "demostrado": true
+  },
+  "nz-agent-card": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 10,
+   "mods": [
+    "busy",
+    "error",
+    "idle"
+   ],
+   "partes": [
+    "cap",
+    "caps",
+    "name",
+    "role",
+    "row",
+    "state",
+    "state--busy",
+    "state--error",
+    "state--idle"
+   ],
+   "demostrado": true
+  },
+  "nz-alert": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 18,
+   "mods": [
+    "brand",
+    "danger",
+    "dismissible",
+    "floating",
+    "info",
+    "lg",
+    "neutral",
+    "outline",
+    "sm",
+    "success",
+    "warning"
+   ],
+   "partes": [
+    "action",
+    "body",
+    "close",
+    "icon",
+    "msg",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-align-justify": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-align-left": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-align-right": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-appempty": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-appnav": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "link"
+   ],
+   "demostrado": true
+  },
+  "nz-approval": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 5,
+   "mods": [
+    "danger"
+   ],
+   "partes": [
+    "actions",
+    "body",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-appshell": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-appstatus": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "item"
+   ],
+   "demostrado": true
+  },
+  "nz-arbol": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 5,
+   "mods": [],
+   "partes": [
+    "group",
+    "leaf",
+    "node",
+    "toggle"
+   ],
+   "demostrado": true
+  },
+  "nz-article": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 4,
+   "mods": [
+    "bordered",
+    "flush",
+    "interactive"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-aside": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-aspect": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 8,
+   "mods": [
+    "16x9",
+    "1x1",
+    "21x9",
+    "2x1",
+    "3x4",
+    "4x3",
+    "9x16"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-atajo-teclado": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "desc",
+    "kbd"
+   ],
+   "demostrado": true
+  },
+  "nz-attach": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 5,
+   "mods": [],
+   "partes": [
+    "item",
+    "name",
+    "remove",
+    "thumb"
+   ],
+   "demostrado": true
+  },
+  "nz-audio": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 5,
+   "mods": [
+    "accent"
+   ],
+   "partes": [
+    "play",
+    "time",
+    "track"
+   ],
+   "demostrado": true
+  },
+  "nz-avatar": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 15,
+   "mods": [
+    "2xl",
+    "accent",
+    "busy",
+    "dark",
+    "lg",
+    "md",
+    "offline",
+    "ring",
+    "sm",
+    "square",
+    "status",
+    "xl",
+    "xs"
+   ],
+   "partes": [
+    "bar"
+   ],
+   "demostrado": true
+  },
+  "nz-avatar-group": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 3,
+   "mods": [
+    "sm"
+   ],
+   "partes": [
+    "more"
+   ],
+   "demostrado": true
+  },
+  "nz-backdrop": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 3,
+   "mods": [
+    "soft",
+    "strong"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-badge": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 12,
+   "mods": [
+    "accent",
+    "brand",
+    "counter",
+    "danger",
+    "dot",
+    "lg",
+    "neutral",
+    "outline",
+    "sm",
+    "success",
+    "warning"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-balance": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-banner": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 6,
+   "mods": [
+    "accent",
+    "brand"
+   ],
+   "partes": [
+    "action",
+    "body",
+    "close"
+   ],
+   "demostrado": true
+  },
+  "nz-bento": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "tall",
+    "wide"
+   ],
+   "demostrado": true
+  },
+  "nz-bgimg": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-bleed": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 4,
+   "mods": [
+    "full",
+    "left",
+    "right"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-blockquote": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 4,
+   "mods": [
+    "accent",
+    "brand",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-brand": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 8,
+   "mods": [
+    "accent",
+    "accent",
+    "dark",
+    "lg",
+    "mono",
+    "sm"
+   ],
+   "partes": [
+    "mark",
+    "mark--accent",
+    "mark--dark"
+   ],
+   "demostrado": true
+  },
+  "nz-breadcrumb": {
+   "cat": 2,
+   "pack": "p2-navigation.css",
+   "n_clases": 5,
+   "mods": [
+    "chevron",
+    "compact",
+    "slash"
+   ],
+   "partes": [
+    "sep"
+   ],
+   "demostrado": true
+  },
+  "nz-btn": {
+   "cat": 4,
+   "pack": "p4-actions.css",
+   "n_clases": 41,
+   "mods": [
+    "2xl",
+    "2xs",
+    "accent",
+    "auto",
+    "badged",
+    "block",
+    "danger",
+    "danger-text",
+    "full",
+    "ghost",
+    "icon",
+    "icon-lg",
+    "icon-sm",
+    "icon-square",
+    "info",
+    "left",
+    "lg",
+    "link",
+    "neutral",
+    "outline",
+    "pill",
+    "primary",
+    "progress",
+    "right",
+    "rounded",
+    "sm",
+    "soft",
+    "soft-accent",
+    "soft-danger",
+    "soft-success",
+    "square",
+    "success",
+    "text",
+    "warning",
+    "xl",
+    "xs"
+   ],
+   "partes": [
+    "arrow",
+    "arrow--left",
+    "arrow--right",
+    "badge",
+    "icon",
+    "progress"
+   ],
+   "demostrado": true
+  },
+  "nz-btn-group": {
+   "cat": 4,
+   "pack": "p4-actions.css",
+   "n_clases": 5,
+   "mods": [
+    "joined",
+    "split",
+    "vertical"
+   ],
+   "partes": [
+    "caret"
+   ],
+   "demostrado": true
+  },
+  "nz-bullet": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 10,
+   "mods": [
+    "accent",
+    "brand",
+    "success"
+   ],
+   "partes": [
+    "label",
+    "num",
+    "ranges",
+    "target",
+    "track",
+    "value",
+    "value--accent",
+    "value--brand",
+    "value--success"
+   ],
+   "demostrado": true
+  },
+  "nz-callout": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 8,
+   "mods": [
+    "accent",
+    "brand",
+    "danger",
+    "note",
+    "success",
+    "tip",
+    "warn"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-caps": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-cart": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 11,
+   "mods": [
+    "drawer",
+    "mini"
+   ],
+   "partes": [
+    "count",
+    "empty",
+    "foot",
+    "head",
+    "items",
+    "line",
+    "qty",
+    "total"
+   ],
+   "demostrado": true
+  },
+  "nz-cart-item": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 9,
+   "mods": [],
+   "partes": [
+    "body",
+    "meta",
+    "name",
+    "price",
+    "remove",
+    "right",
+    "thumb",
+    "variant"
+   ],
+   "demostrado": true
+  },
+  "nz-center": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-center-x": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-center-xy": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-center-y": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-chart": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 22,
+   "mods": [
+    "accent",
+    "bordered",
+    "flat",
+    "lg",
+    "sm"
+   ],
+   "partes": [
+    "actions",
+    "axis",
+    "axis-label",
+    "body",
+    "empty",
+    "foot",
+    "grid",
+    "grid-line",
+    "head",
+    "loading",
+    "mark",
+    "mark-label",
+    "source",
+    "sub",
+    "target",
+    "target--accent",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-bar": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 23,
+   "mods": [
+    "accent",
+    "accent",
+    "brand",
+    "brand",
+    "danger",
+    "grouped",
+    "horizontal",
+    "lg",
+    "muted",
+    "muted",
+    "neg",
+    "sm",
+    "stacked",
+    "success",
+    "warning"
+   ],
+   "partes": [
+    "bar",
+    "bar--accent",
+    "bar--brand",
+    "bar--danger",
+    "bar--muted",
+    "bar--success",
+    "bar--warning",
+    "col",
+    "group",
+    "label",
+    "seg",
+    "seg--accent",
+    "seg--brand",
+    "seg--muted",
+    "value",
+    "zero"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-compare": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 8,
+   "mods": [
+    "a",
+    "b"
+   ],
+   "partes": [
+    "bar",
+    "bar--a",
+    "bar--b",
+    "name",
+    "num",
+    "pair",
+    "row"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-donut": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 13,
+   "mods": [
+    "accent",
+    "brand",
+    "lg",
+    "muted",
+    "sm",
+    "success"
+   ],
+   "partes": [
+    "center",
+    "label",
+    "seg",
+    "seg--accent",
+    "seg--brand",
+    "seg--muted",
+    "seg--success",
+    "svg",
+    "track",
+    "value"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-flow": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 7,
+   "mods": [
+    "accent",
+    "brand",
+    "muted"
+   ],
+   "partes": [
+    "label",
+    "link",
+    "node",
+    "node--accent",
+    "node--brand",
+    "node--muted"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-gauge": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 11,
+   "mods": [
+    "accent",
+    "danger",
+    "lg",
+    "success",
+    "warning"
+   ],
+   "partes": [
+    "fill",
+    "fill--accent",
+    "fill--danger",
+    "fill--success",
+    "fill--warning",
+    "label",
+    "svg",
+    "track",
+    "value"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-line": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 13,
+   "mods": [
+    "accent",
+    "accent",
+    "active",
+    "dashed",
+    "lg",
+    "multi",
+    "muted",
+    "sm"
+   ],
+   "partes": [
+    "area",
+    "dot",
+    "dot--accent",
+    "dot--active",
+    "path",
+    "path--accent",
+    "path--dashed",
+    "path--muted",
+    "svg"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-mini": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 4,
+   "mods": [
+    "accent",
+    "brand"
+   ],
+   "partes": [
+    "bar",
+    "bar--accent",
+    "bar--brand"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-radar": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 6,
+   "mods": [],
+   "partes": [
+    "area",
+    "axis",
+    "label",
+    "svg",
+    "web"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-range": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "btn"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-scatter": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 7,
+   "mods": [
+    "accent",
+    "brand"
+   ],
+   "partes": [
+    "area",
+    "dot",
+    "dot--accent",
+    "dot--brand",
+    "x",
+    "y"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-stat": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 9,
+   "mods": [
+    "down",
+    "flat",
+    "up"
+   ],
+   "partes": [
+    "delta",
+    "delta--down",
+    "delta--flat",
+    "delta--up",
+    "label",
+    "spark",
+    "unit",
+    "value"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-tablebar": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 6,
+   "mods": [],
+   "partes": [
+    "bar",
+    "name",
+    "num",
+    "row",
+    "track"
+   ],
+   "demostrado": true
+  },
+  "nz-chart-waterfall": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 7,
+   "mods": [
+    "down",
+    "total",
+    "up"
+   ],
+   "partes": [
+    "bar",
+    "bar--down",
+    "bar--total",
+    "bar--up",
+    "col",
+    "label"
+   ],
+   "demostrado": true
+  },
+  "nz-chat": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 11,
+   "mods": [
+    "bordered",
+    "sm"
+   ],
+   "partes": [
+    "body",
+    "empty",
+    "foot",
+    "head",
+    "status",
+    "suggest",
+    "suggests",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-chat-empty": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 5,
+   "mods": [],
+   "partes": [
+    "icon",
+    "suggests",
+    "text",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-chat-history": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 5,
+   "mods": [
+    "active"
+   ],
+   "partes": [
+    "item",
+    "item--active",
+    "time",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-checkbox": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 5,
+   "mods": [
+    "card",
+    "indeterminate",
+    "sm"
+   ],
+   "partes": [
+    "box",
+    "box--indeterminate"
+   ],
+   "demostrado": true
+  },
+  "nz-checkout-steps": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 6,
+   "mods": [
+    "done",
+    "vertical"
+   ],
+   "partes": [
+    "label",
+    "num",
+    "step",
+    "step--done"
+   ],
+   "demostrado": true
+  },
+  "nz-chip": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 10,
+   "mods": [
+    "accent",
+    "brand",
+    "danger",
+    "lg",
+    "removable",
+    "sm",
+    "success"
+   ],
+   "partes": [
+    "dot",
+    "x"
+   ],
+   "demostrado": true
+  },
+  "nz-cite": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 5,
+   "mods": [],
+   "partes": [
+    "meta",
+    "num",
+    "title",
+    "url"
+   ],
+   "demostrado": true
+  },
+  "nz-cluster": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 7,
+   "mods": [
+    "between",
+    "center",
+    "compact",
+    "end",
+    "nowrap",
+    "spacious"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-cmd": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 16,
+   "mods": [
+    "active",
+    "sm",
+    "with-preview"
+   ],
+   "partes": [
+    "empty",
+    "foot",
+    "group",
+    "icon",
+    "input",
+    "item",
+    "item--active",
+    "kbd",
+    "list",
+    "panel",
+    "preview",
+    "preview-title",
+    "scrim"
+   ],
+   "demostrado": true
+  },
+  "nz-code": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 6,
+   "mods": [
+    "block",
+    "brand",
+    "dark",
+    "inline",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-codepad": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "gutter",
+    "line"
+   ],
+   "demostrado": true
+  },
+  "nz-col": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-collapsible": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-columns-2": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-columns-3": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-comment": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 14,
+   "mods": [
+    "deleted",
+    "highlight",
+    "indent",
+    "reply"
+   ],
+   "partes": [
+    "actions",
+    "author",
+    "body",
+    "head",
+    "reactions",
+    "reply",
+    "root",
+    "text",
+    "time"
+   ],
+   "demostrado": true
+  },
+  "nz-compare": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 7,
+   "mods": [
+    "featured"
+   ],
+   "partes": [
+    "check",
+    "col--featured",
+    "feature",
+    "foot",
+    "head",
+    "no"
+   ],
+   "demostrado": true
+  },
+  "nz-compare-bar": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 4,
+   "mods": [],
+   "partes": [
+    "actions",
+    "clear",
+    "count"
+   ],
+   "demostrado": true
+  },
+  "nz-confirm": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 7,
+   "mods": [
+    "brand",
+    "danger"
+   ],
+   "partes": [
+    "actions",
+    "icon",
+    "text",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-container": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 5,
+   "mods": [
+    "fixed",
+    "fluid",
+    "narrow",
+    "wide"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-context-meter": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 6,
+   "mods": [
+    "full",
+    "warn"
+   ],
+   "partes": [
+    "bar",
+    "fill",
+    "value"
+   ],
+   "demostrado": true
+  },
+  "nz-contrast": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 14,
+   "mods": [
+    "aa",
+    "accent",
+    "brand",
+    "fail",
+    "lg",
+    "ok",
+    "soft",
+    "surface"
+   ],
+   "partes": [
+    "badge",
+    "chip",
+    "chip--accent",
+    "chip--brand",
+    "chip--soft",
+    "chip--surface",
+    "pair",
+    "ratio",
+    "ratio--ok",
+    "status",
+    "status--aa",
+    "status--fail"
+   ],
+   "demostrado": true
+  },
+  "nz-countdown": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "label",
+    "num"
+   ],
+   "demostrado": true
+  },
+  "nz-coupon": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 6,
+   "mods": [
+    "inline"
+   ],
+   "partes": [
+    "btn",
+    "hint",
+    "input",
+    "msg"
+   ],
+   "demostrado": true
+  },
+  "nz-cover": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 5,
+   "mods": [
+    "16x9",
+    "1x1",
+    "3x2",
+    "4x3"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-cta": {
+   "cat": 4,
+   "pack": "p4-actions.css",
+   "n_clases": 7,
+   "mods": [
+    "accent",
+    "lg",
+    "muted",
+    "sm",
+    "underline"
+   ],
+   "partes": [
+    "arrow"
+   ],
+   "demostrado": true
+  },
+  "nz-cta-banner": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 10,
+   "mods": [
+    "accent",
+    "bordered",
+    "brand",
+    "sm"
+   ],
+   "partes": [
+    "actions",
+    "body",
+    "close",
+    "eyebrow",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-cuota": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 7,
+   "mods": [
+    "full",
+    "warn"
+   ],
+   "partes": [
+    "bar",
+    "fill",
+    "reset",
+    "value"
+   ],
+   "demostrado": true
+  },
+  "nz-dash-grid": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 4,
+   "mods": [
+    "2",
+    "4",
+    "sidebar"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-datagrid": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 4,
+   "mods": [
+    "dense",
+    "edit",
+    "zebra"
+   ],
+   "partes": [
+    "cell--edit"
+   ],
+   "demostrado": true
+  },
+  "nz-dateline": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-diff": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 7,
+   "mods": [
+    "add",
+    "ctx",
+    "del"
+   ],
+   "partes": [
+    "code",
+    "line",
+    "line--add",
+    "line--ctx",
+    "line--del",
+    "num"
+   ],
+   "demostrado": true
+  },
+  "nz-discount-badge": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 3,
+   "mods": [
+    "lg"
+   ],
+   "partes": [
+    "was"
+   ],
+   "demostrado": true
+  },
+  "nz-display": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 3,
+   "mods": [
+    "sm",
+    "xl"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-divider": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 5,
+   "mods": [
+    "dashed",
+    "dotted",
+    "label",
+    "v"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-dl": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 9,
+   "mods": [
+    "2col",
+    "3col",
+    "brand",
+    "inline",
+    "striped"
+   ],
+   "partes": [
+    "dd",
+    "dd--brand",
+    "dt",
+    "row"
+   ],
+   "demostrado": true
+  },
+  "nz-dock": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "item"
+   ],
+   "demostrado": true
+  },
+  "nz-docs": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "dot",
+    "tab"
+   ],
+   "demostrado": true
+  },
+  "nz-drawer": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 15,
+   "mods": [
+    "flotante",
+    "flush",
+    "left",
+    "lg",
+    "right",
+    "sm"
+   ],
+   "partes": [
+    "body",
+    "body--flush",
+    "foot",
+    "group",
+    "group-title",
+    "head",
+    "panel",
+    "panel--left",
+    "panel--right",
+    "scrim",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-drawer-layout": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [
+    "right"
+   ],
+   "partes": [
+    "drawer"
+   ],
+   "demostrado": true
+  },
+  "nz-dropdown": {
+   "cat": 2,
+   "pack": "p2-navigation.css",
+   "n_clases": 7,
+   "mods": [
+    "divided",
+    "end",
+    "icon",
+    "wide"
+   ],
+   "partes": [
+    "btn",
+    "btn--icon",
+    "list",
+    "list--divided"
+   ],
+   "demostrado": true
+  },
+  "nz-embed-grid": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 7,
+   "mods": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "partes": [
+    "cell",
+    "cell--1",
+    "cell--2",
+    "cell--3",
+    "cell--4",
+    "label"
+   ],
+   "demostrado": true
+  },
+  "nz-empty": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 9,
+   "mods": [
+    "bordered",
+    "brand",
+    "sm"
+   ],
+   "partes": [
+    "action",
+    "body",
+    "icon",
+    "kbd",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-error": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 3,
+   "mods": [
+    "brand",
+    "offline"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-errorstate": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 4,
+   "mods": [],
+   "partes": [
+    "body",
+    "code",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-eyebrow": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-fab": {
+   "cat": 4,
+   "pack": "p4-actions.css",
+   "n_clases": 6,
+   "mods": [
+    "accent",
+    "bottom-left",
+    "extended",
+    "lg",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-feed": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 6,
+   "mods": [
+    "2col",
+    "tight"
+   ],
+   "partes": [
+    "end",
+    "loading",
+    "sep"
+   ],
+   "demostrado": true
+  },
+  "nz-feedback": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 3,
+   "mods": [
+    "on"
+   ],
+   "partes": [
+    "btn",
+    "btn--on"
+   ],
+   "demostrado": true
+  },
+  "nz-field": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 11,
+   "mods": [
+    "compact",
+    "horizontal",
+    "inline",
+    "optional",
+    "req"
+   ],
+   "partes": [
+    "counter",
+    "error",
+    "help",
+    "hint",
+    "label",
+    "label--optional",
+    "label--req"
+   ],
+   "demostrado": true
+  },
+  "nz-fieldset": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "leyenda"
+   ],
+   "demostrado": true
+  },
+  "nz-figura": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "pie"
+   ],
+   "demostrado": true
+  },
+  "nz-figure": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 6,
+   "mods": [
+    "brand",
+    "caption-left",
+    "sm"
+   ],
+   "partes": [
+    "credit",
+    "img"
+   ],
+   "demostrado": true
+  },
+  "nz-filezona": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 4,
+   "mods": [],
+   "partes": [
+    "icono",
+    "input",
+    "texto"
+   ],
+   "demostrado": true
+  },
+  "nz-focus-accent": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-focus-ring": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-footer": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 4,
+   "mods": [
+    "brand",
+    "compact",
+    "sticky"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-formgrid": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 4,
+   "mods": [
+    "2",
+    "3",
+    "wide"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-funnel": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 8,
+   "mods": [
+    "accent",
+    "brand",
+    "muted"
+   ],
+   "partes": [
+    "bar",
+    "bar--accent",
+    "bar--brand",
+    "bar--muted",
+    "label",
+    "step",
+    "value"
+   ],
+   "demostrado": true
+  },
+  "nz-galeria": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 6,
+   "mods": [
+    "2",
+    "3",
+    "masonry",
+    "tall"
+   ],
+   "partes": [
+    "item",
+    "item--tall"
+   ],
+   "demostrado": true
+  },
+  "nz-gauge-num": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 8,
+   "mods": [
+    "brand",
+    "down",
+    "up"
+   ],
+   "partes": [
+    "delta",
+    "delta--down",
+    "delta--up",
+    "label",
+    "unit",
+    "value"
+   ],
+   "demostrado": true
+  },
+  "nz-gift-note": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "body",
+    "label"
+   ],
+   "demostrado": true
+  },
+  "nz-grid-12": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-grid-auto": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-guardrail": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 5,
+   "mods": [
+    "block"
+   ],
+   "partes": [
+    "icon",
+    "msg",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-h1": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 5,
+   "mods": [
+    "accent",
+    "brand",
+    "muted",
+    "tight"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-h2": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 5,
+   "mods": [
+    "accent",
+    "brand",
+    "muted",
+    "tight"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-h3": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 5,
+   "mods": [
+    "accent",
+    "brand",
+    "muted",
+    "tight"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-h4": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 5,
+   "mods": [
+    "accent",
+    "brand",
+    "muted",
+    "tight"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-h5": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 5,
+   "mods": [
+    "accent",
+    "brand",
+    "muted",
+    "tight"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-h6": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 5,
+   "mods": [
+    "accent",
+    "brand",
+    "muted",
+    "tight"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-hashtag": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 2,
+   "mods": [
+    "accent"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-header": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 5,
+   "mods": [
+    "bordered",
+    "compact",
+    "sticky",
+    "tall"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-heatcalendar": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 11,
+   "mods": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "hoy"
+   ],
+   "partes": [
+    "day",
+    "day--0",
+    "day--1",
+    "day--2",
+    "day--3",
+    "day--4",
+    "day--hoy",
+    "grid",
+    "legend",
+    "months"
+   ],
+   "demostrado": true
+  },
+  "nz-heatmap": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 12,
+   "mods": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "partes": [
+    "cell",
+    "cell--0",
+    "cell--1",
+    "cell--2",
+    "cell--3",
+    "cell--4",
+    "col-label",
+    "row",
+    "row-label",
+    "scale",
+    "scale-step"
+   ],
+   "demostrado": true
+  },
+  "nz-hero-bleed": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-hide-escritorio": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-hide-movil": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-high-contrast-note": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "icon"
+   ],
+   "demostrado": true
+  },
+  "nz-highlight": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 2,
+   "mods": [
+    "brand"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-hint-error": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 2,
+   "mods": [
+    "ok"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-holy": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 7,
+   "mods": [
+    "aside-left"
+   ],
+   "partes": [
+    "aside",
+    "footer",
+    "header",
+    "main",
+    "nav"
+   ],
+   "demostrado": true
+  },
+  "nz-hstack": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 9,
+   "mods": [
+    "between",
+    "bottom",
+    "center",
+    "compact",
+    "end",
+    "nowrap",
+    "spacious",
+    "top"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-icon-tile": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 10,
+   "mods": [
+    "accent",
+    "brand",
+    "circle",
+    "danger",
+    "lg",
+    "outline",
+    "sm",
+    "success",
+    "xl"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-img": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 10,
+   "mods": [
+    "bordered",
+    "circle",
+    "full",
+    "grayscale",
+    "ratio-16x9",
+    "ratio-1x1",
+    "rounded",
+    "shadow",
+    "zoom"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-incident": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 5,
+   "mods": [],
+   "partes": [
+    "body",
+    "tag",
+    "time",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-indent": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-initial": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-inlinestat": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 6,
+   "mods": [
+    "brand",
+    "err",
+    "muted",
+    "ok",
+    "warn"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-input": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 11,
+   "mods": [
+    "brand",
+    "clear",
+    "error",
+    "lg",
+    "pill",
+    "search",
+    "sm",
+    "square",
+    "success",
+    "warning"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-input-icon": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "icon"
+   ],
+   "demostrado": true
+  },
+  "nz-inputgroup": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 6,
+   "mods": [
+    "accent",
+    "brand",
+    "error",
+    "pill"
+   ],
+   "partes": [
+    "addon",
+    "addon--accent",
+    "addon--brand"
+   ],
+   "demostrado": true
+  },
+  "nz-inspector": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-kanban": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "card",
+    "col"
+   ],
+   "demostrado": true
+  },
+  "nz-kbd": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 2,
+   "mods": [
+    "lg"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-kgraph": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 8,
+   "mods": [
+    "accent",
+    "brand",
+    "muted"
+   ],
+   "partes": [
+    "edge",
+    "label",
+    "node",
+    "node--accent",
+    "node--brand",
+    "node--muted",
+    "svg"
+   ],
+   "demostrado": true
+  },
+  "nz-kpi": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 18,
+   "mods": [
+    "accent",
+    "accent",
+    "bordered",
+    "brand",
+    "brand",
+    "down",
+    "flat",
+    "inline",
+    "lg",
+    "sm",
+    "up"
+   ],
+   "partes": [
+    "delta",
+    "delta--down",
+    "delta--flat",
+    "delta--up",
+    "icon",
+    "label",
+    "spark",
+    "target",
+    "value",
+    "value--accent",
+    "value--brand"
+   ],
+   "demostrado": true
+  },
+  "nz-label": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 2,
+   "mods": [
+    "req"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-landmark": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 5,
+   "mods": [
+    "footer",
+    "main",
+    "nav"
+   ],
+   "partes": [
+    "label"
+   ],
+   "demostrado": true
+  },
+  "nz-launcher": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "app"
+   ],
+   "demostrado": true
+  },
+  "nz-lbl": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 10,
+   "mods": [
+    "accent",
+    "brand",
+    "danger",
+    "info",
+    "lg",
+    "neutral",
+    "outline",
+    "sm",
+    "success"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-lead": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 4,
+   "mods": [
+    "brand",
+    "lg",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-legend": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 10,
+   "mods": [
+    "accent",
+    "brand",
+    "danger",
+    "muted",
+    "success",
+    "vertical",
+    "warning"
+   ],
+   "partes": [
+    "item",
+    "swatch",
+    "swatch--accent",
+    "swatch--brand",
+    "swatch--danger",
+    "swatch--muted",
+    "swatch--success",
+    "swatch--warning"
+   ],
+   "demostrado": true
+  },
+  "nz-lightbox": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 7,
+   "mods": [
+    "next",
+    "prev"
+   ],
+   "partes": [
+    "caption",
+    "close",
+    "img",
+    "nav",
+    "nav--next",
+    "nav--prev"
+   ],
+   "demostrado": true
+  },
+  "nz-link": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 9,
+   "mods": [
+    "accent",
+    "arrow",
+    "brand",
+    "danger",
+    "external",
+    "inline",
+    "quiet",
+    "underline"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-list": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 10,
+   "mods": [
+    "accent",
+    "brand",
+    "check",
+    "compact",
+    "divided",
+    "done",
+    "icon",
+    "numeric"
+   ],
+   "partes": [
+    "item",
+    "item--done"
+   ],
+   "demostrado": true
+  },
+  "nz-list-row": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 6,
+   "mods": [
+    "brand"
+   ],
+   "partes": [
+    "actions",
+    "body",
+    "meta",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-live-region": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 4,
+   "mods": [
+    "assertive",
+    "polite"
+   ],
+   "partes": [
+    "icon"
+   ],
+   "demostrado": true
+  },
+  "nz-loading-bar": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "bar"
+   ],
+   "demostrado": true
+  },
+  "nz-logo-nube": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 3,
+   "mods": [
+    "muted"
+   ],
+   "partes": [
+    "item",
+    "item--muted"
+   ],
+   "demostrado": true
+  },
+  "nz-logomark": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 3,
+   "mods": [
+    "accent",
+    "outline"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-logos": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-main": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 4,
+   "mods": [
+    "flush",
+    "narrow",
+    "wide"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-maintenance-banner": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 4,
+   "mods": [],
+   "partes": [
+    "actions",
+    "body",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-mapa-placeholder": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "label",
+    "pin"
+   ],
+   "demostrado": true
+  },
+  "nz-masonry": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [
+    "2",
+    "4"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-matrix": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 7,
+   "mods": [
+    "high",
+    "low",
+    "mid",
+    "top"
+   ],
+   "partes": [
+    "cell",
+    "cell--high",
+    "cell--low",
+    "cell--mid",
+    "cell--top",
+    "label"
+   ],
+   "demostrado": true
+  },
+  "nz-measure": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 3,
+   "mods": [
+    "narrow",
+    "wide"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-media": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 11,
+   "mods": [
+    "bordered",
+    "brand",
+    "center",
+    "reverse",
+    "sm"
+   ],
+   "partes": [
+    "body",
+    "desc",
+    "fig",
+    "link",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-media-badge": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 7,
+   "mods": [
+    "bottom",
+    "brand",
+    "center",
+    "danger",
+    "right",
+    "top-izq"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-mention": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 2,
+   "mods": [
+    "accent"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-menu": {
+   "cat": 2,
+   "pack": "p2-navigation.css",
+   "n_clases": 8,
+   "mods": [
+    "danger",
+    "disabled",
+    "right"
+   ],
+   "partes": [
+    "btn",
+    "drop",
+    "item",
+    "item--danger",
+    "item--disabled",
+    "sep"
+   ],
+   "demostrado": true
+  },
+  "nz-menu-pop": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 10,
+   "mods": [
+    "compact",
+    "context",
+    "danger",
+    "disabled",
+    "left"
+   ],
+   "partes": [
+    "group-title",
+    "item",
+    "item--danger",
+    "item--disabled",
+    "list",
+    "list--left",
+    "sep"
+   ],
+   "demostrado": true
+  },
+  "nz-meter": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 6,
+   "mods": [
+    "brand",
+    "danger",
+    "success"
+   ],
+   "partes": [
+    "bar",
+    "label"
+   ],
+   "demostrado": true
+  },
+  "nz-min-target": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-modal": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 18,
+   "mods": [
+    "between",
+    "centrado",
+    "danger",
+    "full",
+    "lg",
+    "scroll",
+    "sheet-movil",
+    "sm"
+   ],
+   "partes": [
+    "body",
+    "body--scroll",
+    "close",
+    "dialog",
+    "foot",
+    "foot--between",
+    "head",
+    "icon",
+    "icon--danger",
+    "meta",
+    "scrim",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-model-compare": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 7,
+   "mods": [
+    "a",
+    "b"
+   ],
+   "partes": [
+    "body",
+    "foot",
+    "head",
+    "side",
+    "side--a",
+    "side--b"
+   ],
+   "demostrado": true
+  },
+  "nz-modelpick": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 6,
+   "mods": [
+    "active"
+   ],
+   "partes": [
+    "btn",
+    "item",
+    "item--active",
+    "list",
+    "meta"
+   ],
+   "demostrado": true
+  },
+  "nz-month": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-motion-badge": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 2,
+   "mods": [
+    "no"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-msg": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 13,
+   "mods": [
+    "assistant",
+    "error",
+    "on",
+    "user"
+   ],
+   "partes": [
+    "actions",
+    "author",
+    "avatar",
+    "body",
+    "bubble",
+    "caret",
+    "caret--on",
+    "text",
+    "time"
+   ],
+   "demostrado": true
+  },
+  "nz-nav-landmark": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-navbar": {
+   "cat": 2,
+   "pack": "p2-navigation.css",
+   "n_clases": 9,
+   "mods": [
+    "bordered",
+    "brand",
+    "compact",
+    "lg",
+    "transparent"
+   ],
+   "partes": [
+    "brand",
+    "brand--lg",
+    "link",
+    "links"
+   ],
+   "demostrado": true
+  },
+  "nz-navfooter": {
+   "cat": 2,
+   "pack": "p2-navigation.css",
+   "n_clases": 8,
+   "mods": [
+    "2col",
+    "3col",
+    "brand",
+    "compact"
+   ],
+   "partes": [
+    "bottom",
+    "col",
+    "title",
+    "title--brand"
+   ],
+   "demostrado": true
+  },
+  "nz-nota": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-notif": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 7,
+   "mods": [
+    "brand"
+   ],
+   "partes": [
+    "actions",
+    "body",
+    "desc",
+    "icon",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-num": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 9,
+   "mods": [
+    "accent",
+    "brand",
+    "danger",
+    "lg",
+    "muted",
+    "sm",
+    "stat",
+    "success"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-off": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 2,
+   "mods": [
+    "green"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-offcanvas": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 6,
+   "mods": [
+    "brand",
+    "raised"
+   ],
+   "partes": [
+    "body",
+    "foot",
+    "head"
+   ],
+   "demostrado": true
+  },
+  "nz-offline-bar": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "action"
+   ],
+   "demostrado": true
+  },
+  "nz-order": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 10,
+   "mods": [
+    "canceled",
+    "pending"
+   ],
+   "partes": [
+    "date",
+    "foot",
+    "head",
+    "id",
+    "items",
+    "status",
+    "status--canceled",
+    "status--pending",
+    "total"
+   ],
+   "demostrado": true
+  },
+  "nz-otp": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 4,
+   "mods": [
+    "error",
+    "lg",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-outlet": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [
+    "lg",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-overflow-x": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-overflow-y": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-pagination": {
+   "cat": 2,
+   "pack": "p2-navigation.css",
+   "n_clases": 6,
+   "mods": [
+    "lg",
+    "simple",
+    "sm"
+   ],
+   "partes": [
+    "ellipsis",
+    "status"
+   ],
+   "demostrado": true
+  },
+  "nz-password": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "toggle"
+   ],
+   "demostrado": true
+  },
+  "nz-pathbar": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "seg"
+   ],
+   "demostrado": true
+  },
+  "nz-pay": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 5,
+   "mods": [],
+   "partes": [
+    "body",
+    "icon",
+    "meta",
+    "name"
+   ],
+   "demostrado": true
+  },
+  "nz-payment": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 7,
+   "mods": [
+    "grid",
+    "selected"
+   ],
+   "partes": [
+    "icon",
+    "label",
+    "method",
+    "method--selected",
+    "note"
+   ],
+   "demostrado": true
+  },
+  "nz-plan": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 14,
+   "mods": [
+    "brand",
+    "featured",
+    "muted",
+    "no",
+    "off"
+   ],
+   "partes": [
+    "badge",
+    "cta",
+    "desc",
+    "feature",
+    "feature--no",
+    "feature--off",
+    "features",
+    "flag",
+    "name",
+    "price"
+   ],
+   "demostrado": true
+  },
+  "nz-plans": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 6,
+   "mods": [
+    "2",
+    "3",
+    "4",
+    "compact",
+    "table"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-popover": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 11,
+   "mods": [
+    "arrow",
+    "brand",
+    "danger",
+    "end",
+    "rich"
+   ],
+   "partes": [
+    "arrow",
+    "body",
+    "item",
+    "item--danger",
+    "sep",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-post": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 16,
+   "mods": [
+    "bordered",
+    "compact",
+    "pinned"
+   ],
+   "partes": [
+    "actions",
+    "author",
+    "body",
+    "byline",
+    "foot",
+    "handle",
+    "head",
+    "media",
+    "more",
+    "pin",
+    "reactions",
+    "time"
+   ],
+   "demostrado": true
+  },
+  "nz-preferencias": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 5,
+   "mods": [],
+   "partes": [
+    "control",
+    "desc",
+    "fila",
+    "label"
+   ],
+   "demostrado": true
+  },
+  "nz-prefs": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "control",
+    "row"
+   ],
+   "demostrado": true
+  },
+  "nz-pretty": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-price": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 13,
+   "mods": [
+    "accent",
+    "brand",
+    "muted",
+    "sm",
+    "strike",
+    "xl"
+   ],
+   "partes": [
+    "amount",
+    "currency",
+    "decimal",
+    "old",
+    "period",
+    "save"
+   ],
+   "demostrado": true
+  },
+  "nz-pricetable": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 4,
+   "mods": [
+    "compact"
+   ],
+   "partes": [
+    "col",
+    "rowhead"
+   ],
+   "demostrado": true
+  },
+  "nz-print-hide": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-product": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 16,
+   "mods": [
+    "bordered",
+    "compact",
+    "horizontal",
+    "sold-out"
+   ],
+   "partes": [
+    "badge",
+    "body",
+    "cat",
+    "cta",
+    "media",
+    "name",
+    "price",
+    "quick",
+    "rate",
+    "ribbon",
+    "variant"
+   ],
+   "demostrado": true
+  },
+  "nz-products": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 2,
+   "mods": [
+    "2"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-progress": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 12,
+   "mods": [
+    "2xs",
+    "accent",
+    "brand",
+    "indeterminate",
+    "lg",
+    "success",
+    "thin",
+    "with-label"
+   ],
+   "partes": [
+    "bar",
+    "caption",
+    "value"
+   ],
+   "demostrado": true
+  },
+  "nz-prompt": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 5,
+   "mods": [],
+   "partes": [
+    "attach",
+    "hint",
+    "input",
+    "send"
+   ],
+   "demostrado": true
+  },
+  "nz-propsheet": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "row"
+   ],
+   "demostrado": true
+  },
+  "nz-prose": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 3,
+   "mods": [
+    "brand",
+    "wide"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-ptemplate": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 4,
+   "mods": [],
+   "partes": [
+    "block",
+    "preview",
+    "var"
+   ],
+   "demostrado": true
+  },
+  "nz-pulse": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 3,
+   "mods": [
+    "danger",
+    "success"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-qty": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 4,
+   "mods": [
+    "lg",
+    "sm",
+    "vertical"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-quote": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 10,
+   "mods": [
+    "accent",
+    "brand",
+    "sm"
+   ],
+   "partes": [
+    "avatar",
+    "byline",
+    "logo",
+    "name",
+    "role",
+    "who"
+   ],
+   "demostrado": true
+  },
+  "nz-radio": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 4,
+   "mods": [
+    "card",
+    "lg"
+   ],
+   "partes": [
+    "dot",
+    "dot--lg"
+   ],
+   "demostrado": true
+  },
+  "nz-range": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 5,
+   "mods": [
+    "accent",
+    "brand",
+    "sm"
+   ],
+   "partes": [
+    "marks"
+   ],
+   "demostrado": true
+  },
+  "nz-reason": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "body",
+    "summary"
+   ],
+   "demostrado": true
+  },
+  "nz-record": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 14,
+   "mods": [
+    "brand",
+    "brand",
+    "brand",
+    "danger",
+    "error"
+   ],
+   "partes": [
+    "actions",
+    "avatar",
+    "body",
+    "meta",
+    "meta--brand",
+    "meta--error",
+    "tag",
+    "thumb",
+    "title",
+    "value",
+    "value--brand"
+   ],
+   "demostrado": true
+  },
+  "nz-records": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-reduced-motion-ok": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-region-ad": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [
+    "inline",
+    "sidebar"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-region-chat": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [
+    "left",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-region-cookies": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [
+    "compact",
+    "esquina"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-region-toolbar": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [
+    "flotante",
+    "sticky"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-resmon": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "row"
+   ],
+   "demostrado": true
+  },
+  "nz-ribbon": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "btn"
+   ],
+   "demostrado": true
+  },
+  "nz-ring": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 9,
+   "mods": [
+    "accent",
+    "lg",
+    "sm",
+    "success",
+    "warning"
+   ],
+   "partes": [
+    "fill",
+    "label",
+    "track"
+   ],
+   "demostrado": true
+  },
+  "nz-root": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-route": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "outlet"
+   ],
+   "demostrado": true
+  },
+  "nz-row": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 6,
+   "mods": [
+    "2",
+    "3",
+    "4",
+    "compact",
+    "spacious"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-rowform": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 3,
+   "mods": [
+    "2",
+    "3"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-rtl": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-runlog": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 7,
+   "mods": [
+    "error",
+    "info",
+    "warn"
+   ],
+   "partes": [
+    "level--error",
+    "level--info",
+    "level--warn",
+    "line",
+    "msg",
+    "time"
+   ],
+   "demostrado": true
+  },
+  "nz-safe": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-safe-x": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-score": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 7,
+   "mods": [
+    "low"
+   ],
+   "partes": [
+    "bar",
+    "fill",
+    "label",
+    "value",
+    "verdict"
+   ],
+   "demostrado": true
+  },
+  "nz-scrim": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [
+    "soft",
+    "strong"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-search": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 5,
+   "mods": [
+    "full",
+    "sm"
+   ],
+   "partes": [
+    "clear",
+    "icon"
+   ],
+   "demostrado": true
+  },
+  "nz-section": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 4,
+   "mods": [
+    "bordered",
+    "compact",
+    "spacious"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-segmented": {
+   "cat": 4,
+   "pack": "p4-actions.css",
+   "n_clases": 7,
+   "mods": [
+    "accent",
+    "brand",
+    "full",
+    "lg",
+    "sm",
+    "vertical"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-select": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 6,
+   "mods": [
+    "group",
+    "lg",
+    "multiple",
+    "pill",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-share": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 6,
+   "mods": [
+    "brand",
+    "copy",
+    "vertical"
+   ],
+   "partes": [
+    "count",
+    "label"
+   ],
+   "demostrado": true
+  },
+  "nz-sheet": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 13,
+   "mods": [
+    "danger",
+    "scroll",
+    "tall"
+   ],
+   "partes": [
+    "action",
+    "action--danger",
+    "body",
+    "foot",
+    "grab",
+    "handle",
+    "head",
+    "panel",
+    "scrim",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-shipping-option": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 6,
+   "mods": [
+    "disabled",
+    "selected"
+   ],
+   "partes": [
+    "eta",
+    "label",
+    "price"
+   ],
+   "demostrado": true
+  },
+  "nz-show-escritorio": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-show-movil": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-sidebar": {
+   "cat": 2,
+   "pack": "p2-navigation.css",
+   "n_clases": 10,
+   "mods": [
+    "bordered",
+    "brand",
+    "compact",
+    "count",
+    "icon",
+    "sticky"
+   ],
+   "partes": [
+    "group",
+    "heading",
+    "link",
+    "link--count",
+    "link--icon"
+   ],
+   "demostrado": true
+  },
+  "nz-skeleton": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 11,
+   "mods": [
+    "avatar",
+    "button",
+    "chart",
+    "muted",
+    "text",
+    "title",
+    "wide"
+   ],
+   "partes": [
+    "block",
+    "card",
+    "line",
+    "line--muted",
+    "line--title",
+    "line--wide"
+   ],
+   "demostrado": true
+  },
+  "nz-skip-link": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 2,
+   "mods": [
+    "inline"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-skip-links-group": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "link"
+   ],
+   "demostrado": true
+  },
+  "nz-social": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 5,
+   "mods": [
+    "count",
+    "liked",
+    "loading",
+    "saved"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-social-proof": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "avatars",
+    "text"
+   ],
+   "demostrado": true
+  },
+  "nz-spacer": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 4,
+   "mods": [
+    "fixed",
+    "lg",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-1": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-10": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-11": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-12": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-2": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-3": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-4": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-5": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-6": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-7": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-8": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-span-9": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-spark": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 6,
+   "mods": [
+    "accent",
+    "active",
+    "brand",
+    "lg"
+   ],
+   "partes": [
+    "bar",
+    "bar--active"
+   ],
+   "demostrado": true
+  },
+  "nz-sparkline": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 6,
+   "mods": [
+    "accent",
+    "area",
+    "brand",
+    "lg"
+   ],
+   "partes": [
+    "bar"
+   ],
+   "demostrado": true
+  },
+  "nz-spin": {
+   "cat": 4,
+   "pack": "p4-actions.css",
+   "n_clases": 5,
+   "mods": [
+    "accent",
+    "brand",
+    "lg",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-spinner": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 7,
+   "mods": [
+    "2xs",
+    "accent",
+    "brand",
+    "dots",
+    "lg",
+    "sm"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-split": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 5,
+   "mods": [
+    "2-1",
+    "3-2",
+    "40-60",
+    "60-40"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-splitpane": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 4,
+   "mods": [
+    "vertical"
+   ],
+   "partes": [
+    "grip",
+    "panel"
+   ],
+   "demostrado": true
+  },
+  "nz-splitview": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "grip"
+   ],
+   "demostrado": true
+  },
+  "nz-spotlight": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "input",
+    "item"
+   ],
+   "demostrado": true
+  },
+  "nz-sr-only-focusable": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-stack": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 6,
+   "mods": [
+    "2xs",
+    "lg",
+    "sm",
+    "xl",
+    "xs"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-stars": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 9,
+   "mods": [
+    "brand",
+    "full",
+    "lg",
+    "sm"
+   ],
+   "partes": [
+    "bar",
+    "count",
+    "row",
+    "star",
+    "star--full"
+   ],
+   "demostrado": true
+  },
+  "nz-stat-badge": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-statusbar": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 7,
+   "mods": [
+    "brand",
+    "error",
+    "info",
+    "success",
+    "warning"
+   ],
+   "partes": [
+    "spacer"
+   ],
+   "demostrado": true
+  },
+  "nz-stepper": {
+   "cat": 2,
+   "pack": "p2-navigation.css",
+   "n_clases": 7,
+   "mods": [
+    "compact",
+    "error",
+    "vertical"
+   ],
+   "partes": [
+    "link",
+    "num",
+    "step",
+    "step--error"
+   ],
+   "demostrado": true
+  },
+  "nz-sticky-bottom": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-sticky-top": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-stock": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 6,
+   "mods": [
+    "badge",
+    "in",
+    "low",
+    "out"
+   ],
+   "partes": [
+    "dot"
+   ],
+   "demostrado": true
+  },
+  "nz-stream-status": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 5,
+   "mods": [
+    "done",
+    "live",
+    "stopped"
+   ],
+   "partes": [
+    "dot"
+   ],
+   "demostrado": true
+  },
+  "nz-summary": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 7,
+   "mods": [
+    "brand",
+    "total"
+   ],
+   "partes": [
+    "cta",
+    "divider",
+    "note",
+    "row",
+    "row--total"
+   ],
+   "demostrado": true
+  },
+  "nz-switch": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 9,
+   "mods": [
+    "accent",
+    "brand",
+    "left",
+    "lg",
+    "sm"
+   ],
+   "partes": [
+    "label",
+    "label--left",
+    "thumb",
+    "track"
+   ],
+   "demostrado": true
+  },
+  "nz-syn": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 4,
+   "mods": [
+    "com",
+    "kw",
+    "num",
+    "str"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-sysdialog": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "panel",
+    "scrim"
+   ],
+   "demostrado": true
+  },
+  "nz-sysinfo": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 4,
+   "mods": [],
+   "partes": [
+    "dd",
+    "dt",
+    "row"
+   ],
+   "demostrado": true
+  },
+  "nz-sysnotif": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 4,
+   "mods": [],
+   "partes": [
+    "actions",
+    "icon",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-sysstatus": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 8,
+   "mods": [
+    "err",
+    "info",
+    "maintenance",
+    "ok",
+    "warn"
+   ],
+   "partes": [
+    "detail",
+    "time"
+   ],
+   "demostrado": true
+  },
+  "nz-tabfocus-visible": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-table": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 31,
+   "mods": [
+    "actions",
+    "bordered",
+    "borderless",
+    "brand",
+    "checkbox",
+    "clickable",
+    "comfortable",
+    "compact",
+    "err",
+    "hover",
+    "num",
+    "ok",
+    "selected",
+    "sm",
+    "sticky-head",
+    "striped",
+    "warn",
+    "wide"
+   ],
+   "partes": [
+    "caption",
+    "cell--actions",
+    "cell--checkbox",
+    "cell--num",
+    "cell--wide",
+    "empty",
+    "filters",
+    "foot",
+    "muted",
+    "num",
+    "right",
+    "row--clickable",
+    "row--selected",
+    "sort",
+    "status",
+    "status--brand",
+    "status--err",
+    "status--ok",
+    "status--warn",
+    "strong",
+    "toolbar",
+    "toolbar-spacer"
+   ],
+   "demostrado": true
+  },
+  "nz-table-wrap": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-tabs": {
+   "cat": 2,
+   "pack": "p2-navigation.css",
+   "n_clases": 11,
+   "mods": [
+    "center",
+    "count",
+    "disabled",
+    "full",
+    "pill",
+    "underline",
+    "vertical"
+   ],
+   "partes": [
+    "badge",
+    "panel",
+    "tab",
+    "tab--count",
+    "tab--disabled"
+   ],
+   "demostrado": true
+  },
+  "nz-tap-44": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-taskplan": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 8,
+   "mods": [
+    "active",
+    "done",
+    "error"
+   ],
+   "partes": [
+    "detail",
+    "label",
+    "num",
+    "step",
+    "step--active",
+    "step--done",
+    "step--error"
+   ],
+   "demostrado": true
+  },
+  "nz-taskwin": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "row"
+   ],
+   "demostrado": true
+  },
+  "nz-team": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 7,
+   "mods": [],
+   "partes": [
+    "avatar",
+    "bio",
+    "member",
+    "name",
+    "role",
+    "social"
+   ],
+   "demostrado": true
+  },
+  "nz-tema-badge": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 4,
+   "mods": [
+    "dark",
+    "light",
+    "system"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-term": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "cursor",
+    "prompt"
+   ],
+   "demostrado": true
+  },
+  "nz-text": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 9,
+   "mods": [
+    "brand-soft",
+    "danger",
+    "faint",
+    "large",
+    "mono",
+    "muted",
+    "small",
+    "success",
+    "warning"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-textarea": {
+   "cat": 5,
+   "pack": "p5-forms.css",
+   "n_clases": 6,
+   "mods": [
+    "auto",
+    "lg",
+    "pill",
+    "sm"
+   ],
+   "partes": [
+    "counter"
+   ],
+   "demostrado": true
+  },
+  "nz-thinking": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 4,
+   "mods": [
+    "2",
+    "3"
+   ],
+   "partes": [
+    "dot",
+    "dot--2",
+    "dot--3"
+   ],
+   "demostrado": true
+  },
+  "nz-thirds": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [
+    "compact",
+    "spacious"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-timeline": {
+   "cat": 8,
+   "pack": "p8-data.css",
+   "n_clases": 15,
+   "mods": [
+    "accent",
+    "brand",
+    "brand",
+    "compact",
+    "error",
+    "horizontal",
+    "muted",
+    "success"
+   ],
+   "partes": [
+    "card",
+    "desc",
+    "dot",
+    "dot--accent",
+    "dot--brand",
+    "dot--error",
+    "dot--muted",
+    "dot--success",
+    "item",
+    "time",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-tip": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 6,
+   "mods": [
+    "above",
+    "accent",
+    "below",
+    "brand"
+   ],
+   "partes": [
+    "body"
+   ],
+   "demostrado": true
+  },
+  "nz-toast": {
+   "cat": 6,
+   "pack": "p6-feedback.css",
+   "n_clases": 11,
+   "mods": [
+    "bottom",
+    "brand",
+    "error",
+    "info",
+    "success",
+    "top"
+   ],
+   "partes": [
+    "action",
+    "close",
+    "icon",
+    "title"
+   ],
+   "demostrado": true
+  },
+  "nz-toast-stack": {
+   "cat": 7,
+   "pack": "p7-overlays.css",
+   "n_clases": 5,
+   "mods": [
+    "end",
+    "err",
+    "ok"
+   ],
+   "partes": [
+    "item",
+    "item--err",
+    "item--ok"
+   ],
+   "demostrado": true
+  },
+  "nz-toc": {
+   "cat": 2,
+   "pack": "p2-navigation.css",
+   "n_clases": 6,
+   "mods": [
+    "brand",
+    "compact",
+    "level2",
+    "sticky"
+   ],
+   "partes": [
+    "title",
+    "title--brand"
+   ],
+   "demostrado": true
+  },
+  "nz-tokens": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 4,
+   "mods": [],
+   "partes": [
+    "cost",
+    "label",
+    "num"
+   ],
+   "demostrado": true
+  },
+  "nz-toolbar": {
+   "cat": 4,
+   "pack": "p4-actions.css",
+   "n_clases": 7,
+   "mods": [
+    "brand",
+    "compact",
+    "sticky"
+   ],
+   "partes": [
+    "divider",
+    "group",
+    "spacer"
+   ],
+   "demostrado": true
+  },
+  "nz-toolcall": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 9,
+   "mods": [
+    "error",
+    "ok",
+    "running"
+   ],
+   "partes": [
+    "args",
+    "head",
+    "name",
+    "result",
+    "status",
+    "status--error",
+    "status--ok",
+    "status--running"
+   ],
+   "demostrado": true
+  },
+  "nz-toolrow": {
+   "cat": 14,
+   "pack": "p14-ai.css",
+   "n_clases": 3,
+   "mods": [
+    "active"
+   ],
+   "partes": [
+    "chip",
+    "chip--active"
+   ],
+   "demostrado": true
+  },
+  "nz-tray": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "item",
+    "menu"
+   ],
+   "demostrado": true
+  },
+  "nz-tree": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "item"
+   ],
+   "demostrado": true
+  },
+  "nz-treemap": {
+   "cat": 13,
+   "pack": "p13-charts.css",
+   "n_clases": 8,
+   "mods": [
+    "accent",
+    "brand",
+    "lg",
+    "muted"
+   ],
+   "partes": [
+    "cell",
+    "cell--accent",
+    "cell--brand",
+    "cell--lg",
+    "cell--muted",
+    "label",
+    "value"
+   ],
+   "demostrado": true
+  },
+  "nz-truncate": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 4,
+   "mods": [
+    "1",
+    "2",
+    "3"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-trust": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 5,
+   "mods": [
+    "bordered",
+    "sm"
+   ],
+   "partes": [
+    "logo",
+    "stars"
+   ],
+   "demostrado": true
+  },
+  "nz-underline": {
+   "cat": 3,
+   "pack": "p3-typography.css",
+   "n_clases": 1,
+   "mods": [
+    "accent"
+   ],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-userbox": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "avatar"
+   ],
+   "demostrado": true
+  },
+  "nz-username": {
+   "cat": 11,
+   "pack": "p11-social.css",
+   "n_clases": 5,
+   "mods": [
+    "verified"
+   ],
+   "partes": [
+    "check",
+    "handle",
+    "name"
+   ],
+   "demostrado": true
+  },
+  "nz-version-badge": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-vh": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-video": {
+   "cat": 9,
+   "pack": "p9-media.css",
+   "n_clases": 7,
+   "mods": [
+    "4x3",
+    "full"
+   ],
+   "partes": [
+    "bar",
+    "controls",
+    "play",
+    "time"
+   ],
+   "demostrado": true
+  },
+  "nz-visually-hidden": {
+   "cat": 12,
+   "pack": "p12-system.css",
+   "n_clases": 1,
+   "mods": [],
+   "partes": [],
+   "demostrado": true
+  },
+  "nz-widget": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "value"
+   ],
+   "demostrado": true
+  },
+  "nz-window": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "body",
+    "titlebar"
+   ],
+   "demostrado": true
+  },
+  "nz-winfoot": {
+   "cat": 15,
+   "pack": "p15-apps.css",
+   "n_clases": 2,
+   "mods": [],
+   "partes": [
+    "count"
+   ],
+   "demostrado": true
+  },
+  "nz-wishlist": {
+   "cat": 10,
+   "pack": "p10-commerce.css",
+   "n_clases": 3,
+   "mods": [],
+   "partes": [
+    "btn",
+    "count"
+   ],
+   "demostrado": true
+  },
+  "nz-with-sidebar": {
+   "cat": 1,
+   "pack": "p1-layout.css",
+   "n_clases": 3,
+   "mods": [
+    "right",
+    "wide"
+   ],
+   "partes": [],
+   "demostrado": true
+  }
+ },
+ "sin_variantes": [
+  "nz--leading-normal",
+  "nz--leading-snug",
+  "nz--leading-tight",
+  "nz--tracking-caps",
+  "nz--tracking-tight",
+  "nz-actbar",
+  "nz-activity",
+  "nz-agenda",
+  "nz-align-justify",
+  "nz-align-left",
+  "nz-align-right",
+  "nz-appempty",
+  "nz-appnav",
+  "nz-appshell",
+  "nz-appstatus",
+  "nz-arbol",
+  "nz-aside",
+  "nz-atajo-teclado",
+  "nz-attach",
+  "nz-balance",
+  "nz-bento",
+  "nz-bgimg",
+  "nz-caps",
+  "nz-cart-item",
+  "nz-center",
+  "nz-center-x",
+  "nz-center-xy",
+  "nz-center-y",
+  "nz-chart-radar",
+  "nz-chart-range",
+  "nz-chart-tablebar",
+  "nz-chat-empty",
+  "nz-cite",
+  "nz-codepad",
+  "nz-col",
+  "nz-collapsible",
+  "nz-columns-2",
+  "nz-columns-3",
+  "nz-compare-bar",
+  "nz-countdown",
+  "nz-dateline",
+  "nz-dock",
+  "nz-docs",
+  "nz-errorstate",
+  "nz-eyebrow",
+  "nz-fieldset",
+  "nz-figura",
+  "nz-filezona",
+  "nz-focus-accent",
+  "nz-focus-ring",
+  "nz-gift-note",
+  "nz-grid-12",
+  "nz-grid-auto",
+  "nz-hero-bleed",
+  "nz-hide-escritorio",
+  "nz-hide-movil",
+  "nz-high-contrast-note",
+  "nz-incident",
+  "nz-indent",
+  "nz-initial",
+  "nz-input-icon",
+  "nz-inspector",
+  "nz-kanban",
+  "nz-launcher",
+  "nz-loading-bar",
+  "nz-logos",
+  "nz-maintenance-banner",
+  "nz-mapa-placeholder",
+  "nz-min-target",
+  "nz-month",
+  "nz-nav-landmark",
+  "nz-nota",
+  "nz-offline-bar",
+  "nz-overflow-x",
+  "nz-overflow-y",
+  "nz-password",
+  "nz-pathbar",
+  "nz-pay",
+  "nz-preferencias",
+  "nz-prefs",
+  "nz-pretty",
+  "nz-print-hide",
+  "nz-prompt",
+  "nz-propsheet",
+  "nz-ptemplate",
+  "nz-reason",
+  "nz-records",
+  "nz-reduced-motion-ok",
+  "nz-resmon",
+  "nz-ribbon",
+  "nz-root",
+  "nz-route",
+  "nz-rtl",
+  "nz-safe",
+  "nz-safe-x",
+  "nz-show-escritorio",
+  "nz-show-movil",
+  "nz-skip-links-group",
+  "nz-social-proof",
+  "nz-span-1",
+  "nz-span-10",
+  "nz-span-11",
+  "nz-span-12",
+  "nz-span-2",
+  "nz-span-3",
+  "nz-span-4",
+  "nz-span-5",
+  "nz-span-6",
+  "nz-span-7",
+  "nz-span-8",
+  "nz-span-9",
+  "nz-splitview",
+  "nz-spotlight",
+  "nz-sr-only-focusable",
+  "nz-stat-badge",
+  "nz-sticky-bottom",
+  "nz-sticky-top",
+  "nz-sysdialog",
+  "nz-sysinfo",
+  "nz-sysnotif",
+  "nz-tabfocus-visible",
+  "nz-table-wrap",
+  "nz-tap-44",
+  "nz-taskwin",
+  "nz-team",
+  "nz-term",
+  "nz-tokens",
+  "nz-tray",
+  "nz-tree",
+  "nz-userbox",
+  "nz-version-badge",
+  "nz-vh",
+  "nz-visually-hidden",
+  "nz-widget",
+  "nz-window",
+  "nz-winfoot",
+  "nz-wishlist"
+ ]
+}
