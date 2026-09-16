@@ -552,8 +552,19 @@ def build_page(num):
         lines.append('      </div>')
         lines.append('    </section>')
     lines.append('  </main>')
+    # nav inferior: anterior / siguiente
+    prev_n = num - 1 if num > 1 else 12
+    next_n = num + 1 if num < 12 else 1
+    prev_f = dict((n, f) for n, nm, f, c in NAV)[prev_n]
+    prev_nm = dict((n, nm) for n, nm, f, c in NAV)[prev_n]
+    next_f = dict((n, f) for n, nm, f, c in NAV)[next_n]
+    next_nm = dict((n, nm) for n, nm, f, c in NAV)[next_n]
+    lines.append('  <div class="cat-nav-pages nz-print-hide" style="justify-content:center;border-top:1px solid var(--nz-border-soft);flex-wrap:wrap">')
+    lines.append(f'    <a href="{prev_f}">← {prev_nm}</a>')
+    lines.append(f'    <a href="{next_f}">{next_nm} →</a>')
+    lines.append('  </div>')
     lines.append('  <footer class="cat-footer">')
-    lines.append(f'    Aurora 7 · Hecho con ❤️ por David Antizar · {TOTAL_OBJS} objetos, 1 sistema')
+    lines.append(f'    Aurora 7 · Design System Ntizar · Categoría {num} de 12 · {TOTAL_OBJS} objetos · Hecho con ❤️ por David Antizar')
     lines.append('  </footer>')
     lines.append('  <script>')
     lines.append("    document.getElementById('btnTheme').addEventListener('click', function(){var h=document.documentElement; h.setAttribute('data-nz-theme', h.getAttribute('data-nz-theme')==='dark'?'light':'dark');});")
