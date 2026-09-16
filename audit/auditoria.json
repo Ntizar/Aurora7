@@ -20,7 +20,7 @@
  "packs": {
   "p1-layout.css": {
    "lineas": 328,
-   "bytes": 19871,
+   "bytes": 19544,
    "clases": 167,
    "familias": 67,
    "hex": 0,
@@ -30,7 +30,7 @@
   },
   "p10-commerce.css": {
    "lineas": 246,
-   "bytes": 25908,
+   "bytes": 25663,
    "clases": 152,
    "familias": 22,
    "hex": 0,
@@ -40,7 +40,7 @@
   },
   "p11-social.css": {
    "lineas": 179,
-   "bytes": 17763,
+   "bytes": 17585,
    "clases": 102,
    "familias": 15,
    "hex": 0,
@@ -50,7 +50,7 @@
   },
   "p12-system.css": {
    "lineas": 136,
-   "bytes": 13334,
+   "bytes": 13199,
    "clases": 77,
    "familias": 25,
    "hex": 0,
@@ -60,7 +60,7 @@
   },
   "p13-charts.css": {
    "lineas": 271,
-   "bytes": 21774,
+   "bytes": 21504,
    "clases": 203,
    "familias": 21,
    "hex": 0,
@@ -80,7 +80,7 @@
   },
   "p15-apps.css": {
    "lineas": 346,
-   "bytes": 40744,
+   "bytes": 40399,
    "clases": 70,
    "familias": 30,
    "hex": 0,
@@ -90,7 +90,7 @@
   },
   "p2-navigation.css": {
    "lineas": 168,
-   "bytes": 17558,
+   "bytes": 17391,
    "clases": 76,
    "familias": 10,
    "hex": 0,
@@ -100,7 +100,7 @@
   },
   "p3-typography.css": {
    "lineas": 198,
-   "bytes": 15422,
+   "bytes": 15225,
    "clases": 130,
    "familias": 41,
    "hex": 0,
@@ -110,7 +110,7 @@
   },
   "p4-actions.css": {
    "lineas": 155,
-   "bytes": 12225,
+   "bytes": 12071,
    "clases": 78,
    "familias": 7,
    "hex": 0,
@@ -140,7 +140,7 @@
   },
   "p7-overlays.css": {
    "lineas": 198,
-   "bytes": 23184,
+   "bytes": 22987,
    "clases": 117,
    "familias": 12,
    "hex": 0,
@@ -150,7 +150,7 @@
   },
   "p8-data.css": {
    "lineas": 221,
-   "bytes": 19364,
+   "bytes": 19144,
    "clases": 139,
    "familias": 16,
    "hex": 0,
@@ -160,7 +160,7 @@
   },
   "p9-media.css": {
    "lineas": 165,
-   "bytes": 13504,
+   "bytes": 13340,
    "clases": 104,
    "familias": 17,
    "hex": 0,

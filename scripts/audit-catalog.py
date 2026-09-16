@@ -49,6 +49,16 @@ def reglas_contextuales(txt, clase):
     return n
 
 
+def _txt(f):
+    """Lee un fichero y normaliza los fines de línea a LF.
+
+    El informe publica líneas y bytes de cada pack, así que la medida tiene que
+    ser idéntica en Windows (CRLF en disco) y en Linux (LF en CI): si no, la
+    comparación de «lo generado coincide con lo commiteado» falla siempre.
+    """
+    return f.read_text(encoding="utf-8", errors="replace").replace("\r\n", "\n").replace("\r", "\n")
+
+
 def main():
     tokens_def = set(VAR_DEF_RE.findall(limpio(ROOT / "tokens.css")))
     specs = bc.carga_specs()
@@ -62,8 +72,11 @@ def main():
         info_pack[pack] = {
             "clases": datos["clases"],
             "bases": datos["bases"],
-            "lineas": f.read_text(encoding="utf-8", errors="replace").count("\n") + 1,
-            "bytes": f.stat().st_size,
+            # OJO: se miden sobre el texto normalizado a LF. Si se usara el tamaño en
+            # disco, el informe saldría distinto en Windows (CRLF) que en Linux (LF) y
+            # la CI marcaría diferencias falsas en cada push.
+            "lineas": _txt(f).count("\n") + 1,
+            "bytes": len(_txt(f).encode("utf-8")),
             "hex": HEX_RE.findall(t),
             "gradientes": len(re.findall(r"\b(?:linear|radial|conic)-gradient\(", t)),
             "glass": len(re.findall(r"backdrop-filter", t)),
