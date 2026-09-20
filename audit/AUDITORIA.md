@@ -26,7 +26,7 @@ Familias sin ninguna variante (`--mod`): **137** de 349 — ahí está el margen
 
 | pack | líneas | objetos | familias | hex | grad. | glass | !imp. |
 |---|---|---|---|---|---|---|---|
-| p1-layout.css | 328 | 167 | 67 | 0 | 0 | 0 | 0 |
+| p1-layout.css | 334 | 167 | 67 | 0 | 0 | 0 | 0 |
 | p10-commerce.css | 246 | 152 | 22 | 0 | 0 | 0 | 0 |
 | p11-social.css | 179 | 102 | 15 | 0 | 0 | 0 | 0 |
 | p12-system.css | 136 | 77 | 25 | 0 | 0 | 0 | 1 |

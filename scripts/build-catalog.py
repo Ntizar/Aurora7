@@ -40,6 +40,9 @@ PACKS_COMPONENTES = [f"p{i}-{n}.css" for i, n in [
 # ------------------------------------------------------------------
 # Contar clases declaradas (objetos) leyendo el CSS de verdad
 # ------------------------------------------------------------------
+COMENTARIO_CSS = re.compile(r"/\*.*?\*/", re.S)
+
+
 def selectores(css):
     """Lista de preludios de regla del CSS, a cualquier profundidad.
 
@@ -47,7 +50,14 @@ def selectores(css):
     '}' vacía el búfer. Así se recogen tanto los selectores de primer nivel como
     los que viven dentro de @media / @supports (que es donde están una docena de
     objetos de este sistema: si se pierden, el censo miente).
+
+    Los COMENTARIOS se eliminan antes de recorrer: un comentario que mencione una
+    regla (p. ej. explicar que «.nz-x { display:flex } pisa a esta utilidad»)
+    generaba un selector fantasma y el censo/dueño de esa clase mentía. Pasó de
+    verdad el 2026-09-20: un comentario en p1-layout.css hizo que
+    .nz-navbar__links apareciera como declarada por dos packs.
     """
+    css = COMENTARIO_CSS.sub(" ", css)
     fuera = []
     buf = []
     for ch in css:

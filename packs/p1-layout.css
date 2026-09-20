@@ -262,13 +262,19 @@
 .nz-center-x { display: flex; justify-content: center; }
 .nz-center-y { display: flex; align-items: center; }
 
-/* ---- 34 Visibilidad por dispositivo ---- */
-.nz-hide-movil { display: none; }
-.nz-show-movil { display: block; }
-.nz-hide-escritorio { display: block; }
-.nz-show-escritorio { display: none; }
-@media (min-width: 640px) { .nz-hide-movil { display: block; } .nz-show-movil { display: none; } }
-@media (min-width: 960px) { .nz-hide-escritorio { display: none; } .nz-show-escritorio { display: block; } }
+/* ---- 34 Visibilidad por dispositivo ----
+   Estos cuatro helpers llevan [class] a propósito: sube la especificidad a (0,2,0)
+   para ganar a cualquier componente que fije su propio display — p. ej.
+   .nz-navbar__links { display: flex } en p2-navigation.css. Sin ese [class] la
+   utilidad perdía (misma especificidad, ganaba el pack cargado después) y el
+   menú móvil se veía roto en cualquier web que la usara. Mismo truco que
+   .nz-print-hide, sin gastar un !important. */
+.nz-hide-movil[class] { display: none; }
+.nz-show-movil[class] { display: block; }
+.nz-hide-escritorio[class] { display: block; }
+.nz-show-escritorio[class] { display: none; }
+@media (min-width: 640px) { .nz-hide-movil[class] { display: block; } .nz-show-movil[class] { display: none; } }
+@media (min-width: 960px) { .nz-hide-escritorio[class] { display: none; } .nz-show-escritorio[class] { display: block; } }
 
 /* ---- 35 Full-bleed hero ---- */
 .nz-hero-bleed { position: relative; width: 100%; padding: var(--nz-space-12) var(--nz-gutter); background: var(--nz-bg-soft); }

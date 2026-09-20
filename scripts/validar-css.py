@@ -229,6 +229,24 @@ def main():
         if huerfanas:
             fallo(f"{p.name}: usa clases cuyo pack NO carga → {', '.join(huerfanas[:6])}")
 
+    # ---------- 12. utilidades de visibilidad: con [class] o no ganan ----------
+    # Un helper de visibilidad con la especificidad pelada (0,1,0) lo anula
+    # cualquier componente que fije su propio display (0,1,0 + cargado después:
+    # gana el último fichero, no la especificidad). Caso real (2026-09-20): en
+    # MasterMindPublic, .nz-navbar__links { display: flex } (p2) anulaba a
+    # .nz-hide-movil (p1) y el menú móvil mostraba los 5 enlaces apretados junto
+    # a la hamburguesa. La defensa del sistema es el sufijo [class] (0,2,0),
+    # igual que .nz-print-hide. Esta puerta impide reintroducir el fallo.
+    OCULTACION = re.compile(r"^nz-(hide-|show-)")
+    for pack, d in packs.items():
+        for sel in bc.selectores((PACKS / pack).read_text(encoding="utf-8", errors="replace")):
+            for clase in bc.CLASE.findall(sel):
+                if not OCULTACION.match(clase):
+                    continue
+                if "[class]" not in sel:
+                    fallo(f"{pack}: .{clase} se declara sin [class] en «{sel.strip()[:70]}» — "
+                          f"un componente con display propio la anulará (usa .{clase}[class])")
+
     # ---------- resultado ----------
     total = sum(len(d["clases"]) for d in packs.values())
     # ---------- 11. valores literales que ya tienen token ----------
