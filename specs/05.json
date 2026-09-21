@@ -213,12 +213,12 @@
     {
       "titulo": "Fieldset semantico",
       "tag": ".nz-fieldset--danger",
-      "markup": "<div class=\"nz-fieldset--danger nz-fieldset\"><span class=\"nz-fieldset__leyenda\">Datos fiscales</span><input class=\"nz-input nz-input--error\" aria-invalid=\"true\" value=\"X-9321\"></div>"
+      "markup": "<div class=\"nz-fieldset--danger nz-fieldset\"><span class=\"nz-fieldset__leyenda\">Datos fiscales</span><input class=\"nz-input nz-input--error\" aria-invalid=\"true\" aria-label=\"Datos fiscales\" value=\"X-9321\"></div>"
     },
     {
       "titulo": "Contrasena · revelada",
       "tag": ".nz-password.is-revealed",
-      "markup": "<div class=\"nz-password is-revealed\"><input class=\"nz-input\" type=\"text\" value=\"Secreta-1234\"><button class=\"nz-password__toggle\" type=\"button\" aria-label=\"Ocultar\">Ocultar</button></div>"
+      "markup": "<div class=\"nz-password is-revealed\"><input class=\"nz-input\" type=\"text\" aria-label=\"Contrasena\" value=\"Secreta-1234\"><button class=\"nz-password__toggle\" type=\"button\" aria-label=\"Ocultar\">Ocultar</button></div>"
     },
     {
       "titulo": "Zona de archivos · resultado",
