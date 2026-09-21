@@ -195,3 +195,8 @@
 @media (prefers-reduced-motion: reduce) {
   .nz-modal__dialog, .nz-drawer__panel, .nz-sheet__panel, .nz-popover__body, .nz-menu-pop__list, .nz-cmd__panel, .nz-tip__body, .nz-backdrop { transition: none; transform: none; }
 }
+
+
+/* ============================================================
+   Lightbox compacto (ampliado con léxico cerrado (tanda D))   */
+.nz-lightbox--compact { width: min(100%, 28rem); aspect-ratio: 4 / 3; }

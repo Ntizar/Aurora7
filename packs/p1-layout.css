@@ -331,3 +331,20 @@
 @media (min-width: 640px) { .nz-grid-12 { grid-template-columns: repeat(8, 1fr); } }
 @media (min-width: 960px) { .nz-grid-12 { grid-template-columns: repeat(12, 1fr); } }
 @media (min-width: 1200px) { .nz-grid-12 { gap: var(--nz-space-5); } }
+
+
+/* ============================================================
+   Densidades y estados de layout (ampliado con léxico cerrado (tanda D)) */
+.nz-appshell--compact { min-height: auto; }
+.nz-appshell--spacious { gap: var(--nz-space-6); }
+.nz-bento--compact { gap: var(--nz-space-2); }
+.nz-bento--spacious { gap: var(--nz-space-6); }
+.nz-grid-12--compact { gap: var(--nz-space-2); }
+.nz-grid-12--spacious { gap: var(--nz-space-6); }
+.nz-grid-auto--compact { gap: var(--nz-space-2); }
+.nz-grid-auto--spacious { gap: var(--nz-space-6); }
+.nz-hero-bleed--compact { padding: var(--nz-space-6) var(--nz-gutter); }
+.nz-hero-bleed--spacious { padding: var(--nz-space-16) var(--nz-gutter); }
+.nz-hero-bleed--brand { background: var(--nz-brand); color: var(--nz-text-invert); }
+.nz-collapsible.is-open { border-left: var(--nz-border-w-strong) solid var(--nz-brand); }
+.nz-route.is-active { border-left: var(--nz-border-w-strong) solid var(--nz-brand); padding-left: var(--nz-space-4); }

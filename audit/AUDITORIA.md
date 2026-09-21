@@ -6,12 +6,12 @@ Generada por `scripts/audit-catalog.py` a partir de los packs CSS y de `specs/*.
 
 | Comprobación | Valor | |
 |---|---|---|
-| Objetos declarados | 1850 |  |
+| Objetos declarados | 1897 |  |
 | Familias de objeto | 349 |  |
-| Demos en vivo | 546 |  |
-| Clases usadas en demos | 1848 |  |
+| Demos en vivo | 571 |  |
+| Clases usadas en demos | 1893 |  |
 | Objetos fantasma (usados y no declarados) | 0 | 🟢 |
-| Clases declaradas sin demo | 2 | 🟡 |
+| Clases declaradas sin demo | 4 | 🟡 |
 | Familias sin demo | 0 | 🟢 |
 | Duplicados entre packs | 0 | 🟢 |
 | Tokens inexistentes en uso | 0 | 🟢 |
@@ -20,47 +20,47 @@ Generada por `scripts/audit-catalog.py` a partir de los packs CSS y de `specs/*.
 | Colores a mano fuera de tokens.css | 0 | 🟢 |
 | !important | 1 | 🟡 |
 
-Familias sin ninguna variante (`--mod`): **133** de 349 — ahí está el margen de ampliación.
+Familias sin ninguna variante (`--mod`): **117** de 349 — ahí está el margen de ampliación.
 
 ## 1. Por pack
 
 | pack | líneas | objetos | familias | hex | grad. | glass | !imp. |
 |---|---|---|---|---|---|---|---|
-| p1-layout.css | 334 | 167 | 67 | 0 | 0 | 0 | 0 |
-| p10-commerce.css | 246 | 152 | 22 | 0 | 0 | 0 | 0 |
-| p11-social.css | 179 | 102 | 15 | 0 | 0 | 0 | 0 |
-| p12-system.css | 136 | 77 | 25 | 0 | 0 | 0 | 1 |
-| p13-charts.css | 271 | 203 | 21 | 0 | 0 | 0 | 0 |
+| p1-layout.css | 351 | 178 | 67 | 0 | 0 | 0 | 0 |
+| p10-commerce.css | 258 | 156 | 22 | 0 | 0 | 0 | 0 |
+| p11-social.css | 189 | 107 | 15 | 0 | 0 | 0 | 0 |
+| p12-system.css | 143 | 80 | 25 | 0 | 0 | 0 | 1 |
+| p13-charts.css | 284 | 210 | 21 | 0 | 0 | 0 | 0 |
 | p14-ai.css | 281 | 180 | 28 | 0 | 0 | 0 | 0 |
-| p15-apps.css | 346 | 70 | 30 | 0 | 0 | 0 | 0 |
+| p15-apps.css | 364 | 74 | 30 | 0 | 0 | 0 | 0 |
 | p2-navigation.css | 168 | 76 | 10 | 0 | 0 | 0 | 0 |
 | p3-typography.css | 198 | 130 | 41 | 0 | 0 | 0 | 0 |
 | p4-actions.css | 155 | 78 | 7 | 0 | 0 | 0 | 0 |
 | p5-forms.css | 272 | 102 | 20 | 0 | 0 | 0 | 0 |
 | p6-feedback.css | 267 | 153 | 19 | 0 | 0 | 0 | 0 |
-| p7-overlays.css | 198 | 117 | 12 | 0 | 0 | 0 | 0 |
-| p8-data.css | 221 | 139 | 16 | 0 | 0 | 0 | 0 |
-| p9-media.css | 165 | 104 | 17 | 0 | 0 | 0 | 0 |
+| p7-overlays.css | 203 | 118 | 12 | 0 | 0 | 0 | 0 |
+| p8-data.css | 234 | 143 | 16 | 0 | 0 | 0 | 0 |
+| p9-media.css | 179 | 112 | 17 | 0 | 0 | 0 | 0 |
 
 ## 2. Por categoría
 
 | # | categoría | pack | objetos | familias | demos | sin demo | familias sin demo |
 |---|---|---|---|---|---|---|---|
-| 01 | Layout y estructura | p1-layout.css | 167 | 67 | 48 | 0 | 0 |
+| 01 | Layout y estructura | p1-layout.css | 178 | 67 | 51 | 0 | 0 |
 | 02 | Navegación | p2-navigation.css | 76 | 10 | 34 | 0 | 0 |
 | 03 | Tipografía | p3-typography.css | 130 | 41 | 42 | 0 | 0 |
 | 04 | Acciones y botones | p4-actions.css | 78 | 7 | 16 | 0 | 0 |
 | 05 | Formularios e inputs | p5-forms.css | 102 | 20 | 44 | 0 | 0 |
 | 06 | Feedback y estados | p6-feedback.css | 153 | 19 | 52 | 0 | 0 |
-| 07 | Overlays y diálogo | p7-overlays.css | 117 | 12 | 33 | 0 | 0 |
-| 08 | Datos, tablas y listas | p8-data.css | 139 | 16 | 36 | 0 | 0 |
-| 09 | Media e iconografía | p9-media.css | 104 | 17 | 38 | 0 | 0 |
-| 10 | Comercio y producto | p10-commerce.css | 152 | 22 | 44 | 0 | 0 |
-| 11 | Social y marketing | p11-social.css | 102 | 15 | 36 | 0 | 0 |
-| 12 | Accesibilidad y sistema | p12-system.css | 77 | 25 | 28 | 0 | 0 |
-| 13 | Gráficos y visualización | p13-charts.css | 203 | 21 | 33 | 0 | 0 |
-| 14 | IA y agentes | p14-ai.css | 180 | 28 | 31 | 2 | 0 |
-| 15 | Apps y escritorio | p15-apps.css | 70 | 30 | 31 | 0 | 0 |
+| 07 | Overlays y diálogo | p7-overlays.css | 118 | 12 | 34 | 0 | 0 |
+| 08 | Datos, tablas y listas | p8-data.css | 143 | 16 | 39 | 0 | 0 |
+| 09 | Media e iconografía | p9-media.css | 112 | 17 | 41 | 0 | 0 |
+| 10 | Comercio y producto | p10-commerce.css | 156 | 22 | 48 | 0 | 0 |
+| 11 | Social y marketing | p11-social.css | 107 | 15 | 38 | 2 | 0 |
+| 12 | Accesibilidad y sistema | p12-system.css | 80 | 25 | 29 | 0 | 0 |
+| 13 | Gráficos y visualización | p13-charts.css | 210 | 21 | 35 | 1 | 0 |
+| 14 | IA y agentes | p14-ai.css | 180 | 28 | 32 | 0 | 0 |
+| 15 | Apps y escritorio | p15-apps.css | 74 | 30 | 36 | 1 | 0 |
 
 ## 3. Objetos fantasma
 
@@ -81,8 +81,10 @@ Ninguno: cada objeto tiene un único dueño. ✅
 
 ## 6. Objetos declarados sin demo (por categoría)
 
-- **IA y agentes** (2): `nz-msg--neutral`, `nz-msg--success`
+- **Social y marketing** (2): `nz-team--lg`, `nz-team--sm`
+- **Gráficos y visualización** (1): `nz-chart-line--accent`
+- **Apps y escritorio** (1): `nz-window--lg`
 
 ## 7. Familias sin variantes (margen de ampliación)
 
-`nz--leading-normal`, `nz--leading-snug`, `nz--leading-tight`, `nz--tracking-caps`, `nz--tracking-tight`, `nz-actbar`, `nz-activity`, `nz-agenda`, `nz-align-justify`, `nz-align-left`, `nz-align-right`, `nz-appempty`, `nz-appnav`, `nz-appshell`, `nz-appstatus`, `nz-arbol`, `nz-aside`, `nz-atajo-teclado`, `nz-attach`, `nz-balance`, `nz-bento`, `nz-bgimg`, `nz-caps`, `nz-cart-item`, `nz-center`, `nz-center-x`, `nz-center-xy`, `nz-center-y`, `nz-chart-radar`, `nz-chart-range`, `nz-chart-tablebar`, `nz-chat-empty`, `nz-cite`, `nz-codepad`, `nz-col`, `nz-collapsible`, `nz-columns-2`, `nz-columns-3`, `nz-compare-bar`, `nz-dateline`, `nz-dock`, `nz-docs`, `nz-eyebrow`, `nz-figura`, `nz-filezona`, `nz-focus-accent`, `nz-focus-ring`, `nz-gift-note`, `nz-grid-12`, `nz-grid-auto`, `nz-hero-bleed`, `nz-hide-escritorio`, `nz-hide-movil`, `nz-high-contrast-note`, `nz-incident`, `nz-indent`, `nz-initial`, `nz-input-icon`, `nz-inspector`, `nz-kanban`, `nz-launcher`, `nz-logos`, `nz-maintenance-banner`, `nz-mapa-placeholder`, `nz-min-target`, `nz-month`, `nz-nav-landmark`, `nz-nota`, `nz-offline-bar`, `nz-overflow-x`, `nz-overflow-y`, `nz-password`, `nz-pathbar`, `nz-pay`, `nz-preferencias`, `nz-prefs`, `nz-pretty`, `nz-print-hide`, `nz-prompt`, `nz-propsheet`, `nz-ptemplate`, `nz-reason`, `nz-records`, `nz-reduced-motion-ok`, `nz-resmon`, `nz-ribbon`, `nz-root`, `nz-route`, `nz-rtl`, `nz-safe`, `nz-safe-x`, `nz-show-escritorio`, `nz-show-movil`, `nz-skip-links-group`, `nz-social-proof`, `nz-span-1`, `nz-span-10`, `nz-span-11`, `nz-span-12`, `nz-span-2`, `nz-span-3`, `nz-span-4`, `nz-span-5`, `nz-span-6`, `nz-span-7`, `nz-span-8`, `nz-span-9`, `nz-splitview`, `nz-spotlight`, `nz-sr-only-focusable`, `nz-stat-badge`, `nz-sticky-bottom`, `nz-sticky-top`, `nz-sysdialog`, `nz-sysinfo`, `nz-sysnotif`, `nz-tabfocus-visible`, `nz-table-wrap`, `nz-tap-44`, `nz-taskwin`, `nz-team`, `nz-term`, `nz-tokens`, `nz-tray`, `nz-tree`, `nz-userbox`, `nz-version-badge`, `nz-vh`, `nz-visually-hidden`, `nz-widget`, `nz-window`, `nz-winfoot`, `nz-wishlist`
+`nz--leading-normal`, `nz--leading-snug`, `nz--leading-tight`, `nz--tracking-caps`, `nz--tracking-tight`, `nz-actbar`, `nz-activity`, `nz-agenda`, `nz-align-justify`, `nz-align-left`, `nz-align-right`, `nz-appempty`, `nz-appnav`, `nz-appstatus`, `nz-arbol`, `nz-aside`, `nz-atajo-teclado`, `nz-attach`, `nz-balance`, `nz-caps`, `nz-center`, `nz-center-x`, `nz-center-xy`, `nz-center-y`, `nz-chart-radar`, `nz-chart-range`, `nz-chart-tablebar`, `nz-chat-empty`, `nz-cite`, `nz-codepad`, `nz-col`, `nz-collapsible`, `nz-columns-2`, `nz-columns-3`, `nz-dateline`, `nz-docs`, `nz-eyebrow`, `nz-figura`, `nz-filezona`, `nz-focus-accent`, `nz-focus-ring`, `nz-hide-escritorio`, `nz-hide-movil`, `nz-high-contrast-note`, `nz-indent`, `nz-initial`, `nz-input-icon`, `nz-inspector`, `nz-kanban`, `nz-launcher`, `nz-maintenance-banner`, `nz-min-target`, `nz-month`, `nz-nav-landmark`, `nz-nota`, `nz-offline-bar`, `nz-overflow-x`, `nz-overflow-y`, `nz-password`, `nz-pathbar`, `nz-pay`, `nz-preferencias`, `nz-prefs`, `nz-pretty`, `nz-print-hide`, `nz-prompt`, `nz-propsheet`, `nz-ptemplate`, `nz-reason`, `nz-reduced-motion-ok`, `nz-resmon`, `nz-ribbon`, `nz-root`, `nz-route`, `nz-rtl`, `nz-safe`, `nz-safe-x`, `nz-show-escritorio`, `nz-show-movil`, `nz-skip-links-group`, `nz-social-proof`, `nz-span-1`, `nz-span-10`, `nz-span-11`, `nz-span-12`, `nz-span-2`, `nz-span-3`, `nz-span-4`, `nz-span-5`, `nz-span-6`, `nz-span-7`, `nz-span-8`, `nz-span-9`, `nz-splitview`, `nz-spotlight`, `nz-sr-only-focusable`, `nz-stat-badge`, `nz-sticky-bottom`, `nz-sticky-top`, `nz-sysdialog`, `nz-sysinfo`, `nz-sysnotif`, `nz-tabfocus-visible`, `nz-table-wrap`, `nz-tap-44`, `nz-taskwin`, `nz-term`, `nz-tokens`, `nz-tray`, `nz-tree`, `nz-userbox`, `nz-version-badge`, `nz-vh`, `nz-visually-hidden`, `nz-widget`, `nz-winfoot`, `nz-wishlist`

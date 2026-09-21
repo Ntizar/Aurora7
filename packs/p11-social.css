@@ -176,3 +176,13 @@
 .nz-notif__desc { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
 .nz-notif__actions { display: inline-flex; gap: var(--nz-space-1); }
 .nz-notif--brand .nz-notif__icon { background: var(--nz-brand-soft); color: var(--nz-brand); }
+
+
+/* ============================================================
+   Destacados y tono de notificaciones (lexico cerrado)         */
+.nz-activity__item.is-highlight { background: var(--nz-brand-soft); border-radius: var(--nz-radius-md); padding-inline: var(--nz-space-3); }
+.nz-notif--success { box-shadow: inset 3px 0 0 var(--nz-success), var(--nz-shadow-md); }
+.nz-notif--danger { box-shadow: inset 3px 0 0 var(--nz-danger), var(--nz-shadow-md); }
+.nz-notif--warning { box-shadow: inset 3px 0 0 var(--nz-warning), var(--nz-shadow-md); }
+.nz-team--sm .nz-team__avatar { width: 48px; height: 48px; }
+.nz-team--lg .nz-team__avatar { width: 112px; height: 112px; }

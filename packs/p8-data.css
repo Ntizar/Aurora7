@@ -218,3 +218,16 @@
 .nz-compare__check { color: var(--nz-success); font-weight: 800; }
 .nz-compare__no { color: var(--nz-text-faint); }
 .nz-compare__foot { font-size: var(--nz-text-xs); color: var(--nz-text-mute); padding: var(--nz-space-3) var(--nz-space-4); }
+
+
+/* ============================================================
+   Estados de arbol, densidad y tono de registros (lexico)      */
+.nz-arbol__node.is-selected > .nz-arbol__toggle,
+.nz-arbol__leaf.is-selected { background: var(--nz-brand-soft); color: var(--nz-brand); }
+.nz-arbol__leaf.is-error { color: var(--nz-danger); }
+.nz-arbol__leaf.is-done { color: var(--nz-success); }
+.nz-records--dense { gap: var(--nz-space-1); }
+.nz-records--spacious { gap: var(--nz-space-4); }
+.nz-record--success { box-shadow: inset 3px 0 0 var(--nz-success), var(--nz-shadow-sm); }
+.nz-record--warning { box-shadow: inset 3px 0 0 var(--nz-warning), var(--nz-shadow-sm); }
+.nz-record.is-selected { box-shadow: 0 0 0 2px var(--nz-brand), var(--nz-shadow-sm); }

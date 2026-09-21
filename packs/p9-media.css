@@ -162,3 +162,17 @@
 .nz-bgimg { background-size: cover; background-position: center; position: relative; }
 .nz-bgimg::before { content: ""; position: absolute; inset: 0; background: var(--nz-overlay); }
 .nz-bgimg > * { position: relative; z-index: 1; }
+
+
+/* ============================================================
+   Tonos de fondo, densidad de logos y mapa (ampliado con léxico cerrado (tanda D)) */
+.nz-bgimg--brand::before { background: var(--nz-brand); }
+.nz-bgimg--accent::before { background: var(--nz-accent); }
+.nz-bgimg--brand, .nz-bgimg--accent { color: var(--nz-text-invert); }
+.nz-logos--compact { gap: var(--nz-space-3); }
+.nz-logos--spacious { gap: var(--nz-space-8); }
+.nz-logo-nube--sm .nz-logo-nube__item { min-height: 44px; font-size: var(--nz-text-sm); }
+.nz-logo-nube--lg .nz-logo-nube__item { min-height: 72px; padding: var(--nz-space-4); font-size: var(--nz-text-lg); }
+.nz-mapa-placeholder--brand { background: var(--nz-brand-soft); }
+.nz-mapa-placeholder--brand .nz-mapa-placeholder__pin { background: var(--nz-brand); }
+.nz-mapa-placeholder--neutral { background: var(--nz-surface-2); }

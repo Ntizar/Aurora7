@@ -1,229 +1,249 @@
 {
- "cat": 10,
- "nombre": "Comercio y producto",
- "desc": "Precio, estrellas, stock, tarjeta de producto, planes y comparativa, carrito, pasos de compra, cupón, pago, pedido y envío.",
- "pack": "p10-commerce.css",
- "fichero": "10-commerce.html",
- "demos": [
-  {
-   "titulo": "Precio con ahorro",
-   "tag": ".nz-price",
-   "markup": "<p class=\"nz-price\"><span class=\"nz-price__currency\">€</span><span class=\"nz-price__amount\">34</span><span class=\"nz-price__decimal\">,90</span><span class=\"nz-price__period\">/ud.</span><span class=\"nz-price__old\">49 €</span><span class=\"nz-price__save\">Ahorras 14 €</span></p>"
-  },
-  {
-   "titulo": "Tamaños y tonos de precio",
-   "tag": ".nz-price--xl · --muted · --strike",
-   "markup": "<div class=\"nz-cluster\"><p class=\"nz-price nz-price--xl\"><span class=\"nz-price__amount\">1.240</span> €</p><p class=\"nz-price nz-price--brand\"><span class=\"nz-price__amount\">24</span> €<span class=\"nz-price__period\">/mes</span></p><p class=\"nz-price nz-price--accent nz-price--sm\"><span class=\"nz-price__amount\">9</span> €</p><p class=\"nz-price nz-price--muted\"><span class=\"nz-price__amount\">19</span> €</p><p class=\"nz-price nz-price--strike\"><span class=\"nz-price__amount\">49</span> €</p></div>"
-  },
-  {
-   "titulo": "Calificación",
-   "tag": ".nz-stars",
-   "markup": "<div class=\"nz-stars\"><span class=\"nz-stars__row\"><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star\">★</span></span><span class=\"nz-stars__count\">· 4,9 de 128 valoraciones</span></div>"
-  },
-  {
-   "titulo": "Estrellas grandes, de marca y pequeñas",
-   "tag": ".nz-stars--lg · --brand · --sm",
-   "markup": "<div class=\"nz-stack nz-stack--xs\"><div class=\"nz-stars nz-stars--lg\"><span class=\"nz-stars__row\"><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span></span><span class=\"nz-stars__count\">Excelente</span></div><div class=\"nz-stars nz-stars--brand\"><span class=\"nz-stars__row\"><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star\">★</span></span><span class=\"nz-stars__count\">En azul de marca</span></div><div class=\"nz-stars nz-stars--sm\"><span class=\"nz-stars__row\"><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star\">★</span><span class=\"nz-stars__star\">★</span></span><span class=\"nz-stars__count\">Pequeñas</span></div></div>"
-  },
-  {
-   "titulo": "Reparto de valoraciones",
-   "tag": ".nz-stars__bar",
-   "markup": "<div class=\"nz-hstack\"><span class=\"nz-text--muted\">5★</span><span class=\"nz-stars__bar\"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class=\"nz-stars__count\">78 % de las opiniones</span></div>"
-  },
-  {
-   "titulo": "Stock",
-   "tag": ".nz-stock",
-   "markup": "<div class=\"nz-cluster\"><span class=\"nz-stock nz-stock--in\"><i></i>En stock</span><span class=\"nz-stock nz-stock--low\"><span class=\"nz-stock__dot\"></span>Solo 2 unidades</span><span class=\"nz-stock nz-stock--out\"><i></i>Agotado</span></div>"
-  },
-  {
-   "titulo": "Stock como etiqueta",
-   "tag": ".nz-stock--badge",
-   "markup": "<div class=\"nz-cluster\"><span class=\"nz-stock nz-stock--in nz-stock--badge\"><i></i>Disponible hoy</span><span class=\"nz-stock nz-stock--low nz-stock--badge\"><i></i>Últimas unidades</span><span class=\"nz-stock nz-stock--out nz-stock--badge\"><i></i>Sin stock</span></div>"
-  },
-  {
-   "titulo": "Tarjeta de producto",
-   "tag": ".nz-product",
-   "markup": "<article class=\"nz-product\"><div class=\"nz-product__media\"><span class=\"nz-badge nz-badge--danger nz-product__badge\">-20%</span><span class=\"nz-product__ribbon\">Nuevo</span><button class=\"nz-product__quick\">Vista rápida</button></div><div class=\"nz-product__body\"><span class=\"nz-product__cat\">Equipamiento</span><h3 class=\"nz-product__name\">Manta térmica de montaña</h3><div class=\"nz-product__rate\"><span class=\"nz-stars nz-stars--sm\"><span class=\"nz-stars__row\"><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star\">★</span></span><span class=\"nz-stars__count\">4,8 (128)</span></span></div><div class=\"nz-product__variant\"><span class=\"is-selected\">M</span><span>L</span><span>XL</span></div></div><div class=\"nz-product__price\"><span class=\"nz-price nz-price--sm\"><span class=\"nz-price__amount\">24</span> €</span><span class=\"nz-stock nz-stock--low\"><i></i>Solo 2</span></div><div class=\"nz-product__cta\"><button class=\"nz-btn nz-btn--primary\">Añadir al carrito</button></div></article>"
-  },
-  {
-   "titulo": "Producto horizontal",
-   "tag": ".nz-product--horizontal",
-   "markup": "<article class=\"nz-product nz-product--horizontal\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><span class=\"nz-product__cat\">Hogar</span><h3 class=\"nz-product__name\">Lámpara de escritorio</h3><div class=\"nz-product__price\"><span class=\"nz-price nz-price--sm\"><span class=\"nz-price__amount\">39</span> €</span><span class=\"nz-stock nz-stock--in\"><i></i>En stock</span></div><div class=\"nz-product__cta\"><button class=\"nz-btn nz-btn--soft\">Añadir</button></div></div></article>"
-  },
-  {
-   "titulo": "Producto compacto con borde",
-   "tag": ".nz-product--compact · --bordered",
-   "markup": "<div class=\"nz-products nz-products--2\"><article class=\"nz-product nz-product--compact nz-product--bordered\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Taza térmica</h3><span class=\"nz-price nz-price--sm\"><span class=\"nz-price__amount\">12</span> €</span></div></article><article class=\"nz-product nz-product--compact nz-product--bordered\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Botella 750 ml</h3><span class=\"nz-price nz-price--sm\"><span class=\"nz-price__amount\">18</span> €</span></div></article></div>"
-  },
-  {
-   "titulo": "Producto agotado",
-   "tag": ".nz-product--sold-out",
-   "markup": "<article class=\"nz-product nz-product--sold-out\"><div class=\"nz-product__media\"><span class=\"nz-badge nz-badge--neutral nz-product__badge\">Agotado</span></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Saco de dormir -5 ºC</h3><span class=\"nz-stock nz-stock--out\"><i></i>Sin stock</span></div><div class=\"nz-product__cta\"><button class=\"nz-btn nz-btn--ghost\" disabled>Avisadme</button></div></article>"
-  },
-  {
-   "titulo": "Rejilla de productos",
-   "tag": ".nz-products",
-   "markup": "<div class=\"nz-products nz-products--2\"><article class=\"nz-product nz-product--compact\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Artículo uno</h3></div></article><article class=\"nz-product nz-product--compact\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Artículo dos</h3></div></article><article class=\"nz-product nz-product--compact\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Artículo tres</h3></div></article><article class=\"nz-product nz-product--compact\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Artículo cuatro</h3></div></article></div>"
-  },
-  {
-   "titulo": "Plan destacado",
-   "tag": ".nz-plan--featured",
-   "markup": "<div class=\"nz-plan nz-plan--featured\"><span class=\"nz-badge nz-badge--brand nz-plan__flag\">Más elegido</span><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__desc\">Para equipos que publican a diario.</span><span class=\"nz-plan__price\">24 € <small>/mes</small></span><div class=\"nz-plan__features\"><span class=\"nz-plan__feature\"><i></i>Proyectos ilimitados</span><span class=\"nz-plan__feature\"><i></i>Soporte en 4 h</span><span class=\"nz-plan__feature nz-plan__feature--off\"><i></i>Dominio propio (antes)</span><span class=\"nz-plan__feature nz-plan__feature--no\"><i></i>SSO de empresa</span></div><button class=\"nz-btn nz-btn--primary nz-plan__cta\">Elegir Pro</button></div>"
-  },
-  {
-   "titulo": "Plan de marca",
-   "tag": ".nz-plan--brand",
-   "markup": "<div class=\"nz-plan nz-plan--brand\"><span class=\"nz-plan__badge\">Recomendado</span><span class=\"nz-plan__name\">Team</span><span class=\"nz-plan__desc\">Todo el sistema, sin límites.</span><span class=\"nz-plan__price\">49 € <small>/mes</small></span><div class=\"nz-plan__features\"><span class=\"nz-plan__feature\"><i></i>Usuarios ilimitados</span><span class=\"nz-plan__feature\"><i></i>Auditoría de accesibilidad</span></div><button class=\"nz-btn nz-plan__cta\">Empezar</button></div>"
-  },
-  {
-   "titulo": "Plan atenuado",
-   "tag": ".nz-plan--muted",
-   "markup": "<div class=\"nz-plan nz-plan--muted\"><span class=\"nz-plan__name\">Gratis</span><span class=\"nz-plan__desc\">Para probar el sistema.</span><span class=\"nz-plan__price\">0 € <small>/mes</small></span><div class=\"nz-plan__features\"><span class=\"nz-plan__feature\"><i></i>1 proyecto</span><span class=\"nz-plan__feature nz-plan__feature--no\"><i></i>Sin soporte prioritario</span></div><button class=\"nz-btn nz-btn--soft nz-plan__cta\">Crear cuenta</button></div>"
-  },
-  {
-   "titulo": "Planes en 2 columnas",
-   "tag": ".nz-plans--2",
-   "markup": "<div class=\"nz-plans nz-plans--2\"><div class=\"nz-plan\"><span class=\"nz-plan__name\">Gratis</span><span class=\"nz-plan__price\">0 €</span></div><div class=\"nz-plan nz-plan--featured\"><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__price\">24 €</span></div></div>"
-  },
-  {
-   "titulo": "Planes en 3 columnas",
-   "tag": ".nz-plans--3",
-   "markup": "<div class=\"nz-plans nz-plans--3\"><div class=\"nz-plan\"><span class=\"nz-plan__name\">Gratis</span><span class=\"nz-plan__price\">0 €</span></div><div class=\"nz-plan nz-plan--featured\"><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__price\">24 €</span></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Team</span><span class=\"nz-plan__price\">49 €</span></div></div>"
-  },
-  {
-   "titulo": "Planes en 4 columnas",
-   "tag": ".nz-plans--4",
-   "markup": "<div class=\"nz-plans nz-plans--4\"><div class=\"nz-plan\"><span class=\"nz-plan__name\">Free</span><span class=\"nz-plan__price\">0 €</span></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__price\">24 €</span></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Team</span><span class=\"nz-plan__price\">49 €</span></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Enterprise</span><span class=\"nz-plan__price\">99 €</span></div></div>"
-  },
-  {
-   "titulo": "Planes compactos",
-   "tag": ".nz-plans--compact",
-   "markup": "<div class=\"nz-plans nz-plans--compact\"><div class=\"nz-plan\"><span class=\"nz-plan__name\">Free</span><span class=\"nz-plan__price\">0 €</span></div><div class=\"nz-plan nz-plan--muted\"><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__price\">24 €</span></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Team</span><span class=\"nz-plan__price\">49 €</span></div></div>"
-  },
-  {
-   "titulo": "Planes como tabla",
-   "tag": ".nz-plans--table",
-   "markup": "<div class=\"nz-plans nz-plans--table\"><div class=\"nz-plan\"><span class=\"nz-plan__name\">Gratis</span><span class=\"nz-plan__price\">0 € <small>/mes</small></span><button class=\"nz-btn nz-btn--soft nz-btn--sm nz-plan__cta\">Elegir</button></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__price\">24 € <small>/mes</small></span><button class=\"nz-btn nz-btn--primary nz-btn--sm nz-plan__cta\">Elegir</button></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Team</span><span class=\"nz-plan__price\">49 € <small>/mes</small></span><button class=\"nz-btn nz-btn--soft nz-btn--sm nz-plan__cta\">Elegir</button></div></div>"
-  },
-  {
-   "titulo": "Tabla de precios",
-   "tag": ".nz-pricetable",
-   "markup": "<table class=\"nz-pricetable\"><tr><th></th><th>Gratis</th><th class=\"is-selected\">Pro</th></tr><tr><td class=\"nz-pricetable__rowhead\">Almacenamiento</td><td>5 GB</td><td class=\"is-selected\">50 GB</td></tr><tr><td class=\"nz-pricetable__rowhead\">Usuarios</td><td>1</td><td class=\"is-selected\">10</td></tr></table>"
-  },
-  {
-   "titulo": "Tabla de precios compacta",
-   "tag": ".nz-pricetable--compact · __col",
-   "markup": "<table class=\"nz-pricetable nz-pricetable--compact\"><tr><th>Plan</th><th class=\"nz-pricetable__col\">Precio</th><th class=\"nz-pricetable__col\">Soporte</th></tr><tr><td class=\"nz-pricetable__rowhead\">Pro</td><td>24 €</td><td>4 h</td></tr><tr><td class=\"nz-pricetable__rowhead\">Team</td><td>49 €</td><td>1 h</td></tr></table>"
-  },
-  {
-   "titulo": "Fila de carrito",
-   "tag": ".nz-cart-item",
-   "markup": "<div class=\"nz-cart-item\"><span class=\"nz-cart-item__thumb\"></span><div class=\"nz-cart-item__body\"><span class=\"nz-cart-item__name\">Manta térmica</span><span class=\"nz-cart-item__meta\">× 2 · envío en 24 h</span><span class=\"nz-cart-item__variant\">Talla M · azul</span></div><div class=\"nz-cart-item__right\"><span class=\"nz-cart-item__price\">48 €</span><button class=\"nz-cart-item__remove\">Quitar</button></div></div>"
-  },
-  {
-   "titulo": "Carrito",
-   "tag": ".nz-cart",
-   "markup": "<div class=\"nz-cart\"><div class=\"nz-cart__head\"><span class=\"nz-cart__total\">Tu carrito</span><span class=\"nz-cart__count\">3</span></div><div class=\"nz-cart__items\"><div class=\"nz-cart__line\"><span>Manta térmica</span><b>24 €</b></div><div class=\"nz-cart__line\"><span>Linterna frontal</span><b>18 €</b></div></div><div class=\"nz-cart__qty\"><button aria-label=\"Quitar una unidad\">−</button><span>2</span><button aria-label=\"Añadir una unidad\">+</button></div><div class=\"nz-cart__foot\"><span>Total</span><span class=\"nz-cart__total\">42 €</span></div><button class=\"nz-btn nz-btn--primary nz-btn--block\">Tramitar pedido</button></div>"
-  },
-  {
-   "titulo": "Carrito mini",
-   "tag": ".nz-cart--mini",
-   "markup": "<div class=\"nz-cart nz-cart--mini\"><div class=\"nz-cart__head\"><span class=\"nz-cart__count\">2</span><span>2 artículos</span></div><div class=\"nz-cart__items\"><div class=\"nz-cart__line\"><span>Manta térmica</span><b>24 €</b></div></div><div class=\"nz-cart__foot\"><span class=\"nz-cart__total\">24 €</span><button class=\"nz-btn nz-btn--soft nz-btn--sm\">Ver carrito</button></div></div>"
-  },
-  {
-   "titulo": "Carrito lateral",
-   "tag": ".nz-cart--drawer",
-   "markup": "<div class=\"nz-cart nz-cart--drawer\"><div class=\"nz-cart__head\"><span class=\"nz-cart__total\">Carrito</span><span class=\"nz-cart__count\">1</span></div><div class=\"nz-cart__items\"><div class=\"nz-cart__line\"><span>Saco de dormir</span><b>129 €</b></div></div><div class=\"nz-cart__foot\"><span class=\"nz-cart__total\">129 €</span><button class=\"nz-btn nz-btn--primary nz-btn--sm\">Pagar</button></div></div>"
-  },
-  {
-   "titulo": "Carrito vacío",
-   "tag": ".nz-cart__empty",
-   "markup": "<div class=\"nz-cart nz-cart--mini\"><div class=\"nz-cart__empty\"><span aria-hidden=\"true\">🛒</span><b>Tu carrito está vacío</b><span>Añade algo y vuelve por aquí.</span><button class=\"nz-btn nz-btn--soft nz-btn--sm\">Ver productos</button></div></div>"
-  },
-  {
-   "titulo": "Pasos de compra",
-   "tag": ".nz-checkout-steps",
-   "markup": "<ol class=\"nz-checkout-steps\"><li class=\"nz-checkout-steps__step nz-checkout-steps__step--done\"><span class=\"nz-checkout-steps__num\">✓</span><span class=\"nz-checkout-steps__label\">Carrito</span></li><li class=\"nz-checkout-steps__step nz-checkout-steps__step--done\"><span class=\"nz-checkout-steps__num\">✓</span><span class=\"nz-checkout-steps__label\">Envío</span></li><li class=\"nz-checkout-steps__step\" aria-current=\"step\"><span class=\"nz-checkout-steps__num\">3</span><span class=\"nz-checkout-steps__label\">Pago</span></li><li class=\"nz-checkout-steps__step\"><span class=\"nz-checkout-steps__num\">4</span><span class=\"nz-checkout-steps__label\">Confirmar</span></li></ol>"
-  },
-  {
-   "titulo": "Pasos de compra en vertical",
-   "tag": ".nz-checkout-steps--vertical",
-   "markup": "<ol class=\"nz-checkout-steps nz-checkout-steps--vertical\"><li class=\"nz-checkout-steps__step nz-checkout-steps__step--done\"><span class=\"nz-checkout-steps__num\">✓</span><span class=\"nz-checkout-steps__label\">Carrito revisado</span></li><li class=\"nz-checkout-steps__step\"><span class=\"nz-checkout-steps__num\">2</span><span class=\"nz-checkout-steps__label\">Elige el envío</span></li></ol>"
-  },
-  {
-   "titulo": "Resumen de compra",
-   "tag": ".nz-summary",
-   "markup": "<div class=\"nz-summary\"><div class=\"nz-summary__row\"><span>Subtotal</span><span>120 €</span></div><div class=\"nz-summary__row\"><span>Envío</span><span>4 €</span></div><hr class=\"nz-summary__divider\"><div class=\"nz-summary__row nz-summary__row--total\"><span>Total</span><span>124 €</span></div><span class=\"nz-summary__note\">IVA incluido · pago seguro</span><div class=\"nz-summary__cta\"><button class=\"nz-btn nz-btn--primary\">Pagar 124 €</button></div></div>"
-  },
-  {
-   "titulo": "Resumen destacado en marca",
-   "tag": ".nz-summary--brand",
-   "markup": "<div class=\"nz-summary nz-summary--brand\"><div class=\"nz-summary__row\"><span>Plan Pro · 12 meses</span><span>288 €</span></div><div class=\"nz-summary__row nz-summary__row--total\"><span>A pagar hoy</span><span>288 €</span></div><span class=\"nz-summary__note\">Ahorras 2 meses con el pago anual.</span><div class=\"nz-summary__cta\"><button class=\"nz-btn nz-btn--primary\">Contratar</button></div></div>"
-  },
-  {
-   "titulo": "Cupón de descuento",
-   "tag": ".nz-coupon",
-   "markup": "<form class=\"nz-coupon\"><label class=\"nz-text--muted\" for=\"cupon10\">Código de descuento</label><input class=\"nz-coupon__input\" id=\"cupon10\" placeholder=\"VERANO25\"><span class=\"nz-coupon__hint\">Se aplica sobre el subtotal, antes de envío.</span><span class=\"nz-coupon__msg\">Introduce el código de tu campaña.</span><button class=\"nz-btn nz-btn--soft nz-coupon__btn\" type=\"button\">Aplicar</button></form>"
-  },
-  {
-   "titulo": "Cupón aplicado",
-   "tag": ".nz-coupon--inline · .is-done",
-   "markup": "<form class=\"nz-coupon nz-coupon--inline is-done\"><label class=\"nz-text--muted\" for=\"cupon11\">Código</label><input class=\"nz-coupon__input\" id=\"cupon11\" value=\"VERANO25\"><span class=\"nz-coupon__msg\">Cupón aplicado: −15 % en el subtotal.</span><button class=\"nz-btn nz-btn--soft nz-coupon__btn\" type=\"button\">Quitar</button></form>"
-  },
-  {
-   "titulo": "Cupón no válido",
-   "tag": ".nz-coupon.is-error",
-   "markup": "<form class=\"nz-coupon is-error\"><label class=\"nz-text--muted\" for=\"cupon12\">Código</label><input class=\"nz-coupon__input\" id=\"cupon12\" value=\"CADUCADO\"><span class=\"nz-coupon__msg\">Este cupón ha caducado.</span><button class=\"nz-btn nz-btn--soft nz-coupon__btn\" type=\"button\">Probar otro</button></form>"
-  },
-  {
-   "titulo": "Métodos de pago",
-   "tag": ".nz-payment",
-   "markup": "<div class=\"nz-payment\"><div class=\"nz-payment__method nz-payment__method--selected\"><span class=\"nz-payment__icon\">VISA</span><span class=\"nz-payment__label\">Visa •••• 4242</span><span class=\"nz-payment__note\">Caduca 04/28</span></div><div class=\"nz-payment__method\"><span class=\"nz-payment__icon\">Bizum</span><span class=\"nz-payment__label\">Bizum</span><span class=\"nz-payment__note\">Al móvil</span></div></div>"
-  },
-  {
-   "titulo": "Pago en rejilla",
-   "tag": ".nz-payment--grid",
-   "markup": "<div class=\"nz-payment nz-payment--grid\"><div class=\"nz-payment__method\"><span class=\"nz-payment__icon\">MC</span><span class=\"nz-payment__label\">Mastercard</span></div><div class=\"nz-payment__method nz-payment__method--selected\"><span class=\"nz-payment__icon\">Pay</span><span class=\"nz-payment__label\">Cartera digital</span></div><div class=\"nz-payment__method\"><span class=\"nz-payment__icon\">Tran</span><span class=\"nz-payment__label\">Transferencia</span></div><div class=\"nz-payment__method\"><span class=\"nz-payment__icon\">Con</span><span class=\"nz-payment__label\">Contra reembolso</span></div></div>"
-  },
-  {
-   "titulo": "Forma de pago simple",
-   "tag": ".nz-pay",
-   "markup": "<div class=\"nz-pay\"><span class=\"nz-pay__icon\">VISA</span><div class=\"nz-pay__body\"><span class=\"nz-pay__name\">Visa •••• 4242</span><span class=\"nz-pay__meta\">Caduca 04/28</span></div><button class=\"nz-btn nz-btn--text nz-btn--sm\">Cambiar</button></div>"
-  },
-  {
-   "titulo": "Pedido",
-   "tag": ".nz-order",
-   "markup": "<article class=\"nz-order\"><div class=\"nz-order__head\"><span class=\"nz-order__id\">#A7-10428</span><span class=\"nz-order__date\">12 may 2026</span><span class=\"nz-order__status\">Entregado</span></div><ul class=\"nz-order__items\"><li>Manta térmica × 1</li><li>Linterna frontal × 2</li></ul><div class=\"nz-order__foot\"><span>Total</span><span class=\"nz-order__total\">60 €</span></div></article>"
-  },
-  {
-   "titulo": "Estados de pedido",
-   "tag": ".nz-order__status--pending · --canceled",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><article class=\"nz-order\"><div class=\"nz-order__head\"><span class=\"nz-order__id\">#A7-10429</span><span class=\"nz-order__status nz-order__status--pending\">Pendiente de pago</span></div><div class=\"nz-order__foot\"><span class=\"nz-order__total\">24 €</span></div></article><article class=\"nz-order\"><div class=\"nz-order__head\"><span class=\"nz-order__id\">#A7-10430</span><span class=\"nz-order__status nz-order__status--canceled\">Cancelado</span></div><div class=\"nz-order__foot\"><span class=\"nz-order__total\">18 €</span></div></article></div>"
-  },
-  {
-   "titulo": "Opciones de envío",
-   "tag": ".nz-shipping-option",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-shipping-option nz-shipping-option--selected\"><span class=\"nz-shipping-option__label\">Estándar</span><span class=\"nz-shipping-option__eta\">3-5 días</span><span class=\"nz-shipping-option__price\">Gratis</span></div><div class=\"nz-shipping-option\"><span class=\"nz-shipping-option__label\">Express</span><span class=\"nz-shipping-option__eta\">24 h</span><span class=\"nz-shipping-option__price\">4,95 €</span></div><div class=\"nz-shipping-option nz-shipping-option--disabled\"><span class=\"nz-shipping-option__label\">Recogida en tienda</span><span class=\"nz-shipping-option__eta\">No disponible en tu zona</span><span class=\"nz-shipping-option__price\">—</span></div></div>"
-  },
-  {
-   "titulo": "Lista de deseos",
-   "tag": ".nz-wishlist",
-   "markup": "<div class=\"nz-cluster\"><span class=\"nz-wishlist\"><button class=\"nz-wishlist__btn\" aria-label=\"Añadir a la lista de deseos\">♡</button><span class=\"nz-wishlist__count\">12</span></span><span class=\"nz-wishlist is-active\"><button class=\"nz-wishlist__btn\" aria-label=\"Ya está en tu lista\">♥</button><span class=\"nz-wishlist__count\">13</span></span></div>"
-  },
-  {
-   "titulo": "Barra de comparación",
-   "tag": ".nz-compare-bar",
-   "markup": "<div class=\"nz-compare-bar\"><span class=\"nz-compare-bar__count\">2 productos en el comparador</span><span class=\"nz-compare-bar__actions\"><button class=\"nz-btn nz-btn--primary nz-btn--sm\">Comparar</button><button class=\"nz-compare-bar__clear\">Vaciar</button></span></div>"
-  },
-  {
-   "titulo": "Etiquetas de descuento",
-   "tag": ".nz-off · .nz-discount-badge",
-   "markup": "<div class=\"nz-cluster\"><span class=\"nz-off\">-20 %</span><span class=\"nz-off nz-off--green\">Recomendado</span><span class=\"nz-discount-badge\">-25 % <span class=\"nz-discount-badge__was\">49 €</span></span><span class=\"nz-discount-badge nz-discount-badge--lg\">-40 % <span class=\"nz-discount-badge__was\">99 €</span></span></div>"
-  },
-  {
-   "titulo": "Nota de regalo",
-   "tag": ".nz-gift-note",
-   "markup": "<div class=\"nz-gift-note\"><span class=\"nz-gift-note__label\">Es un regalo</span><span class=\"nz-gift-note__body\">«Felicidades, pensé que te vendría bien para la montaña.» Sin factura en la caja.</span></div>"
-  }
- ]
+  "cat": 10,
+  "nombre": "Comercio y producto",
+  "desc": "Precio, estrellas, stock, tarjeta de producto, planes y comparativa, carrito, pasos de compra, cupón, pago, pedido y envío.",
+  "pack": "p10-commerce.css",
+  "fichero": "10-commerce.html",
+  "demos": [
+    {
+      "titulo": "Precio con ahorro",
+      "tag": ".nz-price",
+      "markup": "<p class=\"nz-price\"><span class=\"nz-price__currency\">€</span><span class=\"nz-price__amount\">34</span><span class=\"nz-price__decimal\">,90</span><span class=\"nz-price__period\">/ud.</span><span class=\"nz-price__old\">49 €</span><span class=\"nz-price__save\">Ahorras 14 €</span></p>"
+    },
+    {
+      "titulo": "Tamaños y tonos de precio",
+      "tag": ".nz-price--xl · --muted · --strike",
+      "markup": "<div class=\"nz-cluster\"><p class=\"nz-price nz-price--xl\"><span class=\"nz-price__amount\">1.240</span> €</p><p class=\"nz-price nz-price--brand\"><span class=\"nz-price__amount\">24</span> €<span class=\"nz-price__period\">/mes</span></p><p class=\"nz-price nz-price--accent nz-price--sm\"><span class=\"nz-price__amount\">9</span> €</p><p class=\"nz-price nz-price--muted\"><span class=\"nz-price__amount\">19</span> €</p><p class=\"nz-price nz-price--strike\"><span class=\"nz-price__amount\">49</span> €</p></div>"
+    },
+    {
+      "titulo": "Calificación",
+      "tag": ".nz-stars",
+      "markup": "<div class=\"nz-stars\"><span class=\"nz-stars__row\"><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star\">★</span></span><span class=\"nz-stars__count\">· 4,9 de 128 valoraciones</span></div>"
+    },
+    {
+      "titulo": "Estrellas grandes, de marca y pequeñas",
+      "tag": ".nz-stars--lg · --brand · --sm",
+      "markup": "<div class=\"nz-stack nz-stack--xs\"><div class=\"nz-stars nz-stars--lg\"><span class=\"nz-stars__row\"><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span></span><span class=\"nz-stars__count\">Excelente</span></div><div class=\"nz-stars nz-stars--brand\"><span class=\"nz-stars__row\"><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star\">★</span></span><span class=\"nz-stars__count\">En azul de marca</span></div><div class=\"nz-stars nz-stars--sm\"><span class=\"nz-stars__row\"><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star\">★</span><span class=\"nz-stars__star\">★</span></span><span class=\"nz-stars__count\">Pequeñas</span></div></div>"
+    },
+    {
+      "titulo": "Reparto de valoraciones",
+      "tag": ".nz-stars__bar",
+      "markup": "<div class=\"nz-hstack\"><span class=\"nz-text--muted\">5★</span><span class=\"nz-stars__bar\"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class=\"nz-stars__count\">78 % de las opiniones</span></div>"
+    },
+    {
+      "titulo": "Stock",
+      "tag": ".nz-stock",
+      "markup": "<div class=\"nz-cluster\"><span class=\"nz-stock nz-stock--in\"><i></i>En stock</span><span class=\"nz-stock nz-stock--low\"><span class=\"nz-stock__dot\"></span>Solo 2 unidades</span><span class=\"nz-stock nz-stock--out\"><i></i>Agotado</span></div>"
+    },
+    {
+      "titulo": "Stock como etiqueta",
+      "tag": ".nz-stock--badge",
+      "markup": "<div class=\"nz-cluster\"><span class=\"nz-stock nz-stock--in nz-stock--badge\"><i></i>Disponible hoy</span><span class=\"nz-stock nz-stock--low nz-stock--badge\"><i></i>Últimas unidades</span><span class=\"nz-stock nz-stock--out nz-stock--badge\"><i></i>Sin stock</span></div>"
+    },
+    {
+      "titulo": "Tarjeta de producto",
+      "tag": ".nz-product",
+      "markup": "<article class=\"nz-product\"><div class=\"nz-product__media\"><span class=\"nz-badge nz-badge--danger nz-product__badge\">-20%</span><span class=\"nz-product__ribbon\">Nuevo</span><button class=\"nz-product__quick\">Vista rápida</button></div><div class=\"nz-product__body\"><span class=\"nz-product__cat\">Equipamiento</span><h3 class=\"nz-product__name\">Manta térmica de montaña</h3><div class=\"nz-product__rate\"><span class=\"nz-stars nz-stars--sm\"><span class=\"nz-stars__row\"><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star nz-stars__star--full\">★</span><span class=\"nz-stars__star\">★</span></span><span class=\"nz-stars__count\">4,8 (128)</span></span></div><div class=\"nz-product__variant\"><span class=\"is-selected\">M</span><span>L</span><span>XL</span></div></div><div class=\"nz-product__price\"><span class=\"nz-price nz-price--sm\"><span class=\"nz-price__amount\">24</span> €</span><span class=\"nz-stock nz-stock--low\"><i></i>Solo 2</span></div><div class=\"nz-product__cta\"><button class=\"nz-btn nz-btn--primary\">Añadir al carrito</button></div></article>"
+    },
+    {
+      "titulo": "Producto horizontal",
+      "tag": ".nz-product--horizontal",
+      "markup": "<article class=\"nz-product nz-product--horizontal\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><span class=\"nz-product__cat\">Hogar</span><h3 class=\"nz-product__name\">Lámpara de escritorio</h3><div class=\"nz-product__price\"><span class=\"nz-price nz-price--sm\"><span class=\"nz-price__amount\">39</span> €</span><span class=\"nz-stock nz-stock--in\"><i></i>En stock</span></div><div class=\"nz-product__cta\"><button class=\"nz-btn nz-btn--soft\">Añadir</button></div></div></article>"
+    },
+    {
+      "titulo": "Producto compacto con borde",
+      "tag": ".nz-product--compact · --bordered",
+      "markup": "<div class=\"nz-products nz-products--2\"><article class=\"nz-product nz-product--compact nz-product--bordered\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Taza térmica</h3><span class=\"nz-price nz-price--sm\"><span class=\"nz-price__amount\">12</span> €</span></div></article><article class=\"nz-product nz-product--compact nz-product--bordered\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Botella 750 ml</h3><span class=\"nz-price nz-price--sm\"><span class=\"nz-price__amount\">18</span> €</span></div></article></div>"
+    },
+    {
+      "titulo": "Producto agotado",
+      "tag": ".nz-product--sold-out",
+      "markup": "<article class=\"nz-product nz-product--sold-out\"><div class=\"nz-product__media\"><span class=\"nz-badge nz-badge--neutral nz-product__badge\">Agotado</span></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Saco de dormir -5 ºC</h3><span class=\"nz-stock nz-stock--out\"><i></i>Sin stock</span></div><div class=\"nz-product__cta\"><button class=\"nz-btn nz-btn--ghost\" disabled>Avisadme</button></div></article>"
+    },
+    {
+      "titulo": "Rejilla de productos",
+      "tag": ".nz-products",
+      "markup": "<div class=\"nz-products nz-products--2\"><article class=\"nz-product nz-product--compact\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Artículo uno</h3></div></article><article class=\"nz-product nz-product--compact\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Artículo dos</h3></div></article><article class=\"nz-product nz-product--compact\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Artículo tres</h3></div></article><article class=\"nz-product nz-product--compact\"><div class=\"nz-product__media\"></div><div class=\"nz-product__body\"><h3 class=\"nz-product__name\">Artículo cuatro</h3></div></article></div>"
+    },
+    {
+      "titulo": "Plan destacado",
+      "tag": ".nz-plan--featured",
+      "markup": "<div class=\"nz-plan nz-plan--featured\"><span class=\"nz-badge nz-badge--brand nz-plan__flag\">Más elegido</span><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__desc\">Para equipos que publican a diario.</span><span class=\"nz-plan__price\">24 € <small>/mes</small></span><div class=\"nz-plan__features\"><span class=\"nz-plan__feature\"><i></i>Proyectos ilimitados</span><span class=\"nz-plan__feature\"><i></i>Soporte en 4 h</span><span class=\"nz-plan__feature nz-plan__feature--off\"><i></i>Dominio propio (antes)</span><span class=\"nz-plan__feature nz-plan__feature--no\"><i></i>SSO de empresa</span></div><button class=\"nz-btn nz-btn--primary nz-plan__cta\">Elegir Pro</button></div>"
+    },
+    {
+      "titulo": "Plan de marca",
+      "tag": ".nz-plan--brand",
+      "markup": "<div class=\"nz-plan nz-plan--brand\"><span class=\"nz-plan__badge\">Recomendado</span><span class=\"nz-plan__name\">Team</span><span class=\"nz-plan__desc\">Todo el sistema, sin límites.</span><span class=\"nz-plan__price\">49 € <small>/mes</small></span><div class=\"nz-plan__features\"><span class=\"nz-plan__feature\"><i></i>Usuarios ilimitados</span><span class=\"nz-plan__feature\"><i></i>Auditoría de accesibilidad</span></div><button class=\"nz-btn nz-plan__cta\">Empezar</button></div>"
+    },
+    {
+      "titulo": "Plan atenuado",
+      "tag": ".nz-plan--muted",
+      "markup": "<div class=\"nz-plan nz-plan--muted\"><span class=\"nz-plan__name\">Gratis</span><span class=\"nz-plan__desc\">Para probar el sistema.</span><span class=\"nz-plan__price\">0 € <small>/mes</small></span><div class=\"nz-plan__features\"><span class=\"nz-plan__feature\"><i></i>1 proyecto</span><span class=\"nz-plan__feature nz-plan__feature--no\"><i></i>Sin soporte prioritario</span></div><button class=\"nz-btn nz-btn--soft nz-plan__cta\">Crear cuenta</button></div>"
+    },
+    {
+      "titulo": "Planes en 2 columnas",
+      "tag": ".nz-plans--2",
+      "markup": "<div class=\"nz-plans nz-plans--2\"><div class=\"nz-plan\"><span class=\"nz-plan__name\">Gratis</span><span class=\"nz-plan__price\">0 €</span></div><div class=\"nz-plan nz-plan--featured\"><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__price\">24 €</span></div></div>"
+    },
+    {
+      "titulo": "Planes en 3 columnas",
+      "tag": ".nz-plans--3",
+      "markup": "<div class=\"nz-plans nz-plans--3\"><div class=\"nz-plan\"><span class=\"nz-plan__name\">Gratis</span><span class=\"nz-plan__price\">0 €</span></div><div class=\"nz-plan nz-plan--featured\"><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__price\">24 €</span></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Team</span><span class=\"nz-plan__price\">49 €</span></div></div>"
+    },
+    {
+      "titulo": "Planes en 4 columnas",
+      "tag": ".nz-plans--4",
+      "markup": "<div class=\"nz-plans nz-plans--4\"><div class=\"nz-plan\"><span class=\"nz-plan__name\">Free</span><span class=\"nz-plan__price\">0 €</span></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__price\">24 €</span></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Team</span><span class=\"nz-plan__price\">49 €</span></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Enterprise</span><span class=\"nz-plan__price\">99 €</span></div></div>"
+    },
+    {
+      "titulo": "Planes compactos",
+      "tag": ".nz-plans--compact",
+      "markup": "<div class=\"nz-plans nz-plans--compact\"><div class=\"nz-plan\"><span class=\"nz-plan__name\">Free</span><span class=\"nz-plan__price\">0 €</span></div><div class=\"nz-plan nz-plan--muted\"><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__price\">24 €</span></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Team</span><span class=\"nz-plan__price\">49 €</span></div></div>"
+    },
+    {
+      "titulo": "Planes como tabla",
+      "tag": ".nz-plans--table",
+      "markup": "<div class=\"nz-plans nz-plans--table\"><div class=\"nz-plan\"><span class=\"nz-plan__name\">Gratis</span><span class=\"nz-plan__price\">0 € <small>/mes</small></span><button class=\"nz-btn nz-btn--soft nz-btn--sm nz-plan__cta\">Elegir</button></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Pro</span><span class=\"nz-plan__price\">24 € <small>/mes</small></span><button class=\"nz-btn nz-btn--primary nz-btn--sm nz-plan__cta\">Elegir</button></div><div class=\"nz-plan\"><span class=\"nz-plan__name\">Team</span><span class=\"nz-plan__price\">49 € <small>/mes</small></span><button class=\"nz-btn nz-btn--soft nz-btn--sm nz-plan__cta\">Elegir</button></div></div>"
+    },
+    {
+      "titulo": "Tabla de precios",
+      "tag": ".nz-pricetable",
+      "markup": "<table class=\"nz-pricetable\"><tr><th></th><th>Gratis</th><th class=\"is-selected\">Pro</th></tr><tr><td class=\"nz-pricetable__rowhead\">Almacenamiento</td><td>5 GB</td><td class=\"is-selected\">50 GB</td></tr><tr><td class=\"nz-pricetable__rowhead\">Usuarios</td><td>1</td><td class=\"is-selected\">10</td></tr></table>"
+    },
+    {
+      "titulo": "Tabla de precios compacta",
+      "tag": ".nz-pricetable--compact · __col",
+      "markup": "<table class=\"nz-pricetable nz-pricetable--compact\"><tr><th>Plan</th><th class=\"nz-pricetable__col\">Precio</th><th class=\"nz-pricetable__col\">Soporte</th></tr><tr><td class=\"nz-pricetable__rowhead\">Pro</td><td>24 €</td><td>4 h</td></tr><tr><td class=\"nz-pricetable__rowhead\">Team</td><td>49 €</td><td>1 h</td></tr></table>"
+    },
+    {
+      "titulo": "Fila de carrito",
+      "tag": ".nz-cart-item",
+      "markup": "<div class=\"nz-cart-item\"><span class=\"nz-cart-item__thumb\"></span><div class=\"nz-cart-item__body\"><span class=\"nz-cart-item__name\">Manta térmica</span><span class=\"nz-cart-item__meta\">× 2 · envío en 24 h</span><span class=\"nz-cart-item__variant\">Talla M · azul</span></div><div class=\"nz-cart-item__right\"><span class=\"nz-cart-item__price\">48 €</span><button class=\"nz-cart-item__remove\">Quitar</button></div></div>"
+    },
+    {
+      "titulo": "Carrito",
+      "tag": ".nz-cart",
+      "markup": "<div class=\"nz-cart\"><div class=\"nz-cart__head\"><span class=\"nz-cart__total\">Tu carrito</span><span class=\"nz-cart__count\">3</span></div><div class=\"nz-cart__items\"><div class=\"nz-cart__line\"><span>Manta térmica</span><b>24 €</b></div><div class=\"nz-cart__line\"><span>Linterna frontal</span><b>18 €</b></div></div><div class=\"nz-cart__qty\"><button aria-label=\"Quitar una unidad\">−</button><span>2</span><button aria-label=\"Añadir una unidad\">+</button></div><div class=\"nz-cart__foot\"><span>Total</span><span class=\"nz-cart__total\">42 €</span></div><button class=\"nz-btn nz-btn--primary nz-btn--block\">Tramitar pedido</button></div>"
+    },
+    {
+      "titulo": "Carrito mini",
+      "tag": ".nz-cart--mini",
+      "markup": "<div class=\"nz-cart nz-cart--mini\"><div class=\"nz-cart__head\"><span class=\"nz-cart__count\">2</span><span>2 artículos</span></div><div class=\"nz-cart__items\"><div class=\"nz-cart__line\"><span>Manta térmica</span><b>24 €</b></div></div><div class=\"nz-cart__foot\"><span class=\"nz-cart__total\">24 €</span><button class=\"nz-btn nz-btn--soft nz-btn--sm\">Ver carrito</button></div></div>"
+    },
+    {
+      "titulo": "Carrito lateral",
+      "tag": ".nz-cart--drawer",
+      "markup": "<div class=\"nz-cart nz-cart--drawer\"><div class=\"nz-cart__head\"><span class=\"nz-cart__total\">Carrito</span><span class=\"nz-cart__count\">1</span></div><div class=\"nz-cart__items\"><div class=\"nz-cart__line\"><span>Saco de dormir</span><b>129 €</b></div></div><div class=\"nz-cart__foot\"><span class=\"nz-cart__total\">129 €</span><button class=\"nz-btn nz-btn--primary nz-btn--sm\">Pagar</button></div></div>"
+    },
+    {
+      "titulo": "Carrito vacío",
+      "tag": ".nz-cart__empty",
+      "markup": "<div class=\"nz-cart nz-cart--mini\"><div class=\"nz-cart__empty\"><span aria-hidden=\"true\">🛒</span><b>Tu carrito está vacío</b><span>Añade algo y vuelve por aquí.</span><button class=\"nz-btn nz-btn--soft nz-btn--sm\">Ver productos</button></div></div>"
+    },
+    {
+      "titulo": "Pasos de compra",
+      "tag": ".nz-checkout-steps",
+      "markup": "<ol class=\"nz-checkout-steps\"><li class=\"nz-checkout-steps__step nz-checkout-steps__step--done\"><span class=\"nz-checkout-steps__num\">✓</span><span class=\"nz-checkout-steps__label\">Carrito</span></li><li class=\"nz-checkout-steps__step nz-checkout-steps__step--done\"><span class=\"nz-checkout-steps__num\">✓</span><span class=\"nz-checkout-steps__label\">Envío</span></li><li class=\"nz-checkout-steps__step\" aria-current=\"step\"><span class=\"nz-checkout-steps__num\">3</span><span class=\"nz-checkout-steps__label\">Pago</span></li><li class=\"nz-checkout-steps__step\"><span class=\"nz-checkout-steps__num\">4</span><span class=\"nz-checkout-steps__label\">Confirmar</span></li></ol>"
+    },
+    {
+      "titulo": "Pasos de compra en vertical",
+      "tag": ".nz-checkout-steps--vertical",
+      "markup": "<ol class=\"nz-checkout-steps nz-checkout-steps--vertical\"><li class=\"nz-checkout-steps__step nz-checkout-steps__step--done\"><span class=\"nz-checkout-steps__num\">✓</span><span class=\"nz-checkout-steps__label\">Carrito revisado</span></li><li class=\"nz-checkout-steps__step\"><span class=\"nz-checkout-steps__num\">2</span><span class=\"nz-checkout-steps__label\">Elige el envío</span></li></ol>"
+    },
+    {
+      "titulo": "Resumen de compra",
+      "tag": ".nz-summary",
+      "markup": "<div class=\"nz-summary\"><div class=\"nz-summary__row\"><span>Subtotal</span><span>120 €</span></div><div class=\"nz-summary__row\"><span>Envío</span><span>4 €</span></div><hr class=\"nz-summary__divider\"><div class=\"nz-summary__row nz-summary__row--total\"><span>Total</span><span>124 €</span></div><span class=\"nz-summary__note\">IVA incluido · pago seguro</span><div class=\"nz-summary__cta\"><button class=\"nz-btn nz-btn--primary\">Pagar 124 €</button></div></div>"
+    },
+    {
+      "titulo": "Resumen destacado en marca",
+      "tag": ".nz-summary--brand",
+      "markup": "<div class=\"nz-summary nz-summary--brand\"><div class=\"nz-summary__row\"><span>Plan Pro · 12 meses</span><span>288 €</span></div><div class=\"nz-summary__row nz-summary__row--total\"><span>A pagar hoy</span><span>288 €</span></div><span class=\"nz-summary__note\">Ahorras 2 meses con el pago anual.</span><div class=\"nz-summary__cta\"><button class=\"nz-btn nz-btn--primary\">Contratar</button></div></div>"
+    },
+    {
+      "titulo": "Cupón de descuento",
+      "tag": ".nz-coupon",
+      "markup": "<form class=\"nz-coupon\"><label class=\"nz-text--muted\" for=\"cupon10\">Código de descuento</label><input class=\"nz-coupon__input\" id=\"cupon10\" placeholder=\"VERANO25\"><span class=\"nz-coupon__hint\">Se aplica sobre el subtotal, antes de envío.</span><span class=\"nz-coupon__msg\">Introduce el código de tu campaña.</span><button class=\"nz-btn nz-btn--soft nz-coupon__btn\" type=\"button\">Aplicar</button></form>"
+    },
+    {
+      "titulo": "Cupón aplicado",
+      "tag": ".nz-coupon--inline · .is-done",
+      "markup": "<form class=\"nz-coupon nz-coupon--inline is-done\"><label class=\"nz-text--muted\" for=\"cupon11\">Código</label><input class=\"nz-coupon__input\" id=\"cupon11\" value=\"VERANO25\"><span class=\"nz-coupon__msg\">Cupón aplicado: −15 % en el subtotal.</span><button class=\"nz-btn nz-btn--soft nz-coupon__btn\" type=\"button\">Quitar</button></form>"
+    },
+    {
+      "titulo": "Cupón no válido",
+      "tag": ".nz-coupon.is-error",
+      "markup": "<form class=\"nz-coupon is-error\"><label class=\"nz-text--muted\" for=\"cupon12\">Código</label><input class=\"nz-coupon__input\" id=\"cupon12\" value=\"CADUCADO\"><span class=\"nz-coupon__msg\">Este cupón ha caducado.</span><button class=\"nz-btn nz-btn--soft nz-coupon__btn\" type=\"button\">Probar otro</button></form>"
+    },
+    {
+      "titulo": "Métodos de pago",
+      "tag": ".nz-payment",
+      "markup": "<div class=\"nz-payment\"><div class=\"nz-payment__method nz-payment__method--selected\"><span class=\"nz-payment__icon\">VISA</span><span class=\"nz-payment__label\">Visa •••• 4242</span><span class=\"nz-payment__note\">Caduca 04/28</span></div><div class=\"nz-payment__method\"><span class=\"nz-payment__icon\">Bizum</span><span class=\"nz-payment__label\">Bizum</span><span class=\"nz-payment__note\">Al móvil</span></div></div>"
+    },
+    {
+      "titulo": "Pago en rejilla",
+      "tag": ".nz-payment--grid",
+      "markup": "<div class=\"nz-payment nz-payment--grid\"><div class=\"nz-payment__method\"><span class=\"nz-payment__icon\">MC</span><span class=\"nz-payment__label\">Mastercard</span></div><div class=\"nz-payment__method nz-payment__method--selected\"><span class=\"nz-payment__icon\">Pay</span><span class=\"nz-payment__label\">Cartera digital</span></div><div class=\"nz-payment__method\"><span class=\"nz-payment__icon\">Tran</span><span class=\"nz-payment__label\">Transferencia</span></div><div class=\"nz-payment__method\"><span class=\"nz-payment__icon\">Con</span><span class=\"nz-payment__label\">Contra reembolso</span></div></div>"
+    },
+    {
+      "titulo": "Forma de pago simple",
+      "tag": ".nz-pay",
+      "markup": "<div class=\"nz-pay\"><span class=\"nz-pay__icon\">VISA</span><div class=\"nz-pay__body\"><span class=\"nz-pay__name\">Visa •••• 4242</span><span class=\"nz-pay__meta\">Caduca 04/28</span></div><button class=\"nz-btn nz-btn--text nz-btn--sm\">Cambiar</button></div>"
+    },
+    {
+      "titulo": "Pedido",
+      "tag": ".nz-order",
+      "markup": "<article class=\"nz-order\"><div class=\"nz-order__head\"><span class=\"nz-order__id\">#A7-10428</span><span class=\"nz-order__date\">12 may 2026</span><span class=\"nz-order__status\">Entregado</span></div><ul class=\"nz-order__items\"><li>Manta térmica × 1</li><li>Linterna frontal × 2</li></ul><div class=\"nz-order__foot\"><span>Total</span><span class=\"nz-order__total\">60 €</span></div></article>"
+    },
+    {
+      "titulo": "Estados de pedido",
+      "tag": ".nz-order__status--pending · --canceled",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><article class=\"nz-order\"><div class=\"nz-order__head\"><span class=\"nz-order__id\">#A7-10429</span><span class=\"nz-order__status nz-order__status--pending\">Pendiente de pago</span></div><div class=\"nz-order__foot\"><span class=\"nz-order__total\">24 €</span></div></article><article class=\"nz-order\"><div class=\"nz-order__head\"><span class=\"nz-order__id\">#A7-10430</span><span class=\"nz-order__status nz-order__status--canceled\">Cancelado</span></div><div class=\"nz-order__foot\"><span class=\"nz-order__total\">18 €</span></div></article></div>"
+    },
+    {
+      "titulo": "Opciones de envío",
+      "tag": ".nz-shipping-option",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-shipping-option nz-shipping-option--selected\"><span class=\"nz-shipping-option__label\">Estándar</span><span class=\"nz-shipping-option__eta\">3-5 días</span><span class=\"nz-shipping-option__price\">Gratis</span></div><div class=\"nz-shipping-option\"><span class=\"nz-shipping-option__label\">Express</span><span class=\"nz-shipping-option__eta\">24 h</span><span class=\"nz-shipping-option__price\">4,95 €</span></div><div class=\"nz-shipping-option nz-shipping-option--disabled\"><span class=\"nz-shipping-option__label\">Recogida en tienda</span><span class=\"nz-shipping-option__eta\">No disponible en tu zona</span><span class=\"nz-shipping-option__price\">—</span></div></div>"
+    },
+    {
+      "titulo": "Lista de deseos",
+      "tag": ".nz-wishlist",
+      "markup": "<div class=\"nz-cluster\"><span class=\"nz-wishlist\"><button class=\"nz-wishlist__btn\" aria-label=\"Añadir a la lista de deseos\">♡</button><span class=\"nz-wishlist__count\">12</span></span><span class=\"nz-wishlist is-active\"><button class=\"nz-wishlist__btn\" aria-label=\"Ya está en tu lista\">♥</button><span class=\"nz-wishlist__count\">13</span></span></div>"
+    },
+    {
+      "titulo": "Barra de comparación",
+      "tag": ".nz-compare-bar",
+      "markup": "<div class=\"nz-compare-bar\"><span class=\"nz-compare-bar__count\">2 productos en el comparador</span><span class=\"nz-compare-bar__actions\"><button class=\"nz-btn nz-btn--primary nz-btn--sm\">Comparar</button><button class=\"nz-compare-bar__clear\">Vaciar</button></span></div>"
+    },
+    {
+      "titulo": "Etiquetas de descuento",
+      "tag": ".nz-off · .nz-discount-badge",
+      "markup": "<div class=\"nz-cluster\"><span class=\"nz-off\">-20 %</span><span class=\"nz-off nz-off--green\">Recomendado</span><span class=\"nz-discount-badge\">-25 % <span class=\"nz-discount-badge__was\">49 €</span></span><span class=\"nz-discount-badge nz-discount-badge--lg\">-40 % <span class=\"nz-discount-badge__was\">99 €</span></span></div>"
+    },
+    {
+      "titulo": "Nota de regalo",
+      "tag": ".nz-gift-note",
+      "markup": "<div class=\"nz-gift-note\"><span class=\"nz-gift-note__label\">Es un regalo</span><span class=\"nz-gift-note__body\">«Felicidades, pensé que te vendría bien para la montaña.» Sin factura en la caja.</span></div>"
+    },
+    {
+      "titulo": "Carrito: sin stock y compacto",
+      "tag": ".nz-cart-item.is-error · .nz-cart-item--compact",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-cart-item is-error\"><span class=\"nz-cart-item__thumb\"></span><div class=\"nz-cart-item__body\"><span class=\"nz-cart-item__name\">Manta térmica</span><span class=\"nz-cart-item__meta\">sin stock</span><span class=\"nz-cart-item__variant\">Talla M · azul</span></div><div class=\"nz-cart-item__right\"><span class=\"nz-cart-item__price\">48 €</span><button class=\"nz-cart-item__remove\">Quitar</button></div></div><div class=\"nz-cart-item nz-cart-item--compact\"><span class=\"nz-cart-item__thumb\"></span><div class=\"nz-cart-item__body\"><span class=\"nz-cart-item__name\">Manta térmica</span><span class=\"nz-cart-item__meta\">× 2 · envío en 24 h</span><span class=\"nz-cart-item__variant\">Talla M · azul</span></div><div class=\"nz-cart-item__right\"><span class=\"nz-cart-item__price\">48 €</span><button class=\"nz-cart-item__remove\">Quitar</button></div></div></div>"
+    },
+    {
+      "titulo": "Pago rechazado",
+      "tag": ".nz-pay.is-error",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-pay\"><span class=\"nz-pay__icon\">VISA</span><div class=\"nz-pay__body\"><span class=\"nz-pay__name\">Visa •••• 4242</span><span class=\"nz-pay__meta\">Caduca 04/28</span></div><button class=\"nz-btn nz-btn--text nz-btn--sm\">Cambiar</button></div><div class=\"nz-pay is-error\"><span class=\"nz-pay__icon\">VISA</span><div class=\"nz-pay__body\"><span class=\"nz-pay__name\">Visa •••• 4242</span><span class=\"nz-pay__meta\">Pago rechazado</span></div><button class=\"nz-btn nz-btn--text nz-btn--sm\">Cambiar</button></div></div>"
+    },
+    {
+      "titulo": "Pedido compacto y nota corta",
+      "tag": ".nz-order--compact · .nz-gift-note--sm",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><article class=\"nz-order nz-order--compact\"><div class=\"nz-order__head\"><span class=\"nz-order__id\">#A7-10431</span><span class=\"nz-order__status\">Enviado</span></div><div class=\"nz-order__foot\"><span>Total</span><span class=\"nz-order__total\">48 €</span></div></article><div class=\"nz-gift-note nz-gift-note--sm\"><span class=\"nz-gift-note__label\">Es un regalo</span><span class=\"nz-gift-note__body\">Nota breve para la caja.</span></div></div>"
+    },
+    {
+      "titulo": "Barra de comparación compacta",
+      "tag": ".nz-compare-bar--compact",
+      "markup": "<div class=\"nz-compare-bar nz-compare-bar--compact\"><span class=\"nz-compare-bar__count\">2 productos en el comparador</span><span class=\"nz-compare-bar__actions\"><button class=\"nz-btn nz-btn--primary nz-btn--sm\">Comparar</button><button class=\"nz-compare-bar__clear\">Vaciar</button></span></div>"
+    }
+  ]
 }

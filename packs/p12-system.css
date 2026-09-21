@@ -133,3 +133,10 @@
 .nz-incident__title { font-size: var(--nz-text-sm); font-weight: 700; color: var(--nz-text); }
 .nz-incident__body { font-size: var(--nz-text-xs); color: var(--nz-text-mute); }
 .nz-incident__tag { justify-self: start; padding: 0 var(--nz-space-2); border-radius: var(--nz-radius-full); background: var(--nz-success-soft); color: var(--nz-success); font-size: var(--nz-text-2xs); font-weight: 800; }
+
+
+/* ============================================================
+   Severidad de incidencias (lexico cerrado)                    */
+.nz-incident--danger .nz-incident__tag { background: var(--nz-danger-soft); color: var(--nz-danger); }
+.nz-incident--warning .nz-incident__tag { background: var(--nz-warning-soft); color: var(--nz-warning); }
+.nz-incident--success .nz-incident__tag { background: var(--nz-success-soft); color: var(--nz-success); }

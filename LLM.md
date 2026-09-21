@@ -1,6 +1,6 @@
 # Aurora 7 — guía de decisión para agentes
 
-Design system CSS puro, sin dependencias ni build. 1850 objetos en 15 categorías.
+Design system CSS puro, sin dependencias ni build. 1897 objetos en 15 categorías.
 **No pegues el CSS en el prompt**: enlaza por CDN y usa las clases de esta guía.
 
 ## 1. Mínimo obligatorio

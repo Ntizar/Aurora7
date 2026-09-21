@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Aurora 7 · 15 Apps y escritorio · 70 objetos</title>
+<title>Aurora 7 · 15 Apps y escritorio · 74 objetos</title>
 <meta name="description" content="Ventana de aplicación, barras de app, editor de código, terminal, árbol de archivos, kanban, calendario, ajustes, spotlight, bandeja, dock y diálogos de sistema.">
 <link rel="stylesheet" href="../tokens.css">
 <link rel="stylesheet" href="../packs/p0-catalog.css">
@@ -16,7 +16,7 @@
 <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
 <header class="cat-topbar">
 <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
-<span class="cat-count">15 · 70 objetos · 31 demos</span>
+<span class="cat-count">15 · 74 objetos · 37 demos</span>
 <span class="cat-topbar__tools">
 <a class="cat-icobtn" href="../index.html" title="Portada" aria-label="Volver a la portada">⌂</a>
 <button class="cat-icobtn" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
@@ -41,13 +41,13 @@
 </nav>
 <main class="nz-container cat-main" id="contenido">
   <div class="cat-pagehead">
-    <p class="cat-pagehead__over">Categoría 15 de 15 · 70 objetos · 31 demos</p>
+    <p class="cat-pagehead__over">Categoría 15 de 15 · 74 objetos · 37 demos</p>
     <h1>Apps y escritorio</h1>
     <p>Ventana de aplicación, barras de app, editor de código, terminal, árbol de archivos, kanban, calendario, ajustes, spotlight, bandeja, dock y diálogos de sistema.</p>
     <div class="cat-pagehead__stats">
-      <span class="nz-badge nz-badge--brand"><i></i>70 objetos</span>
+      <span class="nz-badge nz-badge--brand"><i></i>74 objetos</span>
       <span class="nz-badge nz-badge--neutral">30 familias</span>
-      <span class="nz-badge nz-badge--accent">31 demos en vivo</span>
+      <span class="nz-badge nz-badge--accent">37 demos en vivo</span>
       <span class="nz-badge nz-badge--neutral">31 clases distintas usadas</span>
       <a class="nz-badge nz-badge--brand" href="../packs/p15-apps.css">p15-apps.css</a>
     </div>
@@ -56,7 +56,7 @@
     <div class="cat-search">
       <span class="cat-search__icon" aria-hidden="true">⌕</span>
       <input class="cat-search__input" id="catBuscar" type="search" placeholder="Buscar en esta categoría… (pulsa /)" aria-label="Buscar objeto en esta categoría">
-      <span class="cat-search__count" id="catContador">31 objetos</span>
+      <span class="cat-search__count" id="catContador">37 objetos</span>
     </div>
     <div class="cat-filters" role="group" aria-label="Filtrar por familia de objeto"><button type="button" class="cat-filters__chip" data-filtro="todo" aria-pressed="true">Todo</button>
       <button type="button" class="cat-filters__chip" data-filtro="nz-actbar" aria-pressed="false">.actbar</button>
@@ -264,6 +264,42 @@
       <div class="nz-winfoot"><span class="nz-winfoot__count">12 archivos</span><i aria-hidden="true">·</i><span class="nz-winfoot__count">3 modificados</span><span class="nz-winfoot__count">UTF-8</span></div>
     </div>
   </section>
+  <section class="cat-demo cat-in" data-cat="nz-window">
+    <div class="cat-demo__title"><span class="cat-demo__num">32</span><span class="cat-demo__name">Ventana · estados y tamaño</span><span class="cat-demo__tag">.nz-window.is-active / .is-max / --sm</span></div>
+    <div class="cat-stage">
+      <div class="nz-window"><div class="nz-window__titlebar"><strong>Normal</strong></div><div class="nz-window__body"><p>Contenido de la ventana.</p></div></div><div class="nz-window is-active"><div class="nz-window__titlebar"><strong>Activa</strong></div><div class="nz-window__body"><p>Contenido de la ventana.</p></div></div><div class="nz-window nz-window--sm is-error"><div class="nz-window__titlebar"><strong>nota.txt</strong></div><div class="nz-window__body"><p>Contenido de la ventana.</p></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-kanban">
+    <div class="cat-demo__title"><span class="cat-demo__num">33</span><span class="cat-demo__name">Kanban · destino de arrastre y columna resuelta</span><span class="cat-demo__tag">.nz-kanban__col.is-over / .is-done</span></div>
+    <div class="cat-stage">
+      <div class="nz-kanban"><div class="nz-kanban__col"><strong>Por hacer</strong><div class="nz-kanban__card">Revisar copys</div></div><div class="nz-kanban__col is-over"><strong>Soltar aqui</strong><div class="nz-kanban__card">Maquetar hero</div></div><div class="nz-kanban__col is-done"><strong>Hecho</strong><div class="nz-kanban__card">Redactar brief</div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-kanban">
+    <div class="cat-demo__title"><span class="cat-demo__num">34</span><span class="cat-demo__name">Kanban · tarjeta seleccionada y con error</span><span class="cat-demo__tag">.nz-kanban__card.is-selected / .is-error</span></div>
+    <div class="cat-stage">
+      <div class="nz-kanban__card is-selected">Tarea seleccionada</div><div class="nz-kanban__card is-error">Tarea bloqueada</div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-agenda">
+    <div class="cat-demo__title"><span class="cat-demo__num">35</span><span class="cat-demo__name">Agenda · franja actual y ocupada</span><span class="cat-demo__tag">.nz-agenda__slot.is-now / .is-busy</span></div>
+    <div class="cat-stage">
+      <div class="nz-agenda"><div class="nz-agenda__slot is-busy"><span>09:00</span><div>Reunion de equipo</div></div><div class="nz-agenda__slot is-now"><span>10:00</span><div>Ahora mismo</div></div><div class="nz-agenda__slot"><span>11:00</span><div>Libre</div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-dock">
+    <div class="cat-demo__title"><span class="cat-demo__num">36</span><span class="cat-demo__name">Dock · tamaño y elemento activo</span><span class="cat-demo__tag">.nz-dock--sm / --lg / __item.is-active</span></div>
+    <div class="cat-stage">
+      <div class="nz-dock nz-dock--sm"><a class="nz-dock__item" href="#">A</a><a class="nz-dock__item is-active" href="#">B</a><a class="nz-dock__item" href="#">C</a></div><div class="nz-dock nz-dock--lg"><a class="nz-dock__item" href="#">A</a><a class="nz-dock__item" href="#">B</a><a class="nz-dock__item is-active" href="#">C</a></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-window">
+    <div class="cat-demo__title"><span class="cat-demo__num">37</span><span class="cat-demo__name">Ventana grande</span><span class="cat-demo__tag">.nz-window--lg</span></div>
+    <div class="cat-stage">
+      <div class="nz-window nz-window--lg"><div class="nz-window__titlebar"><strong>Grande</strong></div><div class="nz-window__body"><p>Contenido de la ventana.</p></div></div>
+    </div>
+  </section>
   <div class="cat-empty" id="catVacio" hidden><b>Nada por aquí</b>Prueba con otro término o quita el filtro.</div>
 </main>
 <div class="cat-nav-pages" style="justify-content:center;border-top:1px solid var(--nz-border-soft)">
@@ -271,7 +307,7 @@
   <a href="01-layout.html">01 Layout y estructura →</a>
 </div>
 <footer class="cat-footer">
-  Aurora 7 · Design System Ntizar · Categoría 15 de 15 · 1850 objetos · 546 demos · Hecho con ❤️ por David Antizar
+  Aurora 7 · Design System Ntizar · Categoría 15 de 15 · 1897 objetos · 574 demos · Hecho con ❤️ por David Antizar
 </footer>
 <script src="../js/catalog.js"></script>
 </body>

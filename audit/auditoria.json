@@ -1,11 +1,11 @@
 {
  "resumen": {
-  "objetos_declarados": 1850,
+  "objetos_declarados": 1897,
   "familias": 349,
-  "demos": 546,
+  "demos": 571,
   "categorias": 15,
-  "clases_usadas_en_demos": 1848,
-  "clases_sin_demo": 2,
+  "clases_usadas_en_demos": 1893,
+  "clases_sin_demo": 4,
   "familias_sin_demo": 0,
   "fantasmas": 0,
   "duplicados": 0,
@@ -14,14 +14,14 @@
   "glass": 0,
   "gradientes": 0,
   "important": 1,
-  "familias_sin_variantes": 133,
+  "familias_sin_variantes": 117,
   "packs": 15
  },
  "packs": {
   "p1-layout.css": {
-   "lineas": 334,
-   "bytes": 20042,
-   "clases": 167,
+   "lineas": 351,
+   "bytes": 21020,
+   "clases": 178,
    "familias": 67,
    "hex": 0,
    "gradientes": 0,
@@ -29,9 +29,9 @@
    "important": 0
   },
   "p10-commerce.css": {
-   "lineas": 246,
-   "bytes": 25663,
-   "clases": 152,
+   "lineas": 258,
+   "bytes": 26426,
+   "clases": 156,
    "familias": 22,
    "hex": 0,
    "gradientes": 0,
@@ -39,9 +39,9 @@
    "important": 0
   },
   "p11-social.css": {
-   "lineas": 179,
-   "bytes": 17585,
-   "clases": 102,
+   "lineas": 189,
+   "bytes": 18248,
+   "clases": 107,
    "familias": 15,
    "hex": 0,
    "gradientes": 0,
@@ -49,9 +49,9 @@
    "important": 0
   },
   "p12-system.css": {
-   "lineas": 136,
-   "bytes": 13199,
-   "clases": 77,
+   "lineas": 143,
+   "bytes": 13647,
+   "clases": 80,
    "familias": 25,
    "hex": 0,
    "gradientes": 0,
@@ -59,9 +59,9 @@
    "important": 1
   },
   "p13-charts.css": {
-   "lineas": 271,
-   "bytes": 21504,
-   "clases": 203,
+   "lineas": 284,
+   "bytes": 22237,
+   "clases": 210,
    "familias": 21,
    "hex": 0,
    "gradientes": 0,
@@ -79,9 +79,9 @@
    "important": 0
   },
   "p15-apps.css": {
-   "lineas": 346,
-   "bytes": 40399,
-   "clases": 70,
+   "lineas": 364,
+   "bytes": 41566,
+   "clases": 74,
    "familias": 30,
    "hex": 0,
    "gradientes": 0,
@@ -139,9 +139,9 @@
    "important": 0
   },
   "p7-overlays.css": {
-   "lineas": 198,
-   "bytes": 22987,
-   "clases": 117,
+   "lineas": 203,
+   "bytes": 23192,
+   "clases": 118,
    "familias": 12,
    "hex": 0,
    "gradientes": 0,
@@ -149,9 +149,9 @@
    "important": 0
   },
   "p8-data.css": {
-   "lineas": 221,
-   "bytes": 19144,
-   "clases": 139,
+   "lineas": 234,
+   "bytes": 19888,
+   "clases": 143,
    "familias": 16,
    "hex": 0,
    "gradientes": 0,
@@ -159,9 +159,9 @@
    "important": 0
   },
   "p9-media.css": {
-   "lineas": 165,
-   "bytes": 13340,
-   "clases": 104,
+   "lineas": 179,
+   "bytes": 14205,
+   "clases": 112,
    "familias": 17,
    "hex": 0,
    "gradientes": 0,
@@ -173,8 +173,8 @@
   "1": {
    "nombre": "Layout y estructura",
    "pack": "p1-layout.css",
-   "demos": 48,
-   "objetos": 167,
+   "demos": 51,
+   "objetos": 178,
    "familias": 67,
    "sin_demo": [],
    "familias_sin_demo": []
@@ -227,8 +227,8 @@
   "7": {
    "nombre": "Overlays y diálogo",
    "pack": "p7-overlays.css",
-   "demos": 33,
-   "objetos": 117,
+   "demos": 34,
+   "objetos": 118,
    "familias": 12,
    "sin_demo": [],
    "familias_sin_demo": []
@@ -236,8 +236,8 @@
   "8": {
    "nombre": "Datos, tablas y listas",
    "pack": "p8-data.css",
-   "demos": 36,
-   "objetos": 139,
+   "demos": 39,
+   "objetos": 143,
    "familias": 16,
    "sin_demo": [],
    "familias_sin_demo": []
@@ -245,8 +245,8 @@
   "9": {
    "nombre": "Media e iconografía",
    "pack": "p9-media.css",
-   "demos": 38,
-   "objetos": 104,
+   "demos": 41,
+   "objetos": 112,
    "familias": 17,
    "sin_demo": [],
    "familias_sin_demo": []
@@ -254,8 +254,8 @@
   "10": {
    "nombre": "Comercio y producto",
    "pack": "p10-commerce.css",
-   "demos": 44,
-   "objetos": 152,
+   "demos": 48,
+   "objetos": 156,
    "familias": 22,
    "sin_demo": [],
    "familias_sin_demo": []
@@ -263,17 +263,20 @@
   "11": {
    "nombre": "Social y marketing",
    "pack": "p11-social.css",
-   "demos": 36,
-   "objetos": 102,
+   "demos": 38,
+   "objetos": 107,
    "familias": 15,
-   "sin_demo": [],
+   "sin_demo": [
+    "nz-team--lg",
+    "nz-team--sm"
+   ],
    "familias_sin_demo": []
   },
   "12": {
    "nombre": "Accesibilidad y sistema",
    "pack": "p12-system.css",
-   "demos": 28,
-   "objetos": 77,
+   "demos": 29,
+   "objetos": 80,
    "familias": 25,
    "sin_demo": [],
    "familias_sin_demo": []
@@ -281,31 +284,32 @@
   "13": {
    "nombre": "Gráficos y visualización",
    "pack": "p13-charts.css",
-   "demos": 33,
-   "objetos": 203,
+   "demos": 35,
+   "objetos": 210,
    "familias": 21,
-   "sin_demo": [],
+   "sin_demo": [
+    "nz-chart-line--accent"
+   ],
    "familias_sin_demo": []
   },
   "14": {
    "nombre": "IA y agentes",
    "pack": "p14-ai.css",
-   "demos": 31,
+   "demos": 32,
    "objetos": 180,
    "familias": 28,
-   "sin_demo": [
-    "nz-msg--neutral",
-    "nz-msg--success"
-   ],
+   "sin_demo": [],
    "familias_sin_demo": []
   },
   "15": {
    "nombre": "Apps y escritorio",
    "pack": "p15-apps.css",
-   "demos": 31,
-   "objetos": 70,
+   "demos": 36,
+   "objetos": 74,
    "familias": 30,
-   "sin_demo": [],
+   "sin_demo": [
+    "nz-window--lg"
+   ],
    "familias_sin_demo": []
   }
  },
@@ -512,8 +516,11 @@
   "nz-appshell": {
    "cat": 1,
    "pack": "p1-layout.css",
-   "n_clases": 1,
-   "mods": [],
+   "n_clases": 3,
+   "mods": [
+    "compact",
+    "spacious"
+   ],
    "partes": [],
    "demostrado": true
   },
@@ -707,8 +714,11 @@
   "nz-bento": {
    "cat": 1,
    "pack": "p1-layout.css",
-   "n_clases": 3,
-   "mods": [],
+   "n_clases": 5,
+   "mods": [
+    "compact",
+    "spacious"
+   ],
    "partes": [
     "tall",
     "wide"
@@ -718,8 +728,11 @@
   "nz-bgimg": {
    "cat": 9,
    "pack": "p9-media.css",
-   "n_clases": 1,
-   "mods": [],
+   "n_clases": 3,
+   "mods": [
+    "accent",
+    "brand"
+   ],
    "partes": [],
    "demostrado": true
   },
@@ -915,8 +928,10 @@
   "nz-cart-item": {
    "cat": 10,
    "pack": "p10-commerce.css",
-   "n_clases": 9,
-   "mods": [],
+   "n_clases": 10,
+   "mods": [
+    "compact"
+   ],
    "partes": [
     "body",
     "meta",
@@ -1125,16 +1140,20 @@
   "nz-chart-line": {
    "cat": 13,
    "pack": "p13-charts.css",
-   "n_clases": 13,
+   "n_clases": 17,
    "mods": [
     "accent",
     "accent",
+    "accent",
     "active",
+    "brand",
+    "danger",
     "dashed",
     "lg",
     "multi",
     "muted",
-    "sm"
+    "sm",
+    "success"
    ],
    "partes": [
     "area",
@@ -1152,15 +1171,21 @@
   "nz-chart-mini": {
    "cat": 13,
    "pack": "p13-charts.css",
-   "n_clases": 4,
+   "n_clases": 7,
    "mods": [
     "accent",
-    "brand"
+    "brand",
+    "danger",
+    "success",
+    "warning"
    ],
    "partes": [
     "bar",
     "bar--accent",
-    "bar--brand"
+    "bar--brand",
+    "bar--danger",
+    "bar--success",
+    "bar--warning"
    ],
    "demostrado": true
   },
@@ -1513,8 +1538,10 @@
   "nz-compare-bar": {
    "cat": 10,
    "pack": "p10-commerce.css",
-   "n_clases": 4,
-   "mods": [],
+   "n_clases": 5,
+   "mods": [
+    "compact"
+   ],
    "partes": [
     "actions",
     "clear",
@@ -1802,8 +1829,11 @@
   "nz-dock": {
    "cat": 15,
    "pack": "p15-apps.css",
-   "n_clases": 2,
-   "mods": [],
+   "n_clases": 4,
+   "mods": [
+    "lg",
+    "sm"
+   ],
    "partes": [
     "item"
    ],
@@ -2164,8 +2194,10 @@
   "nz-gift-note": {
    "cat": 10,
    "pack": "p10-commerce.css",
-   "n_clases": 3,
-   "mods": [],
+   "n_clases": 4,
+   "mods": [
+    "sm"
+   ],
    "partes": [
     "body",
     "label"
@@ -2175,16 +2207,22 @@
   "nz-grid-12": {
    "cat": 1,
    "pack": "p1-layout.css",
-   "n_clases": 1,
-   "mods": [],
+   "n_clases": 3,
+   "mods": [
+    "compact",
+    "spacious"
+   ],
    "partes": [],
    "demostrado": true
   },
   "nz-grid-auto": {
    "cat": 1,
    "pack": "p1-layout.css",
-   "n_clases": 1,
-   "mods": [],
+   "n_clases": 3,
+   "mods": [
+    "compact",
+    "spacious"
+   ],
    "partes": [],
    "demostrado": true
   },
@@ -2358,8 +2396,12 @@
   "nz-hero-bleed": {
    "cat": 1,
    "pack": "p1-layout.css",
-   "n_clases": 1,
-   "mods": [],
+   "n_clases": 4,
+   "mods": [
+    "brand",
+    "compact",
+    "spacious"
+   ],
    "partes": [],
    "demostrado": true
   },
@@ -2481,8 +2523,12 @@
   "nz-incident": {
    "cat": 12,
    "pack": "p12-system.css",
-   "n_clases": 5,
-   "mods": [],
+   "n_clases": 8,
+   "mods": [
+    "danger",
+    "success",
+    "warning"
+   ],
    "partes": [
     "body",
     "tag",
@@ -2740,8 +2786,9 @@
   "nz-lightbox": {
    "cat": 7,
    "pack": "p7-overlays.css",
-   "n_clases": 7,
+   "n_clases": 8,
    "mods": [
+    "compact",
     "next",
     "prev"
    ],
@@ -2842,9 +2889,11 @@
   "nz-logo-nube": {
    "cat": 9,
    "pack": "p9-media.css",
-   "n_clases": 3,
+   "n_clases": 5,
    "mods": [
-    "muted"
+    "lg",
+    "muted",
+    "sm"
    ],
    "partes": [
     "item",
@@ -2866,8 +2915,11 @@
   "nz-logos": {
    "cat": 9,
    "pack": "p9-media.css",
-   "n_clases": 1,
-   "mods": [],
+   "n_clases": 3,
+   "mods": [
+    "compact",
+    "spacious"
+   ],
    "partes": [],
    "demostrado": true
   },
@@ -2898,8 +2950,11 @@
   "nz-mapa-placeholder": {
    "cat": 9,
    "pack": "p9-media.css",
-   "n_clases": 3,
-   "mods": [],
+   "n_clases": 5,
+   "mods": [
+    "brand",
+    "neutral"
+   ],
    "partes": [
     "label",
     "pin"
@@ -3223,9 +3278,12 @@
   "nz-notif": {
    "cat": 11,
    "pack": "p11-social.css",
-   "n_clases": 7,
+   "n_clases": 10,
    "mods": [
-    "brand"
+    "brand",
+    "danger",
+    "success",
+    "warning"
    ],
    "partes": [
     "actions",
@@ -3291,9 +3349,10 @@
   "nz-order": {
    "cat": 10,
    "pack": "p10-commerce.css",
-   "n_clases": 10,
+   "n_clases": 11,
    "mods": [
     "canceled",
+    "compact",
     "pending"
    ],
    "partes": [
@@ -3759,13 +3818,15 @@
   "nz-record": {
    "cat": 8,
    "pack": "p8-data.css",
-   "n_clases": 14,
+   "n_clases": 16,
    "mods": [
     "brand",
     "brand",
     "brand",
     "danger",
-    "error"
+    "error",
+    "success",
+    "warning"
    ],
    "partes": [
     "actions",
@@ -3785,8 +3846,11 @@
   "nz-records": {
    "cat": 8,
    "pack": "p8-data.css",
-   "n_clases": 1,
-   "mods": [],
+   "n_clases": 3,
+   "mods": [
+    "dense",
+    "spacious"
+   ],
    "partes": [],
    "demostrado": true
   },
@@ -4776,8 +4840,11 @@
   "nz-team": {
    "cat": 11,
    "pack": "p11-social.css",
-   "n_clases": 7,
-   "mods": [],
+   "n_clases": 9,
+   "mods": [
+    "lg",
+    "sm"
+   ],
    "partes": [
     "avatar",
     "bio",
@@ -5183,8 +5250,11 @@
   "nz-window": {
    "cat": 15,
    "pack": "p15-apps.css",
-   "n_clases": 3,
-   "mods": [],
+   "n_clases": 5,
+   "mods": [
+    "lg",
+    "sm"
+   ],
    "partes": [
     "body",
     "titlebar"
@@ -5238,17 +5308,13 @@
   "nz-align-right",
   "nz-appempty",
   "nz-appnav",
-  "nz-appshell",
   "nz-appstatus",
   "nz-arbol",
   "nz-aside",
   "nz-atajo-teclado",
   "nz-attach",
   "nz-balance",
-  "nz-bento",
-  "nz-bgimg",
   "nz-caps",
-  "nz-cart-item",
   "nz-center",
   "nz-center-x",
   "nz-center-xy",
@@ -5263,32 +5329,23 @@
   "nz-collapsible",
   "nz-columns-2",
   "nz-columns-3",
-  "nz-compare-bar",
   "nz-dateline",
-  "nz-dock",
   "nz-docs",
   "nz-eyebrow",
   "nz-figura",
   "nz-filezona",
   "nz-focus-accent",
   "nz-focus-ring",
-  "nz-gift-note",
-  "nz-grid-12",
-  "nz-grid-auto",
-  "nz-hero-bleed",
   "nz-hide-escritorio",
   "nz-hide-movil",
   "nz-high-contrast-note",
-  "nz-incident",
   "nz-indent",
   "nz-initial",
   "nz-input-icon",
   "nz-inspector",
   "nz-kanban",
   "nz-launcher",
-  "nz-logos",
   "nz-maintenance-banner",
-  "nz-mapa-placeholder",
   "nz-min-target",
   "nz-month",
   "nz-nav-landmark",
@@ -5307,7 +5364,6 @@
   "nz-propsheet",
   "nz-ptemplate",
   "nz-reason",
-  "nz-records",
   "nz-reduced-motion-ok",
   "nz-resmon",
   "nz-ribbon",
@@ -5345,7 +5401,6 @@
   "nz-table-wrap",
   "nz-tap-44",
   "nz-taskwin",
-  "nz-team",
   "nz-term",
   "nz-tokens",
   "nz-tray",
@@ -5355,7 +5410,6 @@
   "nz-vh",
   "nz-visually-hidden",
   "nz-widget",
-  "nz-window",
   "nz-winfoot",
   "nz-wishlist"
  ]

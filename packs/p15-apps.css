@@ -343,3 +343,21 @@
 .nz-winfoot__count { display: inline-flex; align-items: center; gap: var(--nz-space-1); min-height: 28px; padding: 0 var(--nz-space-2); border-radius: var(--nz-radius-sm); background: var(--nz-bg-inset); color: var(--nz-text-soft); font-weight: 700; }
 .nz-winfoot__count:last-child { margin-left: auto; background: var(--nz-brand-soft); color: var(--nz-brand-strong); }
 .nz-winfoot i { color: var(--nz-text-faint); font-style: normal; }
+
+
+/* ============================================================
+   Estados de ventanas, kanban, agenda y dock (lexico cerrado)  */
+.nz-window.is-active { border-color: var(--nz-brand); box-shadow: var(--nz-shadow-xl); }
+.nz-window.is-max { border-radius: 0; }
+.nz-window.is-error { border-color: var(--nz-danger); }
+.nz-window--sm { max-width: 24rem; }
+.nz-window--lg { max-width: 64rem; }
+.nz-kanban__col.is-over { border-color: var(--nz-brand); border-style: dashed; background: var(--nz-brand-soft); }
+.nz-kanban__col.is-done { border-color: var(--nz-success); background: var(--nz-success-soft); }
+.nz-kanban__card.is-selected { box-shadow: 0 0 0 2px var(--nz-brand), var(--nz-shadow-xs); }
+.nz-kanban__card.is-error { border-left-color: var(--nz-danger); }
+.nz-agenda__slot.is-now { background: var(--nz-brand-soft); }
+.nz-agenda__slot.is-busy { background: var(--nz-bg-soft); }
+.nz-dock--sm .nz-dock__item { min-width: 36px; min-height: 36px; font-size: var(--nz-text-sm); }
+.nz-dock--lg .nz-dock__item { min-width: 56px; min-height: 56px; font-size: var(--nz-text-lg); }
+.nz-dock__item.is-active { background: var(--nz-brand-soft); color: var(--nz-brand); }

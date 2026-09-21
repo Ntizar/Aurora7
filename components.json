@@ -19,10 +19,10 @@
   "objetivoTactil": "44px"
  },
  "resumen": {
-  "objetos": 1850,
+  "objetos": 1897,
   "familias": 349,
   "categorias": 15,
-  "demos": 546,
+  "demos": 574,
   "tokens": 145,
   "tokensDark": 43
  },
@@ -31,9 +31,9 @@
    "categoria": 1,
    "nombre": "Layout y estructura",
    "descripcion": "El esqueleto de cualquier web: contenedores, rejillas y spans, filas, pilas, landmarks, sticky, bleed, regiones de página y helpers de flujo.",
-   "objetos": 167,
+   "objetos": 178,
    "familias": 67,
-   "demos": 48,
+   "demos": 51,
    "pagina": "paginas/01-layout.html"
   },
   "p2-navigation.css": {
@@ -85,63 +85,63 @@
    "categoria": 7,
    "nombre": "Overlays y diálogo",
    "descripcion": "Modal, drawer, sheet, popover, tooltip, menú contextual, command palette, backdrop, confirmación, lightbox, offcanvas y pila de toasts. Sin JS obligatorio.",
-   "objetos": 117,
+   "objetos": 118,
    "familias": 12,
-   "demos": 33,
+   "demos": 34,
    "pagina": "paginas/07-overlays.html"
   },
   "p8-data.css": {
    "categoria": 8,
    "nombre": "Datos, tablas y listas",
    "descripcion": "Tablas (densidad, sticky, bordes, toolbar y filtros), KPIs, listas y filas de registro, timeline, definition lists, árbol, matriz de calor, comparativa y números medidores.",
-   "objetos": 139,
+   "objetos": 143,
    "familias": 16,
-   "demos": 36,
+   "demos": 39,
    "pagina": "paginas/08-data.html"
   },
   "p9-media.css": {
    "categoria": 9,
    "nombre": "Media e iconografía",
    "descripcion": "Imágenes responsive (formas, filtros, ratios), figure, avatares (tamaños, forma, presencia, grupos), logotipos y nube de logos, iconos en caja, media object, vídeo, audio, hueco de mapa y galería.",
-   "objetos": 104,
+   "objetos": 112,
    "familias": 17,
-   "demos": 38,
+   "demos": 41,
    "pagina": "paginas/09-media.html"
   },
   "p10-commerce.css": {
    "categoria": 10,
    "nombre": "Comercio y producto",
    "descripcion": "Precio, estrellas, stock, tarjeta de producto, planes y comparativa, carrito, pasos de compra, cupón, pago, pedido y envío.",
-   "objetos": 152,
+   "objetos": 156,
    "familias": 22,
-   "demos": 44,
+   "demos": 48,
    "pagina": "paginas/10-commerce.html"
   },
   "p11-social.css": {
    "categoria": 11,
    "nombre": "Social y marketing",
    "descripcion": "Post y feed, métricas sociales, comentarios, testimonios, CTA banner, equipo, confianza, compartición, menciones y actividad.",
-   "objetos": 102,
+   "objetos": 107,
    "familias": 15,
-   "demos": 36,
+   "demos": 39,
    "pagina": "paginas/11-social.html"
   },
   "p12-system.css": {
    "categoria": 12,
    "nombre": "Accesibilidad y sistema",
    "descripcion": "Enlace de salto, ocultación accesible, foco, contraste, zonas táctiles, regiones vivas, landmarks, estado del sistema, tema y preferencias.",
-   "objetos": 77,
+   "objetos": 80,
    "familias": 25,
-   "demos": 28,
+   "demos": 29,
    "pagina": "paginas/12-system.html"
   },
   "p13-charts.css": {
    "categoria": 13,
    "nombre": "Gráficos y visualización",
    "descripcion": "Barras, línea, área, donut, medidor, mapa de calor, calendario, treemap, embudo, bullet, radar, dispersión, cascada y flujo. Todo con CSS y SVG estilizado por clases: sin librerías y sin una sola imagen.",
-   "objetos": 203,
+   "objetos": 210,
    "familias": 21,
-   "demos": 33,
+   "demos": 36,
    "pagina": "paginas/13-charts.html"
   },
   "p14-ai.css": {
@@ -150,16 +150,16 @@
    "descripcion": "Conversación, streaming, herramientas, aprobación humana, diferencias, citas, razonamiento, agentes, ejecuciones, evaluación y coste. La interfaz de la IA sin brillos ni humo: jerarquía, estado y control.",
    "objetos": 180,
    "familias": 28,
-   "demos": 31,
+   "demos": 32,
    "pagina": "paginas/14-ai.html"
   },
   "p15-apps.css": {
    "categoria": 15,
    "nombre": "Apps y escritorio",
    "descripcion": "Ventana de aplicación, barras de app, editor de código, terminal, árbol de archivos, kanban, calendario, ajustes, spotlight, bandeja, dock y diálogos de sistema.",
-   "objetos": 70,
+   "objetos": 74,
    "familias": 30,
-   "demos": 31,
+   "demos": 37,
    "pagina": "paginas/15-apps.html"
   }
  },
@@ -1101,9 +1101,14 @@
    "categoria": 1,
    "demo": "paginas/01-layout.html",
    "clases": [
-    "nz-appshell"
+    "nz-appshell",
+    "nz-appshell--compact",
+    "nz-appshell--spacious"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "compact",
+    "spacious"
+   ],
    "partes": []
   },
   "nz-article": {
@@ -1164,10 +1169,15 @@
    "demo": "paginas/01-layout.html",
    "clases": [
     "nz-bento",
+    "nz-bento--compact",
+    "nz-bento--spacious",
     "nz-bento__tall",
     "nz-bento__wide"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "compact",
+    "spacious"
+   ],
    "partes": [
     "tall",
     "wide"
@@ -1356,9 +1366,14 @@
    "categoria": 1,
    "demo": "paginas/01-layout.html",
    "clases": [
-    "nz-grid-12"
+    "nz-grid-12",
+    "nz-grid-12--compact",
+    "nz-grid-12--spacious"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "compact",
+    "spacious"
+   ],
    "partes": []
   },
   "nz-grid-auto": {
@@ -1366,9 +1381,14 @@
    "categoria": 1,
    "demo": "paginas/01-layout.html",
    "clases": [
-    "nz-grid-auto"
+    "nz-grid-auto",
+    "nz-grid-auto--compact",
+    "nz-grid-auto--spacious"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "compact",
+    "spacious"
+   ],
    "partes": []
   },
   "nz-header": {
@@ -1395,9 +1415,16 @@
    "categoria": 1,
    "demo": "paginas/01-layout.html",
    "clases": [
-    "nz-hero-bleed"
+    "nz-hero-bleed",
+    "nz-hero-bleed--brand",
+    "nz-hero-bleed--compact",
+    "nz-hero-bleed--spacious"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "brand",
+    "compact",
+    "spacious"
+   ],
    "partes": []
   },
   "nz-hide-escritorio": {
@@ -4122,6 +4149,7 @@
    "demo": "paginas/07-overlays.html",
    "clases": [
     "nz-lightbox",
+    "nz-lightbox--compact",
     "nz-lightbox__caption",
     "nz-lightbox__close",
     "nz-lightbox__img",
@@ -4130,6 +4158,7 @@
     "nz-lightbox__nav--prev"
    ],
    "modificadores": [
+    "compact",
     "next",
     "prev"
    ],
@@ -4610,6 +4639,8 @@
     "nz-record",
     "nz-record--brand",
     "nz-record--danger",
+    "nz-record--success",
+    "nz-record--warning",
     "nz-record__actions",
     "nz-record__avatar",
     "nz-record__body",
@@ -4625,6 +4656,8 @@
    "modificadores": [
     "brand",
     "danger",
+    "success",
+    "warning",
     "brand",
     "error",
     "brand"
@@ -4648,9 +4681,14 @@
    "categoria": 8,
    "demo": "paginas/08-data.html",
    "clases": [
-    "nz-records"
+    "nz-records",
+    "nz-records--dense",
+    "nz-records--spacious"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "dense",
+    "spacious"
+   ],
    "partes": []
   },
   "nz-spark": {
@@ -4904,9 +4942,14 @@
    "categoria": 9,
    "demo": "paginas/09-media.html",
    "clases": [
-    "nz-bgimg"
+    "nz-bgimg",
+    "nz-bgimg--accent",
+    "nz-bgimg--brand"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "accent",
+    "brand"
+   ],
    "partes": []
   },
   "nz-brand": {
@@ -5065,10 +5108,14 @@
    "demo": "paginas/09-media.html",
    "clases": [
     "nz-logo-nube",
+    "nz-logo-nube--lg",
+    "nz-logo-nube--sm",
     "nz-logo-nube__item",
     "nz-logo-nube__item--muted"
    ],
    "modificadores": [
+    "lg",
+    "sm",
     "muted"
    ],
    "partes": [
@@ -5096,9 +5143,14 @@
    "categoria": 9,
    "demo": "paginas/09-media.html",
    "clases": [
-    "nz-logos"
+    "nz-logos",
+    "nz-logos--compact",
+    "nz-logos--spacious"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "compact",
+    "spacious"
+   ],
    "partes": []
   },
   "nz-mapa-placeholder": {
@@ -5107,10 +5159,15 @@
    "demo": "paginas/09-media.html",
    "clases": [
     "nz-mapa-placeholder",
+    "nz-mapa-placeholder--brand",
+    "nz-mapa-placeholder--neutral",
     "nz-mapa-placeholder__label",
     "nz-mapa-placeholder__pin"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "brand",
+    "neutral"
+   ],
    "partes": [
     "label",
     "pin"
@@ -5233,6 +5290,7 @@
    "demo": "paginas/10-commerce.html",
    "clases": [
     "nz-cart-item",
+    "nz-cart-item--compact",
     "nz-cart-item__body",
     "nz-cart-item__meta",
     "nz-cart-item__name",
@@ -5242,7 +5300,9 @@
     "nz-cart-item__thumb",
     "nz-cart-item__variant"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "compact"
+   ],
    "partes": [
     "body",
     "meta",
@@ -5283,11 +5343,14 @@
    "demo": "paginas/10-commerce.html",
    "clases": [
     "nz-compare-bar",
+    "nz-compare-bar--compact",
     "nz-compare-bar__actions",
     "nz-compare-bar__clear",
     "nz-compare-bar__count"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "compact"
+   ],
    "partes": [
     "actions",
     "clear",
@@ -5338,10 +5401,13 @@
    "demo": "paginas/10-commerce.html",
    "clases": [
     "nz-gift-note",
+    "nz-gift-note--sm",
     "nz-gift-note__body",
     "nz-gift-note__label"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "sm"
+   ],
    "partes": [
     "body",
     "label"
@@ -5366,6 +5432,7 @@
    "demo": "paginas/10-commerce.html",
    "clases": [
     "nz-order",
+    "nz-order--compact",
     "nz-order__date",
     "nz-order__foot",
     "nz-order__head",
@@ -5377,6 +5444,7 @@
     "nz-order__total"
    ],
    "modificadores": [
+    "compact",
     "canceled",
     "pending"
    ],
@@ -5859,6 +5927,9 @@
    "clases": [
     "nz-notif",
     "nz-notif--brand",
+    "nz-notif--danger",
+    "nz-notif--success",
+    "nz-notif--warning",
     "nz-notif__actions",
     "nz-notif__body",
     "nz-notif__desc",
@@ -5866,7 +5937,10 @@
     "nz-notif__title"
    ],
    "modificadores": [
-    "brand"
+    "brand",
+    "danger",
+    "success",
+    "warning"
    ],
    "partes": [
     "actions",
@@ -6010,6 +6084,8 @@
    "demo": "paginas/11-social.html",
    "clases": [
     "nz-team",
+    "nz-team--lg",
+    "nz-team--sm",
     "nz-team__avatar",
     "nz-team__bio",
     "nz-team__member",
@@ -6017,7 +6093,10 @@
     "nz-team__role",
     "nz-team__social"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "lg",
+    "sm"
+   ],
    "partes": [
     "avatar",
     "bio",
@@ -6181,12 +6260,19 @@
    "demo": "paginas/12-system.html",
    "clases": [
     "nz-incident",
+    "nz-incident--danger",
+    "nz-incident--success",
+    "nz-incident--warning",
     "nz-incident__body",
     "nz-incident__tag",
     "nz-incident__time",
     "nz-incident__title"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "danger",
+    "success",
+    "warning"
+   ],
    "partes": [
     "body",
     "tag",
@@ -6737,9 +6823,13 @@
    "demo": "paginas/13-charts.html",
    "clases": [
     "nz-chart-line",
+    "nz-chart-line--accent",
+    "nz-chart-line--brand",
+    "nz-chart-line--danger",
     "nz-chart-line--lg",
     "nz-chart-line--multi",
     "nz-chart-line--sm",
+    "nz-chart-line--success",
     "nz-chart-line__area",
     "nz-chart-line__dot",
     "nz-chart-line__dot--accent",
@@ -6751,9 +6841,13 @@
     "nz-chart-line__svg"
    ],
    "modificadores": [
+    "accent",
+    "brand",
+    "danger",
     "lg",
     "multi",
     "sm",
+    "success",
     "accent",
     "active",
     "accent",
@@ -6780,16 +6874,25 @@
     "nz-chart-mini",
     "nz-chart-mini__bar",
     "nz-chart-mini__bar--accent",
-    "nz-chart-mini__bar--brand"
+    "nz-chart-mini__bar--brand",
+    "nz-chart-mini__bar--danger",
+    "nz-chart-mini__bar--success",
+    "nz-chart-mini__bar--warning"
    ],
    "modificadores": [
     "accent",
-    "brand"
+    "brand",
+    "danger",
+    "success",
+    "warning"
    ],
    "partes": [
     "bar",
     "bar--accent",
-    "bar--brand"
+    "bar--brand",
+    "bar--danger",
+    "bar--success",
+    "bar--warning"
    ]
   },
   "nz-chart-radar": {
@@ -7872,9 +7975,14 @@
    "demo": "paginas/15-apps.html",
    "clases": [
     "nz-dock",
+    "nz-dock--lg",
+    "nz-dock--sm",
     "nz-dock__item"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "lg",
+    "sm"
+   ],
    "partes": [
     "item"
    ]
@@ -8175,10 +8283,15 @@
    "demo": "paginas/15-apps.html",
    "clases": [
     "nz-window",
+    "nz-window--lg",
+    "nz-window--sm",
     "nz-window__body",
     "nz-window__titlebar"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "lg",
+    "sm"
+   ],
    "partes": [
     "body",
     "titlebar"

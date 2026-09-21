@@ -243,3 +243,15 @@
 .nz-gift-note { display: grid; gap: var(--nz-space-1); padding: var(--nz-space-3) var(--nz-space-4); border-left: var(--nz-border-w-strong) solid var(--nz-accent); border-radius: var(--nz-radius-sm); background: var(--nz-accent-soft); }
 .nz-gift-note__label { font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps); text-transform: uppercase; color: var(--nz-accent-strong); }
 .nz-gift-note__body { font-size: var(--nz-text-sm); color: var(--nz-text-soft); }
+
+
+/* ============================================================
+   Estado y densidad de comercio (ampliado con léxico cerrado (tanda D)) */
+.nz-cart-item.is-error { opacity: .7; }
+.nz-cart-item.is-error .nz-cart-item__name { color: var(--nz-danger); text-decoration: line-through; }
+.nz-cart-item--compact { padding: var(--nz-space-2) 0; }
+.nz-compare-bar--compact { padding: var(--nz-space-2) var(--nz-space-3); gap: var(--nz-space-2); }
+.nz-order--compact { padding: var(--nz-space-3); gap: var(--nz-space-2); }
+.nz-pay.is-error { border-color: var(--nz-danger); }
+.nz-pay.is-error .nz-pay__icon { background: var(--nz-danger-soft); color: var(--nz-danger); }
+.nz-gift-note--sm { padding: var(--nz-space-2) var(--nz-space-3); font-size: var(--nz-text-sm); }

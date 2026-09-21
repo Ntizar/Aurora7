@@ -263,7 +263,7 @@ def main():
     # trampa: el día que el token cambie, esa regla se queda atrás).
     def literales(txt):
         fuera = []
-        for m in re.finditer(r"\bborder(?:-[a-z]+)*\s*:\s*(1px|1\.5px)\b", txt):
+        for m in re.finditer(r"\bborder(?!-radius)(?:-[a-z]+)*\s*:\s*(1px|1\.5px)\b", txt):
             tok = "--nz-border-w" if m.group(1) == "1px" else "--nz-border-w-strong"
             fuera.append(f"border en {m.group(1)} → usa var({tok})")
         for m in re.finditer(r"\b(gap|row-gap|column-gap|padding|margin)(?:-[a-z]+)?\s*:\s*([^;{}]+)", txt):

@@ -159,6 +159,11 @@
       "titulo": "Chat compacto",
       "tag": ".nz-chat--compacto",
       "markup": "<div class=\"nz-chat nz-chat--compacto\"><div class=\"nz-chat__head\"><span class=\"nz-chat__title\">Soporte</span><span class=\"nz-chat__status\">en linea</span></div><div class=\"nz-chat__body\"><div class=\"nz-msg nz-msg--usuario\"><span class=\"nz-msg__avatar\" aria-hidden=\"true\"></span><div class=\"nz-msg__body\"><div class=\"nz-msg__author\">usuario</div><div class=\"nz-msg__bubble\"><p class=\"nz-msg__text\">Mensaje de ejemplo con tono usuario.</p></div></div></div><div class=\"nz-msg nz-msg--asistente\"><span class=\"nz-msg__avatar\" aria-hidden=\"true\"></span><div class=\"nz-msg__body\"><div class=\"nz-msg__author\">asistente</div><div class=\"nz-msg__bubble\"><p class=\"nz-msg__text\">Mensaje de ejemplo con tono asistente.</p></div></div></div></div></div>"
+    },
+    {
+      "titulo": "Mensaje neutro y de éxito",
+      "tag": ".nz-msg--neutral · --success",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-msg nz-msg--neutral\"><div class=\"nz-msg__body\"><div class=\"nz-msg__bubble\"><span class=\"nz-msg__text\">Mensaje neutro del sistema.</span></div></div></div><div class=\"nz-msg nz-msg--success\"><div class=\"nz-msg__body\"><div class=\"nz-msg__bubble\"><span class=\"nz-msg__text\">Pago aceptado: tu pedido sale hoy.</span></div></div></div></div>"
     }
   ]
 }

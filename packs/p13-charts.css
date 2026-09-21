@@ -268,3 +268,16 @@
   .nz-chart__body { min-height: 10rem; }
   .nz-chart-line__svg { height: 12rem; }
 }
+
+
+/* ============================================================
+   Tono semantico de series (lexico cerrado)                    */
+.nz-chart-line--brand { border-color: var(--nz-brand); }
+.nz-chart-line--accent { border-color: var(--nz-accent); }
+.nz-chart-line--success { border-color: var(--nz-success); }
+.nz-chart-line--danger { border-color: var(--nz-danger); }
+.nz-chart-mini__bar { flex: 1 1 auto; min-width: 3px; background: var(--nz-accent); border-radius: 1px 1px 0 0; }
+.nz-chart-mini__bar--brand { background: var(--nz-brand); }
+.nz-chart-mini__bar--success { background: var(--nz-success); }
+.nz-chart-mini__bar--danger { background: var(--nz-danger); }
+.nz-chart-mini__bar--warning { background: var(--nz-warning); }
