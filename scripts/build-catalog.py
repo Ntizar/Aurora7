@@ -427,7 +427,7 @@ def portada(specs, censo_cat, totales, packs):
 
   <header class="cat-topbar">
     <span class="cat-brandmark"><i></i><i></i> Aurora 7</span>
-    <span class="cat-count">v7.1 · constelación</span>
+    <span class="cat-count">v7.2 · constelación</span>
     <span class="cat-topbar__tools">
       <a class="cat-icobtn" href="audit/index.html" title="Auditoría del sistema" aria-label="Auditoría del sistema">✓</a>
       <button class="cat-icobtn" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
