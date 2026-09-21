@@ -1,254 +1,269 @@
 {
- "cat": 6,
- "nombre": "Feedback y estados",
- "desc": "Alertas, badges, chips, skeleton, empty/error, progreso y status. Feedback claro con tokens semánticos.",
- "pack": "p6-feedback.css",
- "fichero": "06-feedback.html",
- "demos": [
-  {
-   "titulo": "Alertas",
-   "tag": ".nz-alert--info/success/warning/danger",
-   "markup": "<div class=\"nz-alert nz-alert--info\"><span class=\"nz-alert__icon\">ℹ</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Información</span><span class=\"nz-alert__msg\">Mensaje informativo.</span></div></div>"
-  },
-  {
-   "titulo": "Alerta de éxito",
-   "tag": ".nz-alert--success",
-   "markup": "<div class=\"nz-alert nz-alert--success\"><span class=\"nz-alert__icon\">✓</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Guardado</span><span class=\"nz-alert__msg\">Los cambios se aplicaron.</span></div></div>"
-  },
-  {
-   "titulo": "Alerta de error",
-   "tag": ".nz-alert--danger",
-   "markup": "<div class=\"nz-alert nz-alert--danger\"><span class=\"nz-alert__icon\">✕</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Error</span><span class=\"nz-alert__msg\">Algo falló.</span></div></div>"
-  },
-  {
-   "titulo": "Callout",
-   "tag": ".nz-callout--accent",
-   "markup": "<div class=\"nz-callout\"><p>Nota: esta regla es importante.</p></div>"
-  },
-  {
-   "titulo": "Badges de estado",
-   "tag": ".nz-badge--brand/success/danger/warning",
-   "markup": "<div><span class=\"nz-badge nz-badge--brand\"><i></i>Brand</span><span class=\"nz-badge nz-badge--success\"><i></i>Activo</span><span class=\"nz-badge nz-badge--danger\"><i></i>Crítico</span><span class=\"nz-badge nz-badge--warning\"><i></i>Pendiente</span></div>"
-  },
-  {
-   "titulo": "Chips",
-   "tag": ".nz-chip.is-active",
-   "markup": "<div class=\"nz-cluster nz-cluster--compact\"><button class=\"nz-chip is-active\">Todos ×</button><button class=\"nz-chip\">Agua</button></div>"
-  },
-  {
-   "titulo": "Skeleton",
-   "tag": ".nz-skeleton",
-   "markup": "<div class=\"nz-skeleton\"><div class=\"nz-skeleton__card\"><div class=\"nz-skeleton__line nz-skeleton__line--title\"></div><div class=\"nz-skeleton__line nz-skeleton__line--wide\"></div><div class=\"nz-skeleton__line\"></div><div class=\"nz-skeleton__line\" style=\"width:65%\"></div></div></div>"
-  },
-  {
-   "titulo": "Empty state",
-   "tag": ".nz-empty",
-   "markup": "<div class=\"nz-empty\"><span class=\"nz-empty__icon\">📦</span><p class=\"nz-empty__title\">Sin resultados</p><p class=\"nz-empty__body\">Todavía no hay nada que mostrar.</p><button class=\"nz-btn nz-btn--primary nz-empty__action\">Crear</button></div>"
-  },
-  {
-   "titulo": "Barra de progreso",
-   "tag": ".nz-progress__bar",
-   "markup": "<div class=\"nz-progress\" style=\"max-width:16rem\"><div class=\"nz-progress__bar\" style=\"width:60%\"></div></div>"
-  },
-  {
-   "titulo": "Anillo de progreso",
-   "tag": ".nz-ring__fill",
-   "markup": "<div class=\"nz-ring\" style=\"width:56px;height:56px\"><svg width=\"56\" height=\"56\" viewBox=\"0 0 56 56\"><circle class=\"nz-ring__track\" cx=\"28\" cy=\"28\" r=\"24\" fill=\"none\" stroke-width=\"6\"/><circle class=\"nz-ring__fill\" cx=\"28\" cy=\"28\" r=\"24\" fill=\"none\" stroke-width=\"6\" stroke-dasharray=\"150.8\" stroke-dashoffset=\"60\"/></svg><span class=\"nz-ring__label\">60%</span></div>"
-  },
-  {
-   "titulo": "Status bar",
-   "tag": ".nz-statusbar--success",
-   "markup": "<div class=\"nz-statusbar nz-statusbar--success\"><span>2 de 5 pasos completados</span><span class=\"nz-statusbar__spacer\"></span><span>40 %</span></div>"
-  },
-  {
-   "titulo": "Spinner",
-   "tag": ".nz-spinner",
-   "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><span class=\"nz-spinner\"></span><span class=\"nz-spinner nz-spinner--accent\"></span></div>"
-  },
-  {
-   "titulo": "Toast",
-   "tag": ".nz-toast.is-on",
-   "markup": "<div class=\"nz-toast nz-toast--success is-on\" style=\"position:static;transform:none\"><span class=\"nz-toast__icon\">✓</span><span class=\"nz-toast__title\">Guardado</span>Los cambios se aplicaron.</div>"
-  },
-  {
-   "titulo": "Error state",
-   "tag": ".nz-errorstate",
-   "markup": "<div class=\"nz-errorstate\"><span class=\"nz-errorstate__code\">500</span><p class=\"nz-errorstate__title\">Algo se rompió</p><p class=\"nz-errorstate__body\">Vuelve a intentarlo en unos segundos.</p></div>"
-  },
-  {
-   "titulo": "Alertas brand y warning",
-   "tag": ".nz-alert--brand · --warning",
-   "markup": "<div class=\"nz-stack nz-stack--xs\"><div class=\"nz-alert nz-alert--brand\"><span class=\"nz-alert__icon\">◈</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Novedad</span><span class=\"nz-alert__msg\">Nuevo pack disponible.</span></div></div><div class=\"nz-alert nz-alert--warning\"><span class=\"nz-alert__icon\">⚠</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Atención</span><span class=\"nz-alert__msg\">Revisa la configuración.</span></div></div></div>"
-  },
-  {
-   "titulo": "Callouts",
-   "tag": ".nz-callout--accent/_warn/_danger",
-   "markup": "<div class=\"nz-stack nz-stack--xs\"><div class=\"nz-callout nz-callout--accent\"><p>Acento</p></div><div class=\"nz-callout nz-callout--warn\"><p>Aviso</p></div><div class=\"nz-callout nz-callout--danger\"><p>Peligro</p></div></div>"
-  },
-  {
-   "titulo": "Badges extra",
-   "tag": ".nz-badge--accent · --neutral",
-   "markup": "<div><span class=\"nz-badge nz-badge--accent\"><i></i>Acento</span><span class=\"nz-badge nz-badge--neutral\">Neutro</span></div>"
-  },
-  {
-   "titulo": "Chip con cerrar",
-   "tag": ".nz-chip__x",
-   "markup": "<button class=\"nz-chip is-active\">Agua <span class=\"nz-chip__x\">✕</span></button>"
-  },
-  {
-   "titulo": "Progreso variantes",
-   "tag": ".nz-progress--accent/_success/_thin/_lg/_indeterminate",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:16rem\"><div class=\"nz-progress nz-progress--accent\"><div class=\"nz-progress__bar\" style=\"width:70%\"></div></div><div class=\"nz-progress nz-progress--success\"><div class=\"nz-progress__bar\" style=\"width:100%\"></div></div><div class=\"nz-progress nz-progress--thin\"><div class=\"nz-progress__bar\" style=\"width:40%\"></div></div><div class=\"nz-progress nz-progress--lg\"><div class=\"nz-progress__bar\" style=\"width:55%\"></div></div><div class=\"nz-progress nz-progress--indeterminate\"><div class=\"nz-progress__bar\"></div></div></div>"
-  },
-  {
-   "titulo": "Skeleton bloque",
-   "tag": ".nz-skeleton__block · --muted",
-   "markup": "<div class=\"nz-skeleton\" style=\"max-width:16rem\"><div class=\"nz-skeleton__block\"></div><div class=\"nz-skeleton__line nz-skeleton__line--muted\"></div></div>"
-  },
-  {
-   "titulo": "Toast error y cierre",
-   "tag": ".nz-toast--error · __close",
-   "markup": "<div class=\"nz-toast nz-toast--error is-on\" style=\"position:static;transform:none\"><span class=\"nz-toast__icon\">✕</span><span class=\"nz-toast__title\">No se pudo guardar</span><button class=\"nz-toast__close\" aria-label=\"Cerrar\">✕</button></div>"
-  },
-  {
-   "titulo": "Status bar error",
-   "tag": ".nz-statusbar--error",
-   "markup": "<div class=\"nz-statusbar nz-statusbar--error\"><span>Falló la subida</span><span class=\"nz-statusbar__spacer\"></span><span>Reintentar</span></div>"
-  },
-  {
-   "titulo": "Spinner pequeño y anillo acento",
-   "tag": ".nz-spinner--sm · .nz-ring--accent",
-   "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><span class=\"nz-spinner nz-spinner--sm\"></span><div class=\"nz-ring nz-ring--accent\" style=\"width:48px;height:48px\"><svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\"><circle class=\"nz-ring__track\" cx=\"24\" cy=\"24\" r=\"20\" fill=\"none\" stroke-width=\"5\"/><circle class=\"nz-ring__fill\" cx=\"24\" cy=\"24\" r=\"20\" fill=\"none\" stroke-width=\"5\" stroke-dasharray=\"125.6\" stroke-dashoffset=\"40\"/></svg></div></div>"
-  },
-  {
-   "titulo": "Alerta neutral y con contorno",
-   "tag": ".nz-alert--neutral · --outline",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-alert nz-alert--neutral\"><span class=\"nz-alert__icon\">◍</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Sin novedades</span><span class=\"nz-alert__msg\">No hay cambios desde tu última visita.</span></div></div><div class=\"nz-alert nz-alert--outline\"><span class=\"nz-alert__icon\">ℹ</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Modo borrador</span><span class=\"nz-alert__msg\">Los cambios no se publican hasta que pulses Guardar.</span></div></div></div>"
-  },
-  {
-   "titulo": "Alerta pequeña y grande",
-   "tag": ".nz-alert--sm · --lg",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-alert nz-alert--sm nz-alert--success\"><span class=\"nz-alert__icon\">✓</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Guardado</span></div></div><div class=\"nz-alert nz-alert--lg nz-alert--info\"><span class=\"nz-alert__icon\">ℹ</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Actualización disponible</span><span class=\"nz-alert__msg\">Hay una versión nueva del catálogo con doce objetos más.</span></div></div></div>"
-  },
-  {
-   "titulo": "Alerta descartable con acción",
-   "tag": ".nz-alert--dismissible · __close · __action",
-   "markup": "<div class=\"nz-alert nz-alert--warning nz-alert--dismissible\"><span class=\"nz-alert__icon\">⚠</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Cuota casi agotada</span><span class=\"nz-alert__msg\">Te queda un 8 % del plan mensual.</span><button class=\"nz-alert__action\">Ampliar plan</button></div><button class=\"nz-alert__close\" aria-label=\"Descartar aviso\">✕</button></div>"
-  },
-  {
-   "titulo": "Alerta flotante",
-   "tag": ".nz-alert--floating",
-   "markup": "<div class=\"nz-alert nz-alert--floating nz-alert--brand\" style=\"position:static;transform:none\"><span class=\"nz-alert__icon\">◈</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Publicado</span><span class=\"nz-alert__msg\">Tu página ya está en línea.</span></div></div>"
-  },
-  {
-   "titulo": "Callouts de tono",
-   "tag": ".nz-callout--brand/--success/--note/--tip",
-   "markup": "<div class=\"nz-stack nz-stack--xs\"><div class=\"nz-callout nz-callout--brand\"><p>Marca: el azul se reserva para la acción principal.</p></div><div class=\"nz-callout nz-callout--success\"><p>Todo verificado, ningún enlace roto.</p></div><div class=\"nz-callout nz-callout--note\"><p>Nota: el naranja es el color secundario, nunca se funde con el azul.</p></div><div class=\"nz-callout nz-callout--tip\"><p>Truco: pulsa la barra para buscar cualquier objeto.</p></div></div>"
-  },
-  {
-   "titulo": "Badge con contorno, punto y contador",
-   "tag": ".nz-badge--outline/--dot/--counter",
-   "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-badge nz-badge--outline\">Borrador</span><span class=\"nz-badge nz-badge--success nz-badge--dot\"><i></i>En línea</span><span class=\"nz-badge nz-badge--counter\">7</span></div>"
-  },
-  {
-   "titulo": "Badge pequeño y grande",
-   "tag": ".nz-badge--sm · --lg",
-   "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-badge nz-badge--sm nz-badge--brand\">Nuevo</span><span class=\"nz-badge nz-badge--lg nz-badge--warning\">Pendiente de revisión</span></div>"
-  },
-  {
-   "titulo": "Chips de tono",
-   "tag": ".nz-chip--brand/--accent/--success/--danger",
-   "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-chip nz-chip--brand\">Marca</span><span class=\"nz-chip nz-chip--accent\">Acento</span><span class=\"nz-chip nz-chip--success\">Activo</span><span class=\"nz-chip nz-chip--danger\">Caído</span></div>"
-  },
-  {
-   "titulo": "Chips con punto, tamaños y quitables",
-   "tag": ".nz-chip__dot · --sm/--lg/--removable",
-   "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-chip nz-chip--sm\"><span class=\"nz-chip__dot\"></span>Pequeño</span><span class=\"nz-chip nz-chip--lg\"><span class=\"nz-chip__dot\"></span>Grande</span><span class=\"nz-chip nz-chip--brand nz-chip--removable\">Web<span class=\"nz-chip__x\">✕</span></span></div>"
-  },
-  {
-   "titulo": "Skeleton de texto, avatar, botón y gráfico",
-   "tag": ".nz-skeleton--text/--avatar/--button/--chart",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><div class=\"nz-skeleton nz-skeleton--text\"><div class=\"nz-skeleton__line\"></div><div class=\"nz-skeleton__line nz-skeleton__line--wide\"></div><div class=\"nz-skeleton__line nz-skeleton__line--muted\"></div></div><div class=\"nz-skeleton nz-skeleton--avatar\"><div class=\"nz-skeleton__block\"></div><div class=\"nz-skeleton__line nz-skeleton__line--title\"></div></div><div class=\"nz-skeleton nz-skeleton--button\"><div class=\"nz-skeleton__block\"></div></div><div class=\"nz-skeleton nz-skeleton--chart\"><div class=\"nz-skeleton__block\"></div></div></div>"
-  },
-  {
-   "titulo": "Empty pequeño, de marca y con borde",
-   "tag": ".nz-empty--sm/--brand/--bordered · __kbd",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-empty nz-empty--sm\"><span class=\"nz-empty__icon\">🔍</span><p class=\"nz-empty__title\">Sin coincidencias</p><p class=\"nz-empty__body\">Prueba con otra palabra.</p></div><div class=\"nz-empty nz-empty--brand\"><span class=\"nz-empty__icon\">✦</span><p class=\"nz-empty__title\">Empieza tu colección</p><p class=\"nz-empty__body\">Guarda objetos para tenerlos siempre a mano.</p><span class=\"nz-empty__kbd\">Pulsa <span class=\"nz-kbd\">S</span> para guardar</span></div><div class=\"nz-empty nz-empty--bordered\"><span class=\"nz-empty__icon\">📂</span><p class=\"nz-empty__title\">Carpeta vacía</p></div></div>"
-  },
-  {
-   "titulo": "Error inline",
-   "tag": ".nz-error · --brand/--offline",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:24rem\"><span class=\"nz-error\">No se pudo conectar con el servidor</span><span class=\"nz-error nz-error--brand\">Falta un permiso de marca</span><span class=\"nz-error nz-error--offline\">Sin conexión: se guardará al volver</span></div>"
-  },
-  {
-   "titulo": "Progreso fino, de marca y con etiqueta",
-   "tag": ".nz-progress--2xs/--brand/--with-label · __value/__caption",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:18rem\"><div class=\"nz-progress nz-progress--2xs nz-progress--brand\"><div class=\"nz-progress__bar\" style=\"width:30%\"></div></div><div class=\"nz-progress nz-progress--with-label\"><div class=\"nz-progress__bar\" style=\"width:72%\"></div><span class=\"nz-progress__value\">72 %</span></div><div class=\"nz-progress nz-progress--brand\"><div class=\"nz-progress__bar\" style=\"width:45%\"></div></div><div class=\"nz-progress__caption\"><span>Importando objetos</span><span>45 de 100</span></div></div>"
-  },
-  {
-   "titulo": "Meter: nivel dentro de un rango",
-   "tag": ".nz-meter · --brand/--success/--danger",
-   "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:18rem\"><div class=\"nz-meter\"><div class=\"nz-meter__bar\" style=\"width:62%\"></div><span class=\"nz-meter__label\">62 %</span></div><div class=\"nz-meter nz-meter--brand\"><div class=\"nz-meter__bar\" style=\"width:38%\"></div><span class=\"nz-meter__label\">38 %</span></div><div class=\"nz-meter nz-meter--success\"><div class=\"nz-meter__bar\" style=\"width:80%\"></div><span class=\"nz-meter__label\">80 %</span></div><div class=\"nz-meter nz-meter--danger\"><div class=\"nz-meter__bar\" style=\"width:15%\"></div><span class=\"nz-meter__label\">15 %</span></div></div>"
-  },
-  {
-   "titulo": "Anillo pequeño, grande, éxito y aviso",
-   "tag": ".nz-ring--sm/--lg/--success/--warning",
-   "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><div class=\"nz-ring nz-ring--sm\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"><circle class=\"nz-ring__track\" cx=\"20\" cy=\"20\" r=\"16\" fill=\"none\" stroke-width=\"4\"/><circle class=\"nz-ring__fill\" cx=\"20\" cy=\"20\" r=\"16\" fill=\"none\" stroke-width=\"4\" stroke-dasharray=\"100.5\" stroke-dashoffset=\"30\"/></svg><span class=\"nz-ring__label\">70</span></div><div class=\"nz-ring nz-ring--success\"><svg width=\"52\" height=\"52\" viewBox=\"0 0 52 52\"><circle class=\"nz-ring__track\" cx=\"26\" cy=\"26\" r=\"22\" fill=\"none\" stroke-width=\"5\"/><circle class=\"nz-ring__fill\" cx=\"26\" cy=\"26\" r=\"22\" fill=\"none\" stroke-width=\"5\" stroke-dasharray=\"138.2\" stroke-dashoffset=\"28\"/></svg><span class=\"nz-ring__label\">80</span></div><div class=\"nz-ring nz-ring--warning\"><svg width=\"52\" height=\"52\" viewBox=\"0 0 52 52\"><circle class=\"nz-ring__track\" cx=\"26\" cy=\"26\" r=\"22\" fill=\"none\" stroke-width=\"5\"/><circle class=\"nz-ring__fill\" cx=\"26\" cy=\"26\" r=\"22\" fill=\"none\" stroke-width=\"5\" stroke-dasharray=\"138.2\" stroke-dashoffset=\"96\"/></svg><span class=\"nz-ring__label\">30</span></div><div class=\"nz-ring nz-ring--lg\"><svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\"><circle class=\"nz-ring__track\" cx=\"36\" cy=\"36\" r=\"30\" fill=\"none\" stroke-width=\"7\"/><circle class=\"nz-ring__fill\" cx=\"36\" cy=\"36\" r=\"30\" fill=\"none\" stroke-width=\"7\" stroke-dasharray=\"188.5\" stroke-dashoffset=\"47\"/></svg><span class=\"nz-ring__label\">75 %</span></div></div>"
-  },
-  {
-   "titulo": "Spinner: tamaños y tonos",
-   "tag": ".nz-spinner--2xs/--sm/--lg/--brand/--accent",
-   "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><span class=\"nz-spinner nz-spinner--2xs\"></span><span class=\"nz-spinner nz-spinner--sm\"></span><span class=\"nz-spinner nz-spinner--brand\"></span><span class=\"nz-spinner nz-spinner--accent\"></span><span class=\"nz-spinner nz-spinner--lg\"></span></div>"
-  },
-  {
-   "titulo": "Spinner de puntos",
-   "tag": ".nz-spinner--dots",
-   "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-spinner nz-spinner--dots\"><i></i></span><span>Generando el informe…</span></div>"
-  },
-  {
-   "titulo": "Status bar de tonos",
-   "tag": ".nz-statusbar--brand/--info/--warning",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-statusbar nz-statusbar--brand\"><span>Publicando cambios</span><span class=\"nz-statusbar__spacer\"></span><span>62 %</span></div><div class=\"nz-statusbar nz-statusbar--info\"><span>Sincronizado hace 2 minutos</span></div><div class=\"nz-statusbar nz-statusbar--warning\"><span>Cuota al 92 %</span><span class=\"nz-statusbar__spacer\"></span><span>Ampliar</span></div></div>"
-  },
-  {
-   "titulo": "Toast de marca e informativo",
-   "tag": ".nz-toast--brand/--info · __title",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-toast nz-toast--brand is-on\" style=\"position:static;transform:none\"><span class=\"nz-toast__icon\">◈</span><span class=\"nz-toast__title\">Catálogo actualizado</span>Doce objetos nuevos.</div><div class=\"nz-toast nz-toast--info is-on\" style=\"position:static;transform:none\"><span class=\"nz-toast__icon\">ℹ</span>Sincronizando en segundo plano</div></div>"
-  },
-  {
-   "titulo": "Toast arriba y abajo con acción",
-   "tag": ".nz-toast--top/--bottom · __action",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-toast nz-toast--top is-on\" style=\"position:static;transform:none\">Se actualizó el tema</div><div class=\"nz-toast nz-toast--bottom is-on\" style=\"position:static;transform:none\"><span>Borrador guardado</span><button class=\"nz-toast__action\">Deshacer</button></div></div>"
-  },
-  {
-   "titulo": "Banner a ancho completo",
-   "tag": ".nz-banner · __body · --brand/--accent",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-banner\"><div class=\"nz-banner__body\">🎉 Ya está disponible Aurora 7.1</div></div><div class=\"nz-banner nz-banner--brand\"><div class=\"nz-banner__body\">Nuevo pack de gráficos incluido</div></div><div class=\"nz-banner nz-banner--accent\"><div class=\"nz-banner__body\">Prueba el modo oscuro desde la portada</div></div></div>"
-  },
-  {
-   "titulo": "Banner con acción y cierre",
-   "tag": ".nz-banner__action · __close",
-   "markup": "<div class=\"nz-banner\"><div class=\"nz-banner__body\">Usamos cookies para medir visitas</div><button class=\"nz-banner__action\">Aceptar</button><button class=\"nz-banner__close\" aria-label=\"Cerrar aviso\">✕</button></div>"
-  },
-  {
-   "titulo": "Barra de carga superior",
-   "tag": ".nz-loading-bar · __bar",
-   "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-loading-bar\" style=\"position:static\"><div class=\"nz-loading-bar__bar\"></div></div><span class=\"nz-text--small\">Cargando el catálogo…</span></div>"
-  },
-  {
-   "titulo": "Barra de sin conexión",
-   "tag": ".nz-offline-bar · __action",
-   "markup": "<div class=\"nz-offline-bar\"><span>Sin conexión</span><button class=\"nz-btn nz-btn--sm nz-btn--ghost nz-offline-bar__action\">Reintentar</button></div>"
-  },
-  {
-   "titulo": "Pulse: punto que late",
-   "tag": ".nz-pulse · --success/--danger",
-   "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><span class=\"nz-pulse\"></span><span class=\"nz-pulse nz-pulse--success\"></span><span class=\"nz-pulse nz-pulse--danger\"></span><span>En directo</span></div>"
-  },
-  {
-   "titulo": "Cuenta atrás",
-   "tag": ".nz-countdown · __num · __label",
-   "markup": "<div class=\"nz-countdown\"><span class=\"nz-countdown__num\">01:24:36</span><span class=\"nz-countdown__label\">para el cierre</span></div>"
-  }
- ]
+  "cat": 6,
+  "nombre": "Feedback y estados",
+  "desc": "Alertas, badges, chips, skeleton, empty/error, progreso y status. Feedback claro con tokens semánticos.",
+  "pack": "p6-feedback.css",
+  "fichero": "06-feedback.html",
+  "demos": [
+    {
+      "titulo": "Alertas",
+      "tag": ".nz-alert--info/success/warning/danger",
+      "markup": "<div class=\"nz-alert nz-alert--info\"><span class=\"nz-alert__icon\">ℹ</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Información</span><span class=\"nz-alert__msg\">Mensaje informativo.</span></div></div>"
+    },
+    {
+      "titulo": "Alerta de éxito",
+      "tag": ".nz-alert--success",
+      "markup": "<div class=\"nz-alert nz-alert--success\"><span class=\"nz-alert__icon\">✓</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Guardado</span><span class=\"nz-alert__msg\">Los cambios se aplicaron.</span></div></div>"
+    },
+    {
+      "titulo": "Alerta de error",
+      "tag": ".nz-alert--danger",
+      "markup": "<div class=\"nz-alert nz-alert--danger\"><span class=\"nz-alert__icon\">✕</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Error</span><span class=\"nz-alert__msg\">Algo falló.</span></div></div>"
+    },
+    {
+      "titulo": "Callout",
+      "tag": ".nz-callout--accent",
+      "markup": "<div class=\"nz-callout\"><p>Nota: esta regla es importante.</p></div>"
+    },
+    {
+      "titulo": "Badges de estado",
+      "tag": ".nz-badge--brand/success/danger/warning",
+      "markup": "<div><span class=\"nz-badge nz-badge--brand\"><i></i>Brand</span><span class=\"nz-badge nz-badge--success\"><i></i>Activo</span><span class=\"nz-badge nz-badge--danger\"><i></i>Crítico</span><span class=\"nz-badge nz-badge--warning\"><i></i>Pendiente</span></div>"
+    },
+    {
+      "titulo": "Chips",
+      "tag": ".nz-chip.is-active",
+      "markup": "<div class=\"nz-cluster nz-cluster--compact\"><button class=\"nz-chip is-active\">Todos ×</button><button class=\"nz-chip\">Agua</button></div>"
+    },
+    {
+      "titulo": "Skeleton",
+      "tag": ".nz-skeleton",
+      "markup": "<div class=\"nz-skeleton\"><div class=\"nz-skeleton__card\"><div class=\"nz-skeleton__line nz-skeleton__line--title\"></div><div class=\"nz-skeleton__line nz-skeleton__line--wide\"></div><div class=\"nz-skeleton__line\"></div><div class=\"nz-skeleton__line\" style=\"width:65%\"></div></div></div>"
+    },
+    {
+      "titulo": "Empty state",
+      "tag": ".nz-empty",
+      "markup": "<div class=\"nz-empty\"><span class=\"nz-empty__icon\">📦</span><p class=\"nz-empty__title\">Sin resultados</p><p class=\"nz-empty__body\">Todavía no hay nada que mostrar.</p><button class=\"nz-btn nz-btn--primary nz-empty__action\">Crear</button></div>"
+    },
+    {
+      "titulo": "Barra de progreso",
+      "tag": ".nz-progress__bar",
+      "markup": "<div class=\"nz-progress\" style=\"max-width:16rem\"><div class=\"nz-progress__bar\" style=\"width:60%\"></div></div>"
+    },
+    {
+      "titulo": "Anillo de progreso",
+      "tag": ".nz-ring__fill",
+      "markup": "<div class=\"nz-ring\" style=\"width:56px;height:56px\"><svg width=\"56\" height=\"56\" viewBox=\"0 0 56 56\"><circle class=\"nz-ring__track\" cx=\"28\" cy=\"28\" r=\"24\" fill=\"none\" stroke-width=\"6\"/><circle class=\"nz-ring__fill\" cx=\"28\" cy=\"28\" r=\"24\" fill=\"none\" stroke-width=\"6\" stroke-dasharray=\"150.8\" stroke-dashoffset=\"60\"/></svg><span class=\"nz-ring__label\">60%</span></div>"
+    },
+    {
+      "titulo": "Status bar",
+      "tag": ".nz-statusbar--success",
+      "markup": "<div class=\"nz-statusbar nz-statusbar--success\"><span>2 de 5 pasos completados</span><span class=\"nz-statusbar__spacer\"></span><span>40 %</span></div>"
+    },
+    {
+      "titulo": "Spinner",
+      "tag": ".nz-spinner",
+      "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><span class=\"nz-spinner\"></span><span class=\"nz-spinner nz-spinner--accent\"></span></div>"
+    },
+    {
+      "titulo": "Toast",
+      "tag": ".nz-toast.is-on",
+      "markup": "<div class=\"nz-toast nz-toast--success is-on\" style=\"position:static;transform:none\"><span class=\"nz-toast__icon\">✓</span><span class=\"nz-toast__title\">Guardado</span>Los cambios se aplicaron.</div>"
+    },
+    {
+      "titulo": "Error state",
+      "tag": ".nz-errorstate",
+      "markup": "<div class=\"nz-errorstate\"><span class=\"nz-errorstate__code\">500</span><p class=\"nz-errorstate__title\">Algo se rompió</p><p class=\"nz-errorstate__body\">Vuelve a intentarlo en unos segundos.</p></div>"
+    },
+    {
+      "titulo": "Alertas brand y warning",
+      "tag": ".nz-alert--brand · --warning",
+      "markup": "<div class=\"nz-stack nz-stack--xs\"><div class=\"nz-alert nz-alert--brand\"><span class=\"nz-alert__icon\">◈</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Novedad</span><span class=\"nz-alert__msg\">Nuevo pack disponible.</span></div></div><div class=\"nz-alert nz-alert--warning\"><span class=\"nz-alert__icon\">⚠</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Atención</span><span class=\"nz-alert__msg\">Revisa la configuración.</span></div></div></div>"
+    },
+    {
+      "titulo": "Callouts",
+      "tag": ".nz-callout--accent/_warn/_danger",
+      "markup": "<div class=\"nz-stack nz-stack--xs\"><div class=\"nz-callout nz-callout--accent\"><p>Acento</p></div><div class=\"nz-callout nz-callout--warn\"><p>Aviso</p></div><div class=\"nz-callout nz-callout--danger\"><p>Peligro</p></div></div>"
+    },
+    {
+      "titulo": "Badges extra",
+      "tag": ".nz-badge--accent · --neutral",
+      "markup": "<div><span class=\"nz-badge nz-badge--accent\"><i></i>Acento</span><span class=\"nz-badge nz-badge--neutral\">Neutro</span></div>"
+    },
+    {
+      "titulo": "Chip con cerrar",
+      "tag": ".nz-chip__x",
+      "markup": "<button class=\"nz-chip is-active\">Agua <span class=\"nz-chip__x\">✕</span></button>"
+    },
+    {
+      "titulo": "Progreso variantes",
+      "tag": ".nz-progress--accent/_success/_thin/_lg/_indeterminate",
+      "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:16rem\"><div class=\"nz-progress nz-progress--accent\"><div class=\"nz-progress__bar\" style=\"width:70%\"></div></div><div class=\"nz-progress nz-progress--success\"><div class=\"nz-progress__bar\" style=\"width:100%\"></div></div><div class=\"nz-progress nz-progress--thin\"><div class=\"nz-progress__bar\" style=\"width:40%\"></div></div><div class=\"nz-progress nz-progress--lg\"><div class=\"nz-progress__bar\" style=\"width:55%\"></div></div><div class=\"nz-progress nz-progress--indeterminate\"><div class=\"nz-progress__bar\"></div></div></div>"
+    },
+    {
+      "titulo": "Skeleton bloque",
+      "tag": ".nz-skeleton__block · --muted",
+      "markup": "<div class=\"nz-skeleton\" style=\"max-width:16rem\"><div class=\"nz-skeleton__block\"></div><div class=\"nz-skeleton__line nz-skeleton__line--muted\"></div></div>"
+    },
+    {
+      "titulo": "Toast error y cierre",
+      "tag": ".nz-toast--error · __close",
+      "markup": "<div class=\"nz-toast nz-toast--error is-on\" style=\"position:static;transform:none\"><span class=\"nz-toast__icon\">✕</span><span class=\"nz-toast__title\">No se pudo guardar</span><button class=\"nz-toast__close\" aria-label=\"Cerrar\">✕</button></div>"
+    },
+    {
+      "titulo": "Status bar error",
+      "tag": ".nz-statusbar--error",
+      "markup": "<div class=\"nz-statusbar nz-statusbar--error\"><span>Falló la subida</span><span class=\"nz-statusbar__spacer\"></span><span>Reintentar</span></div>"
+    },
+    {
+      "titulo": "Spinner pequeño y anillo acento",
+      "tag": ".nz-spinner--sm · .nz-ring--accent",
+      "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><span class=\"nz-spinner nz-spinner--sm\"></span><div class=\"nz-ring nz-ring--accent\" style=\"width:48px;height:48px\"><svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\"><circle class=\"nz-ring__track\" cx=\"24\" cy=\"24\" r=\"20\" fill=\"none\" stroke-width=\"5\"/><circle class=\"nz-ring__fill\" cx=\"24\" cy=\"24\" r=\"20\" fill=\"none\" stroke-width=\"5\" stroke-dasharray=\"125.6\" stroke-dashoffset=\"40\"/></svg></div></div>"
+    },
+    {
+      "titulo": "Alerta neutral y con contorno",
+      "tag": ".nz-alert--neutral · --outline",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-alert nz-alert--neutral\"><span class=\"nz-alert__icon\">◍</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Sin novedades</span><span class=\"nz-alert__msg\">No hay cambios desde tu última visita.</span></div></div><div class=\"nz-alert nz-alert--outline\"><span class=\"nz-alert__icon\">ℹ</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Modo borrador</span><span class=\"nz-alert__msg\">Los cambios no se publican hasta que pulses Guardar.</span></div></div></div>"
+    },
+    {
+      "titulo": "Alerta pequeña y grande",
+      "tag": ".nz-alert--sm · --lg",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-alert nz-alert--sm nz-alert--success\"><span class=\"nz-alert__icon\">✓</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Guardado</span></div></div><div class=\"nz-alert nz-alert--lg nz-alert--info\"><span class=\"nz-alert__icon\">ℹ</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Actualización disponible</span><span class=\"nz-alert__msg\">Hay una versión nueva del catálogo con doce objetos más.</span></div></div></div>"
+    },
+    {
+      "titulo": "Alerta descartable con acción",
+      "tag": ".nz-alert--dismissible · __close · __action",
+      "markup": "<div class=\"nz-alert nz-alert--warning nz-alert--dismissible\"><span class=\"nz-alert__icon\">⚠</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Cuota casi agotada</span><span class=\"nz-alert__msg\">Te queda un 8 % del plan mensual.</span><button class=\"nz-alert__action\">Ampliar plan</button></div><button class=\"nz-alert__close\" aria-label=\"Descartar aviso\">✕</button></div>"
+    },
+    {
+      "titulo": "Alerta flotante",
+      "tag": ".nz-alert--floating",
+      "markup": "<div class=\"nz-alert nz-alert--floating nz-alert--brand\" style=\"position:static;transform:none\"><span class=\"nz-alert__icon\">◈</span><div class=\"nz-alert__body\"><span class=\"nz-alert__title\">Publicado</span><span class=\"nz-alert__msg\">Tu página ya está en línea.</span></div></div>"
+    },
+    {
+      "titulo": "Callouts de tono",
+      "tag": ".nz-callout--brand/--success/--note/--tip",
+      "markup": "<div class=\"nz-stack nz-stack--xs\"><div class=\"nz-callout nz-callout--brand\"><p>Marca: el azul se reserva para la acción principal.</p></div><div class=\"nz-callout nz-callout--success\"><p>Todo verificado, ningún enlace roto.</p></div><div class=\"nz-callout nz-callout--note\"><p>Nota: el naranja es el color secundario, nunca se funde con el azul.</p></div><div class=\"nz-callout nz-callout--tip\"><p>Truco: pulsa la barra para buscar cualquier objeto.</p></div></div>"
+    },
+    {
+      "titulo": "Badge con contorno, punto y contador",
+      "tag": ".nz-badge--outline/--dot/--counter",
+      "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-badge nz-badge--outline\">Borrador</span><span class=\"nz-badge nz-badge--success nz-badge--dot\"><i></i>En línea</span><span class=\"nz-badge nz-badge--counter\">7</span></div>"
+    },
+    {
+      "titulo": "Badge pequeño y grande",
+      "tag": ".nz-badge--sm · --lg",
+      "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-badge nz-badge--sm nz-badge--brand\">Nuevo</span><span class=\"nz-badge nz-badge--lg nz-badge--warning\">Pendiente de revisión</span></div>"
+    },
+    {
+      "titulo": "Chips de tono",
+      "tag": ".nz-chip--brand/--accent/--success/--danger",
+      "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-chip nz-chip--brand\">Marca</span><span class=\"nz-chip nz-chip--accent\">Acento</span><span class=\"nz-chip nz-chip--success\">Activo</span><span class=\"nz-chip nz-chip--danger\">Caído</span></div>"
+    },
+    {
+      "titulo": "Chips con punto, tamaños y quitables",
+      "tag": ".nz-chip__dot · --sm/--lg/--removable",
+      "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-chip nz-chip--sm\"><span class=\"nz-chip__dot\"></span>Pequeño</span><span class=\"nz-chip nz-chip--lg\"><span class=\"nz-chip__dot\"></span>Grande</span><span class=\"nz-chip nz-chip--brand nz-chip--removable\">Web<span class=\"nz-chip__x\">✕</span></span></div>"
+    },
+    {
+      "titulo": "Skeleton de texto, avatar, botón y gráfico",
+      "tag": ".nz-skeleton--text/--avatar/--button/--chart",
+      "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:20rem\"><div class=\"nz-skeleton nz-skeleton--text\"><div class=\"nz-skeleton__line\"></div><div class=\"nz-skeleton__line nz-skeleton__line--wide\"></div><div class=\"nz-skeleton__line nz-skeleton__line--muted\"></div></div><div class=\"nz-skeleton nz-skeleton--avatar\"><div class=\"nz-skeleton__block\"></div><div class=\"nz-skeleton__line nz-skeleton__line--title\"></div></div><div class=\"nz-skeleton nz-skeleton--button\"><div class=\"nz-skeleton__block\"></div></div><div class=\"nz-skeleton nz-skeleton--chart\"><div class=\"nz-skeleton__block\"></div></div></div>"
+    },
+    {
+      "titulo": "Empty pequeño, de marca y con borde",
+      "tag": ".nz-empty--sm/--brand/--bordered · __kbd",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-empty nz-empty--sm\"><span class=\"nz-empty__icon\">🔍</span><p class=\"nz-empty__title\">Sin coincidencias</p><p class=\"nz-empty__body\">Prueba con otra palabra.</p></div><div class=\"nz-empty nz-empty--brand\"><span class=\"nz-empty__icon\">✦</span><p class=\"nz-empty__title\">Empieza tu colección</p><p class=\"nz-empty__body\">Guarda objetos para tenerlos siempre a mano.</p><span class=\"nz-empty__kbd\">Pulsa <span class=\"nz-kbd\">S</span> para guardar</span></div><div class=\"nz-empty nz-empty--bordered\"><span class=\"nz-empty__icon\">📂</span><p class=\"nz-empty__title\">Carpeta vacía</p></div></div>"
+    },
+    {
+      "titulo": "Error inline",
+      "tag": ".nz-error · --brand/--offline",
+      "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:24rem\"><span class=\"nz-error\">No se pudo conectar con el servidor</span><span class=\"nz-error nz-error--brand\">Falta un permiso de marca</span><span class=\"nz-error nz-error--offline\">Sin conexión: se guardará al volver</span></div>"
+    },
+    {
+      "titulo": "Progreso fino, de marca y con etiqueta",
+      "tag": ".nz-progress--2xs/--brand/--with-label · __value/__caption",
+      "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:18rem\"><div class=\"nz-progress nz-progress--2xs nz-progress--brand\"><div class=\"nz-progress__bar\" style=\"width:30%\"></div></div><div class=\"nz-progress nz-progress--with-label\"><div class=\"nz-progress__bar\" style=\"width:72%\"></div><span class=\"nz-progress__value\">72 %</span></div><div class=\"nz-progress nz-progress--brand\"><div class=\"nz-progress__bar\" style=\"width:45%\"></div></div><div class=\"nz-progress__caption\"><span>Importando objetos</span><span>45 de 100</span></div></div>"
+    },
+    {
+      "titulo": "Meter: nivel dentro de un rango",
+      "tag": ".nz-meter · --brand/--success/--danger",
+      "markup": "<div class=\"nz-stack nz-stack--sm\" style=\"max-width:18rem\"><div class=\"nz-meter\"><div class=\"nz-meter__bar\" style=\"width:62%\"></div><span class=\"nz-meter__label\">62 %</span></div><div class=\"nz-meter nz-meter--brand\"><div class=\"nz-meter__bar\" style=\"width:38%\"></div><span class=\"nz-meter__label\">38 %</span></div><div class=\"nz-meter nz-meter--success\"><div class=\"nz-meter__bar\" style=\"width:80%\"></div><span class=\"nz-meter__label\">80 %</span></div><div class=\"nz-meter nz-meter--danger\"><div class=\"nz-meter__bar\" style=\"width:15%\"></div><span class=\"nz-meter__label\">15 %</span></div></div>"
+    },
+    {
+      "titulo": "Anillo pequeño, grande, éxito y aviso",
+      "tag": ".nz-ring--sm/--lg/--success/--warning",
+      "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><div class=\"nz-ring nz-ring--sm\"><svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"><circle class=\"nz-ring__track\" cx=\"20\" cy=\"20\" r=\"16\" fill=\"none\" stroke-width=\"4\"/><circle class=\"nz-ring__fill\" cx=\"20\" cy=\"20\" r=\"16\" fill=\"none\" stroke-width=\"4\" stroke-dasharray=\"100.5\" stroke-dashoffset=\"30\"/></svg><span class=\"nz-ring__label\">70</span></div><div class=\"nz-ring nz-ring--success\"><svg width=\"52\" height=\"52\" viewBox=\"0 0 52 52\"><circle class=\"nz-ring__track\" cx=\"26\" cy=\"26\" r=\"22\" fill=\"none\" stroke-width=\"5\"/><circle class=\"nz-ring__fill\" cx=\"26\" cy=\"26\" r=\"22\" fill=\"none\" stroke-width=\"5\" stroke-dasharray=\"138.2\" stroke-dashoffset=\"28\"/></svg><span class=\"nz-ring__label\">80</span></div><div class=\"nz-ring nz-ring--warning\"><svg width=\"52\" height=\"52\" viewBox=\"0 0 52 52\"><circle class=\"nz-ring__track\" cx=\"26\" cy=\"26\" r=\"22\" fill=\"none\" stroke-width=\"5\"/><circle class=\"nz-ring__fill\" cx=\"26\" cy=\"26\" r=\"22\" fill=\"none\" stroke-width=\"5\" stroke-dasharray=\"138.2\" stroke-dashoffset=\"96\"/></svg><span class=\"nz-ring__label\">30</span></div><div class=\"nz-ring nz-ring--lg\"><svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\"><circle class=\"nz-ring__track\" cx=\"36\" cy=\"36\" r=\"30\" fill=\"none\" stroke-width=\"7\"/><circle class=\"nz-ring__fill\" cx=\"36\" cy=\"36\" r=\"30\" fill=\"none\" stroke-width=\"7\" stroke-dasharray=\"188.5\" stroke-dashoffset=\"47\"/></svg><span class=\"nz-ring__label\">75 %</span></div></div>"
+    },
+    {
+      "titulo": "Spinner: tamaños y tonos",
+      "tag": ".nz-spinner--2xs/--sm/--lg/--brand/--accent",
+      "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><span class=\"nz-spinner nz-spinner--2xs\"></span><span class=\"nz-spinner nz-spinner--sm\"></span><span class=\"nz-spinner nz-spinner--brand\"></span><span class=\"nz-spinner nz-spinner--accent\"></span><span class=\"nz-spinner nz-spinner--lg\"></span></div>"
+    },
+    {
+      "titulo": "Spinner de puntos",
+      "tag": ".nz-spinner--dots",
+      "markup": "<div class=\"nz-cluster nz-cluster--compact\"><span class=\"nz-spinner nz-spinner--dots\"><i></i></span><span>Generando el informe…</span></div>"
+    },
+    {
+      "titulo": "Status bar de tonos",
+      "tag": ".nz-statusbar--brand/--info/--warning",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-statusbar nz-statusbar--brand\"><span>Publicando cambios</span><span class=\"nz-statusbar__spacer\"></span><span>62 %</span></div><div class=\"nz-statusbar nz-statusbar--info\"><span>Sincronizado hace 2 minutos</span></div><div class=\"nz-statusbar nz-statusbar--warning\"><span>Cuota al 92 %</span><span class=\"nz-statusbar__spacer\"></span><span>Ampliar</span></div></div>"
+    },
+    {
+      "titulo": "Toast de marca e informativo",
+      "tag": ".nz-toast--brand/--info · __title",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-toast nz-toast--brand is-on\" style=\"position:static;transform:none\"><span class=\"nz-toast__icon\">◈</span><span class=\"nz-toast__title\">Catálogo actualizado</span>Doce objetos nuevos.</div><div class=\"nz-toast nz-toast--info is-on\" style=\"position:static;transform:none\"><span class=\"nz-toast__icon\">ℹ</span>Sincronizando en segundo plano</div></div>"
+    },
+    {
+      "titulo": "Toast arriba y abajo con acción",
+      "tag": ".nz-toast--top/--bottom · __action",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-toast nz-toast--top is-on\" style=\"position:static;transform:none\">Se actualizó el tema</div><div class=\"nz-toast nz-toast--bottom is-on\" style=\"position:static;transform:none\"><span>Borrador guardado</span><button class=\"nz-toast__action\">Deshacer</button></div></div>"
+    },
+    {
+      "titulo": "Banner a ancho completo",
+      "tag": ".nz-banner · __body · --brand/--accent",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-banner\"><div class=\"nz-banner__body\">🎉 Ya está disponible Aurora 7.1</div></div><div class=\"nz-banner nz-banner--brand\"><div class=\"nz-banner__body\">Nuevo pack de gráficos incluido</div></div><div class=\"nz-banner nz-banner--accent\"><div class=\"nz-banner__body\">Prueba el modo oscuro desde la portada</div></div></div>"
+    },
+    {
+      "titulo": "Banner con acción y cierre",
+      "tag": ".nz-banner__action · __close",
+      "markup": "<div class=\"nz-banner\"><div class=\"nz-banner__body\">Usamos cookies para medir visitas</div><button class=\"nz-banner__action\">Aceptar</button><button class=\"nz-banner__close\" aria-label=\"Cerrar aviso\">✕</button></div>"
+    },
+    {
+      "titulo": "Barra de carga superior",
+      "tag": ".nz-loading-bar · __bar",
+      "markup": "<div class=\"nz-stack nz-stack--sm\"><div class=\"nz-loading-bar\" style=\"position:static\"><div class=\"nz-loading-bar__bar\"></div></div><span class=\"nz-text--small\">Cargando el catálogo…</span></div>"
+    },
+    {
+      "titulo": "Barra de sin conexión",
+      "tag": ".nz-offline-bar · __action",
+      "markup": "<div class=\"nz-offline-bar\"><span>Sin conexión</span><button class=\"nz-btn nz-btn--sm nz-btn--ghost nz-offline-bar__action\">Reintentar</button></div>"
+    },
+    {
+      "titulo": "Pulse: punto que late",
+      "tag": ".nz-pulse · --success/--danger",
+      "markup": "<div class=\"nz-cluster nz-cluster--spacious\"><span class=\"nz-pulse\"></span><span class=\"nz-pulse nz-pulse--success\"></span><span class=\"nz-pulse nz-pulse--danger\"></span><span>En directo</span></div>"
+    },
+    {
+      "titulo": "Cuenta atrás",
+      "tag": ".nz-countdown · __num · __label",
+      "markup": "<div class=\"nz-countdown\"><span class=\"nz-countdown__num\">01:24:36</span><span class=\"nz-countdown__label\">para el cierre</span></div>"
+    },
+    {
+      "titulo": "Cuenta atras · tono",
+      "tag": ".nz-countdown--warning / --danger / --success / --flat",
+      "markup": "<div class=\"nz-stack\"><span class=\"nz-countdown nz-countdown--warning\"><strong>05:00</strong> restantes</span><span class=\"nz-countdown nz-countdown--danger\"><strong>00:30</strong> restantes</span><span class=\"nz-countdown nz-countdown--success\"><strong>00:00</strong> cerrado</span><span class=\"nz-countdown nz-countdown--flat\"><strong>12:45</strong></span></div>"
+    },
+    {
+      "titulo": "Estado de error · tono",
+      "tag": ".nz-errorstate--neutral / --warning",
+      "markup": "<div class=\"nz-errorstate nz-errorstate--neutral\"><h3>Sin conexion</h3><p>Revisa tu red y reintenta.</p></div><div class=\"nz-errorstate nz-errorstate--warning\"><h3>Limite cerca</h3><p>Queda el 10% del almacenamiento.</p></div>"
+    },
+    {
+      "titulo": "Barra de carga · tono",
+      "tag": ".nz-loading-bar__bar--brand / --success / --warning / --danger",
+      "markup": "<div class=\"nz-stack\"><div class=\"nz-loading-bar\" role=\"progressbar\"><div class=\"nz-loading-bar__bar nz-loading-bar__bar--brand\"></div></div><div class=\"nz-loading-bar\" role=\"progressbar\"><div class=\"nz-loading-bar__bar nz-loading-bar__bar--success\"></div></div><div class=\"nz-loading-bar\" role=\"progressbar\"><div class=\"nz-loading-bar__bar nz-loading-bar__bar--warning\"></div></div><div class=\"nz-loading-bar\" role=\"progressbar\"><div class=\"nz-loading-bar__bar nz-loading-bar__bar--danger\"></div></div></div>"
+    }
+  ]
 }

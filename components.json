@@ -19,10 +19,10 @@
   "objetivoTactil": "44px"
  },
  "resumen": {
-  "objetos": 1829,
+  "objetos": 1850,
   "familias": 349,
   "categorias": 15,
-  "demos": 534,
+  "demos": 546,
   "tokens": 145,
   "tokensDark": 43
  },
@@ -67,18 +67,18 @@
    "categoria": 5,
    "nombre": "Formularios e inputs",
    "descripcion": "Inputs, textarea, select, check/radio/switch, range, OTP, búsqueda, grupos. Focus-ring accesible.",
-   "objetos": 97,
+   "objetos": 102,
    "familias": 20,
-   "demos": 40,
+   "demos": 44,
    "pagina": "paginas/05-forms.html"
   },
   "p6-feedback.css": {
    "categoria": 6,
    "nombre": "Feedback y estados",
    "descripcion": "Alertas, badges, chips, skeleton, empty/error, progreso y status. Feedback claro con tokens semánticos.",
-   "objetos": 143,
+   "objetos": 153,
    "familias": 19,
-   "demos": 49,
+   "demos": 52,
    "pagina": "paginas/06-feedback.html"
   },
   "p7-overlays.css": {
@@ -148,9 +148,9 @@
    "categoria": 14,
    "nombre": "IA y agentes",
    "descripcion": "Conversación, streaming, herramientas, aprobación humana, diferencias, citas, razonamiento, agentes, ejecuciones, evaluación y coste. La interfaz de la IA sin brillos ni humo: jerarquía, estado y control.",
-   "objetos": 174,
+   "objetos": 180,
    "familias": 28,
-   "demos": 26,
+   "demos": 31,
    "pagina": "paginas/14-ai.html"
   },
   "p15-apps.css": {
@@ -3155,9 +3155,20 @@
    "demo": "paginas/05-forms.html",
    "clases": [
     "nz-fieldset",
+    "nz-fieldset--compact",
+    "nz-fieldset--danger",
+    "nz-fieldset--inline",
+    "nz-fieldset--plain",
+    "nz-fieldset--spacious",
     "nz-fieldset__leyenda"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "compact",
+    "danger",
+    "inline",
+    "plain",
+    "spacious"
+   ],
    "partes": [
     "leyenda"
    ]
@@ -3645,10 +3656,19 @@
    "demo": "paginas/06-feedback.html",
    "clases": [
     "nz-countdown",
+    "nz-countdown--danger",
+    "nz-countdown--flat",
+    "nz-countdown--success",
+    "nz-countdown--warning",
     "nz-countdown__label",
     "nz-countdown__num"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "danger",
+    "flat",
+    "success",
+    "warning"
+   ],
    "partes": [
     "label",
     "num"
@@ -3703,11 +3723,16 @@
    "demo": "paginas/06-feedback.html",
    "clases": [
     "nz-errorstate",
+    "nz-errorstate--neutral",
+    "nz-errorstate--warning",
     "nz-errorstate__body",
     "nz-errorstate__code",
     "nz-errorstate__title"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "neutral",
+    "warning"
+   ],
    "partes": [
     "body",
     "code",
@@ -3720,11 +3745,24 @@
    "demo": "paginas/06-feedback.html",
    "clases": [
     "nz-loading-bar",
-    "nz-loading-bar__bar"
+    "nz-loading-bar__bar",
+    "nz-loading-bar__bar--brand",
+    "nz-loading-bar__bar--danger",
+    "nz-loading-bar__bar--success",
+    "nz-loading-bar__bar--warning"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "brand",
+    "danger",
+    "success",
+    "warning"
+   ],
    "partes": [
-    "bar"
+    "bar",
+    "bar--brand",
+    "bar--danger",
+    "bar--success",
+    "bar--warning"
    ]
   },
   "nz-meter": {
@@ -7166,6 +7204,7 @@
    "clases": [
     "nz-chat",
     "nz-chat--bordered",
+    "nz-chat--compacto",
     "nz-chat--sm",
     "nz-chat__body",
     "nz-chat__empty",
@@ -7178,6 +7217,7 @@
    ],
    "modificadores": [
     "bordered",
+    "compacto",
     "sm"
    ],
    "partes": [
@@ -7472,9 +7512,14 @@
    "demo": "paginas/14-ai.html",
    "clases": [
     "nz-msg",
+    "nz-msg--asistente",
     "nz-msg--assistant",
+    "nz-msg--danger",
     "nz-msg--error",
+    "nz-msg--neutral",
+    "nz-msg--success",
     "nz-msg--user",
+    "nz-msg--usuario",
     "nz-msg__actions",
     "nz-msg__author",
     "nz-msg__avatar",
@@ -7486,9 +7531,14 @@
     "nz-msg__time"
    ],
    "modificadores": [
+    "asistente",
     "assistant",
+    "danger",
     "error",
+    "neutral",
+    "success",
     "user",
+    "usuario",
     "on"
    ],
    "partes": [

@@ -260,3 +260,21 @@
 @media (prefers-reduced-motion: reduce) {
   .nz-msg__caret--on, .nz-thinking__dot, .nz-stream-status--live .nz-stream-status__dot { animation: none; }
 }
+
+
+/* ============================================================
+   Variantes de tono y estado (lexico cerrado)                  */
+.nz-msg--usuario .nz-msg__bubble { background: var(--nz-brand-soft); border-color: var(--nz-brand); }
+.nz-msg--asistente .nz-msg__bubble { background: var(--nz-surface); }
+.nz-msg--neutral .nz-msg__bubble { background: var(--nz-bg-inset); }
+.nz-msg--danger .nz-msg__bubble { background: var(--nz-danger-soft); border-color: var(--nz-danger); }
+.nz-msg--success .nz-msg__bubble { background: var(--nz-success-soft); border-color: var(--nz-success); }
+.nz-toolcall.is-error { border-color: var(--nz-danger); background: var(--nz-danger-soft); }
+.nz-toolcall.is-done { border-color: var(--nz-success); }
+.nz-approval.is-done { border-color: var(--nz-success); background: var(--nz-success-soft); }
+.nz-approval.is-rejected { border-color: var(--nz-danger); background: var(--nz-danger-soft); }
+.nz-attach__item.is-error { color: var(--nz-danger); }
+.nz-attach__item.is-uploading { color: var(--nz-text-mute); }
+.nz-chat--compacto .nz-chat__body { gap: var(--nz-space-2); padding: var(--nz-space-2) var(--nz-space-3); }
+.nz-chat--compacto .nz-msg { gap: var(--nz-space-2); }
+.nz-chat--compacto .nz-msg__bubble { padding: var(--nz-space-2) var(--nz-space-3); font-size: var(--nz-text-sm); }

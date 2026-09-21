@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Aurora 7 · 14 IA y agentes · 174 objetos</title>
+<title>Aurora 7 · 14 IA y agentes · 180 objetos</title>
 <meta name="description" content="Conversación, streaming, herramientas, aprobación humana, diferencias, citas, razonamiento, agentes, ejecuciones, evaluación y coste. La interfaz de la IA sin brillos ni humo: jerarquía, estado y control.">
 <link rel="stylesheet" href="../tokens.css">
 <link rel="stylesheet" href="../packs/p0-catalog.css">
@@ -18,7 +18,7 @@
 <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
 <header class="cat-topbar">
 <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
-<span class="cat-count">14 · 174 objetos · 26 demos</span>
+<span class="cat-count">14 · 180 objetos · 31 demos</span>
 <span class="cat-topbar__tools">
 <a class="cat-icobtn" href="../index.html" title="Portada" aria-label="Volver a la portada">⌂</a>
 <button class="cat-icobtn" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
@@ -43,13 +43,13 @@
 </nav>
 <main class="nz-container cat-main" id="contenido">
   <div class="cat-pagehead">
-    <p class="cat-pagehead__over">Categoría 14 de 15 · 174 objetos · 26 demos</p>
+    <p class="cat-pagehead__over">Categoría 14 de 15 · 180 objetos · 31 demos</p>
     <h1>IA y agentes</h1>
     <p>Conversación, streaming, herramientas, aprobación humana, diferencias, citas, razonamiento, agentes, ejecuciones, evaluación y coste. La interfaz de la IA sin brillos ni humo: jerarquía, estado y control.</p>
     <div class="cat-pagehead__stats">
-      <span class="nz-badge nz-badge--brand"><i></i>174 objetos</span>
+      <span class="nz-badge nz-badge--brand"><i></i>180 objetos</span>
       <span class="nz-badge nz-badge--neutral">28 familias</span>
-      <span class="nz-badge nz-badge--accent">26 demos en vivo</span>
+      <span class="nz-badge nz-badge--accent">31 demos en vivo</span>
       <span class="nz-badge nz-badge--neutral">32 clases distintas usadas</span>
       <a class="nz-badge nz-badge--brand" href="../packs/p14-ai.css">p14-ai.css</a>
     </div>
@@ -58,7 +58,7 @@
     <div class="cat-search">
       <span class="cat-search__icon" aria-hidden="true">⌕</span>
       <input class="cat-search__input" id="catBuscar" type="search" placeholder="Buscar en esta categoría… (pulsa /)" aria-label="Buscar objeto en esta categoría">
-      <span class="cat-search__count" id="catContador">26 objetos</span>
+      <span class="cat-search__count" id="catContador">31 objetos</span>
     </div>
     <div class="cat-filters" role="group" aria-label="Filtrar por familia de objeto"><button type="button" class="cat-filters__chip" data-filtro="todo" aria-pressed="true">Todo</button>
       <button type="button" class="cat-filters__chip" data-filtro="nz-agent-card" aria-pressed="false">.agent-card</button>
@@ -236,6 +236,36 @@
       <div class="nz-stack nz-stack--sm"><div class="nz-chat nz-chat--sm"><div class="nz-chat__empty"><b>Empieza una conversación</b><span>Pregunta lo que necesites sobre los pliegos.</span><div class="nz-chat__suggests"><button class="nz-chat__suggest">Resume un pliego</button><button class="nz-chat__suggest">Compara dos lotes</button><button class="nz-chat__suggest">Busca por importe</button></div></div></div><div class="nz-chat-empty"><span class="nz-chat-empty__icon">◈</span><span class="nz-chat-empty__title">Tu asistente de licitaciones</span><p class="nz-chat-empty__text">Lee pliegos, extrae requisitos y redacta borradores con citas verificables.</p><div class="nz-chat-empty__suggests"><button class="nz-chat__suggest">Ver ejemplo</button><button class="nz-chat__suggest">Cómo funciona</button></div></div></div>
     </div>
   </section>
+  <section class="cat-demo cat-in" data-cat="nz-msg">
+    <div class="cat-demo__title"><span class="cat-demo__num">27</span><span class="cat-demo__name">Mensaje · tono del interlocutor</span><span class="cat-demo__tag">.nz-msg--usuario / --asistente / --danger</span></div>
+    <div class="cat-stage">
+      <div class="nz-msg nz-msg--usuario"><span class="nz-msg__avatar" aria-hidden="true"></span><div class="nz-msg__body"><div class="nz-msg__author">usuario</div><div class="nz-msg__bubble"><p class="nz-msg__text">Mensaje de ejemplo con tono usuario.</p></div></div></div><div class="nz-msg nz-msg--asistente"><span class="nz-msg__avatar" aria-hidden="true"></span><div class="nz-msg__body"><div class="nz-msg__author">asistente</div><div class="nz-msg__bubble"><p class="nz-msg__text">Mensaje de ejemplo con tono asistente.</p></div></div></div><div class="nz-msg nz-msg--danger"><span class="nz-msg__avatar" aria-hidden="true"></span><div class="nz-msg__body"><div class="nz-msg__author">danger</div><div class="nz-msg__bubble"><p class="nz-msg__text">Mensaje de ejemplo con tono danger.</p></div></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-toolcall">
+    <div class="cat-demo__title"><span class="cat-demo__num">28</span><span class="cat-demo__name">Herramienta · estados</span><span class="cat-demo__tag">.nz-toolcall.is-done / .is-error</span></div>
+    <div class="cat-stage">
+      <div class="nz-toolcall is-done"><div class="nz-toolcall__head"><span class="nz-toolcall__name">buscar</span><span class="nz-toolcall__status nz-toolcall__status--ok">completado</span></div><div class="nz-toolcall__result">12 resultados</div></div><div class="nz-toolcall is-error"><div class="nz-toolcall__head"><span class="nz-toolcall__name">escribir_fichero</span><span class="nz-toolcall__status nz-toolcall__status--error">error</span></div><div class="nz-toolcall__result">Permiso denegado</div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-approval nz-btn nz-msg">
+    <div class="cat-demo__title"><span class="cat-demo__num">29</span><span class="cat-demo__name">Aprobacion · resuelta y rechazada</span><span class="cat-demo__tag">.nz-approval.is-done / .is-rejected</span></div>
+    <div class="cat-stage">
+      <div class="nz-approval is-done"><h4>Ejecutar migracion</h4><p>Aprobada hace 2 min.</p><div class="nz-msg__actions"><span class="nz-btn nz-btn--sm nz-btn--success">Aprobada</span></div></div><div class="nz-approval is-rejected"><h4>Borrar ficheros</h4><p>Rechazada por el usuario.</p><div class="nz-msg__actions"><span class="nz-btn nz-btn--sm nz-btn--danger">Rechazada</span></div></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-attach nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">30</span><span class="cat-demo__name">Adjuntos · estado</span><span class="cat-demo__tag">.nz-attach__item.is-uploading / .is-error</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack"><span class="nz-attach__item is-uploading">informe.pdf · subiendo</span><span class="nz-attach__item is-error">foto.png · fallo</span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-chat nz-msg">
+    <div class="cat-demo__title"><span class="cat-demo__num">31</span><span class="cat-demo__name">Chat compacto</span><span class="cat-demo__tag">.nz-chat--compacto</span></div>
+    <div class="cat-stage">
+      <div class="nz-chat nz-chat--compacto"><div class="nz-chat__head"><span class="nz-chat__title">Soporte</span><span class="nz-chat__status">en linea</span></div><div class="nz-chat__body"><div class="nz-msg nz-msg--usuario"><span class="nz-msg__avatar" aria-hidden="true"></span><div class="nz-msg__body"><div class="nz-msg__author">usuario</div><div class="nz-msg__bubble"><p class="nz-msg__text">Mensaje de ejemplo con tono usuario.</p></div></div></div><div class="nz-msg nz-msg--asistente"><span class="nz-msg__avatar" aria-hidden="true"></span><div class="nz-msg__body"><div class="nz-msg__author">asistente</div><div class="nz-msg__bubble"><p class="nz-msg__text">Mensaje de ejemplo con tono asistente.</p></div></div></div></div></div>
+    </div>
+  </section>
   <div class="cat-empty" id="catVacio" hidden><b>Nada por aquí</b>Prueba con otro término o quita el filtro.</div>
 </main>
 <div class="cat-nav-pages" style="justify-content:center;border-top:1px solid var(--nz-border-soft)">
@@ -243,7 +273,7 @@
   <a href="15-apps.html">15 Apps y escritorio →</a>
 </div>
 <footer class="cat-footer">
-  Aurora 7 · Design System Ntizar · Categoría 14 de 15 · 1829 objetos · 534 demos · Hecho con ❤️ por David Antizar
+  Aurora 7 · Design System Ntizar · Categoría 14 de 15 · 1850 objetos · 546 demos · Hecho con ❤️ por David Antizar
 </footer>
 <script src="../js/catalog.js"></script>
 </body>

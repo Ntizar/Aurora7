@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Aurora 7 · 05 Formularios e inputs · 97 objetos</title>
+<title>Aurora 7 · 05 Formularios e inputs · 102 objetos</title>
 <meta name="description" content="Inputs, textarea, select, check/radio/switch, range, OTP, búsqueda, grupos. Focus-ring accesible.">
 <link rel="stylesheet" href="../tokens.css">
 <link rel="stylesheet" href="../packs/p0-catalog.css">
@@ -17,7 +17,7 @@
 <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
 <header class="cat-topbar">
 <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
-<span class="cat-count">05 · 97 objetos · 40 demos</span>
+<span class="cat-count">05 · 102 objetos · 44 demos</span>
 <span class="cat-topbar__tools">
 <a class="cat-icobtn" href="../index.html" title="Portada" aria-label="Volver a la portada">⌂</a>
 <button class="cat-icobtn" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
@@ -42,13 +42,13 @@
 </nav>
 <main class="nz-container cat-main" id="contenido">
   <div class="cat-pagehead">
-    <p class="cat-pagehead__over">Categoría 05 de 15 · 97 objetos · 40 demos</p>
+    <p class="cat-pagehead__over">Categoría 05 de 15 · 102 objetos · 44 demos</p>
     <h1>Formularios e inputs</h1>
     <p>Inputs, textarea, select, check/radio/switch, range, OTP, búsqueda, grupos. Focus-ring accesible.</p>
     <div class="cat-pagehead__stats">
-      <span class="nz-badge nz-badge--brand"><i></i>97 objetos</span>
+      <span class="nz-badge nz-badge--brand"><i></i>102 objetos</span>
       <span class="nz-badge nz-badge--neutral">20 familias</span>
-      <span class="nz-badge nz-badge--accent">40 demos en vivo</span>
+      <span class="nz-badge nz-badge--accent">44 demos en vivo</span>
       <span class="nz-badge nz-badge--neutral">23 clases distintas usadas</span>
       <a class="nz-badge nz-badge--brand" href="../packs/p5-forms.css">p5-forms.css</a>
     </div>
@@ -57,7 +57,7 @@
     <div class="cat-search">
       <span class="cat-search__icon" aria-hidden="true">⌕</span>
       <input class="cat-search__input" id="catBuscar" type="search" placeholder="Buscar en esta categoría… (pulsa /)" aria-label="Buscar objeto en esta categoría">
-      <span class="cat-search__count" id="catContador">40 objetos</span>
+      <span class="cat-search__count" id="catContador">44 objetos</span>
     </div>
     <div class="cat-filters" role="group" aria-label="Filtrar por familia de objeto"><button type="button" class="cat-filters__chip" data-filtro="todo" aria-pressed="true">Todo</button>
       <button type="button" class="cat-filters__chip" data-filtro="nz-btn" aria-pressed="false">.btn</button>
@@ -319,6 +319,30 @@
       <fieldset class="nz-fieldset"><legend class="nz-fieldset__leyenda">Dirección de entrega</legend><div class="nz-formgrid nz-formgrid--3"><label class="nz-field"><span class="nz-field__label nz-field__label--req">Calle</span><input class="nz-input" placeholder="Gran Vía"></label><label class="nz-field"><span class="nz-field__label">Número</span><input class="nz-input" placeholder="28"></label><label class="nz-field"><span class="nz-field__label">Piso</span><input class="nz-input" placeholder="3º B"></label></div></fieldset>
     </div>
   </section>
+  <section class="cat-demo cat-in" data-cat="nz-fieldset nz-input nz-label">
+    <div class="cat-demo__title"><span class="cat-demo__num">41</span><span class="cat-demo__name">Fieldset · densidad y disposicion</span><span class="cat-demo__tag">.nz-fieldset--compact / --spacious / --inline / --plain</span></div>
+    <div class="cat-stage">
+      <div class="nz-fieldset--compact nz-fieldset"><label class="nz-label" for="c1">Compacto</label><input class="nz-input nz-input--sm" id="c1"></div><div class="nz-fieldset--spacious nz-fieldset"><label class="nz-label" for="c2">Amplio</label><input class="nz-input" id="c2"></div><div class="nz-fieldset--inline nz-fieldset"><label class="nz-label" for="c3">Ciudad</label><input class="nz-input nz-input--sm" id="c3"></div><div class="nz-fieldset--plain nz-fieldset"><label class="nz-label" for="c4">Plano</label><input class="nz-input" id="c4"></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-fieldset nz-input">
+    <div class="cat-demo__title"><span class="cat-demo__num">42</span><span class="cat-demo__name">Fieldset semantico</span><span class="cat-demo__tag">.nz-fieldset--danger</span></div>
+    <div class="cat-stage">
+      <div class="nz-fieldset--danger nz-fieldset"><span class="nz-fieldset__leyenda">Datos fiscales</span><input class="nz-input nz-input--error" aria-invalid="true" value="X-9321"></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-input nz-password">
+    <div class="cat-demo__title"><span class="cat-demo__num">43</span><span class="cat-demo__name">Contrasena · revelada</span><span class="cat-demo__tag">.nz-password.is-revealed</span></div>
+    <div class="cat-stage">
+      <div class="nz-password is-revealed"><input class="nz-input" type="text" value="Secreta-1234"><button class="nz-password__toggle" type="button" aria-label="Ocultar">Ocultar</button></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-filezona">
+    <div class="cat-demo__title"><span class="cat-demo__num">44</span><span class="cat-demo__name">Zona de archivos · resultado</span><span class="cat-demo__tag">.nz-filezona.is-error / .is-success</span></div>
+    <div class="cat-stage">
+      <div class="nz-filezona is-success"><span class="nz-filezona__icono" aria-hidden="true">OK</span><span class="nz-filezona__texto">plan.pdf cargado</span></div><div class="nz-filezona is-error"><span class="nz-filezona__icono" aria-hidden="true">X</span><span class="nz-filezona__texto">modelo.obj supera 10 MB</span></div>
+    </div>
+  </section>
   <div class="cat-empty" id="catVacio" hidden><b>Nada por aquí</b>Prueba con otro término o quita el filtro.</div>
 </main>
 <div class="cat-nav-pages" style="justify-content:center;border-top:1px solid var(--nz-border-soft)">
@@ -326,7 +350,7 @@
   <a href="06-feedback.html">06 Feedback y estados →</a>
 </div>
 <footer class="cat-footer">
-  Aurora 7 · Design System Ntizar · Categoría 05 de 15 · 1829 objetos · 534 demos · Hecho con ❤️ por David Antizar
+  Aurora 7 · Design System Ntizar · Categoría 05 de 15 · 1850 objetos · 546 demos · Hecho con ❤️ por David Antizar
 </footer>
 <script src="../js/catalog.js"></script>
 </body>

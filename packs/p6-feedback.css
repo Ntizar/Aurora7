@@ -250,3 +250,17 @@
 .nz-statusbar--brand { background: var(--nz-brand-soft); color: var(--nz-brand); }
 .nz-statusbar--info { background: var(--nz-info-soft); color: var(--nz-info); }
 .nz-statusbar--warning { background: var(--nz-warning-soft); color: var(--nz-warning); }
+
+
+/* ============================================================
+   Tono semantico de contadores, cargas y estados               */
+.nz-countdown--warning { background: var(--nz-warning-soft); color: var(--nz-warning); }
+.nz-countdown--danger { background: var(--nz-danger-soft); color: var(--nz-danger); }
+.nz-countdown--success { background: var(--nz-success-soft); color: var(--nz-success); }
+.nz-countdown--flat { background: transparent; padding-inline: 0; }
+.nz-errorstate--neutral { background: var(--nz-bg-soft); }
+.nz-errorstate--warning { background: var(--nz-warning-soft); }
+.nz-loading-bar__bar--brand { background: var(--nz-brand); }
+.nz-loading-bar__bar--success { background: var(--nz-success); }
+.nz-loading-bar__bar--warning { background: var(--nz-warning); }
+.nz-loading-bar__bar--danger { background: var(--nz-danger); }

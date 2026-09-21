@@ -1,11 +1,11 @@
 {
  "resumen": {
-  "objetos_declarados": 1829,
+  "objetos_declarados": 1850,
   "familias": 349,
-  "demos": 534,
+  "demos": 546,
   "categorias": 15,
-  "clases_usadas_en_demos": 1829,
-  "clases_sin_demo": 0,
+  "clases_usadas_en_demos": 1848,
+  "clases_sin_demo": 2,
   "familias_sin_demo": 0,
   "fantasmas": 0,
   "duplicados": 0,
@@ -14,7 +14,7 @@
   "glass": 0,
   "gradientes": 0,
   "important": 1,
-  "familias_sin_variantes": 137,
+  "familias_sin_variantes": 133,
   "packs": 15
  },
  "packs": {
@@ -69,9 +69,9 @@
    "important": 0
   },
   "p14-ai.css": {
-   "lineas": 263,
-   "bytes": 22552,
-   "clases": 174,
+   "lineas": 281,
+   "bytes": 23871,
+   "clases": 180,
    "familias": 28,
    "hex": 0,
    "gradientes": 0,
@@ -119,9 +119,9 @@
    "important": 0
   },
   "p5-forms.css": {
-   "lineas": 260,
-   "bytes": 21887,
-   "clases": 97,
+   "lineas": 272,
+   "bytes": 22760,
+   "clases": 102,
    "familias": 20,
    "hex": 0,
    "gradientes": 0,
@@ -129,9 +129,9 @@
    "important": 0
   },
   "p6-feedback.css": {
-   "lineas": 253,
-   "bytes": 23300,
-   "clases": 143,
+   "lineas": 267,
+   "bytes": 24142,
+   "clases": 153,
    "familias": 19,
    "hex": 0,
    "gradientes": 0,
@@ -209,8 +209,8 @@
   "5": {
    "nombre": "Formularios e inputs",
    "pack": "p5-forms.css",
-   "demos": 40,
-   "objetos": 97,
+   "demos": 44,
+   "objetos": 102,
    "familias": 20,
    "sin_demo": [],
    "familias_sin_demo": []
@@ -218,8 +218,8 @@
   "6": {
    "nombre": "Feedback y estados",
    "pack": "p6-feedback.css",
-   "demos": 49,
-   "objetos": 143,
+   "demos": 52,
+   "objetos": 153,
    "familias": 19,
    "sin_demo": [],
    "familias_sin_demo": []
@@ -290,10 +290,13 @@
   "14": {
    "nombre": "IA y agentes",
    "pack": "p14-ai.css",
-   "demos": 26,
-   "objetos": 174,
+   "demos": 31,
+   "objetos": 180,
    "familias": 28,
-   "sin_demo": [],
+   "sin_demo": [
+    "nz-msg--neutral",
+    "nz-msg--success"
+   ],
    "familias_sin_demo": []
   },
   "15": {
@@ -1260,9 +1263,10 @@
   "nz-chat": {
    "cat": 14,
    "pack": "p14-ai.css",
-   "n_clases": 11,
+   "n_clases": 12,
    "mods": [
     "bordered",
+    "compacto",
     "sm"
    ],
    "partes": [
@@ -1595,8 +1599,13 @@
   "nz-countdown": {
    "cat": 6,
    "pack": "p6-feedback.css",
-   "n_clases": 3,
-   "mods": [],
+   "n_clases": 7,
+   "mods": [
+    "danger",
+    "flat",
+    "success",
+    "warning"
+   ],
    "partes": [
     "label",
     "num"
@@ -1920,8 +1929,11 @@
   "nz-errorstate": {
    "cat": 6,
    "pack": "p6-feedback.css",
-   "n_clases": 4,
-   "mods": [],
+   "n_clases": 6,
+   "mods": [
+    "neutral",
+    "warning"
+   ],
    "partes": [
     "body",
     "code",
@@ -2004,8 +2016,14 @@
   "nz-fieldset": {
    "cat": 5,
    "pack": "p5-forms.css",
-   "n_clases": 2,
-   "mods": [],
+   "n_clases": 7,
+   "mods": [
+    "compact",
+    "danger",
+    "inline",
+    "plain",
+    "spacious"
+   ],
    "partes": [
     "leyenda"
    ],
@@ -2805,10 +2823,19 @@
   "nz-loading-bar": {
    "cat": 6,
    "pack": "p6-feedback.css",
-   "n_clases": 2,
-   "mods": [],
+   "n_clases": 6,
+   "mods": [
+    "brand",
+    "danger",
+    "success",
+    "warning"
+   ],
    "partes": [
-    "bar"
+    "bar",
+    "bar--brand",
+    "bar--danger",
+    "bar--success",
+    "bar--warning"
    ],
    "demostrado": true
   },
@@ -3115,12 +3142,17 @@
   "nz-msg": {
    "cat": 14,
    "pack": "p14-ai.css",
-   "n_clases": 13,
+   "n_clases": 18,
    "mods": [
+    "asistente",
     "assistant",
+    "danger",
     "error",
+    "neutral",
     "on",
-    "user"
+    "success",
+    "user",
+    "usuario"
    ],
    "partes": [
     "actions",
@@ -5232,13 +5264,10 @@
   "nz-columns-2",
   "nz-columns-3",
   "nz-compare-bar",
-  "nz-countdown",
   "nz-dateline",
   "nz-dock",
   "nz-docs",
-  "nz-errorstate",
   "nz-eyebrow",
-  "nz-fieldset",
   "nz-figura",
   "nz-filezona",
   "nz-focus-accent",
@@ -5257,7 +5286,6 @@
   "nz-inspector",
   "nz-kanban",
   "nz-launcher",
-  "nz-loading-bar",
   "nz-logos",
   "nz-maintenance-banner",
   "nz-mapa-placeholder",

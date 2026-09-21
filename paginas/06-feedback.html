@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Aurora 7 · 06 Feedback y estados · 143 objetos</title>
+<title>Aurora 7 · 06 Feedback y estados · 153 objetos</title>
 <meta name="description" content="Alertas, badges, chips, skeleton, empty/error, progreso y status. Feedback claro con tokens semánticos.">
 <link rel="stylesheet" href="../tokens.css">
 <link rel="stylesheet" href="../packs/p0-catalog.css">
@@ -17,7 +17,7 @@
 <a class="nz-skip-link" href="#contenido">Saltar al contenido</a>
 <header class="cat-topbar">
 <a class="cat-brandmark" href="../index.html"><i></i><i></i> Aurora 7</a>
-<span class="cat-count">06 · 143 objetos · 49 demos</span>
+<span class="cat-count">06 · 153 objetos · 52 demos</span>
 <span class="cat-topbar__tools">
 <a class="cat-icobtn" href="../index.html" title="Portada" aria-label="Volver a la portada">⌂</a>
 <button class="cat-icobtn" id="btnTheme" aria-label="Cambiar tema" title="Light / Dark">◐</button>
@@ -42,13 +42,13 @@
 </nav>
 <main class="nz-container cat-main" id="contenido">
   <div class="cat-pagehead">
-    <p class="cat-pagehead__over">Categoría 06 de 15 · 143 objetos · 49 demos</p>
+    <p class="cat-pagehead__over">Categoría 06 de 15 · 153 objetos · 52 demos</p>
     <h1>Feedback y estados</h1>
     <p>Alertas, badges, chips, skeleton, empty/error, progreso y status. Feedback claro con tokens semánticos.</p>
     <div class="cat-pagehead__stats">
-      <span class="nz-badge nz-badge--brand"><i></i>143 objetos</span>
+      <span class="nz-badge nz-badge--brand"><i></i>153 objetos</span>
       <span class="nz-badge nz-badge--neutral">19 familias</span>
-      <span class="nz-badge nz-badge--accent">49 demos en vivo</span>
+      <span class="nz-badge nz-badge--accent">52 demos en vivo</span>
       <span class="nz-badge nz-badge--neutral">24 clases distintas usadas</span>
       <a class="nz-badge nz-badge--brand" href="../packs/p6-feedback.css">p6-feedback.css</a>
     </div>
@@ -57,7 +57,7 @@
     <div class="cat-search">
       <span class="cat-search__icon" aria-hidden="true">⌕</span>
       <input class="cat-search__input" id="catBuscar" type="search" placeholder="Buscar en esta categoría… (pulsa /)" aria-label="Buscar objeto en esta categoría">
-      <span class="cat-search__count" id="catContador">49 objetos</span>
+      <span class="cat-search__count" id="catContador">52 objetos</span>
     </div>
     <div class="cat-filters" role="group" aria-label="Filtrar por familia de objeto"><button type="button" class="cat-filters__chip" data-filtro="todo" aria-pressed="true">Todo</button>
       <button type="button" class="cat-filters__chip" data-filtro="nz-alert" aria-pressed="false">.alert</button>
@@ -373,6 +373,24 @@
       <div class="nz-countdown"><span class="nz-countdown__num">01:24:36</span><span class="nz-countdown__label">para el cierre</span></div>
     </div>
   </section>
+  <section class="cat-demo cat-in" data-cat="nz-countdown nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">50</span><span class="cat-demo__name">Cuenta atras · tono</span><span class="cat-demo__tag">.nz-countdown--warning / --danger / --success / --flat</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack"><span class="nz-countdown nz-countdown--warning"><strong>05:00</strong> restantes</span><span class="nz-countdown nz-countdown--danger"><strong>00:30</strong> restantes</span><span class="nz-countdown nz-countdown--success"><strong>00:00</strong> cerrado</span><span class="nz-countdown nz-countdown--flat"><strong>12:45</strong></span></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-errorstate">
+    <div class="cat-demo__title"><span class="cat-demo__num">51</span><span class="cat-demo__name">Estado de error · tono</span><span class="cat-demo__tag">.nz-errorstate--neutral / --warning</span></div>
+    <div class="cat-stage">
+      <div class="nz-errorstate nz-errorstate--neutral"><h3>Sin conexion</h3><p>Revisa tu red y reintenta.</p></div><div class="nz-errorstate nz-errorstate--warning"><h3>Limite cerca</h3><p>Queda el 10% del almacenamiento.</p></div>
+    </div>
+  </section>
+  <section class="cat-demo cat-in" data-cat="nz-loading-bar nz-stack">
+    <div class="cat-demo__title"><span class="cat-demo__num">52</span><span class="cat-demo__name">Barra de carga · tono</span><span class="cat-demo__tag">.nz-loading-bar__bar--brand / --success / --warning / --danger</span></div>
+    <div class="cat-stage">
+      <div class="nz-stack"><div class="nz-loading-bar" role="progressbar"><div class="nz-loading-bar__bar nz-loading-bar__bar--brand"></div></div><div class="nz-loading-bar" role="progressbar"><div class="nz-loading-bar__bar nz-loading-bar__bar--success"></div></div><div class="nz-loading-bar" role="progressbar"><div class="nz-loading-bar__bar nz-loading-bar__bar--warning"></div></div><div class="nz-loading-bar" role="progressbar"><div class="nz-loading-bar__bar nz-loading-bar__bar--danger"></div></div></div>
+    </div>
+  </section>
   <div class="cat-empty" id="catVacio" hidden><b>Nada por aquí</b>Prueba con otro término o quita el filtro.</div>
 </main>
 <div class="cat-nav-pages" style="justify-content:center;border-top:1px solid var(--nz-border-soft)">
@@ -380,7 +398,7 @@
   <a href="07-overlays.html">07 Overlays y diálogo →</a>
 </div>
 <footer class="cat-footer">
-  Aurora 7 · Design System Ntizar · Categoría 06 de 15 · 1829 objetos · 534 demos · Hecho con ❤️ por David Antizar
+  Aurora 7 · Design System Ntizar · Categoría 06 de 15 · 1850 objetos · 546 demos · Hecho con ❤️ por David Antizar
 </footer>
 <script src="../js/catalog.js"></script>
 </body>

@@ -257,3 +257,15 @@
 @media (forced-colors: active) {
   .nz-input, .nz-select, .nz-textarea, .nz-checkbox__box, .nz-radio__dot, .nz-switch__track { border: var(--nz-border-w) solid CanvasText; }
 }
+
+
+/* ============================================================
+   Variantes de fieldset y estado de subida (lexico cerrado)    */
+.nz-fieldset--compact { gap: var(--nz-space-2); padding: var(--nz-space-3); }
+.nz-fieldset--spacious { gap: var(--nz-space-5); padding: var(--nz-space-6); }
+.nz-fieldset--inline { flex-direction: row; flex-wrap: wrap; align-items: end; }
+.nz-fieldset--plain { background: transparent; border-color: transparent; padding-inline: 0; }
+.nz-fieldset--danger { border-color: var(--nz-danger); background: var(--nz-danger-soft); }
+.nz-password.is-revealed .nz-password__toggle { color: var(--nz-brand); }
+.nz-filezona.is-error { border-color: var(--nz-danger); background: var(--nz-danger-soft); color: var(--nz-danger); }
+.nz-filezona.is-success { border-color: var(--nz-success); background: var(--nz-success-soft); color: var(--nz-success); }
