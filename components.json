@@ -4,7 +4,7 @@
  "type": "css-only design system",
  "namespace": ".nz-",
  "tokens": "tokens.css",
- "cdn": "https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@master/",
+ "cdn": "https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/",
  "manifiesto": {
   "gradientes": 0,
   "glass": 0,
@@ -22,7 +22,9 @@
   "objetos": 1829,
   "familias": 349,
   "categorias": 15,
-  "demos": 534
+  "demos": 534,
+  "tokens": 145,
+  "tokensDark": 43
  },
  "packs": {
   "p1-layout.css": {
@@ -216,6 +218,883 @@
    "[aria-expanded]"
   ]
  },
+ "alias": {
+  "tree": "nz-arbol",
+  "keyboard-shortcut": "nz-atajo-teclado",
+  "kbd": "nz-atajo-teclado",
+  "command-palette": "nz-cmd",
+  "confirm-dialog": "nz-confirm",
+  "dashboard-grid": "nz-dash-grid",
+  "data-grid": "nz-datagrid",
+  "error-state": "nz-errorstate",
+  "error-hint": "nz-hint-error",
+  "file-dropzone": "nz-filezona",
+  "form-grid": "nz-formgrid",
+  "gallery": "nz-galeria",
+  "hide-mobile": "nz-hide-movil",
+  "hide-desktop": "nz-hide-escritorio",
+  "show-mobile": "nz-show-movil",
+  "show-desktop": "nz-show-escritorio",
+  "cloud-logo": "nz-logo-nube",
+  "logo-cloud": "nz-logos",
+  "map-placeholder": "nz-mapa-placeholder",
+  "popup-menu": "nz-menu-pop",
+  "note": "nz-nota",
+  "pricing-plan": "nz-plan",
+  "pricing-plans": "nz-plans",
+  "social-links": "nz-social",
+  "task-plan": "nz-taskplan",
+  "theme-badge": "nz-tema-badge",
+  "figure": "nz-figura",
+  "message": "nz-msg",
+  "mobile-nav": "nz-navbar",
+  "tooltip": "nz-popover",
+  "spinner": "nz-spinner",
+  "empty-state": "nz-empty"
+ },
+ "combos": {
+  "landing": {
+   "packs": [
+    "p1-layout.css",
+    "p3-typography.css",
+    "p4-actions.css",
+    "p6-feedback.css",
+    "p10-commerce.css",
+    "p11-social.css"
+   ],
+   "tipico": "hero + features + pricing + footer + atribución"
+  },
+  "dashboard": {
+   "packs": [
+    "p1-layout.css",
+    "p2-navigation.css",
+    "p3-typography.css",
+    "p4-actions.css",
+    "p8-data.css",
+    "p13-charts.css"
+   ],
+   "tipico": "appshell + navbar + KPIs + tablas + gráficos"
+  },
+  "chat-ia": {
+   "packs": [
+    "p1-layout.css",
+    "p3-typography.css",
+    "p4-actions.css",
+    "p5-forms.css",
+    "p14-ai.css"
+   ],
+   "tipico": "chat + prompt + toolcall + taskplan + adjuntos"
+  },
+  "login-form": {
+   "packs": [
+    "p1-layout.css",
+    "p3-typography.css",
+    "p4-actions.css",
+    "p5-forms.css",
+    "p6-feedback.css"
+   ],
+   "tipico": "card centrada + field + input + botón + alerta de error"
+  },
+  "escritorio-app": {
+   "packs": [
+    "p1-layout.css",
+    "p2-navigation.css",
+    "p3-typography.css",
+    "p4-actions.css",
+    "p8-data.css",
+    "p15-apps.css"
+   ],
+   "tipico": "window + appnav + kanban/agenda + statusbar"
+  },
+  "e-commerce": {
+   "packs": [
+    "p1-layout.css",
+    "p3-typography.css",
+    "p4-actions.css",
+    "p10-commerce.css",
+    "p8-data.css"
+   ],
+   "tipico": "producto + cart + checkout-steps + pricetable"
+  },
+  "prototipo": {
+   "packs": [
+    "all.css"
+   ],
+   "tipico": "exploración rápida: un solo enlace con los 15 packs"
+  }
+ },
+ "tokens_def": [
+  {
+   "nombre": "--nz-blue-50",
+   "valor": "#eff6ff",
+   "seccion": "COLOR · Azul (primario) "
+  },
+  {
+   "nombre": "--nz-blue-100",
+   "valor": "#dbeafe",
+   "seccion": "COLOR · Azul (primario) "
+  },
+  {
+   "nombre": "--nz-blue-200",
+   "valor": "#bfdbfe",
+   "seccion": "COLOR · Azul (primario) "
+  },
+  {
+   "nombre": "--nz-blue-300",
+   "valor": "#93c5fd",
+   "seccion": "COLOR · Azul (primario) "
+  },
+  {
+   "nombre": "--nz-blue-400",
+   "valor": "#60a5fa",
+   "seccion": "COLOR · Azul (primario) "
+  },
+  {
+   "nombre": "--nz-blue-500",
+   "valor": "#3b82f6",
+   "seccion": "COLOR · Azul (primario) "
+  },
+  {
+   "nombre": "--nz-blue-600",
+   "valor": "#2563eb",
+   "seccion": "COLOR · Azul (primario) "
+  },
+  {
+   "nombre": "--nz-blue-700",
+   "valor": "#1d4ed8",
+   "seccion": "COLOR · Azul (primario) "
+  },
+  {
+   "nombre": "--nz-blue-800",
+   "valor": "#1e40af",
+   "seccion": "COLOR · Azul (primario) "
+  },
+  {
+   "nombre": "--nz-blue-900",
+   "valor": "#1e3a8a",
+   "seccion": "COLOR · Azul (primario) "
+  },
+  {
+   "nombre": "--nz-orange-50",
+   "valor": "#fff7ed",
+   "seccion": "COLOR · Naranja (acento, secundario) "
+  },
+  {
+   "nombre": "--nz-orange-100",
+   "valor": "#ffedd5",
+   "seccion": "COLOR · Naranja (acento, secundario) "
+  },
+  {
+   "nombre": "--nz-orange-200",
+   "valor": "#fed7aa",
+   "seccion": "COLOR · Naranja (acento, secundario) "
+  },
+  {
+   "nombre": "--nz-orange-300",
+   "valor": "#fdba74",
+   "seccion": "COLOR · Naranja (acento, secundario) "
+  },
+  {
+   "nombre": "--nz-orange-400",
+   "valor": "#fb923c",
+   "seccion": "COLOR · Naranja (acento, secundario) "
+  },
+  {
+   "nombre": "--nz-orange-500",
+   "valor": "#f97316",
+   "seccion": "COLOR · Naranja (acento, secundario) "
+  },
+  {
+   "nombre": "--nz-orange-600",
+   "valor": "#ea580c",
+   "seccion": "COLOR · Naranja (acento, secundario) "
+  },
+  {
+   "nombre": "--nz-orange-700",
+   "valor": "#c2410c",
+   "seccion": "COLOR · Naranja (acento, secundario) "
+  },
+  {
+   "nombre": "--nz-green-50",
+   "valor": "#f0fdf4",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-green-100",
+   "valor": "#dcfce7",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-green-500",
+   "valor": "#22c55e",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-green-600",
+   "valor": "#16a34a",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-green-700",
+   "valor": "#15803d",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-red-50",
+   "valor": "#fef2f2",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-red-100",
+   "valor": "#fee2e2",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-red-500",
+   "valor": "#ef4444",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-red-600",
+   "valor": "#dc2626",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-red-700",
+   "valor": "#b91c1c",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-amber-50",
+   "valor": "#fffbeb",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-amber-100",
+   "valor": "#fef3c7",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-amber-500",
+   "valor": "#f59e0b",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-amber-600",
+   "valor": "#d97706",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-amber-700",
+   "valor": "#b45309",
+   "seccion": "COLOR · Semánticos "
+  },
+  {
+   "nombre": "--nz-gray-0",
+   "valor": "#ffffff",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-50",
+   "valor": "#f9fafb",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-100",
+   "valor": "#f3f4f6",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-200",
+   "valor": "#e5e7eb",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-300",
+   "valor": "#d1d5db",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-400",
+   "valor": "#9ca3af",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-500",
+   "valor": "#6b7280",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-600",
+   "valor": "#4b5563",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-700",
+   "valor": "#374151",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-800",
+   "valor": "#1f2937",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-900",
+   "valor": "#111827",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-gray-950",
+   "valor": "#030712",
+   "seccion": "COLOR · Neutros "
+  },
+  {
+   "nombre": "--nz-bg",
+   "valor": "var(--nz-gray-0)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-bg-soft",
+   "valor": "var(--nz-gray-50)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-bg-inset",
+   "valor": "var(--nz-gray-100)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-surface",
+   "valor": "var(--nz-gray-0)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-surface-2",
+   "valor": "var(--nz-gray-50)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-border",
+   "valor": "var(--nz-gray-200)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-border-soft",
+   "valor": "var(--nz-gray-100)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-border-strong",
+   "valor": "var(--nz-gray-300)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-text",
+   "valor": "var(--nz-gray-900)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-text-soft",
+   "valor": "var(--nz-gray-600)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-text-mute",
+   "valor": "var(--nz-gray-500)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-text-faint",
+   "valor": "var(--nz-gray-400)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-text-invert",
+   "valor": "var(--nz-gray-0)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-brand",
+   "valor": "var(--nz-blue-600)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-brand-strong",
+   "valor": "var(--nz-blue-700)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-brand-soft",
+   "valor": "var(--nz-blue-50)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-brand-tint",
+   "valor": "var(--nz-blue-100)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-accent",
+   "valor": "var(--nz-orange-500)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-accent-strong",
+   "valor": "var(--nz-orange-600)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-accent-soft",
+   "valor": "var(--nz-orange-50)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-accent-tint",
+   "valor": "var(--nz-orange-100)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-success",
+   "valor": "var(--nz-green-600)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-success-soft",
+   "valor": "var(--nz-green-50)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-success-tint",
+   "valor": "var(--nz-green-100)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-danger",
+   "valor": "var(--nz-red-600)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-danger-soft",
+   "valor": "var(--nz-red-50)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-danger-tint",
+   "valor": "var(--nz-red-100)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-warning",
+   "valor": "var(--nz-amber-600)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-warning-soft",
+   "valor": "var(--nz-amber-50)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-warning-tint",
+   "valor": "var(--nz-amber-100)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-info",
+   "valor": "var(--nz-blue-600)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-info-soft",
+   "valor": "var(--nz-blue-50)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-info-tint",
+   "valor": "var(--nz-blue-100)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-overlay",
+   "valor": "rgba(17, 24, 39, 0.48)",
+   "seccion": "TOKENS TEMÁTICOS (light por defecto) "
+  },
+  {
+   "nombre": "--nz-font",
+   "valor": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-font-mono",
+   "valor": "ui-monospace, \"Cascadia Code\", \"SF Mono\", Consolas, monospace",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-text-2xs",
+   "valor": "0.6875rem",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-text-xs",
+   "valor": "0.75rem",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-text-sm",
+   "valor": "0.8125rem",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-text-base",
+   "valor": "0.9375rem",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-text-md",
+   "valor": "1rem",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-text-lg",
+   "valor": "1.125rem",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-text-xl",
+   "valor": "clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem)",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-text-2xl",
+   "valor": "clamp(1.5rem, 1.25rem + 1vw, 1.875rem)",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-text-3xl",
+   "valor": "clamp(1.875rem, 1.4rem + 1.8vw, 2.5rem)",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-text-4xl",
+   "valor": "clamp(2.25rem, 1.6rem + 2.8vw, 3.25rem)",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-leading-tight",
+   "valor": "1.2",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-leading-snug",
+   "valor": "1.375",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-leading-normal",
+   "valor": "1.6",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-tracking-tight",
+   "valor": "-0.02em",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-tracking-caps",
+   "valor": "0.08em",
+   "seccion": "TIPOGRAFÍA "
+  },
+  {
+   "nombre": "--nz-space-0",
+   "valor": "0",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-1",
+   "valor": "0.25rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-2",
+   "valor": "0.5rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-3",
+   "valor": "0.75rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-4",
+   "valor": "1rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-5",
+   "valor": "1.25rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-6",
+   "valor": "1.5rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-7",
+   "valor": "1.75rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-8",
+   "valor": "2rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-9",
+   "valor": "2.25rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-10",
+   "valor": "2.5rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-12",
+   "valor": "3rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-16",
+   "valor": "4rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-space-20",
+   "valor": "5rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-gutter",
+   "valor": "var(--nz-space-4)",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-container-max",
+   "valor": "72rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-container-narrow",
+   "valor": "44rem",
+   "seccion": "ESPACIO (escala 4px) "
+  },
+  {
+   "nombre": "--nz-radius-xs",
+   "valor": "4px",
+   "seccion": "RADIOS Y BORDES "
+  },
+  {
+   "nombre": "--nz-radius-sm",
+   "valor": "6px",
+   "seccion": "RADIOS Y BORDES "
+  },
+  {
+   "nombre": "--nz-radius-md",
+   "valor": "10px",
+   "seccion": "RADIOS Y BORDES "
+  },
+  {
+   "nombre": "--nz-radius-lg",
+   "valor": "14px",
+   "seccion": "RADIOS Y BORDES "
+  },
+  {
+   "nombre": "--nz-radius-xl",
+   "valor": "20px",
+   "seccion": "RADIOS Y BORDES "
+  },
+  {
+   "nombre": "--nz-radius-full",
+   "valor": "999px",
+   "seccion": "RADIOS Y BORDES "
+  },
+  {
+   "nombre": "--nz-border-w",
+   "valor": "1px",
+   "seccion": "RADIOS Y BORDES "
+  },
+  {
+   "nombre": "--nz-border-w-strong",
+   "valor": "1.5px",
+   "seccion": "RADIOS Y BORDES "
+  },
+  {
+   "nombre": "--nz-shadow-xs",
+   "valor": "0 1px 2px rgba(17, 24, 39, 0.05)",
+   "seccion": "SOMBRAS (multicapa sutiles, sin bordes duros) "
+  },
+  {
+   "nombre": "--nz-shadow-sm",
+   "valor": "0 1px 2px rgba(17, 24, 39, 0.05), 0 2px 6px rgba(17, 24, 39, 0.04)",
+   "seccion": "SOMBRAS (multicapa sutiles, sin bordes duros) "
+  },
+  {
+   "nombre": "--nz-shadow-md",
+   "valor": "0 2px 4px rgba(17, 24, 39, 0.04), 0 6px 16px rgba(17, 24, 39, 0.07)",
+   "seccion": "SOMBRAS (multicapa sutiles, sin bordes duros) "
+  },
+  {
+   "nombre": "--nz-shadow-lg",
+   "valor": "0 4px 8px rgba(17, 24, 39, 0.04), 0 14px 32px rgba(17, 24, 39, 0.10)",
+   "seccion": "SOMBRAS (multicapa sutiles, sin bordes duros) "
+  },
+  {
+   "nombre": "--nz-shadow-xl",
+   "valor": "0 8px 16px rgba(17, 24, 39, 0.06), 0 24px 56px rgba(17, 24, 39, 0.14)",
+   "seccion": "SOMBRAS (multicapa sutiles, sin bordes duros) "
+  },
+  {
+   "nombre": "--nz-shadow-brand",
+   "valor": "0 2px 4px rgba(37, 99, 235, 0.10), 0 8px 20px rgba(37, 99, 235, 0.14)",
+   "seccion": "SOMBRAS (multicapa sutiles, sin bordes duros) "
+  },
+  {
+   "nombre": "--nz-shadow-accent",
+   "valor": "0 2px 4px rgba(249, 115, 22, 0.10), 0 8px 20px rgba(249, 115, 22, 0.14)",
+   "seccion": "SOMBRAS (multicapa sutiles, sin bordes duros) "
+  },
+  {
+   "nombre": "--nz-z-base",
+   "valor": "0",
+   "seccion": "Z-INDEX "
+  },
+  {
+   "nombre": "--nz-z-raised",
+   "valor": "10",
+   "seccion": "Z-INDEX "
+  },
+  {
+   "nombre": "--nz-z-sticky",
+   "valor": "100",
+   "seccion": "Z-INDEX "
+  },
+  {
+   "nombre": "--nz-z-header",
+   "valor": "200",
+   "seccion": "Z-INDEX "
+  },
+  {
+   "nombre": "--nz-z-drawer",
+   "valor": "300",
+   "seccion": "Z-INDEX "
+  },
+  {
+   "nombre": "--nz-z-modal",
+   "valor": "400",
+   "seccion": "Z-INDEX "
+  },
+  {
+   "nombre": "--nz-z-popover",
+   "valor": "500",
+   "seccion": "Z-INDEX "
+  },
+  {
+   "nombre": "--nz-z-toast",
+   "valor": "600",
+   "seccion": "Z-INDEX "
+  },
+  {
+   "nombre": "--nz-z-tooltip",
+   "valor": "700",
+   "seccion": "Z-INDEX "
+  },
+  {
+   "nombre": "--nz-dur-fast",
+   "valor": "120ms",
+   "seccion": "MOVIMIENTO (ui-animation-taste) "
+  },
+  {
+   "nombre": "--nz-dur-base",
+   "valor": "180ms",
+   "seccion": "MOVIMIENTO (ui-animation-taste) "
+  },
+  {
+   "nombre": "--nz-dur-slow",
+   "valor": "260ms",
+   "seccion": "MOVIMIENTO (ui-animation-taste) "
+  },
+  {
+   "nombre": "--nz-ease-out",
+   "valor": "cubic-bezier(0.16, 1, 0.3, 1)",
+   "seccion": "MOVIMIENTO (ui-animation-taste) "
+  },
+  {
+   "nombre": "--nz-ease-in",
+   "valor": "cubic-bezier(0.7, 0, 0.84, 0)",
+   "seccion": "MOVIMIENTO (ui-animation-taste) "
+  },
+  {
+   "nombre": "--nz-ease-soft",
+   "valor": "cubic-bezier(0.33, 1, 0.68, 1)",
+   "seccion": "MOVIMIENTO (ui-animation-taste) "
+  },
+  {
+   "nombre": "--nz-focus-ring",
+   "valor": "0 0 0 3px var(--nz-blue-200)",
+   "seccion": "FOCUS "
+  },
+  {
+   "nombre": "--nz-focus-ring-accent",
+   "valor": "0 0 0 3px var(--nz-orange-200)",
+   "seccion": "FOCUS "
+  }
+ ],
+ "tokens_dark": [
+  "--nz-bg",
+  "--nz-bg-soft",
+  "--nz-bg-inset",
+  "--nz-surface",
+  "--nz-surface-2",
+  "--nz-border",
+  "--nz-border-soft",
+  "--nz-border-strong",
+  "--nz-text",
+  "--nz-text-soft",
+  "--nz-text-mute",
+  "--nz-text-faint",
+  "--nz-text-invert",
+  "--nz-brand",
+  "--nz-brand-strong",
+  "--nz-brand-soft",
+  "--nz-brand-tint",
+  "--nz-accent",
+  "--nz-accent-strong",
+  "--nz-accent-soft",
+  "--nz-accent-tint",
+  "--nz-success",
+  "--nz-success-soft",
+  "--nz-success-tint",
+  "--nz-danger",
+  "--nz-danger-soft",
+  "--nz-danger-tint",
+  "--nz-warning",
+  "--nz-warning-soft",
+  "--nz-warning-tint",
+  "--nz-info",
+  "--nz-info-soft",
+  "--nz-info-tint",
+  "--nz-overlay",
+  "--nz-shadow-xs",
+  "--nz-shadow-sm",
+  "--nz-shadow-md",
+  "--nz-shadow-lg",
+  "--nz-shadow-xl",
+  "--nz-shadow-brand",
+  "--nz-shadow-accent",
+  "--nz-focus-ring",
+  "--nz-focus-ring-accent"
+ ],
  "objetos": {
   "nz-appshell": {
    "pack": "p1-layout.css",

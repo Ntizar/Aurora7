@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" data-nz-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iniciar sesión · Receta Aurora 7</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p1-layout.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p3-typography.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p4-actions.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p5-forms.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p6-feedback.css">
+</head>
+<body class="nz">
+
+<main class="nz-container nz-container--narrow nz-center-xy" style="min-height:100dvh">
+  <section class="nz-article" style="width:100%">
+
+    <h1 class="nz-h2 nz-h2--brand">Accede a tu cuenta</h1>
+    <p class="nz-lead nz-lead--sm">Panel de expedientes para equipos de obra.</p>
+
+    <form class="nz-stack nz-stack--sm" action="#" method="post">
+
+      <label class="nz-field">
+        <span class="nz-field__label nz-field__label--req">Correo</span>
+        <input class="nz-input" type="email" name="correo"
+               placeholder="tu@correo.es" autocomplete="email" required>
+        <span class="nz-field__help">Nunca compartimos tu correo.</span>
+      </label>
+
+      <label class="nz-field">
+        <span class="nz-field__label nz-field__label--req">Contraseña</span>
+        <input class="nz-input" type="password" name="clave"
+               autocomplete="current-password" required minlength="8">
+      </label>
+
+      <div class="nz-cluster nz-cluster--compact nz-cluster--between">
+        <label class="nz-checkbox">
+          <input type="checkbox" name="recordar">
+          <span class="nz-checkbox__box"></span>Recordarme
+        </label>
+        <a class="nz-cta nz-cta--muted nz-cta--sm" href="#">¿Olvidaste la clave?</a>
+      </div>
+
+      <!-- Muestra del estado de error: quita hidden cuando el login falle -->
+      <div class="nz-alert nz-alert--danger" hidden>
+        <span class="nz-alert__icon">✕</span>
+        <div class="nz-alert__body">
+          <span class="nz-alert__title">Credenciales incorrectas</span>
+          <span class="nz-alert__msg">Revisa el correo y la contraseña.</span>
+        </div>
+      </div>
+
+      <button class="nz-btn nz-btn--primary nz-btn--block" type="submit">Entrar</button>
+      <button class="nz-btn nz-btn--ghost nz-btn--block" type="button">Entrar con clave de un solo uso</button>
+
+    </form>
+
+  </section>
+</main>
+
+<footer class="nz-footer nz-footer--compact">
+  Receta de ejemplo de Aurora 7 · Hecho con ❤️ por David Antizar
+</footer>
+
+</body>
+</html>

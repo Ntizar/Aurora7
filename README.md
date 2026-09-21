@@ -59,16 +59,16 @@ Aurora 7 no es una colección de snippets: es un **sistema con contrato**. Cada 
 **En una página real** — enlaza los tokens y solo los packs que necesites:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@master/tokens.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@master/packs/p4-actions.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@master/packs/p5-forms.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p4-actions.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p5-forms.css">
 ```
 
 **Todo de golpe** — para prototipar:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@master/tokens.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@master/packs/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/all.css">
 ```
 
 El `body` lleva `class="nz"` y el tema se fija en el `<html>`:
@@ -78,6 +78,22 @@ El `body` lleva `class="nz"` y el tema se fija en el `<html>`:
 ```
 
 Todos los componentes comparten el prefijo `.nz-` y los tokens `--nz-*`: nada colisiona con otros frameworks ni con tu propio CSS.
+
+## Consumo por agentes (IA)
+
+Aurora 7 está diseñado para que un agente genere HTML correcto a la primera, sin leer los packs:
+
+1. **`LLM.md`** (~9 KB) — guía de decisión: qué packs enlazar según el tipo de página (combos), qué clases existen, alias inglés→clase (`tree` → `nz-arbol`) y anti-patrones.
+2. **`components.json`** — API machine-readable completa: 349 familias con sus clases, modificadores y partes, **los 145 tokens** inventariados, alias y combos.
+3. **`examples/`** — 5 recetas completas y funcionando (login, dashboard, landing, chat-ia, forms): se copian como punto de partida, con carga mínima de packs y markup verificado.
+4. **`scripts/auditar-uso.py`** — el lint del consumidor: le pasas el HTML generado y te dice clases inventadas, packs que faltan por enlazar, gradientes, colores a mano, desktop-first y atribución. Ejecútalo **antes de dar por bueno cualquier HTML**:
+
+```bash
+python scripts/auditar-uso.py tu-pagina.html      # informe con fallos y avisos
+python scripts/auditar-uso.py --selftest          # prueba de la propia herramienta
+```
+
+Nada de esto se desincroniza: la CI regenera `LLM.md`/`components.json` y compara, comprueba que las versiones de doc y tags de git coinciden y verifica que el lint funciona.
 
 ## Estructura
 
@@ -94,18 +110,20 @@ Aurora-7/
 ├── js/catalog.js       # buscador (tecla /), filtro, tema, «ver código» y copiar
 ├── datos/objetos.json  # índice de los 1.829 objetos para el buscador
 ├── audit/              # informe de auditoría generado (AUDITORIA.md + index.html)
+├── examples/           # 5 recetas completas para agentes (login, dashboard, landing, chat-ia, forms)
 ├── scripts/
 │   ├── build-catalog.py   # genera páginas + portada + índice desde specs/
 │   ├── audit-catalog.py   # auditoría campo a campo
-│   ├── validar-css.py     # manifiesto, cobertura, literales (lo que corre CI)
+│   ├── validar-css.py     # manifiesto, cobertura, literales, versión y sincronía (lo que corre CI)
 │   ├── audit-tema.py      # ¿todo sobrevive al modo oscuro? (lo que corre CI)
 │   ├── audit-a11y.py      # etiquetas, teclado y foco de las demos (CI)
 │   ├── audit-html.py      # genera el informe navegable de auditoría
-│   ├── generar-llm-docs.py # genera LLM.md + components.json
+│   ├── generar-llm-docs.py # genera LLM.md + components.json (tokens, alias, combos)
+│   ├── auditar-uso.py     # lint del HTML consumidor: clases inventadas, packs, manifiesto
 │   └── extraer-specs.py   # utilidad: reconstruye specs/ desde las páginas
-├── LLM.md              # guía de decisión para agentes (~5 KB, en vez de 250 KB de CSS)
+├── LLM.md              # guía de decisión para agentes (~9 KB, en vez de 250 KB de CSS)
 ├── AGENTS.md           # reglas duras del repo (qué se toca y qué no)
-└── components.json     # API completa machine-readable: familia → pack, clases, mods
+└── components.json     # API machine-readable: familias, clases, tokens, alias y combos
 ```
 
 ## Léxico de modificadores

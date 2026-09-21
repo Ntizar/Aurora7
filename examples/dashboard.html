@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es" data-nz-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel · Receta Aurora 7</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p1-layout.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p2-navigation.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p3-typography.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p4-actions.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p6-feedback.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p8-data.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p13-charts.css">
+</head>
+<body class="nz">
+
+<header class="nz-navbar">
+  <span class="nz-navbar__brand"><i></i>Aurora Panel</span>
+  <nav class="nz-navbar__links">
+    <a href="#resumen" class="nz-navbar__link" aria-current="page">Resumen</a>
+    <a href="#facturas" class="nz-navbar__link">Facturas</a>
+    <a href="#informes" class="nz-navbar__link">Informes</a>
+  </nav>
+</header>
+
+<main id="resumen" class="nz-container nz-stack">
+
+  <header class="nz-cluster nz-cluster--between">
+    <div class="nz-stack nz-stack--2xs">
+      <h1 class="nz-h2 nz-h2--brand">Resumen de septiembre</h1>
+      <p class="nz-lead nz-lead--sm">Cifras del cierre a 21 de septiembre.</p>
+    </div>
+    <div class="nz-cluster nz-cluster--compact">
+      <button class="nz-btn nz-btn--ghost nz-btn--sm">Exportar</button>
+      <button class="nz-btn nz-btn--primary nz-btn--sm">Nuevo informe</button>
+    </div>
+  </header>
+
+  <!-- KPIs: rejilla adaptativa, 4 arriba en escritorio -->
+  <section class="nz-dash-grid nz-dash-grid--4" aria-label="Cifras clave">
+    <div class="nz-kpi">
+      <span class="nz-kpi__label">Ingresos</span>
+      <span class="nz-kpi__value nz-kpi__value--brand">3 420 €</span>
+      <span class="nz-kpi__delta nz-kpi__delta--up">+12% vs agosto</span>
+    </div>
+    <div class="nz-kpi">
+      <span class="nz-kpi__label">Facturas emitidas</span>
+      <span class="nz-kpi__value">128</span>
+      <span class="nz-kpi__delta nz-kpi__delta--up">+8</span>
+    </div>
+    <div class="nz-kpi">
+      <span class="nz-kpi__label">Cobrado</span>
+      <span class="nz-kpi__value">2 980 €</span>
+      <span class="nz-kpi__delta nz-kpi__delta--up">+5%</span>
+    </div>
+    <div class="nz-kpi">
+      <span class="nz-kpi__label">Pendiente</span>
+      <span class="nz-kpi__value nz-kpi__value--accent">440 €</span>
+      <span class="nz-kpi__delta nz-kpi__delta--down">−2 facturas</span>
+    </div>
+  </section>
+
+  <section class="nz-dash-grid" aria-label="Gráfico y detalle">
+
+    <!-- Gráfico CSS-only: sin librerías, sin JS -->
+    <figure class="nz-chart">
+      <div class="nz-chart__head">
+        <div>
+          <span class="nz-chart__title">Ingresos por mes</span>
+          <span class="nz-chart__sub">Últimos 6 meses</span>
+        </div>
+        <div class="nz-chart__actions">
+          <button class="nz-btn nz-btn--ghost nz-btn--sm">Semana</button>
+          <button class="nz-btn nz-btn--ghost nz-btn--sm">Mes</button>
+        </div>
+      </div>
+      <div class="nz-chart__body">
+        <div class="nz-chart-bar">
+          <div class="nz-chart-bar__col"><span class="nz-chart-bar__value">18</span><div class="nz-chart-bar__bar" style="height:38%"></div><span class="nz-chart-bar__label">Abr</span></div>
+          <div class="nz-chart-bar__col"><span class="nz-chart-bar__value">24</span><div class="nz-chart-bar__bar" style="height:50%"></div><span class="nz-chart-bar__label">May</span></div>
+          <div class="nz-chart-bar__col"><span class="nz-chart-bar__value">31</span><div class="nz-chart-bar__bar nz-chart-bar__bar--brand" style="height:65%"></div><span class="nz-chart-bar__label">Jun</span></div>
+          <div class="nz-chart-bar__col"><span class="nz-chart-bar__value">27</span><div class="nz-chart-bar__bar" style="height:56%"></div><span class="nz-chart-bar__label">Jul</span></div>
+          <div class="nz-chart-bar__col"><span class="nz-chart-bar__value">36</span><div class="nz-chart-bar__bar" style="height:75%"></div><span class="nz-chart-bar__label">Ago</span></div>
+          <div class="nz-chart-bar__col"><span class="nz-chart-bar__value">42</span><div class="nz-chart-bar__bar" style="height:88%"></div><span class="nz-chart-bar__label">Sep</span></div>
+        </div>
+      </div>
+      <figcaption class="nz-chart__source">Datos de facturación interna.</figcaption>
+    </figure>
+
+    <!-- Tabla con toolbar, filtros y pie -->
+    <div id="facturas" class="nz-table-wrap">
+      <div class="nz-table__toolbar">
+        <span class="nz-table__strong">Facturas</span>
+        <span class="nz-badge nz-badge--brand">128</span>
+        <span class="nz-table__toolbar-spacer"></span>
+        <button class="nz-btn nz-btn--sm nz-btn--ghost">Filtrar</button>
+      </div>
+      <div class="nz-table__filters">
+        <span class="nz-chip is-active">Todas</span>
+        <span class="nz-chip">Pendientes</span>
+        <span class="nz-chip">Pagadas</span>
+      </div>
+      <table class="nz-table nz-table--striped nz-table--hover">
+        <thead>
+          <tr><th>Número</th><th>Cliente</th><th class="nz-table__num">Importe</th><th>Estado</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nz-table__strong">FAC-118</td><td>Obrador Sur</td>
+            <td class="nz-table__num">240 €</td>
+            <td><span class="nz-badge nz-badge--success">Pagada</span></td>
+          </tr>
+          <tr>
+            <td class="nz-table__strong">FAC-119</td><td>Construcciones Vega</td>
+            <td class="nz-table__num">1 320 €</td>
+            <td><span class="nz-badge nz-badge--success">Pagada</span></td>
+          </tr>
+          <tr>
+            <td class="nz-table__strong">FAC-120</td><td>Comunidad La Dehesa</td>
+            <td class="nz-table__num">960 €</td>
+            <td><span class="nz-badge nz-badge--warning">Pendiente</span></td>
+          </tr>
+          <tr>
+            <td class="nz-table__strong">FAC-121</td><td>Hotel Mirasierra</td>
+            <td class="nz-table__num">780 €</td>
+            <td><span class="nz-badge nz-badge--danger">Vencida</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="nz-table__foot"><span>4 de 128</span><span>Total 3 300 €</span></div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="nz-footer nz-footer--compact">
+  Receta de ejemplo de Aurora 7 · Hecho con ❤️ por David Antizar
+</footer>
+
+</body>
+</html>

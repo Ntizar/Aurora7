@@ -15,11 +15,19 @@ Comprueba:
      toda clase usada en las demos existe.
   6. Atribución: el pie dice exactamente «Hecho con ❤️ por David Antizar».
   7. Cifras: los números de la portada coinciden con el CSS real.
+ 12. Versión: components.json, generar-llm-docs.py y los CDN de la doc
+     (@vX.Y.Z) dicen la misma versión que el último tag de git.
+ 13. Sincronía de docs IA: LLM.md y components.json regenerados coinciden
+     con los commiteados (si alguien toca packs/specs sin regenerar, rojo).
+ 14. Lint del consumidor: el auto-test de scripts/auditar-uso.py debe pasar
+     (la herramienta que usan los agentes para verificar su HTML funciona).
 
 Uso: python scripts/validar-css.py     (o python scripts/validar-css.py --informe)
 """
+import json
 import pathlib
 import re
+import subprocess
 import sys
 from importlib import import_module
 
@@ -282,6 +290,54 @@ def main():
         txt = re.sub(r"/\*.*?\*/", "", pack.read_text(encoding="utf-8", errors="replace"), flags=re.S)
         for e in literales(txt):
             fallo(f"{pack.name}: {e}")
+
+    # ---------- 12. versión: docs, generador, CDN y último tag de git ----------
+    version_json = json.loads((ROOT / "components.json").read_text(encoding="utf-8"))["version"]
+    gen = (ROOT / "scripts" / "generar-llm-docs.py").read_text(encoding="utf-8")
+    m_gen = re.search(r'^VERSION\s*=\s*"([^"]+)"', gen, re.M)
+    version_gen = m_gen.group(1) if m_gen else None
+    r_tag = subprocess.run(["git", "describe", "--tags", "--abbrev=0"], cwd=ROOT,
+                           capture_output=True, text=True)
+    version_tag = r_tag.stdout.strip().lstrip("v") if r_tag.returncode == 0 else None
+    if version_tag is None:
+        aviso("git no tiene tags accesibles: no se puede comprobar la versión contra el último tag")
+    if not (version_json == version_gen and (version_tag is None or version_gen == version_tag)):
+        fallo(f"desalineación de versión: components.json={version_json}, "
+              f"generar-llm-docs={version_gen}, último tag de git={version_tag or 'ninguno'}")
+    docu = " ".join((ROOT / "README.md").read_text(encoding="utf-8")
+                    + (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+                    + (ROOT / "LLM.md").read_text(encoding="utf-8"))
+    if version_tag is not None:
+        for m2 in re.finditer(r"Ntizar/Aurora7@([^/)\s\"']+)", docu):
+            if m2.group(1) != f"v{version_tag}":
+                fallo(f"CDN sin pinear o con versión vieja (@{m2.group(1)}) en la doc; "
+                      f"debe ser @v{version_tag} (jsDelivr sirve caché vieja de @master)")
+                break
+
+    # ---------- 13. sincronía de docs IA: regenerar y comparar ----------
+    # Compara el contenido ANTES y DESPUÉS de regenerar (hash): si regenerar
+    # cambia algo, los docs commiteados estaban desincronizados. Funciona igual
+    # con el árbol limpio (CI) que con cambios locales pendientes.
+    import hashlib
+    def _hash(p):
+        return hashlib.sha256(p.read_bytes()).hexdigest() if p.exists() else ""
+    antes = (_hash(ROOT / "components.json"), _hash(ROOT / "LLM.md"))
+    docs = subprocess.run([sys.executable, str(ROOT / "scripts" / "generar-llm-docs.py")],
+                          cwd=ROOT, capture_output=True, text=True)
+    if docs.returncode != 0:
+        fallo("generar-llm-docs.py falló al regenerar: " + docs.stderr.strip()[:300])
+    else:
+        despues = (_hash(ROOT / "components.json"), _hash(ROOT / "LLM.md"))
+        if antes != despues:
+            fallo("components.json/LLM.md desincronizados con packs/specs: "
+                  "ejecuta python scripts/generar-llm-docs.py y commitea el resultado")
+
+    # ---------- 14. el lint del consumidor funciona ----------
+    st = subprocess.run([sys.executable, str(ROOT / "scripts" / "auditar-uso.py"), "--selftest"],
+                        cwd=ROOT, capture_output=True, text=True)
+    if st.returncode != 0:
+        fallo("el auto-test de scripts/auditar-uso.py falla:\n"
+              + (st.stdout + st.stderr).strip()[-400:])
 
     print(f"\nAurora 7 · validación de {len(packs)} packs · {total} objetos declarados\n")
     if avisos:

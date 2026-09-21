@@ -20,6 +20,9 @@ jobs:
       - name: Validar el sistema (manifiesto + cobertura + HTML)
         run: python scripts/validar-css.py
 
+      - name: Lint de las recetas de examples/ (el consumidor modelo)
+        run: python scripts/auditar-uso.py
+
       - name: Auditoría de tema (supervivencia al modo oscuro)
         run: python scripts/audit-tema.py
 

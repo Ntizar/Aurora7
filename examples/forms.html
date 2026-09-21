@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es" data-nz-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Formulario de alta · Receta Aurora 7</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p1-layout.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p3-typography.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p4-actions.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p5-forms.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p6-feedback.css">
+</head>
+<body class="nz">
+
+<main class="nz-container nz-container--fixed nz-stack" style="padding-block:var(--nz-space-4)">
+
+  <header class="nz-stack nz-stack--2xs">
+    <h1 class="nz-h2 nz-h2--brand">Alta de empresa</h1>
+    <p class="nz-lead nz-lead--sm">Todos los campos marcados con ● son obligatorios.</p>
+  </header>
+
+  <form class="nz-stack" action="#" method="post">
+
+    <fieldset class="nz-fieldset">
+      <legend class="nz-fieldset__leyenda">Datos fiscales</legend>
+      <div class="nz-formgrid nz-formgrid--2">
+        <label class="nz-field">
+          <span class="nz-field__label nz-field__label--req">Razón social</span>
+          <input class="nz-input" name="razon" placeholder="Construcciones Vega SL" required>
+        </label>
+        <label class="nz-field">
+          <span class="nz-field__label nz-field__label--req">CIF</span>
+          <input class="nz-input" name="cif" placeholder="B12345678" required>
+          <span class="nz-field__help">Con letra incluida.</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="nz-fieldset">
+      <legend class="nz-fieldset__leyenda">Preferencias</legend>
+
+      <label class="nz-field">
+        <span class="nz-field__label">Sector</span>
+        <select class="nz-select" name="sector">
+          <option>Obra civil</option>
+          <option>Edificación</option>
+          <option>Rehabilitación</option>
+        </select>
+      </label>
+
+      <div class="nz-stack nz-stack--sm">
+        <span class="nz-field__label">Volumen anual de obra</span>
+        <input class="nz-range" type="range" min="0" max="100" value="60" aria-label="Volumen anual de obra">
+      </div>
+
+      <div class="nz-cluster nz-cluster--compact">
+        <label class="nz-radio">
+          <input type="radio" name="facturacion" checked>
+          <span class="nz-radio__dot"></span>Mensual
+        </label>
+        <label class="nz-radio">
+          <input type="radio" name="facturacion">
+          <span class="nz-radio__dot"></span>Por obra certificada
+        </label>
+      </div>
+
+      <div class="nz-cluster nz-cluster--compact">
+        <label class="nz-switch">
+          <input type="checkbox" name="avisos" checked>
+          <span class="nz-switch__track"><span class="nz-switch__thumb"></span></span>
+          <span class="nz-switch__label">Avisos por correo</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="nz-fieldset">
+      <legend class="nz-fieldset__leyenda">Documentación</legend>
+      <div class="nz-filezona">
+        <span class="nz-filezona__icono">⬆</span>
+        <span class="nz-filezona__texto">Arrastra la solvencia o toca para elegir</span>
+        <span class="nz-field__help">PDF · máximo 20 MB</span>
+        <input class="nz-filezona__input" type="file" aria-label="Subir solvencia">
+      </div>
+    </fieldset>
+
+    <div class="nz-alert nz-alert--info">
+      <span class="nz-alert__icon">ℹ</span>
+      <div class="nz-alert__body">
+        <span class="nz-alert__title">Verificamos tus datos</span>
+        <span class="nz-alert__msg">La alta se completa en 24 h laborables.</span>
+      </div>
+    </div>
+
+    <div class="nz-cluster nz-cluster--between">
+      <button class="nz-btn nz-btn--ghost" type="button">Guardar borrador</button>
+      <button class="nz-btn nz-btn--primary" type="submit">Completar alta</button>
+    </div>
+
+  </form>
+
+</main>
+
+<footer class="nz-footer nz-footer--compact">
+  Receta de ejemplo de Aurora 7 · Hecho con ❤️ por David Antizar
+</footer>
+
+</body>
+</html>

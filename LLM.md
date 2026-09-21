@@ -6,15 +6,36 @@ Design system CSS puro, sin dependencias ni build. 1829 objetos en 15 categoría
 ## 1. Mínimo obligatorio
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@master/tokens.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@master/packs/all.css">
 <html lang="es" data-nz-theme="light">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/tokens.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/all.css">
+</head>
 <body class="nz">
 ```
 
-## 2. ¿Qué pack necesito?
+Ojo: el `<html lang="es" data-nz-theme="light">` y el `<body class="nz">` son el
+elemento raíz del documento, no un fragmento — el snippet de arriba muestra dónde
+van cada uno. Dark mode: cambia a `data-nz-theme="dark"` en el `<html>`.
 
-| Categoría | Pack | Objetos clave (API completa en `components.json`) |
+## 2. ¿Qué packs enlazo según lo que construyo?
+
+| Tipo de página | CDN | Qué lleva dentro |
+|---|---|---|
+| landing | `tokens.css` + `p1-layout.css, p3-typography.css, p4-actions.css, p6-feedback.css, p10-commerce.css, p11-social.css` | hero + features + pricing + footer + atribución |
+| dashboard | `tokens.css` + `p1-layout.css, p2-navigation.css, p3-typography.css, p4-actions.css, p8-data.css, p13-charts.css` | appshell + navbar + KPIs + tablas + gráficos |
+| chat-ia | `tokens.css` + `p1-layout.css, p3-typography.css, p4-actions.css, p5-forms.css, p14-ai.css` | chat + prompt + toolcall + taskplan + adjuntos |
+| login-form | `tokens.css` + `p1-layout.css, p3-typography.css, p4-actions.css, p5-forms.css, p6-feedback.css` | card centrada + field + input + botón + alerta de error |
+| escritorio-app | `tokens.css` + `p1-layout.css, p2-navigation.css, p3-typography.css, p4-actions.css, p8-data.css, p15-apps.css` | window + appnav + kanban/agenda + statusbar |
+| e-commerce | `tokens.css` + `p1-layout.css, p3-typography.css, p4-actions.css, p10-commerce.css, p8-data.css` | producto + cart + checkout-steps + pricetable |
+| prototipo | `tokens.css` + `all.css` | exploración rápida: un solo enlace con los 15 packs |
+
+Carga **solo los packs que uses** en producción (cada uno pesa 12-40 KB) o
+`packs/all.css` para prototipos. `tokens.css` siempre primero.
+
+## 3. Mapa de categorías (API completa en `components.json`)
+
+| Categoría | Pack | Objetos clave |
 |---|---|---|
 | 01 · Layout y estructura | `p1-layout.css` | `nz-appshell`, `nz-article`, `nz-aside`, `nz-aspect`… |
 | 02 · Navegación | `p2-navigation.css` | `nz-breadcrumb`, `nz-dropdown`, `nz-menu`, `nz-navbar`… |
@@ -32,27 +53,68 @@ Design system CSS puro, sin dependencias ni build. 1829 objetos en 15 categoría
 | 14 · IA y agentes | `p14-ai.css` | `nz-agent-card`, `nz-approval`, `nz-attach`, `nz-chat`… |
 | 15 · Apps y escritorio | `p15-apps.css` | `nz-actbar`, `nz-agenda`, `nz-appempty`, `nz-appnav`… |
 
-Carga solo los packs que uses (producción) o `packs/all.css` (prototipo).
+## 4. Necesito X → uso Y
 
-## 3. Necesito X → uso Y
-
-| Necesito | Clases |
+| Necesito | Clases (el pack de cada una está en `components.json`) |
 |---|---|
-| Botón | `.nz-btn` + `.nz-btn--primary/--accent/--ghost/--soft/--outline/--danger` + `--sm/--lg/--icon` |
-| Tarjeta | `.nz-card`, `.nz-article`, `.nz-chart` |
-| Formulario | `.nz-field` > `.nz-field__label` + `.nz-input` + `.nz-field__help` |
-| Elegir una opción | `.nz-checkbox`, `.nz-radio`, `.nz-switch`, `.nz-segmented` |
-| Aviso | `.nz-alert--info/--success/--warning/--danger`, `.nz-callout` |
-| Etiqueta de estado | `.nz-badge--brand/--success/--danger/--warning`, `.nz-lbl` |
-| Tabla | `.nz-table-wrap` > `.nz-table` (+ `--striped`, `__num`, `__status`) |
-| Cifra destacada | `.nz-kpi` (`__label/__value/__delta`), `.nz-chart-stat` |
-| Gráfico | `.nz-chart-bar`, `.nz-chart-line`, `.nz-chart-donut`, `.nz-chart-gauge`, `.nz-heatmap` |
-| Diálogo | `.nz-modal` (checkbox + label, sin JS), `.nz-drawer`, `.nz-sheet` |
-| Pantalla completa | `.nz-appshell`, `.nz-with-sidebar`, `.nz-split`, `.nz-dash-grid` |
-| Chat / IA | `.nz-chat`, `.nz-msg`, `.nz-prompt`, `.nz-toolcall`, `.nz-taskplan` |
-| Escritorio / app | `.nz-window`, `.nz-appnav`, `.nz-kanban`, `.nz-editor`, `.nz-terminal` |
+| Botón (p4) | `.nz-btn` + `.nz-btn--primary/--accent/--ghost/--soft/--outline/--danger` + `--sm/--lg/--icon` |
+| Superficie / tarjeta (p1) | `.nz-article`, `.nz-bento`, `.nz-thirds`, `.nz-hero-bleed` · **`.nz-card` NO existe** |
+| Formulario (p5) | `.nz-field` > `.nz-field__label` + `.nz-input` + `.nz-field__help`, `.nz-formgrid` |
+| Elegir una opción (p5) | `.nz-checkbox`, `.nz-radio`, `.nz-switch`, `.nz-segmented` |
+| Aviso (p6) | `.nz-alert--info/--success/--warning/--danger`, `.nz-callout` |
+| Etiqueta de estado (p6+p3) | `.nz-badge--brand/--success/--danger/--warning`, `.nz-chip`, `.nz-lbl` |
+| Tabla (p8) | `.nz-table-wrap` > `.nz-table` (+ `--striped`, `__num`, `__status`) |
+| Cifra destacada (p8) | `.nz-kpi` (`__label/__value/__delta`) |
+| Gráfico (p13) | `.nz-chart` + `.nz-chart-bar`, `.nz-chart-line`, `.nz-chart-donut`, `.nz-chart-gauge`, `.nz-heatmap` |
+| Diálogo (p7) | `.nz-modal` (checkbox + label, sin JS), `.nz-drawer`, `.nz-sheet` |
+| Pantalla completa (p1) | `.nz-appshell`, `.nz-with-sidebar`, `.nz-split`, `.nz-dash-grid` |
+| Navegación (p2) | `.nz-navbar`, `.nz-tabs`, `.nz-breadcrumb`, `.nz-stepper`, `.nz-pagination` |
+| Chat / IA (p14) | `.nz-chat`, `.nz-msg`, `.nz-prompt`, `.nz-toolcall`, `.nz-taskplan`, `.nz-approval` |
+| Escritorio / app (p15) | `.nz-window`, `.nz-appnav`, `.nz-kanban`, `.nz-actbar`, `.nz-statusbar` |
 
-## 4. Léxico de modificadores (igual en los 15 packs)
+## 5. Buscas un nombre en inglés y no existe
+
+Aurora 7 usa nombres en castellano en algunas familias. Aliases verificados:
+
+| Buscas | Usa |
+|---|---|
+| «cloud-logo» | `nz-logo-nube` |
+| «command-palette» | `nz-cmd` |
+| «confirm-dialog» | `nz-confirm` |
+| «dashboard-grid» | `nz-dash-grid` |
+| «data-grid» | `nz-datagrid` |
+| «empty-state» | `nz-empty` |
+| «error-hint» | `nz-hint-error` |
+| «error-state» | `nz-errorstate` |
+| «figure» | `nz-figura` |
+| «file-dropzone» | `nz-filezona` |
+| «form-grid» | `nz-formgrid` |
+| «gallery» | `nz-galeria` |
+| «hide-desktop» | `nz-hide-escritorio` |
+| «hide-mobile» | `nz-hide-movil` |
+| «kbd» | `nz-atajo-teclado` |
+| «keyboard-shortcut» | `nz-atajo-teclado` |
+| «logo-cloud» | `nz-logos` |
+| «map-placeholder» | `nz-mapa-placeholder` |
+| «message» | `nz-msg` |
+| «mobile-nav» | `nz-navbar` |
+| «note» | `nz-nota` |
+| «popup-menu» | `nz-menu-pop` |
+| «pricing-plan» | `nz-plan` |
+| «pricing-plans» | `nz-plans` |
+| «show-desktop» | `nz-show-escritorio` |
+| «show-mobile» | `nz-show-movil` |
+| «social-links» | `nz-social` |
+| «spinner» | `nz-spinner` |
+| «task-plan» | `nz-taskplan` |
+| «theme-badge» | `nz-tema-badge` |
+| «tooltip» | `nz-popover` |
+| «tree» | `nz-arbol` |
+
+Los nombres de la tabla anterior son los que existen de verdad. Si una clase no
+aparece en `components.json`, **no la inventes**.
+
+## 6. Léxico de modificadores (igual en los 15 packs)
 
 - **Tamaño**: `--2xs --xs --sm --lg --xl`
 - **Tono**: `--brand --accent --success --warning --danger --info --neutral`
@@ -61,7 +123,7 @@ Carga solo los packs que uses (producción) o `packs/all.css` (prototipo).
 - **Forma**: `--square --rounded --pill` · **Elevación**: `--flat --raised`
 - **Estado**: `.is-active .is-disabled .is-loading .is-done .is-error .is-selected` o `[aria-current] [aria-selected]`
 
-## 5. Personalizar la marca
+## 7. Personalizar la marca (solo estos tokens)
 
 ```css
 :root {
@@ -73,22 +135,35 @@ Carga solo los packs que uses (producción) o `packs/all.css` (prototipo).
 }
 ```
 
-## 6. Anti-patrones (NO lo hagas)
+Los 145 tokens están inventariados en `components.json` (sección
+`tokens_def`, con nombre, valor y sección). Nada fuera de ese catálogo.
+
+## 8. Anti-patrones (NO lo hagas)
 
 - ❌ Pegar el CSS de los packs en el prompt (250 KB ≈ 60.000 tokens). Enlaza por CDN.
-- ❌ Inventar clases (`nz-gradient-text`, `nz-btn--glass-liquid-brand`): no existen aquí.
+- ❌ Inventar clases (`nz-gradient-text`, `nz-btn--glass-liquid-brand`, `nz-card--glass`): no existen aquí. Es la doctrina de Aurora v6, **jubilada**: Aurora 7 es sólido, sin glass ni gradientes.
 - ❌ Escribir colores a mano (`#2563eb`, `rgb(...)`): usa tokens `var(--nz-*)`.
 - ❌ Gradientes, `backdrop-filter` o `!important`: prohibidos por el manifiesto y la CI los detecta.
 - ❌ Clases globales sin `.nz-`: romperías la convivencia con otros frameworks.
 - ❌ Desktop-first: el sistema es mobile-first (base 1 columna, `min-width` para crecer).
+- ❌ Enlazar `@master` en producción: pinea la versión (`@v7.1.0`) o jsDelivr te servirá CSS viejo desde su caché.
 
-## 7. Verificar antes de entregar
+## 9. Verificar antes de entregar
 
 ```bash
-python scripts/validar-css.py     # manifiesto + cobertura
+python scripts/auditar-uso.py tu-pagina.html   # lint del HTML consumidor
+python scripts/validar-css.py                  # manifiesto + cobertura del sistema
 ```
 
-Docs hermanas: `AGENTS.md` (reglas duras del repo), `components.json` (API completa
-machine-readable), `paginas/` (catálogo con una demo viva por objeto), `README.md`.
+`auditar-uso.py` te dice: clases inventadas, packs que te faltan por enlazar,
+colores a mano, gradientes, desktop-first y atribución. EJECÚTALO sobre tu HTML
+antes de darlo por bueno y corrige lo que marque.
+
+Recetas completas y funcionando en `examples/` (login, dashboard, landing,
+chat-ia, forms): cópialas como punto de partida.
+
+Docs hermanas: `AGENTS.md` (reglas duras del repo), `components.json` (API
+completa machine-readable), `paginas/` (catálogo con una demo viva por objeto),
+`README.md`.
 
 Hecho con ❤️ por David Antizar

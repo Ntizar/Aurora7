@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es" data-nz-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asistente de obra · Receta Aurora 7</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p1-layout.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p4-actions.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/p14-ai.css">
+</head>
+<body class="nz">
+
+<main class="nz-container nz-container--narrow nz-stack" style="min-height:100dvh;padding-block:var(--nz-space-3)">
+
+  <div class="nz-chat">
+    <div class="nz-chat__head">
+      <span class="nz-chat__title">Asistente de obra</span>
+      <span class="nz-chat__status">glm5.3 · contexto 34%</span>
+    </div>
+
+    <div class="nz-chat__body">
+      <div class="nz-msg nz-msg--user">
+        <div class="nz-msg__body">
+          <span class="nz-msg__author">Tú</span>
+          <div class="nz-msg__bubble"><span class="nz-msg__text">Resume el pliego del lote 3 y dime si nuestra empresa puede concurrir.</span></div>
+          <span class="nz-msg__time">10:02</span>
+        </div>
+      </div>
+
+      <div class="nz-msg nz-msg--assistant">
+        <div class="nz-msg__body">
+          <span class="nz-msg__author">Asistente</span>
+          <div class="nz-msg__bubble">
+            <span class="nz-msg__text">Voy a leer el pliego y cruzarlo con los requisitos de solvencia.</span>
+            <div class="nz-taskplan">
+              <div class="nz-taskplan__step nz-taskplan__step--done">
+                <span class="nz-taskplan__num">1</span>
+                <div><span class="nz-taskplan__label">Leer el pliego</span><span class="nz-taskplan__detail">PDF de 42 páginas</span></div>
+              </div>
+              <div class="nz-taskplan__step nz-taskplan__step--active">
+                <span class="nz-taskplan__num">2</span>
+                <div><span class="nz-taskplan__label">Cruzar requisitos</span><span class="nz-taskplan__detail">Solvencia, experiencia y clasificación</span></div>
+              </div>
+              <div class="nz-taskplan__step">
+                <span class="nz-taskplan__num">3</span>
+                <div><span class="nz-taskplan__label">Resumen con veredicto</span></div>
+              </div>
+            </div>
+          </div>
+          <span class="nz-msg__time">10:02</span>
+        </div>
+      </div>
+
+      <div class="nz-msg nz-msg--assistant">
+        <div class="nz-msg__body">
+          <span class="nz-msg__author">Asistente</span>
+          <div class="nz-msg__bubble">
+            <span class="nz-msg__text">Antes de seguir, necesito tu confirmación para consultar el registro de licitaciones externo.</span>
+            <div class="nz-approval">
+              <span class="nz-approval__title">Consulta externa a PLACSP</span>
+              <span class="nz-approval__body">Se enviarán los datos del lote 3 al servicio público de contratación.</span>
+              <div class="nz-approval__actions">
+                <button class="nz-btn nz-btn--primary nz-btn--sm" type="button">Aprobar</button>
+                <button class="nz-btn nz-btn--ghost nz-btn--sm" type="button">Cancelar</button>
+              </div>
+            </div>
+          </div>
+          <span class="nz-msg__time">10:03</span>
+        </div>
+      </div>
+
+      <div class="nz-msg nz-msg--assistant">
+        <div class="nz-msg__body">
+          <span class="nz-msg__author">Asistente</span>
+          <div class="nz-msg__bubble">
+            <span class="nz-msg__text">Resultado de la consulta:</span>
+            <div class="nz-toolcall">
+              <div class="nz-toolcall__head">
+                <span class="nz-toolcall__name">buscar_expediente</span>
+                <span class="nz-toolcall__status nz-toolcall__status--ok">✓ ok</span>
+              </div>
+              <div class="nz-toolcall__args">{ "lote": 3, "año": 2026 }</div>
+              <div class="nz-toolcall__result">12 resultados · 240 ms</div>
+            </div>
+            <span class="nz-msg__text">El lote 3 exige 3 años de experiencia y solvencia de 120 000 €. Con vuestro histórico, podéis concurrir sin limitaciones.</span>
+          </div>
+          <span class="nz-msg__time">10:04</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="nz-chat__foot">
+      <div class="nz-prompt">
+        <button class="nz-prompt__attach" aria-label="Adjuntar archivo">+</button>
+        <textarea class="nz-prompt__input" rows="1" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta"></textarea>
+        <button class="nz-prompt__send">Enviar</button>
+      </div>
+      <p class="nz-prompt__hint">Pulsa Intro para enviar · Mayús+Intro para salto de línea</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="nz-footer nz-footer--compact">
+  Receta de ejemplo de Aurora 7 · Hecho con ❤️ por David Antizar
+</footer>
+
+</body>
+</html>
