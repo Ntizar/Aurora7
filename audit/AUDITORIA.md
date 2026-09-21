@@ -8,10 +8,10 @@ Generada por `scripts/audit-catalog.py` a partir de los packs CSS y de `specs/*.
 |---|---|---|
 | Objetos declarados | 1897 |  |
 | Familias de objeto | 349 |  |
-| Demos en vivo | 571 |  |
-| Clases usadas en demos | 1893 |  |
+| Demos en vivo | 574 |  |
+| Clases usadas en demos | 1897 |  |
 | Objetos fantasma (usados y no declarados) | 0 | 🟢 |
-| Clases declaradas sin demo | 4 | 🟡 |
+| Clases declaradas sin demo | 0 | 🟢 |
 | Familias sin demo | 0 | 🟢 |
 | Duplicados entre packs | 0 | 🟢 |
 | Tokens inexistentes en uso | 0 | 🟢 |
@@ -56,11 +56,11 @@ Familias sin ninguna variante (`--mod`): **117** de 349 — ahí está el margen
 | 08 | Datos, tablas y listas | p8-data.css | 143 | 16 | 39 | 0 | 0 |
 | 09 | Media e iconografía | p9-media.css | 112 | 17 | 41 | 0 | 0 |
 | 10 | Comercio y producto | p10-commerce.css | 156 | 22 | 48 | 0 | 0 |
-| 11 | Social y marketing | p11-social.css | 107 | 15 | 38 | 2 | 0 |
+| 11 | Social y marketing | p11-social.css | 107 | 15 | 39 | 0 | 0 |
 | 12 | Accesibilidad y sistema | p12-system.css | 80 | 25 | 29 | 0 | 0 |
-| 13 | Gráficos y visualización | p13-charts.css | 210 | 21 | 35 | 1 | 0 |
+| 13 | Gráficos y visualización | p13-charts.css | 210 | 21 | 36 | 0 | 0 |
 | 14 | IA y agentes | p14-ai.css | 180 | 28 | 32 | 0 | 0 |
-| 15 | Apps y escritorio | p15-apps.css | 74 | 30 | 36 | 1 | 0 |
+| 15 | Apps y escritorio | p15-apps.css | 74 | 30 | 37 | 0 | 0 |
 
 ## 3. Objetos fantasma
 
@@ -81,9 +81,7 @@ Ninguno: cada objeto tiene un único dueño. ✅
 
 ## 6. Objetos declarados sin demo (por categoría)
 
-- **Social y marketing** (2): `nz-team--lg`, `nz-team--sm`
-- **Gráficos y visualización** (1): `nz-chart-line--accent`
-- **Apps y escritorio** (1): `nz-window--lg`
+Ninguno. ✅
 
 ## 7. Familias sin variantes (margen de ampliación)
 

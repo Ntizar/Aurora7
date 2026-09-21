@@ -2,10 +2,10 @@
  "resumen": {
   "objetos_declarados": 1897,
   "familias": 349,
-  "demos": 571,
+  "demos": 574,
   "categorias": 15,
-  "clases_usadas_en_demos": 1893,
-  "clases_sin_demo": 4,
+  "clases_usadas_en_demos": 1897,
+  "clases_sin_demo": 0,
   "familias_sin_demo": 0,
   "fantasmas": 0,
   "duplicados": 0,
@@ -263,13 +263,10 @@
   "11": {
    "nombre": "Social y marketing",
    "pack": "p11-social.css",
-   "demos": 38,
+   "demos": 39,
    "objetos": 107,
    "familias": 15,
-   "sin_demo": [
-    "nz-team--lg",
-    "nz-team--sm"
-   ],
+   "sin_demo": [],
    "familias_sin_demo": []
   },
   "12": {
@@ -284,12 +281,10 @@
   "13": {
    "nombre": "Gráficos y visualización",
    "pack": "p13-charts.css",
-   "demos": 35,
+   "demos": 36,
    "objetos": 210,
    "familias": 21,
-   "sin_demo": [
-    "nz-chart-line--accent"
-   ],
+   "sin_demo": [],
    "familias_sin_demo": []
   },
   "14": {
@@ -304,12 +299,10 @@
   "15": {
    "nombre": "Apps y escritorio",
    "pack": "p15-apps.css",
-   "demos": 36,
+   "demos": 37,
    "objetos": 74,
    "familias": 30,
-   "sin_demo": [
-    "nz-window--lg"
-   ],
+   "sin_demo": [],
    "familias_sin_demo": []
   }
  },
