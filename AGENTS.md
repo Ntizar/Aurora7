@@ -74,13 +74,15 @@ Los 15 packs hablan el mismo idioma. Usa estos modificadores, y solo estos:
 
 - `LLM.md` — guía de decisión (~4 KB): qué pack cargar y qué clases usar.
 - `components.json` — API completa machine-readable: familia → pack, clases, modificadores, partes y página de demo.
+- `examples/` — 5 recetas completas (login, dashboard, landing, chat-ia, forms) que puedes copiar y adaptar.
 - `paginas/` — catálogo con una demo viva por objeto.
+- Léxico cerrado de modificadores: tamaño `--2xs/--xs/--sm/--lg/--xl`, tono `--brand/--accent/--success/--warning/--danger/--info/--neutral`, énfasis `--solid/--soft/--outline/--ghost`, disposición `--compact/--spacious/--center`, estados `.is-*`.
 
-**No pegues los packs CSS en el prompt** (≈250 KB). Enlaza por CDN:
+**No pegues los packs CSS en el prompt** (≈340 KB). Enlaza por CDN (siempre pineado, nunca @master):
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/tokens.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.1.0/packs/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.0/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.0/packs/all.css">
 ```
 
 ## 6. Atribución
