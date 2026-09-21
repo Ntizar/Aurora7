@@ -4,13 +4,13 @@
 
 **Design system CSS de Ntizar — un solo sistema para montar cualquier web.**
 
-1.829 objetos · 349 familias · 534 demos en vivo · 15 categorías · 0 gradientes · 0 glass
+1.897 objetos · 349 familias · 574 demos en vivo · 15 categorías · 0 gradientes · 0 glass
 
 [![CI — validación del manifiesto](https://github.com/Ntizar/Aurora7/actions/workflows/validar.yml/badge.svg)](https://github.com/Ntizar/Aurora7/actions/workflows/validar.yml)
 [![GitHub Pages](https://github.com/Ntizar/Aurora7/actions/workflows/pages.yml/badge.svg)](https://github.com/Ntizar/Aurora7/actions/workflows/pages.yml)
-![versión](https://img.shields.io/badge/versi%C3%B3n-7.1-2563eb)
-![objetos](https://img.shields.io/badge/objetos-1.829-2563eb)
-![demos](https://img.shields.io/badge/demos-534-f97316)
+![versión](https://img.shields.io/badge/versi%C3%B3n-7.2-2563eb)
+![objetos](https://img.shields.io/badge/objetos-1.897-2563eb)
+![demos](https://img.shields.io/badge/demos-574-f97316)
 
 **[Explorar el catálogo →](https://ntizar.github.io/Aurora7/)**
 
@@ -37,22 +37,22 @@ Aurora 7 no es una colección de snippets: es un **sistema con contrato**. Cada 
 
 | # | Categoría | Pack | Objetos | Demos |
 |---|---|---|---:|---:|
-| 01 | Layout y estructura | `p1-layout.css` | 167 | 48 |
+| 01 | Layout y estructura | `p1-layout.css` | 178 | 51 |
 | 02 | Navegación | `p2-navigation.css` | 76 | 34 |
 | 03 | Tipografía | `p3-typography.css` | 130 | 42 |
 | 04 | Acciones y botones | `p4-actions.css` | 78 | 16 |
-| 05 | Formularios e inputs | `p5-forms.css` | 97 | 40 |
-| 06 | Feedback y estados | `p6-feedback.css` | 143 | 49 |
-| 07 | Overlays y diálogo | `p7-overlays.css` | 117 | 33 |
-| 08 | Datos, tablas y listas | `p8-data.css` | 139 | 36 |
-| 09 | Media e iconografía | `p9-media.css` | 104 | 38 |
-| 10 | Comercio y producto | `p10-commerce.css` | 152 | 44 |
-| 11 | Social y marketing | `p11-social.css` | 102 | 36 |
-| 12 | Accesibilidad y sistema | `p12-system.css` | 77 | 28 |
-| 13 | Gráficos y visualización | `p13-charts.css` | 203 | 33 |
-| 14 | IA y agentes | `p14-ai.css` | 174 | 26 |
-| 15 | Apps y escritorio | `p15-apps.css` | 70 | 31 |
-| | **Total** | | **1.829** | **534** |
+| 05 | Formularios e inputs | `p5-forms.css` | 102 | 44 |
+| 06 | Feedback y estados | `p6-feedback.css` | 153 | 52 |
+| 07 | Overlays y diálogo | `p7-overlays.css` | 118 | 34 |
+| 08 | Datos, tablas y listas | `p8-data.css` | 143 | 39 |
+| 09 | Media e iconografía | `p9-media.css` | 112 | 41 |
+| 10 | Comercio y producto | `p10-commerce.css` | 156 | 48 |
+| 11 | Social y marketing | `p11-social.css` | 107 | 39 |
+| 12 | Accesibilidad y sistema | `p12-system.css` | 80 | 29 |
+| 13 | Gráficos y visualización | `p13-charts.css` | 210 | 36 |
+| 14 | IA y agentes | `p14-ai.css` | 180 | 32 |
+| 15 | Apps y escritorio | `p15-apps.css` | 74 | 37 |
+| | **Total** | | **1.897** | **574** |
 
 ## Uso
 
@@ -108,7 +108,7 @@ Aurora-7/
 ├── specs/              # FUENTE DE VERDAD de las demos (01.json … 15.json)
 ├── paginas/            # catálogo generado (01-…-15-*.html)
 ├── js/catalog.js       # buscador (tecla /), filtro, tema, «ver código» y copiar
-├── datos/objetos.json  # índice de los 1.829 objetos para el buscador
+├── datos/objetos.json  # índice de los 1.897 objetos para el buscador
 ├── audit/              # informe de auditoría generado (AUDITORIA.md + index.html)
 ├── examples/           # 5 recetas completas para agentes (login, dashboard, landing, chat-ia, forms)
 ├── scripts/
