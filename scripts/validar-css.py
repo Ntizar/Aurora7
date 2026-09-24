@@ -304,6 +304,21 @@ def main():
     if not (version_json == version_gen and (version_tag is None or version_gen == version_tag)):
         fallo(f"desalineación de versión: components.json={version_json}, "
               f"generar-llm-docs={version_gen}, último tag de git={version_tag or 'ninguno'}")
+
+    # La skill del agente viaja CON el repo: si el sistema sube de versión y la
+    # skill se queda atrás, un agente usará objetos que ya no son los vigentes.
+    ruta_skill = ROOT / "SKILL.md"
+    if not ruta_skill.exists():
+        fallo("falta SKILL.md en la raíz: la skill del agente va con el repo")
+    else:
+        txt_skill = ruta_skill.read_text(encoding="utf-8")
+        m_skill = re.search(r'^version:\s*"([^"]+)"', txt_skill, re.M)
+        if not m_skill:
+            fallo("SKILL.md sin campo version en el frontmatter")
+        elif m_skill.group(1) != version_json:
+            fallo(f"SKILL.md desalineada: version={m_skill.group(1)} vs components.json={version_json}")
+        if f"v{version_json}" not in txt_skill:
+            fallo(f"SKILL.md no menciona la versión vigente v{version_json} (CDN pineado)")
     docu = " ".join((ROOT / "README.md").read_text(encoding="utf-8")
                     + (ROOT / "AGENTS.md").read_text(encoding="utf-8")
                     + (ROOT / "LLM.md").read_text(encoding="utf-8"))
