@@ -319,6 +319,10 @@ def main():
             fallo(f"SKILL.md desalineada: version={m_skill.group(1)} vs components.json={version_json}")
         if f"v{version_json}" not in txt_skill:
             fallo(f"SKILL.md no menciona la versión vigente v{version_json} (CDN pineado)")
+        # La skill es un puntero al repo, no una copia: si pierde el PASO 0 se
+        # queda ciega en cuanto el sistema suba de versión.
+        if "PASO 0" not in txt_skill or "el repo manda" not in txt_skill.lower():
+            fallo("SKILL.md ha perdido el PASO 0: la skill debe mandar siempre al repo (la orden máxima)")
     docu = " ".join((ROOT / "README.md").read_text(encoding="utf-8")
                     + (ROOT / "AGENTS.md").read_text(encoding="utf-8")
                     + (ROOT / "LLM.md").read_text(encoding="utf-8"))
