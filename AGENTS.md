@@ -81,8 +81,8 @@ Los 15 packs hablan el mismo idioma. Usa estos modificadores, y solo estos:
 **No pegues los packs CSS en el prompt** (≈340 KB). Enlaza por CDN (siempre pineado, nunca @master):
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.0/tokens.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.0/packs/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.1/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.1/packs/all.css">
 ```
 
 ## 6. Atribución

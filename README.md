@@ -4,13 +4,13 @@
 
 **Design system CSS de Ntizar — un solo sistema para montar cualquier web.**
 
-1.897 objetos · 349 familias · 574 demos en vivo · 15 categorías · 0 gradientes · 0 glass
+1.900 objetos · 349 familias · 576 demos en vivo · 15 categorías · 0 gradientes · 0 glass
 
 [![CI — validación del manifiesto](https://github.com/Ntizar/Aurora7/actions/workflows/validar.yml/badge.svg)](https://github.com/Ntizar/Aurora7/actions/workflows/validar.yml)
 [![GitHub Pages](https://github.com/Ntizar/Aurora7/actions/workflows/pages.yml/badge.svg)](https://github.com/Ntizar/Aurora7/actions/workflows/pages.yml)
-![versión](https://img.shields.io/badge/versi%C3%B3n-7.2-2563eb)
-![objetos](https://img.shields.io/badge/objetos-1.897-2563eb)
-![demos](https://img.shields.io/badge/demos-574-f97316)
+![versión](https://img.shields.io/badge/versi%C3%B3n-7.2.1-2563eb)
+![objetos](https://img.shields.io/badge/objetos-1.900-2563eb)
+![demos](https://img.shields.io/badge/demos-576-f97316)
 
 **[Explorar el catálogo →](https://ntizar.github.io/Aurora7/)**
 
@@ -38,13 +38,13 @@ Aurora 7 no es una colección de snippets: es un **sistema con contrato**. Cada 
 | # | Categoría | Pack | Objetos | Demos |
 |---|---|---|---:|---:|
 | 01 | Layout y estructura | `p1-layout.css` | 178 | 51 |
-| 02 | Navegación | `p2-navigation.css` | 76 | 34 |
+| 02 | Navegación | `p2-navigation.css` | 77 | 35 |
 | 03 | Tipografía | `p3-typography.css` | 130 | 42 |
 | 04 | Acciones y botones | `p4-actions.css` | 78 | 16 |
 | 05 | Formularios e inputs | `p5-forms.css` | 102 | 44 |
 | 06 | Feedback y estados | `p6-feedback.css` | 153 | 52 |
 | 07 | Overlays y diálogo | `p7-overlays.css` | 118 | 34 |
-| 08 | Datos, tablas y listas | `p8-data.css` | 143 | 39 |
+| 08 | Datos, tablas y listas | `p8-data.css` | 145 | 40 |
 | 09 | Media e iconografía | `p9-media.css` | 112 | 41 |
 | 10 | Comercio y producto | `p10-commerce.css` | 156 | 48 |
 | 11 | Social y marketing | `p11-social.css` | 107 | 39 |
@@ -52,23 +52,23 @@ Aurora 7 no es una colección de snippets: es un **sistema con contrato**. Cada 
 | 13 | Gráficos y visualización | `p13-charts.css` | 210 | 36 |
 | 14 | IA y agentes | `p14-ai.css` | 180 | 32 |
 | 15 | Apps y escritorio | `p15-apps.css` | 74 | 37 |
-| | **Total** | | **1.897** | **574** |
+| | **Total** | | **1.900** | **576** |
 
 ## Uso
 
 **En una página real** — enlaza los tokens y solo los packs que necesites:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.0/tokens.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.0/packs/p4-actions.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.0/packs/p5-forms.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.1/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.1/packs/p4-actions.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.1/packs/p5-forms.css">
 ```
 
 **Todo de golpe** — para prototipar:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.0/tokens.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.0/packs/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.1/tokens.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.1/packs/all.css">
 ```
 
 El `body` lleva `class="nz"` y el tema se fija en el `<html>`:
@@ -108,7 +108,7 @@ Aurora-7/
 ├── specs/              # FUENTE DE VERDAD de las demos (01.json … 15.json)
 ├── paginas/            # catálogo generado (01-…-15-*.html)
 ├── js/catalog.js       # buscador (tecla /), filtro, tema, «ver código» y copiar
-├── datos/objetos.json  # índice de los 1.897 objetos para el buscador
+├── datos/objetos.json  # índice de los 1.900 objetos para el buscador
 ├── audit/              # informe de auditoría generado (AUDITORIA.md + index.html)
 ├── examples/           # 5 recetas completas para agentes (login, dashboard, landing, chat-ia, forms)
 ├── scripts/

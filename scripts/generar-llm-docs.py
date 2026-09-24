@@ -27,7 +27,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 bc = import_module("build-catalog")
 
 ROOT = bc.ROOT
-VERSION = "7.2.0"
+VERSION = "7.2.1"
 CDN = f"https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v{VERSION}/"
 
 # ---------------------------------------------------------------------------
@@ -292,7 +292,8 @@ Carga **solo los packs que uses** en producción (cada uno pesa 12-40 KB) o
 | Elegir una opción (p5) | `.nz-checkbox`, `.nz-radio`, `.nz-switch`, `.nz-segmented` |
 | Aviso (p6) | `.nz-alert--info/--success/--warning/--danger`, `.nz-callout` |
 | Etiqueta de estado (p6+p3) | `.nz-badge--brand/--success/--danger/--warning`, `.nz-chip`, `.nz-lbl` |
-| Tabla (p8) | `.nz-table-wrap` > `.nz-table` (+ `--striped`, `__num`, `__status`) |
+| Tabla ancha (p8) | `.nz-table-wrap` > `.nz-table` (+ `--striped`, `__num`, `__status`): se desplaza a lo ancho |
+| Tabla que debe caber entera (p8) | `.nz-table-wrap--apilable` > `.nz-table--apilable` con `data-etiqueta` en cada `td`: en móvil cada fila es una tarjeta, desde 640 px vuelve a ser tabla |
 | Cifra destacada (p8) | `.nz-kpi` (`__label/__value/__delta`) |
 | Gráfico (p13) | `.nz-chart` + `.nz-chart-bar`, `.nz-chart-line`, `.nz-chart-donut`, `.nz-chart-gauge`, `.nz-heatmap` |
 | Diálogo (p7) | `.nz-modal` (checkbox + label, sin JS), `.nz-drawer`, `.nz-sheet` |
@@ -300,6 +301,23 @@ Carga **solo los packs que uses** en producción (cada uno pesa 12-40 KB) o
 | Navegación (p2) | `.nz-navbar`, `.nz-tabs`, `.nz-breadcrumb`, `.nz-stepper`, `.nz-pagination` |
 | Chat / IA (p14) | `.nz-chat`, `.nz-msg`, `.nz-prompt`, `.nz-toolcall`, `.nz-taskplan`, `.nz-approval` |
 | Escritorio / app (p15) | `.nz-window`, `.nz-appnav`, `.nz-kanban`, `.nz-actbar`, `.nz-statusbar` |
+
+## 4b. Móvil: lo que ya viene resuelto (no lo reinventes)
+
+El sistema garantiza que nada se corta ni se sale de la pantalla. No hace falta
+JS ni media queries propias:
+
+- **Pestañas** (`.nz-tabs`): se envuelven en varias líneas, todas se ven y se
+  pulsan. Si una barra debe quedarse en una sola línea, se pide `.nz-tabs--scroll`.
+- **Navbar** (`.nz-navbar`): la barra y sus acciones se envuelven; ninguna acción
+  queda cortada ni escondida.
+- **Tabla apilable** (`.nz-table--apilable`): en móvil cada fila es una tarjeta con
+  el nombre de la columna delante. La etiqueta viaja en el HTML:
+  `<td data-etiqueta="Entrega">oct 2026</td>`. Desde 640 px vuelve a ser tabla.
+  Va con `.nz-table-wrap--apilable` para que el marco lo lleve cada tarjeta.
+- **Nada desborda** (p1): los hijos de `.nz-dash-grid`, `.nz-split`, `.nz-thirds`,
+  `.nz-bento`, `.nz-grid-12`, `.nz-holy` y `.nz-article` nacen con `min-width: 0`,
+  así que una tabla ancha encoge a su contenedor en vez de estirar la página.
 
 ## 5. Buscas un nombre en inglés y no existe
 

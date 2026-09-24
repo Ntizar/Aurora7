@@ -7,11 +7,11 @@
    ============================================================ */
 
 /* ---- 01 Navbar superior ---- */
-.nz-navbar { display: flex; align-items: center; gap: var(--nz-space-3); min-height: 56px; padding: 0 var(--nz-gutter); background: var(--nz-surface); border-bottom: var(--nz-border-w) solid var(--nz-border-soft); }
+.nz-navbar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--nz-space-2) var(--nz-space-3); min-height: 56px; padding: var(--nz-space-2) var(--nz-gutter); background: var(--nz-surface); border-bottom: var(--nz-border-w) solid var(--nz-border-soft); }
 .nz-navbar__brand { display: flex; align-items: center; gap: var(--nz-space-2); font-weight: 800; letter-spacing: var(--nz-tracking-tight); color: var(--nz-text); }
 .nz-navbar__brand i { width: 10px; height: 10px; border-radius: var(--nz-radius-full); background: var(--nz-brand); }
 .nz-navbar__brand--lg { font-size: var(--nz-text-lg); }
-.nz-navbar__links { display: flex; align-items: center; gap: var(--nz-space-1); margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+.nz-navbar__links { display: flex; flex-wrap: wrap; align-items: center; gap: var(--nz-space-1); margin-left: auto; min-width: 0; }
 .nz-navbar__links::-webkit-scrollbar { display: none; }
 .nz-navbar__link { min-height: 44px; display: inline-flex; align-items: center; padding: 0 var(--nz-space-3); border-radius: var(--nz-radius-full); color: var(--nz-text-soft); font-size: var(--nz-text-sm); font-weight: 600; text-decoration: none; }
 .nz-navbar__link:hover { background: var(--nz-bg-inset); color: var(--nz-text); }
@@ -59,7 +59,10 @@
 .nz-sidebar--brand .nz-sidebar__link:not([aria-current="page"]) { color: var(--nz-text); }
 
 /* ---- 05 Tabs ---- */
-.nz-tabs { display: flex; gap: var(--nz-space-1); border-bottom: var(--nz-border-w) solid var(--nz-border-soft); overflow-x: auto; scrollbar-width: none; }
+/* Las pestañas se envuelven: todas se ven y se pulsan sin desplazar nada ni
+   adivinar que hay más a la derecha. Si una barra tiene que quedarse en una
+   línea, se pide con --scroll. */
+.nz-tabs { display: flex; flex-wrap: wrap; gap: var(--nz-space-1); border-bottom: var(--nz-border-w) solid var(--nz-border-soft); }
 .nz-tabs::-webkit-scrollbar { display: none; }
 .nz-tabs__tab { position: relative; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; padding: 0 var(--nz-space-4); color: var(--nz-text-soft); font-size: var(--nz-text-sm); font-weight: 600; text-decoration: none; border: 0; background: transparent; font-family: inherit; cursor: pointer; }
 .nz-tabs__tab:hover { color: var(--nz-text); }
@@ -68,21 +71,28 @@
 .nz-tabs__tab--count::before { content: attr(data-count); margin-right: var(--nz-space-2); font-size: var(--nz-text-2xs); padding: 0.1rem 0.45rem; border-radius: var(--nz-radius-full); background: var(--nz-bg-inset); color: var(--nz-text-mute); font-variant-numeric: tabular-nums; }
 .nz-tabs__tab--disabled, .nz-tabs__tab[aria-disabled="true"] { color: var(--nz-text-faint); cursor: not-allowed; }
 .nz-tabs__badge { margin-left: var(--nz-space-2); min-width: 1.5rem; height: 1.25rem; display: inline-flex; align-items: center; justify-content: center; padding: 0 var(--nz-space-1); border-radius: var(--nz-radius-full); background: var(--nz-brand); color: var(--nz-text-invert); font-size: var(--nz-text-2xs); font-variant-numeric: tabular-nums; }
-.nz-tabs__panel { padding-block: var(--nz-space-4); color: var(--nz-text-soft); font-size: var(--nz-text-sm); }
+.nz-tabs__panel { min-width: 0; padding-block: var(--nz-space-4); color: var(--nz-text-soft); font-size: var(--nz-text-sm); }
 .nz-tabs--center { justify-content: center; }
 .nz-tabs--full .nz-tabs__tab { flex: 1 1 0; justify-content: center; }
 .nz-tabs--underline .nz-tabs__tab[aria-selected="true"], .nz-tabs--underline .nz-tabs__tab.is-active { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: var(--nz-space-2); }
 .nz-tabs--underline .nz-tabs__tab[aria-selected="true"]::after, .nz-tabs--underline .nz-tabs__tab.is-active::after { display: none; }
-.nz-tabs--vertical { flex-direction: column; align-items: stretch; border-bottom: 0; border-inline-start: var(--nz-border-w) solid var(--nz-border-soft); overflow-x: visible; }
+.nz-tabs--vertical { flex-direction: column; flex-wrap: nowrap; align-items: stretch; border-bottom: 0; border-inline-start: var(--nz-border-w) solid var(--nz-border-soft); overflow-x: visible; }
 .nz-tabs--vertical .nz-tabs__tab { justify-content: flex-start; }
 .nz-tabs--vertical .nz-tabs__tab[aria-selected="true"]::after, .nz-tabs--vertical .nz-tabs__tab.is-active::after { left: -1px; right: auto; top: var(--nz-space-2); bottom: var(--nz-space-2); width: 3px; height: auto; }
 
-/* ---- 06 Pill tabs (móvil, scroll horizontal) ---- */
+/* ---- 06 Pill tabs ---- */
 .nz-tabs--pill { gap: var(--nz-space-2); border: 0; }
 .nz-tabs--pill .nz-tabs__tab { border-radius: var(--nz-radius-full); }
 .nz-tabs--pill .nz-tabs__tab[aria-selected="true"], .nz-tabs--pill .nz-tabs__tab.is-active { background: var(--nz-brand); color: var(--nz-text-invert); }
 .nz-tabs--pill .nz-tabs__tab[aria-selected="true"]::after, .nz-tabs--pill .nz-tabs__tab.is-active::after { display: none; }
 .nz-tabs--pill .nz-tabs__badge { background: var(--nz-text-invert); color: var(--nz-brand); }
+
+/* ---- 06b Barra en una sola línea, con desplazamiento a propósito ----
+   Para cuando las pestañas deben ocupar el ancho exacto de la pantalla y
+   prefieres deslizar antes que envolver. La barra fina deja ver que hay más. */
+.nz-tabs--scroll { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; }
+.nz-tabs--scroll::-webkit-scrollbar { height: 4px; display: block; }
+.nz-tabs--scroll::-webkit-scrollbar-thumb { background: var(--nz-border-strong); border-radius: var(--nz-radius-full); }
 
 /* ---- 07 Breadcrumbs ---- */
 .nz-breadcrumb { display: flex; align-items: center; gap: var(--nz-space-1); flex-wrap: wrap; padding: var(--nz-space-2) 0; font-size: var(--nz-text-sm); }

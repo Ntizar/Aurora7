@@ -16,6 +16,15 @@
 .nz-container--wide { max-width: 84rem; }
 .nz-container--narrow { max-width: var(--nz-container-narrow); }
 
+/* ---- Nada se sale de la pantalla ----
+   Un hijo de rejilla o de caja flexible nace con min-width:auto, así que una
+   tabla o una línea larga estira su columna y desborda la página entera: es la
+   causa número uno de que un móvil se vea «cortado». Con min-width:0 el hijo
+   encoge y quien se desplaza es su propio contenedor (.nz-table-wrap). */
+.nz-container > *, .nz-dash-grid > *, .nz-split > *, .nz-thirds > *, .nz-bento > *,
+.nz-grid-12 > *, .nz-holy > *, .nz-splitpane > *,
+.nz-article, .nz-collapsible { min-width: 0; }
+
 /* ---- 03 Grid de 12 columnas ---- */
 .nz-grid-12 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--nz-space-4); }
 

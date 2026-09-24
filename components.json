@@ -1,10 +1,10 @@
 {
  "name": "Aurora 7",
- "version": "7.2.0",
+ "version": "7.2.1",
  "type": "css-only design system",
  "namespace": ".nz-",
  "tokens": "tokens.css",
- "cdn": "https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.0/",
+ "cdn": "https://cdn.jsdelivr.net/gh/Ntizar/Aurora7@v7.2.1/",
  "manifiesto": {
   "gradientes": 0,
   "glass": 0,
@@ -19,10 +19,10 @@
   "objetivoTactil": "44px"
  },
  "resumen": {
-  "objetos": 1897,
+  "objetos": 1900,
   "familias": 349,
   "categorias": 15,
-  "demos": 574,
+  "demos": 576,
   "tokens": 145,
   "tokensDark": 43
  },
@@ -40,9 +40,9 @@
    "categoria": 2,
    "nombre": "Navegación",
    "descripcion": "Navbar, menú, sidebar, tabs, breadcrumbs, paginación, TOC, dropdown, nav-footer y stepper. Todo táctil, sin JS (checkbox hack accesible).",
-   "objetos": 76,
+   "objetos": 77,
    "familias": 10,
-   "demos": 34,
+   "demos": 35,
    "pagina": "paginas/02-navigation.html"
   },
   "p3-typography.css": {
@@ -93,10 +93,10 @@
   "p8-data.css": {
    "categoria": 8,
    "nombre": "Datos, tablas y listas",
-   "descripcion": "Tablas (densidad, sticky, bordes, toolbar y filtros), KPIs, listas y filas de registro, timeline, definition lists, árbol, matriz de calor, comparativa y números medidores.",
-   "objetos": 143,
+   "descripcion": "Tablas (densidad, sticky, bordes, toolbar y filtros; apilable en móvil), KPIs, listas y filas de registro, timeline, definition lists, árbol, matriz de calor, comparativa y números medidores.",
+   "objetos": 145,
    "familias": 16,
-   "demos": 39,
+   "demos": 40,
    "pagina": "paginas/08-data.html"
   },
   "p9-media.css": {
@@ -2234,6 +2234,7 @@
     "nz-tabs--center",
     "nz-tabs--full",
     "nz-tabs--pill",
+    "nz-tabs--scroll",
     "nz-tabs--underline",
     "nz-tabs--vertical",
     "nz-tabs__badge",
@@ -2246,6 +2247,7 @@
     "center",
     "full",
     "pill",
+    "scroll",
     "underline",
     "vertical",
     "count",
@@ -4730,6 +4732,7 @@
    "demo": "paginas/08-data.html",
    "clases": [
     "nz-table",
+    "nz-table--apilable",
     "nz-table--bordered",
     "nz-table--borderless",
     "nz-table--comfortable",
@@ -4762,6 +4765,7 @@
     "nz-table__toolbar-spacer"
    ],
    "modificadores": [
+    "apilable",
     "bordered",
     "borderless",
     "comfortable",
@@ -4811,9 +4815,12 @@
    "categoria": 8,
    "demo": "paginas/08-data.html",
    "clases": [
-    "nz-table-wrap"
+    "nz-table-wrap",
+    "nz-table-wrap--apilable"
    ],
-   "modificadores": [],
+   "modificadores": [
+    "apilable"
+   ],
    "partes": []
   },
   "nz-timeline": {

@@ -47,6 +47,58 @@
 .nz-table__empty { padding: var(--nz-space-8) var(--nz-space-4); text-align: center; font-size: var(--nz-text-sm); color: var(--nz-text-mute); }
 .nz-table__foot { display: flex; justify-content: space-between; gap: var(--nz-space-3); padding: var(--nz-space-3) var(--nz-space-4); font-size: var(--nz-text-xs); color: var(--nz-text-mute); border-top: var(--nz-border-w) solid var(--nz-border-soft); }
 
+/* ---- Tabla apilable: móvil primero ----
+   En pantalla estrecha cada fila es una tarjeta y cada celda lleva delante el
+   nombre de su columna, que se lee del atributo data-etiqueta. Desde 640 px la
+   tabla vuelve a ser una tabla. Sin JS: la etiqueta viaja en el HTML.
+
+   El ancho mínimo del sistema (30rem) es lo que obliga a desplazar una tabla
+   ancha; apilada no hace falta, así que aquí se suelta y vuelve a 640 px.
+
+   Ojo con las combinaciones: en móvil manda este patrón (celdas a una columna,
+   texto a la izquierda) y desde 640 px recupera la densidad de serie, no la de
+   --compact ni el marco de --bordered. Se usa para tablas de datos que deben
+   caber enteras: entregables, detalle, resúmenes. */
+.nz-table--apilable { display: block; min-width: 0; background: transparent; }
+.nz-table--apilable thead { display: none; }
+.nz-table--apilable tbody, .nz-table--apilable tfoot { display: block; }
+.nz-table--apilable tbody tr, .nz-table--apilable tfoot tr {
+  display: block; padding: var(--nz-space-2) var(--nz-space-3);
+  border: var(--nz-border-w) solid var(--nz-border-soft); border-radius: var(--nz-radius-md);
+  background: var(--nz-surface); box-shadow: var(--nz-shadow-xs);
+}
+.nz-table--apilable tbody tr + tr, .nz-table--apilable tfoot tr + tr { margin-top: var(--nz-space-2); }
+.nz-table--apilable tbody th, .nz-table--apilable tbody td, .nz-table--apilable tfoot td {
+  display: block; padding: var(--nz-space-1) 0; border: 0; text-align: left;
+}
+.nz-table--apilable tbody th[scope="row"] { font-size: var(--nz-text-sm); font-weight: 800; color: var(--nz-text); }
+.nz-table--apilable tbody td[data-etiqueta]::before, .nz-table--apilable tfoot td[data-etiqueta]::before {
+  content: attr(data-etiqueta); display: block;
+  font-size: var(--nz-text-2xs); font-weight: 800; letter-spacing: var(--nz-tracking-caps);
+  text-transform: uppercase; color: var(--nz-text-mute);
+}
+@media (min-width: 640px) {
+  .nz-table--apilable { display: table; min-width: 30rem; }
+  .nz-table--apilable thead { display: table-header-group; }
+  .nz-table--apilable tbody { display: table-row-group; }
+  .nz-table--apilable tfoot { display: table-footer-group; }
+  .nz-table--apilable tbody tr, .nz-table--apilable tfoot tr {
+    display: table-row; padding: 0; margin-top: 0; border: 0; border-radius: 0;
+    background: transparent; box-shadow: none;
+  }
+  .nz-table--apilable tbody th, .nz-table--apilable tbody td, .nz-table--apilable tfoot td {
+    display: table-cell; padding: var(--nz-space-3) var(--nz-space-4);
+    border-top: var(--nz-border-w) solid var(--nz-border-soft); text-align: inherit;
+  }
+  .nz-table--apilable tbody td[data-etiqueta]::before, .nz-table--apilable tfoot td[data-etiqueta]::before { display: none; }
+}
+/* Envoltorio de una tabla apilable: en móvil no dibuja marco, porque el marco
+   ya lo lleva cada tarjeta; desde 640 px enmarca la tabla como siempre. */
+.nz-table-wrap--apilable { border: 0; border-radius: 0; overflow-x: visible; }
+@media (min-width: 640px) {
+  .nz-table-wrap--apilable { border: var(--nz-border-w) solid var(--nz-border-soft); border-radius: var(--nz-radius-md); overflow-x: auto; }
+}
+
 /* ---- Celda de status en tabla ---- */
 .nz-table__status { display: inline-flex; align-items: center; gap: var(--nz-space-1); font-weight: 700; }
 .nz-table__status i { width: 8px; height: 8px; border-radius: 50%; }
